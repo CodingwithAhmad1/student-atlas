@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="selector-panel" style="margin-top: 1rem;">
+    <form method="get" class="selector-form" id="news-filter-form">
+        <div class="form-field">
+            <label for="target">Filter by destination</label>
+            <select id="target" name="target" onchange="this.form.submit()">
+                {% for country in target_countries %}
+                    <option value="{{ country }}" {% if country == selected_target %}selected{% endif %}>{{ country }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-field">
+            <label for="country-filter">Filter by your home country</label>
+            <input
+                type="text"
+                id="country-filter"
+                name="country_filter"
+                list="country-options"
+                placeholder="Start typing a country..."
+                aria-label="Country of origin filter"
+                value="{{ country_filter or '' }}"
+            >
+            <datalist id="country-options">
+                <option value="United States"></option>
+                <option value="United Kingdom"></option>
+                <option value="India"></option>
+                <option value="Nigeria"></option>
+                <option value="China"></option>
+                <option value="Canada"></option>
+                <option value="Australia"></option>
+                <option value="Brazil"></option>
+                <option value="Germany"></option>
+                <option value="France"></option>
+                <option value="Pakistan"></option>
+                <option value="Bangladesh"></option>
+                <option value="Vietnam"></option>
+                <option value="Nepal"></option>
+                <option value="South Korea"></option>
+                <option value="Japan"></option>
+                <option value="Mexico"></option>
+                <option value="Colombia"></option>
+            </datalist>
+        </div>
+        <div>
+            <button type="submit">Apply Filters</button>
+        </div>
+    </form>
+    <p class="meta">
+        Last refreshed:
+        {% if last_refreshed %}
+            <span id="last-updated">{{ last_refreshed.strftime('%d %b %Y %H:%M UTC') }}</span>
+        {% else %}
+            <span id="last-updated">Fetching...</span>
+        {% endif %}
+        &middot; <small>Updates every 15 minutes</small>
+    </p>
+</section>
+
+<section class="news-pulse">
+    <div class="section-header">
+        <h2 class="section-title">Immigration News & Updates</h2>
+        <p class="section-subtitle">Latest regulatory changes, policy updates, and news affecting {{ selected_target }} student visas and immigration.</p>
+    </div>
+    <div class="news-list">
+        {% if news_updates %}
+            {% for news in news_updates %}
+                <article data-region="{{ news.region_focus|lower }}" class="fade-in-up">
+                    <p class="eyebrow">{{ news.source }}</p>
+                    <a href="{{ news.link }}" target="_blank" rel="noopener">{{ news.title }}</a>
+                    {% if news.summary %}
+                        <p>{{ news.summary }}</p>
+                    {% endif %}
+                    <div class="news-meta">
+                        <span class="region-badge">{{ news.region_focus }}</span>
+                        <span>{{ news.published_at.strftime('%d %b %Y %H:%M') }}</span>
+                    </div>
+                </article>
+            {% endfor %}
+        {% else %}
+            <div class="empty">
+                <p>No news updates yet. The system is fetching the latest immigration news...</p>
+                <div class="typing-indicator" style="margin-top: 1rem;">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<div class="info-box">
+    <h3>About This News Feed</h3>
+    <p>
+        This page aggregates the latest immigration news from official sources including USCIS,
+        the US Department of State, UK Visas and Immigration (UKVI), and education policy reporters.
+        Only updates relevant to student visas and international student immigration are displayed.
+    </p>
+    <p>
+        The feed automatically refreshes every 15 minutes. Select your destination country above to
+        filter for news most relevant to your path.
+    </p>
+</div>
+
+<script>
+// Auto-refresh page every 15 minutes (900000 milliseconds)
+setInterval(function() {
+    fetch(window.location.href)
+        .then(function(response) { return response.text(); })
+        .then(function(html) {
+            var parser = new DOMParser();
+            var newDoc = parser.parseFromString(html, 'text/html');
+
+            // Update the news list
+            var newNewsList = newDoc.querySelector('.news-list');
+            var oldNewsList = document.querySelector('.news-list');
+            if (newNewsList && oldNewsList) {
+                oldNewsList.innerHTML = newNewsList.innerHTML;
+            }
+
+            // Update the last refreshed time
+            var newTimestamp = newDoc.querySelector('#last-updated');
+            var oldTimestamp = document.querySelector('#last-updated');
+            if (newTimestamp && oldTimestamp) {
+                oldTimestamp.textContent = newTimestamp.textContent;
+            }
+        })
+        .catch(function(error) { console.error('Auto-refresh failed:', error); });
+}, 900000); // 15 minutes
+
+// Show visual indicator when page auto-updates
+document.addEventListener('visibilitychange', function() {
+    if (!document.hidden) {
+        // Page became visible - optionally refresh immediately
+        console.log('Page is visible');
+    }
+});
+</script>
+{% endblock %}

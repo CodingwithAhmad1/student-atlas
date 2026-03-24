@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block hero %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Student Immigration Platform
+            </div>
+            <h1>Navigate your <span>immigration path</span> with confidence</h1>
+            <p class="hero-sub">Compare regulatory steps for the US and UK, surface legal updates, and understand your journey from student visa to long-term residency.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<section class="selector-panel elevated fade-in-up">
+    <form method="get" class="selector-form">
+        <div class="form-field">
+            <label for="target">Destination Country</label>
+            <select id="target" name="target" onchange="this.form.submit()">
+                {% for country in target_countries %}
+                    <option value="{{ country }}" {% if country == selected_target %}selected{% endif %}>{{ country }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('news', target=selected_target) }}" class="nav-link">View News</a>
+            <a href="{{ url_for('chatbot') }}" class="nav-link">Visa Chatbot</a>
+        </div>
+    </form>
+</section>
+
+<section class="visa-brief">
+    {% if visa_info %}
+        <article class="fade-in-up">
+            <p class="eyebrow">{{ visa_info.target_country }}</p>
+            <h2>{{ visa_info.visa_name }}</h2>
+            <p class="lead">{{ visa_info.overview }}</p>
+            <div class="legal-grid">
+                <div>
+                    <h3>Legal Summary</h3>
+                    <p>{{ visa_info.legal_summary }}</p>
+                </div>
+                <div>
+                    <h3>Compliance Steps</h3>
+                    <pre>{{ visa_info.compliance_steps }}</pre>
+                </div>
+            </div>
+            <p class="updated">Last substantive update {{ visa_info.updated_at.strftime('%d %b %Y') }}</p>
+        </article>
+    {% else %}
+        <div class="empty">
+            <p>No reference data yet for {{ selected_target }}.</p>
+        </div>
+    {% endif %}
+</section>
+
+<section class="long-term-info">
+    <div class="section-header">
+        <h3>Beyond Student Visas: Your Long-Term Options</h3>
+        <p>Explore work visas, residency pathways, and citizenship opportunities in {{ selected_target }}.</p>
+    </div>
+
+    {% if long_term_info %}
+        <div class="long-term-grid">
+            {% set current_category = '' %}
+            {% for item in long_term_info %}
+                {% if item.category != current_category %}
+                    {% if current_category != '' %}</div>{% endif %}
+                    <div class="category-section">
+                        <h3 class="category-title">{{ item.category }}</h3>
+                        <div class="items-grid">
+                {% set current_category = item.category %}
+                {% endif %}
+
+                <article class="long-term-card">
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.description }}</p>
+                    <div class="requirements">
+                        <h5>Key Requirements:</h5>
+                        <ul>
+                            {% for line in item.key_requirements.split('\n') %}
+                                {% if line.strip() %}
+                                    <li>{{ line.strip()[2:] if line.strip().startswith('- ') else line.strip() }}</li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <p class="updated-small">Updated {{ item.updated_at.strftime('%d %b %Y') }}</p>
+                </article>
+            {% endfor %}
+            {% if current_category != '' %}</div></div>{% endif %}
+        </div>
+    {% else %}
+        <p class="empty">No long-term immigration pathways configured yet.</p>
+    {% endif %}
+</section>
+
+<section class="info-section">
+    <div class="section-header">
+        <h3>Explore Your Path</h3>
+    </div>
+    <div class="info-cards">
+        <div class="info-card fade-in-up fade-in-up-delay-1">
+            <div class="info-card-icon">&#x1F4F0;</div>
+            <h4>Latest News</h4>
+            <p>Stay updated with the latest immigration policy changes and news affecting {{ selected_target }}.</p>
+            <a href="{{ url_for('news', target=selected_target) }}" class="btn-link">View News &#8594;</a>
+        </div>
+        <div class="info-card fade-in-up fade-in-up-delay-2">
+            <div class="info-card-icon">&#x1F4AC;</div>
+            <h4>Visa Chatbot</h4>
+            <p>Get personalized guidance on visa requirements from your origin country to your destination.</p>
+            <a href="{{ url_for('chatbot') }}" class="btn-link">Start Chat &#8594;</a>
+        </div>
+        <div class="info-card fade-in-up fade-in-up-delay-3">
+            <div class="info-card-icon">&#x1F4CB;</div>
+            <h4>Tailored Information</h4>
+            <p>This site provides comparative regulatory data and reference information for student visas.</p>
+            <span class="btn-link" style="opacity: 0.4; cursor: default;">Coming Soon</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

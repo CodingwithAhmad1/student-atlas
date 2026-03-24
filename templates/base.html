@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %}Student Atlas{% endblock %}</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+</head>
+<body>
+	<header class="sa-header">
+		<div class="container">
+			<div class="header-inner">
+				<a href="{{ url_for('index') }}" class="brand">
+					<div class="logo-dot">SA</div>
+					<span class="brand-text">Student Atlas</span>
+				</a>
+				<button class="nav-toggle" onclick="document.querySelector('.main-nav').classList.toggle('open')" aria-label="Toggle navigation">
+					<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+						<line x1="3" y1="6" x2="21" y2="6"></line>
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="18" x2="21" y2="18"></line>
+					</svg>
+				</button>
+				<nav class="main-nav">
+					<a href="{{ url_for('index') }}">Home</a>
+					<a href="{{ url_for('news') }}">News</a>
+					<a href="{{ url_for('chatbot') }}">Chatbot</a>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	{% block hero %}{% endblock %}
+
+	<main class="container">
+		{% block content %}{% endblock %}
+	</main>
+
+	<footer class="sa-footer">
+		<div class="container">
+			<p>&copy; {{ current_year or 2025 }} Student Atlas. Regulatory data is informational only and not legal advice.</p>
+			<div class="footer-links">
+				<a href="{{ url_for('index') }}">Home</a>
+				<a href="{{ url_for('news') }}">News</a>
+				<a href="{{ url_for('chatbot') }}">Chatbot</a>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+		// Close mobile nav when clicking a link
+		document.querySelectorAll('.main-nav a').forEach(function(link) {
+			link.addEventListener('click', function() {
+				document.querySelector('.main-nav').classList.remove('open');
+			});
+		});
+	</script>
+</body>
+</html>
