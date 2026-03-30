@@ -1,6 +1,6 @@
 """Database models for Student Atlas."""
 
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -22,6 +22,10 @@ class StudentVisaInfo(db.Model):
 	overview = db.Column(db.Text, nullable=False)
 	legal_summary = db.Column(db.Text, nullable=False)
 	compliance_steps = db.Column(db.Text, nullable=False)
+	requirements_checklist = db.Column(db.Text, nullable=True, default="")
+	sources = db.Column(db.Text, nullable=True, default="")
+	freshness = db.Column(db.String(16), nullable=True, default="STALE")
+	last_verified = db.Column(db.Date, nullable=True)
 	updated_at = db.Column(db.DateTime, nullable=False, default=_utcnow)
 
 	def __repr__(self) -> str:
@@ -37,6 +41,10 @@ class LongTermImmigration(db.Model):
 	title = db.Column(db.String(256), nullable=False)
 	description = db.Column(db.Text, nullable=False)
 	key_requirements = db.Column(db.Text, nullable=False)
+	compliance_steps = db.Column(db.Text, nullable=True, default="")
+	sources = db.Column(db.Text, nullable=True, default="")
+	freshness = db.Column(db.String(16), nullable=True, default="STALE")
+	last_verified = db.Column(db.Date, nullable=True)
 	updated_at = db.Column(db.DateTime, nullable=False, default=_utcnow)
 
 	def __repr__(self) -> str:
@@ -56,6 +64,12 @@ class NewsUpdate(db.Model):
 	)
 	region_focus = db.Column(
 		db.String(64), nullable=False, default="General", index=True
+	)
+	mentioned_countries = db.Column(
+		db.String(2048), nullable=False, default=",", index=True
+	)
+	mentioned_regions = db.Column(
+		db.String(1024), nullable=False, default=",", index=True
 	)
 	created_at = db.Column(db.DateTime, nullable=False, default=_utcnow)
 

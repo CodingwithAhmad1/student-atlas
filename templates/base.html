@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>{% block title %}Student Atlas{% endblock %}</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='base.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='dropdown.css') }}">
 </head>
 <body>
 	<header class="sa-header">
@@ -33,6 +34,16 @@
 	{% block hero %}{% endblock %}
 
 	<main class="container">
+		{% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+				{% for category, message in messages %}
+				<div class="filter-banner filter-banner--{{ category }}" style="margin-top:1rem;">
+					<div class="filter-banner-body">{{ message }}</div>
+					<button class="filter-banner-dismiss" onclick="this.closest('.filter-banner').remove()" aria-label="Dismiss">&times;</button>
+				</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
 		{% block content %}{% endblock %}
 	</main>
 
@@ -55,5 +66,6 @@
 			});
 		});
 	</script>
+	<script src="{{ url_for('static', filename='dropdown.js') }}"></script>
 </body>
 </html>

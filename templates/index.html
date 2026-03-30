@@ -19,12 +19,21 @@
 <section class="selector-panel elevated fade-in-up">
     <form method="get" class="selector-form">
         <div class="form-field">
-            <label for="target">Destination Country</label>
-            <select id="target" name="target" onchange="this.form.submit()">
-                {% for country in target_countries %}
-                    <option value="{{ country }}" {% if country == selected_target %}selected{% endif %}>{{ country }}</option>
-                {% endfor %}
-            </select>
+            <label>Destination Country</label>
+            <div class="custom-dropdown" data-auto-submit="true">
+                <input type="hidden" name="target" value="{{ selected_target }}">
+                <button type="button" class="dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="dropdown-trigger-text">{{ selected_target }}</span>
+                    <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                </button>
+                <div class="dropdown-panel" role="listbox" aria-label="Destination Country">
+                    <ul class="dropdown-options">
+                        {% for country in target_countries %}
+                        <li class="dropdown-option" role="option" data-value="{{ country }}" {% if country == selected_target %}aria-selected="true"{% endif %}>{{ country }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="nav-links">
             <a href="{{ url_for('news', target=selected_target) }}" class="nav-link">View News</a>
@@ -38,18 +47,64 @@
         <article class="fade-in-up">
             <p class="eyebrow">{{ visa_info.target_country }}</p>
             <h2>{{ visa_info.visa_name }}</h2>
-            <p class="lead">{{ visa_info.overview }}</p>
+            <p class="lead">{{ visa_info.overview|render_citations }}</p>
             <div class="legal-grid">
-                <div>
-                    <h3>Legal Summary</h3>
+                <div class="requirements-checklist">
+                    <h3>Requirements Checklist</h3>
+                    {% if visa_info.requirements_checklist %}
+                    <ul>
+                        {% for line in visa_info.requirements_checklist.split('\n') %}
+                            {% if line.strip() %}
+                                <li>{{ (line.strip()[2:] if line.strip().startswith('- ') else line.strip())|render_citations }}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% else %}
                     <p>{{ visa_info.legal_summary }}</p>
+                    {% endif %}
                 </div>
                 <div>
                     <h3>Compliance Steps</h3>
-                    <pre>{{ visa_info.compliance_steps }}</pre>
+                    <ol class="compliance-steps">
+                        {% for line in visa_info.compliance_steps.split('\n') %}
+                            {% if line.strip() %}
+                                {% set step = line.strip() %}
+                                {% if step[0:1].isdigit() and '. ' in step %}
+                                    <li>{{ step.split('. ', 1)[1]|render_citations }}</li>
+                                {% else %}
+                                    <li>{{ step|render_citations }}</li>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </ol>
                 </div>
             </div>
-            <p class="updated">Last substantive update {{ visa_info.updated_at.strftime('%d %b %Y') }}</p>
+            <div class="update-line">
+                <span>Last verified {{ visa_info.last_verified.strftime('%d %b %Y') if visa_info.last_verified else visa_info.updated_at.strftime('%d %b %Y') }}</span>
+                {% if visa_info.freshness %}
+                <span class="freshness-badge freshness-{{ visa_info.freshness|lower|replace('_', '-') }}">{{ visa_info.freshness|replace('_', ' ') }}</span>
+                {% endif %}
+            </div>
+            {% if visa_info.sources %}
+            <div class="sources-list">
+                <h5>Sources</h5>
+                <ol>
+                    {% for line in visa_info.sources.split('\n') %}
+                        {% if line.strip() %}
+                            {% set src = line.strip() %}
+                            {% if src.startswith('[') %}
+                                {% set src_text = src.split('] ', 1)[1] if '] ' in src else src %}
+                                <li id="source-{{ loop.index }}">{{ src_text }}</li>
+                            {% elif 'URL: ' in src %}
+                                {# URL line — append to previous li #}
+                            {% else %}
+                                <li>{{ src }}</li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </ol>
+            </div>
+            {% endif %}
         </article>
     {% else %}
         <div class="empty">
@@ -78,18 +133,56 @@
 
                 <article class="long-term-card">
                     <h4>{{ item.title }}</h4>
-                    <p>{{ item.description }}</p>
+                    <p>{{ item.description|render_citations }}</p>
+                    {% if item.compliance_steps %}
+                    <div style="margin-top: 0.75rem;">
+                        <h5 style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--slate-700); margin: 0 0 0.5rem 0;">Steps</h5>
+                        <ol class="compliance-steps" style="padding: 0.75rem 0.75rem 0.75rem 2rem;">
+                            {% for line in item.compliance_steps.split('\n') %}
+                                {% if line.strip() %}
+                                    {% set step = line.strip() %}
+                                    {% if step[0:1].isdigit() and '. ' in step %}
+                                        <li>{{ step.split('. ', 1)[1]|render_citations }}</li>
+                                    {% else %}
+                                        <li>{{ step|render_citations }}</li>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
+                    </div>
+                    {% endif %}
                     <div class="requirements">
                         <h5>Key Requirements:</h5>
                         <ul>
                             {% for line in item.key_requirements.split('\n') %}
                                 {% if line.strip() %}
-                                    <li>{{ line.strip()[2:] if line.strip().startswith('- ') else line.strip() }}</li>
+                                    <li>{{ (line.strip()[2:] if line.strip().startswith('- ') else line.strip())|render_citations }}</li>
                                 {% endif %}
                             {% endfor %}
                         </ul>
                     </div>
-                    <p class="updated-small">Updated {{ item.updated_at.strftime('%d %b %Y') }}</p>
+                    <div class="update-line">
+                        <span>Updated {{ item.updated_at.strftime('%d %b %Y') }}</span>
+                        {% if item.freshness %}
+                        <span class="freshness-badge freshness-{{ item.freshness|lower|replace('_', '-') }}">{{ item.freshness|replace('_', ' ') }}</span>
+                        {% endif %}
+                    </div>
+                    {% if item.sources %}
+                    <div class="sources-list" style="margin-top: 0.75rem;">
+                        <h5>Sources</h5>
+                        <ol>
+                            {% for line in item.sources.split('\n') %}
+                                {% if line.strip() %}
+                                    {% set src = line.strip() %}
+                                    {% if src.startswith('[') %}
+                                        {% set src_text = src.split('] ', 1)[1] if '] ' in src else src %}
+                                        <li>{{ src_text }}</li>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
+                    </div>
+                    {% endif %}
                 </article>
             {% endfor %}
             {% if current_category != '' %}</div></div>{% endif %}

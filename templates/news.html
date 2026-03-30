@@ -3,49 +3,273 @@
 <section class="selector-panel" style="margin-top: 1rem;">
     <form method="get" class="selector-form" id="news-filter-form">
         <div class="form-field">
-            <label for="target">Filter by destination</label>
-            <select id="target" name="target" onchange="this.form.submit()">
-                {% for country in target_countries %}
-                    <option value="{{ country }}" {% if country == selected_target %}selected{% endif %}>{{ country }}</option>
-                {% endfor %}
-            </select>
+            <label>Filter by destination</label>
+            <div class="custom-dropdown" data-auto-submit="true">
+                <input type="hidden" name="target" value="{{ selected_target }}">
+                <button type="button" class="dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="dropdown-trigger-text">{{ selected_target }}</span>
+                    <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                </button>
+                <div class="dropdown-panel" role="listbox" aria-label="Destination">
+                    <ul class="dropdown-options">
+                        {% for country in target_countries %}
+                        <li class="dropdown-option" role="option" data-value="{{ country }}" {% if country == selected_target %}aria-selected="true"{% endif %}>{{ country }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="form-field">
-            <label for="country-filter">Filter by your home country</label>
-            <input
-                type="text"
-                id="country-filter"
-                name="country_filter"
-                list="country-options"
-                placeholder="Start typing a country..."
-                aria-label="Country of origin filter"
-                value="{{ country_filter or '' }}"
-            >
-            <datalist id="country-options">
-                <option value="United States"></option>
-                <option value="United Kingdom"></option>
-                <option value="India"></option>
-                <option value="Nigeria"></option>
-                <option value="China"></option>
-                <option value="Canada"></option>
-                <option value="Australia"></option>
-                <option value="Brazil"></option>
-                <option value="Germany"></option>
-                <option value="France"></option>
-                <option value="Pakistan"></option>
-                <option value="Bangladesh"></option>
-                <option value="Vietnam"></option>
-                <option value="Nepal"></option>
-                <option value="South Korea"></option>
-                <option value="Japan"></option>
-                <option value="Mexico"></option>
-                <option value="Colombia"></option>
-            </datalist>
+            <label>Filter by your home country</label>
+            <div class="custom-dropdown" data-searchable="true">
+                <input type="hidden" name="country_filter" value="{{ country_filter or '' }}">
+                <div class="dropdown-trigger-wrap">
+                    <input type="text" class="dropdown-trigger dropdown-trigger-input"
+                           value="{{ country_filter or '' }}"
+                           placeholder="Start typing a country..."
+                           autocomplete="off" aria-haspopup="listbox" aria-expanded="false">
+                    <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="dropdown-panel" role="listbox" aria-label="Home Country">
+                    <ul class="dropdown-options">
+                        <li class="dropdown-option" role="option" data-value="Afghanistan">Afghanistan</li>
+                        <li class="dropdown-option" role="option" data-value="Albania">Albania</li>
+                        <li class="dropdown-option" role="option" data-value="Algeria">Algeria</li>
+                        <li class="dropdown-option" role="option" data-value="Andorra">Andorra</li>
+                        <li class="dropdown-option" role="option" data-value="Angola">Angola</li>
+                        <li class="dropdown-option" role="option" data-value="Antigua and Barbuda">Antigua and Barbuda</li>
+                        <li class="dropdown-option" role="option" data-value="Argentina">Argentina</li>
+                        <li class="dropdown-option" role="option" data-value="Armenia">Armenia</li>
+                        <li class="dropdown-option" role="option" data-value="Australia">Australia</li>
+                        <li class="dropdown-option" role="option" data-value="Austria">Austria</li>
+                        <li class="dropdown-option" role="option" data-value="Azerbaijan">Azerbaijan</li>
+                        <li class="dropdown-option" role="option" data-value="Bahamas">Bahamas</li>
+                        <li class="dropdown-option" role="option" data-value="Bahrain">Bahrain</li>
+                        <li class="dropdown-option" role="option" data-value="Bangladesh">Bangladesh</li>
+                        <li class="dropdown-option" role="option" data-value="Barbados">Barbados</li>
+                        <li class="dropdown-option" role="option" data-value="Belarus">Belarus</li>
+                        <li class="dropdown-option" role="option" data-value="Belgium">Belgium</li>
+                        <li class="dropdown-option" role="option" data-value="Belize">Belize</li>
+                        <li class="dropdown-option" role="option" data-value="Benin">Benin</li>
+                        <li class="dropdown-option" role="option" data-value="Bhutan">Bhutan</li>
+                        <li class="dropdown-option" role="option" data-value="Bolivia">Bolivia</li>
+                        <li class="dropdown-option" role="option" data-value="Bosnia and Herzegovina">Bosnia and Herzegovina</li>
+                        <li class="dropdown-option" role="option" data-value="Botswana">Botswana</li>
+                        <li class="dropdown-option" role="option" data-value="Brazil">Brazil</li>
+                        <li class="dropdown-option" role="option" data-value="Brunei">Brunei</li>
+                        <li class="dropdown-option" role="option" data-value="Bulgaria">Bulgaria</li>
+                        <li class="dropdown-option" role="option" data-value="Burkina Faso">Burkina Faso</li>
+                        <li class="dropdown-option" role="option" data-value="Burundi">Burundi</li>
+                        <li class="dropdown-option" role="option" data-value="Cabo Verde">Cabo Verde</li>
+                        <li class="dropdown-option" role="option" data-value="Cambodia">Cambodia</li>
+                        <li class="dropdown-option" role="option" data-value="Cameroon">Cameroon</li>
+                        <li class="dropdown-option" role="option" data-value="Canada">Canada</li>
+                        <li class="dropdown-option" role="option" data-value="Central African Republic">Central African Republic</li>
+                        <li class="dropdown-option" role="option" data-value="Chad">Chad</li>
+                        <li class="dropdown-option" role="option" data-value="Chile">Chile</li>
+                        <li class="dropdown-option" role="option" data-value="China">China</li>
+                        <li class="dropdown-option" role="option" data-value="Colombia">Colombia</li>
+                        <li class="dropdown-option" role="option" data-value="Comoros">Comoros</li>
+                        <li class="dropdown-option" role="option" data-value="Congo (Democratic Republic)">Congo (Democratic Republic)</li>
+                        <li class="dropdown-option" role="option" data-value="Congo (Republic)">Congo (Republic)</li>
+                        <li class="dropdown-option" role="option" data-value="Costa Rica">Costa Rica</li>
+                        <li class="dropdown-option" role="option" data-value="Croatia">Croatia</li>
+                        <li class="dropdown-option" role="option" data-value="Cuba">Cuba</li>
+                        <li class="dropdown-option" role="option" data-value="Cyprus">Cyprus</li>
+                        <li class="dropdown-option" role="option" data-value="Czech Republic">Czech Republic</li>
+                        <li class="dropdown-option" role="option" data-value="Denmark">Denmark</li>
+                        <li class="dropdown-option" role="option" data-value="Djibouti">Djibouti</li>
+                        <li class="dropdown-option" role="option" data-value="Dominica">Dominica</li>
+                        <li class="dropdown-option" role="option" data-value="Dominican Republic">Dominican Republic</li>
+                        <li class="dropdown-option" role="option" data-value="East Timor">East Timor</li>
+                        <li class="dropdown-option" role="option" data-value="Ecuador">Ecuador</li>
+                        <li class="dropdown-option" role="option" data-value="Egypt">Egypt</li>
+                        <li class="dropdown-option" role="option" data-value="El Salvador">El Salvador</li>
+                        <li class="dropdown-option" role="option" data-value="Equatorial Guinea">Equatorial Guinea</li>
+                        <li class="dropdown-option" role="option" data-value="Eritrea">Eritrea</li>
+                        <li class="dropdown-option" role="option" data-value="Estonia">Estonia</li>
+                        <li class="dropdown-option" role="option" data-value="Eswatini">Eswatini</li>
+                        <li class="dropdown-option" role="option" data-value="Ethiopia">Ethiopia</li>
+                        <li class="dropdown-option" role="option" data-value="Fiji">Fiji</li>
+                        <li class="dropdown-option" role="option" data-value="Finland">Finland</li>
+                        <li class="dropdown-option" role="option" data-value="France">France</li>
+                        <li class="dropdown-option" role="option" data-value="Gabon">Gabon</li>
+                        <li class="dropdown-option" role="option" data-value="Gambia">Gambia</li>
+                        <li class="dropdown-option" role="option" data-value="Georgia">Georgia</li>
+                        <li class="dropdown-option" role="option" data-value="Germany">Germany</li>
+                        <li class="dropdown-option" role="option" data-value="Ghana">Ghana</li>
+                        <li class="dropdown-option" role="option" data-value="Greece">Greece</li>
+                        <li class="dropdown-option" role="option" data-value="Grenada">Grenada</li>
+                        <li class="dropdown-option" role="option" data-value="Guatemala">Guatemala</li>
+                        <li class="dropdown-option" role="option" data-value="Guinea">Guinea</li>
+                        <li class="dropdown-option" role="option" data-value="Guinea-Bissau">Guinea-Bissau</li>
+                        <li class="dropdown-option" role="option" data-value="Guyana">Guyana</li>
+                        <li class="dropdown-option" role="option" data-value="Haiti">Haiti</li>
+                        <li class="dropdown-option" role="option" data-value="Honduras">Honduras</li>
+                        <li class="dropdown-option" role="option" data-value="Hungary">Hungary</li>
+                        <li class="dropdown-option" role="option" data-value="Iceland">Iceland</li>
+                        <li class="dropdown-option" role="option" data-value="India">India</li>
+                        <li class="dropdown-option" role="option" data-value="Indonesia">Indonesia</li>
+                        <li class="dropdown-option" role="option" data-value="Iran">Iran</li>
+                        <li class="dropdown-option" role="option" data-value="Iraq">Iraq</li>
+                        <li class="dropdown-option" role="option" data-value="Ireland">Ireland</li>
+                        <li class="dropdown-option" role="option" data-value="Israel">Israel</li>
+                        <li class="dropdown-option" role="option" data-value="Italy">Italy</li>
+                        <li class="dropdown-option" role="option" data-value="Ivory Coast">Ivory Coast</li>
+                        <li class="dropdown-option" role="option" data-value="Jamaica">Jamaica</li>
+                        <li class="dropdown-option" role="option" data-value="Japan">Japan</li>
+                        <li class="dropdown-option" role="option" data-value="Jordan">Jordan</li>
+                        <li class="dropdown-option" role="option" data-value="Kazakhstan">Kazakhstan</li>
+                        <li class="dropdown-option" role="option" data-value="Kenya">Kenya</li>
+                        <li class="dropdown-option" role="option" data-value="Kiribati">Kiribati</li>
+                        <li class="dropdown-option" role="option" data-value="Kosovo">Kosovo</li>
+                        <li class="dropdown-option" role="option" data-value="Kuwait">Kuwait</li>
+                        <li class="dropdown-option" role="option" data-value="Kyrgyzstan">Kyrgyzstan</li>
+                        <li class="dropdown-option" role="option" data-value="Laos">Laos</li>
+                        <li class="dropdown-option" role="option" data-value="Latvia">Latvia</li>
+                        <li class="dropdown-option" role="option" data-value="Lebanon">Lebanon</li>
+                        <li class="dropdown-option" role="option" data-value="Lesotho">Lesotho</li>
+                        <li class="dropdown-option" role="option" data-value="Liberia">Liberia</li>
+                        <li class="dropdown-option" role="option" data-value="Libya">Libya</li>
+                        <li class="dropdown-option" role="option" data-value="Liechtenstein">Liechtenstein</li>
+                        <li class="dropdown-option" role="option" data-value="Lithuania">Lithuania</li>
+                        <li class="dropdown-option" role="option" data-value="Luxembourg">Luxembourg</li>
+                        <li class="dropdown-option" role="option" data-value="Madagascar">Madagascar</li>
+                        <li class="dropdown-option" role="option" data-value="Malawi">Malawi</li>
+                        <li class="dropdown-option" role="option" data-value="Malaysia">Malaysia</li>
+                        <li class="dropdown-option" role="option" data-value="Maldives">Maldives</li>
+                        <li class="dropdown-option" role="option" data-value="Mali">Mali</li>
+                        <li class="dropdown-option" role="option" data-value="Malta">Malta</li>
+                        <li class="dropdown-option" role="option" data-value="Marshall Islands">Marshall Islands</li>
+                        <li class="dropdown-option" role="option" data-value="Mauritania">Mauritania</li>
+                        <li class="dropdown-option" role="option" data-value="Mauritius">Mauritius</li>
+                        <li class="dropdown-option" role="option" data-value="Mexico">Mexico</li>
+                        <li class="dropdown-option" role="option" data-value="Micronesia">Micronesia</li>
+                        <li class="dropdown-option" role="option" data-value="Moldova">Moldova</li>
+                        <li class="dropdown-option" role="option" data-value="Monaco">Monaco</li>
+                        <li class="dropdown-option" role="option" data-value="Mongolia">Mongolia</li>
+                        <li class="dropdown-option" role="option" data-value="Montenegro">Montenegro</li>
+                        <li class="dropdown-option" role="option" data-value="Morocco">Morocco</li>
+                        <li class="dropdown-option" role="option" data-value="Mozambique">Mozambique</li>
+                        <li class="dropdown-option" role="option" data-value="Myanmar">Myanmar</li>
+                        <li class="dropdown-option" role="option" data-value="Namibia">Namibia</li>
+                        <li class="dropdown-option" role="option" data-value="Nauru">Nauru</li>
+                        <li class="dropdown-option" role="option" data-value="Nepal">Nepal</li>
+                        <li class="dropdown-option" role="option" data-value="Netherlands">Netherlands</li>
+                        <li class="dropdown-option" role="option" data-value="New Zealand">New Zealand</li>
+                        <li class="dropdown-option" role="option" data-value="Nicaragua">Nicaragua</li>
+                        <li class="dropdown-option" role="option" data-value="Niger">Niger</li>
+                        <li class="dropdown-option" role="option" data-value="Nigeria">Nigeria</li>
+                        <li class="dropdown-option" role="option" data-value="North Korea">North Korea</li>
+                        <li class="dropdown-option" role="option" data-value="North Macedonia">North Macedonia</li>
+                        <li class="dropdown-option" role="option" data-value="Norway">Norway</li>
+                        <li class="dropdown-option" role="option" data-value="Oman">Oman</li>
+                        <li class="dropdown-option" role="option" data-value="Pakistan">Pakistan</li>
+                        <li class="dropdown-option" role="option" data-value="Palau">Palau</li>
+                        <li class="dropdown-option" role="option" data-value="Palestine">Palestine</li>
+                        <li class="dropdown-option" role="option" data-value="Panama">Panama</li>
+                        <li class="dropdown-option" role="option" data-value="Papua New Guinea">Papua New Guinea</li>
+                        <li class="dropdown-option" role="option" data-value="Paraguay">Paraguay</li>
+                        <li class="dropdown-option" role="option" data-value="Peru">Peru</li>
+                        <li class="dropdown-option" role="option" data-value="Philippines">Philippines</li>
+                        <li class="dropdown-option" role="option" data-value="Poland">Poland</li>
+                        <li class="dropdown-option" role="option" data-value="Portugal">Portugal</li>
+                        <li class="dropdown-option" role="option" data-value="Qatar">Qatar</li>
+                        <li class="dropdown-option" role="option" data-value="Romania">Romania</li>
+                        <li class="dropdown-option" role="option" data-value="Russia">Russia</li>
+                        <li class="dropdown-option" role="option" data-value="Rwanda">Rwanda</li>
+                        <li class="dropdown-option" role="option" data-value="Saint Kitts and Nevis">Saint Kitts and Nevis</li>
+                        <li class="dropdown-option" role="option" data-value="Saint Lucia">Saint Lucia</li>
+                        <li class="dropdown-option" role="option" data-value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</li>
+                        <li class="dropdown-option" role="option" data-value="Samoa">Samoa</li>
+                        <li class="dropdown-option" role="option" data-value="San Marino">San Marino</li>
+                        <li class="dropdown-option" role="option" data-value="Sao Tome and Principe">Sao Tome and Principe</li>
+                        <li class="dropdown-option" role="option" data-value="Saudi Arabia">Saudi Arabia</li>
+                        <li class="dropdown-option" role="option" data-value="Senegal">Senegal</li>
+                        <li class="dropdown-option" role="option" data-value="Serbia">Serbia</li>
+                        <li class="dropdown-option" role="option" data-value="Seychelles">Seychelles</li>
+                        <li class="dropdown-option" role="option" data-value="Sierra Leone">Sierra Leone</li>
+                        <li class="dropdown-option" role="option" data-value="Singapore">Singapore</li>
+                        <li class="dropdown-option" role="option" data-value="Slovakia">Slovakia</li>
+                        <li class="dropdown-option" role="option" data-value="Slovenia">Slovenia</li>
+                        <li class="dropdown-option" role="option" data-value="Solomon Islands">Solomon Islands</li>
+                        <li class="dropdown-option" role="option" data-value="Somalia">Somalia</li>
+                        <li class="dropdown-option" role="option" data-value="South Africa">South Africa</li>
+                        <li class="dropdown-option" role="option" data-value="South Korea">South Korea</li>
+                        <li class="dropdown-option" role="option" data-value="South Sudan">South Sudan</li>
+                        <li class="dropdown-option" role="option" data-value="Spain">Spain</li>
+                        <li class="dropdown-option" role="option" data-value="Sri Lanka">Sri Lanka</li>
+                        <li class="dropdown-option" role="option" data-value="Sudan">Sudan</li>
+                        <li class="dropdown-option" role="option" data-value="Suriname">Suriname</li>
+                        <li class="dropdown-option" role="option" data-value="Sweden">Sweden</li>
+                        <li class="dropdown-option" role="option" data-value="Switzerland">Switzerland</li>
+                        <li class="dropdown-option" role="option" data-value="Syria">Syria</li>
+                        <li class="dropdown-option" role="option" data-value="Taiwan">Taiwan</li>
+                        <li class="dropdown-option" role="option" data-value="Tajikistan">Tajikistan</li>
+                        <li class="dropdown-option" role="option" data-value="Tanzania">Tanzania</li>
+                        <li class="dropdown-option" role="option" data-value="Thailand">Thailand</li>
+                        <li class="dropdown-option" role="option" data-value="Togo">Togo</li>
+                        <li class="dropdown-option" role="option" data-value="Tonga">Tonga</li>
+                        <li class="dropdown-option" role="option" data-value="Trinidad and Tobago">Trinidad and Tobago</li>
+                        <li class="dropdown-option" role="option" data-value="Tunisia">Tunisia</li>
+                        <li class="dropdown-option" role="option" data-value="Turkey">Turkey</li>
+                        <li class="dropdown-option" role="option" data-value="Turkmenistan">Turkmenistan</li>
+                        <li class="dropdown-option" role="option" data-value="Tuvalu">Tuvalu</li>
+                        <li class="dropdown-option" role="option" data-value="Uganda">Uganda</li>
+                        <li class="dropdown-option" role="option" data-value="Ukraine">Ukraine</li>
+                        <li class="dropdown-option" role="option" data-value="United Arab Emirates">United Arab Emirates</li>
+                        <li class="dropdown-option" role="option" data-value="Uruguay">Uruguay</li>
+                        <li class="dropdown-option" role="option" data-value="Uzbekistan">Uzbekistan</li>
+                        <li class="dropdown-option" role="option" data-value="Vanuatu">Vanuatu</li>
+                        <li class="dropdown-option" role="option" data-value="Vatican City">Vatican City</li>
+                        <li class="dropdown-option" role="option" data-value="Venezuela">Venezuela</li>
+                        <li class="dropdown-option" role="option" data-value="Vietnam">Vietnam</li>
+                        <li class="dropdown-option" role="option" data-value="Yemen">Yemen</li>
+                        <li class="dropdown-option" role="option" data-value="Zambia">Zambia</li>
+                        <li class="dropdown-option" role="option" data-value="Zimbabwe">Zimbabwe</li>
+                    </ul>
+                    <p class="dropdown-no-results">No countries found</p>
+                </div>
+            </div>
         </div>
         <div>
             <button type="submit">Apply Filters</button>
         </div>
     </form>
+
+    {# Filter result banner #}
+    {% if filter_status == "known" %}
+        {% if total_count == 0 %}
+        <div class="filter-banner filter-banner--warning" id="filter-banner">
+            <svg class="filter-banner-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+            <div class="filter-banner-body">
+                <strong>No articles matched.</strong>
+                Filter is set to <strong>{{ country_filter }}</strong>{% if user_regions %} (including {{ user_regions | join(', ') }} regional coverage){% endif %} but no articles have matched yet. Try a different destination filter or check back after the next refresh.
+            </div>
+            <button class="filter-banner-dismiss" onclick="this.closest('.filter-banner').remove()" aria-label="Dismiss">&times;</button>
+        </div>
+        {% else %}
+        <div class="filter-banner filter-banner--success" id="filter-banner">
+            <svg class="filter-banner-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+            <div class="filter-banner-body">
+                <strong>Filters applied.</strong>
+                Showing <strong>{{ total_count }}</strong> article{{ 's' if total_count != 1 }} relevant to <strong>{{ country_filter }}</strong>{% if user_regions %}, including <strong>{{ user_regions | join(', ') }}</strong> regional coverage{% endif %}.
+            </div>
+            <button class="filter-banner-dismiss" onclick="this.closest('.filter-banner').remove()" aria-label="Dismiss">&times;</button>
+        </div>
+        {% endif %}
+    {% elif filter_status == "unknown" %}
+        <div class="filter-banner filter-banner--warning" id="filter-banner">
+            <svg class="filter-banner-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M8.485 2.495c.673-1.167 2.357-1.167 3.03 0l6.28 10.875c.673 1.167-.17 2.625-1.516 2.625H3.72c-1.347 0-2.189-1.458-1.515-2.625L8.485 2.495zM10 5a.75.75 0 01.75.75v3.5a.75.75 0 01-1.5 0v-3.5A.75.75 0 0110 5zm0 9a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg>
+            <div class="filter-banner-body">
+                <strong>"{{ country_filter }}"</strong> is not in our country list — showing articles that mention this term directly.
+                {% if total_count == 0 %}No articles found.{% else %}<strong>{{ total_count }}</strong> article{{ 's' if total_count != 1 }} found.{% endif %}
+                For full regional coverage, select a country from the dropdown.
+            </div>
+            <button class="filter-banner-dismiss" onclick="this.closest('.filter-banner').remove()" aria-label="Dismiss">&times;</button>
+        </div>
+    {% endif %}
+
     <p class="meta">
         Last refreshed:
         {% if last_refreshed %}

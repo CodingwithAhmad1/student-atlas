@@ -10,42 +10,54 @@
 
     <form method="post" class="chatbot-form">
         <div class="form-group">
-            <label for="origin">Country of Origin</label>
-            <input
-                type="text"
-                id="origin"
-                name="origin"
-                list="countries-list"
-                value="{{ origin or '' }}"
-                placeholder="e.g., India, Nigeria, Brazil"
-                required
-            >
-            <datalist id="countries-list">
-                <option value="United States"></option>
-                <option value="United Kingdom"></option>
-                <option value="India"></option>
-                <option value="Nigeria"></option>
-                <option value="Brazil"></option>
-                <option value="China"></option>
-                <option value="Canada"></option>
-                <option value="Mexico"></option>
-                <option value="Australia"></option>
-                <option value="Germany"></option>
-                <option value="France"></option>
-                <option value="Japan"></option>
-                <option value="South Korea"></option>
-                <option value="South Africa"></option>
-            </datalist>
+            <label>Country of Origin</label>
+            <div class="custom-dropdown" data-searchable="true" data-required="true" data-placeholder="e.g., India, Nigeria, Brazil">
+                <input type="hidden" name="origin" value="{{ origin or '' }}">
+                <div class="dropdown-trigger-wrap">
+                    <input type="text" class="dropdown-trigger dropdown-trigger-input"
+                           value="{{ origin or '' }}"
+                           placeholder="e.g., India, Nigeria, Brazil"
+                           autocomplete="off" aria-haspopup="listbox" aria-expanded="false">
+                    <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="dropdown-panel" role="listbox" aria-label="Country of Origin">
+                    <ul class="dropdown-options">
+                        <li class="dropdown-option" role="option" data-value="United States" {% if origin == 'United States' %}aria-selected="true"{% endif %}>United States</li>
+                        <li class="dropdown-option" role="option" data-value="United Kingdom" {% if origin == 'United Kingdom' %}aria-selected="true"{% endif %}>United Kingdom</li>
+                        <li class="dropdown-option" role="option" data-value="India" {% if origin == 'India' %}aria-selected="true"{% endif %}>India</li>
+                        <li class="dropdown-option" role="option" data-value="Nigeria" {% if origin == 'Nigeria' %}aria-selected="true"{% endif %}>Nigeria</li>
+                        <li class="dropdown-option" role="option" data-value="Brazil" {% if origin == 'Brazil' %}aria-selected="true"{% endif %}>Brazil</li>
+                        <li class="dropdown-option" role="option" data-value="China" {% if origin == 'China' %}aria-selected="true"{% endif %}>China</li>
+                        <li class="dropdown-option" role="option" data-value="Canada" {% if origin == 'Canada' %}aria-selected="true"{% endif %}>Canada</li>
+                        <li class="dropdown-option" role="option" data-value="Mexico" {% if origin == 'Mexico' %}aria-selected="true"{% endif %}>Mexico</li>
+                        <li class="dropdown-option" role="option" data-value="Australia" {% if origin == 'Australia' %}aria-selected="true"{% endif %}>Australia</li>
+                        <li class="dropdown-option" role="option" data-value="Germany" {% if origin == 'Germany' %}aria-selected="true"{% endif %}>Germany</li>
+                        <li class="dropdown-option" role="option" data-value="France" {% if origin == 'France' %}aria-selected="true"{% endif %}>France</li>
+                        <li class="dropdown-option" role="option" data-value="Japan" {% if origin == 'Japan' %}aria-selected="true"{% endif %}>Japan</li>
+                        <li class="dropdown-option" role="option" data-value="South Korea" {% if origin == 'South Korea' %}aria-selected="true"{% endif %}>South Korea</li>
+                        <li class="dropdown-option" role="option" data-value="South Africa" {% if origin == 'South Africa' %}aria-selected="true"{% endif %}>South Africa</li>
+                    </ul>
+                    <p class="dropdown-no-results">No countries found</p>
+                </div>
+            </div>
         </div>
 
         <div class="form-group">
-            <label for="destination">Destination Country</label>
-            <select id="destination" name="destination" required>
-                <option value="">Select a destination...</option>
-                {% for country in target_countries %}
-                    <option value="{{ country }}" {% if country == destination %}selected{% endif %}>{{ country }}</option>
-                {% endfor %}
-            </select>
+            <label>Destination Country</label>
+            <div class="custom-dropdown" data-required="true" data-placeholder="Select a destination...">
+                <input type="hidden" name="destination" value="{{ destination or '' }}">
+                <button type="button" class="dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="dropdown-trigger-text {% if not destination %}placeholder{% endif %}">{{ destination or 'Select a destination...' }}</span>
+                    <svg class="dropdown-chevron" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+                </button>
+                <div class="dropdown-panel" role="listbox" aria-label="Destination Country">
+                    <ul class="dropdown-options">
+                        {% for country in target_countries %}
+                        <li class="dropdown-option" role="option" data-value="{{ country }}" {% if country == destination %}aria-selected="true"{% endif %}>{{ country }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
         </div>
 
         {% if error %}

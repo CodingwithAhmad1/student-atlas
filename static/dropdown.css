@@ -1,0 +1,206 @@
+/* ── Custom Dropdown Component ── */
+
+.custom-dropdown {
+	position: relative;
+	width: 100%;
+}
+
+/* Trigger button */
+.dropdown-trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0.6rem 0.85rem;
+	border: 1.5px solid var(--border);
+	border-radius: var(--radius-sm);
+	background: var(--slate-50);
+	font-family: inherit;
+	font-size: 0.95rem;
+	color: var(--text);
+	cursor: pointer;
+	transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+	appearance: none;
+	-webkit-appearance: none;
+	text-align: left;
+	line-height: 1.4;
+}
+
+.dropdown-trigger:hover {
+	border-color: var(--teal-300);
+	background: #fff;
+}
+
+.dropdown-trigger:focus {
+	outline: none;
+	border-color: var(--teal-400);
+	box-shadow: 0 0 0 3px rgba(62, 189, 147, 0.12);
+	background: #fff;
+}
+
+.dropdown-trigger[aria-expanded="true"] {
+	border-color: var(--teal-400);
+	box-shadow: 0 0 0 3px rgba(62, 189, 147, 0.12);
+	background: #fff;
+}
+
+.dropdown-trigger-text {
+	flex: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.dropdown-trigger-text.placeholder {
+	color: var(--text-muted);
+}
+
+/* Searchable trigger wrapper */
+.dropdown-trigger-wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.dropdown-trigger-wrap .dropdown-trigger-input {
+	width: 100%;
+	padding-right: 2.25rem;
+}
+
+.dropdown-trigger-wrap .dropdown-chevron {
+	position: absolute;
+	right: 0.85rem;
+	pointer-events: none;
+}
+
+/* Chevron icon */
+.dropdown-chevron {
+	width: 16px;
+	height: 16px;
+	flex-shrink: 0;
+	margin-left: 0.5rem;
+	color: var(--text-muted);
+	transition: transform var(--transition-fast);
+}
+
+.dropdown-trigger[aria-expanded="true"] .dropdown-chevron,
+.dropdown-trigger-wrap .dropdown-trigger[aria-expanded="true"] ~ .dropdown-chevron {
+	transform: rotate(180deg);
+}
+
+/* Panel */
+.dropdown-panel {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	right: 0;
+	background: var(--card);
+	border: 1.5px solid var(--border);
+	border-radius: var(--radius-sm);
+	box-shadow: var(--shadow-lg);
+	z-index: 100;
+	max-height: 280px;
+	display: none;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.dropdown-panel.open {
+	display: flex;
+}
+
+.dropdown-panel.flip {
+	top: auto;
+	bottom: calc(100% + 4px);
+}
+
+/* Search input */
+.dropdown-search-wrap {
+	padding: 0.5rem;
+	border-bottom: 1px solid var(--border-light);
+	flex-shrink: 0;
+}
+
+.dropdown-search {
+	width: 100%;
+	border: 1px solid var(--border-light);
+	border-radius: var(--radius-sm);
+	padding: 0.45rem 0.65rem;
+	font-family: inherit;
+	font-size: 0.9rem;
+	color: var(--text);
+	background: var(--slate-50);
+	transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+	outline: none;
+}
+
+.dropdown-search:focus {
+	border-color: var(--teal-400);
+	box-shadow: 0 0 0 2px rgba(62, 189, 147, 0.1);
+	background: #fff;
+}
+
+/* Options list */
+.dropdown-options {
+	list-style: none;
+	padding: 0.25rem 0;
+	margin: 0;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+}
+
+.dropdown-option {
+	padding: 0.5rem 0.85rem;
+	cursor: pointer;
+	font-size: 0.95rem;
+	color: var(--text);
+	transition: background var(--transition-fast), color var(--transition-fast);
+	user-select: none;
+}
+
+.dropdown-option:hover,
+.dropdown-option.focused {
+	background: var(--teal-50);
+	color: var(--teal-800);
+}
+
+.dropdown-option[aria-selected="true"] {
+	font-weight: 600;
+	color: var(--teal-700);
+	background: var(--accent-bg);
+}
+
+.dropdown-option[aria-selected="true"].focused,
+.dropdown-option[aria-selected="true"]:hover {
+	background: var(--teal-100);
+}
+
+.dropdown-option.hidden {
+	display: none;
+}
+
+/* No results */
+.dropdown-no-results {
+	padding: 0.75rem 0.85rem;
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	text-align: center;
+	display: none;
+}
+
+.dropdown-no-results.visible {
+	display: block;
+}
+
+/* Validation error state */
+.custom-dropdown.error .dropdown-trigger {
+	border-color: var(--coral-500);
+	box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+	.dropdown-panel {
+		max-height: 240px;
+	}
+}
