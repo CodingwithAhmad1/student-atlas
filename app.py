@@ -7,11 +7,18 @@ import logging
 import os
 import re
 import secrets
+import ssl
 import threading
 import time
 from datetime import date, datetime, timezone
 
+import certifi
 import feedparser
+
+# Fix macOS SSL certificate verification — http.client calls
+# ssl._create_default_https_context internally, so patch that to use certifi.
+ssl._create_default_https_context = lambda: ssl.create_default_context(cafile=certifi.where())  # noqa: SLF001
+
 from flask import Flask, abort, flash, redirect, render_template, request, url_for
 from markupsafe import escape
 
@@ -1793,6 +1800,12 @@ def get_visa_guidance(origin: str, destination: str) -> str:
 	"""Get visa guidance from Gemini based on origin and destination."""
 	global _gemini_configured
 
+	# AI feature temporarily disabled
+	return (
+		"The AI assistant is temporarily unavailable. "
+		"Please check back later."
+	)
+
 	api_key = os.environ.get("GEMINI_API_KEY")
 	if not api_key:
 		logger.error("GEMINI_API_KEY not set")
@@ -1806,7 +1819,7 @@ def get_visa_guidance(origin: str, destination: str) -> str:
 			genai.configure(api_key=api_key)
 			_gemini_configured = True
 
-		model = genai.GenerativeModel("gemini-pro")
+		model = genai.GenerativeModel("gemini-2.0-flash")
 
 		# Escape user input embedded in the prompt to prevent prompt injection
 		safe_origin = escape(origin)
