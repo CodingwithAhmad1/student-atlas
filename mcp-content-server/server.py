@@ -1113,8 +1113,9 @@ def add_callout(
             pos += 1
         close_pos = pos - 1  # position of the ]
 
+        before = content[:close_pos].rstrip().rstrip(",")
         new_content = (
-            content[:close_pos].rstrip()
+            before
             + ",\n" + callout_ts + ",\n        "
             + content[close_pos:]
         )
