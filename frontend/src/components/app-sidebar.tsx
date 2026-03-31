@@ -19,6 +19,7 @@ import {
   BriefcaseIcon,
   HomeIcon,
   FileTextIcon,
+  BookOpenIcon,
 } from "lucide-react"
 
 const navMain = [
@@ -95,6 +96,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
               >
                 <FileTextIcon />
                 <span className="font-medium">Generate report</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                render={<Link to="/citations" />}
+                tooltip="Citations"
+                isActive={location.pathname === "/citations"}
+              >
+                <BookOpenIcon />
+                <span className="font-medium">Citations</span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
