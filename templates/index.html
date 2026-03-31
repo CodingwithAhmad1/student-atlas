@@ -1,3 +1,4 @@
+<!-- DEACTIVATED: not linked from UI — do not delete -->
 {% extends 'base.html' %}
 
 {% block hero %}
@@ -37,7 +38,7 @@
         </div>
         <div class="nav-links">
             <a href="{{ url_for('news', target=selected_target) }}" class="nav-link">View News</a>
-            <a href="{{ url_for('chatbot') }}" class="nav-link">Visa Chatbot</a>
+            {# <a href="{{ url_for('chatbot') }}" class="nav-link">Visa Chatbot</a> #}
         </div>
     </form>
 </section>
@@ -203,12 +204,12 @@
             <p>Stay updated with the latest immigration policy changes and news affecting {{ selected_target }}.</p>
             <a href="{{ url_for('news', target=selected_target) }}" class="btn-link">View News &#8594;</a>
         </div>
-        <div class="info-card fade-in-up fade-in-up-delay-2">
+        {# <div class="info-card fade-in-up fade-in-up-delay-2">
             <div class="info-card-icon">&#x1F4AC;</div>
             <h4>Visa Chatbot</h4>
             <p>Get personalized guidance on visa requirements from your origin country to your destination.</p>
             <a href="{{ url_for('chatbot') }}" class="btn-link">Start Chat &#8594;</a>
-        </div>
+        </div> #}
         <div class="info-card fade-in-up fade-in-up-delay-3">
             <div class="info-card-icon">&#x1F4CB;</div>
             <h4>Tailored Information</h4>

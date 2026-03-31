@@ -1,4 +1,5 @@
-"""Student Atlas Flask application."""
+# DEACTIVATED: replaced by React frontend + FastAPI backend — do not delete
+"""Student Atlas Flask application (legacy)."""
 
 from __future__ import annotations
 
@@ -42,6 +43,7 @@ logger = logging.getLogger("student_atlas")
 # Constants
 # ---------------------------------------------------------------------------
 TARGET_COUNTRIES = ["United States", "United Kingdom"]
+NEWS_WORKER_ENABLED = False
 
 # ---------------------------------------------------------------------------
 # Tiered keyword system for immigration/visa relevance filtering
@@ -1495,6 +1497,10 @@ def start_background_worker(app: Flask) -> None:
 					logger.exception("News fetch failed")
 					wait = NEWS_FETCH_ERROR_BACKOFF
 			time.sleep(wait)
+
+	if not app.config.get('NEWS_WORKER_ENABLED', NEWS_WORKER_ENABLED):
+		logger.info("Background news fetcher disabled via NEWS_WORKER_ENABLED flag")
+		return
 
 	should_run = not app.debug or os.environ.get("WERKZEUG_RUN_MAIN") == "true"
 	if should_run:
