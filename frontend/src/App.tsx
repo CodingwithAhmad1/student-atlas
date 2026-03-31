@@ -75,6 +75,8 @@ function AppLayout() {
   const sectionSlug = pathParts[0] ?? ""
   const subSectionSlug = pathParts[1] ?? ""
 
+  const isHome = location.pathname === "/"
+
   const isContentRoute =
     sectionSlug &&
     subSectionSlug &&
@@ -93,7 +95,9 @@ function AppLayout() {
             <AppBreadcrumb />
           </div>
         </header>
-        {isCitationsRoute ? (
+        {isHome ? (
+          <HomePage />
+        ) : isCitationsRoute ? (
           <CitationsPage />
         ) : isContentRoute ? (
           <ContentPage sectionSlug={sectionSlug} subSectionSlug={subSectionSlug} />
@@ -110,7 +114,6 @@ export default function App() {
     <BrowserRouter>
       <PreferencesProvider>
       <Routes>
-        <Route path="/" element={<HomePage />} />
         <Route path="/visit" element={<Navigate to="/visit/entry-requirement" replace />} />
         <Route path="/student" element={<Navigate to="/student/overview" replace />} />
         <Route path="/work" element={<Navigate to="/work/post-study-work" replace />} />
