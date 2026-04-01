@@ -1,6 +1,6 @@
 # Student Atlas
 
-Visa and immigration guidance for parents of international students, covering the US, UK, and Australia.
+Personalised visa and immigration guidance for international students. Users select their nationality and destination countries to receive tailored information on tourist visas, student visas, work visas, and residency pathways.
 
 ## Project Structure
 
@@ -58,3 +58,16 @@ cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
 ```
+
+## Quick Start
+
+```bash
+# From the project root — starts both backend and frontend
+npm start
+```
+
+This runs FastAPI on `http://localhost:8000` and Vite on `http://localhost:5173`.
+
+## Branding
+
+The application uses a compass pin logo — a map location pin containing an 8-point compass rose with gold intercardinal accents and a red north needle. The sidebar features a vertical/horizontal lines toggle for collapsing navigation.
