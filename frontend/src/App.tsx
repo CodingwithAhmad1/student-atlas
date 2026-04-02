@@ -13,6 +13,7 @@ import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar"
+import { TooltipProvider } from "@/components/ui/tooltip"
 import { Page } from "@/pages/page"
 import { HomePage } from "@/pages/home-page"
 import { ContentPage } from "@/pages/content-page"
@@ -83,6 +84,7 @@ function AppLayout() {
   const isCitationsRoute = location.pathname === "/citations"
 
   return (
+    <TooltipProvider>
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset>
@@ -102,6 +104,7 @@ function AppLayout() {
         )}
       </SidebarInset>
     </SidebarProvider>
+    </TooltipProvider>
   )
 }
 

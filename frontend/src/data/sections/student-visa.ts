@@ -15,13 +15,13 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The primary visa for international students studying at accredited US universities is the **F-1 Student Visa**. It is issued by the US Department of State and administered, once in the US, by the Student and Exchange Visitor Program (SEVP) within the Department of Homeland Security. [CITE: studyinthestates.dhs.gov]",
+                text: "The primary visa for international students studying at accredited US universities is the [TERM: f-1|F-1 Student Visa]. It is issued by the US Department of State and administered, once in the US, by the [TERM: sevp|Student and Exchange Visitor Program (SEVP)] within the Department of Homeland Security. [CITE: studyinthestates.dhs.gov]",
               },
             },
             {
               block: {
                 type: "paragraph",
-                text: 'The F-1 visa does not have a fixed expiry date in the way a tourist visa does. It is issued with "D/S" (Duration of Status) notation, meaning it remains valid for as long as the student is enrolled full-time in an approved program and complying with the conditions of their status. The physical visa stamp in the passport may expire, but the student can remain in the US as long as their SEVIS record and I-20 are valid.',
+                text: 'The F-1 visa does not have a fixed expiry date in the way a tourist visa does. It is issued with [TERM: d-s|"D/S" (Duration of Status)] notation, meaning it remains valid for as long as the student is enrolled full-time in an approved program and complying with the conditions of their status. The physical visa stamp in the passport may expire, but the student can remain in the US as long as their [TERM: sevis|SEVIS] record and [TERM: i-20] are valid.',
               },
             },
             {
@@ -32,7 +32,7 @@ export const studentVisa: Section = {
                   {
                     label: "Visa fee",
                     value:
-                      "$185 application fee (MRV fee) [CITE: travel.state.gov/fees]",
+                      "$185 application fee ([TERM: mrv-fee]) [CITE: travel.state.gov/fees]",
                   },
                   {
                     label: "SEVIS fee",
@@ -42,7 +42,7 @@ export const studentVisa: Section = {
                   {
                     label: "Work rights",
                     value:
-                      "On-campus employment up to 20 hours per week during term; full-time during official breaks. Off-campus work is generally not permitted except through specific programs (CPT, OPT) authorised by the institution.",
+                      "On-campus employment up to 20 hours per week during term; full-time during official breaks. Off-campus work is generally not permitted except through specific programs ([TERM: cpt], [TERM: opt]) authorised by the institution.",
                   },
                   {
                     label: "Dependants",
@@ -65,7 +65,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The visa for international students in the UK is the **Student visa**, previously known as the Tier 4 (General) Student visa. It is issued by UK Visas and Immigration (UKVI), a department of the Home Office. [CITE: gov.uk/student-visa]",
+                text: "The visa for international students in the UK is the **Student visa**, previously known as the Tier 4 (General) Student visa. It is issued by [TERM: ukvi|UK Visas and Immigration (UKVI)], a department of the Home Office. [CITE: gov.uk/student-visa]",
               },
             },
             {
@@ -85,7 +85,7 @@ export const studentVisa: Section = {
                       "\u00A3490 (applying from outside the UK) [CITE: gov.uk/student-visa/apply]",
                   },
                   {
-                    label: "Immigration Health Surcharge (IHS)",
+                    label: "[TERM: ihs|Immigration Health Surcharge (IHS)]",
                     value:
                       "\u00A3776 per year of study. For a three-year degree, this amounts to \u00A32,328 paid upfront at the time of application. This is a significant and often unexpected cost for families. [CITE: gov.uk/healthcare-immigration-application]",
                   },
@@ -115,7 +115,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The visa for international students in Australia is the **Student visa \u2014 Subclass 500**. It is issued by the Australian Department of Home Affairs. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                text: "The visa for international students in Australia is the [TERM: subclass-500|Student visa \u2014 Subclass 500]. It is issued by the Australian Department of Home Affairs. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
               },
             },
             {
@@ -135,7 +135,7 @@ export const studentVisa: Section = {
                       "AUD $710 [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/fees]",
                   },
                   {
-                    label: "Overseas Student Health Cover (OSHC)",
+                    label: "[TERM: oshc|Overseas Student Health Cover (OSHC)]",
                     value:
                       "Mandatory health insurance that must be purchased before the visa is granted. Cost varies by provider and duration \u2014 approximately AUD $600 to $700 per year for a single student. This is different from the UK IHS in that it is purchased from a private insurer, not paid to the government. [CITE: privatehealth.gov.au/healthinsurance/overseas]",
                   },
@@ -152,7 +152,7 @@ export const studentVisa: Section = {
                   {
                     label: "Program types covered",
                     value:
-                      "Bachelor's, Master's, PhD, and registered vocational courses at registered education providers (CRICOS-registered institutions).",
+                      "Bachelor's, Master's, PhD, and registered vocational courses at registered education providers ([TERM: cricos|CRICOS]-registered institutions).",
                   },
                 ],
               },
@@ -173,7 +173,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The following documents are required to apply for and attend the F-1 visa interview. All must be original or certified copies unless otherwise stated.",
+                text: "You will need the following documents to apply for and attend the F-1 visa interview. Bring originals or certified copies unless noted otherwise.",
               },
             },
             {
@@ -187,7 +187,7 @@ export const studentVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  "**Form I-20** \u2014 issued by the Designated School Official (DSO) at the university after the student has been accepted and paid a deposit or confirmed enrollment. This is the foundational document \u2014 no other part of the application can proceed without it. The I-20 states the program start date, the program end date, and the estimated annual cost of attendance. [CITE: studyinthestates.dhs.gov/students/the-form-i-20]",
+                  "[TERM: i-20|Form I-20] \u2014 issued by the [TERM: dso|Designated School Official (DSO)] at the university after the student has been accepted and paid a deposit or confirmed enrollment. This is the foundational document \u2014 no other part of the application can proceed without it. The I-20 states the program start date, the program end date, and the estimated annual cost of attendance. [CITE: studyinthestates.dhs.gov/students/the-form-i-20]",
                 ],
               },
             },
@@ -224,9 +224,9 @@ export const studentVisa: Section = {
                   "Valid passport with at least six months' validity beyond the intended program start date",
                   "Previous passports containing US visas or travel to the US, if any",
                   "One photograph meeting State Department specifications [CITE: travel.state.gov/photos]",
-                  "DS-160 confirmation page with barcode",
-                  "SEVIS fee (I-901) payment receipt [CITE: fmjfee.com]",
-                  "MRV (visa application) fee payment receipt",
+                  "[TERM: ds-160] confirmation page with barcode",
+                  "[TERM: sevis|SEVIS] fee (I-901) payment receipt [CITE: fmjfee.com]",
+                  "[TERM: mrv-fee|MRV] (visa application) fee payment receipt",
                 ],
               },
             },
@@ -242,7 +242,7 @@ export const studentVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  'Proof of ties to your home country \u2014 for a student this typically means family ties, property owned by parents, and evidence of intent to return after study. The concept of "non-immigrant intent" is particularly important for F-1 applicants: the student must demonstrate they do not intend to permanently immigrate to the US, even though the F-1 pathway does not preclude later applying to do so.',
+                  'Proof of ties to your home country \u2014 for a student this typically means family ties, property owned by parents, and evidence of intent to return after study. The concept of "non-immigrant intent" is particularly important for F-1 applicants: the student must show they do not intend to permanently immigrate to the US, even though the F-1 pathway does not preclude later applying to do so.',
                   "Academic transcripts and standardised test scores (SAT, ACT, or equivalent where applicable)",
                   "Evidence of English language proficiency if not already demonstrated through the institution's admission process",
                 ],
@@ -264,7 +264,7 @@ export const studentVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  "**Confirmation of Acceptance for Studies (CAS)** \u2014 a unique reference number issued by the university once the student has accepted their offer. It is the UK equivalent of the I-20 and is required before the application can be submitted. The CAS contains the course details, start date, fees, and the institution's sponsor licence number. [CITE: gov.uk/student-visa/cas]",
+                  "[TERM: cas|Confirmation of Acceptance for Studies (CAS)] \u2014 a unique reference number issued by the university once the student has accepted their offer. It is the UK equivalent of the I-20 and is required before the application can be submitted. The CAS contains the course details, start date, fees, and the institution's sponsor licence number. [CITE: gov.uk/student-visa/cas]",
                 ],
               },
             },
@@ -295,7 +295,7 @@ export const studentVisa: Section = {
               id: "uk-docs-financial-rule",
               block: {
                 type: "paragraph",
-                text: "Funds must have been held continuously for at least 28 days prior to the application date. The 28-day rule is strict \u2014 the balance must not drop below the required amount at any point during that 28-day period.",
+                text: "Funds must have been held continuously for at least 28 days before the application date. The 28-day rule is strict \u2014 the balance must not drop below the required amount at any point during that 28-day period.",
               },
             },
             {
@@ -318,9 +318,9 @@ export const studentVisa: Section = {
                 items: [
                   "Valid passport",
                   "CAS reference number (entered into the online application)",
-                  "Proof of English language proficiency \u2014 typically IELTS Academic with a minimum score of 6.0 overall (some universities and visa categories require higher). IELTS for UKVI is a specific version required for visa purposes; standard IELTS is not always accepted. [CITE: gov.uk/student-visa/english-language]",
+                  "Proof of English language proficiency \u2014 typically [TERM: ielts|IELTS] Academic with a minimum score of 6.0 overall (some universities and visa categories require higher). IELTS for [TERM: ukvi|UKVI] is a specific version required for visa purposes; standard IELTS is not always accepted. [CITE: gov.uk/student-visa/english-language]",
                   "Proof of parental or guardian consent if the student is under 18",
-                  "Tuberculosis test results \u2014 Applicants travelling to the UK for more than six months must provide a certificate from an approved clinic in your country of residence confirming they do not have active tuberculosis [CITE: gov.uk/tb-test-visa]",
+                  "Tuberculosis test results \u2014 if you're travelling to the UK for more than six months, you'll need a certificate from an approved clinic in your country of residence confirming you do not have active tuberculosis [CITE: gov.uk/tb-test-visa]",
                 ],
               },
             },
@@ -340,7 +340,7 @@ export const studentVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  "**Confirmation of Enrolment (CoE)** \u2014 issued by the university or college after the student has accepted their offer and paid a deposit. The CoE contains the provider's CRICOS registration number, the course details, and the start and end dates. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                  "[TERM: coe|Confirmation of Enrolment (CoE)] \u2014 issued by the university or college after the student has accepted their offer and paid a deposit. The CoE contains the provider's [TERM: cricos|CRICOS] registration number, the course details, and the start and end dates. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
                 ],
               },
             },
@@ -387,7 +387,7 @@ export const studentVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  "**Overseas Student Health Cover (OSHC)** \u2014 proof of purchase is required as part of the visa application. The student must purchase OSHC from an approved provider before submitting. [CITE: privatehealth.gov.au]",
+                  "[TERM: oshc|Overseas Student Health Cover (OSHC)] \u2014 proof of purchase is required as part of the visa application. The student must purchase OSHC from an approved provider before submitting. [CITE: privatehealth.gov.au]",
                   "**Health examination** \u2014 may be required depending on the length of stay and country of origin. Applicants for courses longer than 12 months are typically required to undergo an upfront health examination at an approved panel physician. Approved physicians are listed on the ImmiAccount portal. [CITE: immi.homeaffairs.gov.au/help-support/meeting-our-requirements/health]",
                 ],
               },
@@ -413,7 +413,7 @@ export const studentVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  'Genuine Temporary Entrant (GTE) statement \u2014 a written statement explaining why the student wants to study in Australia and why they intend to return home afterwards. This is unique to the Australian application and is taken seriously by processing officers. It should be well-written and specific \u2014 generic statements about "gaining an education" are insufficient.',
+                  '[TERM: gte|Genuine Temporary Entrant (GTE)] statement \u2014 a written statement explaining why the student wants to study in Australia and why they intend to return home afterwards. This is unique to the Australian application and is taken seriously by processing officers. It should be well-written and specific \u2014 generic statements about "gaining an education" are insufficient.',
                 ],
               },
             },
@@ -441,7 +441,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 1,
                 title: "Receive the I-20",
-                body: "The university issues the I-20 after the student has accepted their offer and, in most cases, paid a SEVIS deposit or enrollment confirmation fee. The student receives it by email as a PDF. It must be signed by both the DSO and the student before it is valid. [CITE: studyinthestates.dhs.gov/students/the-form-i-20]",
+                body: "The university issues the [TERM: i-20] after the student has accepted their offer and, in most cases, paid a [TERM: sevis|SEVIS] deposit or enrollment confirmation fee. The student receives it by email as a PDF. It must be signed by both the [TERM: dso|DSO] and the student before it is valid. [CITE: studyinthestates.dhs.gov/students/the-form-i-20]",
               },
             },
             {
@@ -449,7 +449,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 2,
                 title: "Pay the SEVIS I-901 fee",
-                body: "The $350 SEVIS fee is paid at fmjfee.com using the SEVIS ID number on the I-20. Payment must be made before the DS-160 is submitted and before the visa interview. Keep the payment receipt. [CITE: fmjfee.com]",
+                body: "The $350 SEVIS fee is paid at fmjfee.com using the SEVIS ID number on the I-20. Payment must be made before the [TERM: ds-160] is submitted and before the visa interview. Keep the payment receipt. [CITE: fmjfee.com]",
               },
             },
             {
@@ -465,7 +465,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 4,
                 title: "Pay the MRV fee",
-                body: "The $185 visa application fee is paid through the US Travel Docs portal. [CITE: ustraveldocs.com]",
+                body: "The $185 visa application fee ([TERM: mrv-fee]) is paid through the US Travel Docs portal. [CITE: ustraveldocs.com]",
               },
             },
             {
@@ -499,7 +499,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 8,
                 title: "Travel and entry",
-                body: "The student may enter the US no earlier than 30 days before the program start date listed on the I-20. At the port of entry, the CBP officer will stamp the passport and create an I-94 arrival record. The student must check their I-94 online within a few days of arrival to confirm the admission class is F-1 and the admitted-until date shows D/S. [CITE: cbp.gov/i94]",
+                body: "The student may enter the US no earlier than 30 days before the program start date listed on the I-20. At the port of entry, the CBP officer will stamp the passport and create an [TERM: i-94] arrival record. The student should check their I-94 online within a few days of arrival to confirm the admission class is F-1 and the admitted-until date shows [TERM: d-s|D/S]. [CITE: cbp.gov/i94]",
               },
             },
           ],
@@ -518,7 +518,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 1,
                 title: "Receive the CAS",
-                body: "The university issues the CAS after the student has firmly accepted their offer and, typically, paid a deposit. The CAS is a reference number sent by the university \u2014 it is entered into the online application rather than uploaded as a document. [CITE: gov.uk/student-visa/cas]",
+                body: "The university issues the [TERM: cas|CAS] after the student has firmly accepted their offer and, typically, paid a deposit. The CAS is a reference number sent by the university \u2014 it is entered into the online application rather than uploaded as a document. [CITE: gov.uk/student-visa/cas]",
               },
             },
             {
@@ -535,7 +535,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 3,
                 title: "Submit the online application",
-                body: "The application is submitted at gov.uk/student-visa. The CAS number, personal details, financial information, and English language test results are entered online. The Immigration Health Surcharge is paid as part of this step. [CITE: gov.uk/student-visa/apply]",
+                body: "The application is submitted at gov.uk/student-visa. The CAS number, personal details, financial information, and English language test results are entered online. The [TERM: ihs|Immigration Health Surcharge] is paid as part of this step. [CITE: gov.uk/student-visa/apply]",
               },
             },
             {
@@ -560,7 +560,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 6,
                 title: "Collect the BRP",
-                body: "Within 10 days of arriving in the UK, the student must collect their **Biometric Residence Permit (BRP)** from the post office specified in their visa decision letter. The BRP is the document that serves as proof of immigration status in the UK for the duration of the course. [CITE: gov.uk/biometric-residence-permits]",
+                body: "Within 10 days of arriving in the UK, the student must collect their [TERM: brp|Biometric Residence Permit (BRP)] from the post office specified in their visa decision letter. The BRP is the document that serves as proof of immigration status in the UK for the duration of the course. [CITE: gov.uk/biometric-residence-permits]",
               },
             },
           ],
@@ -579,7 +579,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 1,
                 title: "Receive the CoE",
-                body: "The university issues the CoE after the student accepts their offer and pays any required deposit. [CITE: immi.homeaffairs.gov.au]",
+                body: "The university issues the [TERM: coe|CoE] after the student accepts their offer and pays any required deposit. [CITE: immi.homeaffairs.gov.au]",
               },
             },
             {
@@ -587,7 +587,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 2,
                 title: "Purchase OSHC",
-                body: "Overseas Student Health Cover must be purchased from an approved provider before submitting the application. Approved providers include Medibank, Bupa, Allianz, and others. The OSHC certificate is uploaded as part of the application. [CITE: privatehealth.gov.au]",
+                body: "[TERM: oshc|OSHC] must be purchased from an approved provider before submitting the application. Approved providers include Medibank, Bupa, Allianz, and others. The OSHC certificate is uploaded as part of the application. [CITE: privatehealth.gov.au]",
               },
             },
             {
@@ -604,7 +604,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 4,
                 title: "Submit the online application",
-                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, GTE statement, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $710 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, [TERM: gte|GTE] statement, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $710 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
               },
             },
             {
@@ -622,7 +622,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 6,
                 title: "Entry into Australia",
-                body: "Passport holders from eligible countries may use SmartGates at Australian airports for automated border clearance, which is typically faster than the staffed lane. The student's visa will be confirmed automatically. Carry the OSHC certificate and CoE at entry \u2014 customs officers occasionally ask for these.",
+                body: "Passport holders from eligible countries may use [TERM: smartgates|SmartGates] at Australian airports for automated border clearance, which is typically faster than the staffed lane. The student's visa will be confirmed automatically. Carry the OSHC certificate and CoE at entry \u2014 customs officers occasionally ask for these.",
               },
             },
           ],
@@ -641,7 +641,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Compliance with F-1 status requirements is the student's ongoing responsibility. The consequences of non-compliance \u2014 including termination of SEVIS record and potential bars on re-entry \u2014 are serious. The following are the key obligations.",
+                text: "Staying in good standing with F-1 status is the student's ongoing responsibility. The consequences of non-compliance \u2014 including termination of [TERM: sevis|SEVIS] record and potential bars on re-entry \u2014 are serious. The following are the key obligations.",
               },
             },
             {
@@ -680,7 +680,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The student must report any change of address to their DSO within 10 days. The DSO updates SEVIS accordingly. Failure to maintain a current address in SEVIS is a technical violation.",
+                text: "The student must report any change of address to their DSO within 10 days. The DSO updates SEVIS accordingly. Failing to keep a current address in SEVIS is a technical violation.",
               },
             },
             {
@@ -693,7 +693,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "On-campus employment (up to 20 hours per week during term) is permitted without any additional authorisation. Off-campus work requires explicit authorisation \u2014 either Curricular Practical Training (CPT) for work integral to the curriculum, or Optional Practical Training (OPT) for work in the student's field of study. Working without authorisation is a serious violation and can result in immediate status termination. [CITE: studyinthestates.dhs.gov/students/working]",
+                text: "On-campus employment (up to 20 hours per week during term) is permitted without any additional authorisation. Off-campus work requires explicit authorisation \u2014 either [TERM: cpt|Curricular Practical Training (CPT)] for work integral to the curriculum, or [TERM: opt|Optional Practical Training (OPT)] for work in the student's field of study. Working without authorisation is a serious violation and can result in immediate status termination. [CITE: studyinthestates.dhs.gov/students/working]",
               },
             },
             {
@@ -738,7 +738,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "As noted in the application process, the BRP must be collected from the designated post office within 10 days of arrival. The BRP is the student's primary proof of right to study and work in the UK. Without it, the student cannot open a bank account, register with a GP, or provide proof of status to an employer. [CITE: gov.uk/biometric-residence-permits]",
+                text: "As noted in the application process, the [TERM: brp|BRP] must be collected from the designated post office within 10 days of arrival. The BRP is the student's primary proof of right to study and work in the UK. Without it, the student cannot open a bank account, register with a GP, or provide proof of status to an employer. [CITE: gov.uk/biometric-residence-permits]",
               },
             },
             {
@@ -764,7 +764,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Students are entitled to use the NHS during their studies \u2014 this is what the IHS surcharge pays for. Registering with a local GP near the university should be done within the first two weeks.",
+                text: "Students are entitled to use the NHS during their studies \u2014 this is what the [TERM: ihs|IHS] surcharge pays for. Registering with a local GP near the university should be done within the first two weeks.",
               },
             },
             {
@@ -777,7 +777,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The university is legally obligated to monitor attendance and report absences to UKVI. A student who repeatedly misses classes or withdraws without notifying UKVI can have their leave curtailed (cancelled before the visa expiry date). This is a real risk and not merely theoretical \u2014 UK universities actively manage sponsor compliance. [CITE: gov.uk/sponsor-migrants/sponsor-a-student]",
+                text: "The university is legally obligated to monitor attendance and report absences to [TERM: ukvi|UKVI]. A student who repeatedly misses classes or withdraws without notifying UKVI can have their leave curtailed (cancelled before the visa expiry date). This is a real risk and not merely theoretical \u2014 UK universities actively manage sponsor compliance. [CITE: gov.uk/sponsor-migrants/sponsor-a-student]",
               },
             },
             {
@@ -847,7 +847,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Ensure the OSHC policy is active from the date of arrival. The OSHC card and membership details are used to access healthcare during the stay.",
+                text: "Make sure the [TERM: oshc|OSHC] policy is active from the date of arrival. The OSHC card and membership details are used to access healthcare during the stay.",
               },
             },
             {
@@ -874,7 +874,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: 'Australian institutions are required to report students who are not meeting satisfactory course progress requirements. Failure to meet academic requirements can result in the institution cancelling the student\'s enrollment, which in turn triggers a visa cancellation process. This is called a "section 20 notice" and the student has 28 days to respond before cancellation proceeds. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]',
+                text: 'Australian institutions are required to report students who are not meeting satisfactory course progress requirements. Falling behind on academic requirements can result in the institution cancelling the student\'s enrollment, which in turn triggers a visa cancellation process. This is called a "section 20 notice" and the student has 28 days to respond before cancellation proceeds. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]',
               },
             },
             {
@@ -900,7 +900,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The student's visa conditions can be checked at any time through VEVO (Visa Entitlement Verification Online). Employers, landlords, and banks may request a VEVO check. Students can share their VEVO status directly rather than carrying physical documentation. [CITE: immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online]",
+                text: "The student's visa conditions can be checked at any time through [TERM: vevo|VEVO (Visa Entitlement Verification Online)]. Employers, landlords, and banks may request a VEVO check. Students can share their VEVO status directly rather than carrying physical documentation. [CITE: immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online]",
               },
             },
           ],

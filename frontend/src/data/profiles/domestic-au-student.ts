@@ -44,7 +44,7 @@ export const domesticAuStudent: Profile = {
       id: "au-domestic-student-process",
       block: {
         type: "paragraph",
-        text: "The application process for Australian citizens is entirely academic — there is no immigration component. Apply through your state's admissions centre or directly to the university. Most undergraduate offers are made through the main round in January for the February semester. Accept your offer, enrol in courses, and arrange accommodation. No visa application, health examination, or Overseas Student Health Cover (OSHC) required — you are covered by Medicare.",
+        text: "The application process for Australian citizens is entirely academic — there is no immigration component. Apply through your state's admissions centre or directly to the university. Most undergraduate offers are made through the main round in January for the February semester. Accept your offer, enrol in courses, and arrange accommodation. No visa application, health examination, or [TERM: oshc|Overseas Student Health Cover (OSHC)] required — you are covered by Medicare.",
       },
     },
   ],

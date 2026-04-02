@@ -8,7 +8,7 @@ export const touristVisaUsVwp: Profile = {
       id: "us-vwp-intro",
       block: {
         type: "paragraph",
-        text: "As a national of a **Visa Waiver Program (VWP)** country, you do not need a B-1/B-2 visitor visa to enter the United States for tourism or business visits of up to 90 days. Instead, you must obtain an **Electronic System for Travel Authorization (ESTA)** before travelling. [CITE: travel.state.gov/esta-countries]",
+        text: "As a national of a **Visa Waiver Program (VWP)** country, you do not need a B-1/B-2 visitor visa to enter the United States for tourism or business visits of up to 90 days. Instead, you need an [TERM: esta|Electronic System for Travel Authorization (ESTA)] before travelling. [CITE: travel.state.gov/esta-countries]",
       },
     },
     {

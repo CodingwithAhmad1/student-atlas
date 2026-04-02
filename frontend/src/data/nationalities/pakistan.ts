@@ -12,7 +12,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani nationals face higher scrutiny. 221(g) administrative processing is significantly more common (adds 2-8 weeks or longer). Pakistani applicants should be prepared for this possibility and plan travel dates accordingly. Despite this, approval is certainly achievable with strong documentation. The key factors are demonstrating clear financial means, strong ties to Pakistan, and a credible reason to visit.",
+                text: "Pakistani nationals may face closer scrutiny during the visa process. Something called 221(g) administrative processing \u2014 essentially an extended background review \u2014 is more common for Pakistani applicants and can add 2\u20138 weeks or longer to the timeline. It\u2019s worth knowing about this upfront so travel dates can be planned with some buffer. That said, approval is certainly achievable with strong documentation. The key factors are demonstrating clear financial means, strong ties to Pakistan, and a credible reason to visit.",
               },
             ],
           },
@@ -25,7 +25,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani nationals applying at VFS Global centres in Islamabad, Lahore, or Karachi should expect processing times of 15 working days standard. During peak summer months (May-August), processing can extend to 4-6 weeks. Priority processing (5 working days, additional £250) is available and recommended if travel dates are fixed. Pakistani applicants face a higher refusal rate than many nationalities — the most common reasons are insufficient financial evidence and weak ties to Pakistan. A well-documented application with clear bank statements showing consistent income over 6 months significantly improves approval chances.",
+                text: "Pakistani nationals applying at VFS Global centres in Islamabad, Lahore, or Karachi should expect processing times of 15 working days standard. During peak summer months (May-August), processing can extend to 4-6 weeks. Priority processing (5 working days, additional £250) is available and recommended if travel dates are fixed. Pakistani applicants do see a somewhat higher refusal rate than some other nationalities — the most common reasons are insufficient financial evidence and weak ties to Pakistan. A well-documented application with clear bank statements showing consistent income over 6 months significantly improves approval chances.",
               },
             ],
           },
@@ -38,7 +38,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani nationals are classified in a higher assessment level by Australian immigration, meaning applications receive more detailed scrutiny. Processing times are typically 20-40 working days, longer than for lower-risk nationalities. A health examination at an approved panel physician is mandatory for Pakistani applicants. Ensure all financial documentation clearly demonstrates sufficient funds — Australian immigration officers assess the genuineness of available funds, not just the total amount.",
+                text: "Pakistani nationals are placed in a higher assessment level by Australian immigration, which means applications go through more detailed review. Processing times are typically 20-40 working days, longer than for lower-risk nationalities. A health examination at an approved panel physician is mandatory for Pakistani applicants. Ensure all financial documentation clearly demonstrates sufficient funds — Australian immigration officers assess the genuineness of available funds, not just the total amount.",
               },
             ],
           },
@@ -62,7 +62,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani applicants should be prepared for more detailed questioning about ties to Pakistan, particularly around employment stability, property ownership, and family obligations. Applicants who are self-employed or retired face higher scrutiny. Having a clearly written letter explaining the purpose of the visit (visiting a child at university), evidence of the child's enrollment, and a detailed travel itinerary significantly strengthens the application.",
+                text: "Pakistani applicants should expect more detailed questioning about ties to Pakistan, particularly around employment stability, property ownership, and family obligations. Applicants who are self-employed or retired tend to face closer review. Having a clearly written letter explaining the purpose of the visit (visiting a child at university), evidence of the child's enrollment, and a detailed travel itinerary significantly strengthens the application.",
               },
             ],
           },
@@ -75,7 +75,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani applicants should include particularly strong financial evidence. Bank statements should cover at least 6 months and show consistent salary credits, not just a lump-sum balance. Property ownership documents, employment letters on company letterhead with salary details, and tax returns all strengthen the application. If the trip is to visit a child studying in the UK, include the child's university enrollment letter, student visa copy, and accommodation details.",
+                text: "It helps to include especially strong financial evidence. Bank statements should cover at least 6 months and show consistent salary credits, not just a lump-sum balance. Property ownership documents, employment letters on company letterhead with salary details, and tax returns all strengthen the application. If the trip is to visit a child studying in the UK, include the child's university enrollment letter, student visa copy, and accommodation details.",
               },
             ],
           },
@@ -107,7 +107,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani nationals applying for an F-1 visa should be aware that administrative processing under Section 221(g) is more common than for many other nationalities, particularly for students in STEM fields (science, technology, engineering, mathematics). This can add 4-12 weeks to the visa decision. Apply as early as possible — ideally 3-4 months before the program start date. The refusal rate for Pakistani F-1 applicants is higher than for Gulf nationals, making thorough preparation of financial documents and a clear articulation of post-graduation plans essential.",
+                text: "Pakistani nationals applying for an F-1 visa should know that administrative processing under Section 221(g) is more common than for many other nationalities, particularly for students in STEM fields (science, technology, engineering, mathematics). This can add 4\u201312 weeks to the visa decision. It\u2019s best to apply as early as possible \u2014 ideally 3\u20134 months before the program start date. The refusal rate for Pakistani F-1 applicants tends to be higher than for Gulf nationals, so thorough preparation of financial documents and a clear explanation of post-graduation plans really matters.",
               },
             ],
           },
@@ -133,7 +133,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani nationals applying for the Subclass 500 student visa are subject to a higher assessment level than applicants from lower-risk countries. The Genuine Temporary Entrant (GTE) requirement is scrutinised more closely — a well-written, specific GTE statement is essential and should clearly explain why this particular course and institution, what career opportunities it creates in Pakistan, and evidence of intent to return. Processing times for Pakistani applicants are typically 6-8 weeks.",
+                text: "Pakistani nationals applying for the Subclass 500 student visa are placed in a higher assessment level than applicants from lower-risk countries. The Genuine Temporary Entrant (GTE) requirement is looked at more closely — a well-written, specific GTE statement really matters and should clearly explain why this particular course and institution, what career opportunities it creates in Pakistan, and evidence of intent to return. Processing times for Pakistani applicants are typically 6-8 weeks.",
               },
             ],
           },
@@ -148,7 +148,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani applicants should pay particular attention to financial documentation. Consular officers assess whether funds are genuine, accessible, and sufficient. Common issues include: bank statements showing sudden large deposits, reliance on business income without supporting tax documentation, and insufficient explanation of fund sources. If funds are held in a joint family account, provide a clear explanation of the account structure and the sponsor's relationship to the student.",
+                text: "It\u2019s worth paying close attention to financial documentation. Consular officers look at whether funds are genuine, accessible, and sufficient. Common issues include: bank statements showing sudden large deposits, reliance on business income without supporting tax documentation, and insufficient explanation of fund sources. If funds are held in a joint family account, provide a clear explanation of the account structure and the sponsor's relationship to the student.",
               },
             ],
           },
@@ -335,7 +335,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: 'Pakistani nationals fall into the "rest of the world" (ROW) category, which has significantly shorter wait times than India and China. The realistic timeline from student arrival to Green Card for a Pakistani national in the EB-2 category is approximately 8-14 years. While this is long, it is substantially more achievable than the Indian timeline, which currently extends to decades. Pakistani families should factor this comparatively favourable position into their destination country evaluation.',
+                text: 'Pakistani nationals fall into the "rest of the world" (ROW) category, which has significantly shorter wait times than India and China. The realistic timeline from student arrival to Green Card for a Pakistani national in the EB-2 category is approximately 8-14 years. While this is long, it is substantially more achievable than the Indian timeline, which currently extends to decades. This comparatively favourable position is worth factoring into the destination country decision.',
               },
             ],
           },
@@ -348,7 +348,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Australian PR pathway through the Subclass 189 points test does not discriminate by nationality. Pakistani graduates who score well on the points test (age, English, qualifications, Australian study) have the same opportunity as any other nationality. This contrasts sharply with the US per-country Green Card system and makes Australia an attractive option for Pakistani families seeking permanent residency for their child.",
+                text: "The Australian PR pathway through the Subclass 189 points test does not discriminate by nationality. Pakistani graduates who score well on the points test (age, English, qualifications, Australian study) have the same opportunity as any other nationality. This is a sharp contrast to the US per-country Green Card system, and it\u2019s a big reason many Pakistani families find Australia an attractive option for long-term settlement.",
               },
             ],
           },

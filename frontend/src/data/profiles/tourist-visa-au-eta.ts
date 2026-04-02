@@ -6,7 +6,7 @@ export const touristVisaAuEta: Profile = {
       id: "au-eta-intro",
       block: {
         type: "paragraph",
-        text: "The **Electronic Travel Authority (ETA) \u2014 Subclass 601** allows eligible nationals to visit Australia without a full visitor visa. The ETA is a pre-travel authorisation applied for electronically and linked to your passport. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601]",
+        text: "The [TERM: eta|Electronic Travel Authority (ETA)] \u2014 Subclass 601 \u2014 allows eligible nationals to visit Australia without a full visitor visa. The ETA is a pre-travel authorisation applied for electronically and linked to your passport. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601]",
       },
     },
     {

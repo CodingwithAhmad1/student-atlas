@@ -7,7 +7,7 @@ export const domesticUsWork: Profile = {
       id: "us-domestic-work-psw",
       block: {
         type: "paragraph",
-        text: "As a **United States citizen**, you have the unrestricted right to work anywhere in the United States. You do not need OPT, an H-1B visa, or any form of work authorisation. You can begin working immediately upon graduating — part-time or full-time, in any field, for any employer. There are no lottery systems, sponsorship requirements, or time limits.",
+        text: "As a **United States citizen**, you have the unrestricted right to work anywhere in the United States. You do not need [TERM: opt|OPT], an [TERM: h-1b|H-1B] visa, or any form of work authorisation. You can begin working immediately upon graduating — part-time or full-time, in any field, for any employer. There are no lottery systems, sponsorship requirements, or time limits.",
       },
     },
     {

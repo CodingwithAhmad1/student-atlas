@@ -7,7 +7,7 @@ export const domesticUkResidency: Profile = {
       id: "uk-domestic-pr",
       block: {
         type: "paragraph",
-        text: "As a **British citizen**, you already hold the highest form of immigration status in the UK. You do not need Indefinite Leave to Remain (ILR) or any residency permit. You have a permanent, irrevocable right to live in the United Kingdom. Your citizenship cannot be taken away except in extremely rare circumstances (such as fraud in the naturalisation process or certain national security grounds).",
+        text: "As a **British citizen**, you already hold the highest form of immigration status in the UK. You do not need [TERM: ilr|Indefinite Leave to Remain (ILR)] or any residency permit. You have a permanent, irrevocable right to live in the United Kingdom. Your citizenship cannot be taken away except in extremely rare circumstances (such as fraud in the naturalisation process or certain national security grounds).",
       },
     },
     {

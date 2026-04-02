@@ -44,7 +44,7 @@ export const domesticUsStudent: Profile = {
       id: "us-domestic-student-process",
       block: {
         type: "paragraph",
-        text: "The application process for US citizens is entirely academic — there is no immigration component. Apply through the Common App or directly to universities. Most undergraduate deadlines fall between November (Early Decision) and January (Regular Decision). Accept your offer, submit your enrollment deposit, and arrange housing. No visa interview, I-20, or SEVIS registration required.",
+        text: "The application process for US citizens is entirely academic — there is no immigration component. Apply through the Common App or directly to universities. Most undergraduate deadlines fall between November (Early Decision) and January (Regular Decision). Accept your offer, submit your enrollment deposit, and arrange housing. No visa interview, [TERM: i-20], or [TERM: sevis|SEVIS] registration required.",
       },
     },
   ],

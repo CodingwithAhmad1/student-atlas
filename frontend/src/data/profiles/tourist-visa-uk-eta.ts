@@ -6,7 +6,7 @@ export const touristVisaUkEta: Profile = {
       id: "uk-eta-intro",
       block: {
         type: "paragraph",
-        text: "The UK **Electronic Travel Authorisation (ETA)** scheme allows eligible nationals to visit the United Kingdom without a full visitor visa. The ETA is a pre-travel authorisation linked electronically to your passport. [CITE: gov.uk/uk-eta]",
+        text: "The UK [TERM: eta|Electronic Travel Authorisation (ETA)] scheme allows eligible nationals to visit the United Kingdom without a full visitor visa. The ETA is a pre-travel authorisation linked electronically to your passport. [CITE: gov.uk/uk-eta]",
       },
     },
     {

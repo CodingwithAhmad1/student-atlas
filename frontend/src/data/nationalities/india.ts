@@ -12,7 +12,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian nationals applying for a B-2 visa generally have good approval rates, but face **extremely long interview wait times** at Indian consulates. At posts like Mumbai and New Delhi, appointment wait times can exceed 6 months during peak periods, and even Chennai, Hyderabad, and Kolkata can have waits of 3-4 months. This is driven by the sheer volume of applications from India. Planning ahead is essential \u2014 begin the application process as soon as travel plans are contemplated, not when they are confirmed. Some applicants with valid US visas that expired within the last 48 months may qualify for interview waiver (dropbox) processing, which is significantly faster.",
+                text: "Indian nationals applying for a B-2 visa generally have good approval rates, but face **extremely long interview wait times** at Indian consulates. At posts like Mumbai and New Delhi, appointment wait times can exceed 6 months during peak periods, and even Chennai, Hyderabad, and Kolkata can have waits of 3-4 months. This is driven by the sheer volume of applications from India. Planning ahead is key \u2014 it\u2019s best to begin the application process as soon as travel plans are being considered, not when they\u2019re confirmed. Some applicants with valid US visas that expired within the last 48 months may qualify for interview waiver (dropbox) processing, which is significantly faster.",
               },
             ],
           },
@@ -109,7 +109,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian nationals represent one of the largest F-1 student populations in the US. The application process is standard, but extremely long interview wait times at Indian consulates mean planning must start early \u2014 ideally 4-6 months before the intended travel date. Administrative processing (221g) is less common for Indian F-1 applicants than for some other South Asian nationalities but can still occur, particularly for students in certain STEM research fields. The most common reason for F-1 refusal for Indian applicants is failure to demonstrate non-immigrant intent \u2014 the consular officer must be satisfied the student intends to return to India after study, even though the F-1 pathway may eventually lead to immigration.",
+                text: "Indian nationals represent one of the largest F-1 student populations in the US. The application process is standard, but extremely long interview wait times at Indian consulates mean planning must start early \u2014 ideally 4-6 months before the intended travel date. Administrative processing (221g) is less common for Indian F-1 applicants than for some other South Asian nationalities but can still occur, particularly for students in certain STEM research fields. The most common reason for F-1 refusal among Indian applicants is not sufficiently demonstrating non-immigrant intent \u2014 the consular officer must be satisfied the student intends to return to India after study, even though the F-1 pathway may eventually lead to immigration.",
               },
             ],
           },
@@ -135,7 +135,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian nationals are one of the largest international student groups in Australia. The Genuine Temporary Entrant (GTE) requirement is assessed carefully \u2014 a specific, well-reasoned statement is essential. Processing times for Indian Subclass 500 applicants are typically 4-8 weeks. Australian immigration applies a risk-based assessment framework, and Indian applicants generally face standard (not elevated) scrutiny when documentation is complete. The 48-hour per fortnight work right is particularly valued by Indian students managing education costs.",
+                text: "Indian nationals are one of the largest international student groups in Australia. The Genuine Temporary Entrant (GTE) requirement is assessed carefully \u2014 a specific, well-reasoned statement really matters. Processing times for Indian Subclass 500 applicants are typically 4-8 weeks. Australian immigration applies a risk-based assessment framework, and Indian applicants generally face standard (not elevated) scrutiny when documentation is complete. The 48-hour per fortnight work right is particularly valued by Indian students managing education costs.",
               },
             ],
           },
@@ -150,7 +150,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian applicants should be particularly thorough with financial documentation. Common issues include: reliance on agricultural income without supporting documentation, fixed deposits that appear to have been recently created specifically for the visa application, and insufficient evidence connecting the sponsor\u2019s income to the bank statements. If using a combination of savings, fixed deposits, and education loans, provide a clear summary showing how the total covers the I-20 amount. Education loan sanction letters from Indian banks are accepted as valid financial evidence by US consulates.",
+                text: "For Indian applicants, it's worth being especially thorough with financial documentation. Common issues include: reliance on agricultural income without supporting documentation, fixed deposits that appear to have been recently created specifically for the visa application, and insufficient evidence connecting the sponsor's income to the bank statements. If using a combination of savings, fixed deposits, and education loans, provide a clear summary showing how the total covers the I-20 amount. Education loan sanction letters from Indian banks are accepted as valid financial evidence by US consulates.",
               },
             ],
           },
@@ -264,7 +264,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian nationals on OPT face the same H-1B lottery as everyone else \u2014 the lottery is nationality-blind. However, the critical difference for Indian nationals emerges AFTER H-1B approval: the employment-based Green Card backlog for India is the longest of any nationality, with EB-2 and EB-3 wait times currently estimated at 10+ years and potentially decades. This means an Indian graduate could secure excellent employment and H-1B sponsorship but face an indefinite wait for permanent residency. This is the single most important factor Indian families should consider when evaluating the US pathway. See the Residency pathway section for full detail.",
+                text: "Indian nationals on OPT face the same H-1B lottery as everyone else \u2014 the lottery is nationality-blind. However, the critical difference for Indian nationals emerges AFTER H-1B approval: the employment-based Green Card backlog for India is the longest of any nationality, with EB-2 and EB-3 wait times currently estimated at 10+ years and potentially decades. This means an Indian graduate could secure excellent employment and H-1B sponsorship but face an indefinite wait for permanent residency. This is the biggest factor Indian families should weigh when evaluating the US pathway. See the Residency pathway section for full detail.",
               },
             ],
           },
@@ -277,7 +277,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Subclass 485 post-study work visa provides equal treatment regardless of nationality. For Indian graduates, this is significant because Australia\u2019s subsequent permanent residency pathway (via Subclass 189 points test or employer sponsorship) does NOT have a nationality-based queue. This contrasts starkly with the US Green Card system. Many Indian graduates who initially target the US are now considering Australia specifically because the PR pathway is more predictable and achievable.",
+                text: "The Subclass 485 post-study work visa provides equal treatment regardless of nationality. For Indian graduates, this is significant because Australia\u2019s subsequent permanent residency pathway (via Subclass 189 points test or employer sponsorship) does NOT have a nationality-based queue. This is a sharp contrast to the US Green Card system. Many Indian graduates who initially target the US are now considering Australia specifically because the PR pathway is more predictable and achievable.",
               },
             ],
           },
@@ -292,7 +292,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "**This is the most critical consideration for Indian families evaluating the US.** Indian nationals face the most severe employment-based Green Card backlog of any nationality. Current estimates for EB-3 (skilled workers with bachelor\u2019s degrees) exceed 10 years from I-140 approval, and some estimates suggest the backlog could extend to 40+ years at current processing rates. EB-2 (advanced degree) is somewhat shorter but still measured in many years to decades. During this wait, the applicant must maintain valid H-1B status (renewed in 3-year increments by the employer) \u2014 any job loss, company closure, or desire to change employers is significantly complicated by the pending Green Card. For Indian families, the US offers exceptional career and earning opportunities but the most uncertain path to permanent settlement of the three countries.",
+                text: "**This is the most important thing for Indian families to understand about the US pathway.** Indian nationals face the most severe employment-based Green Card backlog of any nationality. Current estimates for EB-3 (skilled workers with bachelor\u2019s degrees) exceed 10 years from I-140 approval, and some estimates suggest the backlog could extend to 40+ years at current processing rates. EB-2 (advanced degree) is somewhat shorter but still measured in many years to decades. During this wait, the applicant must maintain valid H-1B status (renewed in 3-year increments by the employer) \u2014 any job loss, company closure, or desire to change employers is significantly complicated by the pending Green Card. For Indian families, the US offers exceptional career and earning opportunities but the least predictable path to permanent settlement of the three countries.",
               },
             ],
           },
@@ -337,7 +337,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "**Indian nationals face the longest Green Card wait of any nationality.** The per-country cap system limits each country to approximately 7% of annual employment-based Green Cards, regardless of demand. Given the enormous volume of Indian applicants, the EB-2 and EB-3 queues for India-born applicants currently extend to an estimated 10-40+ years. Legislative proposals to eliminate per-country caps have been introduced multiple times but have not passed. Indian families should treat the US Green Card as a possibility that may take decades rather than a reliable plan. During the wait, the applicant remains on H-1B (employer-dependent), which creates practical limitations around job changes, entrepreneurship, and geographic flexibility. Some Indian applicants pursue EB-1A (extraordinary ability, no queue) or the National Interest Waiver (NIW) to bypass the standard backlog, but these have very high qualification thresholds.",
+                text: "**Indian nationals face the longest Green Card wait of any nationality.** The per-country cap system limits each country to approximately 7% of annual employment-based Green Cards, regardless of demand. Given the enormous volume of Indian applicants, the EB-2 and EB-3 queues for India-born applicants currently extend to an estimated 10-40+ years. Legislative proposals to eliminate per-country caps have been introduced multiple times but have not passed. Indian families should think of the US Green Card as something that may take decades rather than a reliable plan. During the wait, the applicant remains on H-1B (employer-dependent), which creates practical limitations around job changes, entrepreneurship, and geographic flexibility. Some Indian applicants pursue EB-1A (extraordinary ability, no queue) or the [TERM: niw|National Interest Waiver (NIW)] to bypass the standard backlog, but these have very high qualification thresholds.",
               },
             ],
           },
@@ -365,7 +365,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "India does not permit dual nationality. An Indian national who naturalises as a citizen of the United States, United Kingdom, or Australia is required to surrender their Indian passport. However, India offers the **Overseas Citizen of India (OCI)** card to former Indian citizens and their descendants. The OCI card provides: lifelong right to visit and work in India without a visa, exemption from foreigner registration requirements, and broadly equivalent rights to Indian citizens in most areas except voting, holding public office, and purchasing agricultural land. The OCI card is widely regarded as the practical equivalent of dual nationality for most purposes, and the vast majority of Indian-origin naturalised citizens of the US, UK, and Australia hold an OCI card. Families should apply for OCI promptly after naturalisation to maintain seamless access to India. [CITE: mha.gov.in/oci]",
+                text: "India does not permit dual nationality. An Indian national who naturalises as a citizen of the United States, United Kingdom, or Australia is required to surrender their Indian passport. However, India offers the [TERM: oci|**Overseas Citizen of India (OCI)**] card to former Indian citizens and their descendants. The OCI card provides: lifelong right to visit and work in India without a visa, exemption from foreigner registration requirements, and broadly equivalent rights to Indian citizens in most areas except voting, holding public office, and purchasing agricultural land. The OCI card is widely regarded as the practical equivalent of dual nationality for most purposes, and the vast majority of Indian-origin naturalised citizens of the US, UK, and Australia hold an OCI card. Families should apply for OCI promptly after naturalisation to maintain seamless access to India. [CITE: mha.gov.in/oci]",
               },
             ],
           },

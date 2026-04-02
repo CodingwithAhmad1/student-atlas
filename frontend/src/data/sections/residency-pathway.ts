@@ -15,7 +15,7 @@ export const residencyPathway: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Permanent residency in the US — commonly called the **Green Card** — confers the right to live and work in the US indefinitely, without employer sponsorship or visa renewal. It is the most valuable immigration status short of citizenship. [CITE: uscis.gov/green-card]",
+                text: "Permanent residency in the US — commonly called the **Green Card** — gives you the right to live and work in the US indefinitely, without employer sponsorship or visa renewal. It's the most valuable immigration status short of citizenship. [CITE: uscis.gov/green-card]",
               },
             },
             {
@@ -35,10 +35,10 @@ export const residencyPathway: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  "**EB-1A:** Extraordinary ability — no employer needed, self-petition. Requires international recognition in the field. Very high bar.",
-                  "**EB-1B:** Outstanding researcher or professor — employer required. Requires recognised international standing in academic or research field.",
-                  "**EB-2:** Advanced degree professionals or exceptional ability. Requires a master's degree or bachelor's plus five years' progressive experience, and typically employer sponsorship through the PERM labor certification process. There is a sub-category, the **National Interest Waiver (NIW)**, which allows self-petition without employer sponsorship if the applicant can demonstrate their work is in the national interest.",
-                  "**EB-3:** Skilled workers and professionals. Requires a bachelor's degree and employer sponsorship. Lower bar than EB-2 but longer queues for high-demand nationalities. [CITE: uscis.gov/green-card/green-card-eligibility/green-card-through-employment]",
+                  "[TERM: eb-1|EB-1A]: Extraordinary ability — no employer needed, you can self-petition. Requires international recognition in your field. Very high bar.",
+                  "[TERM: eb-1|EB-1B]: Outstanding researcher or professor — employer required. Requires recognised international standing in an academic or research field.",
+                  "[TERM: eb-2|EB-2]: Advanced degree professionals or exceptional ability. Requires a master's degree or bachelor's plus five years' progressive experience, and typically employer sponsorship through the PERM labor certification process. There is a sub-category, the [TERM: niw|National Interest Waiver (NIW)], which lets you self-petition without employer sponsorship if you can show your work is in the national interest.",
+                  "[TERM: eb-3|EB-3]: Skilled workers and professionals. Requires a bachelor's degree and employer sponsorship. Lower bar than EB-2 but longer queues for high-demand nationalities. [CITE: uscis.gov/green-card/green-card-eligibility/green-card-through-employment]",
                 ],
               },
             },
@@ -52,7 +52,7 @@ export const residencyPathway: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "For most EB-2 and EB-3 applicants, the employer must first complete a **PERM Labor Certification** through the Department of Labor — a process demonstrating that no qualified US worker was available for the role. PERM takes 8 to 18 months currently. After PERM approval, the employer files an I-140 petition. After I-140 approval, the applicant must wait for a visa number to become available — determined by their priority date and nationality category. [CITE: dol.gov/agencies/eta/foreign-labor/programs/perm]",
+                text: "For most EB-2 and EB-3 applicants, the employer must first complete a [TERM: perm|PERM Labor Certification] through the Department of Labor — essentially proving that no qualified US worker was available for the role. PERM currently takes 8 to 18 months. After PERM approval, the employer files an [TERM: i-140] petition. Once that's approved, the applicant waits for a visa number to become available — determined by their priority date and nationality category. [CITE: dol.gov/agencies/eta/foreign-labor/programs/perm]",
               },
             },
             {
@@ -91,7 +91,7 @@ export const residencyPathway: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Permanent residency in the UK is called **Indefinite Leave to Remain (ILR)**. It is the right to live and work in the UK without any time restriction or visa condition. [CITE: gov.uk/indefinite-leave-to-remain]",
+                text: "Permanent residency in the UK is called [TERM: ilr|Indefinite Leave to Remain (ILR)]. It gives you the right to live and work in the UK without any time restriction or visa condition. [CITE: gov.uk/indefinite-leave-to-remain]",
               },
             },
             {
@@ -104,7 +104,7 @@ export const residencyPathway: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "ILR requires five years of continuous lawful residence in the UK. The five years can be made up of time on different visa categories, provided they are all qualifying categories. The Student visa, Graduate Route, and Skilled Worker visa all count. There is no lottery and no nationality-based queue — every applicant who meets the requirements is approved.",
+                text: "ILR requires five years of continuous lawful residence in the UK. The five years can be made up of time on different visa categories, as long as they are all qualifying categories. The Student visa, Graduate Route, and Skilled Worker visa all count. There's no lottery and no nationality-based queue — every applicant who meets the requirements gets approved.",
               },
             },
             {
@@ -168,7 +168,7 @@ export const residencyPathway: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Permanent residency in Australia is called **Permanent Residency (PR)** and is typically acquired through one of several visa subclasses, the most relevant of which are the Subclass 189 (skills-independent) and Subclass 186 (employer nomination). [CITE: immi.homeaffairs.gov.au/visas/permanent-residency]",
+                text: "Permanent residency in Australia is called **Permanent Residency (PR)** and is typically acquired through one of several visa subclasses, the most relevant of which are the [TERM: subclass-189|Subclass 189] (skills-independent) and [TERM: subclass-186|Subclass 186] (employer nomination). [CITE: immi.homeaffairs.gov.au/visas/permanent-residency]",
               },
             },
             {
@@ -381,7 +381,7 @@ export const residencyPathway: Section = {
           id: "dual-origin-position",
           block: {
             type: "paragraph",
-            text: "Whether your country of origin recognises dual nationality varies significantly. Some countries prohibit it entirely, others allow it with specific countries, and others permit it universally. Students and families should research their own country's rules carefully, as acquiring foreign citizenship without understanding these rules can result in the loss of original nationality, passport validity, property rights, and family law protections in the home country.",
+            text: "Whether your country of origin recognises dual nationality varies a lot. Some countries prohibit it entirely, others allow it with specific countries, and others permit it universally. It's worth researching your own country's rules carefully — acquiring foreign citizenship without understanding them can mean losing your original nationality, passport validity, property rights, and family law protections back home.",
           },
         },
         {
@@ -410,7 +410,7 @@ export const residencyPathway: Section = {
           block: {
             type: "bullet-list",
             items: [
-              "**India** does not permit dual nationality. Indian nationals who naturalise abroad must surrender their Indian passport. The Overseas Citizen of India (OCI) card is available as a long-term residency card for former Indian citizens but it is not citizenship.",
+              "**India** does not permit dual nationality. Indian nationals who naturalise abroad must surrender their Indian passport. The [TERM: oci|Overseas Citizen of India (OCI)] card is available as a long-term residency card for former Indian citizens, but it is not citizenship.",
               "**Pakistan** does not officially permit dual nationality with all countries but has bilateral agreements allowing it with a specific list of countries including the US, UK, and Australia. Pakistani nationals naturalising in these three countries may in practice retain Pakistani nationality.",
               "**Saudi Arabia** does not permit dual nationality.",
               "**Egypt** does not permit dual nationality in most circumstances.",

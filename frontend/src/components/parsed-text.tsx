@@ -1,71 +1,115 @@
 import { citations } from "@/data/citations";
+import { glossary } from "@/data/glossary";
+import { InfoTip } from "./info-tip";
 
 interface ParsedTextProps {
   text: string;
   citationMap: Map<string, number>;
 }
 
-const CITE_REGEX = /\[CITE:\s*([^\]]+)\]/g;
+/**
+ * Unified inline-marker regex. Handles three patterns in a single pass:
+ *   1. [CITE: id]           → citation superscript
+ *   2. [TERM: key]          → glossary tooltip (label from glossary)
+ *      [TERM: key|display]  → glossary tooltip (custom display text)
+ *   3. **bold**             → <strong>
+ */
+const INLINE_REGEX =
+  /\[CITE:\s*([^\]]+)\]|\[TERM:\s*([^\]|]+?)(?:\|([^\]]+))?\]|(\*\*[^*]+\*\*)/g;
 
-export function ParsedText({ text, citationMap }: ParsedTextProps) {
-  const parts: (string | { citeId: string; num: number })[] = [];
+type Token =
+  | { type: "text"; value: string }
+  | { type: "cite"; citeId: string; num: number }
+  | { type: "term"; key: string; display: string }
+  | { type: "bold"; value: string };
+
+function tokenize(
+  text: string,
+  citationMap: Map<string, number>
+): Token[] {
+  const tokens: Token[] = [];
   let lastIndex = 0;
 
-  for (const match of text.matchAll(CITE_REGEX)) {
-    const before = text.slice(lastIndex, match.index);
-    if (before) parts.push(before);
-
-    const citeId = match[1].trim();
-    if (!citationMap.has(citeId)) {
-      citationMap.set(citeId, citationMap.size + 1);
+  for (const match of text.matchAll(INLINE_REGEX)) {
+    // Push plain text before this match
+    if (match.index > lastIndex) {
+      tokens.push({ type: "text", value: text.slice(lastIndex, match.index) });
     }
-    parts.push({ citeId, num: citationMap.get(citeId)! });
+
+    if (match[1] != null) {
+      // Citation: [CITE: id]
+      const citeId = match[1].trim();
+      if (!citationMap.has(citeId)) {
+        citationMap.set(citeId, citationMap.size + 1);
+      }
+      tokens.push({ type: "cite", citeId, num: citationMap.get(citeId)! });
+    } else if (match[2] != null) {
+      // Term: [TERM: key] or [TERM: key|display]
+      const key = match[2].trim();
+      const display = match[3]?.trim() ?? glossary[key]?.label ?? key;
+      tokens.push({ type: "term", key, display });
+    } else if (match[4] != null) {
+      // Bold: **text**
+      tokens.push({ type: "bold", value: match[4].slice(2, -2) });
+    }
+
     lastIndex = match.index + match[0].length;
   }
 
-  const remaining = text.slice(lastIndex);
-  if (remaining) parts.push(remaining);
+  // Trailing plain text
+  if (lastIndex < text.length) {
+    tokens.push({ type: "text", value: text.slice(lastIndex) });
+  }
+
+  return tokens;
+}
+
+export function ParsedText({ text, citationMap }: ParsedTextProps) {
+  const tokens = tokenize(text, citationMap);
 
   return (
     <>
-      {parts.map((part, i) => {
-        if (typeof part === "string") {
-          // Handle bold markdown **text**
-          const boldParts = part.split(/(\*\*[^*]+\*\*)/g);
-          return (
-            <span key={i}>
-              {boldParts.map((bp, j) => {
-                if (bp.startsWith("**") && bp.endsWith("**")) {
-                  return (
-                    <strong key={j}>{bp.slice(2, -2)}</strong>
-                  );
-                }
-                return <span key={j}>{bp}</span>;
-              })}
-            </span>
-          );
+      {tokens.map((token, i) => {
+        switch (token.type) {
+          case "text":
+            return <span key={i}>{token.value}</span>;
+
+          case "bold":
+            return <strong key={i}>{token.value}</strong>;
+
+          case "term":
+            return (
+              <InfoTip
+                key={i}
+                termKey={token.key}
+                displayText={token.display}
+              />
+            );
+
+          case "cite": {
+            const cite = citations[token.citeId];
+            if (!cite) {
+              return (
+                <sup key={i} className="text-red-500">
+                  [?]
+                </sup>
+              );
+            }
+            return (
+              <sup key={i}>
+                <a
+                  href={cite.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 underline decoration-dotted ml-0.5"
+                  title={cite.label}
+                >
+                  [{token.num}]
+                </a>
+              </sup>
+            );
+          }
         }
-        const cite = citations[part.citeId];
-        if (!cite) {
-          return (
-            <sup key={i} className="text-red-500">
-              [?]
-            </sup>
-          );
-        }
-        return (
-          <sup key={i}>
-            <a
-              href={cite.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-primary/80 underline decoration-dotted ml-0.5"
-              title={cite.label}
-            >
-              [{part.num}]
-            </a>
-          </sup>
-        );
       })}
     </>
   );

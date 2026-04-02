@@ -22,14 +22,14 @@ export const touristVisa: Section = {
               id: "us-entry-visa-description",
               block: {
                 type: "paragraph",
-                text: 'The B-2 visa is issued for tourism, visiting family, and medical treatment. It does not permit you to work or study. When issued, it is typically valid for **ten years** with multiple entries, meaning you do not need to reapply on every trip. However, each individual visit is limited \u2014 the border officer determines how long you may stay, typically granting **up to six months** per entry.',
+                text: "The B-2 visa is issued for tourism, visiting family, and medical treatment. It does not permit you to work or study. When issued, it is typically valid for **ten years** with multiple entries, so you will not need to reapply on every trip. However, each individual visit is limited \u2014 the border officer determines how long you may stay, typically granting **up to six months** per entry.",
               },
             },
             {
               id: "us-entry-no-restriction",
               block: {
                 type: "paragraph",
-                text: "There is no restriction on how many times you visit during the visa\u2019s validity. You can travel to see your child at the start of term, return for graduation, and visit during holidays \u2014 all on the same visa, as long as each stay does not overstay the period granted at the border.",
+                text: "There's no limit on how many times you visit during the visa\u2019s validity. You can travel to see your child at the start of term, come back for graduation, and visit during holidays \u2014 all on the same visa, as long as each stay does not overstay the period granted at the border.",
               },
             },
             {
@@ -52,7 +52,7 @@ export const touristVisa: Section = {
                       "determined at port of entry, typically up to 6 months",
                   },
                   {
-                    label: "ESTA eligible",
+                    label: "[TERM: esta|ESTA] eligible",
                     value:
                       "Not for most nationalities \u2014 check VWP eligibility list [CITE: travel.state.gov/esta-countries]",
                   },
@@ -68,14 +68,14 @@ export const touristVisa: Section = {
               id: "uk-svv-intro",
               block: {
                 type: "paragraph",
-                text: "To visit the United Kingdom, most nationalities require a **Standard Visitor Visa**. Some nationalities are eligible for the Electronic Travel Authorisation (ETA), a simpler online process \u2014 if your nationality is shown as ETA-eligible when you select it above, you will see ETA-specific guidance instead. [CITE: gov.uk/standard-visitor-visa]",
+                text: "To visit the United Kingdom, most nationalities require a **Standard Visitor Visa**. Some nationalities are eligible for the [TERM: eta|Electronic Travel Authorisation (ETA)], a simpler online process \u2014 if your nationality is shown as ETA-eligible when you select it above, you will see ETA-specific guidance instead. [CITE: gov.uk/standard-visitor-visa]",
               },
             },
             {
               id: "uk-svv-description",
               block: {
                 type: "paragraph",
-                text: "The Standard Visitor Visa allows stays of up to 6 months per visit. You must apply online and attend a Visa Application Centre (VAC) to provide biometrics (fingerprints and a photograph). The standard fee is \u00A3115. Multi-entry options are available: 2-year (\u00A3115), 5-year (\u00A3500), and 10-year (\u00A31,000) visas. Standard processing takes 15 working days; priority processing (5 working days) is available for an additional fee.",
+                text: "The Standard Visitor Visa allows stays of up to 6 months per visit. You apply online and then attend a [TERM: vac|Visa Application Centre (VAC)] to provide biometrics (fingerprints and a photograph). The standard fee is \u00A3115. Multi-entry options are available: 2-year (\u00A3115), 5-year (\u00A3500), and 10-year (\u00A31,000) visas. Standard processing takes 15 working days; priority processing (5 working days) is available for an additional fee.",
               },
             },
             {
@@ -123,7 +123,7 @@ export const touristVisa: Section = {
               id: "au-600-intro",
               block: {
                 type: "paragraph",
-                text: "To visit Australia, most nationalities require a **Visitor visa (Subclass 600)**. Some nationalities are eligible for the Electronic Travel Authority (ETA, Subclass 601), a simpler electronic process \u2014 if your nationality is ETA-eligible, you will see ETA-specific guidance instead. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600]",
+                text: "To visit Australia, most nationalities require a **Visitor visa (Subclass 600)**. Some nationalities are eligible for the [TERM: eta|Electronic Travel Authority (ETA)], Subclass 601, a simpler electronic process \u2014 if your nationality is ETA-eligible, you will see ETA-specific guidance instead. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600]",
               },
             },
             {
@@ -183,7 +183,7 @@ export const touristVisa: Section = {
               block: {
                 type: "step",
                 number: 1,
-                title: "Complete the DS-160 form",
+                title: "Complete the [TERM: ds-160|DS-160] form",
                 body: "The DS-160 is the online nonimmigrant visa application form. It must be completed in full before an appointment can be booked. The form collects biographical information, travel history, and the purpose of the visit. Save the confirmation page \u2014 the barcode is required at the interview. [CITE: ceac.state.gov/genniv]",
               },
             },
@@ -193,7 +193,7 @@ export const touristVisa: Section = {
                 type: "step",
                 number: 2,
                 title: "Pay the visa fee",
-                body: "The $185 MRV fee is paid online before booking the appointment. Keep the receipt. [CITE: travel.state.gov/fees]",
+                body: "The $185 [TERM: mrv-fee|MRV fee] is paid online before booking the appointment. Keep the receipt. [CITE: travel.state.gov/fees]",
               },
             },
             {
@@ -231,7 +231,7 @@ export const touristVisa: Section = {
                   "DS-160 confirmation barcode page",
                   "MRV fee payment receipt",
                   "One photograph (5cm \u00d7 5cm, white background, taken within six months) [CITE: travel.state.gov/photos]",
-                  "Evidence of your child\u2019s enrollment at a US institution (acceptance letter, I-20, or current enrollment confirmation)",
+                  "Evidence of your child\u2019s enrollment at a US institution (acceptance letter, [TERM: i-20], or current enrollment confirmation)",
                   "Evidence of your financial means (recent bank statements, salary slips, or evidence of assets)",
                   "Evidence of ties to your home country (employment letter, property ownership, family ties, return ticket)",
                   "Any previous US visas",
@@ -250,7 +250,7 @@ export const touristVisa: Section = {
               id: "us-apply-assessment",
               block: {
                 type: "paragraph",
-                text: "The core question in a B-2 interview is whether the applicant intends to return home. The officer wants to see that you have meaningful reasons to return to your home country \u2014 employment, family, property, or other obligations. Having a child studying in the US is not considered a negative factor; it is a well-understood and common reason for a B-2 application.",
+                text: "The key question in a B-2 interview is whether you intend to return home. The officer wants to see that you have meaningful reasons to go back \u2014 employment, family, property, or other obligations. Having a child studying in the US is not a negative factor — it's actually a well-understood and common reason for a B-2 application.",
               },
             },
           ],
@@ -262,7 +262,7 @@ export const touristVisa: Section = {
               id: "uk-svv-apply-intro",
               block: {
                 type: "paragraph",
-                text: "The Standard Visitor Visa application involves an online form followed by an in-person appointment at a Visa Application Centre (VAC). [CITE: gov.uk/standard-visitor-visa]",
+                text: "The Standard Visitor Visa application involves an online form followed by an in-person appointment at a [TERM: vac|Visa Application Centre (VAC)]. [CITE: gov.uk/standard-visitor-visa]",
               },
             },
             {

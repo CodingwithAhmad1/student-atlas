@@ -12,7 +12,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals benefit from the US-China reciprocal 10-year B1/B2 visa agreement. Once issued, a B1/B2 visa is typically valid for 10 years with multiple entries, allowing stays of up to 6 months per visit. This makes repeated visits to a child studying in the US significantly easier than for most other nationalities. However, note that visa validity does not guarantee entry — immigration officers may still assess the purpose and duration of each visit at the port of entry.",
+                text: "Good news for families planning regular visits: Chinese nationals benefit from the US-China reciprocal 10-year B1/B2 visa agreement. Once issued, a B1/B2 visa is typically valid for 10 years with multiple entries, allowing stays of up to 6 months per visit. This makes repeated trips to see your child at university significantly easier than for most other nationalities. Do keep in mind that visa validity does not guarantee entry — immigration officers may still assess the purpose and duration of each visit at the port of entry.",
               },
             ],
           },
@@ -25,7 +25,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals apply through VFS Global centres in Beijing, Shanghai, Guangzhou, Chengdu, and several other cities. The UK offers Chinese applicants a 2-year standard visitor visa at the same fee as the 6-month visa (currently £115), and a 10-year long-term visit visa option. For parents planning multiple visits to a child studying a 3-4 year degree, the 2-year or 10-year visa represents excellent value. Processing takes approximately 15 working days; priority (5 working days) and super priority (next working day) services are available at additional cost.",
+                text: "Chinese nationals apply through VFS Global centres in Beijing, Shanghai, Guangzhou, Chengdu, and several other cities. A helpful detail: the UK offers Chinese applicants a 2-year standard visitor visa at the same fee as the 6-month visa (currently £115), and there is also a 10-year long-term visit visa option. For parents planning multiple visits over a 3-4 year degree, the 2-year or 10-year visa can save both money and hassle. Processing takes approximately 15 working days; priority (5 working days) and super priority (next working day) services are available at additional cost.",
               },
             ],
           },
@@ -38,7 +38,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals apply for the Subclass 600 visitor visa online through ImmiAccount. Processing times for Chinese applicants are typically 20-30 business days. Australia offers Chinese nationals the option of applying for a 3-year or 10-year Frequent Traveller stream visa, which is beneficial for parents making regular visits. A health examination is not typically required for short tourist visits but may be requested based on individual circumstances. All documents in Chinese must be accompanied by certified English translations.",
+                text: "Chinese nationals apply for the Subclass 600 visitor visa online through ImmiAccount. Processing times are typically 20-30 business days. For parents planning regular visits, Australia offers Chinese nationals a 3-year or 10-year Frequent Traveller stream visa — well worth considering if you expect to visit often. A health examination is not typically required for short tourist visits but may be requested based on individual circumstances. All documents in Chinese must be accompanied by certified English translations.",
               },
             ],
           },
@@ -53,7 +53,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "US Embassy and Consulate posts in China (Beijing, Shanghai, Guangzhou, Shenyang, Chengdu) process B1/B2 visas. During peak travel seasons (summer, Chinese New Year), wait times for interview appointments can reach 1-3 months. Chinese applicants may also apply at third-country posts, though this is less common. The DS-160 form must be completed in English, but applicants can select Chinese as the tooltip language for guidance.",
+                text: "US Embassy and Consulate posts in China (Beijing, Shanghai, Guangzhou, Shenyang, Chengdu) all process B1/B2 visas. During peak travel seasons (summer and Chinese New Year), wait times for interview appointments can reach 1-3 months, so plan ahead. Chinese applicants may also apply at third-country posts, though this is less common. The DS-160 form must be completed in English, but you can select Chinese as the tooltip language for guidance while filling it in.",
               },
             ],
           },
@@ -62,7 +62,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese applicants should demonstrate strong ties to China through property ownership, employment, business interests, or family obligations. The consular officer will assess whether the applicant has incentive to return. For parents visiting a child at university, include the child's I-20, enrollment verification, and a clear travel itinerary. Administrative processing under Section 221(g) may apply to applicants with backgrounds in certain advanced technology fields.",
+                text: "Chinese applicants should be ready to demonstrate strong ties to China — property ownership, employment, business interests, or family obligations all help. The consular officer wants to see that you have clear reasons to return home. For parents visiting a child at university, including the child's I-20, enrollment verification, and a clear travel itinerary strengthens the application. Be aware that administrative processing under Section 221(g) may apply to applicants with backgrounds in certain advanced technology fields.",
               },
             ],
           },
@@ -75,7 +75,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese applicants should provide bank statements (ideally from the last 6 months) showing consistent income. Property ownership certificates (fang chan zheng), employment contracts, and business registration documents all serve as strong evidence of ties to China. If the applicant is retired, a pension certificate and property documents are particularly important. All Chinese-language documents must be accompanied by certified English translations.",
+                text: "Chinese applicants should provide bank statements (ideally covering the last 6 months) showing consistent income. Property ownership certificates (fang chan zheng), employment contracts, and business registration documents all work well as evidence of ties to China. If the applicant is retired, a pension certificate and property documents are especially helpful. Remember: all Chinese-language documents must be accompanied by certified English translations.",
               },
             ],
           },
@@ -107,7 +107,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "China is consistently the largest source of international students in the US, with over 250,000 Chinese students enrolled annually. This large cohort means well-established support networks, Chinese student associations, and community resources at most US universities. However, it also means competition for university admissions is intense. Chinese F-1 applicants generally have high approval rates, but applicants in sensitive research fields (particularly in advanced technology, AI, semiconductors, and aerospace) may face additional screening under Presidential Proclamation 10043, which can delay or restrict visas for graduates of certain Chinese military-linked institutions.",
+                text: "China is consistently the largest source of international students in the US, with over 250,000 Chinese students enrolled annually. The good side of this: well-established support networks, Chinese student associations, and community resources at most US universities. The flip side: competition for admissions is intense. Chinese F-1 applicants generally have high approval rates, but applicants in sensitive research fields (particularly advanced technology, AI, semiconductors, and aerospace) may face additional screening under Presidential Proclamation 10043, which can delay or restrict visas for graduates of certain Chinese military-linked institutions.",
               },
             ],
           },
@@ -120,7 +120,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "China is the UK's largest source of international students. The UK has invested heavily in attracting Chinese students, with many universities offering Chinese-language support services, dedicated orientation programmes, and direct partnerships with Chinese institutions. Chinese nationals must complete a tuberculosis (TB) test at an approved clinic in China before applying — approved clinics are available in most major cities and results take approximately 5 working days. UK student visa processing for Chinese applicants is well-established, with standard processing taking approximately 3 weeks.",
+                text: "China is the UK's largest source of international students, and UK universities have invested heavily in welcoming Chinese students — many offer Chinese-language support services, dedicated orientation programmes, and direct partnerships with Chinese institutions. One step to plan for: Chinese nationals must complete a tuberculosis (TB) test at an approved clinic in China before applying. Approved clinics are available in most major cities and results take approximately 5 working days. Standard visa processing takes approximately 3 weeks.",
               },
             ],
           },
@@ -133,7 +133,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "China is Australia's largest source of international students. The Genuine Temporary Entrant (GTE) requirement is assessed carefully for Chinese applicants — a well-written GTE statement should clearly articulate why the chosen course and institution are the best fit, and what career opportunities the qualification creates. The statement should reference specific career goals and explain how the qualification adds value beyond what is available from Chinese institutions. Processing times are typically 4-6 weeks.",
+                text: "China is Australia's largest source of international students. The [TERM: gte|Genuine Temporary Entrant (GTE)] requirement deserves careful attention for Chinese applicants — a well-written GTE statement should clearly explain why this course and institution are the right fit, and what career opportunities the qualification opens up. Reference specific career goals and explain how the qualification adds value beyond what is available from Chinese institutions. Processing times are typically 4-6 weeks.",
               },
             ],
           },
@@ -148,7 +148,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese families typically demonstrate financial capacity through bank deposits, property ownership, and income certificates from employers. US consular officers are familiar with Chinese financial documentation formats. Key documents include: bank deposit certificates (cun kuan zheng ming) showing sufficient funds, the sponsor's income certificate from their employer, and property ownership certificates. If funds come from investments or business profits, provide supporting documentation such as company financial statements or investment account statements. Avoid last-minute large deposits — a consistent savings pattern over 6+ months is more convincing.",
+                text: "Chinese families typically demonstrate financial capacity through bank deposits, property ownership, and income certificates from employers. US consular officers are familiar with Chinese financial documentation formats. Key documents include: bank deposit certificates (cun kuan zheng ming) showing sufficient funds, the sponsor's income certificate from their employer, and property ownership certificates. If funds come from investments or business profits, include supporting documentation such as company financial statements or investment account statements. A practical tip: avoid last-minute large deposits. A consistent savings pattern over 6+ months is far more convincing than a lump sum that appeared recently.",
               },
             ],
           },
@@ -161,7 +161,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The UK's strict 28-day financial evidence rule requires Chinese applicants to show funds in a bank account (not property or investments) for the full 28-day period before the date of application. Chinese bank certificates (cun kuan zheng ming) are accepted as evidence, but must be accompanied by certified English translations. Funds held in WeChat Pay or Alipay balances are NOT accepted — they must be in a bank account. If transferring funds from investments, ensure the full required amount has been in the bank for at least 28 days before applying.",
+                text: "The UK's strict 28-day financial evidence rule requires Chinese applicants to show funds in a bank account (not property or investments) for the full 28-day period before the date of application. Chinese bank certificates (cun kuan zheng ming) are accepted, but must be accompanied by certified English translations. An important heads-up: funds held in WeChat Pay or Alipay balances are NOT accepted — they must be in a bank account. If you need to transfer funds from investments, make sure the full required amount has been sitting in the bank for at least 28 days before you apply.",
               },
             ],
           },
@@ -189,7 +189,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "US Embassy and Consulate posts in China process a high volume of F-1 visas annually. During peak season (May-July), appointment wait times can reach 1-2 months at busy posts like Beijing and Shanghai. Guangzhou and Shenyang may offer shorter waits. Chinese applicants should apply as early as possible — F-1 visas can be issued up to 120 days before the programme start date. The interview itself is typically brief (2-5 minutes) and conducted in English or with an interpreter.",
+                text: "US Embassy and Consulate posts in China process a high volume of F-1 visas annually. During peak season (May-July), appointment wait times can reach 1-2 months at busy posts like Beijing and Shanghai — Guangzhou and Shenyang may offer shorter waits. Apply as early as possible: F-1 visas can be issued up to 120 days before the programme start date. The interview itself is typically brief (2-5 minutes) and conducted in English or with an interpreter, so there is no need to be anxious about it.",
               },
             ],
           },
@@ -202,7 +202,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "VFS Global centres across China handle UK visa biometrics appointments. Centres are available in Beijing, Shanghai, Guangzhou, Chengdu, Wuhan, Shenyang, Jinan, Hangzhou, Nanjing, Fuzhou, Shenzhen, Changsha, and Kunming. During peak season (June-August), appointments book up quickly — schedule as early as possible. Priority and super priority services are available at additional cost and recommended for students with fixed term start dates.",
+                text: "VFS Global centres across China handle UK visa biometrics appointments. There are centres in Beijing, Shanghai, Guangzhou, Chengdu, Wuhan, Shenyang, Jinan, Hangzhou, Nanjing, Fuzhou, Shenzhen, Changsha, and Kunming — so most families will have one within reach. During peak season (June-August), appointments book up quickly, so schedule as early as you can. Priority and super priority services are available at additional cost and well worth considering if your term start date is fixed.",
               },
             ],
           },
@@ -215,7 +215,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese student visa applications are processed online through ImmiAccount. Processing times are typically 4-6 weeks but can extend during peak periods (October-February for the Australian academic year). Ensure the health examination (if requested) is completed promptly at an approved panel physician in China — this is a common source of processing delays. Submit a complete application with all supporting documents to avoid requests for additional information.",
+                text: "Chinese student visa applications are processed online through ImmiAccount. Processing times are typically 4-6 weeks but can extend during peak periods (October-February for the Australian academic year). If a health examination is requested, complete it promptly at an approved panel physician in China — delays here are one of the most common reasons applications take longer than expected. Submitting a complete application with all supporting documents from the start is the best way to keep things on track.",
               },
             ],
           },
@@ -230,7 +230,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese students travelling home during breaks should allow ample time for visa renewal if their F-1 stamp has expired. Renewal at Chinese posts is generally straightforward for continuing students with good academic standing, but processing can take 1-2 weeks. Students in sensitive research fields should plan for potential additional administrative processing. Maintaining valid F-1 status (full-time enrollment, not exceeding work limits) is essential for smooth re-entry.",
+                text: "Chinese students travelling home during breaks should allow ample time for visa renewal if their F-1 stamp has expired. The good news is that renewal at Chinese posts is generally straightforward for continuing students with good academic standing, though processing can take 1-2 weeks. Students in sensitive research fields should plan for potential additional administrative processing. Keeping your F-1 status in good standing (full-time enrollment, staying within work limits) is the best thing you can do for smooth re-entry.",
               },
             ],
           },
@@ -262,7 +262,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese graduates face the same H-1B lottery as all other nationalities — selection is nationality-blind. However, Chinese nationals share the worst Green Card backlog alongside Indian nationals. The EB-2 and EB-3 employment-based categories have per-country caps that create multi-year waits for Chinese applicants (currently 3-6 years for EB-2). While significantly shorter than the Indian backlog (which extends to decades), this wait still shapes the long-term immigration calculus for Chinese families. STEM OPT (3-year work authorisation) provides crucial additional time for H-1B lottery attempts.",
+                text: "Chinese graduates face the same H-1B lottery as all other nationalities — selection is nationality-blind. However, Chinese nationals do face one of the longer Green Card backlogs. The EB-2 and EB-3 employment-based categories have per-country caps that create multi-year waits for Chinese applicants (currently 3-6 years for EB-2). While significantly shorter than the Indian backlog (which extends to decades), this wait still shapes the long-term planning for Chinese families. The silver lining: [TERM: stem|STEM] OPT (3-year work authorisation) provides crucial additional time for H-1B lottery attempts.",
               },
             ],
           },
@@ -275,7 +275,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Subclass 485 post-study work visa is processed on the same basis regardless of nationality. Chinese graduates benefit from Australia's points-based system which does not have per-country quotas — unlike the US Green Card system. This makes the Australian pathway to permanent residency more predictable for Chinese nationals. Graduates who studied in regional Australia may benefit from extended post-study work rights.",
+                text: "The Subclass 485 post-study work visa is processed on the same basis regardless of nationality. This is where Australia really stands out for Chinese graduates: the points-based system has no per-country quotas, unlike the US Green Card system. This makes the Australian pathway to permanent residency much more predictable. Graduates who studied in regional Australia may also benefit from extended post-study work rights.",
               },
             ],
           },
@@ -290,7 +290,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals face a significant Green Card backlog in the employment-based categories, second only to Indian nationals. Current EB-2 wait times for Chinese-born applicants are approximately 3-6 years from I-140 approval, and EB-3 can extend further. While this is substantially shorter than the Indian backlog, it still represents a material planning consideration. Some Chinese nationals explore EB-1 (Extraordinary Ability) or EB-5 (Investor) categories which may have shorter queues, though these have higher eligibility thresholds. The National Interest Waiver (NIW) pathway under EB-2 is also popular among Chinese STEM graduates.",
+                text: "Chinese nationals face a significant Green Card backlog in the employment-based categories, second only to Indian nationals. Current EB-2 wait times for Chinese-born applicants are approximately 3-6 years from [TERM: i-140|I-140] approval, and EB-3 can extend further. While this is substantially shorter than the Indian backlog, it still represents a real planning consideration. Some Chinese nationals explore EB-1 (Extraordinary Ability) or EB-5 (Investor) categories which may have shorter queues, though these have higher eligibility thresholds. The [TERM: niw|National Interest Waiver (NIW)] pathway under EB-2 is also popular among Chinese STEM graduates and worth researching early.",
               },
             ],
           },
@@ -335,7 +335,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals face the second-longest Green Card wait times after Indian nationals. The EB-2 category for China-born applicants currently has a 3-6 year backlog, and EB-3 can be longer. The realistic timeline from student arrival to Green Card for a Chinese national is approximately 10-16 years (including study, OPT, H-1B, and the Green Card process). Some Chinese families explore the EB-5 investor visa programme (minimum $800,000 investment in a Targeted Employment Area) as an alternative pathway, though processing backlogs affect this category too. Chinese families should carefully weigh these timelines against the more predictable Australian and UK pathways.",
+                text: "Chinese nationals face the second-longest Green Card wait times after Indian nationals. The EB-2 category for China-born applicants currently has a 3-6 year backlog, and EB-3 can be longer. To set realistic expectations: the timeline from student arrival to Green Card for a Chinese national is approximately 10-16 years (including study, OPT, H-1B, and the Green Card process). Some families explore the EB-5 investor visa programme (minimum $800,000 investment in a Targeted Employment Area) as an alternative, though processing backlogs affect this category too. It is well worth weighing these US timelines against the more predictable Australian and UK pathways.",
               },
             ],
           },
@@ -363,7 +363,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "China does NOT recognise or permit dual nationality. Under Article 9 of the Chinese Nationality Law, any Chinese national who settles abroad and acquires foreign nationality automatically loses Chinese nationality. This is strictly enforced — there is no provision for retaining Chinese nationality after naturalising in the US, UK, or Australia. This has significant practical implications: loss of Chinese hukou (household registration), inability to purchase property in China under citizen rules, and the need to obtain a Chinese visa for future visits. Some Chinese nationals choose to obtain permanent residency (Green Card, ILR, or PR) in the destination country without naturalising, thereby preserving their Chinese nationality while gaining most residency benefits. This is an important strategic consideration for Chinese families.",
+                text: "This is one of the most important things for Chinese families to understand: China does NOT recognise or permit dual nationality. Under Article 9 of the Chinese Nationality Law, any Chinese national who settles abroad and acquires foreign nationality automatically loses Chinese nationality. This is strictly enforced — there is no provision for retaining Chinese nationality after naturalising in the US, UK, or Australia. The practical implications are significant: loss of Chinese hukou (household registration), inability to purchase property in China under citizen rules, and the need to obtain a Chinese visa for future visits home. Many Chinese nationals choose a middle path — obtaining permanent residency (Green Card, ILR, or PR) in the destination country without naturalising. This preserves Chinese nationality while granting most residency benefits, and is a strategy well worth discussing as a family early in the process.",
               },
             ],
           },

@@ -18,7 +18,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "UK nationals have been part of the US Visa Waiver Program since its inception. ESTA approval rates for British passport holders are very high. The main reasons for ESTA denial are prior visa overstays, certain criminal convictions, or travel to Iran, Iraq, Syria, Sudan, Libya, Somalia, or Yemen since 2011. If denied, you can still apply for a regular B-1/B-2 visa at the US Embassy in London.",
+                text: "UK nationals have been part of the US Visa Waiver Program since its inception, and [TERM: esta|ESTA] approval rates for British passport holders are very high. The main reasons for denial are prior visa overstays, certain criminal convictions, or travel to Iran, Iraq, Syria, Sudan, Libya, Somalia, or Yemen since 2011. If an ESTA is denied, don't worry \u2014 you can still apply for a regular B-1/B-2 visa at the US Embassy in London.",
               },
             ],
           },
@@ -36,7 +36,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "UK nationals are eligible for the Subclass 601 Electronic Travel Authority (ETA), which is quick, inexpensive, and straightforward. Approval is typically instant. For parents planning regular visits to a child studying in Australia, the ETA's 12-month validity with stays of up to 3 months each is usually sufficient. For longer stays, consider the Subclass 600 visitor visa which allows stays of up to 12 months.",
+                text: "UK nationals are eligible for the Subclass 601 Electronic Travel Authority (ETA), which is quick, inexpensive, and straightforward \u2014 approval is typically instant. For parents planning regular visits to a child studying in Australia, the ETA\u2019s 12-month validity with stays of up to 3 months each is usually sufficient. If you need a longer stay, the Subclass 600 visitor visa allows stays of up to 12 months.",
               },
             ],
           },
@@ -69,7 +69,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "UK nationals have historically had high F-1 visa approval rates. The UK-US 'special relationship' extends to educational exchange — British students are well-represented at top US universities and rarely face administrative processing delays. The main consideration for UK families is the cost difference: US tuition fees are comparable to UK international fees but without the home-student discount, and the SEVIS fee ($350) and visa fee ($185) add to the upfront costs.",
+                text: "UK nationals have historically had high F-1 visa approval rates. The UK-US 'special relationship' extends to educational exchange \u2014 British students are well-represented at top US universities and rarely face administrative processing delays. The main consideration for UK families is the cost difference: US tuition fees are comparable to UK international fees but without the home-student discount, and the [TERM: sevis|SEVIS] fee ($350) and visa fee ($185) add to the upfront costs.",
               },
             ],
           },
@@ -86,7 +86,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "UK nationals applying for the Australian Subclass 500 student visa benefit from the UK's low immigration risk rating. Processing is typically faster (2-4 weeks) and the Genuine Temporary Entrant (GTE) assessment is less intensive than for higher-risk nationalities. UK applicants do NOT require a tuberculosis test. The UK-Australia relationship supports strong educational ties, with many Australian universities having articulation agreements with UK institutions.",
+                text: "UK nationals applying for the Australian Subclass 500 student visa benefit from the UK\u2019s low immigration risk rating. Processing is typically faster (2-4 weeks) and the [TERM: gte|Genuine Temporary Entrant (GTE)] assessment is less intensive than for higher-risk nationalities. UK applicants do NOT require a tuberculosis test. The strong UK-Australia educational relationship means many Australian universities have articulation agreements with UK institutions, which can smooth the transition.",
               },
             ],
           },
@@ -165,7 +165,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "UK students travelling home during breaks have a straightforward re-entry process. If the F-1 visa stamp is still valid, simply re-enter with your passport, valid visa, and current I-20. If the visa stamp has expired, renewing it at the US Embassy in London is generally quick and uncomplicated for UK nationals with a good academic record. UK students rarely face administrative processing or re-entry issues.",
+                text: "UK students travelling home during breaks have a straightforward re-entry process. If the F-1 visa stamp is still valid, simply re-enter with your passport, valid visa, and current I-20. If the visa stamp has expired, renewing it at the US Embassy in London is generally quick and uncomplicated for UK nationals with a good academic record \u2014 UK students rarely face administrative processing or re-entry issues, so this should be stress-free.",
               },
             ],
           },
@@ -301,7 +301,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The United Kingdom **fully permits dual nationality**. British citizens who acquire US, Australian, or any other nationality retain their British citizenship automatically — no notification or permission is required. This is a significant advantage over many other nationalities. It means a British student who eventually naturalises in the US or Australia keeps full British rights including the right to live and work in the UK, access to the NHS, and the right to vote in UK elections. There are no restrictions or conditions on holding dual nationality as a British citizen.",
+                text: "The United Kingdom **fully permits dual nationality** \u2014 and this is genuinely one of the biggest advantages UK families have in this process. British citizens who acquire US, Australian, or any other nationality retain their British citizenship automatically. No notification or permission is required. This means a British student who eventually naturalises in the US or Australia keeps full British rights, including the right to live and work in the UK, access to the NHS, and the right to vote in UK elections. There are no restrictions or conditions whatsoever on holding dual nationality as a British citizen.",
               },
             ],
           },
