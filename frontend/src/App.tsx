@@ -16,6 +16,7 @@ import {
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Page } from "@/pages/page"
 import { HomePage } from "@/pages/home-page"
+import { AboutPage } from "@/pages/about-page"
 import { ContentPage } from "@/pages/content-page"
 import { CitationsPage } from "@/pages/citations-page"
 
@@ -74,7 +75,8 @@ function AppLayout() {
   const sectionSlug = pathParts[0] ?? ""
   const subSectionSlug = pathParts[1] ?? ""
 
-  const isHome = location.pathname === "/"
+  const isAbout = location.pathname === "/"
+  const isDashboard = location.pathname === "/dashboard"
 
   const isContentRoute =
     sectionSlug &&
@@ -93,7 +95,9 @@ function AppLayout() {
             <AppBreadcrumb />
           </div>
         </header>
-        {isHome ? (
+        {isAbout ? (
+          <AboutPage />
+        ) : isDashboard ? (
           <HomePage />
         ) : isCitationsRoute ? (
           <CitationsPage />

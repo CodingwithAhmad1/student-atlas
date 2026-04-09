@@ -21,6 +21,7 @@ import {
   HomeIcon,
   FileTextIcon,
   BookOpenIcon,
+  LayoutDashboardIcon,
 } from "lucide-react"
 
 function CompassPinIcon({ className }: { className?: string }) {
@@ -190,6 +191,20 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
+        <SidebarGroup>
+          <SidebarMenu>
+            <SidebarMenuItem>
+              <SidebarMenuButton
+                render={<Link to="/dashboard" />}
+                tooltip="Dashboard"
+                isActive={location.pathname === "/dashboard"}
+              >
+                <LayoutDashboardIcon />
+                <span className="font-medium">Dashboard</span>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
+        </SidebarGroup>
         <NavMain items={navMain} currentPath={location.pathname} />
         <SidebarSeparator />
         <SidebarGroup>
