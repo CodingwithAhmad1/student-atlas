@@ -23,6 +23,7 @@ import {
   BookOpenIcon,
   LayoutDashboardIcon,
 } from "lucide-react"
+import { DASHBOARD_ROUTE } from "@/lib/routes"
 
 function CompassPinIcon({ className }: { className?: string }) {
   const primary = "#1B2D4F"
@@ -98,6 +99,12 @@ function CompassPinIcon({ className }: { className?: string }) {
 }
 
 const navMain = [
+  {
+    title: DASHBOARD_ROUTE.label,
+    url: DASHBOARD_ROUTE.path,
+    icon: <LayoutDashboardIcon />,
+    items: [],
+  },
   {
     title: "Tourist visa",
     url: "/visit",
@@ -178,11 +185,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarMenuItem>
             <div className="flex items-center gap-1.5 px-2 py-0.5">
               <SidebarToggle />
-              <Link to="/" className="flex items-center gap-1.5 min-w-0">
+              <Link to="/" className="flex items-center gap-1.5 min-w-0 group-data-[collapsible=icon]:hidden">
                 <div className="flex items-center justify-center shrink-0 [&_svg]:!size-6">
                   <CompassPinIcon className="size-6" />
                 </div>
-                <span className="truncate text-[13.5px] font-semibold group-data-[collapsible=icon]:hidden">
+                <span className="truncate text-[13.5px] font-semibold">
                   Student Atlas
                 </span>
               </Link>
@@ -191,20 +198,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
-        <SidebarGroup>
-          <SidebarMenu>
-            <SidebarMenuItem>
-              <SidebarMenuButton
-                render={<Link to="/dashboard" />}
-                tooltip="Dashboard"
-                isActive={location.pathname === "/dashboard"}
-              >
-                <LayoutDashboardIcon />
-                <span className="font-medium">Dashboard</span>
-              </SidebarMenuButton>
-            </SidebarMenuItem>
-          </SidebarMenu>
-        </SidebarGroup>
         <NavMain items={navMain} currentPath={location.pathname} />
         <SidebarSeparator />
         <SidebarGroup>

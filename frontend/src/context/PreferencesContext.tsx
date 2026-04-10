@@ -26,6 +26,7 @@ interface PreferencesContextValue {
 }
 
 const STORAGE_KEY = "student-atlas-preferences";
+const SETUP_DONE_KEY = "student-atlas-setup-done";
 
 const defaultPreferences: Preferences = {
   nationality: null,
@@ -48,10 +49,15 @@ function loadPreferences(): Preferences {
   return defaultPreferences;
 }
 
+function loadSetupDone(): boolean {
+  return localStorage.getItem(SETUP_DONE_KEY) === "true";
+}
+
 const PreferencesContext = createContext<PreferencesContextValue | null>(null);
 
 export function PreferencesProvider({ children }: { children: ReactNode }) {
   const [preferences, setPreferences] = useState<Preferences>(loadPreferences);
+  const [setupDone, setSetupDone] = useState(loadSetupDone);
 
   const {
     overlay: nationalityOverlay,
@@ -63,12 +69,14 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(preferences));
   }, [preferences]);
 
+  useEffect(() => {
+    if (setupDone) {
+      localStorage.setItem(SETUP_DONE_KEY, "true");
+    }
+  }, [setupDone]);
+
   const setNationality = (nationality: string) => {
     setPreferences((prev) => ({ ...prev, nationality }));
-  };
-
-  const setDestinations = (destinations: Country[]) => {
-    setPreferences((prev) => ({ ...prev, destinations }));
   };
 
   const toggleDestination = (country: Country) => {
@@ -81,11 +89,19 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
     });
   };
 
-  const isConfigured =
-    preferences.nationality !== null && preferences.destinations.length > 0;
+  const setDestinations = (destinations: Country[]) => {
+    setPreferences((prev) => ({ ...prev, destinations }));
+    if (!setupDone && destinations.length > 0) {
+      setSetupDone(true);
+    }
+  };
+
+  const isConfigured = setupDone;
 
   const reset = () => {
     setPreferences(defaultPreferences);
+    setSetupDone(false);
+    localStorage.removeItem(SETUP_DONE_KEY);
   };
 
   return (

@@ -19,6 +19,8 @@ import { HomePage } from "@/pages/home-page"
 import { AboutPage } from "@/pages/about-page"
 import { ContentPage } from "@/pages/content-page"
 import { CitationsPage } from "@/pages/citations-page"
+import { ReportPage } from "@/pages/report-page"
+import { DASHBOARD_ROUTE } from "@/lib/routes"
 
 const routeMap: Record<string, { section: string; page: string }> = {
   "/visit/entry-requirement": { section: "Tourist visa", page: "Entry requirement" },
@@ -76,7 +78,7 @@ function AppLayout() {
   const subSectionSlug = pathParts[1] ?? ""
 
   const isAbout = location.pathname === "/"
-  const isDashboard = location.pathname === "/dashboard"
+  const isDashboard = location.pathname === DASHBOARD_ROUTE.path
 
   const isContentRoute =
     sectionSlug &&
@@ -84,6 +86,7 @@ function AppLayout() {
     ["visit", "student", "work", "residency"].includes(sectionSlug)
 
   const isCitationsRoute = location.pathname === "/citations"
+  const isReportRoute = location.pathname === "/report"
 
   return (
     <TooltipProvider>
@@ -99,6 +102,8 @@ function AppLayout() {
           <AboutPage />
         ) : isDashboard ? (
           <HomePage />
+        ) : isReportRoute ? (
+          <ReportPage />
         ) : isCitationsRoute ? (
           <CitationsPage />
         ) : isContentRoute ? (

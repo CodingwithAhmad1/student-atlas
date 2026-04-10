@@ -40,6 +40,22 @@ export function NavMain({
       <SidebarMenu>
         {items.map((item) => {
           const isActive = currentPath.startsWith(item.url)
+
+          if (!item.items || item.items.length === 0) {
+            return (
+              <SidebarMenuItem key={item.title}>
+                <SidebarMenuButton
+                  render={<Link to={item.url} />}
+                  tooltip={item.title}
+                  isActive={currentPath === item.url}
+                >
+                  {item.icon}
+                  <span>{item.title}</span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+            )
+          }
+
           return (
             <Collapsible
               key={item.title}

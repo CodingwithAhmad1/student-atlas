@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { usePreferences } from "@/context/PreferencesContext";
+import { DASHBOARD_ROUTE } from "@/lib/routes";
 import { sectionRegistry } from "@/data/sections";
 import { citations } from "@/data/citations";
 import { mergeBlocks, mergeCrossCutting } from "@/data/merge-content";
@@ -114,14 +115,14 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
       <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
         <h2 className="text-xl font-semibold">Set up your preferences first</h2>
         <p className="text-muted-foreground max-w-md">
-          Select your nationality and destination countries on the home page to
+          Select your nationality and destination countries on the {DASHBOARD_ROUTE.label} page to
           see personalised content.
         </p>
         <Link
-          to="/"
+          to={DASHBOARD_ROUTE.path}
           className="text-primary hover:text-primary/80 underline"
         >
-          Go to home page
+          Go to {DASHBOARD_ROUTE.label}
         </Link>
       </div>
     );
@@ -167,12 +168,12 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
     );
 
     return (
-      <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+      <div className="flex flex-1 flex-col gap-4 p-4 pt-0 max-w-4xl mx-auto w-full">
         <h1 className="text-2xl font-semibold tracking-tight">
           {subSection.title}
         </h1>
         <SourcesPill citationMap={citationMap} />
-        <div className="max-w-3xl space-y-4">
+        <div className="space-y-4">
           {resolvedBlocks.map((resolved, i) => (
             <ResolvedBlockRenderer
               key={i}
@@ -189,9 +190,14 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
   const sectionFacts = visaFacts[sectionSlug]?.[subSectionSlug];
   const canCompare = destinations.length >= 2;
 
+  const isSingle = destinations.length === 1;
+
   // Country-specific content
   return (
-    <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
+    <div className={cn(
+      "flex flex-1 flex-col gap-4 p-4 pt-0",
+      isSingle && "max-w-4xl mx-auto w-full"
+    )}>
       <div className="flex items-center justify-between gap-4">
         <h1 className="text-2xl font-semibold tracking-tight">
           {subSection.title}
@@ -219,12 +225,12 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
         <div
           className={cn(
             "grid gap-8",
-            destinations.length === 1 && "grid-cols-1 max-w-3xl",
+            destinations.length === 1 && "grid-cols-1",
             destinations.length === 2 && "grid-cols-1 md:grid-cols-2",
             destinations.length === 3 && "grid-cols-1 md:grid-cols-3"
           )}
         >
-          {destinations.map((country) => {
+          {destinations.map((country, index) => {
             const countryData = subSection.countries.find(
               (c) => c.country === country
             );
@@ -244,7 +250,14 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
             const facts = sectionFacts?.[country];
 
             return (
-              <div key={country} className="space-y-4">
+              <div
+                key={country}
+                className={cn(
+                  "space-y-4",
+                  index > 0 && destinations.length > 1 && "md:border-l md:border-border md:pl-8",
+                  index === destinations.length - 1 && destinations.length === 2 && "md:border-r md:border-border md:pr-8"
+                )}
+              >
                 {/* Nationality callout — pinned above everything */}
                 {topCallouts.length > 0 && (
                   <aside className="border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/20 p-4 rounded-r-lg">

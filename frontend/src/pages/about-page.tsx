@@ -1,7 +1,75 @@
+import { CompassIcon, GlobeIcon, UsersIcon, ShieldCheckIcon } from "lucide-react";
+
 export function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl py-16 px-4">
-      {/* Content intentionally left blank — to be filled in later. */}
+    <div className="mx-auto max-w-3xl py-12 px-6">
+      <div className="mb-10">
+        <h1 className="text-3xl font-bold tracking-tight mb-3">Our Mission</h1>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          Student Atlas exists to make the path from student visa to settled life
+          clearer, simpler, and less stressful. We bring together official
+          immigration requirements, practical checklists, and real deadlines into
+          one place — so you can focus on your studies, not on paperwork.
+        </p>
+      </div>
+
+      <div className="grid gap-6 sm:grid-cols-2 mb-12">
+        <MissionCard
+          icon={<CompassIcon className="size-5" />}
+          title="Clear guidance"
+          description="Step-by-step breakdowns of visa processes, entry requirements, and post-study options — written in plain language."
+        />
+        <MissionCard
+          icon={<GlobeIcon className="size-5" />}
+          title="Country-specific"
+          description="Tailored information for each destination country, covering everything from tourist visas to permanent residency."
+        />
+        <MissionCard
+          icon={<UsersIcon className="size-5" />}
+          title="Personalised"
+          description="Select your nationality and destinations to see only the rules and processes that apply to you."
+        />
+        <MissionCard
+          icon={<ShieldCheckIcon className="size-5" />}
+          title="Trustworthy sources"
+          description="Every fact is backed by official government sources with full citations you can verify yourself."
+        />
+      </div>
+
+      <div className="rounded-lg border bg-muted/40 p-6">
+        <h2 className="text-lg font-semibold mb-2">How to get started</h2>
+        <ol className="list-decimal list-inside space-y-1.5 text-muted-foreground">
+          <li>Head to the <strong className="text-foreground">Dashboard</strong> and set your nationality and destination countries.</li>
+          <li>Browse visa categories in the sidebar — tourist, student, work, and residency.</li>
+          <li>Use <strong className="text-foreground">Generate report</strong> to export a personalised PDF summary.</li>
+        </ol>
+      </div>
+
+      <p className="mt-8 text-sm text-muted-foreground">
+        Student Atlas is an independent resource and is not affiliated with any
+        government immigration authority. Always verify details with official
+        sources before making decisions.
+      </p>
+    </div>
+  );
+}
+
+function MissionCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="rounded-lg border p-5">
+      <div className="flex items-center gap-2.5 mb-2">
+        <div className="text-[#C8963E]">{icon}</div>
+        <h3 className="font-semibold">{title}</h3>
+      </div>
+      <p className="text-sm text-muted-foreground leading-relaxed">{description}</p>
     </div>
   );
 }

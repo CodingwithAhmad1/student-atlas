@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { usePreferences } from "@/context/PreferencesContext";
 import { COUNTRY_LABELS } from "@/data/types";
 import { homeContent } from "@/data/home-content";
@@ -14,37 +15,51 @@ function SetupFlow() {
     preferences.nationality !== null && preferences.destinations.length > 0;
 
   return (
-    <div className="mx-auto max-w-2xl py-16 px-4">
-      <h1 className="text-3xl font-bold tracking-tight mb-2">Student Atlas</h1>
-      <p className="text-muted-foreground mb-10">
-        Your guide to studying abroad — and everything that comes after.
-      </p>
-
-      <div className="space-y-8">
-        <NationalityDropdown
-          value={preferences.nationality}
-          onChange={setNationality}
-        />
-
-        <DestinationToggles
-          selected={preferences.destinations}
-          onToggle={toggleDestination}
-        />
-
-        <Button
-          size="lg"
-          className="w-full"
-          disabled={!canSave}
-          onClick={() => {
-            // Preferences are already saved reactively via context.
-            // This button exists to give a clear "done" moment.
-            // Force a re-render by setting destinations to itself.
-            setDestinations([...preferences.destinations]);
-          }}
-        >
-          Save my preferences
-        </Button>
+    <div className="mx-auto max-w-lg py-16 px-4">
+      <div className="text-center mb-10">
+        <h1 className="text-3xl font-bold tracking-tight mb-2">Student Atlas</h1>
+        <p className="text-muted-foreground">
+          Your guide to studying abroad — and everything that comes after.
+        </p>
       </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>Get started</CardTitle>
+          <CardDescription>
+            Tell us a bit about yourself so we can personalise your experience.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Your nationality</label>
+            <NationalityDropdown
+              value={preferences.nationality}
+              onChange={setNationality}
+            />
+          </div>
+
+          <div className="space-y-2">
+            <label className="text-sm font-medium">Where are you considering studying?</label>
+            <p className="text-xs text-muted-foreground">Select one or more destinations to compare.</p>
+            <DestinationToggles
+              selected={preferences.destinations}
+              onToggle={toggleDestination}
+            />
+          </div>
+
+          <Button
+            size="lg"
+            className="w-full"
+            disabled={!canSave}
+            onClick={() => {
+              setDestinations([...preferences.destinations]);
+            }}
+          >
+            Save my preferences
+          </Button>
+        </CardContent>
+      </Card>
     </div>
   );
 }
