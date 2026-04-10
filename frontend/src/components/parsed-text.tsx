@@ -1,4 +1,3 @@
-import { citations } from "@/data/citations";
 import { glossary } from "@/data/glossary";
 import { InfoTip } from "./info-tip";
 
@@ -87,27 +86,10 @@ export function ParsedText({ text, citationMap }: ParsedTextProps) {
             );
 
           case "cite": {
-            const cite = citations[token.citeId];
-            if (!cite) {
-              return (
-                <sup key={i} className="text-red-500">
-                  [?]
-                </sup>
-              );
-            }
-            return (
-              <sup key={i}>
-                <a
-                  href={cite.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-primary hover:text-primary/80 underline decoration-dotted ml-0.5"
-                  title={cite.label}
-                >
-                  [{token.num}]
-                </a>
-              </sup>
-            );
+            // Citation map is already populated during tokenization.
+            // Inline markers are hidden — sources are shown via the
+            // Sources pill + footer instead.
+            return null;
           }
         }
       })}

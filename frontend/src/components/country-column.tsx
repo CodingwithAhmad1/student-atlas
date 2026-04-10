@@ -1,12 +1,14 @@
 import type { Country, ResolvedBlock } from "@/data/types";
 import { COUNTRY_LABELS } from "@/data/types";
-import { ResolvedBlockRenderer } from "./content-blocks";
+import { ProseAccordion } from "./prose-accordion";
 
 interface CountryColumnProps {
   country: Country;
   blocks: ResolvedBlock[];
   showHeader: boolean;
   citationMap: Map<string, number>;
+  /** Used to track first-visit accordion state */
+  sessionKey?: string;
 }
 
 export function CountryColumn({
@@ -14,6 +16,7 @@ export function CountryColumn({
   blocks,
   showHeader,
   citationMap,
+  sessionKey,
 }: CountryColumnProps) {
   return (
     <div className="space-y-4">
@@ -22,13 +25,11 @@ export function CountryColumn({
           {COUNTRY_LABELS[country]}
         </h3>
       )}
-      {blocks.map((resolved, i) => (
-        <ResolvedBlockRenderer
-          key={i}
-          resolved={resolved}
-          citationMap={citationMap}
-        />
-      ))}
+      <ProseAccordion
+        blocks={blocks}
+        citationMap={citationMap}
+        sessionKey={sessionKey ?? `sa:seen:${country}`}
+      />
     </div>
   );
 }

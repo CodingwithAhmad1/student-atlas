@@ -9,7 +9,7 @@ interface BlockProps {
 function ParagraphBlock({ block, citationMap }: BlockProps) {
   if (block.type !== "paragraph") return null;
   return (
-    <p className="text-muted-foreground leading-7">
+    <p className="text-foreground leading-7">
       <ParsedText text={block.text} citationMap={citationMap} />
     </p>
   );
@@ -19,9 +19,9 @@ function HeadingBlock({ block }: { block: ContentBlock }) {
   if (block.type !== "heading") return null;
   const Tag = `h${block.level}` as "h2" | "h3" | "h4";
   const sizes = {
-    2: "text-xl font-semibold mt-6 mb-3",
-    3: "text-lg font-semibold mt-5 mb-2",
-    4: "text-base font-semibold mt-4 mb-2",
+    2: "text-xl font-bold mt-8 mb-3",
+    3: "text-lg font-semibold mt-6 mb-2",
+    4: "text-base font-semibold mt-5 mb-2",
   };
   return <Tag className={sizes[block.level]}>{block.text}</Tag>;
 }
@@ -29,7 +29,7 @@ function HeadingBlock({ block }: { block: ContentBlock }) {
 function BulletListBlock({ block, citationMap }: BlockProps) {
   if (block.type !== "bullet-list") return null;
   return (
-    <ul className="list-disc pl-6 space-y-1.5 text-muted-foreground">
+    <ul className="list-disc pl-6 space-y-1.5 text-foreground">
       {block.items.map((item, i) => (
         <li key={i} className="leading-7">
           <ParsedText text={item} citationMap={citationMap} />
@@ -42,7 +42,7 @@ function BulletListBlock({ block, citationMap }: BlockProps) {
 function OrderedListBlock({ block, citationMap }: BlockProps) {
   if (block.type !== "ordered-list") return null;
   return (
-    <ol className="list-decimal pl-6 space-y-1.5 text-muted-foreground">
+    <ol className="list-decimal pl-6 space-y-1.5 text-foreground">
       {block.items.map((item, i) => (
         <li key={i} className="leading-7">
           <ParsedText text={item} citationMap={citationMap} />
@@ -61,7 +61,7 @@ function KeyValueListBlock({ block, citationMap }: BlockProps) {
           <dt className="font-medium text-foreground whitespace-nowrap">
             {item.label}:
           </dt>
-          <dd className="text-muted-foreground">
+          <dd className="text-foreground">
             <ParsedText text={item.value} citationMap={citationMap} />
           </dd>
         </div>
@@ -77,7 +77,7 @@ function StepBlock({ block, citationMap }: BlockProps) {
       <h4 className="font-semibold mb-1">
         Step {block.number} — {block.title}
       </h4>
-      <p className="text-muted-foreground leading-7">
+      <p className="text-foreground leading-7">
         <ParsedText text={block.body} citationMap={citationMap} />
       </p>
     </div>

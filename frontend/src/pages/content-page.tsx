@@ -1,11 +1,14 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { usePreferences } from "@/context/PreferencesContext";
 import { sectionRegistry } from "@/data/sections";
 import { citations } from "@/data/citations";
 import { mergeBlocks, mergeCrossCutting } from "@/data/merge-content";
+import { visaFacts } from "@/data/visa-facts";
 import { CountryColumn } from "@/components/country-column";
-import { ResolvedBlockRenderer } from "@/components/content-blocks";
+import { TLDRCard } from "@/components/tldr-card";
+import { ComparisonTable } from "@/components/comparison-table";
+import { ContentBlockRenderer, ResolvedBlockRenderer } from "@/components/content-blocks";
 import { cn } from "@/lib/utils";
 
 const NATIONALITY_LABELS: Record<string, string> = {
@@ -19,6 +22,35 @@ interface ContentPageProps {
   subSectionSlug: string;
 }
 
+function SourcesPill({
+  citationMap,
+}: {
+  citationMap: Map<string, number>;
+}) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    // Read the map size after the render pass has populated it
+    setCount(citationMap.size);
+  });
+
+  if (count === 0) return null;
+
+  return (
+    <button
+      type="button"
+      onClick={() =>
+        document
+          .getElementById("sources-footer")
+          ?.scrollIntoView({ behavior: "smooth" })
+      }
+      className="inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
+    >
+      {count} {count === 1 ? "source" : "sources"} ↓
+    </button>
+  );
+}
+
 function CitationFootnotes({
   citationMap,
 }: {
@@ -28,7 +60,7 @@ function CitationFootnotes({
   if (entries.length === 0) return null;
 
   return (
-    <div className="mt-12 pt-6 border-t">
+    <div id="sources-footer" className="mt-12 pt-6 border-t">
       <h3 className="text-sm font-semibold mb-3 text-muted-foreground uppercase tracking-wide">
         Sources
       </h3>
@@ -61,6 +93,8 @@ function CitationFootnotes({
 export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
   const { preferences, nationalityOverlay, nationalitySlug, isConfigured } =
     usePreferences();
+
+  const [viewMode, setViewMode] = useState<"single" | "compare">("single");
 
   // Mutable map that collects citations during render — reset on each render
   const citationMap = useMemo(
@@ -137,6 +171,7 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
         <h1 className="text-2xl font-semibold tracking-tight">
           {subSection.title}
         </h1>
+        <SourcesPill citationMap={citationMap} />
         <div className="max-w-3xl space-y-4">
           {resolvedBlocks.map((resolved, i) => (
             <ResolvedBlockRenderer
@@ -151,44 +186,95 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
     );
   }
 
+  const sectionFacts = visaFacts[sectionSlug]?.[subSectionSlug];
+  const canCompare = destinations.length >= 2;
+
   // Country-specific content
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-      <h1 className="text-2xl font-semibold tracking-tight">
-        {subSection.title}
-      </h1>
-      <div
-        className={cn(
-          "grid gap-8",
-          destinations.length === 1 && "grid-cols-1 max-w-3xl",
-          destinations.length === 2 && "grid-cols-1 md:grid-cols-2",
-          destinations.length === 3 && "grid-cols-1 md:grid-cols-3"
+      <div className="flex items-center justify-between gap-4">
+        <h1 className="text-2xl font-semibold tracking-tight">
+          {subSection.title}
+        </h1>
+        {/* Mode toggle — desktop only, 2+ destinations */}
+        {canCompare && (
+          <button
+            type="button"
+            onClick={() =>
+              setViewMode((m) => (m === "single" ? "compare" : "single"))
+            }
+            className="hidden md:inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors shrink-0"
+          >
+            {viewMode === "single" ? "Compare countries" : "Single view"}
+          </button>
         )}
-      >
-        {destinations.map((country) => {
-          const countryData = subSection.countries.find(
-            (c) => c.country === country
-          );
-          if (!countryData) return null;
-
-          const countryOverlay = subSectionOverlay?.[country];
-          const resolvedBlocks = mergeBlocks(
-            countryData.blocks,
-            countryOverlay,
-            nationalityLabel
-          );
-
-          return (
-            <CountryColumn
-              key={country}
-              country={country}
-              blocks={resolvedBlocks}
-              showHeader={destinations.length > 1}
-              citationMap={citationMap}
-            />
-          );
-        })}
       </div>
+      <SourcesPill citationMap={citationMap} />
+
+      {/* Comparison table mode */}
+      {viewMode === "compare" && canCompare ? (
+        <ComparisonTable countries={destinations} facts={sectionFacts} />
+      ) : (
+        /* Single / multi-column mode */
+        <div
+          className={cn(
+            "grid gap-8",
+            destinations.length === 1 && "grid-cols-1 max-w-3xl",
+            destinations.length === 2 && "grid-cols-1 md:grid-cols-2",
+            destinations.length === 3 && "grid-cols-1 md:grid-cols-3"
+          )}
+        >
+          {destinations.map((country) => {
+            const countryData = subSection.countries.find(
+              (c) => c.country === country
+            );
+            if (!countryData) return null;
+
+            const countryOverlay = subSectionOverlay?.[country];
+            const allBlocks = mergeBlocks(
+              countryData.blocks,
+              countryOverlay,
+              nationalityLabel
+            );
+
+            // Partition: callouts go to top, everything else to body
+            const topCallouts = allBlocks.filter((b) => b.isCallout);
+            const bodyBlocks = allBlocks.filter((b) => !b.isCallout);
+
+            const facts = sectionFacts?.[country];
+
+            return (
+              <div key={country} className="space-y-4">
+                {/* Nationality callout — pinned above everything */}
+                {topCallouts.length > 0 && (
+                  <aside className="border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/20 p-4 rounded-r-lg">
+                    <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1 uppercase tracking-wide">
+                      For {nationalityLabel ?? "your nationality"} applicants
+                    </p>
+                    <div className="text-sm text-amber-900 dark:text-amber-200 leading-6 space-y-2">
+                      {topCallouts.map((c, ci) => (
+                        <ContentBlockRenderer
+                          key={ci}
+                          block={c.block}
+                          citationMap={citationMap}
+                        />
+                      ))}
+                    </div>
+                  </aside>
+                )}
+                {facts && <TLDRCard facts={facts} />}
+                <CountryColumn
+                  country={country}
+                  blocks={bodyBlocks}
+                  showHeader={destinations.length > 1}
+                  citationMap={citationMap}
+                  sessionKey={`sa:seen:${sectionSlug}/${subSectionSlug}/${country}`}
+                />
+              </div>
+            );
+          })}
+        </div>
+      )}
       <CitationFootnotes citationMap={citationMap} />
     </div>
   );
