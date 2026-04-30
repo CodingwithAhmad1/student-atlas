@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { usePreferences } from "@/context/PreferencesContext";
-import { COUNTRY_LABELS } from "@/data/types";
 import { Button } from "@/components/ui/button";
+import {
+  DestinationsPreferenceControl,
+  NationalityPreferenceControl,
+} from "@/components/preference-controls";
 import { generateReport } from "@/lib/generate-pdf";
 import {
   PlaneIcon,
@@ -74,11 +77,6 @@ export function ReportPage() {
     }
   };
 
-  const destinationList = preferences.destinations
-    .map((c) => COUNTRY_LABELS[c])
-    .join(", ")
-    .replace(/, ([^,]*)$/, " and $1");
-
   if (!isConfigured) {
     return (
       <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
@@ -104,22 +102,10 @@ export function ReportPage() {
         </p>
       </div>
 
-      {/* Preferences summary */}
-      <div className="mb-8 rounded-lg border bg-card p-4 space-y-2">
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-muted-foreground w-28">
-            Nationality
-          </span>
-          <span className="text-sm font-semibold">
-            {preferences.nationality}
-          </span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-medium text-muted-foreground w-28">
-            Destinations
-          </span>
-          <span className="text-sm font-semibold">{destinationList}</span>
-        </div>
+      {/* Preferences summary — same edit UX as dashboard, stacked rows */}
+      <div className="mb-8 rounded-lg border bg-card p-4 space-y-4">
+        <NationalityPreferenceControl layout="stacked" />
+        <DestinationsPreferenceControl layout="stacked" />
       </div>
 
       {/* Section selector */}
