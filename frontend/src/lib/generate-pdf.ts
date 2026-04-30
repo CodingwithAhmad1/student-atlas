@@ -118,8 +118,8 @@ function drawCompassRose(doc: jsPDF, cx: number, cy: number, size: number) {
     const baseOff = s * 0.08;
 
     // Right half (darker)
-    const color = angle === 0 ? RED : NAVY;
-    doc.setFillColor(...color);
+    const color: RGB = angle === 0 ? RED : NAVY;
+    doc.setFillColor(color[0], color[1], color[2]);
     doc.triangle(
       tipX,
       tipY,
@@ -132,8 +132,9 @@ function drawCompassRose(doc: jsPDF, cx: number, cy: number, size: number) {
 
     // Left half (lighter)
     const lightColor: RGB = angle === 0 ? [231, 76, 60] : [27, 45, 79];
-    doc.setFillColor(...lightColor);
-    doc.setGlobalAlpha?.(0.6);
+    doc.setFillColor(lightColor[0], lightColor[1], lightColor[2]);
+    const gState = doc as jsPDF & { setGlobalAlpha?: (a: number) => void };
+    gState.setGlobalAlpha?.(0.6);
     doc.triangle(
       tipX,
       tipY,
@@ -143,7 +144,7 @@ function drawCompassRose(doc: jsPDF, cx: number, cy: number, size: number) {
       cy,
       "F"
     );
-    doc.setGlobalAlpha?.(1);
+    gState.setGlobalAlpha?.(1);
   }
 
   // Intercardinal — gold smaller
@@ -238,9 +239,10 @@ function renderCoverPage(
   const boxY = 195;
   const boxH = 42;
   doc.setFillColor(255, 255, 255);
-  doc.setGlobalAlpha?.(0.08);
+  const coverGState = doc as jsPDF & { setGlobalAlpha?: (a: number) => void };
+  coverGState.setGlobalAlpha?.(0.08);
   doc.roundedRect(MARGIN + 10, boxY, CONTENT_W - 20, boxH, 3, 3, "F");
-  doc.setGlobalAlpha?.(1);
+  coverGState.setGlobalAlpha?.(1);
 
   // Labels
   setFont(doc, "normal", 9, GOLD);
@@ -302,7 +304,6 @@ function renderTableOfContents(
   setFont(doc, "normal", 11, TEXT_MUTED);
   const introPage = pageMap.get("introduction") ?? 3;
   // Dotted leader
-  const dotsWidth = CONTENT_W - 30;
   const textWidth = doc.getTextWidth("Introduction");
   const pageNumStr = String(introPage);
   const pageNumWidth = doc.getTextWidth(pageNumStr);
