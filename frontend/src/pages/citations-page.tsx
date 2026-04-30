@@ -262,19 +262,13 @@ function CategorySection({
 export function CitationsPage() {
   const groups = buildGroups();
   const countryOrder = ["us", "uk", "au", "other"] as const;
-  const totalCitations = Object.values(citations).length;
 
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
       <div className="mx-auto w-full max-w-3xl space-y-10">
-        <div className="flex items-baseline justify-between">
-          <h1 className="text-2xl font-semibold tracking-tight">
-            Citations & sources
-          </h1>
-          <span className="text-sm text-muted-foreground">
-            {totalCitations} sources referenced
-          </span>
-        </div>
+        <h1 className="text-2xl font-semibold tracking-tight">
+          Citations & sources
+        </h1>
 
         {/* ── Methodology ─────────────────────────────────── */}
         <section className="space-y-6">

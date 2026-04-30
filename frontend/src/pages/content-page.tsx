@@ -13,6 +13,11 @@ import { TLDRCard } from "@/components/tldr-card";
 import { ComparisonTable } from "@/components/comparison-table";
 import { ContentBlockRenderer, ResolvedBlockRenderer } from "@/components/content-blocks";
 import { cn } from "@/lib/utils";
+import { ChevronDownIcon } from "lucide-react";
+
+/** Matches Sources pill — compact meta controls under the title */
+const META_PILL_CLASS =
+  "inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors";
 
 const NATIONALITY_LABELS: Record<string, string> = {
   uae: "UAE",
@@ -47,7 +52,7 @@ function SourcesPill({
           .getElementById("sources-footer")
           ?.scrollIntoView({ behavior: "smooth" })
       }
-      className="inline-flex items-center gap-1 rounded-full border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors"
+      className={META_PILL_CLASS}
     >
       {count} {count === 1 ? "source" : "sources"} ↓
     </button>
@@ -203,104 +208,128 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
   const isSingle = destinations.length === 1;
 
   // Country-specific content
+  const compareExpanded = viewMode === "compare";
+
   return (
     <div className={cn(
       "flex flex-1 flex-col gap-4 p-4 pt-0",
       isSingle && "max-w-4xl mx-auto w-full"
     )}>
-      <div className="flex items-center justify-between gap-4">
-        <h1 className="text-2xl font-semibold tracking-tight">
-          {subSection.title}
-        </h1>
-        {/* Mode toggle — desktop only, 2+ destinations */}
+      <h1 className="text-2xl font-semibold tracking-tight">
+        {subSection.title}
+      </h1>
+
+      <div className="flex flex-row flex-wrap items-center gap-2">
         {showCountryCompare && (
           <button
             type="button"
             onClick={() =>
               setViewMode((m) => (m === "single" ? "compare" : "single"))
             }
-            className="hidden md:inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs text-muted-foreground hover:text-foreground hover:border-foreground/30 transition-colors shrink-0"
+            aria-expanded={compareExpanded}
+            aria-controls="quick-compare-panel"
+            id="quick-compare-trigger"
+            className={cn(META_PILL_CLASS, "gap-1.5")}
           >
-            {viewMode === "single" ? "Compare countries" : "Single view"}
+            Quick compare
+            <ChevronDownIcon
+              className={cn(
+                "size-3.5 shrink-0 transition-transform duration-300 ease-out",
+                compareExpanded && "rotate-180"
+              )}
+              aria-hidden
+            />
           </button>
         )}
+        <SourcesPill citationMap={citationMap} />
       </div>
-      <SourcesPill citationMap={citationMap} />
 
-      {/* Comparison table mode */}
-      {viewMode === "compare" && showCountryCompare ? (
-        <ComparisonTable countries={destinations} facts={sectionFacts} />
-      ) : (
-        /* Single / multi-column mode */
+      {showCountryCompare && (
         <div
+          id="quick-compare-panel"
+          role="region"
+          aria-labelledby="quick-compare-trigger"
           className={cn(
-            "grid gap-8",
-            destinations.length === 1 && "grid-cols-1",
-            destinations.length === 2 && "grid-cols-1 md:grid-cols-2",
-            destinations.length === 3 && "grid-cols-1 md:grid-cols-3"
+            "grid transition-[grid-template-rows] duration-300 ease-out",
+            compareExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           )}
         >
-          {destinations.map((country, index) => {
-            const countryData = subSection.countries.find(
-              (c) => c.country === country
-            );
-            if (!countryData) return null;
-
-            const countryOverlay = subSectionOverlay?.[country];
-            const allBlocks = mergeBlocks(
-              countryData.blocks,
-              countryOverlay,
-              nationalityLabel
-            );
-
-            // Partition: callouts go to top, everything else to body
-            const topCallouts = allBlocks.filter((b) => b.isCallout);
-            const bodyBlocks = allBlocks.filter((b) => !b.isCallout);
-
-            const facts = sectionFacts?.[country];
-
-            return (
-              <div
-                key={country}
-                className={cn(
-                  "space-y-4",
-                  index > 0 && destinations.length > 1 && "md:border-l md:border-border md:pl-8",
-                  index === destinations.length - 1 && destinations.length === 2 && "md:border-r md:border-border md:pr-8"
-                )}
-              >
-                <div className="rounded-lg border border-border bg-muted/50 px-4 py-3">
-                  <h2 className="text-xl font-bold tracking-tight">
-                    {COUNTRY_LABELS[country]}
-                  </h2>
-                </div>
-                {topCallouts.length > 0 && (
-                  <aside className="border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/20 p-4 rounded-r-lg">
-                    <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1 uppercase tracking-wide">
-                      For {nationalityLabel ?? "your nationality"} applicants
-                    </p>
-                    <div className="text-sm text-amber-900 dark:text-amber-200 leading-6 space-y-2">
-                      {topCallouts.map((c, ci) => (
-                        <ContentBlockRenderer
-                          key={ci}
-                          block={c.block}
-                          citationMap={citationMap}
-                        />
-                      ))}
-                    </div>
-                  </aside>
-                )}
-                {facts && <TLDRCard facts={facts} />}
-                <CountryColumn
-                  country={country}
-                  blocks={bodyBlocks}
-                  citationMap={citationMap}
-                  sessionKey={`sa:seen:${sectionSlug}/${subSectionSlug}/${country}`}
-                />
-              </div>
-            );
-          })}
+          <div className="overflow-hidden min-h-0">
+            <div className={cn(compareExpanded && "pb-1 pt-1")}>
+              <ComparisonTable countries={destinations} facts={sectionFacts} />
+            </div>
+          </div>
         </div>
       )}
+
+      <div
+        className={cn(
+          "grid gap-8",
+          destinations.length === 1 && "grid-cols-1",
+          destinations.length === 2 && "grid-cols-1 md:grid-cols-2",
+          destinations.length === 3 && "grid-cols-1 md:grid-cols-3"
+        )}
+      >
+        {destinations.map((country, index) => {
+          const countryData = subSection.countries.find(
+            (c) => c.country === country
+          );
+          if (!countryData) return null;
+
+          const countryOverlay = subSectionOverlay?.[country];
+          const allBlocks = mergeBlocks(
+            countryData.blocks,
+            countryOverlay,
+            nationalityLabel
+          );
+
+          // Partition: callouts go to top, everything else to body
+          const topCallouts = allBlocks.filter((b) => b.isCallout);
+          const bodyBlocks = allBlocks.filter((b) => !b.isCallout);
+
+          const facts = sectionFacts?.[country];
+
+          return (
+            <div
+              key={country}
+              className={cn(
+                "space-y-4",
+                index > 0 && destinations.length > 1 && "md:border-l md:border-border md:pl-8",
+                index === destinations.length - 1 && destinations.length === 2 && "md:border-r md:border-border md:pr-8"
+              )}
+            >
+              <div className="rounded-lg border border-border bg-muted/50 px-4 py-3">
+                <h2 className="text-xl font-bold tracking-tight">
+                  {COUNTRY_LABELS[country]}
+                </h2>
+              </div>
+              {topCallouts.length > 0 && (
+                <aside className="border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/20 p-4 rounded-r-lg">
+                  <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1 uppercase tracking-wide">
+                    For {nationalityLabel ?? "your nationality"} applicants
+                  </p>
+                  <div className="text-sm text-amber-900 dark:text-amber-200 leading-6 space-y-2">
+                    {topCallouts.map((c, ci) => (
+                      <ContentBlockRenderer
+                        key={ci}
+                        block={c.block}
+                        citationMap={citationMap}
+                      />
+                    ))}
+                  </div>
+                </aside>
+              )}
+              {facts && <TLDRCard facts={facts} />}
+              <CountryColumn
+                country={country}
+                blocks={bodyBlocks}
+                citationMap={citationMap}
+                sessionKey={`sa:seen:${sectionSlug}/${subSectionSlug}/${country}`}
+              />
+            </div>
+          );
+        })}
+      </div>
       <CitationFootnotes citationMap={citationMap} />
     </div>
   );
