@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { usePreferences } from "@/context/PreferencesContext";
 import { COUNTRY_LABELS } from "@/data/types";
 import { homeContent } from "@/data/home-content";
@@ -24,12 +24,6 @@ function SetupFlow() {
       </div>
 
       <Card>
-        <CardHeader>
-          <CardTitle>Get started</CardTitle>
-          <CardDescription>
-            Tell us a bit about yourself so we can personalise your experience.
-          </CardDescription>
-        </CardHeader>
         <CardContent className="space-y-6">
           <div className="space-y-2">
             <label className="text-sm font-medium">Your nationality</label>
