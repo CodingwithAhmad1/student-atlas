@@ -14,6 +14,7 @@ import {
   SidebarProvider,
 } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { WelcomeFab } from "@/components/welcome-fab"
 import { Page } from "@/pages/page"
 import { HomePage } from "@/pages/home-page"
 import { AboutPage } from "@/pages/about-page"
@@ -112,6 +113,7 @@ function AppLayout() {
           <Page title={pageTitle} />
         )}
       </SidebarInset>
+      <WelcomeFab />
     </SidebarProvider>
     </TooltipProvider>
   )
