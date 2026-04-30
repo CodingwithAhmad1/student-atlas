@@ -266,16 +266,16 @@ export function CitationsPage() {
 
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
-      <div className="flex items-baseline justify-between">
-        <h1 className="text-2xl font-semibold tracking-tight">
-          Citations & sources
-        </h1>
-        <span className="text-sm text-muted-foreground">
-          {totalCitations} sources referenced
-        </span>
-      </div>
+      <div className="mx-auto w-full max-w-3xl space-y-10">
+        <div className="flex items-baseline justify-between">
+          <h1 className="text-2xl font-semibold tracking-tight">
+            Citations & sources
+          </h1>
+          <span className="text-sm text-muted-foreground">
+            {totalCitations} sources referenced
+          </span>
+        </div>
 
-      <div className="max-w-3xl space-y-10">
         {/* ── Methodology ─────────────────────────────────── */}
         <section className="space-y-6">
           <div>
