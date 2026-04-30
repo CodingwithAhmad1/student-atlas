@@ -14,6 +14,7 @@ import {
   CheckIcon,
   FileTextIcon,
   LoaderIcon,
+  AlertCircleIcon,
 } from "lucide-react";
 
 const SECTIONS = [
@@ -47,6 +48,7 @@ export function ReportPage() {
   const { preferences, isConfigured } = usePreferences();
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [generating, setGenerating] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const toggle = (slug: string) => {
     setSelected((prev) => {
@@ -62,16 +64,21 @@ export function ReportPage() {
   const handleGenerate = async () => {
     if (!canGenerate || !preferences.nationality) return;
     setGenerating(true);
-    // Small delay so the UI updates before the sync PDF work
+    setError(null);
+    // Small delay so the UI updates before the PDF work
     await new Promise((r) => setTimeout(r, 50));
     try {
-      generateReport({
+      await generateReport({
         nationality: preferences.nationality,
         destinations: preferences.destinations,
         sections: SECTIONS.filter((s) => selected.has(s.slug)).map(
           (s) => s.slug
         ),
       });
+    } catch (e) {
+      setError(
+        e instanceof Error ? e.message : "Something went wrong generating the report."
+      );
     } finally {
       setGenerating(false);
     }
@@ -190,6 +197,13 @@ export function ReportPage() {
           </>
         )}
       </Button>
+
+      {error && (
+        <div className="mt-3 flex items-start gap-2 rounded-lg border border-destructive/50 bg-destructive/5 p-3 text-sm text-destructive">
+          <AlertCircleIcon className="mt-0.5 h-4 w-4 shrink-0" />
+          <span>{error}</span>
+        </div>
+      )}
 
       {!canGenerate && selected.size === 0 && (
         <p className="mt-3 text-center text-sm text-muted-foreground">

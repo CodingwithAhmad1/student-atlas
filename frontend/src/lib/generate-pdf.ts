@@ -1,62 +1,64 @@
 import jsPDF from "jspdf";
-import type { Country } from "@/data/types";
+import type { Country, ContentBlock, ResolvedBlock, NationalityOverlay } from "@/data/types";
 import { COUNTRY_LABELS } from "@/data/types";
+import { sectionRegistry } from "@/data/sections";
+import { mergeBlocks, mergeCrossCutting } from "@/data/merge-content";
+import { nationalityRegistry } from "@/data/nationalities/registry";
 
 // ── Brand constants ────────────────────────────────────────────
-const NAVY = [27, 45, 79] as const; // #1B2D4F
-const GOLD = [200, 150, 62] as const; // #C8963E
-const GOLD_LIGHT = [212, 168, 83] as const; // #D4A853
+const NAVY = [27, 45, 79] as const;
+const GOLD = [200, 150, 62] as const;
+const GOLD_LIGHT = [212, 168, 83] as const;
 const WHITE = [255, 255, 255] as const;
-const WARM_BG = [252, 250, 245] as const; // cream tint
+const WARM_BG = [252, 250, 245] as const;
 const TEXT_DARK = [33, 37, 41] as const;
 const TEXT_MUTED = [108, 117, 125] as const;
-const RED = [192, 57, 43] as const; // compass red
+const RED = [192, 57, 43] as const;
+const CALLOUT_BG = [255, 248, 230] as const;
+const CALLOUT_BORDER = GOLD;
 
 const PAGE_W = 210;
 const PAGE_H = 297;
 const MARGIN = 25;
 const CONTENT_W = PAGE_W - MARGIN * 2;
+const FOOTER_Y = PAGE_H - 12;
+const USABLE_BOTTOM = FOOTER_Y - 8; // leave room above footer
 
 type RGB = readonly [number, number, number];
 
+const FLAG_EMOJI: Record<Country, string> = { US: "🇺🇸", UK: "🇬🇧", AU: "🇦🇺" };
+
 const SECTION_META: Record<
   string,
-  { title: string; icon: string; description: string; subsections: string[] }
+  { title: string; icon: string; description: string }
 > = {
   visit: {
     title: "Tourist Visa",
     icon: "✈",
     description:
       "Entry requirements, visa-free access, and short-stay application processes for your selected destinations.",
-    subsections: ["Entry requirement", "How to apply"],
   },
   student: {
     title: "Student Visa",
     icon: "🎓",
     description:
       "Everything you need to know about applying for a student visa, from document preparation to post-arrival obligations.",
-    subsections: [
-      "Overview",
-      "Documents",
-      "Application process",
-      "After arrival",
-    ],
   },
   work: {
     title: "Work Visa",
     icon: "💼",
     description:
       "Post-study work rights, employer sponsorship pathways, and practical guidance for transitioning into the workforce.",
-    subsections: ["Post-study work", "Getting sponsored"],
   },
   residency: {
     title: "Residency Pathway",
     icon: "🏠",
     description:
       "Long-term settlement options including permanent residency, citizenship, and dual nationality considerations.",
-    subsections: ["Permanent residency", "Citizenship", "Dual nationality"],
   },
 };
+
+// ── Helpers ────────────────────────────────────────────────────
 
 function setFont(
   doc: jsPDF,
@@ -82,32 +84,35 @@ function drawLine(
   doc.line(x1, y, x2, y);
 }
 
-function addPageFooter(doc: jsPDF, pageNum: number, totalPlaceholder = true) {
-  const y = PAGE_H - 12;
-  // Gold line
+function addPageFooter(doc: jsPDF, pageNum: number) {
+  const y = FOOTER_Y;
   drawLine(doc, MARGIN, y - 4, PAGE_W - MARGIN, GOLD, 0.3);
   setFont(doc, "normal", 7.5, TEXT_MUTED);
   doc.text("Student Atlas", MARGIN, y);
-  if (totalPlaceholder) {
-    doc.text(`${pageNum}`, PAGE_W - MARGIN, y, { align: "right" });
-  }
+  doc.text(`${pageNum}`, PAGE_W - MARGIN, y, { align: "right" });
 }
 
-// ── Compass rose SVG drawn as PDF lines ─────────────────────────
+/** Ensure enough vertical room; if not, add a new page and return the reset Y. */
+function ensureSpace(doc: jsPDF, y: number, needed: number): number {
+  if (y + needed > USABLE_BOTTOM) {
+    addPageFooter(doc, doc.getNumberOfPages());
+    doc.addPage();
+    return 35;
+  }
+  return y;
+}
+
+// ── Compass rose ───────────────────────────────────────────────
 function drawCompassRose(doc: jsPDF, cx: number, cy: number, size: number) {
   const s = size;
-
-  // Outer circle
   doc.setDrawColor(...NAVY);
   doc.setLineWidth(0.8);
   doc.circle(cx, cy, s, "S");
 
-  // Inner circle
   doc.setDrawColor(...GOLD);
   doc.setLineWidth(0.5);
   doc.circle(cx, cy, s * 0.15, "S");
 
-  // Cardinal directions — filled triangles
   const cardinals = [0, 90, 180, 270];
   for (const angle of cardinals) {
     const rad = (angle * Math.PI) / 180;
@@ -117,37 +122,26 @@ function drawCompassRose(doc: jsPDF, cx: number, cy: number, size: number) {
     const perpRad2 = ((angle + 90) * Math.PI) / 180;
     const baseOff = s * 0.08;
 
-    // Right half (darker)
     const color: RGB = angle === 0 ? RED : NAVY;
     doc.setFillColor(color[0], color[1], color[2]);
     doc.triangle(
-      tipX,
-      tipY,
-      cx + baseOff * Math.sin(perpRad2),
-      cy - baseOff * Math.cos(perpRad2),
-      cx,
-      cy,
-      "F"
+      tipX, tipY,
+      cx + baseOff * Math.sin(perpRad2), cy - baseOff * Math.cos(perpRad2),
+      cx, cy, "F"
     );
 
-    // Left half (lighter)
     const lightColor: RGB = angle === 0 ? [231, 76, 60] : [27, 45, 79];
     doc.setFillColor(lightColor[0], lightColor[1], lightColor[2]);
     const gState = doc as jsPDF & { setGlobalAlpha?: (a: number) => void };
     gState.setGlobalAlpha?.(0.6);
     doc.triangle(
-      tipX,
-      tipY,
-      cx + baseOff * Math.sin(perpRad1),
-      cy - baseOff * Math.cos(perpRad1),
-      cx,
-      cy,
-      "F"
+      tipX, tipY,
+      cx + baseOff * Math.sin(perpRad1), cy - baseOff * Math.cos(perpRad1),
+      cx, cy, "F"
     );
     gState.setGlobalAlpha?.(1);
   }
 
-  // Intercardinal — gold smaller
   const intercardinals = [45, 135, 225, 315];
   for (const angle of intercardinals) {
     const rad = (angle * Math.PI) / 180;
@@ -159,31 +153,21 @@ function drawCompassRose(doc: jsPDF, cx: number, cy: number, size: number) {
 
     doc.setFillColor(...GOLD);
     doc.triangle(
-      tipX,
-      tipY,
-      cx + baseOff * Math.sin(perpRad2),
-      cy - baseOff * Math.cos(perpRad2),
-      cx,
-      cy,
-      "F"
+      tipX, tipY,
+      cx + baseOff * Math.sin(perpRad2), cy - baseOff * Math.cos(perpRad2),
+      cx, cy, "F"
     );
     doc.setFillColor(...GOLD_LIGHT);
     doc.triangle(
-      tipX,
-      tipY,
-      cx + baseOff * Math.sin(perpRad1),
-      cy - baseOff * Math.cos(perpRad1),
-      cx,
-      cy,
-      "F"
+      tipX, tipY,
+      cx + baseOff * Math.sin(perpRad1), cy - baseOff * Math.cos(perpRad1),
+      cx, cy, "F"
     );
   }
 
-  // Center dot
   doc.setFillColor(...GOLD);
   doc.circle(cx, cy, s * 0.04, "F");
 
-  // Cardinal letters
   setFont(doc, "bold", s * 0.28, NAVY);
   const letterOffset = s * 0.9;
   doc.text("N", cx, cy - letterOffset, { align: "center" });
@@ -201,41 +185,29 @@ function renderCoverPage(
   nationality: string,
   destinations: Country[]
 ) {
-  // Full-page navy background
   doc.setFillColor(...NAVY);
   doc.rect(0, 0, PAGE_W, PAGE_H, "F");
 
-  // Decorative gold border inset
   const inset = 8;
   doc.setDrawColor(...GOLD);
   doc.setLineWidth(0.6);
   doc.rect(inset, inset, PAGE_W - inset * 2, PAGE_H - inset * 2);
-
-  // Inner decorative line
   const inset2 = 11;
   doc.setLineWidth(0.2);
   doc.rect(inset2, inset2, PAGE_W - inset2 * 2, PAGE_H - inset2 * 2);
 
-  // Compass rose — centred, upper third
   drawCompassRose(doc, PAGE_W / 2, 95, 35);
 
-  // Title
   setFont(doc, "bold", 36, WHITE);
   doc.text("Student Atlas", PAGE_W / 2, 155, { align: "center" });
 
-  // Gold divider line
   drawLine(doc, 65, 163, PAGE_W - 65, GOLD, 0.8);
 
-  // Subtitle
   setFont(doc, "normal", 13, GOLD_LIGHT);
-  doc.text(
-    "Your personalised guide to studying abroad",
-    PAGE_W / 2,
-    174,
-    { align: "center" }
-  );
+  doc.text("Your personalised guide to studying abroad", PAGE_W / 2, 174, {
+    align: "center",
+  });
 
-  // Nationality + Destinations box
   const boxY = 195;
   const boxH = 42;
   doc.setFillColor(255, 255, 255);
@@ -244,7 +216,6 @@ function renderCoverPage(
   doc.roundedRect(MARGIN + 10, boxY, CONTENT_W - 20, boxH, 3, 3, "F");
   coverGState.setGlobalAlpha?.(1);
 
-  // Labels
   setFont(doc, "normal", 9, GOLD);
   doc.text("NATIONALITY", PAGE_W / 2, boxY + 10, { align: "center" });
   setFont(doc, "bold", 14, WHITE);
@@ -256,7 +227,6 @@ function renderCoverPage(
   const destStr = destinations.map((c) => COUNTRY_LABELS[c]).join("   •   ");
   doc.text(destStr, PAGE_W / 2, boxY + 39, { align: "center" });
 
-  // Bottom: date + branding
   setFont(doc, "normal", 9, GOLD);
   const dateStr = new Date().toLocaleDateString("en-GB", {
     day: "numeric",
@@ -275,85 +245,67 @@ function renderCoverPage(
 }
 
 // ═══════════════════════════════════════════════════════════════
-// TABLE OF CONTENTS
+// TABLE OF CONTENTS  (page numbers filled in second pass)
 // ═══════════════════════════════════════════════════════════════
+interface TocEntry {
+  label: string;
+  level: 0 | 1; // 0 = section, 1 = subsection
+  pageRef: string; // key into pageMap
+}
+
 function renderTableOfContents(
   doc: jsPDF,
-  sections: string[],
+  entries: TocEntry[],
   pageMap: Map<string, number>
 ) {
   doc.addPage();
-  const pageNum = doc.getNumberOfPages();
+  const tocPageNum = doc.getNumberOfPages();
 
-  // Page background
   doc.setFillColor(...WARM_BG);
   doc.rect(0, 0, PAGE_W, PAGE_H, "F");
 
   let y = 40;
 
-  // Title
   setFont(doc, "bold", 22, NAVY);
   doc.text("Table of Contents", MARGIN, y);
   y += 4;
   drawLine(doc, MARGIN, y, MARGIN + 60, GOLD, 0.8);
   y += 16;
 
-  // Section: Introduction
-  setFont(doc, "normal", 11, TEXT_DARK);
-  doc.text("Introduction", MARGIN + 4, y);
-  setFont(doc, "normal", 11, TEXT_MUTED);
-  const introPage = pageMap.get("introduction") ?? 3;
-  // Dotted leader
-  const textWidth = doc.getTextWidth("Introduction");
-  const pageNumStr = String(introPage);
-  const pageNumWidth = doc.getTextWidth(pageNumStr);
-  const dotsStart = MARGIN + 4 + textWidth + 3;
-  const dotsEnd = PAGE_W - MARGIN - pageNumWidth - 3;
-  let dotX = dotsStart;
-  while (dotX < dotsEnd) {
-    doc.text(".", dotX, y);
-    dotX += 2.5;
-  }
-  doc.text(pageNumStr, PAGE_W - MARGIN, y, { align: "right" });
-  y += 14;
+  for (const entry of entries) {
+    y = ensureSpace(doc, y, 10);
 
-  // Content sections
-  for (const slug of sections) {
-    const meta = SECTION_META[slug];
-    if (!meta) continue;
-
-    // Section title with icon
-    setFont(doc, "bold", 13, NAVY);
-    doc.text(`${meta.icon}  ${meta.title}`, MARGIN + 4, y);
-
-    // Page number
-    const secPage = pageMap.get(slug) ?? "—";
-    setFont(doc, "normal", 11, TEXT_MUTED);
-    const titleWidth = doc.getTextWidth(`${meta.icon}  ${meta.title}`);
-    const secPageStr = String(secPage);
-    const secPageNumWidth = doc.getTextWidth(secPageStr);
-    let secDotX = MARGIN + 4 + titleWidth + 3;
-    const secDotEnd = PAGE_W - MARGIN - secPageNumWidth - 3;
-    setFont(doc, "normal", 11, TEXT_MUTED);
-    while (secDotX < secDotEnd) {
-      doc.text(".", secDotX, y);
-      secDotX += 2.5;
-    }
-    doc.text(secPageStr, PAGE_W - MARGIN, y, { align: "right" });
-
-    y += 8;
-
-    // Subsections
-    for (const sub of meta.subsections) {
+    if (entry.level === 0) {
+      setFont(doc, "bold", 13, NAVY);
+    } else {
       setFont(doc, "normal", 10, TEXT_MUTED);
-      doc.text(`—  ${sub}`, MARGIN + 12, y);
-      y += 6;
     }
 
-    y += 8;
+    const indent = entry.level === 0 ? 4 : 12;
+    const label = entry.level === 1 ? `—  ${entry.label}` : entry.label;
+    doc.text(label, MARGIN + indent, y);
+
+    // Page number + dotted leader for top-level entries
+    if (entry.level === 0) {
+      const pageNum = pageMap.get(entry.pageRef) ?? "—";
+      setFont(doc, "normal", 11, TEXT_MUTED);
+      const textWidth = doc.getTextWidth(label);
+      const pageNumStr = String(pageNum);
+      const pageNumWidth = doc.getTextWidth(pageNumStr);
+      const dotsStart = MARGIN + indent + textWidth + 3;
+      const dotsEnd = PAGE_W - MARGIN - pageNumWidth - 3;
+      let dotX = dotsStart;
+      while (dotX < dotsEnd) {
+        doc.text(".", dotX, y);
+        dotX += 2.5;
+      }
+      doc.text(pageNumStr, PAGE_W - MARGIN, y, { align: "right" });
+    }
+
+    y += entry.level === 0 ? 8 : 6;
   }
 
-  addPageFooter(doc, pageNum);
+  addPageFooter(doc, tocPageNum);
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -366,23 +318,21 @@ function renderIntroduction(
   sections: string[]
 ) {
   doc.addPage();
-  const pageNum = doc.getNumberOfPages();
-
   let y = 40;
 
-  // Section header
   setFont(doc, "bold", 22, NAVY);
   doc.text("Introduction", MARGIN, y);
   y += 4;
   drawLine(doc, MARGIN, y, MARGIN + 50, GOLD, 0.8);
   y += 14;
 
-  // Body text
   const destNames = destinations.map((c) => COUNTRY_LABELS[c]);
   const destStr =
     destNames.length === 1
       ? destNames[0]
-      : destNames.slice(0, -1).join(", ") + " and " + destNames[destNames.length - 1];
+      : destNames.slice(0, -1).join(", ") +
+        " and " +
+        destNames[destNames.length - 1];
 
   const sectionNames = sections
     .map((s) => SECTION_META[s]?.title)
@@ -406,7 +356,6 @@ function renderIntroduction(
   doc.text(scopeLines, MARGIN, y);
   y += scopeLines.length * 6 + 14;
 
-  // Included sections summary
   setFont(doc, "bold", 13, NAVY);
   doc.text("Sections included in this report", MARGIN, y);
   y += 10;
@@ -415,10 +364,10 @@ function renderIntroduction(
     const meta = SECTION_META[slug];
     if (!meta) continue;
 
-    // Gold bullet
+    y = ensureSpace(doc, y, 20);
+
     doc.setFillColor(...GOLD);
     doc.circle(MARGIN + 3, y - 1.5, 1.5, "F");
-
     setFont(doc, "bold", 11, NAVY);
     doc.text(meta.title, MARGIN + 9, y);
     y += 6;
@@ -429,44 +378,236 @@ function renderIntroduction(
     y += descLines.length * 5 + 8;
   }
 
-  addPageFooter(doc, pageNum);
+  addPageFooter(doc, doc.getNumberOfPages());
 }
 
 // ═══════════════════════════════════════════════════════════════
-// CONTENT SECTION PAGES (mock)
+// CONTENT BLOCK → PDF RENDERER
 // ═══════════════════════════════════════════════════════════════
-function renderContentSection(
+
+const LINE_HEIGHT = 5; // mm per line at size 9.5
+const BLOCK_GAP = 5; // mm gap between blocks
+
+/** Render a single ContentBlock at the given y position, returning the new y. */
+function renderContentBlock(
+  doc: jsPDF,
+  block: ContentBlock,
+  y: number,
+  width: number,
+  x: number = MARGIN
+): number {
+  switch (block.type) {
+    case "heading": {
+      const sizes = { 2: 16, 3: 13, 4: 11 } as const;
+      const fontSize = sizes[block.level];
+      y = ensureSpace(doc, y, 12);
+      setFont(doc, "bold", fontSize, NAVY);
+      const lines = doc.splitTextToSize(block.text, width);
+      doc.text(lines, x, y);
+      y += lines.length * (fontSize * 0.45) + 4;
+      break;
+    }
+
+    case "paragraph": {
+      setFont(doc, "normal", 9.5, TEXT_DARK);
+      const lines = doc.splitTextToSize(block.text, width);
+      // Render line-by-line with page breaks
+      for (const line of lines) {
+        y = ensureSpace(doc, y, LINE_HEIGHT);
+        doc.text(line, x, y);
+        y += LINE_HEIGHT;
+      }
+      y += 2;
+      break;
+    }
+
+    case "key-value-list": {
+      const kvLabelWidth = Math.min(width * 0.4, 55);
+      for (const item of block.items) {
+        // Measure value height to ensure enough space
+        setFont(doc, "normal", 9, TEXT_DARK);
+        const valueLines = doc.splitTextToSize(item.value, width - kvLabelWidth - 4);
+        const neededHeight = Math.max(valueLines.length * LINE_HEIGHT, LINE_HEIGHT);
+        y = ensureSpace(doc, y, neededHeight);
+
+        setFont(doc, "bold", 9, NAVY);
+        doc.text(item.label, x + 2, y);
+
+        setFont(doc, "normal", 9, TEXT_DARK);
+        doc.text(valueLines, x + kvLabelWidth, y);
+        y += neededHeight;
+      }
+      y += 3;
+      break;
+    }
+
+    case "bullet-list": {
+      for (const item of block.items) {
+        setFont(doc, "normal", 9.5, TEXT_DARK);
+        const bulletLines = doc.splitTextToSize(item, width - 8);
+        y = ensureSpace(doc, y, bulletLines.length * LINE_HEIGHT);
+
+        doc.setFillColor(...GOLD);
+        doc.circle(x + 3, y - 1.2, 0.8, "F");
+        doc.text(bulletLines, x + 7, y);
+        y += bulletLines.length * LINE_HEIGHT + 1.5;
+      }
+      y += 2;
+      break;
+    }
+
+    case "ordered-list": {
+      for (let i = 0; i < block.items.length; i++) {
+        setFont(doc, "normal", 9.5, TEXT_DARK);
+        const olLines = doc.splitTextToSize(block.items[i], width - 10);
+        y = ensureSpace(doc, y, olLines.length * LINE_HEIGHT);
+
+        setFont(doc, "bold", 9, GOLD);
+        doc.text(`${i + 1}.`, x + 2, y);
+        setFont(doc, "normal", 9.5, TEXT_DARK);
+        doc.text(olLines, x + 9, y);
+        y += olLines.length * LINE_HEIGHT + 1.5;
+      }
+      y += 2;
+      break;
+    }
+
+    case "step": {
+      y = ensureSpace(doc, y, 18);
+
+      // Step number badge
+      doc.setFillColor(...NAVY);
+      doc.circle(x + 4, y - 1, 4, "F");
+      setFont(doc, "bold", 8, WHITE);
+      doc.text(`${block.number}`, x + 4, y, { align: "center" });
+
+      // Step title
+      setFont(doc, "bold", 10.5, NAVY);
+      doc.text(block.title, x + 12, y);
+      y += 7;
+
+      // Step body
+      setFont(doc, "normal", 9.5, TEXT_DARK);
+      const bodyLines = doc.splitTextToSize(block.body, width - 12);
+      for (const line of bodyLines) {
+        y = ensureSpace(doc, y, LINE_HEIGHT);
+        doc.text(line, x + 12, y);
+        y += LINE_HEIGHT;
+      }
+      y += 3;
+      break;
+    }
+  }
+
+  return y;
+}
+
+/** Render a callout box (nationality-specific note). */
+function renderCallout(
+  doc: jsPDF,
+  blocks: ContentBlock[],
+  nationalityLabel: string | undefined,
+  y: number,
+  width: number,
+  x: number = MARGIN
+): number {
+  // Pre-measure approximate height
+  let estHeight = 10; // header + padding
+  for (const b of blocks) {
+    if (b.type === "paragraph") {
+      setFont(doc, "normal", 9, TEXT_DARK);
+      estHeight += doc.splitTextToSize(b.text, width - 12).length * LINE_HEIGHT + 2;
+    } else {
+      estHeight += 12;
+    }
+  }
+
+  y = ensureSpace(doc, y, Math.min(estHeight, 40));
+
+  const startY = y - 3;
+
+  // Header
+  setFont(doc, "bold", 8.5, GOLD);
+  const header = nationalityLabel
+    ? `Note for ${nationalityLabel} nationals`
+    : "Nationality-specific note";
+  doc.text(header, x + 5, y + 2);
+  y += 8;
+
+  // Render inner blocks
+  for (const b of blocks) {
+    y = renderContentBlock(doc, b, y, width - 12, x + 6);
+  }
+
+  y += 2;
+
+  // Draw callout box border around the rendered content
+  const boxH = y - startY + 2;
+  doc.setFillColor(...CALLOUT_BG);
+  doc.setDrawColor(...CALLOUT_BORDER);
+  doc.setLineWidth(0.5);
+  // Draw filled rect behind (we do this by drawing on the same page)
+  // Since we already rendered text, we use a workaround: draw the box
+  // We'll render the box UNDER the text by using a GState
+  // Actually, jsPDF renders in order, so we need to draw box first.
+  // We'll use a simpler approach: just draw the border (no fill behind text).
+  doc.roundedRect(x, startY, width, boxH, 2, 2, "S");
+
+  // Left accent bar
+  doc.setFillColor(...GOLD);
+  doc.rect(x, startY, 2, boxH, "F");
+
+  y += 4;
+  return y;
+}
+
+/** Render all resolved blocks for a country section. */
+function renderResolvedBlocks(
+  doc: jsPDF,
+  blocks: ResolvedBlock[],
+  y: number,
+  width: number,
+  x: number = MARGIN
+): number {
+  for (const rb of blocks) {
+    if (rb.isCallout) {
+      y = renderCallout(doc, [rb.block], rb.nationalityLabel, y, width, x);
+    } else {
+      y = renderContentBlock(doc, rb.block, y, width, x);
+      y += 1; // small inter-block spacing
+    }
+  }
+  return y;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// SECTION DIVIDER PAGE
+// ═══════════════════════════════════════════════════════════════
+function renderSectionDivider(
   doc: jsPDF,
   slug: string,
-  destinations: Country[],
-  nationality: string
-): number {
-  const meta = SECTION_META[slug];
-  if (!meta) return doc.getNumberOfPages();
-
+  subsectionTitles: string[]
+) {
   doc.addPage();
-  const startPage = doc.getNumberOfPages();
 
-  // Section divider page
+  const meta = SECTION_META[slug];
+  if (!meta) return;
+
   doc.setFillColor(...NAVY);
   doc.rect(0, 0, PAGE_W, PAGE_H, "F");
 
-  // Gold accent lines
   drawLine(doc, MARGIN, 80, PAGE_W - MARGIN, GOLD, 0.6);
   drawLine(doc, MARGIN, 83, PAGE_W - MARGIN, GOLD, 0.2);
 
-  // Section title
   setFont(doc, "bold", 32, WHITE);
   doc.text(meta.title, PAGE_W / 2, 110, { align: "center" });
 
-  // Description
   setFont(doc, "normal", 12, GOLD_LIGHT);
   const descLines = doc.splitTextToSize(meta.description, CONTENT_W - 20);
   doc.text(descLines, PAGE_W / 2, 125, { align: "center" });
 
-  // Subsections list
   let y = 155;
-  for (const sub of meta.subsections) {
+  for (const sub of subsectionTitles) {
     setFont(doc, "normal", 11, WHITE);
     doc.text(`•   ${sub}`, PAGE_W / 2 - 30, y);
     y += 9;
@@ -474,152 +615,91 @@ function renderContentSection(
 
   drawLine(doc, MARGIN, PAGE_H - 60, PAGE_W - MARGIN, GOLD, 0.6);
   drawLine(doc, MARGIN, PAGE_H - 57, PAGE_W - MARGIN, GOLD, 0.2);
+}
 
-  // Now render each subsection
-  for (let i = 0; i < meta.subsections.length; i++) {
-    const subTitle = meta.subsections[i];
+// ═══════════════════════════════════════════════════════════════
+// CONTENT SECTION RENDERING (real data)
+// ═══════════════════════════════════════════════════════════════
+function renderContentSection(
+  doc: jsPDF,
+  sectionSlug: string,
+  destinations: Country[],
+  nationality: string,
+  overlay: NationalityOverlay | null
+) {
+  const section = sectionRegistry.get(sectionSlug);
+  const meta = SECTION_META[sectionSlug];
+  if (!section || !meta) return;
 
+  const subsectionTitles = section.subSections.map((s) => s.title);
+  renderSectionDivider(doc, sectionSlug, subsectionTitles);
+
+  const sectionOverlay = overlay?.[sectionSlug];
+
+  for (const subSection of section.subSections) {
     doc.addPage();
-    const subPageNum = doc.getNumberOfPages();
-    let sy = 35;
+    let y = 35;
 
-    // Section breadcrumb
+    // Breadcrumb
     setFont(doc, "normal", 8.5, GOLD);
-    doc.text(`${meta.title}  ›  ${subTitle}`, MARGIN, sy);
-    sy += 10;
+    doc.text(`${meta.title}  ›  ${subSection.title}`, MARGIN, y);
+    y += 10;
 
     // Subsection heading
     setFont(doc, "bold", 18, NAVY);
-    doc.text(subTitle, MARGIN, sy);
-    sy += 4;
-    drawLine(doc, MARGIN, sy, MARGIN + 40, GOLD, 0.6);
-    sy += 12;
+    doc.text(subSection.title, MARGIN, y);
+    y += 4;
+    drawLine(doc, MARGIN, y, MARGIN + 40, GOLD, 0.6);
+    y += 12;
 
-    // Country columns
-    if (destinations.length === 1) {
-      // Single country — full width
-      sy = renderMockCountryContent(
-        doc,
-        destinations[0],
-        MARGIN,
-        sy,
-        CONTENT_W,
-        slug,
-        subTitle,
+    const subSectionOverlay = sectionOverlay?.[subSection.slug];
+
+    // Cross-cutting content (not country-specific)
+    if (subSection.crossCutting && subSection.crossCutting.length > 0) {
+      const crossCuttingBlocks = mergeCrossCutting(
+        subSection.crossCutting,
+        subSectionOverlay?._crossCutting?.callouts,
         nationality
       );
-    } else {
-      // Multi-country comparison layout
-      const colW = (CONTENT_W - (destinations.length - 1) * 6) / destinations.length;
-      for (let ci = 0; ci < destinations.length; ci++) {
-        const cx = MARGIN + ci * (colW + 6);
-        renderMockCountryContent(
-          doc,
-          destinations[ci],
-          cx,
-          sy,
-          colW,
-          slug,
-          subTitle,
-          nationality
-        );
-      }
+      y = renderResolvedBlocks(doc, crossCuttingBlocks, y, CONTENT_W);
+      y += 4;
     }
 
-    addPageFooter(doc, subPageNum);
+    // Country-specific content
+    for (const country of destinations) {
+      const countryData = subSection.countries.find(
+        (c) => c.country === country
+      );
+      if (!countryData) continue;
+
+      const countryOverlay = subSectionOverlay?.[country];
+      const resolvedBlocks = mergeBlocks(
+        countryData.blocks,
+        countryOverlay,
+        nationality
+      );
+
+      if (resolvedBlocks.length === 0) continue;
+
+      // Country header bar
+      y = ensureSpace(doc, y, 20);
+      doc.setFillColor(...NAVY);
+      doc.roundedRect(MARGIN, y, CONTENT_W, 10, 2, 2, "F");
+      setFont(doc, "bold", 10, WHITE);
+      doc.text(
+        `${FLAG_EMOJI[country]}  ${COUNTRY_LABELS[country]}`,
+        MARGIN + 4,
+        y + 7
+      );
+      y += 16;
+
+      // Render all content blocks
+      y = renderResolvedBlocks(doc, resolvedBlocks, y, CONTENT_W);
+      y += 6;
+    }
+
+    addPageFooter(doc, doc.getNumberOfPages());
   }
-
-  return startPage;
-}
-
-function renderMockCountryContent(
-  doc: jsPDF,
-  country: Country,
-  x: number,
-  y: number,
-  width: number,
-  _sectionSlug: string,
-  _subTitle: string,
-  _nationality: string
-): number {
-  const countryName = COUNTRY_LABELS[country];
-  const flagEmoji: Record<Country, string> = {
-    US: "🇺🇸",
-    UK: "🇬🇧",
-    AU: "🇦🇺",
-  };
-
-  // Country header
-  doc.setFillColor(...NAVY);
-  doc.roundedRect(x, y, width, 10, 2, 2, "F");
-  setFont(doc, "bold", 10, WHITE);
-  doc.text(`${flagEmoji[country]}  ${countryName}`, x + 4, y + 7);
-  y += 16;
-
-  // Mock key-value list
-  const mockKV = [
-    ["Visa type", "Standard visa pathway"],
-    ["Processing time", "3–8 weeks"],
-    ["Application fee", "Varies by category"],
-  ];
-  for (const [label, value] of mockKV) {
-    setFont(doc, "bold", 8.5, NAVY);
-    doc.text(label, x + 2, y);
-    setFont(doc, "normal", 8.5, TEXT_DARK);
-    doc.text(value, x + 2 + Math.min(width * 0.38, 40), y);
-    y += 6;
-  }
-  y += 4;
-
-  // Mock paragraph
-  drawLine(doc, x, y - 2, x + width, [230, 228, 222] as unknown as RGB, 0.3);
-  y += 4;
-
-  setFont(doc, "normal", 9, TEXT_DARK);
-  const mockParagraph = `This section will contain detailed information about the ${countryName} visa pathway, including specific requirements, timelines, and procedures relevant to your application. Content is personalised based on your nationality and selected destinations.`;
-  const lines = doc.splitTextToSize(mockParagraph, width - 4);
-  doc.text(lines, x + 2, y);
-  y += lines.length * 4.5 + 6;
-
-  // Mock bullet list
-  setFont(doc, "bold", 9, NAVY);
-  doc.text("Key requirements:", x + 2, y);
-  y += 6;
-
-  const bullets = [
-    "Valid passport with minimum 6 months validity",
-    "Proof of financial support for duration of stay",
-    "Acceptance letter from recognised institution",
-    "Health insurance or medical examination",
-  ];
-  for (const bullet of bullets) {
-    setFont(doc, "normal", 8.5, TEXT_DARK);
-    doc.setFillColor(...GOLD);
-    doc.circle(x + 4.5, y - 1.2, 0.8, "F");
-    const bulletLines = doc.splitTextToSize(bullet, width - 10);
-    doc.text(bulletLines, x + 8, y);
-    y += bulletLines.length * 4.5 + 2;
-  }
-
-  y += 4;
-
-  // Nationality callout box (mock)
-  doc.setFillColor(255, 248, 230); // light amber
-  doc.roundedRect(x, y, width, 22, 2, 2, "F");
-  doc.setDrawColor(...GOLD);
-  doc.setLineWidth(0.4);
-  doc.roundedRect(x, y, width, 22, 2, 2, "S");
-
-  setFont(doc, "bold", 8, GOLD);
-  doc.text("⚠  Nationality-specific note", x + 4, y + 6);
-  setFont(doc, "italic", 8, TEXT_MUTED);
-  const calloutText = `Additional requirements or exemptions may apply based on your nationality. This callout will display personalised information.`;
-  const calloutLines = doc.splitTextToSize(calloutText, width - 8);
-  doc.text(calloutLines, x + 4, y + 12);
-
-  y += 30;
-
-  return y;
 }
 
 // ═══════════════════════════════════════════════════════════════
@@ -631,39 +711,126 @@ export interface ReportOptions {
   sections: string[]; // slugs: "visit", "student", "work", "residency"
 }
 
-export function generateReport(options: ReportOptions) {
+export async function generateReport(options: ReportOptions) {
   const { nationality, destinations, sections } = options;
+
+  // Load nationality overlay
+  let overlay: NationalityOverlay | null = null;
+  const natMeta = nationalityRegistry.find((n) => n.name === nationality);
+  if (natMeta) {
+    try {
+      const mod = await natMeta.load();
+      overlay = mod.default;
+    } catch {
+      // If overlay fails to load, proceed without it
+    }
+  }
 
   const doc = new jsPDF({ unit: "mm", format: "a4" });
 
-  // 1. Cover page
+  // ── Pass 1: Render all content ──────────────────────────────
+  // Cover page (page 1)
   renderCoverPage(doc, nationality, destinations);
 
-  // Pre-calculate page numbers for TOC
-  // Cover=1, TOC=2, Intro=3, then sections
-  const pageMap = new Map<string, number>();
-  pageMap.set("introduction", 3);
-  // Each section: 1 divider + N subsection pages
-  let currentPage = 4;
-  for (const slug of sections) {
-    const meta = SECTION_META[slug];
-    if (!meta) continue;
-    pageMap.set(slug, currentPage);
-    currentPage += 1 + meta.subsections.length; // divider + subsection pages
-  }
+  // We need page numbers for TOC but don't know them yet.
+  // Strategy: render TOC with placeholder, then render content,
+  // then go back and re-render the TOC page with correct numbers.
 
-  // 2. Table of Contents
-  renderTableOfContents(doc, sections, pageMap);
+  // Reserve TOC page (page 2)
+  doc.addPage();
+  const tocPageIndex = doc.getNumberOfPages(); // = 2
 
-  // 3. Introduction
+  // Introduction (page 3)
   renderIntroduction(doc, nationality, destinations, sections);
 
-  // 4. Content sections
+  // Record page numbers for each section
+  const pageMap = new Map<string, number>();
+  pageMap.set("introduction", 3);
+
+  // Content sections
   for (const slug of sections) {
-    renderContentSection(doc, slug, destinations, nationality);
+    const section = sectionRegistry.get(slug);
+    if (!section) continue;
+
+    // The divider page will be the next page added
+    pageMap.set(slug, doc.getNumberOfPages() + 1);
+    renderContentSection(doc, slug, destinations, nationality, overlay);
   }
 
-  // Save
+  // ── Pass 2: Fill in the TOC ─────────────────────────────────
+  // Build TOC entries
+  const tocEntries: TocEntry[] = [];
+  tocEntries.push({
+    label: "Introduction",
+    level: 0,
+    pageRef: "introduction",
+  });
+
+  for (const slug of sections) {
+    const section = sectionRegistry.get(slug);
+    const meta = SECTION_META[slug];
+    if (!section || !meta) continue;
+
+    tocEntries.push({
+      label: `${meta.icon}  ${meta.title}`,
+      level: 0,
+      pageRef: slug,
+    });
+
+    for (const sub of section.subSections) {
+      tocEntries.push({ label: sub.title, level: 1, pageRef: slug });
+    }
+  }
+
+  // Overwrite the reserved TOC page
+  doc.setPage(tocPageIndex);
+
+  // Clear the page by drawing a white rect
+  doc.setFillColor(...WARM_BG);
+  doc.rect(0, 0, PAGE_W, PAGE_H, "F");
+
+  // Render TOC content directly on this page
+  let tocY = 40;
+
+  setFont(doc, "bold", 22, NAVY);
+  doc.text("Table of Contents", MARGIN, tocY);
+  tocY += 4;
+  drawLine(doc, MARGIN, tocY, MARGIN + 60, GOLD, 0.8);
+  tocY += 16;
+
+  for (const entry of tocEntries) {
+    if (entry.level === 0) {
+      setFont(doc, "bold", 13, NAVY);
+    } else {
+      setFont(doc, "normal", 10, TEXT_MUTED);
+    }
+
+    const indent = entry.level === 0 ? 4 : 12;
+    const label = entry.level === 1 ? `—  ${entry.label}` : entry.label;
+    doc.text(label, MARGIN + indent, tocY);
+
+    if (entry.level === 0) {
+      const pageNum = pageMap.get(entry.pageRef) ?? "—";
+      setFont(doc, "normal", 11, TEXT_MUTED);
+      const textWidth = doc.getTextWidth(label);
+      const pageNumStr = String(pageNum);
+      const pageNumWidth = doc.getTextWidth(pageNumStr);
+      const dotsStart = MARGIN + indent + textWidth + 3;
+      const dotsEnd = PAGE_W - MARGIN - pageNumWidth - 3;
+      let dotX = dotsStart;
+      while (dotX < dotsEnd) {
+        doc.text(".", dotX, tocY);
+        dotX += 2.5;
+      }
+      doc.text(pageNumStr, PAGE_W - MARGIN, tocY, { align: "right" });
+    }
+
+    tocY += entry.level === 0 ? 8 : 6;
+  }
+
+  addPageFooter(doc, tocPageIndex);
+
+  // ── Save ────────────────────────────────────────────────────
   const destStr = destinations.join("-");
   const filename = `Student-Atlas-Report_${destStr}_${new Date().toISOString().slice(0, 10)}.pdf`;
   doc.save(filename);
