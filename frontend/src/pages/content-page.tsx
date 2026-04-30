@@ -2,9 +2,11 @@ import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { usePreferences } from "@/context/PreferencesContext";
 import { DASHBOARD_ROUTE } from "@/lib/routes";
+import { isCountryCompareRoute } from "@/lib/compare-routes";
 import { sectionRegistry } from "@/data/sections";
 import { citations } from "@/data/citations";
 import { mergeBlocks, mergeCrossCutting } from "@/data/merge-content";
+import { COUNTRY_LABELS } from "@/data/types";
 import { visaFacts } from "@/data/visa-facts";
 import { CountryColumn } from "@/components/country-column";
 import { TLDRCard } from "@/components/tldr-card";
@@ -96,6 +98,12 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
     usePreferences();
 
   const [viewMode, setViewMode] = useState<"single" | "compare">("single");
+
+  useEffect(() => {
+    if (!isCountryCompareRoute(sectionSlug, subSectionSlug)) {
+      setViewMode("single");
+    }
+  }, [sectionSlug, subSectionSlug]);
 
   // Mutable map that collects citations during render — reset on each render
   const citationMap = useMemo(
@@ -189,6 +197,8 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
 
   const sectionFacts = visaFacts[sectionSlug]?.[subSectionSlug];
   const canCompare = destinations.length >= 2;
+  const showCountryCompare =
+    canCompare && isCountryCompareRoute(sectionSlug, subSectionSlug);
 
   const isSingle = destinations.length === 1;
 
@@ -203,7 +213,7 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
           {subSection.title}
         </h1>
         {/* Mode toggle — desktop only, 2+ destinations */}
-        {canCompare && (
+        {showCountryCompare && (
           <button
             type="button"
             onClick={() =>
@@ -218,7 +228,7 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
       <SourcesPill citationMap={citationMap} />
 
       {/* Comparison table mode */}
-      {viewMode === "compare" && canCompare ? (
+      {viewMode === "compare" && showCountryCompare ? (
         <ComparisonTable countries={destinations} facts={sectionFacts} />
       ) : (
         /* Single / multi-column mode */
@@ -258,7 +268,11 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
                   index === destinations.length - 1 && destinations.length === 2 && "md:border-r md:border-border md:pr-8"
                 )}
               >
-                {/* Nationality callout — pinned above everything */}
+                <div className="rounded-lg border border-border bg-muted/50 px-4 py-3">
+                  <h2 className="text-xl font-bold tracking-tight">
+                    {COUNTRY_LABELS[country]}
+                  </h2>
+                </div>
                 {topCallouts.length > 0 && (
                   <aside className="border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/20 p-4 rounded-r-lg">
                     <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1 uppercase tracking-wide">
@@ -279,7 +293,6 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
                 <CountryColumn
                   country={country}
                   blocks={bodyBlocks}
-                  showHeader={destinations.length > 1}
                   citationMap={citationMap}
                   sessionKey={`sa:seen:${sectionSlug}/${subSectionSlug}/${country}`}
                 />
