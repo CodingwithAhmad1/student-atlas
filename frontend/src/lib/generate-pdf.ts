@@ -253,61 +253,6 @@ interface TocEntry {
   pageRef: string; // key into pageMap
 }
 
-function renderTableOfContents(
-  doc: jsPDF,
-  entries: TocEntry[],
-  pageMap: Map<string, number>
-) {
-  doc.addPage();
-  const tocPageNum = doc.getNumberOfPages();
-
-  doc.setFillColor(...WARM_BG);
-  doc.rect(0, 0, PAGE_W, PAGE_H, "F");
-
-  let y = 40;
-
-  setFont(doc, "bold", 22, NAVY);
-  doc.text("Table of Contents", MARGIN, y);
-  y += 4;
-  drawLine(doc, MARGIN, y, MARGIN + 60, GOLD, 0.8);
-  y += 16;
-
-  for (const entry of entries) {
-    y = ensureSpace(doc, y, 10);
-
-    if (entry.level === 0) {
-      setFont(doc, "bold", 13, NAVY);
-    } else {
-      setFont(doc, "normal", 10, TEXT_MUTED);
-    }
-
-    const indent = entry.level === 0 ? 4 : 12;
-    const label = entry.level === 1 ? `—  ${entry.label}` : entry.label;
-    doc.text(label, MARGIN + indent, y);
-
-    // Page number + dotted leader for top-level entries
-    if (entry.level === 0) {
-      const pageNum = pageMap.get(entry.pageRef) ?? "—";
-      setFont(doc, "normal", 11, TEXT_MUTED);
-      const textWidth = doc.getTextWidth(label);
-      const pageNumStr = String(pageNum);
-      const pageNumWidth = doc.getTextWidth(pageNumStr);
-      const dotsStart = MARGIN + indent + textWidth + 3;
-      const dotsEnd = PAGE_W - MARGIN - pageNumWidth - 3;
-      let dotX = dotsStart;
-      while (dotX < dotsEnd) {
-        doc.text(".", dotX, y);
-        dotX += 2.5;
-      }
-      doc.text(pageNumStr, PAGE_W - MARGIN, y, { align: "right" });
-    }
-
-    y += entry.level === 0 ? 8 : 6;
-  }
-
-  addPageFooter(doc, tocPageNum);
-}
-
 // ═══════════════════════════════════════════════════════════════
 // INTRODUCTION PAGE
 // ═══════════════════════════════════════════════════════════════
@@ -386,7 +331,6 @@ function renderIntroduction(
 // ═══════════════════════════════════════════════════════════════
 
 const LINE_HEIGHT = 5; // mm per line at size 9.5
-const BLOCK_GAP = 5; // mm gap between blocks
 
 /** Render a single ContentBlock at the given y position, returning the new y. */
 function renderContentBlock(

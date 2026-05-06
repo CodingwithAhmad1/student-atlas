@@ -6,16 +6,16 @@ Personalised visa and immigration guidance for international students. Users sel
 
 ```
 Student Atlas/
-├── frontend/          # React + TypeScript + Vite (main app)
-├── backend/           # FastAPI backend (minimal stub)
-├── mcp-content-server/# MCP server for external content management
-├── docs/              # Product document, content specification
-└── archive/           # Legacy Flask app files (preserved for reference)
+├── frontend/           # React + TypeScript + Vite (main app — static content from data files)
+├── backend/            # SQLAlchemy schema + DB wiring (reference; no runtime API)
+├── mcp-content-server/ # MCP server for external content management
+├── docs/               # Product document, content specification
+└── archive/            # Legacy Flask app files (preserved for reference)
 ```
 
 ## Frontend
 
-React 19, TypeScript, Vite 8, Tailwind CSS 4, shadcn/ui.
+React 19, TypeScript, Vite 8, Tailwind CSS 4, shadcn/ui. The app is a static SPA; visa content is compiled from TypeScript modules under `frontend/src/data/`.
 
 ```bash
 cd frontend
@@ -49,24 +49,18 @@ pip install -r requirements.txt
 
 See `frontend/src/data/CONTENT-GUIDE.md` for tool reference.
 
-## Backend
+## Database schema (reference)
 
-FastAPI stub — currently minimal. The frontend serves most content statically from TypeScript data files.
-
-```bash
-cd backend
-pip install -r requirements.txt
-uvicorn main:app --reload
-```
+SQLAlchemy models and async session setup live under `backend/` (`models.py`, `database.py`, `requirements.txt`) for schema reference and optional tooling. There is **no** FastAPI runtime in this repo; the published site does not require a hosted application backend.
 
 ## Quick Start
 
 ```bash
-# From the project root — starts both backend and frontend
+# From the project root — starts the Vite dev server only
 npm start
 ```
 
-This runs FastAPI on `http://localhost:8000` and Vite on `http://localhost:5173`.
+This runs the frontend at `http://localhost:5173`.
 
 ## Branding
 
