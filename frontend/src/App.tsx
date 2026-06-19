@@ -21,7 +21,13 @@ import { AboutPage } from "@/pages/about-page"
 import { ContentPage } from "@/pages/content-page"
 import { CitationsPage } from "@/pages/citations-page"
 import { ReportPage } from "@/pages/report-page"
-import { DASHBOARD_ROUTE } from "@/lib/routes"
+import { TechnicalExplainerPage } from "@/pages/technical-explainer-page"
+import { MonitoringLogPage } from "@/pages/monitoring-log-page"
+import {
+  DASHBOARD_ROUTE,
+  MONITORING_LOG_ROUTE,
+  TECHNICAL_EXPLAINER_ROUTE,
+} from "@/lib/routes"
 
 const routeMap: Record<string, { section: string; page: string }> = {
   "/visit/entry-requirement": { section: "Tourist visa", page: "Entry requirement" },
@@ -37,6 +43,14 @@ const routeMap: Record<string, { section: string; page: string }> = {
   "/residency/dual-nationality": { section: "Residency pathway", page: "Dual nationality" },
   "/report": { section: "Generate report", page: "" },
   "/citations": { section: "Citations", page: "" },
+  [TECHNICAL_EXPLAINER_ROUTE.path]: {
+    section: TECHNICAL_EXPLAINER_ROUTE.label,
+    page: "",
+  },
+  [MONITORING_LOG_ROUTE.path]: {
+    section: TECHNICAL_EXPLAINER_ROUTE.label,
+    page: MONITORING_LOG_ROUTE.label,
+  },
 }
 
 function AppBreadcrumb() {
@@ -88,6 +102,9 @@ function AppLayout() {
 
   const isCitationsRoute = location.pathname === "/citations"
   const isReportRoute = location.pathname === "/report"
+  const isMonitoringRoute = location.pathname === MONITORING_LOG_ROUTE.path
+  const isTechnicalExplainerRoute =
+    location.pathname === TECHNICAL_EXPLAINER_ROUTE.path
 
   return (
     <TooltipProvider>
@@ -107,6 +124,10 @@ function AppLayout() {
           <ReportPage />
         ) : isCitationsRoute ? (
           <CitationsPage />
+        ) : isMonitoringRoute ? (
+          <MonitoringLogPage />
+        ) : isTechnicalExplainerRoute ? (
+          <TechnicalExplainerPage />
         ) : isContentRoute ? (
           <ContentPage sectionSlug={sectionSlug} subSectionSlug={subSectionSlug} />
         ) : (

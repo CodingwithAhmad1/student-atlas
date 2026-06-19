@@ -1,4 +1,6 @@
 import { CompassIcon, GlobeIcon, UsersIcon, ShieldCheckIcon } from "lucide-react";
+import { Link } from "react-router-dom";
+import { TECHNICAL_EXPLAINER_ROUTE } from "@/lib/routes";
 
 export function AboutPage() {
   return (
@@ -43,6 +45,22 @@ export function AboutPage() {
           <li>Browse visa categories in the sidebar — tourist, student, work, and residency.</li>
           <li>Use <strong className="text-foreground">Generate report</strong> to export a personalised PDF summary.</li>
         </ol>
+      </div>
+
+      <div className="mt-10 rounded-lg border bg-muted/40 p-6">
+        <h2 className="text-lg font-semibold mb-2">How it works</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Curious about how Student Atlas is built and how the guidance is
+          structured? Read our{" "}
+          <Link
+            to={TECHNICAL_EXPLAINER_ROUTE.path}
+            className="text-blue-600 underline underline-offset-2 hover:text-blue-700"
+          >
+            Technical Explainer
+          </Link>{" "}
+          for an overview of the system architecture, data model, and content
+          pipeline.
+        </p>
       </div>
 
       <p className="mt-8 text-sm text-muted-foreground">

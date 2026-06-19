@@ -22,9 +22,14 @@ import {
   FileTextIcon,
   BookOpenIcon,
   LayoutDashboardIcon,
+  CodeIcon,
 } from "lucide-react"
 import { CompassPinIcon } from "@/components/compass-pin-icon"
-import { MAIN_NAV_SECTIONS, NAV_REFERENCE_LINKS } from "@/lib/navigation"
+import {
+  MAIN_NAV_SECTIONS,
+  NAV_REFERENCE_LINKS,
+  TECHNICAL_NAV_SECTION,
+} from "@/lib/navigation"
 
 const mainNavIcons = [
   LayoutDashboardIcon,
@@ -40,6 +45,13 @@ const navMain = MAIN_NAV_SECTIONS.map((section, i) => ({
 }))
 
 const referenceNavIcons = [FileTextIcon, BookOpenIcon] as const
+
+const technicalNav = {
+  title: TECHNICAL_NAV_SECTION.title,
+  url: TECHNICAL_NAV_SECTION.url,
+  items: [...TECHNICAL_NAV_SECTION.items],
+  icon: React.createElement(CodeIcon),
+}
 
 function SidebarToggle() {
   const { toggleSidebar, state } = useSidebar()
@@ -95,6 +107,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarContent>
         <NavMain items={navMain} currentPath={location.pathname} />
         <SidebarSeparator />
+        <NavMain items={[technicalNav]} currentPath={location.pathname} groupLabel={null} />
         <SidebarGroup>
           <SidebarMenu>
             {NAV_REFERENCE_LINKS.map((link, i) => {

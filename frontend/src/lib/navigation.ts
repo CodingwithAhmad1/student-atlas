@@ -1,4 +1,4 @@
-import { DASHBOARD_ROUTE } from "@/lib/routes";
+import { DASHBOARD_ROUTE, TECHNICAL_NAV_SECTION } from "@/lib/routes";
 
 export interface NavPageLink {
   title: string;
@@ -62,6 +62,9 @@ export const NAV_REFERENCE_LINKS: NavPageLink[] = [
 ];
 
 export const NAV_REFERENCE_GROUP_TITLE = "Reference";
+
+/** Collapsible Technical section (explainer + monitoring log). */
+export { TECHNICAL_NAV_SECTION };
 
 /** PascalCase from nav title segments (spaces and hyphens) — no `#` prefix. */
 export function titleToHashLabel(title: string): string {

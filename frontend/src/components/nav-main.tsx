@@ -22,6 +22,7 @@ import { ChevronRightIcon } from "lucide-react"
 export function NavMain({
   items,
   currentPath,
+  groupLabel = "Navigation",
 }: {
   items: {
     title: string
@@ -33,10 +34,11 @@ export function NavMain({
     }[]
   }[]
   currentPath: string
+  groupLabel?: string | null
 }) {
   return (
     <SidebarGroup>
-      <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+      {groupLabel ? <SidebarGroupLabel>{groupLabel}</SidebarGroupLabel> : null}
       <SidebarMenu>
         {items.map((item) => {
           const isActive = currentPath.startsWith(item.url)
