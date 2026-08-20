@@ -103,7 +103,7 @@ export const citations: Record<string, Citation> = {
   },
   "studyinthestates.dhs.gov/students/the-form-i-20": {
     id: "studyinthestates.dhs.gov/students/the-form-i-20",
-    url: "https://studyinthestates.dhs.gov/students/the-form-i-20",
+    url: "https://studyinthestates.dhs.gov/students/prepare/students-and-the-form-i-20",
     label: "Study in the States — The Form I-20",
   },
   "gov.uk/student-visa/cas": {
@@ -168,7 +168,7 @@ export const citations: Record<string, Citation> = {
   },
   "studyinthestates.dhs.gov/students/maintaining-your-status": {
     id: "studyinthestates.dhs.gov/students/maintaining-your-status",
-    url: "https://studyinthestates.dhs.gov/students/maintaining-your-status",
+    url: "https://studyinthestates.dhs.gov/students/maintaining-status",
     label: "Study in the States — Maintaining Your Status",
   },
   "studyinthestates.dhs.gov/students/working": {
@@ -178,12 +178,12 @@ export const citations: Record<string, Citation> = {
   },
   "studyinthestates.dhs.gov/students/travel": {
     id: "studyinthestates.dhs.gov/students/travel",
-    url: "https://studyinthestates.dhs.gov/students/travel",
+    url: "https://studyinthestates.dhs.gov/students/study/traveling-as-an-f-or-m-student",
     label: "Study in the States — Travel",
   },
   "gov.uk/sponsor-migrants/sponsor-a-student": {
     id: "gov.uk/sponsor-migrants/sponsor-a-student",
-    url: "https://www.gov.uk/government/publications/sponsor-a-student",
+    url: "https://www.gov.uk/government/publications/student-sponsor-guidance",
     label: "GOV.UK — Sponsor a Student",
   },
   "gov.uk/student-visa/extend-your-visa": {
@@ -193,7 +193,7 @@ export const citations: Record<string, Citation> = {
   },
   "studyinthestates.dhs.gov/students/working/optional-practical-training": {
     id: "studyinthestates.dhs.gov/students/working/optional-practical-training",
-    url: "https://studyinthestates.dhs.gov/students/training-opportunities-in-the-united-states/optional-practical-training",
+    url: "https://studyinthestates.dhs.gov/students/training-opportunities-in-the-united-states",
     label: "Study in the States — Optional Practical Training (OPT)",
   },
   "uscis.gov/opt": {
@@ -203,7 +203,7 @@ export const citations: Record<string, Citation> = {
   },
   "studyinthestates.dhs.gov/students/working/stem-opt": {
     id: "studyinthestates.dhs.gov/students/working/stem-opt",
-    url: "https://studyinthestates.dhs.gov/students/training-opportunities-in-the-united-states/stem-opt",
+    url: "https://studyinthestates.dhs.gov/stem-opt-hub",
     label: "Study in the States — STEM OPT Extension",
   },
   "gov.uk/graduate-visa": {
@@ -273,7 +273,7 @@ export const citations: Record<string, Citation> = {
   },
   "uscis.gov/green-card/green-card-eligibility/green-card-through-employment": {
     id: "uscis.gov/green-card/green-card-eligibility/green-card-through-employment",
-    url: "https://www.uscis.gov/green-card/green-card-eligibility/green-card-through-employment",
+    url: "https://www.uscis.gov/green-card/green-card-eligibility/green-card-for-employment-based-immigrants",
     label: "USCIS — Green Card Through Employment",
   },
   "dol.gov/agencies/eta/foreign-labor/programs/perm": {
@@ -298,7 +298,7 @@ export const citations: Record<string, Citation> = {
   },
   "immi.homeaffairs.gov.au/visas/permanent-residency": {
     id: "immi.homeaffairs.gov.au/visas/permanent-residency",
-    url: "https://immi.homeaffairs.gov.au/visas/permanent-residency",
+    url: "https://immi.homeaffairs.gov.au/visas/permanent-resident",
     label: "Australian Department of Home Affairs — Permanent Residency",
   },
   "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189": {
@@ -323,7 +323,7 @@ export const citations: Record<string, Citation> = {
   },
   "homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident": {
     id: "homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
-    url: "https://www.homeaffairs.gov.au/trav/citi/pathways/become-a-citizen",
+    url: "https://immi.homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
     label: "Australian Home Affairs — Become a Citizen",
   },
   "uaecabinet.ae/en/details/federal-laws": {

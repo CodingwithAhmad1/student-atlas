@@ -23,6 +23,8 @@ import {
   BookOpenIcon,
   LayoutDashboardIcon,
   CodeIcon,
+  ActivityIcon,
+  CircleIcon,
 } from "lucide-react"
 import { CompassPinIcon } from "@/components/compass-pin-icon"
 import {
@@ -31,17 +33,18 @@ import {
   TECHNICAL_NAV_SECTION,
 } from "@/lib/navigation"
 
-const mainNavIcons = [
-  LayoutDashboardIcon,
-  PlaneIcon,
-  GraduationCapIcon,
-  BriefcaseIcon,
-  HomeIcon,
-] as const
+const mainNavIcons: Record<string, React.ElementType> = {
+  Dashboard: LayoutDashboardIcon,
+  Activity: ActivityIcon,
+  "Tourist visa": PlaneIcon,
+  "Student visa": GraduationCapIcon,
+  "Work visa": BriefcaseIcon,
+  "Residency pathway": HomeIcon,
+}
 
-const navMain = MAIN_NAV_SECTIONS.map((section, i) => ({
+const navMain = MAIN_NAV_SECTIONS.map((section) => ({
   ...section,
-  icon: React.createElement(mainNavIcons[i]),
+  icon: React.createElement(mainNavIcons[section.title] ?? CircleIcon),
 }))
 
 const referenceNavIcons = [FileTextIcon, BookOpenIcon] as const

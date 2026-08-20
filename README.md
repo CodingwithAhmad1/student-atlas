@@ -7,10 +7,11 @@ Personalised visa and immigration guidance for international students. Users sel
 ```
 Student Atlas/
 ├── frontend/           # React + TypeScript + Vite (main app — static content from data files)
+├── monitoring/         # Source-change watcher + LLM drafting pipeline (see monitoring/README.md)
 ├── backend/            # SQLAlchemy schema + DB wiring (reference; no runtime API)
 ├── mcp-content-server/ # MCP server for external content management
 ├── docs/               # Product document, content specification
-└── archive/            # Legacy Flask app files (preserved for reference)
+└── archive/            # Legacy Flask app + retired Supabase schema (preserved for reference)
 ```
 
 ## Frontend
@@ -36,6 +37,19 @@ See `src/data/CONTENT-GUIDE.md` for the full content management workflow.
 ### Currently supported nationalities
 
 UAE, Pakistan, India, China, United Kingdom
+
+## Source Monitoring & Activity Feed
+
+A GitHub Actions cron (every 12 hours) watches every cited government URL for
+content changes, has Claude draft the matching content edit as a pull request,
+and surfaces everything in the app's **Activity** tab, where drafts are
+approved or rejected before going live. State (snapshots, alerts, source
+health) is committed to the repo — there is no database. Full details, setup
+(the `ANTHROPIC_API_KEY` Actions secret, the admin PAT for in-app review), and
+local usage are in [`monitoring/README.md`](monitoring/README.md).
+
+Because monitoring data is bundled at build time, the deployed site must
+rebuild on pushes to `main` for new activity to appear.
 
 ## MCP Content Server
 

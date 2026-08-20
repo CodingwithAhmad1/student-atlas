@@ -1,0 +1,74 @@
+name: Student Atlas source monitor
+
+on:
+  schedule:
+    - cron: "17 5,17 * * *" # every 12 hours
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "Only check this source id (citation id)"
+        required: false
+      no_llm:
+        description: "Skip the LLM drafting step"
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: atlas-monitor
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            Student Atlas/monitoring/package-lock.json
+            Student Atlas/frontend/package-lock.json
+
+      - name: Install dependencies (watcher + frontend build gate)
+        run: |
+          npm ci --prefix "Student Atlas/monitoring"
+          npm ci --prefix "Student Atlas/frontend"
+
+      - name: Run watcher
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.source }}" ]; then
+            ARGS="$ARGS --source ${{ inputs.source }}"
+          fi
+          if [ "${{ inputs.no_llm }}" = "true" ]; then
+            ARGS="$ARGS --no-llm"
+          fi
+          cd "Student Atlas/monitoring"
+          npx tsx src/run.ts $ARGS
+
+      - name: Commit monitoring state to main
+        run: |
+          git config user.name "atlas-monitor[bot]"
+          git config user.email "actions@users.noreply.github.com"
+          git add "Student Atlas/monitoring/snapshots" \
+                  "Student Atlas/monitoring/state" \
+                  "Student Atlas/monitoring/archive" \
+                  "Student Atlas/frontend/src/data/monitoring"
+          if git diff --cached --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "Student Atlas monitor: $(date -u +%F) run [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

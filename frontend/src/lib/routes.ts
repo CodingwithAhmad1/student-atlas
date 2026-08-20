@@ -4,6 +4,11 @@ export const DASHBOARD_ROUTE = {
   path: "/dashboard",
 } as const;
 
+export const ACTIVITY_ROUTE = {
+  label: "Activity",
+  path: "/activity",
+} as const;
+
 export const TECHNICAL_EXPLAINER_ROUTE = {
   label: "Technical Explainer",
   path: "/technical-explainer",

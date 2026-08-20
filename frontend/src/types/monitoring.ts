@@ -1,73 +1,113 @@
-export type SourceCountry = "US" | "UK" | "AU";
+// Shared between the frontend and the monitoring watcher (imported via tsx),
+// so imports here must stay relative — no "@/" alias.
+import type { SourceCategory, SourceCountry } from "../lib/classify-source";
 
-export type SourceCategory =
-  | "visitor"
-  | "student"
-  | "work"
-  | "residency"
-  | "citizenship"
-  | "general";
+export type { SourceCategory, SourceCountry };
 
-export type ChangeAlertStatus =
-  | "pending"
-  | "drafting"
-  | "review"
-  | "approved"
-  | "rejected";
+export type ActivityStatus =
+  | "pending" // change detected; LLM not yet run or errored last run
+  | "dismissed" // LLM classified the change as noise (auto-resolved)
+  | "review" // draft ready, PR open, awaiting human approval
+  | "approved" // PR merged — edit is live in the content files
+  | "rejected" // PR closed without merging
+  | "manual" // needs human attention; no safe automatic edit was possible
+  | "error"; // pipeline failure recorded for this alert
 
-export interface SourceHealth {
+export type Significance = "noise" | "minor" | "meaningful";
+
+export interface DraftEdit {
+  /** Repo-relative path, e.g. "Student Atlas/frontend/src/data/sections/student-visa.ts" */
+  file: string;
+  blockId: string | null;
+  /** Exact current text — used as the locator for the replacement. */
+  oldText: string;
+  newText: string;
+}
+
+export interface ActivityAlert {
+  /** e.g. "20260820-0917--gov-uk-standard-visitor-visa" */
   id: string;
+  sourceId: string;
+  /** Other citation ids that share this source's URL. */
+  relatedSourceIds: string[];
+  sourceLabel: string;
+  sourceUrl: string;
+  country: SourceCountry;
+  category: SourceCategory;
+  detectedAt: string;
+  oldHash: string | null;
+  newHash: string;
+  /** Unified diff of normalized page text, capped in size. */
+  diff: string;
+  diffTruncated: boolean;
+  significance: Significance | null;
+  summary: string | null;
+  confidence: number | null;
+  status: ActivityStatus;
+  draft: {
+    rationale: string;
+    edits: DraftEdit[];
+  } | null;
+  pr: {
+    number: number;
+    url: string;
+    branch: string;
+  } | null;
+  resolvedAt: string | null;
+  error: string | null;
+}
+
+export interface SourceStatus {
+  sourceId: string;
   url: string;
   country: SourceCountry;
   category: SourceCategory;
   label: string;
-  is_active: boolean;
-  created_at: string;
-  last_checked_at: string | null;
-  last_content_hash: string | null;
-  last_snapshot_id: string | null;
+  lastCheckedAt: string | null;
+  lastChangedAt: string | null;
+  lastHash: string | null;
+  lastHttpStatus: number | null;
+  consecutiveFailures: number;
+  lastError: string | null;
+  /** Set when the watcher deliberately skips this source (bot protection). */
+  skipReason: string | null;
 }
 
-export interface ChangeAlertDetail {
-  id: string;
-  source_id: string;
-  old_snapshot_id: string | null;
-  new_snapshot_id: string | null;
-  detected_at: string;
-  status: ChangeAlertStatus;
-  agent_draft: unknown | null;
-  agent_explanation: string | null;
-  reviewer_notes: string | null;
-  reviewed_by: string | null;
-  reviewed_at: string | null;
-  published_at: string | null;
-  source_label: string;
-  source_url: string;
-  country: SourceCountry;
-  category: SourceCategory;
+export interface SourceStatusFile {
+  generatedAt: string | null;
+  sources: Record<string, SourceStatus>;
 }
 
 export interface MonitoringSummary {
   totalSources: number;
-  activeSources: number;
   lastCrawlRun: string | null;
   openAlerts: number;
   publishedUpdates: number;
+  unhealthySources: number;
   sourcesNeverChecked: number;
 }
 
-export const OPEN_ALERT_STATUSES: ChangeAlertStatus[] = [
+export const OPEN_ALERT_STATUSES: ActivityStatus[] = [
   "pending",
-  "drafting",
   "review",
+  "manual",
+  "error",
 ];
 
-export const STATUS_LABELS: Record<ChangeAlertStatus, string> = {
+export const STATUS_LABELS: Record<ActivityStatus, string> = {
   pending: "Pending",
-  drafting: "Drafting",
+  dismissed: "Dismissed",
   review: "In review",
   approved: "Approved",
   rejected: "Rejected",
+  manual: "Needs attention",
+  error: "Error",
+};
+
+export const SIGNIFICANCE_LABELS: Record<Significance, string> = {
+  noise: "Noise",
+  minor: "Minor",
+  meaningful: "Meaningful",
 };
 
 export const CATEGORY_LABELS: Record<SourceCategory, string> = {
@@ -78,3 +118,13 @@ export const CATEGORY_LABELS: Record<SourceCategory, string> = {
   citizenship: "Citizenship",
   general: "General",
 };
+
+export const COUNTRY_LABELS: Record<SourceCountry, string> = {
+  US: "United States",
+  UK: "United Kingdom",
+  AU: "Australia",
+  INTL: "International",
+};
+
+/** A source is considered unhealthy after this many consecutive fetch failures. */
+export const UNHEALTHY_FAILURE_THRESHOLD = 3;

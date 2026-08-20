@@ -23,7 +23,9 @@ import { CitationsPage } from "@/pages/citations-page"
 import { ReportPage } from "@/pages/report-page"
 import { TechnicalExplainerPage } from "@/pages/technical-explainer-page"
 import { MonitoringLogPage } from "@/pages/monitoring-log-page"
+import { ActivityPage } from "@/pages/activity-page"
 import {
+  ACTIVITY_ROUTE,
   DASHBOARD_ROUTE,
   MONITORING_LOG_ROUTE,
   TECHNICAL_EXPLAINER_ROUTE,
@@ -43,6 +45,7 @@ const routeMap: Record<string, { section: string; page: string }> = {
   "/residency/dual-nationality": { section: "Residency pathway", page: "Dual nationality" },
   "/report": { section: "Generate report", page: "" },
   "/citations": { section: "Citations", page: "" },
+  [ACTIVITY_ROUTE.path]: { section: ACTIVITY_ROUTE.label, page: "" },
   [TECHNICAL_EXPLAINER_ROUTE.path]: {
     section: TECHNICAL_EXPLAINER_ROUTE.label,
     page: "",
@@ -102,6 +105,7 @@ function AppLayout() {
 
   const isCitationsRoute = location.pathname === "/citations"
   const isReportRoute = location.pathname === "/report"
+  const isActivityRoute = location.pathname === ACTIVITY_ROUTE.path
   const isMonitoringRoute = location.pathname === MONITORING_LOG_ROUTE.path
   const isTechnicalExplainerRoute =
     location.pathname === TECHNICAL_EXPLAINER_ROUTE.path
@@ -124,6 +128,8 @@ function AppLayout() {
           <ReportPage />
         ) : isCitationsRoute ? (
           <CitationsPage />
+        ) : isActivityRoute ? (
+          <ActivityPage />
         ) : isMonitoringRoute ? (
           <MonitoringLogPage />
         ) : isTechnicalExplainerRoute ? (

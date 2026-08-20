@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { monitoredSourceCount } from "@/data/source-registry";
-import { MONITORING_LOG_ROUTE } from "@/lib/routes";
+import { ACTIVITY_ROUTE, MONITORING_LOG_ROUTE } from "@/lib/routes";
 
 function PipelineStage({
   step,
@@ -155,20 +155,21 @@ export function TechnicalExplainerPage() {
           harmful.
         </p>
         <p className="text-muted-foreground leading-relaxed">
-          Student Atlas is building a three-stage pipeline to detect policy
-          changes quickly and publish reviewed updates promptly. No stage runs
-          without human oversight — automation assists, but people approve.
+          Student Atlas runs a three-stage pipeline to detect policy changes
+          quickly and publish reviewed updates promptly. No stage runs without
+          human oversight — automation assists, but people approve.
         </p>
 
         <div className="grid gap-4">
           <PipelineStage step={1} title="Source monitoring">
             An automated monitor watches every URL in our citation registry —
             currently {monitoredSourceCount} government pages across the US, UK,
-            and Australia. It runs daily, fetches each page, and compares a
-            content hash against the previous snapshot. Layout shifts,
-            cookie-banner changes, and other boilerplate updates are filtered
-            out; only substantive content changes trigger an alert logged with
-            the date, time, and URL.
+            and Australia. It runs every 12 hours, fetches each page, and
+            compares a content hash against the previous snapshot. Layout
+            shifts, cookie-banner changes, and other boilerplate updates are
+            filtered out; only substantive content changes trigger an alert
+            logged with the date, time, and URL. Sources that block automated
+            checks are reported honestly as not monitorable.
           </PipelineStage>
           <PipelineStage step={2} title="AI-assisted drafting">
             When a change is detected, an AI agent reads the old and new
@@ -178,15 +179,16 @@ export function TechnicalExplainerPage() {
             changed, why it matters, and which source paragraph motivated the
             update. The agent flags its confidence level — a fee adjustment is
             straightforward; a structural policy overhaul requires careful human
-            review. This agent will run via MCP (Model Context Protocol)
-            integration with our existing content management tools.
+            review. The draft is opened as a pull request containing the exact
+            proposed edit, type-checked and build-verified before it is ever
+            shown to a reviewer.
           </PipelineStage>
           <PipelineStage step={3} title="Human review and approval">
             No change goes live without a human reviewer reading the
             agent&apos;s explanation, comparing the draft against the official
-            source, and explicitly approving. The reviewer can edit, reject, or
-            request a re-draft. Every approved change is logged with a
-            timestamp, reviewer identity, and the source URL that triggered it.
+            source, and explicitly approving it from the Activity feed (or
+            directly on the pull request). Every approved change is logged with
+            a timestamp and the source URL that triggered it.
           </PipelineStage>
         </div>
 
@@ -200,14 +202,21 @@ export function TechnicalExplainerPage() {
             at no cost to you.
           </p>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Every detection, draft, and review is logged publicly. View the live{" "}
+            Every detection, draft, and review is logged publicly. See the{" "}
+            <Link
+              to={ACTIVITY_ROUTE.path}
+              className="text-blue-600 underline underline-offset-2 hover:text-blue-700"
+            >
+              Activity feed
+            </Link>{" "}
+            for detected changes and review outcomes, and the{" "}
             <Link
               to={MONITORING_LOG_ROUTE.path}
               className="text-blue-600 underline underline-offset-2 hover:text-blue-700"
             >
               Monitoring log
             </Link>{" "}
-            to see source health, change alerts, and review status in real time.
+            for source-by-source health.
           </p>
         </div>
       </section>

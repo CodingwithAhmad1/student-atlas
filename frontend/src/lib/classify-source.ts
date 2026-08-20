@@ -8,7 +8,7 @@ export type SourceCategory =
   | "citizenship"
   | "general";
 
-export type SourceCountry = "US" | "UK" | "AU";
+export type SourceCountry = "US" | "UK" | "AU" | "INTL";
 
 export function classifySource(
   id: string,
@@ -113,7 +113,7 @@ export function classifySource(
         ? "UK"
         : countryCode === "au"
           ? "AU"
-          : "US";
+          : "INTL";
 
   return { country, category };
 }

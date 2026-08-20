@@ -1,4 +1,8 @@
-import { DASHBOARD_ROUTE, TECHNICAL_NAV_SECTION } from "@/lib/routes";
+import {
+  ACTIVITY_ROUTE,
+  DASHBOARD_ROUTE,
+  TECHNICAL_NAV_SECTION,
+} from "@/lib/routes";
 
 export interface NavPageLink {
   title: string;
@@ -16,6 +20,11 @@ export const MAIN_NAV_SECTIONS: NavSection[] = [
   {
     title: DASHBOARD_ROUTE.label,
     url: DASHBOARD_ROUTE.path,
+    items: [],
+  },
+  {
+    title: ACTIVITY_ROUTE.label,
+    url: ACTIVITY_ROUTE.path,
     items: [],
   },
   {
