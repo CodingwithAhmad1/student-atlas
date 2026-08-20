@@ -18,5 +18,5 @@
   "draft": null,
   "pr": null,
   "resolvedAt": null,
-  "error": null
+  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
 }
