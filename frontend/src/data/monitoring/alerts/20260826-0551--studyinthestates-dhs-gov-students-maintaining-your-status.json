@@ -1,0 +1,22 @@
+{
+  "id": "20260826-0551--studyinthestates-dhs-gov-students-maintaining-your-status",
+  "sourceId": "studyinthestates.dhs.gov/students/maintaining-your-status",
+  "relatedSourceIds": [],
+  "sourceLabel": "Study in the States — Maintaining Your Status",
+  "sourceUrl": "https://studyinthestates.dhs.gov/students/maintaining-status",
+  "country": "US",
+  "category": "student",
+  "detectedAt": "2026-08-26T05:51:03.879Z",
+  "oldHash": "76c0c606e86b29f724fc74756601fdeaabe9fddf8d61c25315a83742349b50b9",
+  "newHash": "39ddad9e13f2982ae5171ebb2929dc8e94f302bf4a1808428c9377d5d358c0bd",
+  "diff": "Index: studyinthestates.dhs.gov/students/maintaining-your-status\n===================================================================\n--- studyinthestates.dhs.gov/students/maintaining-your-status\tprevious\n+++ studyinthestates.dhs.gov/students/maintaining-your-status\tcurrent\n@@ -93,9 +93,9 @@\n Working in the United States\n Obtaining a Social Security Number\n Training Opportunities in the United States\n+Applying for Practical Training\n Understanding E-Verify\n Individual Taxpayer Identification Number (ITIN)\n-Applying for Practical Training\n Complete\n M-1 Extensions of Stay\n Change of Status\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "confidence": null,
+  "status": "pending",
+  "draft": null,
+  "pr": null,
+  "resolvedAt": null,
+  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "20260826-0551--studyinthestates-dhs-gov-students-travel",
+  "sourceId": "studyinthestates.dhs.gov/students/travel",
+  "relatedSourceIds": [],
+  "sourceLabel": "Study in the States — Travel",
+  "sourceUrl": "https://studyinthestates.dhs.gov/students/study/traveling-as-an-f-or-m-student",
+  "country": "US",
+  "category": "student",
+  "detectedAt": "2026-08-26T05:51:03.879Z",
+  "oldHash": "ab80792507b44d8bcdef47572fd2c7c117c0f67fefb765467136b995c3693e90",
+  "newHash": "88635f7693fc5c8a43f96b04f4700c5925e76353d11cad1d51b66d97f82b9f6c",
+  "diff": "Index: studyinthestates.dhs.gov/students/travel\n===================================================================\n--- studyinthestates.dhs.gov/students/travel\tprevious\n+++ studyinthestates.dhs.gov/students/travel\tcurrent\n@@ -57,9 +57,9 @@\n Working in the United States\n Obtaining a Social Security Number\n Training Opportunities in the United States\n+Applying for Practical Training\n Understanding E-Verify\n Individual Taxpayer Identification Number (ITIN)\n-Applying for Practical Training\n Complete\n M-1 Extensions of Stay\n Change of Status\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "confidence": null,
+  "status": "pending",
+  "draft": null,
+  "pr": null,
+  "resolvedAt": null,
+  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+}
