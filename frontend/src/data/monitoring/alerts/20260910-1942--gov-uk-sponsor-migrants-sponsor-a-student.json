@@ -1,0 +1,22 @@
+{
+  "id": "20260910-1942--gov-uk-sponsor-migrants-sponsor-a-student",
+  "sourceId": "gov.uk/sponsor-migrants/sponsor-a-student",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Sponsor a Student",
+  "sourceUrl": "https://www.gov.uk/government/publications/student-sponsor-guidance",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-09-10T19:42:13.062Z",
+  "oldHash": "c984567b4bf3135786916a292b30dc5d5a263d45b379b1aa80b0d752ebd77cb2",
+  "newHash": "72280c807af800b1caf676076f4cf45a275f85a5b0e9f9cdc8fc6ae9c252085b",
+  "diff": "Index: gov.uk/sponsor-migrants/sponsor-a-student\n===================================================================\n--- gov.uk/sponsor-migrants/sponsor-a-student\tprevious\n+++ gov.uk/sponsor-migrants/sponsor-a-student\tcurrent\n@@ -9,38 +9,30 @@\n —\n See all updates\n Documents\n+Applying for a Student sponsor licence (accessible)\n+HTML\n Applying for a Student sponsor licence\n PDF, 776 KB, 81 pages\n-This file may not be suitable for users of assistive technology.\n-Request an accessible format.\n-If you use assistive technology (such as a screen reader) and need a version of this document in a more accessible format, please email alternativeformats@homeoffice.gov.uk. Please tell us what format you need. It will help us if you say what assistive technology you use.\n Sponsorship duties (accessible)\n HTML\n Sponsorship duties\n PDF, 1.13 MB, 112 pages\n-This file may not be suitable for users of assistive technology.\n-Request an accessible format.\n-If you use assistive technology (such as a screen reader) and need a version of this document in a more accessible format, please email alternativeformats@homeoffice.gov.uk. Please tell us what format you need. It will help us if you say what assistive technology you use.\n Student sponsor compliance (accessible)\n HTML\n Student sponsor compliance\n PDF, 503 KB, 34 pages\n-This file may not be suitable for users of assistive technology.\n-Request an accessible format.\n-If you use assistive technology (such as a screen reader) and need a version of this document in a more accessible format, please email alternativeformats@homeoffice.gov.uk. Please tell us what format you need. It will help us if you say what assistive technology you use.\n Higher education regulatory reform (accessible)\n HTML\n Higher education regulatory reform\n PDF, 280 KB, 14 pages\n-This file may not be suitable for users of assistive technology.\n-Request an accessible format.\n-If you use assistive technology (such as a screen reader) and need a version of this document in a more accessible format, please email alternativeformats@homeoffice.gov.uk. Please tell us what format you need. It will help us if you say what assistive technology you use.\n Details\n This is the full policy guidance on sponsoring a student. Use this guide to find out how to:\n apply for (or renew) a university or college sponsor licence\n enrol international students who will be studying under the Student or Child Student routes\n-We are aware that this publication may have accessibility issues. We are reviewing it so that we can fix these.\n-Read more about our accessible documents policy.\n+We are aware this publication may have accessibility issues, for example if you use assistive technology.\n+Contact us if you need this document in a different format.\n+We cannot answer any other questions through this form.\n+Read our accessible documents policy.\n Updates to this page\n Show all updates\n 1 June 2026\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "confidence": null,
+  "status": "pending",
+  "draft": null,
+  "pr": null,
+  "resolvedAt": null,
+  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+}
