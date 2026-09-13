@@ -1,0 +1,22 @@
+{
+  "id": "20260913-1018--fmjfee-com",
+  "sourceId": "fmjfee.com",
+  "relatedSourceIds": [],
+  "sourceLabel": "SEVP — SEVIS I-901 Fee Payment",
+  "sourceUrl": "https://www.fmjfee.com/",
+  "country": "US",
+  "category": "student",
+  "detectedAt": "2026-09-13T10:18:18.710Z",
+  "oldHash": "2660e90c98e96c9956f984c102194f0d79bb15bacba7ad6ef71098a04f6993c4",
+  "newHash": "95e5b43a7bb8ed816cd9d53a9956bc44d6777fe06bf0af925fafe55f650b9dcd",
+  "diff": "Index: fmjfee.com\n===================================================================\n--- fmjfee.com\tprevious\n+++ fmjfee.com\tcurrent\n@@ -1,1 +1,4 @@\n-We are unable to redirect you to the proper page at this time. Please click here to get to the home page.\n\\ No newline at end of file\n+I901 Maintenance Inprocess\n+The SEVIS I-901 Fee website is currently unavailable due to routine maintenance.\n+Please visit this site at a later time.\n+If you need assistance, please call us at (US) 1-703-603-3400 between the hours of 8:00 AM and 6:00 PM Eastern Time.\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "confidence": null,
+  "status": "pending",
+  "draft": null,
+  "pr": null,
+  "resolvedAt": null,
+  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+}
