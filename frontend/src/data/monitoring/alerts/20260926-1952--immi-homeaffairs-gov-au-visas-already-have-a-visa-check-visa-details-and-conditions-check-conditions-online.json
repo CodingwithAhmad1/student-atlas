@@ -1,0 +1,22 @@
+{
+  "id": "20260926-1952--immi-homeaffairs-gov-au-visas-already-have-a-visa-check-visa-details-and-conditions-check-conditions-online",
+  "sourceId": "immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Department of Home Affairs — VEVO",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online",
+  "country": "AU",
+  "category": "general",
+  "detectedAt": "2026-09-26T19:52:28.316Z",
+  "oldHash": "31a9f0a6aaa0f3b3ec86ed0228a480ae088a198bf47d812f9d87154f8ca50bfc",
+  "newHash": "b3f937757a3d5abcdd4226e7464d20b518d163f7ea11a537958b5c0ac4cb4c9f",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online\n===================================================================\n--- immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online\tprevious\n+++ immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online\tcurrent\n@@ -1,4 +1,2 @@\n Title: Check visa conditions online (VEVO)\n-Description: Our Visa Entitlement Verification Online system (VEVO) allows visa holders, employers, education providers and other organisations to check visa conditions.\n-Alert: VEVO ACD  (updated 26/03/2026 11:02:53 AM)\n-​Temporary travel restrictions for Iranian Visitor visa holders. For more information see ​Temporary travel restrictions for Visitor visa holders with Iranian passports.​\n\\ No newline at end of file\n+Description: Our Visa Entitlement Verification Online system (VEVO) allows visa holders, employers, education providers and other organisations to check visa conditions.\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "confidence": null,
+  "status": "pending",
+  "draft": null,
+  "pr": null,
+  "resolvedAt": null,
+  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+}
