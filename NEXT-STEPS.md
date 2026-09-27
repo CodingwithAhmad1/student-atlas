@@ -20,6 +20,10 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
 
 ## Checklist
 
+- [ ] Expansion to 100 nationalities: design and decisions are in
+      `EXPANSION-PLAN.md`; next action is Phase 0 (overlay audit, source
+      reachability from CI)
+
 - [ ] Review new alerts as they arrive (Activity tab → open items)
 - [ ] If/when the site is deployed: host must rebuild on pushes to `main`
       (monitoring data is bundled at build time)
