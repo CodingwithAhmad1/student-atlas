@@ -319,6 +319,10 @@ committed with a green build. Adjustments:
   verdict was re-read against its page; 29 of 93 new rows are cited, 64 are
   `unknown` under D3 as first written (English-only); D3 was then amended to
   allow non-English official pages and a second pass followed.
+- Second dual-nationality pass after D3 was amended (non-English official
+  pages allowed): 40 more rows cited, 24 remain `unknown`. The
+  watcher now accepts PDFs (several servers answered 406 to an HTML-only
+  Accept header).
 Step 3 (Tier B, then Tier A hand callouts) is next.
 
 ### Phase 3 — Hardening (1 session)

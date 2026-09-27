@@ -69,25 +69,13 @@ every automated client, including the browser pane; do not work around it):
 
 **Claude can do:**
 
-- **Dual nationality, second pass (64 `unknown`).** The research fan-out
-  (9 agents) found official English home-government pages for 29 of the 93
-  new nationalities (36 of 100 with the original 7);
-  the rest failed on D3 (English-only), bot-blocked or dead government sites,
-  or an exhausted web-search budget. Unknown: afghanistan, algeria, angola,
-  azerbaijan, bangladesh, belarus, benin, bolivia, brazil, burkina-faso,
-  burundi, cambodia, cameroon, chad, chile, cuba, dominican-republic,
-  dr-congo, ecuador, ethiopia, france, ghana, greece, guatemala, guinea,
-  haiti, honduras, indonesia, iran, israel, ivory-coast, jordan, kazakhstan,
-  madagascar, malawi, mali, morocco, mozambique, myanmar, niger, north-korea,
-  peru, portugal, romania, russia, rwanda, saudi-arabia, senegal, somalia,
-  south-africa, south-sudan, spain, sudan, syria, tajikistan, thailand, togo,
-  tunisia, turkey, ukraine, uzbekistan, venezuela, vietnam, yemen.
-  Several have an official page in French, Spanish or Portuguese that
-  settles the question (France, Senegal, Chile, Guatemala, Portugal); D3
-  as written excludes them. **Decision for Ahmad:** allow official
-  non-English pages (cited with an "in French" note), or keep English-only.
-  South Africa: the DIRCO retention page predates the 2025 Constitutional
-  Court ruling on automatic loss — needs a current Home Affairs page.
+- **Dual nationality: 24 still `unknown`.** Two research passes
+  (D3 amended by Ahmad on 2026-09-27 to allow official non-English pages)
+  cite 76 of 100. Left: afghanistan, burkina-faso, burundi, cambodia, chad, ghana, guatemala, iran, israel, ivory-coast, kazakhstan, malawi, myanmar, niger, north-korea, romania, rwanda, saudi-arabia, senegal, somalia, south-sudan, sudan, syria, tunisia. Each failed because no official
+  page stating the rule could be fetched (bot blocks, dead or JavaScript-only
+  government sites, scanned PDFs). Somalia may have a 2026 constitution
+  (scanned, unread); Afghanistan and Syria have contested official texts.
+  Worth one more try with a fresh web-search budget.
 - **Tier B hand callouts** (35 nationalities, 2–4 cited callouts each), then
   **Tier A** (25, up to ~10 each), batches of 10 per plan §6. The deferred
   traits (V5 US visa services in country, V6 reciprocity, V7 visa bond, S5
@@ -110,5 +98,8 @@ every automated client, including the browser pane; do not work around it):
   (blocked by a preliminary injunction, 14 Sep 2026).
 - The UK Graduate Route drops to 18 months for applications from 1 Jan 2027 —
   the content already says so; revisit the wording after that date.
-- Local quirk: privatehealth.gov.au doesn't resolve on this Mac's DNS, and
-  dol.gov sometimes blocks local fetches; both work in CI.
+- Local quirk: privatehealth.gov.au (and sometimes portal.ahu.go.id) doesn't
+  resolve on this Mac's DNS, and dol.gov sometimes blocks local fetches; all
+  work in CI.
+- Cited PDFs (laws, gazettes, constitutions) are hashed as raw bytes; a
+  re-upload of the same text alerts. Phase 3: extract PDF text before hashing.
