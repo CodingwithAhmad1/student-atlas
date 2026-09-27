@@ -7,11 +7,10 @@ Personalised visa and immigration guidance for international students. Users sel
 ```
 Student Atlas/
 ├── frontend/           # React + TypeScript + Vite (main app — static content from data files)
-├── monitoring/         # Source-change watcher + LLM drafting pipeline (see monitoring/README.md)
-├── backend/            # SQLAlchemy schema + DB wiring (reference; no runtime API)
-├── mcp-content-server/ # MCP server for external content management
-├── docs/               # Product document, content specification
-└── archive/            # Legacy Flask app + retired Supabase schema (preserved for reference)
+├── monitoring/         # Source-change watcher, detection only (see monitoring/README.md)
+├── mcp-content-server/ # MCP server: alert review + content editing
+├── docs/               # Source content material
+└── archive/            # Retired Flask app, unused backend, old docs (see archive/README.md)
 ```
 
 ## Frontend
@@ -22,6 +21,8 @@ React 19, TypeScript, Vite 8, Tailwind CSS 4, shadcn/ui. The app is a static SPA
 cd frontend
 npm install
 npm run dev
+npm run build          # content check + type-check + production build
+npm run check:content  # citations, glossary terms, callout anchors, profiles
 ```
 
 ### Content System
@@ -66,10 +67,6 @@ python3 -m unittest discover tests   # tool tests (uses the real TypeScript comp
 ```
 
 See `frontend/src/data/CONTENT-GUIDE.md` for the review workflow and tool reference.
-
-## Database schema (reference)
-
-SQLAlchemy models and async session setup live under `backend/` (`models.py`, `database.py`, `requirements.txt`) for schema reference and optional tooling. There is **no** FastAPI runtime in this repo; the published site does not require a hosted application backend.
 
 ## Quick Start
 

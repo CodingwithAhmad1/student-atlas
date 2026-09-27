@@ -73,9 +73,9 @@ HTML file (requires `--source`, and always implies `--dry-run`).
 
 - Sources marked `skipReason` in `frontend/src/data/source-overrides.ts`
   cannot be monitored: `travel.state.gov` / `ceac.state.gov` / `ukvcas.co.uk` /
-  `uaecabinet.ae` / `ae.usembassy.gov` block automated clients, and
-  `cbp.gov/i94` / `ustraveldocs.com` are JavaScript apps with no static text.
-  They are shown honestly as "Not monitorable" in the monitoring log — check
+  `uaecabinet.ae` block automated clients, and `cbp.gov/i94` is a JavaScript
+  app with no static text.
+  They are shown honestly as "Not monitorable" in the Activity page's Sources view — check
   them by hand now and then. (Headless-browser rendering was evaluated and is
   blocked by the same bot protection; we deliberately do not escalate against
   it.)

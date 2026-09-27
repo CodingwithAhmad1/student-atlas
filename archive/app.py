@@ -1,4 +1,4 @@
-# DEACTIVATED: replaced by React frontend + FastAPI backend — do not delete
+# DEACTIVATED: the legacy Flask app, replaced by the static React frontend. Kept for reference.
 """Student Atlas Flask application (legacy)."""
 
 from __future__ import annotations

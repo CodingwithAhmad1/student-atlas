@@ -237,7 +237,7 @@ export function TechnicalExplainerPage() {
             may not catch immediately
           </li>
           <li>
-            AI-assisted drafting is a starting point, not a final authority.
+            AI-suggested wording is a starting point, not a final authority.
             Human reviewers verify every change before publication
           </li>
           <li>

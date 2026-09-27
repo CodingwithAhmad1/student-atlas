@@ -13,6 +13,7 @@ import {
   readAlerts,
   readSnapshot,
   readStatusFile,
+  removeOrphanSnapshots,
   writeAlert,
   writeSnapshot,
   writeStatusFile,
@@ -370,12 +371,13 @@ async function main(): Promise<void> {
     run.handleFetched(target, outcome.text, status);
   }
 
-  // Drop status entries for sources no longer cited (full runs only).
-  if (!opts.source) {
+  // Drop status entries and snapshots for sources no longer cited (full real runs only).
+  if (!opts.source && !opts.dryRun) {
     const live = new Set(targets.map((t) => t.sourceId));
     for (const id of Object.keys(statusFile.sources)) {
       if (!live.has(id)) delete statusFile.sources[id];
     }
+    removeOrphanSnapshots(new Set(targets.map((t) => t.key)));
   }
 
   if (!opts.dryRun) {

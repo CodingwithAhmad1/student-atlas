@@ -4,6 +4,7 @@ import {
   readFileSync,
   readdirSync,
   renameSync,
+  rmSync,
   writeFileSync,
 } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -59,6 +60,17 @@ export function readSnapshot(key: string): string | null {
 export function writeSnapshot(key: string, text: string): void {
   ensureDirs();
   writeFileSync(snapshotPath(key), text, "utf8");
+}
+
+/** Delete baselines of pages that are no longer cited. */
+export function removeOrphanSnapshots(liveKeys: Set<string>): void {
+  if (!existsSync(SNAPSHOTS_DIR)) return;
+  for (const file of readdirSync(SNAPSHOTS_DIR)) {
+    if (file.endsWith(".txt") && !liveKeys.has(file.slice(0, -4))) {
+      rmSync(join(SNAPSHOTS_DIR, file));
+      console.log(`- removed snapshot for uncited source: ${file}`);
+    }
+  }
 }
 
 export function readStatusFile(): SourceStatusFile {
