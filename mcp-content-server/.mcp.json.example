@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "student-atlas-content": {
+      "command": "python3",
+      "args": ["mcp-content-server/server.py", "--transport", "stdio"]
+    }
+  }
+}

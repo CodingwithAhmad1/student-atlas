@@ -40,28 +40,32 @@ UAE, Pakistan, India, China, United Kingdom
 
 ## Source Monitoring & Activity Feed
 
-A GitHub Actions cron (every 12 hours) watches every cited government URL for
-content changes, has Claude draft the matching content edit as a pull request,
-and surfaces everything in the app's **Activity** tab, where drafts are
-approved or rejected before going live. State (snapshots, alerts, source
-health) is committed to the repo — there is no database. Full details, setup
-(the `ANTHROPIC_API_KEY` Actions secret, the admin PAT for in-app review), and
-local usage are in [`monitoring/README.md`](monitoring/README.md).
+A GitHub Actions cron (every 12 hours) watches every cited government page and
+records substantive changes as alerts (one open alert per page). Alerts are
+reviewed in a Claude session through the content MCP server: see the change next
+to every passage citing that source, apply any needed edit (type-checked), and
+record the outcome. Everything shows on the app's **Activity** tab. State
+(snapshots, alerts, source health) is committed to the repo — there is no
+database and no secrets. Details: [`monitoring/README.md`](monitoring/README.md).
 
 Because monitoring data is bundled at build time, the deployed site must
 rebuild on pushes to `main` for new activity to appear.
 
 ## MCP Content Server
 
-Python FastMCP server with 21 tools for managing content without direct code access.
+Python FastMCP server (`mcp-content-server/`) for alert review and content
+editing. Locally, connect Claude Code over stdio — copy
+`mcp-content-server/.mcp.json.example` to `Student Atlas/.mcp.json`. For remote
+clients, `./start.sh` serves SSE on `127.0.0.1:8765` (password in
+`mcp-content-server/.env`).
 
 ```bash
 cd mcp-content-server
 pip install -r requirements.txt
-./start.sh  # SSE mode on port 8765
+python3 -m unittest discover tests   # tool tests (uses the real TypeScript compiler)
 ```
 
-See `frontend/src/data/CONTENT-GUIDE.md` for tool reference.
+See `frontend/src/data/CONTENT-GUIDE.md` for the review workflow and tool reference.
 
 ## Database schema (reference)
 
