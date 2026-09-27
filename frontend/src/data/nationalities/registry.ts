@@ -780,4 +780,28 @@ export const nationalityRegistry: NationalityMeta[] = [
     reviewedAt: "2026-09-27",
     load: () => import("./saudi-arabia"),
   },
+  {
+    name: "Nepal",
+    slug: "nepal",
+    label: "Nepali",
+    tier: "A",
+    reviewedAt: "2026-09-27",
+    load: () => import("./nepal"),
+  },
+  {
+    name: "Taiwan",
+    slug: "taiwan",
+    label: "Taiwanese",
+    tier: "A",
+    reviewedAt: "2026-09-27",
+    load: () => import("./taiwan"),
+  },
+  {
+    name: "Sri Lanka",
+    slug: "sri-lanka",
+    label: "Sri Lankan",
+    tier: "A",
+    reviewedAt: "2026-09-27",
+    load: () => import("./sri-lanka"),
+  },
 ];
