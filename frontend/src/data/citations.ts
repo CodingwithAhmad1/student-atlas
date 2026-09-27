@@ -323,7 +323,7 @@ export const citations: Record<string, Citation> = {
   },
   "ociservices.gov.in": {
     id: "ociservices.gov.in",
-    url: "https://ociservices.gov.in/",
+    url: "https://ociservices.gov.in/onlineOCI",
     label: "Government of India — Overseas Citizenship of India (OCI) Services",
   },
   "uaecabinet.ae/en/details/federal-laws": {
