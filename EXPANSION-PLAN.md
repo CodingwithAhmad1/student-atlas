@@ -72,26 +72,26 @@ Values are per nationality unless noted. "Src" is the page the column cites;
 |---|---|---|---|---|---|
 | V1 | `ukVisaNational` | bool | UK visit: Standard Visitor vs ETA profile | GOV.UK Appendix Visitor: Visa national list (115 entries) | ✔ |
 | V2 | `ukEtaFee` (global) | money | UK ETA card | GOV.UK ETA guidance (£20 as of today) | ✔ |
-| V3 | `usVwp` | bool | US visit: ESTA profile | Official VWP country list (travel.state.gov ✖; find DHS/ESTA page) | ? |
-| V4 | `usEntryRestriction` | none/partial/full + date | US visit + student + work callout; may suppress F-1 content | Presidential proclamations (Federal Register bot-checks WebFetch; test from CI; whitehouse.gov fallback) | ? |
+| V3 | `usVwp` | bool | US visit: ESTA profile | dhs.gov/visa-waiver-program (42-country table, incl. Taiwan/UK conditions) | ✔ |
+| V4 | `usEntryRestriction` | none/partial/full + date | US visit + student + work callout (partial = B, F, M, J suspended, i.e. every visa this guide covers) | Proclamation 10998 (16 Dec 2025, in force 1 Jan 2026): whitehouse.gov fact sheet and cbp.gov bulletin both fetch; federalregister.gov bot-checks | ✔ |
 | V5 | `usVisaServicesInCountry` | yes/no/limited + designated post | US visit + student: where to apply | travel.state.gov ✖; per-post usembassy.gov pages | partial |
 | V6 | `usReciprocity` | validity/entries/fee for B and F | US visit/student key-value | travel.state.gov reciprocity ✖ | manual |
 | V7 | `usVisaBondPilot` | bool + amount | US visit callout | travel.state.gov ✖ | manual |
-| V8 | `auVisitorStream` | eta601 / evisitor651 / visitor600 | AU visit profile | immi 601 and 651 pages (list must be confirmed in the JSON extraction — today's snapshot is 3 lines and has no passport list) | JS |
-| V9 | `auBiometricsRequired` | bool | AU visit/student apply steps | immi biometrics-collection countries | ? |
-| V10 | `auHealthExamLikely` | bool | AU visit/student callout | immi health examinations (risk by country + stay length) | ? |
+| V8 | `auVisitorStream` | eta601 / evisitor651 / visitor600 | AU visit profile | immi 601 and 651 pages: passport lists are in the embedded site JSON (confirmed in raw HTML) but the normalizer only extracts alert entries — extend it in Phase 1 | JS+ |
+| V9 | `auBiometricsRequired` | bool | AU visit/student apply steps | immi help-support/meeting-our-requirements/biometrics (country table in embedded JSON) | JS+ |
+| V10 | `auHealthExamLikely` | bool | AU visit/student callout | immi health/what-health-examinations-you-need (table in embedded JSON) | JS+ |
 | S1 | `ukDifferentialEvidence` | bool | UK student documents callout (applies when applying from home country) | Appendix Student ST 22.1 (60 countries + HK/Macau/Taiwan/BNO) | ✔ |
 | S2 | `ukTbTestRequired` | bool | UK student + long visit callout (applies by *residence*, phrase as "if applying from") | GOV.UK TB test country list | ✔ |
 | S3 | `ukMajorityEnglish` | bool | UK student English requirement | Appendix English Language (18 countries) | ✔ |
-| S4 | `auEnglishExempt` | bool | AU student English requirement | immi Student 500 English requirements | JS |
-| S5 | `usSevisPaymentRestricted` | bool | US student: I-901 payment from sanctioned countries | fmjfee ✖ / ICE SEVP page | ? |
-| W1 | `usNationalityWorkVisas` | set: E-3, H-1B1, TN, E-2 | US work callout | uscis.gov category pages (the /temporary-workers index 404s; cite each category page) | ? |
-| W2 | `ukYouthMobility` | none / 18–30 / 18–35 | UK work callout | GOV.UK youth-mobility/eligibility | ? |
-| W3 | `auWorkingHoliday` | none / 417 / 462 | AU work callout | immi 417 and 462 pages | JS |
+| S4 | `auEnglishExempt` | bool | AU student English requirement | immi help-support/meeting-our-requirements/english-language (embedded JSON) | JS+ |
+| S5 | `usSevisPaymentRestricted` | bool | US student: I-901 payment from sanctioned countries | ice.gov/sevis/i901 | ✔ |
+| W1 | `usNationalityWorkVisas` | set: E-3, H-1B1, TN, E-2 | US work callout | uscis.gov E-3, TN and E-2 pages fetch; no USCIS H-1B1 page found (cite the E-3/H-1B page or mark H-1B1 manual) | ✔ |
+| W2 | `ukYouthMobility` | none / 18–30 / 18–35 / ballot / India YPS | UK work callout | GOV.UK youth-mobility/eligibility (list fetched: AU/CA/NZ/KR 18–35; JP, UY, Andorra, Iceland, Monaco, San Marino 18–30; HK/Taiwan ballot; India → Young Professionals) | ✔ |
+| W3 | `auWorkingHoliday` | none / 417 / 462 | AU work callout | immi work-holiday-417 and work-holiday-462 pages fetch, but the 462 country list was not found in the raw HTML — locate the eligible-countries sub-page in Phase 1 | JS? |
 | R1 | `usVisaBulletinBacklog` | none / moderate / severe | US residency callout | Visa Bulletin ✖ | manual |
-| R2 | `usDiversityVisaEligible` | bool | US residency callout | DV instructions ✖ | manual |
+| R2 | `usDiversityVisaEligible` | bool | US residency callout | DV instructions (travel.state.gov, HTTP 403 confirmed) | manual |
 | R3 | `dualNationalityAtHome` | allowed / restricted / prohibited / unknown | Residency → citizenship, cross-cutting | Home-country law page (see decision D3) | mostly ✖ |
-| X1 | `sanctionsRegime` | none / partial / comprehensive | Cross-cutting callout (payments, embassy access) | OFAC/OFSI programme pages | ? |
+| X1 | `sanctionsRegime` | none / partial / comprehensive | Cross-cutting callout (payments, embassy access) | ofac.treasury.gov programme list and GOV.UK OFSI regime collection both fetch | ✔ |
 | X2 | `demonym` / display name | string | Headings, PDF cover | none (editorial) | – |
 
 Global (not per nationality) facts that already exist (fees, IHS, SEVIS)
@@ -436,18 +436,48 @@ Existing = already implemented.
 
 Tier counts: A 25 (+3 destinations), B 35, C 37.
 
-## Appendix B — Source reachability found today
+## Appendix B — Source reachability (Phase 0, probed 2026-09-27 with the watcher's own fetch + normalize, from this Mac; CI re-check happens when the citations land in Phase 1)
 
-| Source | Result |
-|---|---|
-| GOV.UK visa national list | reachable, plain text, 115 entries, updated 2026-08-03 |
-| GOV.UK ETA guidance | reachable; fee £20; no country list (links to a checker) |
-| GOV.UK TB test countries | reachable, plain text list |
-| GOV.UK Appendix English Language | reachable; 18 majority-English countries |
-| GOV.UK Appendix Student ST 22.1 | reachable; 60 countries + HK/Macau/Taiwan/BNO |
-| GOV.UK youth-mobility | reachable; list is on `/youth-mobility/eligibility` (not yet fetched) |
-| immi 601 / 651 | HTTP 403 to WebFetch; watcher fetches in CI, but the 601 snapshot has no passport list — extraction must be checked |
-| cbp.gov VWP page | reachable but names no countries; find the DHS/ESTA list page |
-| federalregister.gov | bot-check redirect to WebFetch; test from CI |
-| uscis.gov temporary-workers index | 404; cite per-category pages |
-| travel.state.gov (all) | blocked, unchanged from `source-overrides.ts` |
+| Trait | URL | Result |
+|---|---|---|
+| V1 | gov.uk …/immigration-rules-appendix-visitor-visa-national-list | 200, 5.6k chars, list parses |
+| S2 | gov.uk/tb-test-visa/countries-where-you-need-a-tb-test-to-enter-the-uk | 200, 2.5k chars, list parses |
+| S3 | gov.uk …/immigration-rules-appendix-english-language | 200, 10.6k chars |
+| S1 | gov.uk …/immigration-rules-appendix-student | 200, 48k chars (large page; use `contentSelector` on ST 22.1 if it churns) |
+| W2 | gov.uk/youth-mobility/eligibility | 200, 1.8k chars |
+| V2 | gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta | already monitored |
+| V8 | immi …/electronic-travel-authority-601 and …/evisitor-651 | 200; passport lists present only in embedded JSON (`\u003cli\u003eJapan…`); normalizer must be extended |
+| V9, V10, S4 | immi biometrics, what-health-examinations-you-need, english-language | 200; same embedded-JSON situation |
+| W3 | immi work-holiday-417 / work-holiday-462 | 200; 462 country list not in raw HTML, find sub-page |
+| V3 | dhs.gov/visa-waiver-program | 200, 16.8k chars, full 42-country table with dates |
+| V4 | whitehouse.gov fact sheet (Dec 2025) | 200, 11.6k chars, country lists present |
+| V4 | cbp.gov/document/bulletins/presidential-proclamation-restricting-entry | 200, short landing page linking the PDF |
+| V4 | federalregister.gov document 2025-23570 | 200 but serves an "aggressive scraping" interstitial; not monitorable |
+| W1 | uscis.gov E-3, TN, E-2 pages | 200 |
+| W1 | uscis.gov H-1B / H-1B1 pages | 404 on both slugs tried |
+| S5 | ice.gov/sevis/i901 | 200 |
+| X1 | ofac.treasury.gov sanctions programme list; GOV.UK OFSI collection | 200 (OFAC slow, 9 s) |
+| V5, V6, V7, R1, R2 | travel.state.gov (wait times, reciprocity, DV) | 403, as already recorded in `source-overrides.ts` |
+| — | congress.gov CRS summary | 403 (not needed) |
+
+## Appendix C — US entry restrictions in force (Proclamation 10998, effective 1 Jan 2026; from the whitehouse.gov fact sheet, to be re-verified against the proclamation text when V4 is populated)
+
+- **Full suspension (17):** Afghanistan, Burma (Myanmar), Chad, Republic of the
+  Congo, Equatorial Guinea, Eritrea, Haiti, Iran, Libya, Somalia, Sudan,
+  Yemen, Burkina Faso, Mali, Niger, South Sudan, Syria; plus Palestinian
+  Authority travel documents.
+- **Partial suspension (19; B-1/B-2, F, M and J visas and immigrant visas):**
+  Burundi, Cuba, Togo, Venezuela, Angola, Antigua and Barbuda, Benin,
+  Côte d'Ivoire, Dominica, Gabon, The Gambia, Malawi, Mauritania, Nigeria,
+  Senegal, Tanzania, Tonga, Zambia, Zimbabwe. Turkmenistan: immigrant visas
+  only.
+- Exceptions include existing visa holders and permanent residents.
+- **Top-100 impact:** 24 of the 100 nationalities are affected (Afghanistan,
+  Myanmar, Chad, Iran, Somalia, Sudan, Yemen, Burkina Faso, Mali, Niger,
+  South Sudan, Syria, Haiti full; Burundi, Cuba, Togo, Venezuela, Angola,
+  Benin, Ivory Coast, Malawi, Nigeria, Senegal, Tanzania, Zambia, Zimbabwe
+  partial). For a partial-suspension nationality the US student and visit
+  columns are effectively unavailable, so the V4 callout (D6) is the single
+  most consequential piece of generated content in the expansion. Note that
+  the existing china.ts overlay still discusses Proclamation 10043; V4 must
+  carry per-nationality proclamation references, not a single global one.

@@ -20,9 +20,10 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
 
 ## Checklist
 
-- [ ] Expansion to 100 nationalities: design and decisions are in
-      `EXPANSION-PLAN.md`; next action is Phase 0 (overlay audit, source
-      reachability from CI)
+- [ ] Expansion to 100 nationalities: design and decisions in
+      `EXPANSION-PLAN.md`; Phase 0 done 2026-09-27 (`AUDIT-2026-09.md`,
+      Appendix B/C). Next: Phase 1 (trait layer, checker, watcher JSON
+      extraction for Home Affairs list pages, MCP tools, migrate the 7).
 
 - [ ] Review new alerts as they arrive (Activity tab → open items)
 - [ ] If/when the site is deployed: host must rebuild on pushes to `main`
