@@ -294,7 +294,7 @@ export function generateOverlay(
     allowed: `${name} permits dual nationality: ${label} citizens who naturalise in ${abroadList} keep their ${label} citizenship.${note}${dualCite}`,
     restricted: `${name} permits dual nationality only in limited circumstances, so check before naturalising in ${abroadList}.${note}${dualCite}`,
     prohibited: `${name} does not permit dual nationality: naturalising in ${abroadList} means giving up ${label} citizenship.${note}${dualCite}`,
-    unknown: `We have not yet verified ${name}'s dual-nationality rules against an official source. Confirm with a ${name} embassy or consulate before naturalising abroad.`,
+    unknown: `We have not yet verified the dual-nationality rules of ${name} against an official source. Confirm with an embassy or consulate of ${name} before naturalising abroad.`,
   };
   addCrossCutting("residency", "dual-nationality", "dual-origin-position", [p(dualText[dual.value])], dual.value === "unknown");
 

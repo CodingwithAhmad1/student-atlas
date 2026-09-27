@@ -156,6 +156,19 @@ class ContentToolTests(ScratchFrontend):
         self.assertIn('id: "example.gov/a"', self.read("citations.ts"))
         self.assert_typechecks()
 
+    def test_hyphenated_slug_rows_are_quoted_and_parse(self):
+        text = trait_table.add_row("south-testland", TEST_TRAITS, "2026-01-01")
+        self.assertTrue(text.startswith('  "south-testland": {'), text[:40])
+        src = trait_table.insert_row("export const nationalityTraits = {\n};\n", text)
+        self.assertIn("south-testland", trait_table.parse_rows(src))
+        self.assertNotIn("south-testland", trait_table.parse_rows(trait_table.remove_row(src, "south-testland")))
+
+    def test_presence_ignores_names_inside_longer_names(self):
+        self.assertFalse(trait_table._present("Papua New Guinea, Equatorial Guinea", "Guinea"))
+        self.assertTrue(trait_table._present("Guinea, Guinea Bissau", "Guinea"))
+        self.assertFalse(trait_table._present("Hong Kong (SAR of China)", "China"))
+        self.assertTrue(trait_table._present("Korea (North)", "North Korea"))
+
     def test_trait_table_is_complete_and_parseable(self):
         rows = trait_table.load_rows()
         self.assertGreaterEqual(len(rows), 7)

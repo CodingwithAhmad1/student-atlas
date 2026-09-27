@@ -586,4 +586,9 @@ export const citations: Record<string, Citation> = {
     url: "https://washington.mfa.gov.hu/en/about-hungarian-citizenship",
     label: "Embassy of Hungary in Washington, D.C. — About Hungarian Citizenship",
   },
+  "giwmscdnone.gov.np/nepal-citizenship-act-2063": {
+    id: "giwmscdnone.gov.np/nepal-citizenship-act-2063",
+    url: "https://giwmscdnone.gov.np/media/app/public/275/posts/1721032585_65.pdf",
+    label: "Government of Nepal, Nepal Law Commission — Nepal Citizenship Act 2063 (2006)",
+  },
 };

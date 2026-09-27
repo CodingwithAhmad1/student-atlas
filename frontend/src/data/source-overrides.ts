@@ -123,4 +123,5 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "migrationsverket.se/what-swedish-citizenship-means": { country: "INTL", category: "citizenship" },
   "ica.gov.pg/citizenship-and-dual-citizenship": { country: "INTL", category: "citizenship" },
   "washington.mfa.gov.hu/about-hungarian-citizenship": { country: "INTL", category: "citizenship" },
+  "giwmscdnone.gov.np/nepal-citizenship-act-2063": { country: "INTL", category: "citizenship" },
 };

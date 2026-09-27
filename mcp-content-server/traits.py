@@ -40,7 +40,7 @@ TRAIT_VALUES: dict[str, object] = {
 }
 TRAIT_KEYS = list(TRAIT_VALUES)
 
-_ROW_RE = re.compile(r"^  ([a-z][a-z0-9-]*): \{$")
+_ROW_RE = re.compile(r'^  "?([a-z][a-z0-9-]*)"?: \{$')
 _LINE_RE = re.compile(r'^    (\w+): \{ value: (.+?), verifiedAt: "(\d{4}-\d{2}-\d{2})"(.*) \},$')
 _EXTRA_RE = re.compile(r', (citationId|note): ("(?:[^"\\]|\\.)*")')
 
@@ -199,6 +199,11 @@ def set_trait_column(trait: str, values: dict[str, object], verified_at: str) ->
     return _write_checked(changes, msg)
 
 
+def row_key(slug: str) -> str:
+    """Object key for a row: bare when it is a valid identifier, quoted otherwise (e.g. "south-korea")."""
+    return slug if re.fullmatch(r"[A-Za-z_$][\w$]*", slug) else json.dumps(slug)
+
+
 def add_row(slug: str, traits: dict[str, dict], verified_default: str) -> str:
     """Render a complete row; `traits` is {trait: value | {value, verifiedAt?, citationId?, note?}}."""
     missing = [k for k in TRAIT_KEYS if k not in traits]
@@ -207,7 +212,7 @@ def add_row(slug: str, traits: dict[str, dict], verified_default: str) -> str:
     extra = sorted(set(traits) - set(TRAIT_KEYS))
     if extra:
         raise TraitError(f"Unknown trait(s): {', '.join(extra)}")
-    lines = [f"  {slug}: {{"]
+    lines = [f"  {row_key(slug)}: {{"]
     for key in TRAIT_KEYS:
         spec = traits[key]
         if isinstance(spec, dict) and "value" in spec:
@@ -227,7 +232,7 @@ def insert_row(src: str, row_text: str) -> str:
 
 
 def remove_row(src: str, slug: str) -> str:
-    pattern = re.compile(rf"^  {re.escape(slug)}: \{{\n(?:.*\n)*?  \}},\n", re.M)
+    pattern = re.compile(rf'^  "?{re.escape(slug)}"?: \{{\n(?:.*\n)*?  \}},\n', re.M)
     new, n = pattern.subn("", src, count=1)
     if n != 1:
         raise TraitError(f"No traits row for '{slug}'.")
@@ -317,7 +322,7 @@ ALIASES: dict[str, list[str]] = {
     "United States": ["United States of America", "USA", "U.S.", "United States"],
     "United Kingdom": ["United Kingdom", "UK", "British Citizen", "Britain"],
     "South Korea": ["South Korea", "Korea, Republic of", "Republic of Korea", "Korea (South)"],
-    "North Korea": ["North Korea", "Korea, Democratic People's Republic", "Democratic People's Republic of Korea", "DPRK"],
+    "North Korea": ["North Korea", "Korea, Democratic People's Republic", "Democratic People's Republic of Korea", "DPRK", "Korea (North)"],
     "China": ["China", "People's Republic of China"],
     "Taiwan": ["Taiwan"],
     "Ivory Coast": ["Ivory Coast", "Côte d'Ivoire", "Cote d'Ivoire", "Côte d’Ivoire"],
@@ -358,8 +363,15 @@ PRESENCE_MEANS: dict[str, object] = {
 
 # Restrict matching to the relevant region of large pages: (start marker, end marker).
 REGIONS: dict[str, tuple[str, str | None]] = {
+    # Bounded to the list itself: text around the lists names other countries
+    # (EVW exceptions, former VWP members, the rescinded Romania designation).
+    "ukVisaNational": ("VN 1.1", "(b) stateless"),
+    "usVwp": ("Current Program Countries", "Former Program Countries"),
+    "ukTbTestRequired": ("Countries and where", "View a printable"),
+    "ukMajorityEnglish": ("EL 4.1.", "EL 5.1."),
+    "auBiometricsRequired": ("Country Location/s", None),
     "ukDifferentialEvidence": ("Differential evidence requirement for a Student", "Information on the Confirmation"),
-    "auHealthExamLikely": ("low risk of TB", None),
+    "auHealthExamLikely": ("Countries with low risk of tuberculosis", "Countries with low risk of hepatitis"),
     "auEnglishExempt": ("evidence of an English test score", "Note:"),
     "auVisitorStream": ("eligible for an ETA", "If you hold more than one passport"),
 }
@@ -378,8 +390,26 @@ def page_text(url: str) -> str:
     return result.stdout
 
 
+# Longer names that contain a shorter country name; removed before matching
+# the shorter one ("Guinea" must not match "Papua New Guinea").
+_CONTAINERS = [
+    "Equatorial Guinea", "Guinea Bissau", "Guinea-Bissau", "Papua New Guinea", "South Sudan",
+    "Democratic Republic of the Congo", "Republic of the Congo", "Dominican Republic",
+    "Central African Republic", "Hong Kong (SAR of China)",
+    "Hong Kong Special Administrative Region of the People's Republic of China",
+    "Macao Special Administrative Region", "Korea (North)", "Korea (South)",
+]
+
+# The trait columns a destination's own row ignores (trait-rules uses the domestic profiles).
+_OWN_COLUMN_PREFIX = {"uk": "uk", "us": "us", "au": "au"}
+
+
 def _present(text: str, name: str) -> bool:
-    for alias in ALIASES.get(name, [name]):
+    own = ALIASES.get(name, [name])
+    for c in _CONTAINERS:
+        if c not in own and c != name and c not in name and any(a in c for a in own):
+            text = text.replace(c, " ")
+    for alias in own:
         if re.search(rf"(?<![A-Za-z]){re.escape(alias)}(?![A-Za-z])", text, re.I):
             return True
     return False
@@ -419,6 +449,8 @@ def check_column(trait: str, registry: list[tuple[str, str]], fetch=page_text) -
         if not row:
             missing.append(slug)
             continue
+        if trait.startswith(_OWN_COLUMN_PREFIX.get(slug, "-")):
+            continue  # a destination's own column is not used
         present = _present(text, name)
         current = row[trait]["value"]
         if meaning is None:
