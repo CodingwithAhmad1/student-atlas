@@ -331,4 +331,119 @@ export const citations: Record<string, Citation> = {
     url: "https://uaecabinet.ae/en/details/federal-laws",
     label: "UAE Federal Government — Federal Laws",
   },
+  "gov.uk/visa-national-list": {
+    id: "gov.uk/visa-national-list",
+    url: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-visitor-visa-national-list",
+    label: "GOV.UK — Immigration Rules Appendix Visitor: Visa national list",
+  },
+  "gov.uk/tb-test-countries": {
+    id: "gov.uk/tb-test-countries",
+    url: "https://www.gov.uk/tb-test-visa/countries-where-you-need-a-tb-test-to-enter-the-uk",
+    label: "GOV.UK — Countries where you need a TB test to enter the UK",
+  },
+  "gov.uk/appendix-english-language": {
+    id: "gov.uk/appendix-english-language",
+    url: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-english-language",
+    label: "GOV.UK — Immigration Rules Appendix English Language (majority English speaking countries)",
+  },
+  "gov.uk/appendix-student": {
+    id: "gov.uk/appendix-student",
+    url: "https://www.gov.uk/guidance/immigration-rules/immigration-rules-appendix-student",
+    label: "GOV.UK — Immigration Rules Appendix Student (differential evidence requirement)",
+  },
+  "gov.uk/youth-mobility-eligibility": {
+    id: "gov.uk/youth-mobility-eligibility",
+    url: "https://www.gov.uk/youth-mobility/eligibility",
+    label: "GOV.UK — Youth Mobility Scheme visa: eligibility",
+  },
+  "gov.uk/india-young-professionals": {
+    id: "gov.uk/india-young-professionals",
+    url: "https://www.gov.uk/india-young-professionals-scheme-visa",
+    label: "GOV.UK — India Young Professionals Scheme visa",
+  },
+  "gov.uk/dual-citizenship": {
+    id: "gov.uk/dual-citizenship",
+    url: "https://www.gov.uk/dual-citizenship",
+    label: "GOV.UK — Dual citizenship",
+  },
+  "dhs.gov/visa-waiver-program": {
+    id: "dhs.gov/visa-waiver-program",
+    url: "https://www.dhs.gov/visa-waiver-program",
+    label: "U.S. Department of Homeland Security — Visa Waiver Program (participating countries)",
+  },
+  "whitehouse.gov/proclamation-10998": {
+    id: "whitehouse.gov/proclamation-10998",
+    url: "https://www.whitehouse.gov/fact-sheets/2025/12/fact-sheet-president-donald-j-trump-further-restricts-and-limits-the-entry-of-foreign-nationals-to-protect-the-security-of-the-united-states/",
+    label: "The White House — Fact Sheet: Proclamation 10998 restricting and limiting the entry of foreign nationals (December 2025)",
+  },
+  "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/evisitor-651": {
+    id: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/evisitor-651",
+    url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/evisitor-651",
+    label: "Australian Department of Home Affairs — eVisitor (subclass 651)",
+  },
+  "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462": {
+    id: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462",
+    url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-462",
+    label: "Australian Department of Home Affairs — Work and Holiday visa (subclass 462)",
+  },
+  "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417": {
+    id: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417",
+    url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-417",
+    label: "Australian Department of Home Affairs — Working Holiday visa (subclass 417)",
+  },
+  "immi.homeaffairs.gov.au/health-examinations": {
+    id: "immi.homeaffairs.gov.au/health-examinations",
+    url: "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/health/what-health-examinations-you-need",
+    label: "Australian Department of Home Affairs — What health examinations you need (low-TB-risk countries)",
+  },
+  "immi.homeaffairs.gov.au/biometrics": {
+    id: "immi.homeaffairs.gov.au/biometrics",
+    url: "https://immi.homeaffairs.gov.au/help-support/meeting-our-requirements/biometrics",
+    label: "Australian Department of Home Affairs — Biometrics (collection centres by country)",
+  },
+  "immi.homeaffairs.gov.au/dual-citizen": {
+    id: "immi.homeaffairs.gov.au/dual-citizen",
+    url: "https://immi.homeaffairs.gov.au/entering-and-leaving-australia/traveling-as-a-dual-citizen",
+    label: "Australian Department of Home Affairs — Travelling as a dual citizen",
+  },
+  "uscis.gov/e-3": {
+    id: "uscis.gov/e-3",
+    url: "https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-3-specialty-occupation-workers-from-australia",
+    label: "USCIS — E-3 Specialty Occupation Workers from Australia",
+  },
+  "uscis.gov/tn": {
+    id: "uscis.gov/tn",
+    url: "https://www.uscis.gov/working-in-the-united-states/temporary-workers/tn-nafta-professionals",
+    label: "USCIS — TN professionals (Canada and Mexico)",
+  },
+  "uscis.gov/e-2": {
+    id: "uscis.gov/e-2",
+    url: "https://www.uscis.gov/working-in-the-united-states/temporary-workers/e-2-treaty-investors",
+    label: "USCIS — E-2 Treaty Investors",
+  },
+  "travel.state.gov/dv-instructions": {
+    id: "travel.state.gov/dv-instructions",
+    url: "https://travel.state.gov/content/travel/en/us-visas/immigrate/diversity-visa-program-entry/diversity-visa-instructions.html",
+    label: "U.S. Department of State — Diversity Visa Program instructions (ineligible countries)",
+  },
+  "travel.state.gov/dual-nationality": {
+    id: "travel.state.gov/dual-nationality",
+    url: "https://travel.state.gov/content/travel/en/legal/travel-legal-considerations/Advice-about-Possible-Loss-of-US-Nationality-Dual-Nationality/Dual-Nationality.html",
+    label: "U.S. Department of State — Dual Nationality",
+  },
+  "ofac.treasury.gov/sanctions-programs": {
+    id: "ofac.treasury.gov/sanctions-programs",
+    url: "https://ofac.treasury.gov/sanctions-programs-and-country-information",
+    label: "U.S. Treasury OFAC — Sanctions Programs and Country Information",
+  },
+  "dgip.gov.pk/dual-nationality": {
+    id: "dgip.gov.pk/dual-nationality",
+    url: "https://dgip.gov.pk/immigration/dual_nationality.php",
+    label: "Government of Pakistan, Directorate General of Immigration & Passports — Dual Nationality",
+  },
+  "nia.gov.cn/nationality-law": {
+    id: "nia.gov.cn/nationality-law",
+    url: "https://en.nia.gov.cn/n147418/n147458/c155976/content.html",
+    label: "National Immigration Administration of China — Nationality Law of the People's Republic of China",
+  },
 };

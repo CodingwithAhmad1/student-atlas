@@ -12,8 +12,10 @@ needed content edit and records the outcome. Git is the only datastore.
    `frontend/src/data/source-registry.ts` (citations grouped by URL),
    normalizes the HTML to stable text (`src/normalize.ts`), and compares it
    with the page's **reviewed baseline** in `snapshots/`.
-   `immi.homeaffairs.gov.au` pages are JS-rendered, so their page-specific
-   alert entries are extracted from the site's embedded JSON instead.
+   `immi.homeaffairs.gov.au` pages are JS-rendered; their body text (eligible
+   passport lists, fees, step guides) and page-specific alert entries are
+   extracted from the JSON "page schema" the site embeds in a hidden form
+   field (`extractHomeAffairs` in `src/normalize.ts`).
 2. **Record** — a substantive difference opens one `pending` alert per source
    in `frontend/src/data/monitoring/alerts/`. While it stays open, later runs
    update the same alert with the cumulative diff (baseline → current), so
@@ -28,6 +30,15 @@ needed content edit and records the outcome. Git is the only datastore.
    that review, so nothing slips through and nothing is reviewed twice. This
    does not depend on alert hashes, so changing the normalizer cannot make an
    already-reviewed page look new. (Stored text is also re-cleaned on read.)
+
+**Trait columns.** Pages listed in `frontend/src/data/traits/trait-sources.ts`
+(category `eligibility` in the Activity tab) feed the nationality trait table;
+an alert on one of them shows the affected columns and is reviewed with
+`check_trait_column` / `set_trait_column`. Columns whose source blocks
+automated clients are `manual`: the watcher raises a `stale-check` alert
+(status `manual`, kind `stale-check`) once the oldest value in the column is
+past the column's `manualIntervalDays`, and closes it when the dates are
+refreshed.
 
 Noise never reaches a reviewer: lines matching `NOISE_LINE_PATTERNS`, pure
 reorderings, and per-source `stripSelectors` (`source-overrides.ts`) are
@@ -48,8 +59,9 @@ you") counts as a failed check, not as the page's content.
 | `archive/` | Resolved alerts rotated out of the bundle (newest ~200 stay bundled) |
 
 Statuses: `pending` (awaiting review), `manual` (needs a human outside the
-content, e.g. an unreachable source), `approved` (content updated),
-`dismissed` (no change needed, or auto-resolved noise).
+content: an unreachable source or a stale manual trait column), `approved`
+(content updated), `dismissed` (no change needed, or auto-resolved noise).
+Kinds: `change`, `unreachable`, `stale-check`.
 
 ## Setup
 
@@ -70,6 +82,7 @@ npx tsx src/run.ts --dry-run                       # sweep every source, write n
 npx tsx src/run.ts --source gov.uk/student-visa    # check one source for real
 npx tsx src/run.ts --source gov.uk/standard-visitor-visa --fixture fixtures/gov-uk-standard-visitor.html
 npm run check                                      # typecheck
+npx tsx src/page-text.ts https://www.gov.uk/...    # print a page as the watcher sees it
 ```
 
 `--dry-run` writes nothing; `--fixture` replaces the network fetch with a saved

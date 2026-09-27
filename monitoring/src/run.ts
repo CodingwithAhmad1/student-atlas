@@ -4,6 +4,10 @@ import { diffTexts } from "./diff";
 import { FetchError, fetchPage } from "./fetch";
 import { hashText, normalizeHtml } from "./normalize";
 import { loadTargets } from "./sources";
+import { slugify as slugifyId } from "../../frontend/src/data/source-registry";
+import { nationalityTraits } from "../../frontend/src/data/traits/nationality-traits";
+import { traitSources } from "../../frontend/src/data/traits/trait-sources";
+import { TRAIT_KEYS } from "../../frontend/src/data/traits/types";
 import {
   archiveOldAlerts,
   blankStatus,
@@ -232,6 +236,50 @@ class Run {
     console.warn(`  → raised "needs attention" alert ${alert.id}`);
   }
 
+  handleStaleColumn(
+    trait: string,
+    citationId: string,
+    target: MonitoredTarget | undefined,
+    oldestVerifiedAt: string,
+    ageDays: number,
+    intervalDays: number
+  ): void {
+    const open = findOpenAlert(this.alerts, citationId, "stale-check");
+    if (ageDays <= intervalDays) {
+      if (open) this.autoResolve(open, `The ${trait} column was re-verified on ${oldestVerifiedAt} or later.`);
+      return;
+    }
+    if (open) return;
+    const alert: ActivityAlert = {
+      id: makeAlertId(this.now, `${slugifyId(citationId)}-stale`),
+      kind: "stale-check",
+      sourceId: citationId,
+      relatedSourceIds: target?.relatedSourceIds ?? [],
+      sourceLabel: target?.label ?? citationId,
+      sourceUrl: target?.url ?? "",
+      country: target?.country ?? "INTL",
+      category: target?.category ?? "eligibility",
+      detectedAt: this.now,
+      updatedAt: this.now,
+      oldHash: null,
+      newHash: `stale-${oldestVerifiedAt}`,
+      diff: "",
+      diffTruncated: false,
+      significance: null,
+      summary:
+        `The "${trait}" trait column is checked by hand because this source blocks automated clients. ` +
+        `Its oldest value was verified on ${oldestVerifiedAt}, past the ${intervalDays}-day interval. ` +
+        `Re-check the page in a browser, update the column (set_trait_column) and resolve this alert.`,
+      status: "manual",
+      resolution: null,
+      resolvedAt: null,
+      error: null,
+    };
+    this.alerts.push(alert);
+    this.save(alert);
+    console.warn(`  → raised stale-check alert ${alert.id} for ${trait}`);
+  }
+
   handleFetched(target: MonitoredTarget, text: string, status: SourceStatus): void {
     const unreachable = findOpenAlert(this.alerts, target.sourceId, "unreachable");
     if (unreachable) this.autoResolve(unreachable, "The source is reachable again.");
@@ -333,6 +381,25 @@ class Run {
   }
 }
 
+/**
+ * Manual trait columns (sources that block automated clients) are re-checked
+ * by a person. Raise a "needs attention" alert once the oldest value in the
+ * column is past the column's interval, and close it when the values are
+ * refreshed (resolve_alert updates verifiedAt through the MCP server).
+ */
+function checkStaleTraitColumns(run: Run, targets: MonitoredTarget[], now: string): void {
+  const today = Date.parse(now.slice(0, 10));
+  for (const key of TRAIT_KEYS) {
+    const src = traitSources[key];
+    if (src.checkKind !== "manual" || !src.manualIntervalDays) continue;
+    const dates = [src.verifiedAt, ...Object.values(nationalityTraits).map((row) => row[key].verifiedAt)];
+    const oldest = dates.reduce((a, b) => (a < b ? a : b));
+    const ageDays = (today - Date.parse(oldest)) / 86_400_000;
+    const target = targets.find((t) => t.sourceId === src.citationId || t.relatedSourceIds.includes(src.citationId));
+    run.handleStaleColumn(key, src.citationId, target, oldest, ageDays, src.manualIntervalDays);
+  }
+}
+
 function writeJobSummary(alerts: ActivityAlert[], line: string): void {
   const path = process.env.GITHUB_STEP_SUMMARY;
   if (!path) return;
@@ -384,6 +451,7 @@ async function main(): Promise<void> {
   }
 
   const run = new Run(opts, alerts, now);
+  if (!opts.source) checkStaleTraitColumns(run, targets, now);
 
   for (const outcome of outcomes) {
     const { target } = outcome;

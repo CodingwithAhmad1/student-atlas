@@ -272,6 +272,25 @@ has a chosen source or is marked manual.
 Exit: build green with the 7 migrated; a list-page alert can be processed
 end-to-end with `check_trait_column`; dry-run monitor quiet.
 
+**Phase 1 outcome (2026-09-27).** Delivered as designed with these
+adjustments:
+- 17 traits implemented (V1–V4, V8–V10, S1–S4, W1–W3, R1–R3, X1). V5
+  (US visa services in country), V6 (reciprocity), V7 (visa bond pilot) and S5
+  (SEVIS payment restrictions) are deferred to Phase 2 as cited hand callouts
+  for the nationalities they affect, because their only sources block the
+  watcher and a column would be manual anyway.
+- The Home Affairs extractor now reads the page-schema JSON, so AU sources
+  carry real page text. The 462/417 eligible-country lists load separately
+  and are a manual column; the 500 page sources `auEnglishExempt`.
+- Hand-written callouts may anchor on blocks of the profile the traits select;
+  the checker verifies anchors on the merged overlay.
+- The audit's KEEP+CITE rows that no existing citation supported were dropped
+  rather than cited loosely (UAE "digital identity" exemption, 485 PhD
+  duration, ETA-via-app since the UAE is not ETA-eligible); they can return
+  once a source is added.
+- Practical callouts render with an asterisk and a small-print note on the
+  page and in the PDF (D2).
+
 ### Phase 2 — Population (4–6 sessions)
 1. **Column-first:** for each monitored column, run `check_trait_column`
    against the live page and set all 100 values at once. Manual columns are

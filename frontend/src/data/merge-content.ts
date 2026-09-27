@@ -1,6 +1,6 @@
 import type {
+  CalloutBlock,
   CalloutOverlay,
-  ContentBlock,
   CountryOverlay,
   IdentifiedBlock,
   ResolvedBlock,
@@ -35,11 +35,13 @@ export function mergeCrossCutting(
  * web page and the PDF; the rest keeps its order.
  */
 export function splitCallouts(blocks: ResolvedBlock[]): {
-  callouts: ContentBlock[];
+  callouts: CalloutBlock[];
   body: ResolvedBlock[];
 } {
   return {
-    callouts: blocks.filter((b) => b.isCallout).map((b) => b.block),
+    callouts: blocks
+      .filter((b) => b.isCallout)
+      .map((b) => (b.practical ? { block: b.block, practical: true } : { block: b.block })),
     body: blocks.filter((b) => !b.isCallout),
   };
 }
@@ -49,16 +51,22 @@ function interleave(
   callouts: CalloutOverlay[] | undefined,
   nationalityLabel?: string
 ): ResolvedBlock[] {
-  const byAnchor = new Map<string, ContentBlock[]>();
+  const byAnchor = new Map<string, CalloutBlock[]>();
   for (const c of callouts ?? []) {
-    byAnchor.set(c.afterBlockId, [...(byAnchor.get(c.afterBlockId) ?? []), ...c.blocks]);
+    const items = c.blocks.map((block) => (c.practical ? { block, practical: true } : { block }));
+    byAnchor.set(c.afterBlockId, [...(byAnchor.get(c.afterBlockId) ?? []), ...items]);
   }
 
   const result: ResolvedBlock[] = [];
   for (const ib of blocks) {
     result.push({ block: ib.block });
     for (const cb of (ib.id && byAnchor.get(ib.id)) || []) {
-      result.push({ block: cb, isCallout: true, nationalityLabel });
+      result.push({
+        block: cb.block,
+        isCallout: true,
+        ...(cb.practical ? { practical: true } : {}),
+        nationalityLabel,
+      });
     }
   }
   return result;

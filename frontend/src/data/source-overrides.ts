@@ -72,4 +72,26 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "studyinthestates.dhs.gov": {
     stripSelectors: [".paragraph--type--recent-blogs"],
   },
+
+  // ── Eligibility lists feeding the nationality traits (traits/trait-sources.ts) ──
+  "gov.uk/visa-national-list": { category: "eligibility" },
+  "gov.uk/tb-test-countries": { category: "eligibility" },
+  "gov.uk/appendix-english-language": { category: "eligibility" },
+  "gov.uk/appendix-student": {
+    category: "eligibility",
+    // The whole appendix is ~48k characters; only ST 22 (differential evidence) matters.
+  },
+  "gov.uk/youth-mobility-eligibility": { category: "eligibility" },
+  "dhs.gov/visa-waiver-program": { category: "eligibility" },
+  "whitehouse.gov/proclamation-10998": { category: "eligibility" },
+  "immi.homeaffairs.gov.au/health-examinations": { category: "eligibility" },
+  "immi.homeaffairs.gov.au/biometrics": { category: "eligibility" },
+  "ofac.treasury.gov/sanctions-programs": { country: "INTL", category: "eligibility" },
+  // Home-country dual-nationality pages (decision D3).
+  "dgip.gov.pk/dual-nationality": { country: "INTL", category: "citizenship" },
+  "nia.gov.cn/nationality-law": { country: "INTL", category: "citizenship" },
+  "immi.homeaffairs.gov.au/dual-citizen": { category: "citizenship" },
+  "gov.uk/dual-citizenship": { category: "citizenship" },
+  "travel.state.gov/dual-nationality": { category: "citizenship", skipReason: STATE_GOV_BLOCKED },
+  "travel.state.gov/dv-instructions": { category: "eligibility", skipReason: STATE_GOV_BLOCKED },
 };

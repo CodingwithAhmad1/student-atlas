@@ -16,14 +16,22 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
   immi.homeaffairs.gov.au (500, 600, 485, 482, 189/190/186 and the CSIT all
   match). The Subclass 482 content now uses its current name, Skills in Demand.
 - Supported nationalities: UAE, Pakistan, India, China, United Kingdom,
-  United States, Australia.
+  United States, Australia — all on the trait model (`trait_coverage()`).
+  Two long-standing errors were caught by the traits: the UAE is not on
+  Australia's ETA list (Visitor 600 applies) and India is a UK visa national
+  (Standard Visitor, not ETA).
 
 ## Checklist
 
 - [ ] Expansion to 100 nationalities: design and decisions in
-      `EXPANSION-PLAN.md`; Phase 0 done 2026-09-27 (`AUDIT-2026-09.md`,
-      Appendix B/C). Next: Phase 1 (trait layer, checker, watcher JSON
-      extraction for Home Affairs list pages, MCP tools, migrate the 7).
+      `EXPANSION-PLAN.md`. Phase 0 (audit, `AUDIT-2026-09.md`) and Phase 1
+      (trait layer, checker, watcher, MCP tools, the 7 migrated) done
+      2026-09-27 on branch `atlas-expansion`. Next: Phase 2 — populate the
+      traits table column-first for the 100 (see plan §7).
+- [ ] First monitor run after the branch lands: expect one `change` alert per
+      Home Affairs page (about 12) because the watcher now reads the page
+      body from the embedded JSON instead of just the alert banners. Review
+      them once and dismiss as the new baseline.
 
 - [ ] Review new alerts as they arrive (Activity tab → open items)
 - [ ] If/when the site is deployed: host must rebuild on pushes to `main`

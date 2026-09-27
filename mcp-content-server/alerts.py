@@ -25,7 +25,7 @@ OPEN_STATUSES = ("pending", "manual")
 RESOLUTION_OUTCOMES = ("approved", "dismissed", "manual")
 
 # Files a review edit may touch (relative to frontend/src/data).
-EDITABLE_DIRS = ("sections", "profiles", "nationalities")
+EDITABLE_DIRS = ("sections", "profiles", "nationalities", "traits")
 EDITABLE_FILES = ("visa-facts.ts", "glossary.ts", "home-content.ts")
 NEVER_EDITABLE = ("index.ts", "registry.ts")
 
@@ -173,6 +173,15 @@ def get_alert(alert_id: str, context: int = 12) -> str:
     parts.append(a.get("diff") or "(no diff — see status/error above)")
     if a.get("diffTruncated"):
         parts.append("(diff truncated — open the source URL for the full page)")
+
+    try:
+        import traits as trait_table
+
+        trait_section = trait_table.columns_for_citation(ids)
+        if trait_section:
+            parts.append(trait_section)
+    except Exception as e:  # never let the trait table break alert review
+        parts.append(f"\n(trait table unavailable: {e})")
 
     excerpts = cited_excerpts(ids, context)
     parts.append(f"\n## Guide passages citing this source ({len(excerpts)} excerpt(s))")

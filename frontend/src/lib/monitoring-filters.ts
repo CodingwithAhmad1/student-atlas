@@ -9,5 +9,6 @@ export const CATEGORY_FILTERS: (SourceCategory | "all")[] = [
   "work",
   "residency",
   "citizenship",
+  "eligibility",
   "general",
 ];

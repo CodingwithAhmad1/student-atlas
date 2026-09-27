@@ -160,6 +160,51 @@ function textOfHtmlFragment(fragment: string): string {
   return cheerio.load(fragment).root().text().replace(/\s+/g, " ").trim();
 }
 
+/** Keys of the page-schema JSON that churn without the guidance changing. */
+const IMMI_SKIP_KEYS = new Set(["recommended", "id", "itemName", "currentActor", "toggleData"]);
+
+/**
+ * Walk the page-schema JSON in document order and collect its text: HTML
+ * fragments become plain text, other strings are kept when they look like
+ * prose (eligibility lists, step guides, fee tables all live here).
+ */
+function collectPageText(value: unknown, out: string[]): void {
+  if (typeof value === "string") {
+    const text = /<[a-z][\s\S]*>/i.test(value) ? textOfHtmlFragment(value) : value.trim();
+    if (text.length >= 20) out.push(text);
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (const item of value) collectPageText(item, out);
+    return;
+  }
+  if (value && typeof value === "object") {
+    for (const [key, child] of Object.entries(value as Record<string, unknown>)) {
+      if (IMMI_SKIP_KEYS.has(key)) continue;
+      collectPageText(child, out);
+    }
+  }
+}
+
+/**
+ * immi.homeaffairs.gov.au renders visa-listing and help pages from a JSON
+ * "page schema" carried in a hidden form field (the visible HTML is an empty
+ * shell). This is where eligible-passport lists, fees and step guides live.
+ */
+function extractHomeAffairsBody($: cheerio.CheerioAPI): string[] {
+  const out: string[] = [];
+  for (const el of $("input[type=hidden]").toArray()) {
+    const raw = $(el).attr("value") ?? "";
+    if (raw.length < 500 || !raw.startsWith("{")) continue;
+    try {
+      collectPageText(JSON.parse(raw), out);
+    } catch {
+      // Not the page schema (some hidden fields hold view-state blobs).
+    }
+  }
+  return out;
+}
+
 /**
  * immi.homeaffairs.gov.au / homeaffairs.gov.au render page bodies with
  * client-side JS, so the fetched HTML has no main content. It does embed a
@@ -226,6 +271,8 @@ function extractHomeAffairs(html: string, pagePath: string): string | null {
     lines.push(`Alert: ${alert.title}`);
     if (alert.content) lines.push(alert.content);
   }
+
+  lines.push(...extractHomeAffairsBody($));
 
   return lines.length > 0 ? lines.join("\n") : null;
 }

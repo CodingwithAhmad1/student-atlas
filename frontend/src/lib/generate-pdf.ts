@@ -1,5 +1,5 @@
 import jsPDF from "jspdf";
-import type { Country, ContentBlock, ResolvedBlock, NationalityOverlay } from "@/data/types";
+import { type ContentBlock, type Country, type NationalityOverlay, PRACTICAL_NOTE, type ResolvedBlock, type CalloutBlock } from "@/data/types";
 import { COUNTRY_LABELS } from "@/data/types";
 import { sectionRegistry } from "@/data/sections";
 import { mergeBlocks, mergeCrossCutting, splitCallouts } from "@/data/merge-content";
@@ -465,13 +465,15 @@ function renderContentBlock(
 /** Render a callout box (nationality-specific note). */
 function renderCallout(
   doc: jsPDF,
-  blocks: ContentBlock[],
+  callouts: CalloutBlock[],
   nationalityLabel: string | undefined,
   y: number,
   width: number,
   x: number = MARGIN
 ): number {
   // Pre-measure approximate height
+  const blocks = callouts.map((c) => c.block);
+  const hasPractical = callouts.some((c) => c.practical);
   let estHeight = 10; // header + padding
   for (const b of blocks) {
     if (b.type === "paragraph") {
@@ -494,9 +496,22 @@ function renderCallout(
   doc.text(header, x + 5, y + 2);
   y += 8;
 
-  // Render inner blocks
-  for (const b of blocks) {
-    y = renderContentBlock(doc, b, y, width - 12, x + 6);
+  // Render inner blocks; practical (uncited) ones get an asterisk in the margin
+  for (const c of callouts) {
+    if (c.practical) {
+      setFont(doc, "bold", 10, GOLD);
+      doc.text("*", x + width - 5, y + 1);
+    }
+    y = renderContentBlock(doc, c.block, y, width - 12, x + 6);
+  }
+  if (hasPractical) {
+    setFont(doc, "italic", 7.5, TEXT_DARK);
+    const noteLines = doc.splitTextToSize(PRACTICAL_NOTE, width - 12);
+    for (const line of noteLines) {
+      y = ensureSpace(doc, y, LINE_HEIGHT);
+      doc.text(line, x + 6, y);
+      y += LINE_HEIGHT - 1;
+    }
   }
 
   y += 2;

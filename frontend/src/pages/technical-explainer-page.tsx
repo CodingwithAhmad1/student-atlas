@@ -71,10 +71,15 @@ export function TechnicalExplainerPage() {
         <h2 className="text-lg font-semibold">Content architecture</h2>
         <p className="text-muted-foreground leading-relaxed">
           Guidance in Student Atlas is not a single flat document. It is built
-          from three composable layers that merge at render time based on your
+          from four composable layers that merge at render time based on your
           selected nationality and destination countries.
         </p>
         <div className="grid gap-4">
+          <ArchitectureLayer
+            title="Nationality traits"
+            path="data/traits/"
+            description="One table with a row per nationality and a column per fact that depends on nationality — visa-free travel, TB tests, evidence rules, US entry restrictions, work-visa alternatives, dual nationality. Each column is read from exactly one official page and carries the date it was last checked; rules turn a row into the cited notes you see."
+          />
           <ArchitectureLayer
             title="Base content"
             path="data/sections/"
@@ -88,7 +93,7 @@ export function TechnicalExplainerPage() {
           <ArchitectureLayer
             title="Nationality overlays"
             path="data/nationalities/"
-            description="Targeted callouts, tips, and warnings for specific nationalities — UAE, Pakistan, India, China, and UK. Overlays insert additional paragraphs after specific blocks in the base content without rewriting the entire guide."
+            description="Hand-written extras for a nationality, each cited or marked as practical advice. Overlays insert paragraphs after specific blocks in the base content without rewriting the guide; everything that follows from an official list (visa-free travel, TB tests, evidence rules, entry restrictions) is generated from the traits table instead."
           />
         </div>
         <p className="text-muted-foreground leading-relaxed">

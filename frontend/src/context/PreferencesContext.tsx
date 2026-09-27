@@ -87,6 +87,7 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
         nationalityLabel: overlayState.nationalityLabel,
         overlayLoading: overlayState.isLoading,
         overlayError: overlayState.error,
+        nationalityUnsupported: overlayState.unsupported,
         reset,
       }}
     >

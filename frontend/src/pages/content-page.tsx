@@ -88,6 +88,7 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
     nationalityOverlay,
     nationalityLabel,
     overlayError,
+    nationalityUnsupported,
     isConfigured,
   } = usePreferences();
   const { destinations } = preferences;
@@ -134,7 +135,7 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
     if (!resolved) return [];
     const blocks: ContentBlock[] = [];
     for (const part of resolved.crossCutting ? [resolved.crossCutting] : resolved.columns) {
-      blocks.push(...part.callouts, ...part.body.map((b) => b.block));
+      blocks.push(...part.callouts.map((c) => c.block), ...part.body.map((b) => b.block));
     }
     return collectCitations(blocks);
   }, [resolved]);
@@ -154,6 +155,12 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
     <p className="rounded-md border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-800 dark:bg-amber-950/30 dark:text-amber-200">
       Nationality-specific notes couldn't be loaded, so this page shows the general
       guidance only. Reload the page to try again.
+    </p>
+  ) : nationalityUnsupported ? (
+    <p className="rounded-md border border-border bg-muted/50 p-3 text-sm text-muted-foreground">
+      We don't have nationality-specific guidance for {preferences.nationality} yet, so this
+      page shows the general rules only. Whether you need a visa, and which evidence you must
+      provide, can differ by nationality — check the official sources cited below.
     </p>
   ) : null;
 
