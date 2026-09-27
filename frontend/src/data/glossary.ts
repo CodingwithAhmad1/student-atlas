@@ -139,7 +139,7 @@ export const glossary: Record<string, GlossaryTerm> = {
   "subclass-482": {
     label: "Subclass 482",
     definition:
-      "The Australian employer-sponsored work visa for roles on the skilled occupation list.",
+      "The Australian Skills in Demand visa (formerly Temporary Skill Shortage) — an employer-sponsored temporary work visa.",
   },
   "subclass-186": {
     label: "Subclass 186",

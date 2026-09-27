@@ -249,7 +249,7 @@ export const citations: Record<string, Citation> = {
   "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482": {
     id: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482",
     url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482",
-    label: "Australian Department of Home Affairs — Temporary Skill Shortage Visa (Subclass 482)",
+    label: "Australian Department of Home Affairs — Skills in Demand Visa (Subclass 482)",
   },
   "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186": {
     id: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186",

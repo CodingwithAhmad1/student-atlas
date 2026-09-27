@@ -28,7 +28,7 @@ export const domesticAuWork: Profile = {
       id: "au-domestic-work-sponsor",
       block: {
         type: "paragraph",
-        text: "Australian citizens do not require employer sponsorship to work in Australia. You can apply for any job, change employers freely, and work in any sector without restriction. This is a significant advantage — international graduates must navigate the points system or secure employer sponsorship through the TSS (Subclass 482) visa, but as a citizen you face no such barriers.",
+        text: "Australian citizens do not require employer sponsorship to work in Australia. You can apply for any job, change employers freely, and work in any sector without restriction. This is a significant advantage — international graduates must navigate the points system or secure employer sponsorship through the Skills in Demand (Subclass 482) visa, but as a citizen you face no such barriers.",
       },
     },
   ],

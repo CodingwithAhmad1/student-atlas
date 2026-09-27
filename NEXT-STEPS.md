@@ -12,21 +12,24 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
   The first full review is done: all 21 alerts resolved (4 approved,
   17 dismissed), and a dry run of the watcher is quiet.
 - The Activity tab is read-only (Changes and Sources views).
-- Fees were verified on 2026-09-27: UK against GOV.UK; Australia from
-  secondary sources, because Home Affairs blocks automated fetches.
+- Fees were verified on 2026-09-27: UK against GOV.UK; Australia against
+  immi.homeaffairs.gov.au (500, 600, 485, 482, 189/190/186 and the CSIT all
+  match). The Subclass 482 content now uses its current name, Skills in Demand.
 - Supported nationalities: UAE, Pakistan, India, China, United Kingdom,
   United States, Australia.
 
 ## Checklist
 
-- [ ] Spot-check the Australian fees on immi.homeaffairs.gov.au (500, 600, 485,
-      482, 189/190/186, citizenship) — `visa-facts.ts` and `sections/*.ts`
 - [ ] Review new alerts as they arrive (Activity tab → open items)
 - [ ] If/when the site is deployed: host must rebuild on pushes to `main`
       (monitoring data is bundled at build time)
 
 ## Standing notes
 
+- Fees change every 1 July (Australia) and usually April (UK). Re-check the
+  `visa-facts.ts` cards then — they have no citations, so the monitor won't flag them.
+- Home Affairs fee amounts render client-side; a page's "Cost" can look blank
+  in plain fetches. Check fees in a real browser.
 - Sources marked "Not monitorable" in `frontend/src/data/source-overrides.ts`
   (travel.state.gov, ceac, ukvcas, uaecabinet, fmjfee block bots or serve only
   error pages; i94 is JS-only) need an occasional manual check.

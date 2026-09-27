@@ -165,16 +165,16 @@ export const visaFacts: Record<
         financial_proof_required: "Salary threshold verification",
       },
       AU: {
-        visa_name: "TSS visa (Subclass 482)",
+        visa_name: "Skills in Demand visa (Subclass 482)",
         visa_definition: "Employer-sponsored temporary work visa for skilled occupations.",
         total_upfront_cost: "AUD $4,015 (employer usually pays)",
         application_fee: "AUD $4,015",
         work_hours: "Full-time for sponsoring employer",
         dependants_allowed: true,
         validity_model: "Up to 4 yrs; 186 route to PR",
-        // WATCH OUT — proposal: role must be on skilled occupation list; salary at least CSIT (~AUD $79,400)
+        // WATCH OUT — proposal: occupation must be on Core Skills Occupation List; salary at least CSIT (~AUD $79,400)
         watch_out:
-          "Role must appear on skilled occupation list; salary at least the Core Skills Income Threshold (~AUD $79,400).",
+          "Core Skills stream: occupation must be on the Core Skills Occupation List; salary at least the Core Skills Income Threshold (~AUD $79,400).",
         processing_time: "Not specified",
         post_study_work: "Follows Subclass 485",
         language_requirement: "English proficiency required",

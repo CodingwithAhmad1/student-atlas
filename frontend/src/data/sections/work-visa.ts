@@ -369,26 +369,26 @@ export const workVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The primary employer-sponsored work visas in Australia for skilled graduates are the [TERM: subclass-482|Temporary Skill Shortage visa (Subclass 482)] and the [TERM: subclass-186|Employer Nomination Scheme (Subclass 186)]. The 482 is the temporary route; the 186 leads directly to permanent residency. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482] [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186]",
+                text: "The primary employer-sponsored work visas in Australia for skilled graduates are the [TERM: subclass-482|Skills in Demand visa (Subclass 482)] and the [TERM: subclass-186|Employer Nomination Scheme (Subclass 186)]. The 482 is the temporary route; the 186 leads directly to permanent residency. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-skill-shortage-482] [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186]",
               },
             },
             {
               block: {
                 type: "heading",
                 level: 3,
-                text: "Subclass 482 — Temporary Skill Shortage",
+                text: "Subclass 482 — Skills in Demand",
               },
             },
             {
               block: {
                 type: "paragraph",
-                text: "The employer must be an approved sponsor. The role must be on the relevant skilled occupation list. The salary must meet the [TERM: tsmit|Temporary Skilled Migration Income Threshold (TSMIT)] — now called the Core Skills Income Threshold (CSIT) — of about AUD $79,400 per year from 1 July 2026. [CITE: immi.homeaffairs.gov.au/tsmit]",
+                text: "The employer must be an approved sponsor. Most graduates apply in the Core Skills stream: the occupation must be on the Core Skills Occupation List and the salary must meet the [TERM: tsmit|Temporary Skilled Migration Income Threshold (TSMIT)] — now called the Core Skills Income Threshold (CSIT) — of about AUD $79,400 per year from 1 July 2026. [CITE: immi.homeaffairs.gov.au/tsmit]",
               },
             },
             {
               block: {
                 type: "paragraph",
-                text: "The 482 is granted for up to four years (or two years for occupations on the short-term list). After three years on a 482 in a medium-term occupation, the applicant can apply for permanent residency through the Subclass 186.",
+                text: "The 482 (which replaced the Temporary Skill Shortage visa in December 2024) is granted for up to four years in every stream. A separate Specialist Skills stream covers higher-paid roles with no occupation list. After two years of full-time work for the sponsoring employer, the holder can usually apply for permanent residency through the Subclass 186 Temporary Residence Transition stream.",
               },
             },
             {
