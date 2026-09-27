@@ -14,7 +14,7 @@ export const traitSources: Record<TraitKey, TraitSource> = {
     citationId: "gov.uk/visa-national-list",
     checkKind: "monitored",
     verifiedAt: "2026-09-27",
-    note: "Appendix Visitor: Visa national list. On the list → Standard Visitor visa; not on it → ETA.",
+    note: "Appendix Visitor: Visa national list. On the list → Standard Visitor visa; not on it → ETA. Taiwan is listed with an asterisk: passports that include the ID-card number are exempt (VN 2.2(c)), so taiwan stays false.",
   },
   usVwp: {
     citationId: "dhs.gov/visa-waiver-program",

@@ -48,6 +48,22 @@ const DOMESTIC: Record<Country, Record<string, Profile>> = {
 
 const cite = (key: TraitKey) => `[CITE: ${traitSources[key].citationId}]`;
 const asOf = (t: { verifiedAt: string }) => `Position checked ${t.verifiedAt}.`;
+/** A country name as it reads in running text; dropdown spellings stay as they are elsewhere. */
+const PROSE_NAMES: Record<string, string> = {
+  "Congo (Democratic Republic)": "the Democratic Republic of the Congo",
+  "Czech Republic": "the Czech Republic",
+  "Dominican Republic": "the Dominican Republic",
+  Netherlands: "the Netherlands",
+  Philippines: "the Philippines",
+  "United Arab Emirates": "the United Arab Emirates",
+  "United Kingdom": "the United Kingdom",
+  "United States": "the United States",
+};
+export const proseName = (name: string) => PROSE_NAMES[name] ?? name;
+const capitalise = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+
+/** "a" or "an" before a nationality adjective ("an Indian", "a Ugandan", "a UAE", "an Uzbek"). */
+const withArticle = (word: string) => `${/^(?:[AEIO]|Uzb)/.test(word) ? "an" : "a"} ${word}`;
 const p = (text: string): ContentBlock => ({ type: "paragraph", text });
 
 /** Id of the first identified block in a column: generated callouts anchor there
@@ -67,7 +83,9 @@ export function generateOverlay(
   sections: Section[]
 ): NationalityOverlay {
   const overlay: NationalityOverlay = {};
-  const { name, label } = subject;
+  const { label } = subject;
+  const name = proseName(subject.name);
+  const Name = capitalise(name);
 
   const column = (sectionSlug: string, subSlug: string, country: Country) =>
     sections
@@ -159,8 +177,8 @@ export function generateOverlay(
   // ── Comprehensive sanctions ──
   if (traits.sanctionsRegime.value === "comprehensive") {
     const text =
-      `**${name} is under comprehensive sanctions.** US sanctions administered by OFAC restrict payments from ${name}, ` +
-      `which affects paying US government fees (the SEVIS I-901 fee and visa fees) and university deposits from a ${name} bank; ` +
+      `**${Name} is under comprehensive sanctions.** US sanctions administered by OFAC restrict payments from ${name}, ` +
+      `which affects paying US government fees (the SEVIS I-901 fee and visa fees) and university deposits from a bank in ${name}; ` +
       `UK financial sanctions can affect transfers too. Plan to pay from outside ${name} or through a third party where the rules allow it, ` +
       `and confirm the position with the institution. ${asOf(traits.sanctionsRegime)} ${cite("sanctionsRegime")}`;
     for (const section of sections) {
@@ -180,7 +198,7 @@ export function generateOverlay(
   }
   if (traits.auHealthExamLikely.value) {
     const text =
-      `${name} is not on Home Affairs' list of countries with a low risk of tuberculosis, so a stay of 6 months or more (every Student visa, and longer visits) ` +
+      `${Name} is not on Home Affairs' list of countries with a low risk of tuberculosis, so a stay of 6 months or more (every Student visa, and longer visits) ` +
       `normally requires a medical examination and chest X-ray at an approved panel clinic. Visits under 6 months usually need no examination. ${cite("auHealthExamLikely")}`;
     if (traits.auVisitorStream.value === "visitor600") addCallout("visit", "how-to-apply", "AU", [p(text)]);
     addCallout("student", "documents", "AU", [p(text)]);
@@ -206,14 +224,14 @@ export function generateOverlay(
   if (traits.ukMajorityEnglish.value) {
     addCallout("student", "documents", "UK", [
       p(
-        `${name} is on the UK's list of majority English speaking countries, so ${label} nationals meet the Student visa English language requirement by nationality and do not need a Secure English Language Test. ${cite("ukMajorityEnglish")}`
+        `${Name} is on the UK's list of majority English speaking countries, so ${label} nationals meet the Student visa English language requirement by nationality and do not need a Secure English Language Test. ${cite("ukMajorityEnglish")}`
       ),
     ]);
   }
   if (traits.auEnglishExempt.value) {
     addCallout("student", "documents", "AU", [
       p(
-        `Holders of a ${name} passport do not need to provide an English test score with the Student (subclass 500) application. ${cite("auEnglishExempt")}`
+        `Holders of ${withArticle(label)} passport do not need to provide an English test score with the Student (subclass 500) application. ${cite("auEnglishExempt")}`
       ),
     ]);
   }
@@ -267,8 +285,8 @@ export function generateOverlay(
         ? `Demand from ${name} exceeds its per-country share of employment-based green cards by so much that ${label} applicants wait many years longer than applicants from elsewhere; some categories are more than a decade behind.`
         : `Demand from ${name} exceeds its per-country share in some employment-based categories, so ${label} applicants can wait years longer than applicants from other countries.`;
     const text =
-      `**${name} has its own column in the US Visa Bulletin.** ${severity} ` +
-      `This is the single biggest difference between the US route and the UK or Australian routes for a ${label} graduate. ` +
+      `**${Name} has its own column in the US Visa Bulletin.** ${severity} ` +
+      `This is the single biggest difference between the US route and the UK or Australian routes for ${withArticle(label)} graduate. ` +
       `${asOf(backlog)} ${cite("usVisaBulletinBacklog")}`;
     addCallout("work", "getting-sponsored", "US", [p(text)]);
     addCallout("residency", "permanent-residency", "US", [p(text)]);
@@ -291,9 +309,9 @@ export function generateOverlay(
     .map((c) => ({ US: "the United States", UK: "the United Kingdom", AU: "Australia" })[c]);
   const abroadList = abroad.length > 1 ? `${abroad.slice(0, -1).join(", ")} or ${abroad[abroad.length - 1]}` : abroad[0];
   const dualText: Record<typeof dual.value, string> = {
-    allowed: `${name} permits dual nationality: ${label} citizens who naturalise in ${abroadList} keep their ${label} citizenship.${note}${dualCite}`,
-    restricted: `${name} permits dual nationality only in limited circumstances, so check before naturalising in ${abroadList}.${note}${dualCite}`,
-    prohibited: `${name} does not permit dual nationality: naturalising in ${abroadList} means giving up ${label} citizenship.${note}${dualCite}`,
+    allowed: `${Name} permits dual nationality: ${label} citizens who naturalise in ${abroadList} keep their ${label} citizenship.${note}${dualCite}`,
+    restricted: `${Name} permits dual nationality only in limited circumstances, so check before naturalising in ${abroadList}.${note}${dualCite}`,
+    prohibited: `${Name} does not permit dual nationality: naturalising in ${abroadList} means giving up ${label} citizenship.${note}${dualCite}`,
     unknown: `We have not yet verified the dual-nationality rules of ${name} against an official source. Confirm with an embassy or consulate of ${name} before naturalising abroad.`,
   };
   addCrossCutting("residency", "dual-nationality", "dual-origin-position", [p(dualText[dual.value])], dual.value === "unknown");

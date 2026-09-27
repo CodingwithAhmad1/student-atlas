@@ -325,7 +325,7 @@ ALIASES: dict[str, list[str]] = {
     "North Korea": ["North Korea", "Korea, Democratic People's Republic", "Democratic People's Republic of Korea", "DPRK", "Korea (North)"],
     "China": ["China", "People's Republic of China"],
     "Taiwan": ["Taiwan"],
-    "Ivory Coast": ["Ivory Coast", "Côte d'Ivoire", "Cote d'Ivoire", "Côte d’Ivoire"],
+    "Ivory Coast": ["Ivory Coast", "Côte d'Ivoire", "Cote d'Ivoire", "Côte d’Ivoire", "Cote d’Ivoire"],
     "Myanmar": ["Myanmar", "Burma"],
     "Czech Republic": ["Czech Republic", "Czechia"],
     "Turkey": ["Turkey", "Türkiye", "Turkiye"],
@@ -372,7 +372,7 @@ REGIONS: dict[str, tuple[str, str | None]] = {
     "auBiometricsRequired": ("Country Location/s", None),
     "ukDifferentialEvidence": ("Differential evidence requirement for a Student", "Information on the Confirmation"),
     "auHealthExamLikely": ("Countries with low risk of tuberculosis", "Countries with low risk of hepatitis"),
-    "auEnglishExempt": ("evidence of an English test score", "Note:"),
+    "auEnglishExempt": ("citizen and hold a passport from", "you are an applicant who"),
     "auVisitorStream": ("eligible for an ETA", "If you hold more than one passport"),
 }
 
