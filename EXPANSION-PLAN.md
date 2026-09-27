@@ -491,7 +491,7 @@ Tier counts: A 25 (+3 destinations), B 35, C 37.
   Senegal, Tanzania, Tonga, Zambia, Zimbabwe. Turkmenistan: immigrant visas
   only.
 - Exceptions include existing visa holders and permanent residents.
-- **Top-100 impact:** 24 of the 100 nationalities are affected (Afghanistan,
+- **Top-100 impact:** 26 of the 100 nationalities are affected (Afghanistan,
   Myanmar, Chad, Iran, Somalia, Sudan, Yemen, Burkina Faso, Mali, Niger,
   South Sudan, Syria, Haiti full; Burundi, Cuba, Togo, Venezuela, Angola,
   Benin, Ivory Coast, Malawi, Nigeria, Senegal, Tanzania, Zambia, Zimbabwe

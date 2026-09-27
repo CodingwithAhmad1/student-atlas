@@ -32,7 +32,7 @@ export const traitSources: Record<TraitKey, TraitSource> = {
     citationId: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601",
     checkKind: "monitored",
     verifiedAt: "2026-09-27",
-    note: "ETA (601) eligible passports on this page; eVisitor (651) list on the 651 page; everyone else is Visitor (600).",
+    note: "ETA (601) eligible passports on this page; eVisitor (651) list on the 651 page; everyone else is Visitor (600). A passport on both lists (most EU passports, British citizens) is evisitor651: it is free and needs no app.",
   },
   auBiometricsRequired: {
     citationId: "immi.homeaffairs.gov.au/biometrics",
@@ -88,7 +88,7 @@ export const traitSources: Record<TraitKey, TraitSource> = {
     checkKind: "manual",
     manualIntervalDays: 180,
     verifiedAt: "2026-09-27",
-    note: "417 and 462 eligible-country lists are loaded client-side and not in the fetched page; check in a browser.",
+    note: "Lists are in the collapsed 'Hold this passport' panel of the first-working-holiday-417 and first-work-holiday-462 sub-pages (client-side; check in a browser). China, India and Vietnam are 462 by ballot ('462-ballot').",
   },
   usVisaBulletinBacklog: {
     citationId: "travel.state.gov/visa-bulletin",
@@ -115,7 +115,7 @@ export const traitSources: Record<TraitKey, TraitSource> = {
     citationId: "ofac.treasury.gov/sanctions-programs",
     checkKind: "monitored",
     verifiedAt: "2026-09-27",
-    note: "OFAC programme list: comprehensive programmes (Cuba, Iran, North Korea, Syria, Russia-related) vs targeted ones.",
+    note: "OFAC programme list. comprehensive = country-wide embargo (Cuba, Iran, North Korea); partial = a country-named targeted programme (e.g. Russia, Belarus, Venezuela, Syria's PAARSS since 2025). Company-level programmes (Chinese Military Companies) do not count.",
   },
 };
 

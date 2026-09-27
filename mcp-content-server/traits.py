@@ -32,7 +32,7 @@ TRAIT_VALUES: dict[str, object] = {
     "auEnglishExempt": bool,
     "usNationalityWorkVisas": ["E-3", "H-1B1", "TN", "E-2"],
     "ukYouthMobility": ("none", "18-30", "18-35", "ballot", "india-yps"),
-    "auWorkingHoliday": ("none", "417", "462"),
+    "auWorkingHoliday": ("none", "417", "462", "462-ballot"),
     "usVisaBulletinBacklog": ("none", "moderate", "severe"),
     "usDiversityVisaEligible": bool,
     "dualNationalityAtHome": ("allowed", "restricted", "prohibited", "unknown"),
@@ -358,7 +358,7 @@ PRESENCE_MEANS: dict[str, object] = {
 
 # Restrict matching to the relevant region of large pages: (start marker, end marker).
 REGIONS: dict[str, tuple[str, str | None]] = {
-    "ukDifferentialEvidence": ("ST 22.1", "ST 23"),
+    "ukDifferentialEvidence": ("Differential evidence requirement for a Student", "Information on the Confirmation"),
     "auHealthExamLikely": ("low risk of TB", None),
     "auEnglishExempt": ("evidence of an English test score", "Note:"),
     "auVisitorStream": ("eligible for an ETA", "If you hold more than one passport"),
@@ -425,7 +425,8 @@ def check_column(trait: str, registry: list[tuple[str, str]], fetch=page_text) -
             presence_only.append(f"{slug}: {'mentioned' if present else 'not mentioned'} (current {json.dumps(current)})")
             continue
         if trait == "auVisitorStream":
-            proposed = "eta601" if present else ("visitor600" if current == "eta601" else current)
+            # eVisitor takes precedence for passports on both lists (free, no app).
+            proposed = current if current == "evisitor651" else ("eta601" if present else ("visitor600" if current == "eta601" else current))
         else:
             proposed = meaning if present else (not meaning)
         if proposed != current:

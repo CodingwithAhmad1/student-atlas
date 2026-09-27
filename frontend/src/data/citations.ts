@@ -446,4 +446,144 @@ export const citations: Record<string, Citation> = {
     url: "https://en.nia.gov.cn/n147418/n147458/c155976/content.html",
     label: "National Immigration Administration of China — Nationality Law of the People's Republic of China",
   },
+  "nigeriaconsulatenewyork.org/faqs-dual-citizenship": {
+    id: "nigeriaconsulatenewyork.org/faqs-dual-citizenship",
+    url: "https://nigeriaconsulatenewyork.org/faqs/",
+    label: "Consulate General of Nigeria, New York — Frequently Asked Questions",
+  },
+  "gob.mx/sre-double-nationality": {
+    id: "gob.mx/sre-double-nationality",
+    url: "https://www.gob.mx/sre/documentos/double-nationality",
+    label: "Secretaría de Relaciones Exteriores (Government of Mexico) — Double Nationality",
+  },
+  "japaneselawtranslation.go.jp/nationality-act": {
+    id: "japaneselawtranslation.go.jp/nationality-act",
+    url: "https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en",
+    label: "Japanese Law Translation (Ministry of Justice) — Nationality Act",
+  },
+  "newyorkpcg.org/dual-citizenship-ra9225": {
+    id: "newyorkpcg.org/dual-citizenship-ra9225",
+    url: "https://newyorkpcg.org/pcgny/consular-services/dual-citizenship/",
+    label: "Philippine Consulate General, New York — Dual Citizenship (RA 9225)",
+  },
+  "egyptembassy.net/dual-citizenship-approval": {
+    id: "egyptembassy.net/dual-citizenship-approval",
+    url: "https://egyptembassy.net/consular-services/immigration-citizenship/dual-citizenship-approval/",
+    label: "Embassy of Egypt, Washington, D.C. — Dual Citizenship Approval",
+  },
+  "auswaertiges-amt.de/nationality-law": {
+    id: "auswaertiges-amt.de/nationality-law",
+    url: "https://www.auswaertiges-amt.de/en/229970-229970",
+    label: "Federal Foreign Office (Germany) — Law on Nationality",
+  },
+  "foreign.go.tz/frequently-asked-question-faq": {
+    id: "foreign.go.tz/frequently-asked-question-faq",
+    url: "https://www.foreign.go.tz/about/frequently-asked-question-faq",
+    label: "Ministry of Foreign Affairs and East African Cooperation (Tanzania) — Frequently Asked Questions",
+  },
+  "esteri.it/citizenship": {
+    id: "esteri.it/citizenship",
+    url: "https://www.esteri.it/en/servizi-opportunita/italiani-all-estero/cittadinanza/",
+    label: "Ministero degli Affari Esteri e della Cooperazione Internazionale (Italy) — Citizenship",
+  },
+  "immigration.go.ke/dual-citizenship": {
+    id: "immigration.go.ke/dual-citizenship",
+    url: "https://immigration.go.ke/dual-citizenship/",
+    label: "Kenya Directorate of Immigration Services — Dual Citizenship",
+  },
+  "cancilleria.gov.co/en/nationality": {
+    id: "cancilleria.gov.co/en/nationality",
+    url: "https://www.cancilleria.gov.co/en/nationality",
+    label: "Colombia Ministry of Foreign Affairs (Cancillería) — Nationality",
+  },
+  "elaw.klri.re.kr/nationality-act": {
+    id: "elaw.klri.re.kr/nationality-act",
+    url: "https://elaw.klri.re.kr/kor_mobile/viewer.do?hseq=61297&type=part&key=7",
+    label: "Korea Legislation Research Institute — Nationality Act (official English translation)",
+  },
+  "washington.mofa.go.ug/citizenship-dual-citizenship": {
+    id: "washington.mofa.go.ug/citizenship-dual-citizenship",
+    url: "https://washington.mofa.go.ug/consular/citizenship-dual-citizenship",
+    label: "Embassy of the Republic of Uganda, Washington — Citizenship & Dual Citizenship",
+  },
+  "csidn.cancilleria.gob.ar/argentine-citizenship": {
+    id: "csidn.cancilleria.gob.ar/argentine-citizenship",
+    url: "https://csidn.cancilleria.gob.ar/en/content/argentine-citizenship-0",
+    label: "Argentina Consulate General in Sydney (Cancillería) — Argentine Citizenship",
+  },
+  "mofa.gov.iq/washington/passport-issuance": {
+    id: "mofa.gov.iq/washington/passport-issuance",
+    url: "https://mofa.gov.iq/washington/passport-issuance/",
+    label: "Embassy of the Republic of Iraq in Washington — Passport Issuance",
+  },
+  "ircc.canada.ca/dual-citizenship": {
+    id: "ircc.canada.ca/dual-citizenship",
+    url: "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=356&top=5",
+    label: "Immigration, Refugees and Citizenship Canada (IRCC) — What is dual citizenship?",
+  },
+  "gov.pl/renunciation-of-polish-citizenship": {
+    id: "gov.pl/renunciation-of-polish-citizenship",
+    url: "https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship",
+    label: "Ministry of the Interior and Administration (Gov.pl) — Renunciation of Polish citizenship",
+  },
+  "malaysia.gov.my/kewarganegaraan": {
+    id: "malaysia.gov.my/kewarganegaraan",
+    url: "https://www.malaysia.gov.my/en/categories/personal-identification/kewarganegaraan",
+    label: "MyGovernment (Malaysia.gov.my) — Citizenship (Kewarganegaraan)",
+  },
+  "law.moj.gov.tw/nationality-act": {
+    id: "law.moj.gov.tw/nationality-act",
+    url: "https://law.moj.gov.tw/ENG/LawClass/LawAll.aspx?pcode=D0030001",
+    label: "Republic of China (Taiwan) Ministry of Justice, Laws & Regulations Database — Nationality Act",
+  },
+  "hc-london.gov.lk/dual-citizenship": {
+    id: "hc-london.gov.lk/dual-citizenship",
+    url: "https://www.hc-london.gov.lk/en/dual-citizenship",
+    label: "High Commission of Sri Lanka in London (Ministry of Foreign Affairs, Sri Lanka) — Dual Citizenship",
+  },
+  "zambiaembassy.org/dual-citizenship": {
+    id: "zambiaembassy.org/dual-citizenship",
+    url: "https://www.zambiaembassy.org/page/dual-citizenship",
+    label: "Embassy of the Republic of Zambia in Washington, D.C. — Dual Citizenship",
+  },
+  "ind.nl/losing-dutch-nationality": {
+    id: "ind.nl/losing-dutch-nationality",
+    url: "https://ind.nl/en/dutch-citizenship/losing-dutch-nationality",
+    label: "Immigration and Naturalisation Service (IND), Netherlands — Losing Dutch Nationality",
+  },
+  "zimgaborone.gov.zw/dual-citizenship": {
+    id: "zimgaborone.gov.zw/dual-citizenship",
+    url: "https://www.zimgaborone.gov.zw/?p=5732",
+    label: "Embassy of Zimbabwe in Botswana — Dual Citizenship",
+  },
+  "diplomatie.belgium.be/nationality": {
+    id: "diplomatie.belgium.be/nationality",
+    url: "https://hongkongmacau.diplomatie.belgium.be/en/consular-services/nationality",
+    label: "Belgium FPS Foreign Affairs (Embassy in Hong Kong & Macau) — Nationality",
+  },
+  "bmeia.gv.at/dual-citizenship": {
+    id: "bmeia.gv.at/dual-citizenship",
+    url: "https://www.bmeia.gv.at/en/travel-stay/living-abroad/citizenship-and-union-citizenship/dual-citizenship",
+    label: "Austrian Federal Ministry for European and International Affairs (BMEIA) — Dual Citizenship",
+  },
+  "mzv.gov.cz/czech-citizenship-legislation": {
+    id: "mzv.gov.cz/czech-citizenship-legislation",
+    url: "https://mzv.gov.cz/jakarta/en/consular_affairs/certficate_of_czech_citizenship/czech_citizenship_legislation_1/index.html",
+    label: "Ministry of Foreign Affairs of the Czech Republic, Embassy in Jakarta — Czech Citizenship Legislation",
+  },
+  "migrationsverket.se/what-swedish-citizenship-means": {
+    id: "migrationsverket.se/what-swedish-citizenship-means",
+    url: "https://www.migrationsverket.se/en/you-want-to-apply/swedish-citizenship/what-swedish-citizenship-means.html",
+    label: "Swedish Migration Agency (Migrationsverket) — What Swedish citizenship means",
+  },
+  "ica.gov.pg/citizenship-and-dual-citizenship": {
+    id: "ica.gov.pg/citizenship-and-dual-citizenship",
+    url: "https://ica.gov.pg/citizenship/citizenship-and-dual-citizenship",
+    label: "Papua New Guinea Immigration and Citizenship Authority (ICA) — Citizenship and Dual Citizenship",
+  },
+  "washington.mfa.gov.hu/about-hungarian-citizenship": {
+    id: "washington.mfa.gov.hu/about-hungarian-citizenship",
+    url: "https://washington.mfa.gov.hu/en/about-hungarian-citizenship",
+    label: "Embassy of Hungary in Washington, D.C. — About Hungarian Citizenship",
+  },
 };

@@ -22,7 +22,8 @@ export type UsEntryRestriction = "none" | "partial" | "full";
 export type AuVisitorStream = "eta601" | "evisitor651" | "visitor600";
 export type UsNationalityWorkVisa = "E-3" | "H-1B1" | "TN" | "E-2";
 export type UkYouthMobility = "none" | "18-30" | "18-35" | "ballot" | "india-yps";
-export type AuWorkingHoliday = "none" | "417" | "462";
+/** "462-ballot": eligible for the 462 only through the pre-application ballot (China, India, Vietnam). */
+export type AuWorkingHoliday = "none" | "417" | "462" | "462-ballot";
 export type VisaBulletinBacklog = "none" | "moderate" | "severe";
 export type DualNationalityRule = "allowed" | "restricted" | "prohibited" | "unknown";
 export type SanctionsRegime = "none" | "partial" | "comprehensive";

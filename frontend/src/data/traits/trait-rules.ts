@@ -244,10 +244,17 @@ export function generateOverlay(
   }
   const wh = traits.auWorkingHoliday.value;
   if (wh !== "none") {
+    const whPage = wh === "417" ? "417" : "462";
+    const whVisa =
+      wh === "417"
+        ? "can also apply for the **Working Holiday visa (subclass 417)**"
+        : wh === "462"
+          ? "can also apply for the **Work and Holiday visa (subclass 462)**"
+          : "can also apply for the **Work and Holiday visa (subclass 462)** if they are randomly selected in its pre-application ballot";
     addCallout("work", "post-study-work", "AU", [
       p(
-        `${label} nationals aged 18 to 30 (35 for some countries) can also apply for the **${wh === "417" ? "Working Holiday visa (subclass 417)" : "Work and Holiday visa (subclass 462)"}**: 12 months in Australia with full work rights and no sponsor. ` +
-          `${asOf(traits.auWorkingHoliday)} [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-${wh}]`
+        `${label} nationals aged 18 to 30 (35 for some countries) ${whVisa}: 12 months in Australia with full work rights and no sponsor. ` +
+          `${asOf(traits.auWorkingHoliday)} [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/work-holiday-${whPage}]`
       ),
     ]);
   }
