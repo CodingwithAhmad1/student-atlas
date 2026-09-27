@@ -1,16 +1,15 @@
-import type { ContentBlock, ResolvedBlock } from "@/data/types";
+import type { ContentBlock } from "@/data/types";
 import { ParsedText } from "./parsed-text";
 
 interface BlockProps {
   block: ContentBlock;
-  citationMap: Map<string, number>;
 }
 
-function ParagraphBlock({ block, citationMap }: BlockProps) {
+function ParagraphBlock({ block }: BlockProps) {
   if (block.type !== "paragraph") return null;
   return (
     <p className="text-foreground leading-7">
-      <ParsedText text={block.text} citationMap={citationMap} />
+      <ParsedText text={block.text} />
     </p>
   );
 }
@@ -26,33 +25,33 @@ function HeadingBlock({ block }: { block: ContentBlock }) {
   return <Tag className={sizes[block.level]}>{block.text}</Tag>;
 }
 
-function BulletListBlock({ block, citationMap }: BlockProps) {
+function BulletListBlock({ block }: BlockProps) {
   if (block.type !== "bullet-list") return null;
   return (
     <ul className="list-disc pl-6 space-y-1.5 text-foreground">
       {block.items.map((item, i) => (
         <li key={i} className="leading-7">
-          <ParsedText text={item} citationMap={citationMap} />
+          <ParsedText text={item} />
         </li>
       ))}
     </ul>
   );
 }
 
-function OrderedListBlock({ block, citationMap }: BlockProps) {
+function OrderedListBlock({ block }: BlockProps) {
   if (block.type !== "ordered-list") return null;
   return (
     <ol className="list-decimal pl-6 space-y-1.5 text-foreground">
       {block.items.map((item, i) => (
         <li key={i} className="leading-7">
-          <ParsedText text={item} citationMap={citationMap} />
+          <ParsedText text={item} />
         </li>
       ))}
     </ol>
   );
 }
 
-function KeyValueListBlock({ block, citationMap }: BlockProps) {
+function KeyValueListBlock({ block }: BlockProps) {
   if (block.type !== "key-value-list") return null;
   return (
     <dl className="space-y-1 text-sm">
@@ -62,7 +61,7 @@ function KeyValueListBlock({ block, citationMap }: BlockProps) {
             {item.label}:
           </dt>
           <dd className="text-foreground">
-            <ParsedText text={item.value} citationMap={citationMap} />
+            <ParsedText text={item.value} />
           </dd>
         </div>
       ))}
@@ -70,7 +69,7 @@ function KeyValueListBlock({ block, citationMap }: BlockProps) {
   );
 }
 
-function StepBlock({ block, citationMap }: BlockProps) {
+function StepBlock({ block }: BlockProps) {
   if (block.type !== "step") return null;
   return (
     <div className="mt-4">
@@ -78,54 +77,25 @@ function StepBlock({ block, citationMap }: BlockProps) {
         Step {block.number} — {block.title}
       </h4>
       <p className="text-foreground leading-7">
-        <ParsedText text={block.body} citationMap={citationMap} />
+        <ParsedText text={block.body} />
       </p>
     </div>
   );
 }
 
-export function ContentBlockRenderer({ block, citationMap }: BlockProps) {
+export function ContentBlockRenderer({ block }: BlockProps) {
   switch (block.type) {
     case "paragraph":
-      return <ParagraphBlock block={block} citationMap={citationMap} />;
+      return <ParagraphBlock block={block} />;
     case "heading":
       return <HeadingBlock block={block} />;
     case "bullet-list":
-      return <BulletListBlock block={block} citationMap={citationMap} />;
+      return <BulletListBlock block={block} />;
     case "ordered-list":
-      return <OrderedListBlock block={block} citationMap={citationMap} />;
+      return <OrderedListBlock block={block} />;
     case "key-value-list":
-      return <KeyValueListBlock block={block} citationMap={citationMap} />;
+      return <KeyValueListBlock block={block} />;
     case "step":
-      return <StepBlock block={block} citationMap={citationMap} />;
+      return <StepBlock block={block} />;
   }
-}
-
-/**
- * Renders a ResolvedBlock — either as a normal content block or
- * wrapped in a nationality callout aside.
- */
-export function ResolvedBlockRenderer({
-  resolved,
-  citationMap,
-}: {
-  resolved: ResolvedBlock;
-  citationMap: Map<string, number>;
-}) {
-  if (resolved.isCallout) {
-    return (
-      <aside className="border-l-4 border-amber-400 bg-amber-50 dark:bg-amber-950/20 p-4 rounded-r-lg my-4">
-        <p className="text-xs font-medium text-amber-700 dark:text-amber-400 mb-1 uppercase tracking-wide">
-          {resolved.nationalityLabel ?? "Nationality"}-specific
-        </p>
-        <div className="text-sm text-amber-900 dark:text-amber-200 leading-6">
-          <ContentBlockRenderer
-            block={resolved.block}
-            citationMap={citationMap}
-          />
-        </div>
-      </aside>
-    );
-  }
-  return <ContentBlockRenderer block={resolved.block} citationMap={citationMap} />;
 }

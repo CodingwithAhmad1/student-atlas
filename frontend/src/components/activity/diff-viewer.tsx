@@ -21,9 +21,9 @@ export function DiffViewer({
               key={i}
               className={cn(
                 "px-1",
-                isAdd && "bg-green-50 text-green-800",
-                isDel && "bg-red-50 text-red-800",
-                isHunk && "text-blue-600",
+                isAdd && "bg-green-50 text-green-800 dark:bg-green-950/40 dark:text-green-300",
+                isDel && "bg-red-50 text-red-800 dark:bg-red-950/40 dark:text-red-300",
+                isHunk && "text-blue-600 dark:text-blue-400",
                 !isAdd && !isDel && !isHunk && "text-muted-foreground"
               )}
             >

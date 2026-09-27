@@ -122,7 +122,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian nationals must complete a tuberculosis (TB) test at an approved clinic before applying for a UK Student visa. The IHS (Immigration Health Surcharge) of \u00A3776 per year is a significant additional cost that Indian families should budget for from the outset \u2014 for a 3-year degree, this amounts to \u00A32,328 paid upfront. India\u2019s addition to the UK ETA scheme for tourist visits does NOT affect the student visa process \u2014 a full Student visa application with CAS and supporting documents is still required.",
+                text: "Indian nationals must complete a tuberculosis (TB) test at an approved clinic before applying for a UK Student visa. The IHS (Immigration Health Surcharge) of \u00A3776 per year is a significant additional cost that Indian families should budget for from the outset \u2014 for a 3-year degree, this amounts to about \u00A32,716 paid upfront. India\u2019s addition to the UK ETA scheme for tourist visits does NOT affect the student visa process \u2014 a full Student visa application with CAS and supporting documents is still required.",
               },
             ],
           },
@@ -305,7 +305,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Skilled Worker visa salary threshold of \u00A338,700 translates to approximately INR 42 lakh per year at current exchange rates. UK graduate salaries in technology and professional services typically reach this threshold within 1-2 years. Critically, the UK has NO nationality-based queue for the Skilled Worker visa or ILR \u2014 an Indian graduate faces the same timeline as any other nationality. This predictability is a major advantage over the US pathway for Indian families. After 5 years of continuous residence, ILR is achievable regardless of country of birth.",
+                text: "The Skilled Worker visa salary threshold of \u00A341,700 translates to approximately INR 48 lakh per year at current exchange rates. UK graduate salaries in technology and professional services typically reach this threshold within 1-2 years. Critically, the UK has NO nationality-based queue for the Skilled Worker visa or ILR \u2014 an Indian graduate faces the same timeline as any other nationality. This predictability is a major advantage over the US pathway for Indian families. After 5 years of continuous residence, ILR is achievable regardless of country of birth.",
               },
             ],
           },
@@ -365,7 +365,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "India does not permit dual nationality. An Indian national who naturalises as a citizen of the United States, United Kingdom, or Australia is required to surrender their Indian passport. However, India offers the [TERM: oci|**Overseas Citizen of India (OCI)**] card to former Indian citizens and their descendants. The OCI card provides: lifelong right to visit and work in India without a visa, exemption from foreigner registration requirements, and broadly equivalent rights to Indian citizens in most areas except voting, holding public office, and purchasing agricultural land. The OCI card is widely regarded as the practical equivalent of dual nationality for most purposes, and the vast majority of Indian-origin naturalised citizens of the US, UK, and Australia hold an OCI card. Families should apply for OCI promptly after naturalisation to maintain seamless access to India. [CITE: mha.gov.in/oci]",
+                text: "India does not permit dual nationality. An Indian national who naturalises as a citizen of the United States, United Kingdom, or Australia is required to surrender their Indian passport. However, India offers the [TERM: oci|**Overseas Citizen of India (OCI)**] card to former Indian citizens and their descendants. The OCI card provides: lifelong right to visit and work in India without a visa, exemption from foreigner registration requirements, and broadly equivalent rights to Indian citizens in most areas except voting, holding public office, and purchasing agricultural land. The OCI card is widely regarded as the practical equivalent of dual nationality for most purposes, and the vast majority of Indian-origin naturalised citizens of the US, UK, and Australia hold an OCI card. Families should apply for OCI promptly after naturalisation to maintain seamless access to India. [CITE: ociservices.gov.in]",
               },
             ],
           },

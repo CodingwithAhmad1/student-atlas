@@ -77,7 +77,7 @@ export const workVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "You apply for the Graduate Route online before your Student visa expires. The application fee is £822. There is no points requirement and no cap on numbers. [CITE: gov.uk/graduate-visa/apply]",
+                text: "You apply for the Graduate Route online before your Student visa expires. The application fee is £937, and the Immigration Health Surcharge (£1,035 per year) is paid upfront too. Applications made from 1 January 2027 are granted for 18 months rather than 2 years (PhD graduates still get 3 years). There is no points requirement and no cap on numbers. [CITE: gov.uk/graduate-visa/apply]",
               },
             },
             {
@@ -167,7 +167,7 @@ export const workVisa: Section = {
               id: "au-psw-application",
               block: {
                 type: "paragraph",
-                text: "The Subclass 485 application must be made within six months of finishing your course. You apply online through ImmiAccount. The fee is AUD $1,895. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/fees-and-charges]",
+                text: "The Subclass 485 application must be made within six months of finishing your course. You apply online through ImmiAccount. The fee is AUD $5,750 (from 1 July 2026). [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/fees-and-charges]",
               },
             },
           ],
@@ -246,7 +246,7 @@ export const workVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Large employers in technology (Google, Microsoft, Amazon, Meta), finance (Goldman Sachs, JP Morgan), consulting (McKinsey, Deloitte, Accenture), and pharmaceuticals routinely sponsor H-1B visas. Most mid-size and small employers do not — either because of cost, administrative complexity, or risk aversion. The total cost of an H-1B petition to an employer is typically $5,000 to $15,000 in legal and filing fees, plus the prevailing wage obligation.",
+                text: "Large employers in technology (Google, Microsoft, Amazon, Meta), finance (Goldman Sachs, JP Morgan), consulting (McKinsey, Deloitte, Accenture), and pharmaceuticals routinely sponsor H-1B visas. Most mid-size and small employers do not — either because of cost, administrative complexity, or risk aversion. The total cost of an H-1B petition to an employer is typically $5,000 to $15,000 in legal and filing fees, plus the prevailing wage obligation. Since 21 September 2025, new petitions for workers outside the US have also carried a $100,000 payment under a presidential proclamation, which has made many employers far more selective.",
               },
             },
             {
@@ -323,8 +323,8 @@ export const workVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  "General threshold: £38,700 per year, or the going rate for the specific occupation code, whichever is higher",
-                  "New entrant rate (for recent graduates, under-26, or switching from Graduate Route): £30,960 per year",
+                  "General threshold: £41,700 per year, or the going rate for the specific occupation code, whichever is higher",
+                  "New entrant rate (for recent graduates, under-26, or switching from Graduate Route): £33,400 per year",
                 ],
               },
             },
@@ -388,7 +388,7 @@ export const workVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The employer must be an approved sponsor. The role must be on the relevant skilled occupation list. The salary must meet the [TERM: tsmit|Temporary Skilled Migration Income Threshold (TSMIT)], currently AUD $70,000 per year. [CITE: immi.homeaffairs.gov.au/tsmit]",
+                text: "The employer must be an approved sponsor. The role must be on the relevant skilled occupation list. The salary must meet the [TERM: tsmit|Temporary Skilled Migration Income Threshold (TSMIT)] — now called the Core Skills Income Threshold (CSIT) — of about AUD $79,400 per year from 1 July 2026. [CITE: immi.homeaffairs.gov.au/tsmit]",
               },
             },
             {

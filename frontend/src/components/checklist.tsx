@@ -7,10 +7,9 @@ import { cn } from "@/lib/utils";
 interface ChecklistProps {
   /** Contiguous run of step blocks to render as a checklist */
   steps: Extract<ContentBlock, { type: "step" }>[];
-  citationMap: Map<string, number>;
 }
 
-export function Checklist({ steps, citationMap }: ChecklistProps) {
+export function Checklist({ steps }: ChecklistProps) {
   const [checked, setChecked] = useState<Set<number>>(() => new Set());
   const [expanded, setExpanded] = useState<Set<number>>(() => new Set());
 
@@ -101,7 +100,7 @@ export function Checklist({ steps, citationMap }: ChecklistProps) {
               {/* Expandable detail */}
               {hasBody && isExpanded && (
                 <div className="ml-10 mb-2 pl-2 border-l-2 border-muted text-sm text-muted-foreground leading-relaxed">
-                  <ParsedText text={step.body} citationMap={citationMap} />
+                  <ParsedText text={step.body} />
                 </div>
               )}
             </li>

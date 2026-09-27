@@ -1,98 +1,33 @@
-import { glossary } from "@/data/glossary";
+import type { ReactNode } from "react";
+import { INLINE_REGEX, termDisplay } from "@/lib/inline-markup";
 import { InfoTip } from "./info-tip";
 
-interface ParsedTextProps {
-  text: string;
-  citationMap: Map<string, number>;
-}
-
 /**
- * Unified inline-marker regex. Handles three patterns in a single pass:
- *   1. [CITE: id]           → citation superscript
- *   2. [TERM: key]          → glossary tooltip (label from glossary)
- *      [TERM: key|display]  → glossary tooltip (custom display text)
- *   3. **bold**             → <strong>
+ * Renders inline markup. Citation markers are not shown inline — the page's
+ * Sources pill and footer list them instead (see collectCitations).
  */
-const INLINE_REGEX =
-  /\[CITE:\s*([^\]]+)\]|\[TERM:\s*([^\]|]+?)(?:\|([^\]]+))?\]|(\*\*[^*]+\*\*)/g;
-
-type Token =
-  | { type: "text"; value: string }
-  | { type: "cite"; citeId: string; num: number }
-  | { type: "term"; key: string; display: string }
-  | { type: "bold"; value: string };
-
-function tokenize(
-  text: string,
-  citationMap: Map<string, number>
-): Token[] {
-  const tokens: Token[] = [];
+export function ParsedText({ text }: { text: string }) {
+  const parts: ReactNode[] = [];
   let lastIndex = 0;
 
   for (const match of text.matchAll(INLINE_REGEX)) {
-    // Push plain text before this match
     if (match.index > lastIndex) {
-      tokens.push({ type: "text", value: text.slice(lastIndex, match.index) });
+      parts.push(text.slice(lastIndex, match.index));
     }
-
-    if (match[1] != null) {
-      // Citation: [CITE: id]
-      const citeId = match[1].trim();
-      if (!citationMap.has(citeId)) {
-        citationMap.set(citeId, citationMap.size + 1);
-      }
-      tokens.push({ type: "cite", citeId, num: citationMap.get(citeId)! });
-    } else if (match[2] != null) {
-      // Term: [TERM: key] or [TERM: key|display]
-      const key = match[2].trim();
-      const display = match[3]?.trim() ?? glossary[key]?.label ?? key;
-      tokens.push({ type: "term", key, display });
+    if (match[2] != null) {
+      parts.push(
+        <InfoTip
+          key={match.index}
+          termKey={match[2].trim()}
+          displayText={termDisplay(match[2], match[3])}
+        />
+      );
     } else if (match[4] != null) {
-      // Bold: **text**
-      tokens.push({ type: "bold", value: match[4].slice(2, -2) });
+      parts.push(<strong key={match.index}>{match[4].slice(2, -2)}</strong>);
     }
-
     lastIndex = match.index + match[0].length;
   }
+  if (lastIndex < text.length) parts.push(text.slice(lastIndex));
 
-  // Trailing plain text
-  if (lastIndex < text.length) {
-    tokens.push({ type: "text", value: text.slice(lastIndex) });
-  }
-
-  return tokens;
-}
-
-export function ParsedText({ text, citationMap }: ParsedTextProps) {
-  const tokens = tokenize(text, citationMap);
-
-  return (
-    <>
-      {tokens.map((token, i) => {
-        switch (token.type) {
-          case "text":
-            return <span key={i}>{token.value}</span>;
-
-          case "bold":
-            return <strong key={i}>{token.value}</strong>;
-
-          case "term":
-            return (
-              <InfoTip
-                key={i}
-                termKey={token.key}
-                displayText={token.display}
-              />
-            );
-
-          case "cite": {
-            // Citation map is already populated during tokenization.
-            // Inline markers are hidden — sources are shown via the
-            // Sources pill + footer instead.
-            return null;
-          }
-        }
-      })}
-    </>
-  );
+  return <>{parts}</>;
 }

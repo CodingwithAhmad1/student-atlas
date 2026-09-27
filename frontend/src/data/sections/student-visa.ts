@@ -82,12 +82,12 @@ export const studentVisa: Section = {
                   {
                     label: "Visa fee",
                     value:
-                      "\u00A3490 (applying from outside the UK) [CITE: gov.uk/student-visa/apply]",
+                      "\u00A3558 (applying from inside or outside the UK) [CITE: gov.uk/student-visa/apply]",
                   },
                   {
                     label: "[TERM: ihs|Immigration Health Surcharge (IHS)]",
                     value:
-                      "\u00A3776 per year of study. For a three-year degree, this amounts to \u00A32,328 paid upfront at the time of application. This is a significant and often unexpected cost for families. [CITE: gov.uk/healthcare-immigration-application]",
+                      "\u00A3776 per year of study. For a three-year degree (charged on the course plus 4 months), this amounts to about \u00A32,716 paid upfront at the time of application. This is a significant and often unexpected cost for families. [CITE: gov.uk/healthcare-immigration-application]",
                   },
                   {
                     label: "Work rights",
@@ -132,7 +132,7 @@ export const studentVisa: Section = {
                   {
                     label: "Visa fee",
                     value:
-                      "AUD $710 [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/fees]",
+                      "AUD $2,500 (from 1 July 2026) [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/fees]",
                   },
                   {
                     label: "[TERM: oshc|Overseas Student Health Cover (OSHC)]",
@@ -285,8 +285,8 @@ export const studentVisa: Section = {
               block: {
                 type: "bullet-list",
                 items: [
-                  "For courses in London: \u00A31,334 per month for up to 9 months (i.e. \u00A312,006 if 9 months of funds must be shown)",
-                  "For courses outside London: \u00A31,023 per month for up to 9 months (i.e. \u00A39,207)",
+                  "For courses in London: \u00A31,529 per month for up to 9 months (i.e. \u00A313,761 if 9 months of funds must be shown)",
+                  "For courses outside London: \u00A31,171 per month for up to 9 months (i.e. \u00A310,539)",
                   "Additionally, the first year's tuition fees must be shown if not already paid",
                 ],
               },
@@ -320,7 +320,7 @@ export const studentVisa: Section = {
                   "CAS reference number (entered into the online application)",
                   "Proof of English language proficiency \u2014 typically [TERM: ielts|IELTS] Academic with a minimum score of 6.0 overall (some universities and visa categories require higher). IELTS for [TERM: ukvi|UKVI] is a specific version required for visa purposes; standard IELTS is not always accepted. [CITE: gov.uk/student-visa/english-language]",
                   "Proof of parental or guardian consent if the student is under 18",
-                  "Tuberculosis test results \u2014 if you're travelling to the UK for more than six months, you'll need a certificate from an approved clinic in your country of residence confirming you do not have active tuberculosis [CITE: gov.uk/tb-test-visa]",
+                  "Tuberculosis test results \u2014 if you're travelling to the UK for more than six months, you'll need a certificate from an approved clinic in your country of residence confirming you do not have active tuberculosis [CITE: gov.uk/tb-test-visa/united-arab-emirates]",
                 ],
               },
             },
@@ -465,7 +465,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 4,
                 title: "Pay the MRV fee",
-                body: "The $185 visa application fee ([TERM: mrv-fee]) is paid through the US Travel Docs portal. [CITE: ustraveldocs.com]",
+                body: "The $185 visa application fee ([TERM: mrv-fee]) is paid through the appointment and payment system used by the US Embassy or Consulate in your country. [CITE: travel.state.gov/fees]",
               },
             },
             {
@@ -474,7 +474,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 5,
                 title: "Book the interview appointment",
-                body: "Appointments are available at the nearest US Embassy or Consulate. Book through the US Travel Docs system. [CITE: ustraveldocs.com]",
+                body: "Appointments are available at the nearest US Embassy or Consulate. Book through the appointment system linked from that embassy's website. [CITE: travel.state.gov/student-visa]",
               },
             },
             {
@@ -604,7 +604,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 4,
                 title: "Submit the online application",
-                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, [TERM: gte|GTE] statement, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $710 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, [TERM: gte|GTE] statement, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $2,500 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
               },
             },
             {

@@ -23,7 +23,7 @@ export const touristVisaUkEta: Profile = {
         items: [
           {
             label: "ETA fee",
-            value: "\u00A310 [CITE: gov.uk/uk-eta]",
+            value: "\u00A320 [CITE: gov.uk/uk-eta]",
           },
           {
             label: "Application",
@@ -77,7 +77,7 @@ export const touristVisaUkEta: Profile = {
           "Valid passport",
           "A photograph taken using the app\u2019s face-scan feature",
           "A valid email address",
-          "Payment of \u00A310 by card",
+          "Payment of \u00A320 by card",
         ],
       },
     },
@@ -92,7 +92,7 @@ export const touristVisaUkEta: Profile = {
       id: "uk-eta-refused",
       block: {
         type: "paragraph",
-        text: "If your ETA application is refused, you can apply for a **UK Standard Visitor Visa** instead. This requires a full application with supporting documents and a fee of \u00A3115. [CITE: gov.uk/standard-visitor-visa]",
+        text: "If your ETA application is refused, you can apply for a **UK Standard Visitor Visa** instead. This requires a full application with supporting documents and a fee of \u00A3135. [CITE: gov.uk/standard-visitor-visa]",
       },
     },
     {

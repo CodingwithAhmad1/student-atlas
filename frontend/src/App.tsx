@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom"
-import { PreferencesProvider } from "@/context/PreferencesContext"
+import { lazy, Suspense } from "react"
+import { BrowserRouter, Link, Navigate, Outlet, Route, Routes, useLocation, useParams } from "react-router-dom"
 import { AppSidebar } from "@/components/app-sidebar"
 import {
   Breadcrumb,
@@ -9,154 +9,124 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
-import {
-  SidebarInset,
-  SidebarProvider,
-} from "@/components/ui/sidebar"
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { WelcomeFab } from "@/components/welcome-fab"
-import { Page } from "@/pages/page"
-import { HomePage } from "@/pages/home-page"
-import { AboutPage } from "@/pages/about-page"
-import { ContentPage } from "@/pages/content-page"
-import { CitationsPage } from "@/pages/citations-page"
-import { ReportPage } from "@/pages/report-page"
-import { TechnicalExplainerPage } from "@/pages/technical-explainer-page"
-import { MonitoringLogPage } from "@/pages/monitoring-log-page"
-import { ActivityPage } from "@/pages/activity-page"
+import { PreferencesProvider } from "@/context/PreferencesContext"
+import { sectionRegistry, sections } from "@/data/sections"
 import {
   ACTIVITY_ROUTE,
   DASHBOARD_ROUTE,
-  MONITORING_LOG_ROUTE,
+  LEGACY_MONITORING_LOG_PATH,
+  SOURCE_HEALTH_ROUTE,
   TECHNICAL_EXPLAINER_ROUTE,
 } from "@/lib/routes"
+import { AboutPage } from "@/pages/about-page"
+import { ContentPage } from "@/pages/content-page"
+import { HomePage } from "@/pages/home-page"
+import { NotFoundPage } from "@/pages/not-found-page"
 
-const routeMap: Record<string, { section: string; page: string }> = {
-  "/visit/entry-requirement": { section: "Tourist visa", page: "Entry requirement" },
-  "/visit/how-to-apply": { section: "Tourist visa", page: "How to apply" },
-  "/student/overview": { section: "Student visa", page: "Overview" },
-  "/student/documents": { section: "Student visa", page: "Documents" },
-  "/student/application-process": { section: "Student visa", page: "Application process" },
-  "/student/after-arrival": { section: "Student visa", page: "After arrival" },
-  "/work/post-study-work": { section: "Work visa", page: "Post-study work" },
-  "/work/getting-sponsored": { section: "Work visa", page: "Getting sponsored" },
-  "/residency/permanent-residency": { section: "Residency pathway", page: "Permanent residency" },
-  "/residency/citizenship": { section: "Residency pathway", page: "Citizenship" },
-  "/residency/dual-nationality": { section: "Residency pathway", page: "Dual nationality" },
-  "/report": { section: "Generate report", page: "" },
-  "/citations": { section: "Citations", page: "" },
-  [ACTIVITY_ROUTE.path]: { section: ACTIVITY_ROUTE.label, page: "" },
-  [TECHNICAL_EXPLAINER_ROUTE.path]: {
-    section: TECHNICAL_EXPLAINER_ROUTE.label,
-    page: "",
-  },
-  [MONITORING_LOG_ROUTE.path]: {
-    section: TECHNICAL_EXPLAINER_ROUTE.label,
-    page: MONITORING_LOG_ROUTE.label,
-  },
+// Less-visited pages load on demand to keep the initial bundle small.
+const ActivityPage = lazy(() => import("@/pages/activity-page").then((m) => ({ default: m.ActivityPage })))
+const CitationsPage = lazy(() => import("@/pages/citations-page").then((m) => ({ default: m.CitationsPage })))
+const ReportPage = lazy(() => import("@/pages/report-page").then((m) => ({ default: m.ReportPage })))
+const TechnicalExplainerPage = lazy(() =>
+  import("@/pages/technical-explainer-page").then((m) => ({ default: m.TechnicalExplainerPage }))
+)
+
+/** Breadcrumb labels for non-content pages. */
+const PAGE_LABELS: Record<string, string> = {
+  "/report": "Generate report",
+  "/citations": "Citations",
+  [ACTIVITY_ROUTE.path]: ACTIVITY_ROUTE.label,
+  [TECHNICAL_EXPLAINER_ROUTE.path]: TECHNICAL_EXPLAINER_ROUTE.label,
 }
 
 function AppBreadcrumb() {
-  const location = useLocation()
-  const route = routeMap[location.pathname]
+  const { pathname } = useLocation()
+  const [sectionSlug, subSlug] = pathname.split("/").filter(Boolean)
+  const section = sectionRegistry.get(sectionSlug ?? "")
+  const sub = section?.subSections.find((s) => s.slug === subSlug)
 
-  if (!route) return null
-
+  if (section && sub) {
+    return (
+      <Breadcrumb>
+        <BreadcrumbList>
+          <BreadcrumbItem>
+            <BreadcrumbLink render={<Link to={`/${section.slug}`} />}>{section.title}</BreadcrumbLink>
+          </BreadcrumbItem>
+          <BreadcrumbSeparator />
+          <BreadcrumbItem>
+            <BreadcrumbPage>{sub.title}</BreadcrumbPage>
+          </BreadcrumbItem>
+        </BreadcrumbList>
+      </Breadcrumb>
+    )
+  }
+  const label = PAGE_LABELS[pathname]
+  if (!label) return null
   return (
     <Breadcrumb>
       <BreadcrumbList>
         <BreadcrumbItem>
-          {route.page ? (
-            <BreadcrumbLink href="#">{route.section}</BreadcrumbLink>
-          ) : (
-            <BreadcrumbPage>{route.section}</BreadcrumbPage>
-          )}
+          <BreadcrumbPage>{label}</BreadcrumbPage>
         </BreadcrumbItem>
-        {route.page && (
-          <>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>{route.page}</BreadcrumbPage>
-            </BreadcrumbItem>
-          </>
-        )}
       </BreadcrumbList>
     </Breadcrumb>
   )
 }
 
 function AppLayout() {
-  const location = useLocation()
-  const route = routeMap[location.pathname]
-  const pageTitle = route ? (route.page || route.section) : ""
-
-  // Derive section and subsection slugs from URL
-  const pathParts = location.pathname.split("/").filter(Boolean)
-  const sectionSlug = pathParts[0] ?? ""
-  const subSectionSlug = pathParts[1] ?? ""
-
-  const isAbout = location.pathname === "/"
-  const isDashboard = location.pathname === DASHBOARD_ROUTE.path
-
-  const isContentRoute =
-    sectionSlug &&
-    subSectionSlug &&
-    ["visit", "student", "work", "residency"].includes(sectionSlug)
-
-  const isCitationsRoute = location.pathname === "/citations"
-  const isReportRoute = location.pathname === "/report"
-  const isActivityRoute = location.pathname === ACTIVITY_ROUTE.path
-  const isMonitoringRoute = location.pathname === MONITORING_LOG_ROUTE.path
-  const isTechnicalExplainerRoute =
-    location.pathname === TECHNICAL_EXPLAINER_ROUTE.path
-
   return (
     <TooltipProvider>
-    <SidebarProvider>
-      <AppSidebar />
-      <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-          <div className="flex items-center gap-2 px-4">
-            <AppBreadcrumb />
-          </div>
-        </header>
-        {isAbout ? (
-          <AboutPage />
-        ) : isDashboard ? (
-          <HomePage />
-        ) : isReportRoute ? (
-          <ReportPage />
-        ) : isCitationsRoute ? (
-          <CitationsPage />
-        ) : isActivityRoute ? (
-          <ActivityPage />
-        ) : isMonitoringRoute ? (
-          <MonitoringLogPage />
-        ) : isTechnicalExplainerRoute ? (
-          <TechnicalExplainerPage />
-        ) : isContentRoute ? (
-          <ContentPage sectionSlug={sectionSlug} subSectionSlug={subSectionSlug} />
-        ) : (
-          <Page title={pageTitle} />
-        )}
-      </SidebarInset>
-      <WelcomeFab />
-    </SidebarProvider>
+      <SidebarProvider>
+        <AppSidebar />
+        <SidebarInset>
+          <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+            <div className="flex items-center gap-2 px-4">
+              <AppBreadcrumb />
+            </div>
+          </header>
+          <Suspense fallback={<div className="p-8 text-sm text-muted-foreground">Loading…</div>}>
+            <Outlet />
+          </Suspense>
+        </SidebarInset>
+        <WelcomeFab />
+      </SidebarProvider>
     </TooltipProvider>
   )
+}
+
+function ContentRoute() {
+  const { section = "", sub = "" } = useParams()
+  const known = sectionRegistry.get(section)?.subSections.some((s) => s.slug === sub)
+  return known ? <ContentPage sectionSlug={section} subSectionSlug={sub} /> : <NotFoundPage />
 }
 
 export default function App() {
   return (
     <BrowserRouter>
       <PreferencesProvider>
-      <Routes>
-        <Route path="/visit" element={<Navigate to="/visit/entry-requirement" replace />} />
-        <Route path="/student" element={<Navigate to="/student/overview" replace />} />
-        <Route path="/work" element={<Navigate to="/work/post-study-work" replace />} />
-        <Route path="/residency" element={<Navigate to="/residency/permanent-residency" replace />} />
-        <Route path="*" element={<AppLayout />} />
-      </Routes>
+        <Routes>
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<AboutPage />} />
+            <Route path={DASHBOARD_ROUTE.path} element={<HomePage />} />
+            <Route path="/report" element={<ReportPage />} />
+            <Route path="/citations" element={<CitationsPage />} />
+            <Route path={ACTIVITY_ROUTE.path} element={<ActivityPage />} />
+            <Route path={TECHNICAL_EXPLAINER_ROUTE.path} element={<TechnicalExplainerPage />} />
+            <Route path={LEGACY_MONITORING_LOG_PATH} element={<Navigate to={SOURCE_HEALTH_ROUTE.path} replace />} />
+            {sections.map((s) => (
+              <Route
+                key={s.slug}
+                path={`/${s.slug}`}
+                element={<Navigate to={`/${s.slug}/${s.subSections[0].slug}`} replace />}
+              />
+            ))}
+            <Route path="/:section/:sub" element={<ContentRoute />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
+        </Routes>
       </PreferencesProvider>
     </BrowserRouter>
   )

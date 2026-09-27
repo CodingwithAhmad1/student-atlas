@@ -36,7 +36,7 @@ See `src/data/CONTENT-GUIDE.md` for the full content management workflow.
 
 ### Currently supported nationalities
 
-UAE, Pakistan, India, China, United Kingdom
+UAE, Pakistan, India, China, United Kingdom, United States, Australia
 
 ## Source Monitoring & Activity Feed
 

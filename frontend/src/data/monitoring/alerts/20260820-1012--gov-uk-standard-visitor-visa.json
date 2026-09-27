@@ -13,10 +13,64 @@
   "newHash": "4ff1d614a032fec6bd79c9470ee204f5e6455d41b1e9cdc0c57e4a405cd92377",
   "diff": "Index: gov.uk/standard-visitor-visa\n===================================================================\n--- gov.uk/standard-visitor-visa\tprevious\n+++ gov.uk/standard-visitor-visa\tcurrent\n@@ -50,7 +50,7 @@\n If you’ve previously been refused entry to the UK or have a criminal record, you may want to apply for a Standard Visitor visa (even if you do not need one).\n If you have to apply for a Standard Visitor visa\n You must apply for a Standard Visitor visa online before you travel to the UK.\n-A Standard Visitor visa costs £115 for up to 6 months. The earliest you can apply is 3 months before you travel.\n+A Standard Visitor visa costs £135 for up to 6 months. The earliest you can apply is 3 months before you travel.\n If you visit the UK regularly, you can choose to apply for a long-term Standard Visitor visa instead.\n You can pass through the UK to another country on a Standard Visitor visa. If transiting is your only reason for coming to the UK, you can apply for a Visitor in Transit visa instead for £74.50.\n View a printable version of the whole guide\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "meaningful",
+  "summary": "Standard Visitor visa fee rose from £115 to £135.",
+  "status": "approved",
+  "resolution": {
+    "note": "GOV.UK raised the Standard Visitor visa fee to £135 for up to 6 months (from 8 April 2026). Updated the fee everywhere it appears, and corrected the long-term visa fees (2-year £506, 5-year £903, 10-year £1,128) and the priority-service fee (£500), which were also out of date.",
+    "edits": [
+      {
+        "file": "Student Atlas/frontend/src/data/sections/tourist-visa.ts",
+        "oldText": "The standard fee is \\u00A3115. Multi-entry options are available: 2-year (\\u00A3115), 5-year (\\u00A3500), and 10-year (\\u00A31,000) visas.",
+        "newText": "The standard fee is \\u00A3135 for a visa of up to 6 months. Long-term visas are also available: 2-year (\\u00A3506), 5-year (\\u00A3903), and 10-year (\\u00A31,128)."
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/sections/tourist-visa.ts",
+        "oldText": "value: \"\\u00A3115 (standard, 2-year multi-entry)",
+        "newText": "value: \"\\u00A3135 (standard, up to 6 months)"
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/sections/tourist-visa.ts",
+        "oldText": "label: \"5-year visa fee\",\n                    value: \"\\u00A3500\"",
+        "newText": "label: \"5-year visa fee\",\n                    value: \"\\u00A3903\""
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/sections/tourist-visa.ts",
+        "oldText": "label: \"10-year visa fee\",\n                    value: \"\\u00A31,000\"",
+        "newText": "label: \"10-year visa fee\",\n                    value: \"\\u00A31,128\""
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/sections/tourist-visa.ts",
+        "oldText": "The standard fee is \\u00A3115. Optional priority",
+        "newText": "The standard fee is \\u00A3135. Optional priority"
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/visa-facts.ts",
+        "oldText": "total_upfront_cost: \"£115 (2-year multi-entry)\"",
+        "newText": "total_upfront_cost: \"£135 (up to 6 months)\""
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/visa-facts.ts",
+        "oldText": "application_fee: \"£115\"",
+        "newText": "application_fee: \"£135\""
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/visa-facts.ts",
+        "oldText": "validity_model: \"2-year, 5-year, or 10-year options\"",
+        "newText": "validity_model: \"6 months; long-term 2, 5 or 10 years (£506–£1,128)\""
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/nationalities/china.ts",
+        "oldText": "at the same fee as the 6-month visa (currently £115)",
+        "newText": "at the same fee as the 6-month visa (currently £135)"
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/nationalities/pakistan.ts",
+        "oldText": "Priority processing (5 working days, additional £250)",
+        "newText": "Priority processing (5 working days, additional £500)"
+      }
+    ]
+  },
+  "resolvedAt": "2026-09-27T07:52:12.670Z",
   "error": null
 }

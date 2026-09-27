@@ -95,9 +95,9 @@ class ContentToolTests(ScratchFrontend):
         registry_before = self.read("nationalities/registry.ts")
         countries_before = self.read("countries.ts")
 
-        out = server.create_nationality("Testland", "testland", CTX, uses_uk_eta=True, uses_au_eta=True)
+        out = server.create_nationality("Testland", "testland", "Testlandish", CTX, uses_uk_eta=True, uses_au_eta=True)
         self.assertIn("Created", out, out)
-        self.assertIn("Error", server.create_nationality("Testland", "testland", CTX))
+        self.assertIn("Error", server.create_nationality("Testland", "testland", "Testlandish", CTX))
 
         # Callouts: into an existing empty array, a populated one, and cross-cutting.
         para = json.dumps([{"type": "paragraph", "text": 'Quote "test" and back\\slash — ok'}])
@@ -187,14 +187,20 @@ class ReviewTests(ScratchFrontend):
             review.resolve_editable("nationalities/registry.ts")
 
     def test_escape_tolerant_edit_and_rollback(self):
+        import re
         f = "sections/tourist-visa.ts"
         before = self.read(f)
-        self.assertIn("\\u00A3115", before)
-        idx = before.index("\\u00A3115")
-        raw = before[idx - 30: idx + 40]
-        literal = raw.encode().decode("unicode_escape") if "\\u" in raw else raw
-        planned, _ = review.apply_edits([{"file": f, "old_text": literal, "new_text": literal.replace("£115", "£135", 1)}], check=False)
-        self.assertIn("\\u00A3135", self.read(f))
+        # Any "\u00A3<amount>" in the file, written by the reviewer as a literal "£".
+        m = re.search(r'text: "[^"\n]*\\u00A3(\d[\d,]*)[^"\n]*"', before)
+        self.assertIsNotNone(m, "fixture needs an escaped £ amount in a text field")
+        raw = m.group(0)[len('text: "'):-1]
+        literal = raw.encode().decode("unicode_escape")
+        amount = m.group(1)
+        planned, _ = review.apply_edits(
+            [{"file": f, "old_text": literal, "new_text": literal.replace(f"£{amount}", "£9,999", 1)}],
+            check=False,
+        )
+        self.assertIn("\\u00A39,999", self.read(f))
         self.assertTrue(planned[0].notes)
         (self.data / f).write_text(before)
 

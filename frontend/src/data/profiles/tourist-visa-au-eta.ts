@@ -95,7 +95,7 @@ export const touristVisaAuEta: Profile = {
       id: "au-eta-longer-stay",
       block: {
         type: "paragraph",
-        text: "Apply for a **Visitor visa \u2014 Subclass 600** instead. This allows stays of up to 12 months and requires a standard online application with supporting documents. Fee: AUD $190. Processing time: typically 20 to 30 days. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600]",
+        text: "Apply for a **Visitor visa \u2014 Subclass 600** instead. This allows stays of up to 12 months and requires a standard online application with supporting documents. Fee: AUD $250. Processing time: typically 20 to 30 days. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600]",
       },
     },
     {

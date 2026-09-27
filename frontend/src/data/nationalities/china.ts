@@ -25,7 +25,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals apply through VFS Global centres in Beijing, Shanghai, Guangzhou, Chengdu, and several other cities. A helpful detail: the UK offers Chinese applicants a 2-year standard visitor visa at the same fee as the 6-month visa (currently £115), and there is also a 10-year long-term visit visa option. For parents planning multiple visits over a 3-4 year degree, the 2-year or 10-year visa can save both money and hassle. Processing takes approximately 15 working days; priority (5 working days) and super priority (next working day) services are available at additional cost.",
+                text: "Chinese nationals apply through VFS Global centres in Beijing, Shanghai, Guangzhou, Chengdu, and several other cities. A helpful detail: the UK offers Chinese applicants a 2-year standard visitor visa at the same fee as the 6-month visa (currently £135), and there is also a 10-year long-term visit visa option. For parents planning multiple visits over a 3-4 year degree, the 2-year or 10-year visa can save both money and hassle. Processing takes approximately 15 working days; priority (5 working days) and super priority (next working day) services are available at additional cost.",
               },
             ],
           },
@@ -303,7 +303,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Skilled Worker visa salary threshold of £38,700 translates to approximately CNY 350,000 per year at current exchange rates. UK graduate salaries in technology, finance, and professional services typically meet or exceed this threshold within 1-2 years. The new entrant rate of £30,960 provides a more accessible starting point for recent graduates. The UK's Skilled Worker route has no nationality-based caps or quotas, making it more predictable than the US H-1B lottery system.",
+                text: "The Skilled Worker visa salary threshold of £41,700 translates to approximately CNY 380,000 per year at current exchange rates. UK graduate salaries in technology, finance, and professional services typically meet or exceed this threshold within 1-2 years. The new entrant rate of £33,400 provides a more accessible starting point for recent graduates. The UK's Skilled Worker route has no nationality-based caps or quotas, making it more predictable than the US H-1B lottery system.",
               },
             ],
           },

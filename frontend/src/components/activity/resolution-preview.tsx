@@ -22,19 +22,19 @@ export function ResolutionPreview({
             {edit.file.replace(/^Student Atlas\//, "")}
           </p>
           <div className="grid gap-2 sm:grid-cols-2">
-            <div className="rounded border border-red-200 bg-red-50/60 p-2">
-              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-red-700">
+            <div className="rounded border border-red-200 bg-red-50/60 p-2 dark:border-red-900 dark:bg-red-950/30">
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-red-700 dark:text-red-400">
                 Before
               </p>
-              <p className="text-xs leading-relaxed text-red-900 whitespace-pre-wrap">
+              <p className="text-xs leading-relaxed text-red-900 dark:text-red-200 whitespace-pre-wrap">
                 {edit.oldText}
               </p>
             </div>
-            <div className="rounded border border-green-200 bg-green-50/60 p-2">
-              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-green-700">
+            <div className="rounded border border-green-200 bg-green-50/60 p-2 dark:border-green-900 dark:bg-green-950/30">
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-wider text-green-700 dark:text-green-400">
                 After
               </p>
-              <p className="text-xs leading-relaxed text-green-900 whitespace-pre-wrap">
+              <p className="text-xs leading-relaxed text-green-900 dark:text-green-200 whitespace-pre-wrap">
                 {edit.newText}
               </p>
             </div>
@@ -44,7 +44,7 @@ export function ResolutionPreview({
               As shown on the site
             </p>
             <p className="text-sm leading-relaxed">
-              <ParsedText text={edit.newText} citationMap={new Map()} />
+              <ParsedText text={edit.newText} />
             </p>
           </div>
         </div>

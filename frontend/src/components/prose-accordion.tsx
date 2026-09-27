@@ -1,6 +1,7 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ContentBlock, ResolvedBlock } from "@/data/types";
-import { ResolvedBlockRenderer } from "./content-blocks";
+import { readStorage, writeStorage } from "@/lib/storage";
+import { ContentBlockRenderer } from "./content-blocks";
 import { Checklist } from "./checklist";
 import {
   Accordion,
@@ -11,7 +12,6 @@ import {
 
 interface ProseAccordionProps {
   blocks: ResolvedBlock[];
-  citationMap: Map<string, number>;
   /** Key used to track first-visit open state */
   sessionKey: string;
 }
@@ -57,10 +57,8 @@ function groupByHeading(blocks: ResolvedBlock[]): AccordionGroup[] {
  */
 function GroupContent({
   blocks,
-  citationMap,
 }: {
   blocks: ResolvedBlock[];
-  citationMap: Map<string, number>;
 }) {
   // Partition blocks into segments: either a single non-step block
   // or a contiguous run of step blocks
@@ -90,13 +88,9 @@ function GroupContent({
     <div className="space-y-4">
       {segments.map((seg, i) =>
         seg.kind === "checklist" ? (
-          <Checklist key={i} steps={seg.steps} citationMap={citationMap} />
+          <Checklist key={i} steps={seg.steps} />
         ) : (
-          <ResolvedBlockRenderer
-            key={i}
-            resolved={seg.resolved}
-            citationMap={citationMap}
-          />
+          <ContentBlockRenderer key={i} block={seg.resolved.block} />
         )
       )}
     </div>
@@ -105,16 +99,16 @@ function GroupContent({
 
 export function ProseAccordion({
   blocks,
-  citationMap,
   sessionKey,
 }: ProseAccordionProps) {
   const groups = useMemo(() => groupByHeading(blocks), [blocks]);
 
-  // On first visit to this page, default the first section open
-  const isFirstVisit = !sessionStorage.getItem(sessionKey);
-  if (isFirstVisit) {
-    sessionStorage.setItem(sessionKey, "1");
-  }
+  // On the first visit to this page in a session, open the first section.
+  // Read during render (pure), record the visit after commit.
+  const [isFirstVisit] = useState(() => readStorage(sessionKey, "session") === null);
+  useEffect(() => {
+    writeStorage(sessionKey, "1", "session");
+  }, [sessionKey]);
 
   const defaultOpen = isFirstVisit && groups.length > 0 ? [0] : [];
 
@@ -123,7 +117,7 @@ export function ProseAccordion({
   // If there's only one group with no heading (just "Overview"), render flat
   if (groups.length === 1 && groups[0].title === "Overview") {
     return (
-      <GroupContent blocks={groups[0].blocks} citationMap={citationMap} />
+      <GroupContent blocks={groups[0].blocks} />
     );
   }
 
@@ -133,7 +127,7 @@ export function ProseAccordion({
         <AccordionItem key={idx} value={idx}>
           <AccordionTrigger>{group.title}</AccordionTrigger>
           <AccordionContent>
-            <GroupContent blocks={group.blocks} citationMap={citationMap} />
+            <GroupContent blocks={group.blocks} />
           </AccordionContent>
         </AccordionItem>
       ))}

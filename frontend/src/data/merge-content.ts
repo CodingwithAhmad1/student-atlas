@@ -1,82 +1,65 @@
 import type {
-  IdentifiedBlock,
+  CalloutOverlay,
   ContentBlock,
   CountryOverlay,
-  CalloutOverlay,
+  IdentifiedBlock,
   ResolvedBlock,
 } from "./types";
 
 /**
- * Merge base blocks with a country overlay to produce final render list.
+ * Merge base blocks with a country overlay to produce the final render list.
  *
- * - No overlay → base blocks rendered as-is
- * - Profile provided → profile blocks replace base entirely
- * - Callouts → inserted after the block with matching afterBlockId
+ * - No overlay → base blocks as-is
+ * - Profile → profile blocks replace the base entirely
+ * - Callouts → inserted after the block with the matching afterBlockId
  */
 export function mergeBlocks(
   baseBlocks: IdentifiedBlock[],
   overlay: CountryOverlay | undefined,
   nationalityLabel?: string
 ): ResolvedBlock[] {
-  if (!overlay) {
-    return baseBlocks.map((ib) => ({ block: ib.block }));
-  }
-
-  const sourceBlocks = overlay.profile ?? baseBlocks;
-
-  const calloutMap = buildCalloutMap(overlay.callouts);
-
-  const result: ResolvedBlock[] = [];
-  for (const ib of sourceBlocks) {
-    result.push({ block: ib.block });
-
-    if (ib.id && calloutMap.has(ib.id)) {
-      for (const cb of calloutMap.get(ib.id)!) {
-        result.push({ block: cb, isCallout: true, nationalityLabel });
-      }
-    }
-  }
-
-  return result;
+  return interleave(overlay?.profile ?? baseBlocks, overlay?.callouts, nationalityLabel);
 }
 
-/**
- * Merge crossCutting blocks with an overlay's _crossCutting callouts.
- */
+/** Merge crossCutting blocks with an overlay's _crossCutting callouts. */
 export function mergeCrossCutting(
   baseBlocks: IdentifiedBlock[],
   callouts: CalloutOverlay[] | undefined,
   nationalityLabel?: string
 ): ResolvedBlock[] {
-  if (!callouts || callouts.length === 0) {
-    return baseBlocks.map((ib) => ({ block: ib.block }));
-  }
-
-  const calloutMap = buildCalloutMap(callouts);
-
-  const result: ResolvedBlock[] = [];
-  for (const ib of baseBlocks) {
-    result.push({ block: ib.block });
-
-    if (ib.id && calloutMap.has(ib.id)) {
-      for (const cb of calloutMap.get(ib.id)!) {
-        result.push({ block: cb, isCallout: true, nationalityLabel });
-      }
-    }
-  }
-
-  return result;
+  return interleave(baseBlocks, callouts, nationalityLabel);
 }
 
-function buildCalloutMap(
-  callouts: CalloutOverlay[] | undefined
-): Map<string, ContentBlock[]> {
-  const map = new Map<string, ContentBlock[]>();
-  if (!callouts) return map;
+/**
+ * Nationality callouts are presented first, in a highlighted box, on both the
+ * web page and the PDF; the rest keeps its order.
+ */
+export function splitCallouts(blocks: ResolvedBlock[]): {
+  callouts: ContentBlock[];
+  body: ResolvedBlock[];
+} {
+  return {
+    callouts: blocks.filter((b) => b.isCallout).map((b) => b.block),
+    body: blocks.filter((b) => !b.isCallout),
+  };
+}
 
-  for (const c of callouts) {
-    const existing = map.get(c.afterBlockId) ?? [];
-    map.set(c.afterBlockId, [...existing, ...c.blocks]);
+function interleave(
+  blocks: IdentifiedBlock[],
+  callouts: CalloutOverlay[] | undefined,
+  nationalityLabel?: string
+): ResolvedBlock[] {
+  const byAnchor = new Map<string, ContentBlock[]>();
+  for (const c of callouts ?? []) {
+    byAnchor.set(c.afterBlockId, [...(byAnchor.get(c.afterBlockId) ?? []), ...c.blocks]);
   }
-  return map;
+
+  const result: ResolvedBlock[] = [];
+  for (const ib of blocks) {
+    result.push({ block: ib.block });
+    for (const cb of (ib.id && byAnchor.get(ib.id)) || []) {
+      result.push({ block: cb, isCallout: true, nationalityLabel });
+    }
+  }
+  return result;
 }

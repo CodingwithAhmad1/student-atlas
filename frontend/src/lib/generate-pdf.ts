@@ -2,8 +2,9 @@ import jsPDF from "jspdf";
 import type { Country, ContentBlock, ResolvedBlock, NationalityOverlay } from "@/data/types";
 import { COUNTRY_LABELS } from "@/data/types";
 import { sectionRegistry } from "@/data/sections";
-import { mergeBlocks, mergeCrossCutting } from "@/data/merge-content";
+import { mergeBlocks, mergeCrossCutting, splitCallouts } from "@/data/merge-content";
 import { nationalityRegistry } from "@/data/nationalities/registry";
+import { stripMarkup } from "@/lib/inline-markup";
 
 // ── Brand constants ────────────────────────────────────────────
 const NAVY = [27, 45, 79] as const;
@@ -26,33 +27,48 @@ const USABLE_BOTTOM = FOOTER_Y - 8; // leave room above footer
 
 type RGB = readonly [number, number, number];
 
-const FLAG_EMOJI: Record<Country, string> = { US: "🇺🇸", UK: "🇬🇧", AU: "🇦🇺" };
+/**
+ * jsPDF's built-in fonts only cover WinAnsi (Latin-1 plus typographic
+ * punctuation). Map common symbols to ASCII and drop anything else (emoji)
+ * rather than printing garbage.
+ */
+const WINANSI_EXTRAS = new Set("€‚ƒ„…†‡ˆ‰Š‹ŒŽ‘’“”•–—˜™š›œžŸ");
+const SYMBOL_FALLBACKS: Record<string, string> = {
+  "→": "->", "←": "<-", "↔": "<->", "≈": "~", "≤": "<=", "≥": ">=", "≠": "!=",
+  "✓": "Yes", "✔": "Yes", "✗": "No", "✘": "No", "−": "-", "‑": "-",
+};
+
+function pdfText(text: string): string {
+  let out = "";
+  for (const ch of stripMarkup(text)) {
+    const code = ch.codePointAt(0) ?? 0;
+    if (code < 256 || WINANSI_EXTRAS.has(ch)) out += ch;
+    else out += SYMBOL_FALLBACKS[ch] ?? "";
+  }
+  return out.replace(/ {2,}/g, " ");
+}
 
 const SECTION_META: Record<
   string,
-  { title: string; icon: string; description: string }
+  { title: string; description: string }
 > = {
   visit: {
     title: "Tourist Visa",
-    icon: "✈",
     description:
       "Entry requirements, visa-free access, and short-stay application processes for your selected destinations.",
   },
   student: {
     title: "Student Visa",
-    icon: "🎓",
     description:
       "Everything you need to know about applying for a student visa, from document preparation to post-arrival obligations.",
   },
   work: {
     title: "Work Visa",
-    icon: "💼",
     description:
       "Post-study work rights, employer sponsorship pathways, and practical guidance for transitioning into the workforce.",
   },
   residency: {
     title: "Residency Pathway",
-    icon: "🏠",
     description:
       "Long-term settlement options including permanent residency, citizenship, and dual nationality considerations.",
   },
@@ -346,7 +362,7 @@ function renderContentBlock(
       const fontSize = sizes[block.level];
       y = ensureSpace(doc, y, 12);
       setFont(doc, "bold", fontSize, NAVY);
-      const lines = doc.splitTextToSize(block.text, width);
+      const lines = doc.splitTextToSize(pdfText(block.text), width);
       doc.text(lines, x, y);
       y += lines.length * (fontSize * 0.45) + 4;
       break;
@@ -354,7 +370,7 @@ function renderContentBlock(
 
     case "paragraph": {
       setFont(doc, "normal", 9.5, TEXT_DARK);
-      const lines = doc.splitTextToSize(block.text, width);
+      const lines = doc.splitTextToSize(pdfText(block.text), width);
       // Render line-by-line with page breaks
       for (const line of lines) {
         y = ensureSpace(doc, y, LINE_HEIGHT);
@@ -370,12 +386,12 @@ function renderContentBlock(
       for (const item of block.items) {
         // Measure value height to ensure enough space
         setFont(doc, "normal", 9, TEXT_DARK);
-        const valueLines = doc.splitTextToSize(item.value, width - kvLabelWidth - 4);
+        const valueLines = doc.splitTextToSize(pdfText(item.value), width - kvLabelWidth - 4);
         const neededHeight = Math.max(valueLines.length * LINE_HEIGHT, LINE_HEIGHT);
         y = ensureSpace(doc, y, neededHeight);
 
         setFont(doc, "bold", 9, NAVY);
-        doc.text(item.label, x + 2, y);
+        doc.text(pdfText(item.label), x + 2, y);
 
         setFont(doc, "normal", 9, TEXT_DARK);
         doc.text(valueLines, x + kvLabelWidth, y);
@@ -388,7 +404,7 @@ function renderContentBlock(
     case "bullet-list": {
       for (const item of block.items) {
         setFont(doc, "normal", 9.5, TEXT_DARK);
-        const bulletLines = doc.splitTextToSize(item, width - 8);
+        const bulletLines = doc.splitTextToSize(pdfText(item), width - 8);
         y = ensureSpace(doc, y, bulletLines.length * LINE_HEIGHT);
 
         doc.setFillColor(...GOLD);
@@ -403,7 +419,7 @@ function renderContentBlock(
     case "ordered-list": {
       for (let i = 0; i < block.items.length; i++) {
         setFont(doc, "normal", 9.5, TEXT_DARK);
-        const olLines = doc.splitTextToSize(block.items[i], width - 10);
+        const olLines = doc.splitTextToSize(pdfText(block.items[i]), width - 10);
         y = ensureSpace(doc, y, olLines.length * LINE_HEIGHT);
 
         setFont(doc, "bold", 9, GOLD);
@@ -427,12 +443,12 @@ function renderContentBlock(
 
       // Step title
       setFont(doc, "bold", 10.5, NAVY);
-      doc.text(block.title, x + 12, y);
+      doc.text(pdfText(block.title), x + 12, y);
       y += 7;
 
       // Step body
       setFont(doc, "normal", 9.5, TEXT_DARK);
-      const bodyLines = doc.splitTextToSize(block.body, width - 12);
+      const bodyLines = doc.splitTextToSize(pdfText(block.body), width - 12);
       for (const line of bodyLines) {
         y = ensureSpace(doc, y, LINE_HEIGHT);
         doc.text(line, x + 12, y);
@@ -460,7 +476,7 @@ function renderCallout(
   for (const b of blocks) {
     if (b.type === "paragraph") {
       setFont(doc, "normal", 9, TEXT_DARK);
-      estHeight += doc.splitTextToSize(b.text, width - 12).length * LINE_HEIGHT + 2;
+      estHeight += doc.splitTextToSize(pdfText(b.text), width - 12).length * LINE_HEIGHT + 2;
     } else {
       estHeight += 12;
     }
@@ -505,21 +521,25 @@ function renderCallout(
   return y;
 }
 
-/** Render all resolved blocks for a country section. */
+/**
+ * Render resolved blocks: nationality callouts first in one box (matching the
+ * web page), then the general content in order.
+ */
 function renderResolvedBlocks(
   doc: jsPDF,
   blocks: ResolvedBlock[],
+  nationalityLabel: string | undefined,
   y: number,
   width: number,
   x: number = MARGIN
 ): number {
-  for (const rb of blocks) {
-    if (rb.isCallout) {
-      y = renderCallout(doc, [rb.block], rb.nationalityLabel, y, width, x);
-    } else {
-      y = renderContentBlock(doc, rb.block, y, width, x);
-      y += 1; // small inter-block spacing
-    }
+  const { callouts, body } = splitCallouts(blocks);
+  if (callouts.length > 0) {
+    y = renderCallout(doc, callouts, nationalityLabel, y, width, x);
+  }
+  for (const rb of body) {
+    y = renderContentBlock(doc, rb.block, y, width, x);
+    y += 1; // small inter-block spacing
   }
   return y;
 }
@@ -568,7 +588,7 @@ function renderContentSection(
   doc: jsPDF,
   sectionSlug: string,
   destinations: Country[],
-  nationality: string,
+  nationalityLabel: string | undefined,
   overlay: NationalityOverlay | null
 ) {
   const section = sectionRegistry.get(sectionSlug);
@@ -603,9 +623,9 @@ function renderContentSection(
       const crossCuttingBlocks = mergeCrossCutting(
         subSection.crossCutting,
         subSectionOverlay?._crossCutting?.callouts,
-        nationality
+        nationalityLabel
       );
-      y = renderResolvedBlocks(doc, crossCuttingBlocks, y, CONTENT_W);
+      y = renderResolvedBlocks(doc, crossCuttingBlocks, nationalityLabel, y, CONTENT_W);
       y += 4;
     }
 
@@ -620,7 +640,7 @@ function renderContentSection(
       const resolvedBlocks = mergeBlocks(
         countryData.blocks,
         countryOverlay,
-        nationality
+        nationalityLabel
       );
 
       if (resolvedBlocks.length === 0) continue;
@@ -631,14 +651,14 @@ function renderContentSection(
       doc.roundedRect(MARGIN, y, CONTENT_W, 10, 2, 2, "F");
       setFont(doc, "bold", 10, WHITE);
       doc.text(
-        `${FLAG_EMOJI[country]}  ${COUNTRY_LABELS[country]}`,
+        COUNTRY_LABELS[country],
         MARGIN + 4,
         y + 7
       );
       y += 16;
 
       // Render all content blocks
-      y = renderResolvedBlocks(doc, resolvedBlocks, y, CONTENT_W);
+      y = renderResolvedBlocks(doc, resolvedBlocks, nationalityLabel, y, CONTENT_W);
       y += 6;
     }
 
@@ -698,7 +718,7 @@ export async function generateReport(options: ReportOptions) {
 
     // The divider page will be the next page added
     pageMap.set(slug, doc.getNumberOfPages() + 1);
-    renderContentSection(doc, slug, destinations, nationality, overlay);
+    renderContentSection(doc, slug, destinations, natMeta?.label, overlay);
   }
 
   // ── Pass 2: Fill in the TOC ─────────────────────────────────
@@ -716,7 +736,7 @@ export async function generateReport(options: ReportOptions) {
     if (!section || !meta) continue;
 
     tocEntries.push({
-      label: `${meta.icon}  ${meta.title}`,
+      label: meta.title,
       level: 0,
       pageRef: slug,
     });

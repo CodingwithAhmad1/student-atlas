@@ -90,7 +90,7 @@ changed source page. Work through them one at a time:
 
 ### 2. Create the nationality
 ```
-create_nationality(name, slug, uses_uk_eta, uses_au_eta, uses_us_vwp)
+create_nationality(name, slug, label, uses_uk_eta, uses_au_eta, uses_us_vwp)
 ```
 This creates `nationalities/{slug}.ts` with empty callouts and adds to `registry.ts`.
 
@@ -186,7 +186,7 @@ Target `dual-origin-position` or `dual-destination-position` block IDs.
 | `list_available_profiles()` | All profiles and who uses them |
 | `get_content_schema()` | Block types, markup and structure docs |
 | `get_nationality_template(name, slug, ...)` | Generate template (preview) |
-| `create_nationality(name, slug, ...)` | Create file + registry entry |
+| `create_nationality(name, slug, label, ...)` | Create file + registry entry |
 | `add_callout(slug, section, subsection, country, afterId, blocks)` | Add callout |
 | `remove_callout(slug, section, subsection, country, afterId, n?)` | Remove a callout |
 | `set_profile(slug, section, subsection, country, expr)` | Set/remove profile (adds import) |
@@ -194,7 +194,7 @@ Target `dual-origin-position` or `dual-destination-position` block IDs.
 | `write_content_file(path, content)` | Full file overwrite |
 | `read_content_file(path)` | Read any file |
 | `search_content(query, pattern?)` | Search across files |
-| `validate_content(full_build?)` | Type-check (and optionally build) |
+| `validate_content(full_build?)` | Type-check + content check (optionally build) |
 | `delete_nationality(slug)` | Remove nationality |
 | `add_nationality_to_dropdown(name)` | Add to countries list |
 
@@ -209,3 +209,5 @@ Target `dual-origin-position` or `dual-destination-position` block IDs.
 | India | `india` | UK ETA | No dual nationality, OCI card available |
 | China | `china` | None | Callout-only, no dual nationality (Article 9) |
 | United Kingdom | `uk` | US VWP, AU ETA, UK domestic | All UK columns use domestic profiles |
+| United States | `us` | UK ETA, AU ETA, US domestic | All US columns use domestic profiles |
+| Australia | `au` | US VWP, UK ETA, AU domestic | All AU columns use domestic profiles |

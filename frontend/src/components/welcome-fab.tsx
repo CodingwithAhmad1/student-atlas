@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 import { CompassPinIcon } from "@/components/compass-pin-icon"
 import { Popover, PopoverTrigger, PopoverContent, PopoverClose } from "@/components/ui/popover"
-import { usePreferences } from "@/context/PreferencesContext"
+import { usePreferences } from "@/context/preferences"
 import {
   MAIN_NAV_SECTIONS,
   NAV_REFERENCE_GROUP_TITLE,

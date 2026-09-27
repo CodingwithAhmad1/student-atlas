@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Pencil } from "lucide-react";
-import { usePreferences } from "@/context/PreferencesContext";
+import { usePreferences } from "@/context/preferences";
 import { COUNTRY_LABELS, type Country } from "@/data/types";
 import { NationalityDropdown } from "./nationality-dropdown";
 import { cn } from "@/lib/utils";

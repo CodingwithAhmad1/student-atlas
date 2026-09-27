@@ -25,7 +25,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani nationals applying at VFS Global centres in Islamabad, Lahore, or Karachi should expect processing times of 15 working days standard. During peak summer months (May-August), processing can extend to 4-6 weeks. Priority processing (5 working days, additional £250) is available and recommended if travel dates are fixed. Pakistani applicants do see a somewhat higher refusal rate than some other nationalities — the most common reasons are insufficient financial evidence and weak ties to Pakistan. A well-documented application with clear bank statements showing consistent income over 6 months significantly improves approval chances.",
+                text: "Pakistani nationals applying at VFS Global centres in Islamabad, Lahore, or Karachi should expect processing times of 15 working days standard. During peak summer months (May-August), processing can extend to 4-6 weeks. Priority processing (5 working days, additional £500) is available and recommended if travel dates are fixed. Pakistani applicants do see a somewhat higher refusal rate than some other nationalities — the most common reasons are insufficient financial evidence and weak ties to Pakistan. A well-documented application with clear bank statements showing consistent income over 6 months significantly improves approval chances.",
               },
             ],
           },
@@ -303,7 +303,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Skilled Worker visa salary threshold of £38,700 translates to approximately PKR 14 million per year at current exchange rates. For Pakistani families benchmarking against local salaries, this represents a significant premium. However, UK graduate salaries in technology and professional services, particularly in London, typically meet or exceed this threshold within 1-2 years of starting employment. The new entrant rate of £30,960 provides a more accessible starting point.",
+                text: "The Skilled Worker visa salary threshold of £41,700 translates to approximately PKR 15 million per year at current exchange rates. For Pakistani families benchmarking against local salaries, this represents a significant premium. However, UK graduate salaries in technology and professional services, particularly in London, typically meet or exceed this threshold within 1-2 years of starting employment. The new entrant rate of £33,400 provides a more accessible starting point.",
               },
             ],
           },

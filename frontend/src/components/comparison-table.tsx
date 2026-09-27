@@ -37,6 +37,14 @@ function parseCostNumber(value: string): number {
   return match ? parseFloat(match[0]) : Infinity;
 }
 
+/** Currency of a cost string; costs in different currencies aren't comparable. */
+function currencyOf(value: string): string | null {
+  if (/AUD/.test(value)) return "AUD";
+  if (value.includes("£")) return "GBP";
+  if (value.includes("$")) return "USD";
+  return null;
+}
+
 function CellValue({
   value,
   isBoolean,
@@ -46,7 +54,7 @@ function CellValue({
   isBoolean?: boolean;
   isBest?: boolean;
 }) {
-  if (isBoolean) {
+  if (isBoolean && typeof value === "boolean") {
     return (
       <span
         className={
@@ -76,18 +84,20 @@ export function ComparisonTable({ countries, facts }: ComparisonTableProps) {
     if (!row.isCost) continue;
     let bestCountry: Country | null = null;
     let bestVal = Infinity;
+    const currencies = new Set<string | null>();
     for (const c of countries) {
       const f = facts[c];
       if (!f) continue;
       const raw = f[row.key];
       if (typeof raw !== "string") continue;
+      currencies.add(currencyOf(raw));
       const num = parseCostNumber(raw);
       if (num < bestVal) {
         bestVal = num;
         bestCountry = c;
       }
     }
-    if (bestCountry && bestVal < Infinity) {
+    if (bestCountry && bestVal < Infinity && currencies.size === 1 && !currencies.has(null)) {
       bestCostMap.set(row.key, bestCountry);
     }
   }

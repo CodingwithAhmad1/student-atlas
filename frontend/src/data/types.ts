@@ -84,8 +84,11 @@ export type NationalityOverlay = {
 
 /** Registry entry for a nationality */
 export interface NationalityMeta {
+  /** Exactly as listed in the nationality dropdown (countries.ts). */
   name: string;
   slug: string;
+  /** Adjective for headings, e.g. "Pakistani" → "For Pakistani applicants". */
+  label: string;
   load: () => Promise<{ default: NationalityOverlay }>;
 }
 

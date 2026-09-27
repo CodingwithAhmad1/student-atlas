@@ -505,7 +505,7 @@ const overlay: NationalityOverlay = {
 
 # Adding a nationality
 1. list_available_profiles() — reuse existing visa-path profiles
-2. create_nationality(name, slug, ...) — writes the template + registry entry
+2. create_nationality(name, slug, label, ...) — writes the template + registry entry
 3. get_block_ids() / get_profile_block_ids() — find anchors
 4. add_callout(...) for each callout; set_profile(...) where a profile applies
 5. add_nationality_to_dropdown(name) if missing; validate_content()
@@ -571,6 +571,7 @@ def get_nationality_template(
 def create_nationality(
     name: str,
     slug: str,
+    label: str,
     ctx: Context,
     uses_uk_eta: bool = False,
     uses_au_eta: bool = False,
@@ -581,6 +582,7 @@ def create_nationality(
     Args:
         name: Full name as shown in the nationality dropdown (e.g. "Bangladesh").
         slug: File slug (e.g. "bangladesh").
+        label: Adjective for headings, e.g. "Bangladeshi" ("For Bangladeshi applicants").
     """
     require_auth(ctx)
     filepath = nationality_file(slug)
@@ -592,7 +594,7 @@ def create_nationality(
         return f"Error: '{name}' / '{slug}' is already in the registry."
 
     entry = (
-        f"  {{\n    name: {ts_string(name)},\n    slug: {ts_string(slug)},\n"
+        f"  {{\n    name: {ts_string(name)},\n    slug: {ts_string(slug)},\n    label: {ts_string(label)},\n"
         f'    load: () => import("./{slug}"),\n  }}'
     )
     filepath.write_text(build_template(name, uses_uk_eta, uses_au_eta, uses_us_vwp))
@@ -651,7 +653,8 @@ def delete_nationality(slug: str, ctx: Context) -> str:
 
 @mcp.tool()
 def validate_content(ctx: Context, full_build: bool = False) -> str:
-    """Type-check the frontend (tsc -b); optionally run the full production build.
+    """Type-check the frontend and run the content integrity check (citations,
+    glossary terms, callout anchors, profiles); optionally the full production build.
 
     Args:
         full_build: Also run `npm run build` (slower; catches bundling errors).
@@ -661,9 +664,9 @@ def validate_content(ctx: Context, full_build: bool = False) -> str:
     if not ok:
         lines = output.splitlines()
         more = f"\n... {len(lines) - 40} more" if len(lines) > 40 else ""
-        return "TypeScript errors:\n" + "\n".join(lines[:40]) + more
+        return "Check failed:\n" + "\n".join(lines[:40]) + more
     if not full_build:
-        return "Type-check passed."
+        return "Type-check and content check passed."
     try:
         r = subprocess.run(["npm", "run", "build"], cwd=FRONTEND_DIR, capture_output=True, text=True, timeout=300)
     except subprocess.TimeoutExpired:

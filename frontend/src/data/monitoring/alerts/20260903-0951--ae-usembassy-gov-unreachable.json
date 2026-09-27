@@ -13,10 +13,13 @@
   "newHash": "unreachable-2026-09-03",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://ae.usembassy.gov/). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The citation for ae.usembassy.gov was removed: no page in the guide cited it, and the site blocks automated checks (HTTP 403).",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-27T07:53:16.072Z",
   "error": "HTTP 403 from https://ae.usembassy.gov/"
 }

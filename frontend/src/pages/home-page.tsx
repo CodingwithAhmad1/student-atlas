@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { usePreferences } from "@/context/PreferencesContext";
+import { usePreferences } from "@/context/preferences";
 import { COUNTRY_LABELS } from "@/data/types";
 import { homeContent } from "@/data/home-content";
 import { NationalityDropdown } from "@/components/nationality-dropdown";

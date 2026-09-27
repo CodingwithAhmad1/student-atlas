@@ -326,7 +326,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Skilled Worker visa salary threshold of \u00a338,700 translates to approximately AED 181,000 per year at current exchange rates. For UAE families benchmarking against local salaries, UK graduate salaries in most sectors \u2014 particularly outside London \u2014 may initially fall below this threshold for entry-level roles. The new entrant rate of \u00a330,960 mitigates this for the first few years. Students intending to remain in the UK after graduation should target roles at employers with active sponsor licences and salaries that meet the threshold \u2014 London-based roles in technology, finance, and professional services most reliably meet this bar.",
+                text: "The Skilled Worker visa salary threshold of \u00a341,700 translates to approximately AED 195,000 per year at current exchange rates. For UAE families benchmarking against local salaries, UK graduate salaries in most sectors \u2014 particularly outside London \u2014 may initially fall below this threshold for entry-level roles. The new entrant rate of \u00a333,400 mitigates this for the first few years. Students intending to remain in the UK after graduation should target roles at employers with active sponsor licences and salaries that meet the threshold \u2014 London-based roles in technology, finance, and professional services most reliably meet this bar.",
               },
             ],
           },

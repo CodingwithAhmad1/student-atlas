@@ -46,6 +46,7 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "travel.state.gov/esta-countries": { skipReason: STATE_GOV_BLOCKED },
   "travel.state.gov/photos": { skipReason: STATE_GOV_BLOCKED },
   "travel.state.gov/visa-bulletin": { skipReason: STATE_GOV_BLOCKED },
+  "travel.state.gov/student-visa": { skipReason: STATE_GOV_BLOCKED },
   "ceac.state.gov/genniv": {
     skipReason:
       "ceac.state.gov refuses automated TLS connections; verify this page manually.",
@@ -64,14 +65,5 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   // raised an alert each time (verified 2026-09-27).
   "studyinthestates.dhs.gov": {
     stripSelectors: [".paragraph--type--recent-blogs"],
-  },
-  // Every check since 2026-08-20 has returned HTTP 403 (verified 2026-09-27).
-  "ae.usembassy.gov": {
-    skipReason:
-      "ae.usembassy.gov rejects automated clients (HTTP 403); verify this page manually.",
-  },
-  "ustraveldocs.com/ae": {
-    skipReason:
-      "ustraveldocs.com renders entirely with JavaScript; no static text to monitor. Verify manually.",
   },
 };

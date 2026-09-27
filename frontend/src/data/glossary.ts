@@ -124,7 +124,7 @@ export const glossary: Record<string, GlossaryTerm> = {
   tsmit: {
     label: "TSMIT",
     definition:
-      "Temporary Skilled Migration Income Threshold — the minimum salary an Australian employer must pay a sponsored worker.",
+      "Temporary Skilled Migration Income Threshold, renamed the Core Skills Income Threshold (CSIT) — the minimum salary an Australian employer must pay a sponsored worker.",
   },
   "subclass-500": {
     label: "Subclass 500",

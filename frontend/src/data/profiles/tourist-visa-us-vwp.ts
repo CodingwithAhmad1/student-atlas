@@ -25,7 +25,7 @@ export const touristVisaUsVwp: Profile = {
         items: [
           {
             label: "ESTA fee",
-            value: "$21 [CITE: travel.state.gov/esta-countries]",
+            value: "$40 [CITE: travel.state.gov/esta-countries]",
           },
           {
             label: "Application",
@@ -75,7 +75,7 @@ export const touristVisaUsVwp: Profile = {
         items: [
           "Visit the official ESTA website at esta.cbp.dhs.gov. Be cautious of unofficial third-party sites that charge higher fees.",
           "Complete the application form with your passport details, travel information, and eligibility questions.",
-          "Pay the $21 fee by credit or debit card.",
+          "Pay the $40 fee by credit or debit card.",
           "Receive your authorization — usually approved within minutes. Check the status online if not immediate.",
           "Print or save a copy of your approval (though airlines can verify electronically).",
         ],

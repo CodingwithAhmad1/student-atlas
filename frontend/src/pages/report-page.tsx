@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { usePreferences } from "@/context/PreferencesContext";
+import { SetupRequired } from "@/components/setup-required";
+import { usePreferences } from "@/context/preferences";
 import { Button } from "@/components/ui/button";
 import {
   DestinationsPreferenceControl,
   NationalityPreferenceControl,
 } from "@/components/preference-controls";
-import { generateReport } from "@/lib/generate-pdf";
 import {
   PlaneIcon,
   GraduationCapIcon,
@@ -68,6 +68,8 @@ export function ReportPage() {
     // Small delay so the UI updates before the PDF work
     await new Promise((r) => setTimeout(r, 50));
     try {
+      // jsPDF is large; load it only when a report is requested.
+      const { generateReport } = await import("@/lib/generate-pdf");
       await generateReport({
         nationality: preferences.nationality,
         destinations: preferences.destinations,
@@ -86,16 +88,10 @@ export function ReportPage() {
 
   if (!isConfigured) {
     return (
-      <div className="flex flex-1 flex-col items-center justify-center gap-4 p-8 text-center">
-        <div className="rounded-full bg-muted p-4">
-          <FileTextIcon className="h-8 w-8 text-muted-foreground" />
-        </div>
-        <h2 className="text-xl font-semibold">Set up your preferences first</h2>
-        <p className="max-w-md text-muted-foreground">
-          To generate a report, select your nationality and at least one
-          destination country from the dashboard.
-        </p>
-      </div>
+      <SetupRequired>
+        To generate a report, select your nationality and at least one
+        destination country.
+      </SetupRequired>
     );
   }
 

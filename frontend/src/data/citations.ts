@@ -11,6 +11,11 @@ export const citations: Record<string, Citation> = {
     url: "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees.html",
     label: "U.S. Department of State — Visa Fees",
   },
+  "travel.state.gov/student-visa": {
+    id: "travel.state.gov/student-visa",
+    url: "https://travel.state.gov/content/travel/en/us-visas/study/student-visa.html",
+    label: "U.S. Department of State — Student Visa",
+  },
   "travel.state.gov/esta-countries": {
     id: "travel.state.gov/esta-countries",
     url: "https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html",
@@ -31,20 +36,10 @@ export const citations: Record<string, Citation> = {
     url: "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601",
     label: "Australian Department of Home Affairs — ETA",
   },
-  "ae.usembassy.gov": {
-    id: "ae.usembassy.gov",
-    url: "https://ae.usembassy.gov/",
-    label: "U.S. Embassy & Consulate in the UAE",
-  },
   "ceac.state.gov/genniv": {
     id: "ceac.state.gov/genniv",
     url: "https://ceac.state.gov/genniv/",
     label: "U.S. Department of State — DS-160 Online Nonimmigrant Visa Application",
-  },
-  "ustraveldocs.com/ae": {
-    id: "ustraveldocs.com/ae",
-    url: "https://www.ustraveldocs.com/ae/",
-    label: "US Travel Docs — UAE",
   },
   "travel.state.gov/photos": {
     id: "travel.state.gov/photos",
@@ -325,6 +320,11 @@ export const citations: Record<string, Citation> = {
     id: "homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
     url: "https://immi.homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
     label: "Australian Home Affairs — Become a Citizen",
+  },
+  "ociservices.gov.in": {
+    id: "ociservices.gov.in",
+    url: "https://ociservices.gov.in/",
+    label: "Government of India — Overseas Citizenship of India (OCI) Services",
   },
   "uaecabinet.ae/en/details/federal-laws": {
     id: "uaecabinet.ae/en/details/federal-laws",

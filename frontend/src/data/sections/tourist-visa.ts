@@ -75,7 +75,7 @@ export const touristVisa: Section = {
               id: "uk-svv-description",
               block: {
                 type: "paragraph",
-                text: "The Standard Visitor Visa allows stays of up to 6 months per visit. You apply online and then attend a [TERM: vac|Visa Application Centre (VAC)] to provide biometrics (fingerprints and a photograph). The standard fee is \u00A3115. Multi-entry options are available: 2-year (\u00A3115), 5-year (\u00A3500), and 10-year (\u00A31,000) visas. Standard processing takes 15 working days; priority processing (5 working days) is available for an additional fee.",
+                text: "The Standard Visitor Visa allows stays of up to 6 months per visit. You apply online and then attend a [TERM: vac|Visa Application Centre (VAC)] to provide biometrics (fingerprints and a photograph). The standard fee is \u00A3135 for a visa of up to 6 months. Long-term visas are also available: 2-year (\u00A3506), 5-year (\u00A3903), and 10-year (\u00A31,128). Standard processing takes 15 working days; priority processing (5 working days) is available for an additional fee.",
               },
             },
             {
@@ -85,15 +85,15 @@ export const touristVisa: Section = {
                 items: [
                   {
                     label: "Visa fee",
-                    value: "\u00A3115 (standard, 2-year multi-entry) [CITE: gov.uk/standard-visitor-visa]",
+                    value: "\u00A3135 (standard, up to 6 months) [CITE: gov.uk/standard-visitor-visa]",
                   },
                   {
                     label: "5-year visa fee",
-                    value: "\u00A3500",
+                    value: "\u00A3903",
                   },
                   {
                     label: "10-year visa fee",
-                    value: "\u00A31,000",
+                    value: "\u00A31,128",
                   },
                   {
                     label: "Application",
@@ -130,7 +130,7 @@ export const touristVisa: Section = {
               id: "au-600-description",
               block: {
                 type: "paragraph",
-                text: "The Subclass 600 visa is applied for online through the ImmiAccount portal. No interview is required. It allows stays of up to 12 months, though visas are typically granted for 3 or 6 months. The application fee is AUD $190, and processing typically takes 20 to 30 working days.",
+                text: "The Subclass 600 visa is applied for online through the ImmiAccount portal. No interview is required. It allows stays of up to 12 months, though visas are typically granted for 3 or 6 months. The application fee is AUD $250 when applying from outside Australia, and processing typically takes 20 to 30 working days.",
               },
             },
             {
@@ -140,7 +140,7 @@ export const touristVisa: Section = {
                 items: [
                   {
                     label: "Visa fee",
-                    value: "AUD $190 [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600]",
+                    value: "AUD $250 (outside Australia) [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600]",
                   },
                   {
                     label: "Application",
@@ -202,7 +202,7 @@ export const touristVisa: Section = {
                 type: "step",
                 number: 3,
                 title: "Book the interview appointment",
-                body: "Appointments are booked through the US Travel Docs system or the relevant US embassy website. [CITE: ustraveldocs.com]",
+                body: "Appointments are booked through the appointment system linked from the relevant US embassy website. [CITE: travel.state.gov/B-visa]",
               },
             },
             {
@@ -280,7 +280,7 @@ export const touristVisa: Section = {
                 type: "step",
                 number: 2,
                 title: "Pay the visa fee",
-                body: "The standard fee is \u00A3115. Optional priority processing is available for an additional fee.",
+                body: "The standard fee is \u00A3135. Optional priority processing is available for an additional fee.",
               },
             },
             {
@@ -375,7 +375,7 @@ export const touristVisa: Section = {
                 type: "step",
                 number: 4,
                 title: "Pay the application fee",
-                body: "The fee is AUD $190, payable online.",
+                body: "The fee is AUD $250 when applying from outside Australia, payable online.",
               },
             },
             {

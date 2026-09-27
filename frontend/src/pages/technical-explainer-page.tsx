@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { monitoredSourceCount } from "@/data/source-registry";
-import { ACTIVITY_ROUTE, MONITORING_LOG_ROUTE } from "@/lib/routes";
+import { ACTIVITY_ROUTE, SOURCE_HEALTH_ROUTE } from "@/lib/routes";
 
 function PipelineStage({
   step,
@@ -199,7 +199,7 @@ export function TechnicalExplainerPage() {
             at no cost to you.
           </p>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-            Every detection, draft, and review is logged publicly. See the{" "}
+            Every detection and review is logged publicly. See the{" "}
             <Link
               to={ACTIVITY_ROUTE.path}
               className="text-blue-600 underline underline-offset-2 hover:text-blue-700"
@@ -208,10 +208,10 @@ export function TechnicalExplainerPage() {
             </Link>{" "}
             for detected changes and review outcomes, and the{" "}
             <Link
-              to={MONITORING_LOG_ROUTE.path}
+              to={SOURCE_HEALTH_ROUTE.path}
               className="text-blue-600 underline underline-offset-2 hover:text-blue-700"
             >
-              Monitoring log
+              Sources view
             </Link>{" "}
             for source-by-source health.
           </p>

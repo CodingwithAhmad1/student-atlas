@@ -31,7 +31,7 @@ export const visaFacts: Record<
       US: {
         visa_name: "F-1 Student Visa",
         visa_definition: "Primary visa for full-time study at accredited US universities.",
-        total_upfront_cost: "~$535 (visa + SEVIS)",
+        total_upfront_cost: "~$535 (visa + SEVIS; +$250 integrity fee where charged)",
         application_fee: "$185",
         work_hours: "20 hrs/week term-time",
         dependants_allowed: true,
@@ -47,8 +47,8 @@ export const visaFacts: Record<
       UK: {
         visa_name: "Student visa",
         visa_definition: "Fixed-term visa for degree study at licensed UK institutions.",
-        total_upfront_cost: "~£3,300 (3-yr degree: visa + IHS)",
-        application_fee: "£490",
+        total_upfront_cost: "~£3,275 (3-yr degree: visa + IHS)",
+        application_fee: "£558",
         work_hours: "20 hrs/week term-time",
         dependants_allowed: true,
         validity_model: "Fixed: course length + 4 months",
@@ -56,15 +56,15 @@ export const visaFacts: Record<
         watch_out:
           "IHS surcharge of £776/year is paid entirely upfront — often a surprise cost.",
         processing_time: "3 weeks standard after biometrics",
-        post_study_work: "Graduate Route: 2 yrs (3 for PhD)",
+        post_study_work: "Graduate Route: 2 yrs (18 months from 2027; 3 for PhD)",
         language_requirement: "IELTS Academic 6.0+ (UKVI version)",
-        financial_proof_required: "£1,334/month London (9 months held 28 days continuously)",
+        financial_proof_required: "£1,529/month London, £1,171 elsewhere (up to 9 months, held 28 days)",
       },
       AU: {
         visa_name: "Student visa — Subclass 500",
         visa_definition: "Visa for study at CRICOS-registered Australian institutions.",
-        total_upfront_cost: "~AUD $1,400 (visa + first-year OSHC)",
-        application_fee: "AUD $710",
+        total_upfront_cost: "~AUD $3,100 (visa + first-year OSHC)",
+        application_fee: "AUD $2,500",
         work_hours: "48 hrs/fortnight term-time",
         dependants_allowed: true,
         validity_model: "Fixed: course length + extra period",
@@ -85,8 +85,8 @@ export const visaFacts: Record<
       US: {
         visa_name: "Optional Practical Training (OPT)",
         visa_definition: "Post-graduation work authorisation under F-1 status.",
-        total_upfront_cost: "No additional visa fee",
-        application_fee: "Included in F-1 status",
+        total_upfront_cost: "$470 (Form I-765, online)",
+        application_fee: "$470 online / $520 paper (I-765)",
         work_hours: "Full-time unrestricted",
         dependants_allowed: false,
         validity_model: "12 months (36 with STEM extension)",
@@ -101,11 +101,11 @@ export const visaFacts: Record<
       UK: {
         visa_name: "Graduate Route",
         visa_definition: "Open work visa after graduation — no job offer needed.",
-        total_upfront_cost: "£822",
-        application_fee: "£822",
+        total_upfront_cost: "~£3,000 (£937 fee + IHS £1,035/yr)",
+        application_fee: "£937",
         work_hours: "Unlimited — any job, any employer",
         dependants_allowed: false,
-        validity_model: "2 yrs (bachelor's/master's), 3 yrs (PhD)",
+        validity_model: "2 yrs (18 months if applying from 1 Jan 2027); 3 yrs PhD",
         // WATCH OUT — proposal: does not lead to permanent residency — must switch to Skilled Worker
         watch_out:
           "Does not count toward permanent residency — must transition to Skilled Worker visa.",
@@ -117,8 +117,8 @@ export const visaFacts: Record<
       AU: {
         visa_name: "Temporary Graduate — Subclass 485",
         visa_definition: "Post-study work visa with duration based on qualification and location.",
-        total_upfront_cost: "AUD $1,895",
-        application_fee: "AUD $1,895",
+        total_upfront_cost: "AUD $5,750",
+        application_fee: "AUD $5,750",
         work_hours: "Unlimited — any role, no sponsor",
         dependants_allowed: false,
         validity_model: "2–5 yrs by degree and location",
@@ -151,14 +151,14 @@ export const visaFacts: Record<
       UK: {
         visa_name: "Skilled Worker Visa",
         visa_definition: "Points-based employer-sponsored visa — no cap or lottery.",
-        total_upfront_cost: "Not specified",
-        application_fee: "Not specified",
+        total_upfront_cost: "£819–£1,865 fee + IHS £1,035/yr",
+        application_fee: "£819–£1,865 by length and location",
         work_hours: "Full-time for sponsoring employer",
         dependants_allowed: true,
         validity_model: "Up to 5 yrs; path to ILR after 5 yrs",
-        // WATCH OUT — proposal: employer must hold sponsor licence; minimum salary £30,960 for new entrants
+        // WATCH OUT — proposal: employer must hold sponsor licence; minimum salary £41,700 (£33,400 new entrants)
         watch_out:
-          "Employer must hold sponsor licence; minimum salary threshold £30,960 for new entrants.",
+          "Employer must hold sponsor licence; minimum salary £41,700 (£33,400 for new entrants).",
         processing_time: "Not specified",
         post_study_work: "Follows Graduate Route",
         language_requirement: "English proficiency required",
@@ -167,18 +167,18 @@ export const visaFacts: Record<
       AU: {
         visa_name: "TSS visa (Subclass 482)",
         visa_definition: "Employer-sponsored temporary work visa for skilled occupations.",
-        total_upfront_cost: "Not specified",
-        application_fee: "Not specified",
+        total_upfront_cost: "AUD $4,015 (employer usually pays)",
+        application_fee: "AUD $4,015",
         work_hours: "Full-time for sponsoring employer",
         dependants_allowed: true,
         validity_model: "Up to 4 yrs; 186 route to PR",
-        // WATCH OUT — proposal: role must be on skilled occupation list; salary minimum AUD $70,000/yr
+        // WATCH OUT — proposal: role must be on skilled occupation list; salary at least CSIT (~AUD $79,400)
         watch_out:
-          "Role must appear on skilled occupation list; salary minimum AUD $70,000 per year.",
+          "Role must appear on skilled occupation list; salary at least the Core Skills Income Threshold (~AUD $79,400).",
         processing_time: "Not specified",
         post_study_work: "Follows Subclass 485",
         language_requirement: "English proficiency required",
-        financial_proof_required: "TSMIT salary compliance",
+        financial_proof_required: "Core Skills Income Threshold (CSIT) compliance",
       },
     },
   },
@@ -189,7 +189,7 @@ export const visaFacts: Record<
       US: {
         visa_name: "B-2 Tourist Visa",
         visa_definition: "Visa for tourism and family visits — no work or study.",
-        total_upfront_cost: "$185",
+        total_upfront_cost: "$185 (+$250 integrity fee where charged)",
         application_fee: "$185 (non-refundable)",
         work_hours: "Not permitted",
         dependants_allowed: false,
@@ -205,11 +205,11 @@ export const visaFacts: Record<
       UK: {
         visa_name: "Standard Visitor Visa",
         visa_definition: "Temporary visit visa for up to 6 months per stay.",
-        total_upfront_cost: "£115 (2-year multi-entry)",
-        application_fee: "£115",
+        total_upfront_cost: "£135 (up to 6 months)",
+        application_fee: "£135",
         work_hours: "Not permitted",
         dependants_allowed: false,
-        validity_model: "2-year, 5-year, or 10-year options",
+        validity_model: "6 months; long-term 2, 5 or 10 years (£506–£1,128)",
         // WATCH OUT — proposal: in-person biometrics appointment at VAC required; processing can vary
         watch_out:
           "In-person biometrics at a VAC required — appointment wait times can vary significantly.",
@@ -221,8 +221,8 @@ export const visaFacts: Record<
       AU: {
         visa_name: "Visitor visa — Subclass 600",
         visa_definition: "Electronic tourist visa — fully online, no interview.",
-        total_upfront_cost: "AUD $190",
-        application_fee: "AUD $190",
+        total_upfront_cost: "AUD $250 (outside Australia)",
+        application_fee: "AUD $250",
         work_hours: "Not permitted",
         dependants_allowed: false,
         validity_model: "Up to 12 months; typically 3–6 months",
@@ -259,8 +259,8 @@ export const visaFacts: Record<
       UK: {
         visa_name: "Indefinite Leave to Remain (ILR)",
         visa_definition: "Permanent UK residency — unrestricted right to live and work.",
-        total_upfront_cost: "£50 Life in the UK test",
-        application_fee: "£50 (test fee)",
+        total_upfront_cost: "~£3,276 (£3,226 ILR fee + £50 test)",
+        application_fee: "£3,226",
         work_hours: "Unlimited — any employer",
         dependants_allowed: true,
         validity_model: "Permanent; indefinite leave status",
@@ -275,8 +275,8 @@ export const visaFacts: Record<
       AU: {
         visa_name: "Permanent Residency (Subclass 189/190/186)",
         visa_definition: "Points-tested or employer-sponsored permanent Australian residency.",
-        total_upfront_cost: "Not specified",
-        application_fee: "Not specified",
+        total_upfront_cost: "~AUD $6,140 (189/190/186)",
+        application_fee: "AUD $6,135–$6,140",
         work_hours: "Unlimited — any employer",
         dependants_allowed: true,
         validity_model: "Permanent; 5-year travel facility",
@@ -309,8 +309,8 @@ export const visaFacts: Record<
       UK: {
         visa_name: "British Citizenship (Naturalisation)",
         visa_definition: "Full citizenship after holding ILR and meeting residence requirements.",
-        total_upfront_cost: "£50 Life in UK test (if not passed)",
-        application_fee: "£50 (test fee)",
+        total_upfront_cost: "~£1,839 (£1,709 fee + £130 ceremony) + £50 test",
+        application_fee: "£1,709",
         work_hours: "Unlimited",
         dependants_allowed: true,
         validity_model: "Permanent",
@@ -325,8 +325,8 @@ export const visaFacts: Record<
       AU: {
         visa_name: "Australian Citizenship",
         visa_definition: "Full citizenship after 4 years residence including 1 year as PR.",
-        total_upfront_cost: "Not specified",
-        application_fee: "Not specified",
+        total_upfront_cost: "AUD $595",
+        application_fee: "AUD $595",
         work_hours: "Unlimited",
         dependants_allowed: true,
         validity_model: "Permanent",

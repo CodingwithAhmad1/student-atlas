@@ -2,11 +2,8 @@ import { useState } from "react";
 import { ChevronDownIcon, ExternalLink } from "lucide-react";
 import { DiffViewer } from "@/components/activity/diff-viewer";
 import { ResolutionPreview } from "@/components/activity/resolution-preview";
-import {
-  STATUS_DOT_STYLES,
-  StatusBadge,
-  formatDateTime,
-} from "@/components/monitoring/shared";
+import { StatusBadge } from "@/components/monitoring/shared";
+import { STATUS_DOT_STYLES, formatDateTime } from "@/lib/monitoring-format";
 import { cn } from "@/lib/utils";
 import type { ActivityAlert } from "@/types/monitoring";
 import { CATEGORY_LABELS, SIGNIFICANCE_LABELS } from "@/types/monitoring";
@@ -74,7 +71,7 @@ export function ActivityCard({ alert }: { alert: ActivityAlert }) {
               href={alert.sourceUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-blue-600 underline underline-offset-2 hover:text-blue-700"
+              className="inline-flex items-center gap-1 text-blue-600 underline underline-offset-2 hover:text-blue-700 dark:text-blue-400"
             >
               View source page
               <ExternalLink className="size-3" />
@@ -82,7 +79,7 @@ export function ActivityCard({ alert }: { alert: ActivityAlert }) {
           </div>
 
           {alert.error ? (
-            <p className="rounded-md border border-orange-200 bg-orange-50 p-3 text-sm text-orange-900">
+            <p className="rounded-md border border-orange-200 bg-orange-50 p-3 text-sm text-orange-900 dark:border-orange-900 dark:bg-orange-950/30 dark:text-orange-200">
               {alert.error}
             </p>
           ) : null}

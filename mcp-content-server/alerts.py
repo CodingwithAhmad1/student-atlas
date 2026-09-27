@@ -289,20 +289,18 @@ def plan_edit(file: str, old_text: str, new_text: str, current: str | None = Non
 
 
 def run_typecheck() -> tuple[bool, str]:
-    try:
-        result = subprocess.run(
-            ["npx", "tsc", "-b"],
-            cwd=FRONTEND_DIR,
-            capture_output=True,
-            text=True,
-            timeout=180,
-        )
-    except FileNotFoundError:
-        return False, "npx not found — is Node.js installed (and `npm ci` run in frontend/)?"
-    except subprocess.TimeoutExpired:
-        return False, "TypeScript check timed out (180 s)."
-    output = (result.stdout + result.stderr).strip()
-    return result.returncode == 0, output
+    """TypeScript check plus the content integrity check (citations, glossary
+    terms, callout anchors, profile references)."""
+    for cmd, timeout in ((["npx", "tsc", "-b"], 180), (["npm", "run", "--silent", "check:content"], 120)):
+        try:
+            result = subprocess.run(cmd, cwd=FRONTEND_DIR, capture_output=True, text=True, timeout=timeout)
+        except FileNotFoundError:
+            return False, "npx/npm not found — is Node.js installed (and `npm ci` run in frontend/)?"
+        except subprocess.TimeoutExpired:
+            return False, f"`{' '.join(cmd)}` timed out ({timeout} s)."
+        if result.returncode != 0:
+            return False, (result.stdout + result.stderr).strip()
+    return True, ""
 
 
 def apply_edits(edits: list[dict], check: bool = True) -> tuple[list[PlannedEdit], str]:

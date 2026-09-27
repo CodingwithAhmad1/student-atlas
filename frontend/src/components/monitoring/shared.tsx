@@ -1,20 +1,7 @@
 import { cn } from "@/lib/utils";
 import type { ActivityStatus } from "@/types/monitoring";
 import { STATUS_LABELS } from "@/types/monitoring";
-
-export const STATUS_STYLES: Record<ActivityStatus, string> = {
-  pending: "bg-amber-100 text-amber-800 border-amber-200",
-  dismissed: "bg-neutral-100 text-neutral-600 border-neutral-200",
-  approved: "bg-green-100 text-green-800 border-green-200",
-  manual: "bg-orange-100 text-orange-800 border-orange-200",
-};
-
-export const STATUS_DOT_STYLES: Record<ActivityStatus, string> = {
-  pending: "bg-amber-500",
-  dismissed: "bg-neutral-400",
-  approved: "bg-green-500",
-  manual: "bg-orange-500",
-};
+import { STATUS_STYLES } from "@/lib/monitoring-format";
 
 export function StatusBadge({ status }: { status: ActivityStatus }) {
   return (
@@ -80,19 +67,5 @@ export function FilterTabs<T extends string>({
         </button>
       ))}
     </div>
-  );
-}
-
-export function formatDateTime(iso: string | null): string {
-  if (!iso) return "—";
-  return new Intl.DateTimeFormat(undefined, {
-    dateStyle: "medium",
-    timeStyle: "short",
-  }).format(new Date(iso));
-}
-
-export function formatDate(iso: string): string {
-  return new Intl.DateTimeFormat(undefined, { dateStyle: "full" }).format(
-    new Date(iso)
   );
 }

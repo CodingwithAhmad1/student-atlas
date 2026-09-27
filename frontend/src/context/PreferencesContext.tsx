@@ -1,29 +1,8 @@
-import {
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-  type ReactNode,
-} from "react";
-import type { Country, NationalityOverlay } from "@/data/types";
+import { useEffect, useState, type ReactNode } from "react";
+import { COUNTRY_LABELS, type Country } from "@/data/types";
 import { useNationalityOverlay } from "@/hooks/useNationalityOverlay";
-
-interface Preferences {
-  nationality: string | null;
-  destinations: Country[];
-}
-
-interface PreferencesContextValue {
-  preferences: Preferences;
-  setNationality: (nationality: string) => void;
-  setDestinations: (destinations: Country[]) => void;
-  toggleDestination: (country: Country) => void;
-  isConfigured: boolean;
-  nationalityOverlay: NationalityOverlay | null;
-  nationalitySlug: string | null;
-  overlayLoading: boolean;
-  reset: () => void;
-}
+import { readStorage, removeStorage, writeStorage } from "@/lib/storage";
+import { PreferencesContext, type Preferences } from "./preferences";
 
 const STORAGE_KEY = "student-atlas-preferences";
 const SETUP_DONE_KEY = "student-atlas-setup-done";
@@ -33,46 +12,39 @@ const defaultPreferences: Preferences = {
   destinations: [],
 };
 
+function isCountry(value: unknown): value is Country {
+  return typeof value === "string" && value in COUNTRY_LABELS;
+}
+
 function loadPreferences(): Preferences {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      const parsed = JSON.parse(stored);
+    const parsed = JSON.parse(readStorage(STORAGE_KEY) ?? "null");
+    if (parsed && typeof parsed === "object") {
       return {
-        nationality: parsed.nationality ?? null,
-        destinations: parsed.destinations ?? [],
+        nationality: typeof parsed.nationality === "string" ? parsed.nationality : null,
+        destinations: Array.isArray(parsed.destinations)
+          ? [...new Set<Country>(parsed.destinations.filter(isCountry))]
+          : [],
       };
     }
   } catch {
-    // ignore parse errors
+    // Corrupt stored value — start fresh.
   }
   return defaultPreferences;
 }
 
-function loadSetupDone(): boolean {
-  return localStorage.getItem(SETUP_DONE_KEY) === "true";
-}
-
-const PreferencesContext = createContext<PreferencesContextValue | null>(null);
-
 export function PreferencesProvider({ children }: { children: ReactNode }) {
   const [preferences, setPreferences] = useState<Preferences>(loadPreferences);
-  const [setupDone, setSetupDone] = useState(loadSetupDone);
+  const [setupDone, setSetupDone] = useState(() => readStorage(SETUP_DONE_KEY) === "true");
 
-  const {
-    overlay: nationalityOverlay,
-    nationalitySlug,
-    isLoading: overlayLoading,
-  } = useNationalityOverlay(preferences.nationality);
+  const overlayState = useNationalityOverlay(preferences.nationality);
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(preferences));
+    writeStorage(STORAGE_KEY, JSON.stringify(preferences));
   }, [preferences]);
 
   useEffect(() => {
-    if (setupDone) {
-      localStorage.setItem(SETUP_DONE_KEY, "true");
-    }
+    if (setupDone) writeStorage(SETUP_DONE_KEY, "true");
   }, [setupDone]);
 
   const setNationality = (nationality: string) => {
@@ -81,8 +53,7 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
 
   const toggleDestination = (country: Country) => {
     setPreferences((prev) => {
-      const has = prev.destinations.includes(country);
-      const next = has
+      const next = prev.destinations.includes(country)
         ? prev.destinations.filter((c) => c !== country)
         : [...prev.destinations, country];
       return { ...prev, destinations: next };
@@ -91,17 +62,13 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
 
   const setDestinations = (destinations: Country[]) => {
     setPreferences((prev) => ({ ...prev, destinations }));
-    if (!setupDone && destinations.length > 0) {
-      setSetupDone(true);
-    }
+    if (destinations.length > 0) setSetupDone(true);
   };
-
-  const isConfigured = setupDone;
 
   const reset = () => {
     setPreferences(defaultPreferences);
     setSetupDone(false);
-    localStorage.removeItem(SETUP_DONE_KEY);
+    removeStorage(SETUP_DONE_KEY);
   };
 
   return (
@@ -111,22 +78,19 @@ export function PreferencesProvider({ children }: { children: ReactNode }) {
         setNationality,
         setDestinations,
         toggleDestination,
-        isConfigured,
-        nationalityOverlay,
-        nationalitySlug,
-        overlayLoading,
+        isConfigured:
+          setupDone &&
+          preferences.nationality !== null &&
+          preferences.destinations.length > 0,
+        nationalityOverlay: overlayState.overlay,
+        nationalitySlug: overlayState.nationalitySlug,
+        nationalityLabel: overlayState.nationalityLabel,
+        overlayLoading: overlayState.isLoading,
+        overlayError: overlayState.error,
         reset,
       }}
     >
       {children}
     </PreferencesContext.Provider>
   );
-}
-
-export function usePreferences() {
-  const ctx = useContext(PreferencesContext);
-  if (!ctx) {
-    throw new Error("usePreferences must be used within a PreferencesProvider");
-  }
-  return ctx;
 }
