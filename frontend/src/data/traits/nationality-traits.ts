@@ -278,7 +278,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "coursupreme.org.gn/code-civil-2019", note: "The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   benin: {
@@ -297,7 +297,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "sgg.gouv.bj/loi-2022-32-nationalite", note: "Loss happens only if the person repudiates Beninese nationality by a declaration. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   burundi: {
@@ -335,7 +335,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "planificacion.gob.bo/constitucion", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   "dr-congo": {
@@ -354,7 +354,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "presidence.cd/constitution-2011", note: "The cited official page is in French." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   yemen: {
@@ -373,7 +373,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "yemennic.net/nationality-law", note: "The law asks Yemenis to get the Interior Minister's permission before naturalising abroad, but someone who does not is still treated as Yemeni. The cited official page is in Arabic." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   angola: {
@@ -392,7 +392,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "cne.ao/lei-2-16-nacionalidade", note: "Loss requires both acquiring a foreign nationality and stating that one no longer wishes to be Angolan; in Angola a dual national is treated only as Angolan. The cited official page is in Portuguese." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   mozambique: {
@@ -411,7 +411,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "parlamento.mz/constituicao", note: "In Mozambique a dual national is treated only as Mozambican. The cited official page is in Portuguese." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   madagascar: {
@@ -430,7 +430,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "hcc.gov.mg/arret-04-hcc-ar-2023", note: "Whether the loss is automatic or takes effect only once a government decree records it is disputed. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   "ivory-coast": {
@@ -506,7 +506,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "sgg-mali.ml/cpf-2011-art-249", note: "The cited official page is in French." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   syria: {
@@ -563,7 +563,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "omrh.gouv.ht/constitution-amendee-2012", note: "The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   "south-sudan": {
@@ -601,7 +601,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "presidencia.gob.do/constitucion-2015", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   cuba: {
@@ -620,7 +620,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "gacetaoficial.gob.cu/constitucion", note: "In Cuba, Cuban citizens are treated only as Cubans and cannot rely on a foreign citizenship. The cited official page is in Spanish." },
     sanctionsRegime: { value: "comprehensive", verifiedAt: "2026-09-27" },
   },
   "czech-republic": {
@@ -658,7 +658,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "tsc.gob.hn/constitucion", note: "This protection covers Hondurans by birth; Hondurans by naturalisation can lose Honduran nationality by naturalising abroad. The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   sweden: {
@@ -696,7 +696,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "files.diariodarepublica.pt/lei-organica-1-2026", note: "The cited official page is in Portuguese." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   tajikistan: {
@@ -715,7 +715,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-27", citationId: "avkd.tj/dual-citizenship-status", note: "Tajik citizenship is lost on acquiring the citizenship of a country without a dual-citizenship treaty with Tajikistan; the source names Russia as having one. The cited official page is in Russian." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   "papua-new-guinea": {
@@ -753,7 +753,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "migration.gov.az/loss-of-citizenship", note: "Loss is decided by a court. The cited official page is in Azerbaijani." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   greece: {
@@ -772,7 +772,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "mitos.gov.gr/loss-greek-citizenship-foreign", note: "Greek citizenship ends only if the citizen applies and the Minister of the Interior grants permission. The cited official page is in Greek." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   hungary: {
@@ -810,7 +810,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-27", citationId: "service-public.gouv.tg/code-nationalite-1978", note: "Under the 1978 nationality code, loss on naturalising abroad takes effect only if the government authorises it by decree. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   austria: {
@@ -848,7 +848,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "pravo.by/citizenship-law-136-z", note: "Belarus does not recognise the new citizenship, and Belarusian citizens must report it within three months. The cited official page is in Russian." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   russia: {
@@ -867,7 +867,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "kdmid.ru/138-fz-citizenship", note: "Russian citizens must notify the authorities of any foreign citizenship they acquire. The cited official page is in Russian." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   ethiopia: {
@@ -886,7 +886,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "justice.gov.et/nationality-proclamation-378-2003" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   germany: {
@@ -943,7 +943,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "417", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "legifrance.gouv.fr/code-civil-art-23", note: "The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   "south-africa": {
@@ -962,7 +962,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "gov.za/home-affairs-citizenship-portal-2025", note: "A 2025 Constitutional Court ruling struck down the rule that took citizenship away from South Africans who naturalised abroad without prior permission." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   italy: {
@@ -1057,7 +1057,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-27", citationId: "mjusticia.gob.es/como-pierde-nacionalidad", note: "The United States, the United Kingdom and Australia are not on the exempt list, so a Spaniard who naturalises there must declare within three years that they wish to keep Spanish nationality. The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   algeria: {
@@ -1076,7 +1076,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "joradp.dz/ordonnance-05-01-nationalite", note: "Algerian nationality ends only if a decree authorises the person to renounce it. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   argentina: {
@@ -1152,7 +1152,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-27", citationId: "snovmr.gov.ua/multiple-citizenship-2026", note: "Ukrainian citizenship is kept only when the new citizenship is of a country on the Cabinet of Ministers' list, which includes the United States and the United Kingdom. The cited official page is in Ukrainian." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   canada: {
@@ -1209,7 +1209,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "tgr.gov.ma/code-nationalite-marocaine", note: "Moroccan nationality ends only if a decree authorises the person to renounce it. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   uzbekistan: {
@@ -1228,7 +1228,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "lex.uz/citizenship-law-zru-610", note: "The cited official page is in Russian." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   peru: {
@@ -1247,7 +1247,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "anc.pj.gob.pe/constitucion-1993", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   cameroon: {
@@ -1266,7 +1266,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "minjustice.cm/justitia-13-nationalite", note: "The Ministry of Justice describes the loss as automatic. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   venezuela: {
@@ -1285,7 +1285,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "asambleanacional.gob.ve/constitucion", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   zambia: {
@@ -1342,7 +1342,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "chile.gob.cl/nacionalidad", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   senegal: {
@@ -1399,7 +1399,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "asambleanacional.gob.ec/constitucion", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   cambodia: {
@@ -1494,7 +1494,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "cspd.gov.jo/nationality-law", note: "The cited official page is in Arabic." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   israel: {
@@ -1532,7 +1532,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "portal.ahu.go.id/uu-12-2006-kewarganegaraan", note: "The cited official page is in Indonesian." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   nigeria: {
@@ -1570,7 +1570,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "camara.leg.br/ec-131-2023", note: "Since the 2023 constitutional amendment, only an express request to a Brazilian authority ends Brazilian nationality. The cited official page is in Portuguese." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   bangladesh: {
@@ -1589,7 +1589,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-27", citationId: "bdlaws.minlaw.gov.bd/citizenship-order-1972-art-2b", note: "Bangladeshi citizenship is kept when the new citizenship is of a European or North American state, or of a state named in a government gazette notice." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   mexico: {
@@ -1684,7 +1684,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462-ballot", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai", note: "The cited page describes the 2008 Law on Vietnamese Nationality. The cited official page is in Vietnamese." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   iran: {
@@ -1722,7 +1722,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "mevzuat.gov.tr/5901-turk-vatandasligi-kanunu", note: "Turkish citizens report the new citizenship so it is recorded as multiple citizenship. The cited official page is in Turkish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   thailand: {
@@ -1741,7 +1741,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "report.dopa.go.th/nationality-act-2508" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   kenya: {

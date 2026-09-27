@@ -47,7 +47,8 @@ export async function fetchPage(url: string): Promise<FetchResult> {
       response = await fetch(url, {
         headers: {
           "User-Agent": USER_AGENT,
-          Accept: "text/html,application/xhtml+xml",
+          // PDFs are cited too (laws, gazettes); some servers answer 406 to an HTML-only Accept.
+          Accept: "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
           "Accept-Language": "en",
         },
         redirect: "follow",

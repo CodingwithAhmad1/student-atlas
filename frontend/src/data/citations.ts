@@ -591,4 +591,204 @@ export const citations: Record<string, Citation> = {
     url: "https://giwmscdnone.gov.np/media/app/public/275/posts/1721032585_65.pdf",
     label: "Government of Nepal, Nepal Law Commission — Nepal Citizenship Act 2063 (2006)",
   },
+  "minjustice.cm/justitia-13-nationalite": {
+    id: "minjustice.cm/justitia-13-nationalite",
+    url: "https://minjustice.cm/justitia/JUSTITIA-13.pdf",
+    label: "Ministère de la Justice du Cameroun — Justitia n°013 (septembre 2019), « La nationalité camerounaise au scanner » (in French)",
+  },
+  "service-public.gouv.tg/code-nationalite-1978": {
+    id: "service-public.gouv.tg/code-nationalite-1978",
+    url: "https://service-public.gouv.tg/documents/noUserFileDownload?id=1isq3001ik51d&storage=files",
+    label: "Service Public du Togo — Ordonnance n° 78-34 du 7 septembre 1978 portant Code de la nationalité togolaise (Journal officiel, 11 septembre 1978) (in French)",
+  },
+  "hcc.gov.mg/arret-04-hcc-ar-2023": {
+    id: "hcc.gov.mg/arret-04-hcc-ar-2023",
+    url: "https://www.hcc.gov.mg/?p=8407",
+    label: "Haute Cour Constitutionnelle de Madagascar — Arrêt n°04-HCC/AR du 22 août 2023 (in French)",
+  },
+  "presidence.cd/constitution-2011": {
+    id: "presidence.cd/constitution-2011",
+    url: "https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf",
+    label: "Présidence de la République — Journal Officiel, Constitution de la République Démocratique du Congo (texte modifié 2011) (in French)",
+  },
+  "omrh.gouv.ht/constitution-amendee-2012": {
+    id: "omrh.gouv.ht/constitution-amendee-2012",
+    url: "https://omrh.gouv.ht/Media/Publications/1-Constitution/Constitution1987Amend%C3%A9eJuin2012.pdf",
+    label: "OMRH (Office de Management et des Ressources Humaines) — Le Moniteur n°96 du 19 juin 2012, Loi constitutionnelle portant amendement de la Constitution de 1987 (in French)",
+  },
+  "portal.ahu.go.id/uu-12-2006-kewarganegaraan": {
+    id: "portal.ahu.go.id/uu-12-2006-kewarganegaraan",
+    url: "https://portal.ahu.go.id/uploads/_uploads/dl/PP_UU/Dit.Tatanegara/UU%20No.%2012%20Th%202006.pdf",
+    label: "Direktorat Jenderal Administrasi Hukum Umum (Kementerian Hukum) — UU No. 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia (in Indonesian)",
+  },
+  "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai": {
+    id: "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai",
+    url: "https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi",
+    label: "Cổng thông tin phổ biến, giáo dục pháp luật (Bộ Tư pháp) — Từ 1/7/2009: Công dân Việt Nam được đồng thời có quốc tịch nước ngoài (in Vietnamese)",
+  },
+  "report.dopa.go.th/nationality-act-2508": {
+    id: "report.dopa.go.th/nationality-act-2508",
+    url: "https://report.dopa.go.th/laws/document/2/226.pdf",
+    label: "Department of Provincial Administration — Nationality Act, B.E. 2508 (1965) (unofficial translation)",
+  },
+  "bdlaws.minlaw.gov.bd/citizenship-order-1972-art-2b": {
+    id: "bdlaws.minlaw.gov.bd/citizenship-order-1972-art-2b",
+    url: "https://bdlaws.minlaw.gov.bd/act-423/section-18668.html",
+    label: "Laws of Bangladesh (Legislative and Parliamentary Affairs Division) — The Bangladesh Citizenship (Temporary Provisions) Order, 1972, Article 2B",
+  },
+  "justice.gov.et/nationality-proclamation-378-2003": {
+    id: "justice.gov.et/nationality-proclamation-378-2003",
+    url: "https://justice.gov.et/wp-content/uploads/2025/02/አዋጅ-ቁጥር-378-1996.pdf",
+    label: "Ministry of Justice — Ethiopian Nationality Proclamation No. 378/2003 (Negarit Gazeta, Amharic/English)",
+  },
+  "gov.za/home-affairs-citizenship-portal-2025": {
+    id: "gov.za/home-affairs-citizenship-portal-2025",
+    url: "https://www.gov.za/news/media-statements/home-affairs-launches-new-citizenship-portal-24-nov-2025",
+    label: "South African Government (Department of Home Affairs) — Home Affairs launches new citizenship portal, 24 Nov 2025",
+  },
+  "mitos.gov.gr/loss-greek-citizenship-foreign": {
+    id: "mitos.gov.gr/loss-greek-citizenship-foreign",
+    url: "https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%91%CF%80%CF%8E%CE%BB%CE%B5%CE%B9%CE%B1_%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%99%CE%B8%CE%B1%CE%B3%CE%AD%CE%BD%CE%B5%CE%B9%CE%B1%CF%82_%CE%BB%CF%8C%CE%B3%CF%89_%CE%9A%CF%84%CE%AE%CF%83%CE%B7%CF%82_%CE%91%CE%BB%CE%BB%CE%BF%CE%B4%CE%B1%CF%80%CE%AE%CF%82_%CE%99%CE%B8%CE%B1%CE%B3%CE%AD%CE%BD%CE%B5%CE%B9%CE%B1%CF%82",
+    label: "Εθνικό Μητρώο Διοικητικών Διαδικασιών (mitos.gov.gr) — Απώλεια Ελληνικής Ιθαγένειας λόγω Κτήσης Αλλοδαπής Ιθαγένειας (in Greek)",
+  },
+  "kdmid.ru/138-fz-citizenship": {
+    id: "kdmid.ru/138-fz-citizenship",
+    url: "https://www.kdmid.ru/regulatory-frameworks/federal-laws/FZ_%E2%84%96138_28.04.2023.pdf",
+    label: "Consular Department of the Russian MFA (kdmid.ru) — Federal Law No. 138-FZ of 28.04.2023 \"On Citizenship of the Russian Federation\" (in Russian)",
+  },
+  "pravo.by/citizenship-law-136-z": {
+    id: "pravo.by/citizenship-law-136-z",
+    url: "https://pravo.by/document/?guid=3871&p0=H10200136",
+    label: "National Legal Internet Portal of Belarus (pravo.by) — Law No. 136-Z \"On Citizenship of the Republic of Belarus\" (in Russian)",
+  },
+  "snovmr.gov.ua/multiple-citizenship-2026": {
+    id: "snovmr.gov.ua/multiple-citizenship-2026",
+    url: "https://snovmr.gov.ua/mnozhynne-gromadyanstvo-onovleni-pravyla-nabuttya-ta-zberezhennya-gromadyanstva-ukrayiny/",
+    label: "Сновська міська рада (information from the State Migration Service, Chernihiv region) — Множинне громадянство: оновлені правила набуття та збереження громадянства України (in Ukrainian)",
+  },
+  "lex.uz/citizenship-law-zru-610": {
+    id: "lex.uz/citizenship-law-zru-610",
+    url: "https://lex.uz/docs/4761986",
+    label: "National Database of Legislation (lex.uz) — Law No. ZRU-610 \"On Citizenship of the Republic of Uzbekistan\" (in Russian)",
+  },
+  "avkd.tj/dual-citizenship-status": {
+    id: "avkd.tj/dual-citizenship-status",
+    url: "https://avkd.tj/ru/novosti/3262-nekotorye-osobennosti-pravovogo-statusa-lits-s-dvoynym-grazhdanstvom-v-respublike-tadzhikistan.html",
+    label: "Academy of the Ministry of Internal Affairs of Tajikistan (avkd.tj) — Некоторые особенности правового статуса лиц с двойным гражданством в Республике Таджикистан (in Russian)",
+  },
+  "migration.gov.az/loss-of-citizenship": {
+    id: "migration.gov.az/loss-of-citizenship",
+    url: "https://migration.gov.az/az/useful/44",
+    label: "State Migration Service of Azerbaijan (migration.gov.az) — Azərbaycan Respublikası vətəndaşlığının itirilməsi halları (in Azerbaijani)",
+  },
+  "mevzuat.gov.tr/5901-turk-vatandasligi-kanunu": {
+    id: "mevzuat.gov.tr/5901-turk-vatandasligi-kanunu",
+    url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5901.pdf",
+    label: "Mevzuat Bilgi Sistemi (mevzuat.gov.tr) — Türk Vatandaşlığı Kanunu (Law No. 5901) (in Turkish)",
+  },
+  "chile.gob.cl/nacionalidad": {
+    id: "chile.gob.cl/nacionalidad",
+    url: "https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad",
+    label: "Gobierno de Chile (Chile en el Exterior) — Nacionalidad (in Spanish)",
+  },
+  "mjusticia.gob.es/como-pierde-nacionalidad": {
+    id: "mjusticia.gob.es/como-pierde-nacionalidad",
+    url: "https://www.mjusticia.gob.es/es/ciudadania/nacionalidad/que-es-nacionalidad/como-pierde-nacionalidad",
+    label: "Ministerio de Justicia — ¿Cómo se pierde la Nacionalidad? (in Spanish)",
+  },
+  "files.diariodarepublica.pt/lei-organica-1-2026": {
+    id: "files.diariodarepublica.pt/lei-organica-1-2026",
+    url: "https://files.diariodarepublica.pt/1s/2026/05/09500/0000200020.pdf",
+    label: "Diário da República — Lei Orgânica n.º 1/2026 (republica a Lei da Nacionalidade) (in Portuguese)",
+  },
+  "camara.leg.br/ec-131-2023": {
+    id: "camara.leg.br/ec-131-2023",
+    url: "https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html",
+    label: "Câmara dos Deputados — Emenda Constitucional nº 131, de 3 de outubro de 2023 (in Portuguese)",
+  },
+  "tsc.gob.hn/constitucion": {
+    id: "tsc.gob.hn/constitucion",
+    url: "https://www.tsc.gob.hn/web/leyes/Constitucion_de_la_republica.pdf",
+    label: "Tribunal Superior de Cuentas — Constitución de la República de Honduras (reformas hasta 2004) (in Spanish)",
+  },
+  "asambleanacional.gob.ec/constitucion": {
+    id: "asambleanacional.gob.ec/constitucion",
+    url: "https://www.asambleanacional.gob.ec/sites/default/files/private/asambleanacional/filesasambleanacionalnameuid-29/2018-08-01-constitucion-reformada.pdf",
+    label: "Asamblea Nacional — Constitución de la República del Ecuador (reformada) (in Spanish)",
+  },
+  "anc.pj.gob.pe/constitucion-1993": {
+    id: "anc.pj.gob.pe/constitucion-1993",
+    url: "https://anc.pj.gob.pe/contenido/normas/cpdp1993.pdf",
+    label: "Poder Judicial del Perú — Constitución Política del Perú de 1993 (in Spanish)",
+  },
+  "planificacion.gob.bo/constitucion": {
+    id: "planificacion.gob.bo/constitucion",
+    url: "https://www.planificacion.gob.bo/uploads/marco-legal/nueva_constitucion_politica_del_estado.pdf",
+    label: "Ministerio de Planificación del Desarrollo — Constitución Política del Estado (2009) (in Spanish)",
+  },
+  "presidencia.gob.do/constitucion-2015": {
+    id: "presidencia.gob.do/constitucion-2015",
+    url: "https://presidencia.gob.do/sites/default/files/statics/transparencia/base-legal/Constitucion-de-la-Republica-Dominicana-2015-actualizada.pdf",
+    label: "Presidencia de la República Dominicana — Constitución de la República Dominicana (2015, actualizada) (in Spanish)",
+  },
+  "asambleanacional.gob.ve/constitucion": {
+    id: "asambleanacional.gob.ve/constitucion",
+    url: "https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF",
+    label: "Asamblea Nacional de Venezuela — Constitución de la República Bolivariana de Venezuela (in Spanish)",
+  },
+  "gacetaoficial.gob.cu/constitucion": {
+    id: "gacetaoficial.gob.cu/constitucion",
+    url: "https://www.gacetaoficial.gob.cu/es/constitucion-de-la-republica-de-cuba",
+    label: "Gaceta Oficial de la República de Cuba — Constitución de la República de Cuba (in Spanish)",
+  },
+  "cne.ao/lei-2-16-nacionalidade": {
+    id: "cne.ao/lei-2-16-nacionalidade",
+    url: "https://cne.ao/storage/legislations/CNE-Legisla%C3%A7%C3%A3o-2627286e0d3e97.pdf",
+    label: "Comissão Nacional Eleitoral — Lei n.º 2/16, Lei da Nacionalidade (in Portuguese)",
+  },
+  "parlamento.mz/constituicao": {
+    id: "parlamento.mz/constituicao",
+    url: "https://www.parlamento.mz/wp-content/uploads/2022/08/Constittuicao_Republica.pdf",
+    label: "Assembleia da República de Moçambique — Constituição da República (in Portuguese)",
+  },
+  "legifrance.gouv.fr/code-civil-art-23": {
+    id: "legifrance.gouv.fr/code-civil-art-23",
+    url: "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006419958",
+    label: "Légifrance — Code civil, Article 23 (in French)",
+  },
+  "sgg.gouv.bj/loi-2022-32-nationalite": {
+    id: "sgg.gouv.bj/loi-2022-32-nationalite",
+    url: "https://sgg.gouv.bj/doc/loi-2022-32/download",
+    label: "Secrétariat général du Gouvernement du Bénin — Loi n° 2022-32 du 20 décembre 2022 portant code de la nationalité béninoise (in French)",
+  },
+  "coursupreme.org.gn/code-civil-2019": {
+    id: "coursupreme.org.gn/code-civil-2019",
+    url: "https://coursupreme.org.gn/wp-content/uploads/2024/06/1-Code-civil-de-2019.pdf",
+    label: "Cour suprême de la République de Guinée — Code civil de 2019 (L/2019/035/AN) (in French)",
+  },
+  "sgg-mali.ml/cpf-2011-art-249": {
+    id: "sgg-mali.ml/cpf-2011-art-249",
+    url: "https://sgg-mali.ml/JO/2012/mali-jo-2012-02-sp.pdf",
+    label: "Secrétariat général du Gouvernement du Mali — Journal officiel, Loi n° 2011-087 du 30 décembre 2011 portant Code des personnes et de la famille (in French)",
+  },
+  "joradp.dz/ordonnance-05-01-nationalite": {
+    id: "joradp.dz/ordonnance-05-01-nationalite",
+    url: "https://www.joradp.dz/FTP/jo-francais/2005/F2005015.pdf",
+    label: "Journal officiel de la République algérienne — JO n° 15 du 27 février 2005 (ordonnance 05-01 modifiant le Code de la nationalité) (in French)",
+  },
+  "tgr.gov.ma/code-nationalite-marocaine": {
+    id: "tgr.gov.ma/code-nationalite-marocaine",
+    url: "https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939",
+    label: "Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French)",
+  },
+  "cspd.gov.jo/nationality-law": {
+    id: "cspd.gov.jo/nationality-law",
+    url: "https://www.cspd.gov.jo/EBV4.0/Root_Storage/Root_Storage/AR/EB_Info_Page/2_%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A9.pdf",
+    label: "Civil Status and Passports Department — قانون الجنسية رقم (6) لسنة 1954 وتعديلاته (in Arabic)",
+  },
+  "yemennic.net/nationality-law": {
+    id: "yemennic.net/nationality-law",
+    url: "https://yemennic.net/archives/151",
+    label: "National Information Center (المركز الوطني للمعلومات) — قانون رقم (6) لسنة 1990م بشأن الجنسية اليمنية (in Arabic)",
+  },
 };

@@ -317,8 +317,8 @@ committed with a green build. Adjustments:
   no E-2 value until then.
 - Dual nationality: research fanned out to 9 subagents and every accepted
   verdict was re-read against its page; 29 of 93 new rows are cited, 64 are
-  `unknown` under D3 (see NEXT-STEPS for the list and the open question on
-  non-English official pages).
+  `unknown` under D3 as first written (English-only); D3 was then amended to
+  allow non-English official pages and a second pass followed.
 Step 3 (Tier B, then Tier A hand callouts) is next.
 
 ### Phase 3 — Hardening (1 session)
@@ -355,6 +355,10 @@ Step 3 (Tier B, then Tier A hand callouts) is next.
   trait is `unknown` and the generated line says to confirm with the
   home country's embassy. No non-government sources, so the "official
   sources only" promise on the home page stays true.
+  *Amended 2026-09-27 (Ahmad):* official home-government pages in another
+  language are allowed when no English one exists. The citation label ends
+  with the language ("(in French)") and the row's note ends "The cited
+  official page is in French." so readers see it beside the claim.
 - **D4 Tier membership:** the rule in §6 decides membership; the lists in
   Appendix A follow from it. Adjust the rule, not individual countries.
 - **D5 Sanctioned states (North Korea is rank 55, so it is in scope):**

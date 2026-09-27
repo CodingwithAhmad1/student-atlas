@@ -124,7 +124,11 @@ date, and the watcher closes the alert on its next run.
 Read each column's source page (`traits/trait-sources.ts` says what to look
 for) and decide the 17 values. `check_trait_column(trait)` shows how the page
 names countries. Dual nationality needs a home-country government citation
-(`add_citations` first) or the value `"unknown"`.
+(`add_citations` first) or the value `"unknown"`. The page must state the rule
+for adults who naturalise abroad (no inferring it from passport or renunciation
+pages). A page in another language is fine when there is no English one: end
+the citation label with the language ("… (in French)") and end the row's note
+with "The cited official page is in French."
 
 ### 2. Create the nationality
 ```
