@@ -15,19 +15,23 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
 - Fees were verified on 2026-09-27: UK against GOV.UK; Australia against
   immi.homeaffairs.gov.au (500, 600, 485, 482, 189/190/186 and the CSIT all
   match). The Subclass 482 content now uses its current name, Skills in Demand.
-- Supported nationalities: UAE, Pakistan, India, China, United Kingdom,
-  United States, Australia — all on the trait model (`trait_coverage()`).
-  Two long-standing errors were caught by the traits: the UAE is not on
-  Australia's ETA list (Visitor 600 applies) and India is a UK visa national
-  (Standard Visitor, not ETA).
+- Supported nationalities (branch `atlas-expansion`): the 100 most populous
+  (UN mid-2023), all on the trait model with every column derived from its
+  source page on 2026-09-27. Tier C and the new Tier A/B rows carry generated
+  content only so far; hand-written extras come next (see below).
+  Earlier errors the traits caught: the UAE is not on Australia's ETA list,
+  India is a UK visa national, Romania is not a VWP country (designation
+  rescinded 2025), and China, India and Vietnam can get the Australian 462
+  only through its ballot.
 
 ## Checklist
 
 - [ ] Expansion to 100 nationalities: design and decisions in
       `EXPANSION-PLAN.md`. Phase 0 (audit, `AUDIT-2026-09.md`) and Phase 1
       (trait layer, checker, watcher, MCP tools, the 7 migrated) done
-      2026-09-27 on branch `atlas-expansion`. Next: Phase 2 — populate the
-      traits table column-first for the 100 (see plan §7).
+      2026-09-27 on branch `atlas-expansion`. Phase 2 step 1–2 done the
+      same day: all 100 registered with complete trait rows. Remaining
+      Phase 2 work is listed below.
 - [ ] First monitor run after the branch lands: expect one `change` alert per
       Home Affairs page (about 12) because the watcher now reads the page
       body from the embedded JSON instead of just the alert banners. Review
@@ -37,42 +41,60 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
 - [ ] If/when the site is deployed: host must rebuild on pushes to `main`
       (monitoring data is bundled at build time)
 
-## Phase 2 kickoff (next session)
+## Phase 2 — remaining work
 
-Work in the `atlas-expansion` worktree (`../Zim-Side-Quests-atlas-expansion`);
-`npm ci` is done there for frontend/ and monitoring/.
+State on 2026-09-27: 100 nationalities × 17 traits, 0 stale, build green.
+Work in the `atlas-expansion` worktree. Open the Claude session in the
+worktree (or call `mcp-content-server` functions from the shell): the
+`.mcp.json` server edits the checkout it was launched from.
 
-**Tooling caveat:** `.mcp.json` launches the content server from whichever
-checkout the session opened, and the server edits the tree it was launched
-from. A session opened on `main` therefore has MCP tools that (a) edit the
-wrong tree and (b) predate Phase 1. Either open the session in the worktree,
-or call the worktree's server from the shell:
-`cd mcp-content-server && python3 -c "import traits; print(traits.coverage())"`.
+**Needs Ahmad in a real browser** (travel.state.gov serves a bot check to
+every automated client, including the browser pane; do not work around it):
 
-**Concurrency:** research fans out (subagents return JSON: dual-nationality
-verdicts with fetched government URLs; later, overlay drafts); writes stay
-serial in one session because every nationality lands in the same four files.
+1. **E-2 treaty countries** —
+   https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/treaty.html.
+   New rows carry no E-2 value yet (only E-3/H-1B1/TN from USCIS pages);
+   Pakistan, UK and Australia have E-2 from Phase 1, also never checked
+   against this page. Give Claude the list of top-100 countries marked E-2
+   and it will `set_trait_column("usNationalityWorkVisas", …)`.
+2. **Diversity Visa ineligible list** — the DV instructions page. Current
+   values follow the DV-2026 list as quoted in search results (Bangladesh,
+   Brazil, Canada, China, Colombia, Cuba, Dominican Republic, Haiti, Honduras,
+   India, Mexico, Nigeria, Pakistan, Philippines, South Korea, UK, Venezuela,
+   Vietnam ineligible). Confirm, and re-check when DV-2027 instructions
+   appear.
+3. **Visa Bulletin** — confirm the employment-based chart still has separate
+   columns only for China, India, Mexico and the Philippines (India/China
+   `severe`, Mexico/Philippines `moderate`).
 
-Order of work:
+**Claude can do:**
 
-1. `trait_coverage()` to see the 7 rows; `get_content_schema()` for the tool
-   flow.
-2. Column-first for all 100 (Appendix A of the plan): for each monitored
-   column run `check_trait_column(trait)` against the live page, decide the
-   value for every one of the 100 names, and collect them; manual columns
-   (E-2 treaty list, 417/462, Visa Bulletin, DV, dual nationality) from a real
-   browser. Add dual-nationality citations with `add_citations` where an
-   official English page exists; otherwise `"unknown"`.
-3. Register the 93 new nationalities with `create_nationality(name, slug,
-   label, tier, traits_json)` (labels and tiers in Appendix A), Tier C first.
-   Each call type-checks; batch commits of ~10 with `npm run build` and a
-   watcher `--dry-run` in the message.
-4. Then Tier B (2–4 cited callouts each) and Tier A (up to ~10) in batches of
-   10 per session, per the plan §6.
-
-Deferred traits (V5 US visa services in-country, V6 reciprocity, V7 visa bond
-pilot, S5 SEVIS payment restrictions) become cited hand callouts for the
-nationalities they affect during the Tier A/B passes.
+- **Dual nationality, second pass (64 `unknown`).** The research fan-out
+  (9 agents) found official English home-government pages for 29 of the 93
+  new nationalities (36 of 100 with the original 7);
+  the rest failed on D3 (English-only), bot-blocked or dead government sites,
+  or an exhausted web-search budget. Unknown: afghanistan, algeria, angola,
+  azerbaijan, bangladesh, belarus, benin, bolivia, brazil, burkina-faso,
+  burundi, cambodia, cameroon, chad, chile, cuba, dominican-republic,
+  dr-congo, ecuador, ethiopia, france, ghana, greece, guatemala, guinea,
+  haiti, honduras, indonesia, iran, israel, ivory-coast, jordan, kazakhstan,
+  madagascar, malawi, mali, morocco, mozambique, myanmar, niger, north-korea,
+  peru, portugal, romania, russia, rwanda, saudi-arabia, senegal, somalia,
+  south-africa, south-sudan, spain, sudan, syria, tajikistan, thailand, togo,
+  tunisia, turkey, ukraine, uzbekistan, venezuela, vietnam, yemen.
+  Several have an official page in French, Spanish or Portuguese that
+  settles the question (France, Senegal, Chile, Guatemala, Portugal); D3
+  as written excludes them. **Decision for Ahmad:** allow official
+  non-English pages (cited with an "in French" note), or keep English-only.
+  South Africa: the DIRCO retention page predates the 2025 Constitutional
+  Court ruling on automatic loss — needs a current Home Affairs page.
+- **Tier B hand callouts** (35 nationalities, 2–4 cited callouts each), then
+  **Tier A** (25, up to ~10 each), batches of 10 per plan §6. The deferred
+  traits (V5 US visa services in country, V6 reciprocity, V7 visa bond, S5
+  SEVIS payment) become cited hand callouts there. Drafting fans out to
+  subagents (one overlay file each); citations and writes stay serial.
+- `npx tsx scripts/show-generated.mts <slug>` (in `frontend/`) prints a
+  nationality's generated content for spot checks.
 
 ## Standing notes
 

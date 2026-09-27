@@ -301,6 +301,26 @@ adjustments:
 Exit: 100 registered, zero `unknown`, zero uncited hand callouts, coverage
 matrix 100% verified within interval.
 
+**Phase 2 progress (2026-09-27).** Steps 1 and 2 done: every column derived
+for all 100 from its live source page (browser pane for the client-side 417
+and 462 lists), all 93 new nationalities registered in 10 batches, each
+committed with a green build. Adjustments:
+- New `auWorkingHoliday` value `462-ballot` (China, India, Vietnam).
+- AU visitor route: a passport on both the ETA and eVisitor lists is
+  `evisitor651` (free, no app); the UK row moved to eVisitor.
+- Sanctions: `comprehensive` only for country-wide embargoes (Cuba, Iran,
+  North Korea); Russia, Syria (PAARSS) and other country-named programmes
+  are `partial`.
+- travel.state.gov (E-2 treaty list, Visa Bulletin, DV instructions) blocks
+  every automated client including the browser pane; those three manual
+  columns wait for Ahmad's browser check (`NEXT-STEPS.md`). New rows carry
+  no E-2 value until then.
+- Dual nationality: research fanned out to 9 subagents and every accepted
+  verdict was re-read against its page; 29 of 93 new rows are cited, 64 are
+  `unknown` under D3 (see NEXT-STEPS for the list and the open question on
+  non-English official pages).
+Step 3 (Tier B, then Tier A hand callouts) is next.
+
 ### Phase 3 — Hardening (1 session)
 1. First full monitor cycle with the new sources; tune `stripSelectors`.
 2. Activity tab: eligibility filter, affected-nationality count on alerts.
