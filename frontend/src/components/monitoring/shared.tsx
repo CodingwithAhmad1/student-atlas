@@ -5,21 +5,15 @@ import { STATUS_LABELS } from "@/types/monitoring";
 export const STATUS_STYLES: Record<ActivityStatus, string> = {
   pending: "bg-amber-100 text-amber-800 border-amber-200",
   dismissed: "bg-neutral-100 text-neutral-600 border-neutral-200",
-  review: "bg-purple-100 text-purple-800 border-purple-200",
   approved: "bg-green-100 text-green-800 border-green-200",
-  rejected: "bg-red-100 text-red-800 border-red-200",
   manual: "bg-orange-100 text-orange-800 border-orange-200",
-  error: "bg-red-100 text-red-800 border-red-200",
 };
 
 export const STATUS_DOT_STYLES: Record<ActivityStatus, string> = {
   pending: "bg-amber-500",
   dismissed: "bg-neutral-400",
-  review: "bg-purple-500",
   approved: "bg-green-500",
-  rejected: "bg-red-500",
   manual: "bg-orange-500",
-  error: "bg-red-500",
 };
 
 export function StatusBadge({ status }: { status: ActivityStatus }) {

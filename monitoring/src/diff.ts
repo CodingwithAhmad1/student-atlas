@@ -7,7 +7,10 @@ const MAX_DIFF_BYTES = 15_000;
 export interface DiffResult {
   diff: string;
   truncated: boolean;
-  /** True when every changed line is recognized noise — no alert needed. */
+  /**
+   * True when the change carries no new wording — every changed line is
+   * recognized noise, or lines only moved around (e.g. a reordered sidebar).
+   */
   noiseOnly: boolean;
 }
 
@@ -35,11 +38,10 @@ export function diffTexts(
   );
 
   const noiseOnly =
-    changedLines.length > 0 &&
     changedLines.every((line) => {
       const content = line.slice(1).trim();
       return content.length === 0 || isNoiseLine(content);
-    });
+    }) || isPureReorder(changedLines);
 
   let truncated = false;
   let outLines = lines;
@@ -57,4 +59,15 @@ export function diffTexts(
   }
 
   return { diff, truncated, noiseOnly };
+}
+
+/** Removed and added lines are the same multiset — content moved, nothing new. */
+function isPureReorder(changedLines: string[]): boolean {
+  const counts = new Map<string, number>();
+  for (const line of changedLines) {
+    const content = line.slice(1).trim();
+    const delta = line.startsWith("+") ? 1 : -1;
+    counts.set(content, (counts.get(content) ?? 0) + delta);
+  }
+  return [...counts.values()].every((n) => n === 0);
 }

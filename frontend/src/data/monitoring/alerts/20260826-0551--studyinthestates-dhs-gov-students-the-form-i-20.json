@@ -1,5 +1,6 @@
 {
   "id": "20260826-0551--studyinthestates-dhs-gov-students-the-form-i-20",
+  "kind": "change",
   "sourceId": "studyinthestates.dhs.gov/students/the-form-i-20",
   "relatedSourceIds": [],
   "sourceLabel": "Study in the States — The Form I-20",
@@ -7,16 +8,15 @@
   "country": "US",
   "category": "student",
   "detectedAt": "2026-08-26T05:51:03.879Z",
+  "updatedAt": "2026-08-26T05:51:03.879Z",
   "oldHash": "92e18a7a91be35f44c59edc7aaadf949e65cc4a11ddef0130028e82288fec341",
   "newHash": "b6cef368e1a151c9db917a23c7255f4d6859a0d8db01b58a2c54649f5a3b0730",
   "diff": "Index: studyinthestates.dhs.gov/students/the-form-i-20\n===================================================================\n--- studyinthestates.dhs.gov/students/the-form-i-20\tprevious\n+++ studyinthestates.dhs.gov/students/the-form-i-20\tcurrent\n@@ -66,9 +66,9 @@\n Working in the United States\n Obtaining a Social Security Number\n Training Opportunities in the United States\n+Applying for Practical Training\n Understanding E-Verify\n Individual Taxpayer Identification Number (ITIN)\n-Applying for Practical Training\n Complete\n M-1 Extensions of Stay\n Change of Status\n",
   "diffTruncated": false,
   "significance": null,
   "summary": null,
-  "confidence": null,
   "status": "pending",
-  "draft": null,
-  "pr": null,
+  "resolution": null,
   "resolvedAt": null,
-  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+  "error": null
 }

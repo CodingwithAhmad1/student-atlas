@@ -11,6 +11,11 @@ export interface SourceOverride {
    */
   contentSelector?: string;
   /**
+   * Extra CSS selectors removed before hashing — for page regions that churn
+   * without the guidance changing (rotating blog teasers, promo carousels).
+   */
+  stripSelectors?: string[];
+  /**
    * Set when automated monitoring cannot fetch this page (bot protection,
    * TLS blocking). The watcher skips it and the Activity tab reports it as
    * not monitorable instead of endlessly failing.
@@ -54,6 +59,16 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "cbp.gov/i94": {
     skipReason:
       "The I-94 site is a JavaScript application with no static text to monitor; verify manually.",
+  },
+  // The homepage's "Recent blogs" teaser list rotates every few weeks and
+  // raised an alert each time (verified 2026-09-27).
+  "studyinthestates.dhs.gov": {
+    stripSelectors: [".paragraph--type--recent-blogs"],
+  },
+  // Every check since 2026-08-20 has returned HTTP 403 (verified 2026-09-27).
+  "ae.usembassy.gov": {
+    skipReason:
+      "ae.usembassy.gov rejects automated clients (HTTP 403); verify this page manually.",
   },
   "ustraveldocs.com/ae": {
     skipReason:

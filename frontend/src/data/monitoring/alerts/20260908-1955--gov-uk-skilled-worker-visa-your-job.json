@@ -1,5 +1,6 @@
 {
   "id": "20260908-1955--gov-uk-skilled-worker-visa-your-job",
+  "kind": "change",
   "sourceId": "gov.uk/skilled-worker-visa/your-job",
   "relatedSourceIds": [],
   "sourceLabel": "GOV.UK — Skilled Worker Visa: Your Job",
@@ -7,16 +8,15 @@
   "country": "UK",
   "category": "work",
   "detectedAt": "2026-09-08T19:55:06.735Z",
+  "updatedAt": "2026-09-08T19:55:06.735Z",
   "oldHash": "043d8455391ef43918b7c0f3a2f815ebc52c5d4f80c398758b3a72d342a793de",
   "newHash": "6bc3a0ed4f72e11044907f88ec1c89afb9b4a03112d343f9cc1252648b7159e4",
   "diff": "Index: gov.uk/skilled-worker-visa/your-job\n===================================================================\n--- gov.uk/skilled-worker-visa/your-job\tprevious\n+++ gov.uk/skilled-worker-visa/your-job\tcurrent\n@@ -40,6 +40,7 @@\n You’ll need to get your certificate of sponsorship on or before:\n 31 December 2026, if you are switching to this visa\n 31 December 2027, if you are extending your visa\n+If you apply for a prison officer role now, you will not get a certificate of sponsorship before 31 December 2026.\n When you can be paid less\n If you do not meet the usual salary requirements, and you do not work in healthcare or education, you might still be eligible if your salary will be at least £33,400 per year.\n Check when you can be paid less.\n",
   "diffTruncated": false,
   "significance": null,
   "summary": null,
-  "confidence": null,
   "status": "pending",
-  "draft": null,
-  "pr": null,
+  "resolution": null,
   "resolvedAt": null,
-  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+  "error": null
 }

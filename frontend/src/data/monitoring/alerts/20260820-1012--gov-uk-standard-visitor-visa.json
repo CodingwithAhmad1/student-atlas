@@ -1,5 +1,6 @@
 {
   "id": "20260820-1012--gov-uk-standard-visitor-visa",
+  "kind": "change",
   "sourceId": "gov.uk/standard-visitor-visa",
   "relatedSourceIds": [],
   "sourceLabel": "GOV.UK — Standard Visitor Visa",
@@ -7,16 +8,15 @@
   "country": "UK",
   "category": "visitor",
   "detectedAt": "2026-08-20T10:12:34.993Z",
+  "updatedAt": "2026-08-20T10:12:34.993Z",
   "oldHash": "349976a93ce9e22b7dd122887ef7cfd95f301d98bd86c0e9285eb9656d2e67be",
   "newHash": "4ff1d614a032fec6bd79c9470ee204f5e6455d41b1e9cdc0c57e4a405cd92377",
   "diff": "Index: gov.uk/standard-visitor-visa\n===================================================================\n--- gov.uk/standard-visitor-visa\tprevious\n+++ gov.uk/standard-visitor-visa\tcurrent\n@@ -50,7 +50,7 @@\n If you’ve previously been refused entry to the UK or have a criminal record, you may want to apply for a Standard Visitor visa (even if you do not need one).\n If you have to apply for a Standard Visitor visa\n You must apply for a Standard Visitor visa online before you travel to the UK.\n-A Standard Visitor visa costs £115 for up to 6 months. The earliest you can apply is 3 months before you travel.\n+A Standard Visitor visa costs £135 for up to 6 months. The earliest you can apply is 3 months before you travel.\n If you visit the UK regularly, you can choose to apply for a long-term Standard Visitor visa instead.\n You can pass through the UK to another country on a Standard Visitor visa. If transiting is your only reason for coming to the UK, you can apply for a Visitor in Transit visa instead for £74.50.\n View a printable version of the whole guide\n",
   "diffTruncated": false,
   "significance": null,
   "summary": null,
-  "confidence": null,
   "status": "pending",
-  "draft": null,
-  "pr": null,
+  "resolution": null,
   "resolvedAt": null,
-  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+  "error": null
 }

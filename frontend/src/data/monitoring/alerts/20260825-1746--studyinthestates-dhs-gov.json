@@ -1,5 +1,6 @@
 {
   "id": "20260825-1746--studyinthestates-dhs-gov",
+  "kind": "change",
   "sourceId": "studyinthestates.dhs.gov",
   "relatedSourceIds": [],
   "sourceLabel": "Study in the States — U.S. Department of Homeland Security",
@@ -7,16 +8,15 @@
   "country": "US",
   "category": "student",
   "detectedAt": "2026-08-25T17:46:11.361Z",
+  "updatedAt": "2026-09-24T20:30:51.870Z",
   "oldHash": "b517403358a4faf043904a45f51bc996283aeaa530972a56c17f041ef11ddd9b",
-  "newHash": "da1470bca8951b51aad22498bdece3bbf5ccf85e8ae7b975f4056d376387b6b0",
-  "diff": "Index: studyinthestates.dhs.gov\n===================================================================\n--- studyinthestates.dhs.gov\tprevious\n+++ studyinthestates.dhs.gov\tcurrent\n@@ -7,6 +7,10 @@\n Learn More\n RECENT BLOGS\n See All\n+August 25, 2026\n+Upcoming SEVP Webinar: Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for F Students Final Rule\n+The Student and Exchange Visitor Program (SEVP) will host the SEVP Webinar: Establishing a Fixed Time Period of Admission and an Extension of Stay…\n+Read More >\n August 17, 2026\n Back-to-School Preparations: Tips for Students and Designated School Officials\n As the new academic year approaches, there are a few key steps that foreign students and designated school officials (DSOs) can take to ensure they…\n@@ -15,10 +19,6 @@\n First-Time Arrival: Key Information for New Students Traveling to the US\n As a new F or M student arriving in the United States to begin your program of study, there are a few things you should know to ensure a smooth…\n Read More >\n-July 17, 2026\n-DHS Publishes Final Rule Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure\n-On July 17, 2026, the U.S. Department of Homeland Security (DHS) published a final rule in the Federal Register, “<a…\n-Read More >\n TOOLS\n Study in the States offers interactive resources to help schools and students understand the F and M student process.\n View All Tools\n",
+  "newHash": "d3510f10ba6f53aac3fbf6bcf43d8cf9c086d4bc415b6742be840e25e9f476d1",
+  "diff": "Index: studyinthestates.dhs.gov\n===================================================================\n--- studyinthestates.dhs.gov\tprevious\n+++ studyinthestates.dhs.gov\tcurrent\n@@ -7,18 +7,18 @@\n Learn More\n RECENT BLOGS\n See All\n+September 24, 2026\n+Community Colleges: An Overview for F and M Students\n+Community colleges are an important part of the U.S. higher education system. Many community colleges across the United States are Student and…\n+Read More >\n+August 25, 2026\n+Upcoming SEVP Webinar: Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for F Students Final Rule\n+The Student and Exchange Visitor Program (SEVP) will host the SEVP Webinar: Establishing a Fixed Time Period of Admission and an Extension of Stay…\n+Read More >\n August 17, 2026\n Back-to-School Preparations: Tips for Students and Designated School Officials\n As the new academic year approaches, there are a few key steps that foreign students and designated school officials (DSOs) can take to ensure they…\n Read More >\n-July 27, 2026\n-First-Time Arrival: Key Information for New Students Traveling to the US\n-As a new F or M student arriving in the United States to begin your program of study, there are a few things you should know to ensure a smooth…\n-Read More >\n-July 17, 2026\n-DHS Publishes Final Rule Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure\n-On July 17, 2026, the U.S. Department of Homeland Security (DHS) published a final rule in the Federal Register, “<a…\n-Read More >\n TOOLS\n Study in the States offers interactive resources to help schools and students understand the F and M student process.\n View All Tools\n",
   "diffTruncated": false,
   "significance": null,
   "summary": null,
-  "confidence": null,
   "status": "pending",
-  "draft": null,
-  "pr": null,
+  "resolution": null,
   "resolvedAt": null,
-  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+  "error": null
 }

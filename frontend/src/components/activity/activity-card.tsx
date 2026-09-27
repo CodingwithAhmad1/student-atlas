@@ -1,77 +1,19 @@
 import { useState } from "react";
-import {
-  CheckIcon,
-  ChevronDownIcon,
-  ExternalLink,
-  GitPullRequestIcon,
-  XIcon,
-} from "lucide-react";
+import { ChevronDownIcon, ExternalLink } from "lucide-react";
 import { DiffViewer } from "@/components/activity/diff-viewer";
-import { DraftPreview } from "@/components/activity/draft-preview";
+import { ResolutionPreview } from "@/components/activity/resolution-preview";
 import {
   STATUS_DOT_STYLES,
   StatusBadge,
   formatDateTime,
 } from "@/components/monitoring/shared";
-import { approveDraft, rejectDraft } from "@/lib/github-admin";
 import { cn } from "@/lib/utils";
 import type { ActivityAlert } from "@/types/monitoring";
 import { CATEGORY_LABELS, SIGNIFICANCE_LABELS } from "@/types/monitoring";
 
-function ConfidenceChip({ confidence }: { confidence: number }) {
-  const pct = Math.round(confidence * 100);
-  const tone =
-    pct >= 80
-      ? "text-green-700 border-green-200 bg-green-50"
-      : pct >= 50
-        ? "text-amber-700 border-amber-200 bg-amber-50"
-        : "text-red-700 border-red-200 bg-red-50";
-  return (
-    <span
-      className={cn(
-        "inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium",
-        tone
-      )}
-    >
-      {pct}% confident
-    </span>
-  );
-}
-
-export function ActivityCard({
-  alert,
-  isAdmin,
-  onReviewed,
-}: {
-  alert: ActivityAlert;
-  isAdmin: boolean;
-  onReviewed: () => void;
-}) {
+export function ActivityCard({ alert }: { alert: ActivityAlert }) {
   const [expanded, setExpanded] = useState(false);
-  const [acting, setActing] = useState<"approve" | "reject" | null>(null);
-  const [actionError, setActionError] = useState<string | null>(null);
-  const [localStatus, setLocalStatus] = useState<ActivityAlert["status"] | null>(
-    null
-  );
-
-  const status = localStatus ?? alert.status;
-  const reviewable = isAdmin && status === "review" && alert.pr !== null;
-
-  async function act(kind: "approve" | "reject") {
-    if (!alert.pr) return;
-    setActing(kind);
-    setActionError(null);
-    try {
-      if (kind === "approve") await approveDraft(alert.pr.number);
-      else await rejectDraft(alert.pr.number);
-      setLocalStatus(kind === "approve" ? "approved" : "rejected");
-      onReviewed();
-    } catch (err) {
-      setActionError(err instanceof Error ? err.message : String(err));
-    } finally {
-      setActing(null);
-    }
-  }
+  const { status } = alert;
 
   return (
     <article className="relative rounded-lg border bg-background transition-shadow hover:shadow-sm">
@@ -113,7 +55,7 @@ export function ActivityCard({
             </span>
           ) : (
             <span className="block text-sm italic text-muted-foreground">
-              Change detected — awaiting analysis.
+              Change detected — awaiting review.
             </span>
           )}
         </span>
@@ -137,20 +79,6 @@ export function ActivityCard({
               View source page
               <ExternalLink className="size-3" />
             </a>
-            {alert.pr ? (
-              <a
-                href={alert.pr.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 text-blue-600 underline underline-offset-2 hover:text-blue-700"
-              >
-                <GitPullRequestIcon className="size-3.5" />
-                PR #{alert.pr.number}
-              </a>
-            ) : null}
-            {alert.confidence !== null ? (
-              <ConfidenceChip confidence={alert.confidence} />
-            ) : null}
           </div>
 
           {alert.error ? (
@@ -168,53 +96,8 @@ export function ActivityCard({
             </div>
           ) : null}
 
-          {alert.draft ? <DraftPreview draft={alert.draft} /> : null}
-
-          {reviewable ? (
-            <div className="flex flex-wrap items-center gap-2 border-t pt-3">
-              <button
-                type="button"
-                disabled={acting !== null}
-                onClick={() => void act("approve")}
-                className="inline-flex items-center gap-1.5 rounded-md bg-green-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-green-700 disabled:opacity-50"
-              >
-                <CheckIcon className="size-4" />
-                {acting === "approve" ? "Merging…" : "Approve & publish"}
-              </button>
-              <button
-                type="button"
-                disabled={acting !== null}
-                onClick={() => void act("reject")}
-                className="inline-flex items-center gap-1.5 rounded-md border border-red-200 px-3 py-1.5 text-sm font-medium text-red-700 hover:bg-red-50 disabled:opacity-50"
-              >
-                <XIcon className="size-4" />
-                {acting === "reject" ? "Closing…" : "Reject"}
-              </button>
-              <span className="text-xs text-muted-foreground">
-                Approve squash-merges the PR; the site updates on the next
-                deploy.
-              </span>
-            </div>
-          ) : null}
-
-          {actionError ? (
-            <p className="text-sm text-red-700">
-              {actionError}
-              {alert.pr ? (
-                <>
-                  {" — you can also "}
-                  <a
-                    href={alert.pr.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-2"
-                  >
-                    review it on GitHub
-                  </a>
-                  .
-                </>
-              ) : null}
-            </p>
+          {alert.resolution ? (
+            <ResolutionPreview resolution={alert.resolution} />
           ) : null}
 
           {alert.resolvedAt ? (

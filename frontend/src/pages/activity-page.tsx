@@ -1,8 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { RefreshCwIcon } from "lucide-react";
 import { ActivityCard } from "@/components/activity/activity-card";
-import { AdminGate } from "@/components/activity/admin-gate";
 import {
   FilterTabs,
   SummaryCard,
@@ -11,7 +9,6 @@ import {
 } from "@/components/monitoring/shared";
 import { useActivityData } from "@/hooks/useActivityData";
 import { MONITORING_LOG_ROUTE } from "@/lib/routes";
-import { cn } from "@/lib/utils";
 import type {
   ActivityStatus,
   SourceCategory,
@@ -28,10 +25,9 @@ type StatusFilter = "all" | "open" | ActivityStatus;
 const STATUS_FILTERS: StatusFilter[] = [
   "all",
   "open",
-  "review",
+  "pending",
   "manual",
   "approved",
-  "rejected",
   "dismissed",
 ];
 
@@ -52,16 +48,7 @@ const CATEGORIES: (SourceCategory | "all")[] = [
 ];
 
 export function ActivityPage() {
-  const {
-    alerts,
-    summary,
-    generatedAt,
-    isAdmin,
-    refreshing,
-    refreshError,
-    refresh,
-    onAdminChange,
-  } = useActivityData();
+  const { alerts, summary, generatedAt } = useActivityData();
 
   const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
   const [countryFilter, setCountryFilter] = useState<SourceCountry | "all">("all");
@@ -97,29 +84,12 @@ export function ActivityPage() {
   return (
     <div className="mx-auto max-w-3xl space-y-8 px-6 py-12">
       <header className="space-y-3">
-        <div className="flex items-start justify-between gap-4">
-          <h1 className="text-3xl font-bold tracking-tight">Activity</h1>
-          <div className="flex items-center gap-2">
-            {isAdmin ? (
-              <button
-                type="button"
-                onClick={() => void refresh()}
-                disabled={refreshing}
-                className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:border-foreground/30 hover:text-foreground disabled:opacity-50"
-              >
-                <RefreshCwIcon
-                  className={cn("size-3.5", refreshing && "animate-spin")}
-                />
-                Refresh
-              </button>
-            ) : null}
-            <AdminGate onChange={onAdminChange} />
-          </div>
-        </div>
+        <h1 className="text-3xl font-bold tracking-tight">Activity</h1>
         <p className="text-lg leading-relaxed text-muted-foreground">
           Every change our monitor detects on the official sources behind this
-          guide appears here, along with the AI-drafted correction and its
-          review outcome. Source-by-source health lives in the{" "}
+          guide appears here. Each change is reviewed by a person, and the
+          outcome (content updated or no change needed) is recorded alongside
+          it. Source-by-source health lives in the{" "}
           <Link
             to={MONITORING_LOG_ROUTE.path}
             className="text-blue-600 underline underline-offset-2 hover:text-blue-700"
@@ -145,12 +115,12 @@ export function ActivityPage() {
         <SummaryCard
           label="Open items"
           value={summary.openAlerts}
-          hint="Awaiting analysis or review"
+          hint="Awaiting review"
         />
         <SummaryCard
           label="Published updates"
           value={summary.publishedUpdates}
-          hint="Approved and merged"
+          hint="Changes that updated the guide"
         />
         <SummaryCard
           label="Sources needing attention"
@@ -158,12 +128,6 @@ export function ActivityPage() {
           hint="Repeated fetch failures"
         />
       </section>
-
-      {refreshError ? (
-        <p className="rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-900">
-          Refresh failed: {refreshError}
-        </p>
-      ) : null}
 
       <section className="space-y-4">
         <div className="space-y-2">
@@ -205,12 +169,7 @@ export function ActivityPage() {
                 </h2>
                 <div className="space-y-3 border-l-2 border-border/60 pl-4">
                   {dayAlerts.map((alert) => (
-                    <ActivityCard
-                      key={alert.id}
-                      alert={alert}
-                      isAdmin={isAdmin}
-                      onReviewed={() => void refresh()}
-                    />
+                    <ActivityCard key={alert.id} alert={alert} />
                   ))}
                 </div>
               </div>

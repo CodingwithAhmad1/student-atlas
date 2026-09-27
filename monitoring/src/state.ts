@@ -4,7 +4,6 @@ import {
   readFileSync,
   readdirSync,
   renameSync,
-  rmSync,
   writeFileSync,
 } from "node:fs";
 import { dirname, join, resolve } from "node:path";
@@ -15,6 +14,7 @@ import type {
   SourceStatus,
   SourceStatusFile,
 } from "./types";
+import { OPEN_ALERT_STATUSES } from "./types";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 
@@ -22,27 +22,26 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 export const MONITORING_DIR = resolve(HERE, "..");
 /** "<repo>/Student Atlas" */
 export const APP_DIR = resolve(MONITORING_DIR, "..");
-/** Monorepo root. */
-export const REPO_ROOT = resolve(APP_DIR, "..");
 export const FRONTEND_DIR = join(APP_DIR, "frontend");
 
+/**
+ * Reviewed baselines: a snapshot only advances when a change is resolved (or
+ * turns out to be noise), so an open alert's diff always shows everything
+ * that changed since the last review.
+ */
 export const SNAPSHOTS_DIR = join(MONITORING_DIR, "snapshots");
-export const STATE_DIR = join(MONITORING_DIR, "state");
 export const ARCHIVE_DIR = join(MONITORING_DIR, "archive");
-export const STATUS_FILE = join(STATE_DIR, "source-status.json");
 
-/** Alert JSONs bundled by Vite into the Activity tab. */
+/** Alert JSONs and source status, bundled by Vite into the Activity tab. */
 export const FRONTEND_MONITORING_DIR = join(FRONTEND_DIR, "src", "data", "monitoring");
 export const ALERTS_DIR = join(FRONTEND_MONITORING_DIR, "alerts");
-export const FRONTEND_STATUS_FILE = join(FRONTEND_MONITORING_DIR, "status.json");
+export const STATUS_FILE = join(FRONTEND_MONITORING_DIR, "status.json");
 
 /** Newest alerts kept bundled with the frontend; older ones move to archive/. */
 const MAX_BUNDLED_ALERTS = 200;
-/** Normalized snapshot text is capped to keep the repo lean. */
-const MAX_SNAPSHOT_BYTES = 200_000;
 
 function ensureDirs(): void {
-  for (const dir of [SNAPSHOTS_DIR, STATE_DIR, ARCHIVE_DIR, ALERTS_DIR]) {
+  for (const dir of [SNAPSHOTS_DIR, ARCHIVE_DIR, ALERTS_DIR]) {
     mkdirSync(dir, { recursive: true });
   }
 }
@@ -59,13 +58,7 @@ export function readSnapshot(key: string): string | null {
 
 export function writeSnapshot(key: string, text: string): void {
   ensureDirs();
-  let out = text;
-  if (Buffer.byteLength(out, "utf8") > MAX_SNAPSHOT_BYTES) {
-    out =
-      Buffer.from(out, "utf8").subarray(0, MAX_SNAPSHOT_BYTES).toString("utf8") +
-      "\n… snapshot truncated …";
-  }
-  writeFileSync(snapshotPath(key), out, "utf8");
+  writeFileSync(snapshotPath(key), text, "utf8");
 }
 
 export function readStatusFile(): SourceStatusFile {
@@ -77,9 +70,7 @@ export function readStatusFile(): SourceStatusFile {
 
 export function writeStatusFile(status: SourceStatusFile): void {
   ensureDirs();
-  const json = `${JSON.stringify(status, null, 2)}\n`;
-  writeFileSync(STATUS_FILE, json, "utf8");
-  writeFileSync(FRONTEND_STATUS_FILE, json, "utf8");
+  writeFileSync(STATUS_FILE, `${JSON.stringify(status, null, 2)}\n`, "utf8");
 }
 
 export function blankStatus(target: MonitoredTarget): SourceStatus {
@@ -103,31 +94,48 @@ function alertPath(id: string): string {
   return join(ALERTS_DIR, `${id}.json`);
 }
 
-export function readAllAlerts(): ActivityAlert[] {
+/** Bundled alerts only — archived alerts are history and never reopened. */
+export function readAlerts(): ActivityAlert[] {
+  if (!existsSync(ALERTS_DIR)) return [];
   const alerts: ActivityAlert[] = [];
-  for (const dir of [ALERTS_DIR, ARCHIVE_DIR]) {
-    if (!existsSync(dir)) continue;
-    for (const file of readdirSync(dir)) {
-      if (!file.endsWith(".json")) continue;
-      try {
-        alerts.push(
-          JSON.parse(readFileSync(join(dir, file), "utf8")) as ActivityAlert
-        );
-      } catch {
-        // Skip unreadable records rather than aborting the whole run.
-      }
+  for (const file of readdirSync(ALERTS_DIR)) {
+    if (!file.endsWith(".json")) continue;
+    try {
+      alerts.push(JSON.parse(readFileSync(join(ALERTS_DIR, file), "utf8")) as ActivityAlert);
+    } catch (err) {
+      console.warn(`Skipping unreadable alert ${file}: ${String(err)}`);
     }
   }
   return alerts;
 }
 
-/** Idempotency guard: an alert already recorded for this source + new hash. */
-export function findExistingAlert(
+/** The single open alert of this kind for a source, if any. */
+export function findOpenAlert(
+  alerts: ActivityAlert[],
+  sourceId: string,
+  kind: ActivityAlert["kind"]
+): ActivityAlert | undefined {
+  return alerts.find(
+    (a) =>
+      a.sourceId === sourceId &&
+      a.kind === kind &&
+      OPEN_ALERT_STATUSES.includes(a.status)
+  );
+}
+
+/** A resolved change alert whose reviewed page text matches `newHash`. */
+export function findResolvedAlert(
   alerts: ActivityAlert[],
   sourceId: string,
   newHash: string
 ): ActivityAlert | undefined {
-  return alerts.find((a) => a.sourceId === sourceId && a.newHash === newHash);
+  return alerts.find(
+    (a) =>
+      a.sourceId === sourceId &&
+      a.kind === "change" &&
+      a.newHash === newHash &&
+      !OPEN_ALERT_STATUSES.includes(a.status)
+  );
 }
 
 export function writeAlert(alert: ActivityAlert): void {
@@ -135,25 +143,19 @@ export function writeAlert(alert: ActivityAlert): void {
   writeFileSync(alertPath(alert.id), `${JSON.stringify(alert, null, 2)}\n`, "utf8");
 }
 
-/** Remove the hand-written sample alert once real data exists. */
-export function removeSampleAlerts(): void {
-  if (!existsSync(ALERTS_DIR)) return;
-  for (const file of readdirSync(ALERTS_DIR)) {
-    if (file.startsWith("sample-") && file.endsWith(".json")) {
-      rmSync(join(ALERTS_DIR, file));
-    }
-  }
-}
-
-/** Keep the bundled alert directory bounded; move overflow to archive/. */
+/** Keep the bundled alert directory bounded; move resolved overflow to archive/. */
 export function archiveOldAlerts(): void {
   if (!existsSync(ALERTS_DIR)) return;
   const files = readdirSync(ALERTS_DIR)
     .filter((f) => f.endsWith(".json"))
     .sort(); // ids start with a UTC timestamp, so name order = time order
-  const overflow = files.slice(0, Math.max(0, files.length - MAX_BUNDLED_ALERTS));
-  for (const file of overflow) {
+  let excess = files.length - MAX_BUNDLED_ALERTS;
+  for (const file of files) {
+    if (excess <= 0) break;
+    const alert = JSON.parse(readFileSync(join(ALERTS_DIR, file), "utf8")) as ActivityAlert;
+    if (OPEN_ALERT_STATUSES.includes(alert.status)) continue; // never hide open work
     renameSync(join(ALERTS_DIR, file), join(ARCHIVE_DIR, file));
+    excess -= 1;
   }
 }
 

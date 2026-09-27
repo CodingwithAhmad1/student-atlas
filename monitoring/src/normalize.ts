@@ -97,7 +97,18 @@ const NOISE_LINE_PATTERNS: RegExp[] = [
   /^report a problem with this page$/i,
   /^\s*©/, // copyright footers
   /session (id|token)/i,
+  /^read more\s*>?$/i, // teaser-list links
+  /^\d{1,2}\/\d{1,2}\/\d{4}$/, // bare "last updated" date stamps (uscis.gov)
+  /^explore the new beta\.dol\.gov website\b/i, // dol.gov site-wide banner
+  // GOV.UK attachment boilerplate — toggles when an accessible version is added.
+  /^this file may not be suitable for users of assistive technology\.?$/i,
+  /^request an accessible format\.?$/i,
+  /^if you use assistive technology .* accessible format/i,
 ];
+
+/** Normalized text is capped so a runaway page cannot bloat the repo. */
+const MAX_TEXT_CHARS = 200_000;
+const TRUNCATION_MARKER = "… text truncated …";
 
 export function isNoiseLine(line: string): boolean {
   return NOISE_LINE_PATTERNS.some((re) => re.test(line));
@@ -206,12 +217,13 @@ function extractHomeAffairs(html: string, pagePath: string): string | null {
       title: typeof item.title === "string" ? item.title : "",
       content:
         typeof item.content === "string" ? textOfHtmlFragment(item.content) : "",
-      updateDate: typeof item.updateDate === "string" ? item.updateDate : "",
     }))
     .sort((a, b) => a.title.localeCompare(b.title));
 
+  // The alert's updateDate is deliberately omitted: it bumps on re-saves
+  // that leave the text unchanged.
   for (const alert of matched) {
-    lines.push(`Alert: ${alert.title} (updated ${alert.updateDate})`);
+    lines.push(`Alert: ${alert.title}`);
     if (alert.content) lines.push(alert.content);
   }
 
@@ -219,29 +231,55 @@ function extractHomeAffairs(html: string, pagePath: string): string | null {
 }
 
 /**
+ * Text-level cleanup shared by every extractor: strips invisible characters,
+ * collapses whitespace, drops noise lines, and caps the length. Idempotent, so
+ * it is also safe to re-apply to stored snapshots.
+ */
+export function cleanText(text: string): string {
+  const lines = text
+    .replace(/[\u200B-\u200D\uFEFF\u00AD]/g, "") // zero-width chars, soft hyphens
+    .replace(/\u00A0/g, " ") // non-breaking spaces
+    .split("\n")
+    .map((line) => line.replace(/\s+/g, " ").trim())
+    .filter((line) => line.length > 0)
+    .filter((line) => !isNoiseLine(line));
+
+  const out = lines.join("\n");
+  return out.length > MAX_TEXT_CHARS
+    ? `${out.slice(0, MAX_TEXT_CHARS)}\n${TRUNCATION_MARKER}`
+    : out;
+}
+
+export interface NormalizeOptions {
+  url?: string;
+  contentSelector?: string;
+  stripSelectors?: string[];
+}
+
+/**
  * HTML -> stable normalized text. Strips chrome/noise, targets the main
  * content region, collapses whitespace, and drops noise lines so that dynamic
  * tokens and feedback widgets do not produce spurious change alerts.
  */
-export function normalizeHtml(
-  html: string,
-  contentSelector?: string,
-  url?: string
-): string {
-  if (url) {
-    const parsed = new URL(url);
+export function normalizeHtml(html: string, opts: NormalizeOptions = {}): string {
+  if (opts.url) {
+    const parsed = new URL(opts.url);
     if (parsed.hostname.endsWith("homeaffairs.gov.au")) {
       const extracted = extractHomeAffairs(html, parsed.pathname);
-      if (extracted !== null) return extracted;
+      if (extracted !== null) return cleanText(extracted);
     }
   }
-  return normalizeGeneric(html, contentSelector);
+  return cleanText(normalizeGeneric(html, opts.contentSelector, opts.stripSelectors));
 }
 
-function normalizeGeneric(html: string, contentSelector?: string): string {
+function normalizeGeneric(
+  html: string,
+  contentSelector?: string,
+  stripSelectors: string[] = []
+): string {
   const $ = cheerio.load(html);
 
-  for (const selector of STRIP_SELECTORS) {
+  for (const selector of [...STRIP_SELECTORS, ...stripSelectors]) {
     $(selector).remove();
   }
 
@@ -263,16 +301,7 @@ function normalizeGeneric(html: string, contentSelector?: string): string {
     renderText($, node, parts);
   }
 
-  const lines = parts
-    .join("")
-    .replace(/[\u200B-\u200D\uFEFF\u00AD]/g, "") // zero-width chars, soft hyphens
-    .replace(/\u00A0/g, " ") // non-breaking spaces
-    .split("\n")
-    .map((line) => line.replace(/\s+/g, " ").trim())
-    .filter((line) => line.length > 0)
-    .filter((line) => !isNoiseLine(line));
-
-  return lines.join("\n");
+  return parts.join("");
 }
 
 export function hashText(text: string): string {

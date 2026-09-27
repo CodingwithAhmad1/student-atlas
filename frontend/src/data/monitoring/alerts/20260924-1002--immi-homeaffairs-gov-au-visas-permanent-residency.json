@@ -1,5 +1,6 @@
 {
   "id": "20260924-1002--immi-homeaffairs-gov-au-visas-permanent-residency",
+  "kind": "change",
   "sourceId": "immi.homeaffairs.gov.au/visas/permanent-residency",
   "relatedSourceIds": [],
   "sourceLabel": "Australian Department of Home Affairs — Permanent Residency",
@@ -7,16 +8,15 @@
   "country": "AU",
   "category": "residency",
   "detectedAt": "2026-09-24T10:02:03.607Z",
+  "updatedAt": "2026-09-24T10:02:03.607Z",
   "oldHash": "5cafc0dac17ad309303c8098bdc0646c412de31cf4e99982087785a8d9ae87b0",
   "newHash": "0c9764dc2ef338435bd6529f0b32895e2f2a88b16efd044ddc59c6a5202527f9",
   "diff": "Index: immi.homeaffairs.gov.au/visas/permanent-residency\n===================================================================\n--- immi.homeaffairs.gov.au/visas/permanent-residency\tprevious\n+++ immi.homeaffairs.gov.au/visas/permanent-residency\tcurrent\n@@ -1,2 +1,2 @@\n Title: Permanent resident\n-Description: Information on what entitlements you get as a permanent resident of Australia. Also includes information on acceptable documents to prove your permanent residence.\n\\ No newline at end of file\n+Description: Find out what entitlements Australian permanent residents have and which documents prove your residency.\n\\ No newline at end of file\n",
   "diffTruncated": false,
   "significance": null,
   "summary": null,
-  "confidence": null,
   "status": "pending",
-  "draft": null,
-  "pr": null,
+  "resolution": null,
   "resolvedAt": null,
-  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+  "error": null
 }

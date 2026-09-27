@@ -1,5 +1,6 @@
 {
   "id": "20260924-1002--dol-gov-agencies-eta-foreign-labor-programs-perm",
+  "kind": "change",
   "sourceId": "dol.gov/agencies/eta/foreign-labor/programs/perm",
   "relatedSourceIds": [],
   "sourceLabel": "U.S. Department of Labor — PERM Labor Certification",
@@ -7,16 +8,15 @@
   "country": "US",
   "category": "residency",
   "detectedAt": "2026-09-24T10:02:03.607Z",
+  "updatedAt": "2026-09-24T10:02:03.607Z",
   "oldHash": "9348f511023c76f5c4eb7bfb94e405d9362195ed5c5953663756c4c868c8dda0",
   "newHash": "d0cff542297fba70b6b4e8d9a55b2c74098bd94f798c0cb5860981087107a0c1",
   "diff": "Index: dol.gov/agencies/eta/foreign-labor/programs/perm\n===================================================================\n--- dol.gov/agencies/eta/foreign-labor/programs/perm\tprevious\n+++ dol.gov/agencies/eta/foreign-labor/programs/perm\tcurrent\n@@ -1,3 +1,4 @@\n+Explore the new beta.dol.gov website! Enjoy streamlined navigation and modern design. Your feedback will shape our future improvements.\n PERM Online Filing via Foreign Labor Application Gateway System\n What is the Permanent Labor Certification Process?\n The actual process for permanent labor certification varies depending upon the program being used. This Web site contains information regarding the process for filing for each of the programs under the Department of Labor's (DOL) jurisdiction. The filing of applications is the responsibility of the employer, not the employee. However, the employee can benefit from understanding the program being utilized in his/her behalf. In general, the DOL works to ensure that the admission of foreign workers to work in the U.S. will not adversely affect the job opportunities, wages and working conditions of U.S. workers. Once a permanent labor certification application has been approved by the DOL, the employer will need to seek the immigration authorization from USCIS.\n",
   "diffTruncated": false,
   "significance": null,
   "summary": null,
-  "confidence": null,
   "status": "pending",
-  "draft": null,
-  "pr": null,
+  "resolution": null,
   "resolvedAt": null,
-  "error": "Could not resolve authentication method. Expected one of apiKey, authToken, credentials, config, or profile to be set. Or for one of the \"X-Api-Key\" or \"Authorization\" headers to be explicitly omitted"
+  "error": null
 }

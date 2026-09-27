@@ -1,5 +1,6 @@
 {
   "id": "20260903-0951--ae-usembassy-gov-unreachable",
+  "kind": "unreachable",
   "sourceId": "ae.usembassy.gov",
   "relatedSourceIds": [],
   "sourceLabel": "U.S. Embassy & Consulate in the UAE",
@@ -7,16 +8,15 @@
   "country": "US",
   "category": "general",
   "detectedAt": "2026-09-03T09:51:53.111Z",
+  "updatedAt": "2026-09-03T09:51:53.111Z",
   "oldHash": "0f815b145c19f02e369a84e1604768343d81064b4998773ef9dff74171e20e3f",
   "newHash": "unreachable-2026-09-03",
   "diff": "",
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://ae.usembassy.gov/). The page may have moved — the citation URL needs a manual review.",
-  "confidence": null,
   "status": "manual",
-  "draft": null,
-  "pr": null,
+  "resolution": null,
   "resolvedAt": null,
   "error": "HTTP 403 from https://ae.usembassy.gov/"
 }

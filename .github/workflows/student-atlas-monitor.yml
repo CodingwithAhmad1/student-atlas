@@ -1,5 +1,9 @@
 name: Student Atlas source monitor
 
+# Detection only: fetches every cited government page, records changes as
+# alerts in the repo, and leaves review/content edits to a human working
+# through the Student Atlas content MCP server.
+
 on:
   schedule:
     - cron: "17 5,17 * * *" # every 12 hours
@@ -8,11 +12,6 @@ on:
       source:
         description: "Only check this source id (citation id)"
         required: false
-      no_llm:
-        description: "Skip the LLM drafting step"
-        type: boolean
-        required: false
-        default: false
 
 concurrency:
   group: atlas-monitor
@@ -20,12 +19,11 @@ concurrency:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   monitor:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
 
@@ -33,42 +31,38 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: |
-            Student Atlas/monitoring/package-lock.json
-            Student Atlas/frontend/package-lock.json
+          cache-dependency-path: Student Atlas/monitoring/package-lock.json
 
-      - name: Install dependencies (watcher + frontend build gate)
-        run: |
-          npm ci --prefix "Student Atlas/monitoring"
-          npm ci --prefix "Student Atlas/frontend"
+      - name: Install watcher dependencies
+        run: npm ci --prefix "Student Atlas/monitoring"
 
       - name: Run watcher
+        working-directory: Student Atlas/monitoring
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SOURCE: ${{ inputs.source }}
         run: |
-          ARGS=""
-          if [ -n "${{ inputs.source }}" ]; then
-            ARGS="$ARGS --source ${{ inputs.source }}"
+          if [ -n "$SOURCE" ]; then
+            npx tsx src/run.ts --source "$SOURCE"
+          else
+            npx tsx src/run.ts
           fi
-          if [ "${{ inputs.no_llm }}" = "true" ]; then
-            ARGS="$ARGS --no-llm"
-          fi
-          cd "Student Atlas/monitoring"
-          npx tsx src/run.ts $ARGS
 
       - name: Commit monitoring state to main
         run: |
           git config user.name "atlas-monitor[bot]"
           git config user.email "actions@users.noreply.github.com"
           git add "Student Atlas/monitoring/snapshots" \
-                  "Student Atlas/monitoring/state" \
                   "Student Atlas/monitoring/archive" \
                   "Student Atlas/frontend/src/data/monitoring"
           if git diff --cached --quiet; then
             echo "No state changes to commit."
-          else
-            git commit -m "Student Atlas monitor: $(date -u +%F) run [skip ci]"
-            git pull --rebase origin main
-            git push origin HEAD:main
+            exit 0
           fi
+          git commit -m "Student Atlas monitor: $(date -u +%F) run [skip ci]"
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            echo "Push attempt $attempt failed; retrying..."
+            sleep $((attempt * 10))
+          done
+          echo "::error::Could not push monitoring state after 5 attempts."
+          exit 1

@@ -5,21 +5,19 @@ import type { SourceCategory, SourceCountry } from "../lib/classify-source";
 export type { SourceCategory, SourceCountry };
 
 export type ActivityStatus =
-  | "pending" // change detected; LLM not yet run or errored last run
-  | "dismissed" // LLM classified the change as noise (auto-resolved)
-  | "review" // draft ready, PR open, awaiting human approval
-  | "approved" // PR merged — edit is live in the content files
-  | "rejected" // PR closed without merging
-  | "manual" // needs human attention; no safe automatic edit was possible
-  | "error"; // pipeline failure recorded for this alert
+  | "pending" // change detected; awaiting review
+  | "manual" // needs human attention outside the content (e.g. source unreachable)
+  | "approved" // reviewed; site content was updated to match
+  | "dismissed"; // reviewed (or auto-resolved); no content change needed
+
+export type AlertKind = "change" | "unreachable";
 
 export type Significance = "noise" | "minor" | "meaningful";
 
-export interface DraftEdit {
+/** One exact-string content edit applied while resolving an alert. */
+export interface ContentEdit {
   /** Repo-relative path, e.g. "Student Atlas/frontend/src/data/sections/student-visa.ts" */
   file: string;
-  blockId: string | null;
-  /** Exact current text — used as the locator for the replacement. */
   oldText: string;
   newText: string;
 }
@@ -27,6 +25,7 @@ export interface DraftEdit {
 export interface ActivityAlert {
   /** e.g. "20260820-0917--gov-uk-standard-visitor-visa" */
   id: string;
+  kind: AlertKind;
   sourceId: string;
   /** Other citation ids that share this source's URL. */
   relatedSourceIds: string[];
@@ -34,26 +33,29 @@ export interface ActivityAlert {
   sourceUrl: string;
   country: SourceCountry;
   category: SourceCategory;
+  /** When the change was first seen. */
   detectedAt: string;
+  /** When the watcher last refreshed the diff (the page kept changing). */
+  updatedAt: string;
+  /** Hash of the reviewed baseline snapshot the diff is taken against. */
   oldHash: string | null;
+  /** Hash of the page text the diff (and any review) refers to. */
   newHash: string;
   /** Unified diff of normalized page text, capped in size. */
   diff: string;
   diffTruncated: boolean;
+  /** Set by the reviewer. */
   significance: Significance | null;
+  /** Reviewer's plain-language summary of what changed. */
   summary: string | null;
-  confidence: number | null;
   status: ActivityStatus;
-  draft: {
-    rationale: string;
-    edits: DraftEdit[];
-  } | null;
-  pr: {
-    number: number;
-    url: string;
-    branch: string;
+  /** Set when the alert is resolved. */
+  resolution: {
+    note: string;
+    edits: ContentEdit[];
   } | null;
   resolvedAt: string | null;
+  /** Fetch error for "unreachable" alerts. */
   error: string | null;
 }
 
@@ -80,28 +82,19 @@ export interface SourceStatusFile {
 
 export interface MonitoringSummary {
   totalSources: number;
-  lastCrawlRun: string | null;
   openAlerts: number;
   publishedUpdates: number;
   unhealthySources: number;
   sourcesNeverChecked: number;
 }
 
-export const OPEN_ALERT_STATUSES: ActivityStatus[] = [
-  "pending",
-  "review",
-  "manual",
-  "error",
-];
+export const OPEN_ALERT_STATUSES: ActivityStatus[] = ["pending", "manual"];
 
 export const STATUS_LABELS: Record<ActivityStatus, string> = {
-  pending: "Pending",
-  dismissed: "Dismissed",
-  review: "In review",
-  approved: "Approved",
-  rejected: "Rejected",
+  pending: "Awaiting review",
   manual: "Needs attention",
-  error: "Error",
+  approved: "Content updated",
+  dismissed: "Dismissed",
 };
 
 export const SIGNIFICANCE_LABELS: Record<Significance, string> = {
@@ -117,13 +110,6 @@ export const CATEGORY_LABELS: Record<SourceCategory, string> = {
   residency: "Residency",
   citizenship: "Citizenship",
   general: "General",
-};
-
-export const COUNTRY_LABELS: Record<SourceCountry, string> = {
-  US: "United States",
-  UK: "United Kingdom",
-  AU: "Australia",
-  INTL: "International",
 };
 
 /** A source is considered unhealthy after this many consecutive fetch failures. */

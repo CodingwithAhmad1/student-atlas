@@ -171,24 +171,21 @@ export function TechnicalExplainerPage() {
             logged with the date, time, and URL. Sources that block automated
             checks are reported honestly as not monitorable.
           </PipelineStage>
-          <PipelineStage step={2} title="AI-assisted drafting">
-            When a change is detected, an AI agent reads the old and new
-            versions of the source page, identifies what changed in policy
-            terms, and drafts an updated version of the affected content in our
-            data format. It also produces a plain-language explanation: what
-            changed, why it matters, and which source paragraph motivated the
-            update. The agent flags its confidence level — a fee adjustment is
-            straightforward; a structural policy overhaul requires careful human
-            review. The draft is opened as a pull request containing the exact
-            proposed edit, type-checked and build-verified before it is ever
-            shown to a reviewer.
+          <PipelineStage step={2} title="AI-assisted review">
+            Each alert records exactly what changed on the page since it was
+            last reviewed. A reviewer works through open alerts with an AI
+            assistant that pulls up the change next to every passage of the
+            guide citing that source, and proposes the precise wording update
+            where one is needed. Edits are restricted to the guide&apos;s
+            content files, must keep every citation intact, and are type-checked
+            and build-verified before they are kept.
           </PipelineStage>
-          <PipelineStage step={3} title="Human review and approval">
-            No change goes live without a human reviewer reading the
-            agent&apos;s explanation, comparing the draft against the official
-            source, and explicitly approving it from the Activity feed (or
-            directly on the pull request). Every approved change is logged with
-            a timestamp and the source URL that triggered it.
+          <PipelineStage step={3} title="Human approval">
+            No change goes live without a person comparing the proposed update
+            against the official source and explicitly approving it. Every
+            outcome — content updated, or no change needed — is recorded on the
+            Activity feed with a timestamp, the source URL that triggered it,
+            and the exact before-and-after text.
           </PipelineStage>
         </div>
 
