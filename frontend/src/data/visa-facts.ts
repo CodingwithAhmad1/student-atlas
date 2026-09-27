@@ -90,9 +90,9 @@ export const visaFacts: Record<
         work_hours: "Full-time unrestricted",
         dependants_allowed: false,
         validity_model: "12 months (36 with STEM extension)",
-        // WATCH OUT — proposal: hard deadline cliff — must secure H-1B before OPT expires or leave
+        // WATCH OUT — hard deadline: without H-1B (or another status) you get 60 days after OPT ends, then must leave
         watch_out:
-          "Hard deadline cliff — must secure H-1B sponsorship before OPT expires or leave the US.",
+          "Hard deadline — without H-1B or another status, you have 60 days after OPT ends to leave the US.",
         processing_time: "3–5 months for EAD card",
         post_study_work: "OPT is the post-study mechanism",
         language_requirement: "Not applicable",

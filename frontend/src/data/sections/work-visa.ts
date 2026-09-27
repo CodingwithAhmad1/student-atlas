@@ -54,7 +54,7 @@ export const workVisa: Section = {
               id: "us-psw-cliff",
               block: {
                 type: "paragraph",
-                text: "If a student does not secure H-1B sponsorship (or another qualifying visa status) before their OPT period ends, they must leave the US. There is no extension or grace category — it is a hard deadline. Because the H-1B lottery is genuinely unpredictable, this is a real risk worth planning for from day one, not something to worry about later. Having a backup plan is not pessimism — it is good sense.",
+                text: "If a student does not secure H-1B sponsorship (or another qualifying visa status) before their OPT period ends, they have a 60-day grace period to leave the US, change to another status, or transfer to a new program. They cannot work during those 60 days, and leaving the US ends the grace period early. One exception: if an employer files an H-1B change-of-status petition for them in the lottery and their OPT would run out first, the cap-gap extension keeps their F-1 status and work authorisation going until the H-1B starts. [CITE: uscis.gov/opt] Because the H-1B lottery is genuinely unpredictable, this is a real risk worth planning for from day one, not something to worry about later. Having a backup plan is not pessimism — it is good sense.",
               },
             },
           ],
@@ -324,14 +324,8 @@ export const workVisa: Section = {
                 type: "bullet-list",
                 items: [
                   "General threshold: £41,700 per year, or the going rate for the specific occupation code, whichever is higher",
-                  "New entrant rate (for recent graduates, under-26, or switching from Graduate Route): £33,400 per year",
+                  "New entrant rate (for recent graduates, under-26, or switching from Graduate Route): £33,400 per year [CITE: gov.uk/skilled-worker-visa/your-job]",
                 ],
-              },
-            },
-            {
-              block: {
-                type: "paragraph",
-                text: "[CITE: gov.uk/skilled-worker-visa/your-job]",
               },
             },
             {
