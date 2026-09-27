@@ -40,7 +40,20 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
 ## Phase 2 kickoff (next session)
 
 Work in the `atlas-expansion` worktree (`../Zim-Side-Quests-atlas-expansion`);
-`npm ci` is done there for frontend/ and monitoring/. Order of work:
+`npm ci` is done there for frontend/ and monitoring/.
+
+**Tooling caveat:** `.mcp.json` launches the content server from whichever
+checkout the session opened, and the server edits the tree it was launched
+from. A session opened on `main` therefore has MCP tools that (a) edit the
+wrong tree and (b) predate Phase 1. Either open the session in the worktree,
+or call the worktree's server from the shell:
+`cd mcp-content-server && python3 -c "import traits; print(traits.coverage())"`.
+
+**Concurrency:** research fans out (subagents return JSON: dual-nationality
+verdicts with fetched government URLs; later, overlay drafts); writes stay
+serial in one session because every nationality lands in the same four files.
+
+Order of work:
 
 1. `trait_coverage()` to see the 7 rows; `get_content_schema()` for the tool
    flow.
