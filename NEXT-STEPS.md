@@ -37,6 +37,30 @@ _Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
 - [ ] If/when the site is deployed: host must rebuild on pushes to `main`
       (monitoring data is bundled at build time)
 
+## Phase 2 kickoff (next session)
+
+Work in the `atlas-expansion` worktree (`../Zim-Side-Quests-atlas-expansion`);
+`npm ci` is done there for frontend/ and monitoring/. Order of work:
+
+1. `trait_coverage()` to see the 7 rows; `get_content_schema()` for the tool
+   flow.
+2. Column-first for all 100 (Appendix A of the plan): for each monitored
+   column run `check_trait_column(trait)` against the live page, decide the
+   value for every one of the 100 names, and collect them; manual columns
+   (E-2 treaty list, 417/462, Visa Bulletin, DV, dual nationality) from a real
+   browser. Add dual-nationality citations with `add_citations` where an
+   official English page exists; otherwise `"unknown"`.
+3. Register the 93 new nationalities with `create_nationality(name, slug,
+   label, tier, traits_json)` (labels and tiers in Appendix A), Tier C first.
+   Each call type-checks; batch commits of ~10 with `npm run build` and a
+   watcher `--dry-run` in the message.
+4. Then Tier B (2–4 cited callouts each) and Tier A (up to ~10) in batches of
+   10 per session, per the plan §6.
+
+Deferred traits (V5 US visa services in-country, V6 reciprocity, V7 visa bond
+pilot, S5 SEVIS payment restrictions) become cited hand callouts for the
+nationalities they affect during the Tier A/B passes.
+
 ## Standing notes
 
 - Fees change every 1 July (Australia) and usually April (UK). Re-check the
