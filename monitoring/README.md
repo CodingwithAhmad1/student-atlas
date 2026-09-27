@@ -17,26 +17,32 @@ needed content edit and records the outcome. Git is the only datastore.
 2. **Record** — a substantive difference opens one `pending` alert per source
    in `frontend/src/data/monitoring/alerts/`. While it stays open, later runs
    update the same alert with the cumulative diff (baseline → current), so
-   there is never more than one open alert per page.
+   there is never more than one open alert per page. The page text the alert
+   shows is kept alongside the baseline as `snapshots/<source>.candidate.txt`.
 3. **Review** (MCP) — `list_alerts` → `get_alert` (diff plus every passage
    citing the source) → `apply_edit` (exact-string, build-checked) →
    `resolve_alert` (`approved` or `dismissed`, with a note). Commit and push.
-4. **Advance** — on the next run, a page whose text matches a resolved alert
-   becomes the new baseline. If the page changed again after review, the
-   baseline stays put and a fresh alert shows everything since the last
-   review, so nothing slips through.
+4. **Advance** — on the next run after an alert is resolved, its candidate
+   text (exactly what the reviewer saw) becomes the new baseline. If the page
+   changed again after review, a fresh alert shows only what changed since
+   that review, so nothing slips through and nothing is reviewed twice. This
+   does not depend on alert hashes, so changing the normalizer cannot make an
+   already-reviewed page look new. (Stored text is also re-cleaned on read.)
 
 Noise never reaches a reviewer: lines matching `NOISE_LINE_PATTERNS`, pure
 reorderings, and per-source `stripSelectors` (`source-overrides.ts`) are
 ignored, and an open alert whose remaining difference becomes noise — or whose
 page reverts — is auto-dismissed. A source failing 3 checks in a row raises a
-`manual` "unreachable" alert, auto-dismissed once it responds again.
+`manual` "unreachable" alert, auto-dismissed once it responds again. A short
+maintenance or error notice ("currently unavailable", "unable to redirect
+you") counts as a failed check, not as the page's content.
 
 ## State layout
 
 | Path | Contents |
 | --- | --- |
 | `snapshots/<source>.txt` | Reviewed baseline text per page (history lives in git) |
+| `snapshots/<source>.candidate.txt` | Page text an open alert is asking about; promoted to baseline once resolved |
 | `frontend/src/data/monitoring/status.json` | Per-source health, bundled into the app |
 | `frontend/src/data/monitoring/alerts/*.json` | One record per alert, bundled into the app |
 | `archive/` | Resolved alerts rotated out of the bundle (newest ~200 stay bundled) |

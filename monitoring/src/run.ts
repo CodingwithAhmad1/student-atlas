@@ -11,10 +11,13 @@ import {
   findResolvedAlert,
   makeAlertId,
   readAlerts,
+  readCandidate,
   readSnapshot,
+  removeCandidate,
   readStatusFile,
   removeOrphanSnapshots,
   writeAlert,
+  writeCandidate,
   writeSnapshot,
   writeStatusFile,
 } from "./state";
@@ -103,17 +106,12 @@ async function fetchAll(
           try {
             const { status, html } = await fetchPage(target.url);
             const text = normalizeFor(target, html);
-            // A blank page after normalization is a JS shell or interstitial,
-            // not a monitorable baseline — treat it as a failed check.
-            if (text.trim().length < 40) {
-              return {
-                target,
-                error: {
-                  message:
-                    "page rendered no monitorable text (likely a JavaScript-only page)",
-                  status,
-                },
-              };
+            // A blank page after normalization is a JS shell, and a short
+            // maintenance/error notice is an interstitial — neither is a
+            // monitorable baseline, so treat them as failed checks.
+            const problem = unmonitorableReason(text);
+            if (problem) {
+              return { target, error: { message: problem, status } };
             }
             return { target, text, httpStatus: status };
           } catch (err) {
@@ -129,6 +127,26 @@ async function fetchAll(
       );
     })
   );
+}
+
+/** Short pages that say the site is down or misrouted rather than giving guidance. */
+const INTERSTITIAL_PATTERNS: RegExp[] = [
+  /\b(currently|temporarily) unavailable\b/i,
+  /\b(undergoing|under|due to) (routine |scheduled |planned )?maintenance\b/i,
+  /\bunable to redirect you\b/i,
+  /\bservice unavailable\b/i,
+  /\baccess denied\b/i,
+];
+
+function unmonitorableReason(text: string): string | null {
+  const trimmed = text.trim();
+  if (trimmed.length < 40) {
+    return "page rendered no monitorable text (likely a JavaScript-only page)";
+  }
+  if (trimmed.length < 600 && INTERSTITIAL_PATTERNS.some((re) => re.test(trimmed))) {
+    return `page served a maintenance or error notice instead of content: "${trimmed.slice(0, 120)}"`;
+  }
+  return null;
 }
 
 class Run {
@@ -154,10 +172,21 @@ class Run {
     this.save(alert);
   }
 
+  /** Close an open change alert and drop the text it was waiting on. */
+  private closeChange(target: MonitoredTarget, alert: ActivityAlert, note: string): void {
+    this.autoResolve(alert, note);
+    if (!this.opts.dryRun) removeCandidate(target.key);
+  }
+
   private advanceBaseline(target: MonitoredTarget, text: string, status: SourceStatus): void {
     if (this.opts.dryRun) return;
     writeSnapshot(target.key, text);
     status.lastChangedAt = this.now;
+  }
+
+  /** Remember the page text an open alert shows, so its review can later become the baseline. */
+  private recordCandidate(target: MonitoredTarget, text: string): void {
+    if (!this.opts.dryRun) writeCandidate(target.key, text);
   }
 
   handleFailure(outcome: FetchOutcome, status: SourceStatus): void {
@@ -210,17 +239,28 @@ class Run {
     const newHash = hashText(text);
     status.lastHash = newHash;
 
-    const baseline = readSnapshot(target.key);
+    const open = findOpenAlert(this.alerts, target.sourceId, "change");
+    let baseline = readSnapshot(target.key);
+
+    // The alert for this page was resolved since the last run: the text it
+    // showed has been reviewed, so it is the new baseline. Any change since
+    // then is diffed against it and raises a fresh alert.
+    const reviewed = open ? null : readCandidate(target.key);
+    if (reviewed !== null) {
+      console.log(`✓ ${target.sourceId}: review finished — reviewed text is the new baseline`);
+      baseline = reviewed;
+      this.advanceBaseline(target, reviewed, status);
+      if (!this.opts.dryRun) removeCandidate(target.key);
+    }
+
     if (baseline === null) {
       console.log(`+ ${target.sourceId}: first snapshot recorded`);
       this.advanceBaseline(target, text, status);
       return;
     }
 
-    const open = findOpenAlert(this.alerts, target.sourceId, "change");
-
     if (newHash === hashText(baseline)) {
-      if (open) this.autoResolve(open, "The page returned to the last reviewed version.");
+      if (open) this.closeChange(target, open, "The page returned to the last reviewed version.");
       return;
     }
 
@@ -230,21 +270,24 @@ class Run {
       console.log(`~ ${target.sourceId}: only noise or reordering changed — baseline updated`);
       this.advanceBaseline(target, text, status);
       if (open) {
-        this.autoResolve(open, "What remains of the change is formatting or reordering noise.");
+        this.closeChange(target, open, "What remains of the change is formatting or reordering noise.");
       }
       return;
     }
 
     // Already reviewed: the page is exactly what a resolved alert looked at.
+    // (Fallback for alerts raised before candidates were recorded.)
     const resolved = findResolvedAlert(this.alerts, target.sourceId, newHash);
     if (resolved) {
       console.log(`✓ ${target.sourceId}: matches reviewed alert ${resolved.id} — baseline updated`);
       this.advanceBaseline(target, text, status);
-      if (open) this.autoResolve(open, `The page matches the version reviewed in ${resolved.id}.`);
+      if (open) this.closeChange(target, open, `The page matches the version reviewed in ${resolved.id}.`);
       return;
     }
 
     this.changes += 1;
+
+    this.recordCandidate(target, text);
 
     if (open) {
       if (open.newHash === newHash) {

@@ -13,10 +13,13 @@
   "newHash": "efb8b87144a7f2df2667ca32ceb2599677e181737f07ce1ca1dce1cc05e44852",
   "diff": "Index: studyinthestates.dhs.gov/students/working\n===================================================================\n--- studyinthestates.dhs.gov/students/working\tprevious\n+++ studyinthestates.dhs.gov/students/working\tcurrent\n@@ -54,9 +54,9 @@\n Working in the United States\n Obtaining a Social Security Number\n Training Opportunities in the United States\n+Applying for Practical Training\n Understanding E-Verify\n Individual Taxpayer Identification Number (ITIN)\n-Applying for Practical Training\n Complete\n M-1 Extensions of Stay\n Change of Status\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Navigation menu reordered.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the order of the site navigation menu changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-27T09:21:05.509Z",
   "error": null
 }

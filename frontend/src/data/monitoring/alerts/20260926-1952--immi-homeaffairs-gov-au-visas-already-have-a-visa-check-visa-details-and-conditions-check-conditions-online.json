@@ -13,10 +13,13 @@
   "newHash": "b3f937757a3d5abcdd4226e7464d20b518d163f7ea11a537958b5c0ac4cb4c9f",
   "diff": "Index: immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online\n===================================================================\n--- immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online\tprevious\n+++ immi.homeaffairs.gov.au/visas/already-have-a-visa/check-visa-details-and-conditions/check-conditions-online\tcurrent\n@@ -1,4 +1,2 @@\n Title: Check visa conditions online (VEVO)\n-Description: Our Visa Entitlement Verification Online system (VEVO) allows visa holders, employers, education providers and other organisations to check visa conditions.\n-Alert: VEVO ACD  (updated 26/03/2026 11:02:53 AM)\n-​Temporary travel restrictions for Iranian Visitor visa holders. For more information see ​Temporary travel restrictions for Visitor visa holders with Iranian passports.​\n\\ No newline at end of file\n+Description: Our Visa Entitlement Verification Online system (VEVO) allows visa holders, employers, education providers and other organisations to check visa conditions.\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "minor",
+  "summary": "Temporary Iran visitor-visa banner removed from the VEVO page.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "The banner about Iranian Visitor visa travel restrictions was removed. The guide never mentioned it, and VEVO works the same way.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-27T09:22:17.265Z",
   "error": null
 }

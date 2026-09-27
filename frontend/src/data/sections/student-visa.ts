@@ -21,7 +21,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: 'The F-1 visa does not have a fixed expiry date in the way a tourist visa does. It is issued with [TERM: d-s|"D/S" (Duration of Status)] notation, meaning it remains valid for as long as the student is enrolled full-time in an approved program and complying with the conditions of their status. The physical visa stamp in the passport may expire, but the student can remain in the US as long as their [TERM: sevis|SEVIS] record and [TERM: i-20] are valid.',
+                text: 'The F-1 visa does not have a fixed expiry date in the way a tourist visa does. It is issued with [TERM: d-s|"D/S" (Duration of Status)] notation, meaning it remains valid for as long as the student is enrolled full-time in an approved program and complying with the conditions of their status. The physical visa stamp in the passport may expire, but the student can remain in the US as long as their [TERM: sevis|SEVIS] record and [TERM: i-20] are valid. A DHS final rule published in July 2026 would replace D/S with a fixed admission period (the program length on the I-20, capped at four years, plus 30 days to arrive and 30 days to depart), but a federal court blocked it the day before it was due to take effect on 15 September 2026. For now D/S still applies — check Study in the States for the latest position before you travel.',
               },
             },
             {

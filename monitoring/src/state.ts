@@ -9,6 +9,7 @@ import {
 } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { cleanText } from "./normalize";
 import type {
   ActivityAlert,
   MonitoredTarget,
@@ -51,10 +52,25 @@ export function snapshotPath(key: string): string {
   return join(SNAPSHOTS_DIR, `${key}.txt`);
 }
 
-export function readSnapshot(key: string): string | null {
-  const path = snapshotPath(key);
+const CANDIDATE_SUFFIX = ".candidate.txt";
+
+/**
+ * Text an open alert asks a human to review. Once that alert is resolved it
+ * becomes the new baseline, so a review is never lost even if the normalizer
+ * changes (which would break matching on the alert's hash).
+ */
+export function candidatePath(key: string): string {
+  return join(SNAPSHOTS_DIR, `${key}${CANDIDATE_SUFFIX}`);
+}
+
+/** Stored text is re-cleaned so text-level normalizer changes cannot surface as diffs. */
+function readText(path: string): string | null {
   if (!existsSync(path)) return null;
-  return readFileSync(path, "utf8");
+  return cleanText(readFileSync(path, "utf8"));
+}
+
+export function readSnapshot(key: string): string | null {
+  return readText(snapshotPath(key));
 }
 
 export function writeSnapshot(key: string, text: string): void {
@@ -62,11 +78,27 @@ export function writeSnapshot(key: string, text: string): void {
   writeFileSync(snapshotPath(key), text, "utf8");
 }
 
+export function readCandidate(key: string): string | null {
+  return readText(candidatePath(key));
+}
+
+export function writeCandidate(key: string, text: string): void {
+  ensureDirs();
+  writeFileSync(candidatePath(key), text, "utf8");
+}
+
+export function removeCandidate(key: string): void {
+  rmSync(candidatePath(key), { force: true });
+}
+
 /** Delete baselines of pages that are no longer cited. */
 export function removeOrphanSnapshots(liveKeys: Set<string>): void {
   if (!existsSync(SNAPSHOTS_DIR)) return;
   for (const file of readdirSync(SNAPSHOTS_DIR)) {
-    if (file.endsWith(".txt") && !liveKeys.has(file.slice(0, -4))) {
+    const key = file.endsWith(CANDIDATE_SUFFIX)
+      ? file.slice(0, -CANDIDATE_SUFFIX.length)
+      : file.slice(0, -4);
+    if (file.endsWith(".txt") && !liveKeys.has(key)) {
       rmSync(join(SNAPSHOTS_DIR, file));
       console.log(`- removed snapshot for uncited source: ${file}`);
     }

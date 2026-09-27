@@ -13,10 +13,29 @@
   "newHash": "6bc3a0ed4f72e11044907f88ec1c89afb9b4a03112d343f9cc1252648b7159e4",
   "diff": "Index: gov.uk/skilled-worker-visa/your-job\n===================================================================\n--- gov.uk/skilled-worker-visa/your-job\tprevious\n+++ gov.uk/skilled-worker-visa/your-job\tcurrent\n@@ -40,6 +40,7 @@\n You’ll need to get your certificate of sponsorship on or before:\n 31 December 2026, if you are switching to this visa\n 31 December 2027, if you are extending your visa\n+If you apply for a prison officer role now, you will not get a certificate of sponsorship before 31 December 2026.\n When you can be paid less\n If you do not meet the usual salary requirements, and you do not work in healthcare or education, you might still be eligible if your salary will be at least £33,400 per year.\n Check when you can be paid less.\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "minor",
+  "summary": "Prison-officer CoS deadline note added; guide's outdated RQF 3 skill threshold corrected to RQF 6.",
+  "status": "approved",
+  "resolution": {
+    "note": "The page change itself only concerns prison officer roles (not relevant). While reviewing it I found the guide still said RQF Level 3; since 22 July 2025 the threshold is RQF 6 (with TSL/ISL exceptions). Fixed the points paragraph, the salary heading date and the RQF glossary entry.",
+    "edits": [
+      {
+        "file": "Student Atlas/frontend/src/data/sections/work-visa.ts",
+        "oldText": "the job meeting the skill threshold ([TERM: rqf|RQF] Level 3 or above, which covers most graduate roles)",
+        "newText": "the job meeting the skill threshold ([TERM: rqf|RQF] Level 6, i.e. degree level, or above since 22 July 2025; jobs at RQF 3–5 only qualify if they are on the Temporary Shortage List or Immigration Salary List)"
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/sections/work-visa.ts",
+        "oldText": "Salary thresholds (as of April 2024):",
+        "newText": "Salary thresholds (from 22 July 2025):"
+      },
+      {
+        "file": "Student Atlas/frontend/src/data/glossary.ts",
+        "oldText": "Skilled Worker visa roles must be Level 3 or above.",
+        "newText": "Since 22 July 2025, Skilled Worker visa roles must generally be Level 6 (degree level) or above."
+      }
+    ]
+  },
+  "resolvedAt": "2026-09-27T09:22:21.827Z",
   "error": null
 }

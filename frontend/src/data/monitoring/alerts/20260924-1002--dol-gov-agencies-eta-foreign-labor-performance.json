@@ -13,10 +13,13 @@
   "newHash": "05d3c1b8aac6ca9f9b83d2fea96691756fccf19c0af6e5485553008f36a8048d",
   "diff": "Index: dol.gov/agencies/eta/foreign-labor/performance\n===================================================================\n--- dol.gov/agencies/eta/foreign-labor/performance\tprevious\n+++ dol.gov/agencies/eta/foreign-labor/performance\tcurrent\n@@ -1,3 +1,4 @@\n+Explore the new beta.dol.gov website! Enjoy streamlined navigation and modern design. Your feedback will shape our future improvements.\n In carrying out its responsibility for the processing of prevailing wage, labor certification, and labor attestation applications, the Office of Foreign Labor Certification (OFLC) generates an extensive amount of program data that is useful to a wide range of external stakeholders, including Congress, researchers, media organizations, industry associations, worker advocacy organizations, and the general public. As part of the U.S. Department of Labor's commitment to supporting the goals of an open and transparent government, this page provides easy access to employment-based immigration data organized in three main categories:\n Selected statistics providing cumulative quarterly data by major immigration program;\n Cumulative quarterly and fiscal year releases of program disclosure data; and\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "DOL site-wide beta banner added.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only a site-wide \"new beta.dol.gov website\" banner was added.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-27T09:19:54.207Z",
   "error": null
 }

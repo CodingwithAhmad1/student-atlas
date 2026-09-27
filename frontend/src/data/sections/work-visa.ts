@@ -246,7 +246,7 @@ export const workVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Large employers in technology (Google, Microsoft, Amazon, Meta), finance (Goldman Sachs, JP Morgan), consulting (McKinsey, Deloitte, Accenture), and pharmaceuticals routinely sponsor H-1B visas. Most mid-size and small employers do not — either because of cost, administrative complexity, or risk aversion. The total cost of an H-1B petition to an employer is typically $5,000 to $15,000 in legal and filing fees, plus the prevailing wage obligation. Since 21 September 2025, new petitions for workers outside the US have also carried a $100,000 payment under a presidential proclamation, which has made many employers far more selective.",
+                text: "Large employers in technology (Google, Microsoft, Amazon, Meta), finance (Goldman Sachs, JP Morgan), consulting (McKinsey, Deloitte, Accenture), and pharmaceuticals routinely sponsor H-1B visas. Most mid-size and small employers do not — either because of cost, administrative complexity, or risk aversion. The total cost of an H-1B petition to an employer is typically $5,000 to $15,000 in legal and filing fees, plus the prevailing wage obligation. A September 2025 presidential proclamation added a $100,000 payment to many new petitions for workers outside the US, which made many employers far more selective. In June 2026 a federal court vacated the guidance implementing that payment and USCIS is currently complying with the order, but DHS says it will collect the payment again if the order is lifted — check the current position on the USCIS H-1B page before relying on either.",
               },
             },
             {
@@ -309,14 +309,14 @@ export const workVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The application earns points for: having a job offer from a licensed sponsor (mandatory), the job meeting the skill threshold ([TERM: rqf|RQF] Level 3 or above, which covers most graduate roles), meeting the minimum salary threshold, and English language proficiency.",
+                text: "The application earns points for: having a job offer from a licensed sponsor (mandatory), the job meeting the skill threshold ([TERM: rqf|RQF] Level 6, i.e. degree level, or above since 22 July 2025; jobs at RQF 3–5 only qualify if they are on the Temporary Shortage List or Immigration Salary List), meeting the minimum salary threshold, and English language proficiency.",
               },
             },
             {
               block: {
                 type: "heading",
                 level: 3,
-                text: "Salary thresholds (as of April 2024):",
+                text: "Salary thresholds (from 22 July 2025):",
               },
             },
             {

@@ -61,6 +61,12 @@ export const sourceOverrides: Record<string, SourceOverride> = {
     skipReason:
       "The I-94 site is a JavaScript application with no static text to monitor; verify manually.",
   },
+  // Only ever serves a redirect error or maintenance notice to non-browser
+  // clients (verified 2026-09-27), so its "changes" were never the fee.
+  "fmjfee.com": {
+    skipReason:
+      "The I-901 fee site is a JavaScript application with no static text to monitor; verify the fee manually.",
+  },
   // The homepage's "Recent blogs" teaser list rotates every few weeks and
   // raised an alert each time (verified 2026-09-27).
   "studyinthestates.dhs.gov": {

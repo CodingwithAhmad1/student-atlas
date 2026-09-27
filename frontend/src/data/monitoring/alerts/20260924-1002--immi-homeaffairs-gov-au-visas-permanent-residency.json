@@ -13,10 +13,13 @@
   "newHash": "0c9764dc2ef338435bd6529f0b32895e2f2a88b16efd044ddc59c6a5202527f9",
   "diff": "Index: immi.homeaffairs.gov.au/visas/permanent-residency\n===================================================================\n--- immi.homeaffairs.gov.au/visas/permanent-residency\tprevious\n+++ immi.homeaffairs.gov.au/visas/permanent-residency\tcurrent\n@@ -1,2 +1,2 @@\n Title: Permanent resident\n-Description: Information on what entitlements you get as a permanent resident of Australia. Also includes information on acceptable documents to prove your permanent residence.\n\\ No newline at end of file\n+Description: Find out what entitlements Australian permanent residents have and which documents prove your residency.\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Meta description reworded.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the page's meta description was reworded.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-27T09:22:17.228Z",
   "error": null
 }

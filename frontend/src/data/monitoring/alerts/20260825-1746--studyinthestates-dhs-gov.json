@@ -13,10 +13,19 @@
   "newHash": "d3510f10ba6f53aac3fbf6bcf43d8cf9c086d4bc415b6742be840e25e9f476d1",
   "diff": "Index: studyinthestates.dhs.gov\n===================================================================\n--- studyinthestates.dhs.gov\tprevious\n+++ studyinthestates.dhs.gov\tcurrent\n@@ -7,18 +7,18 @@\n Learn More\n RECENT BLOGS\n See All\n+September 24, 2026\n+Community Colleges: An Overview for F and M Students\n+Community colleges are an important part of the U.S. higher education system. Many community colleges across the United States are Student and…\n+Read More >\n+August 25, 2026\n+Upcoming SEVP Webinar: Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for F Students Final Rule\n+The Student and Exchange Visitor Program (SEVP) will host the SEVP Webinar: Establishing a Fixed Time Period of Admission and an Extension of Stay…\n+Read More >\n August 17, 2026\n Back-to-School Preparations: Tips for Students and Designated School Officials\n As the new academic year approaches, there are a few key steps that foreign students and designated school officials (DSOs) can take to ensure they…\n Read More >\n-July 27, 2026\n-First-Time Arrival: Key Information for New Students Traveling to the US\n-As a new F or M student arriving in the United States to begin your program of study, there are a few things you should know to ensure a smooth…\n-Read More >\n-July 17, 2026\n-DHS Publishes Final Rule Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure\n-On July 17, 2026, the U.S. Department of Homeland Security (DHS) published a final rule in the Federal Register, “<a…\n-Read More >\n TOOLS\n Study in the States offers interactive resources to help schools and students understand the F and M student process.\n View All Tools\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "meaningful",
+  "summary": "Homepage news: DHS final rule to end Duration of Status for F students (currently blocked by court).",
+  "status": "approved",
+  "resolution": {
+    "note": "Homepage blog list rotated, but one post covered the July 2026 DHS final rule that replaces Duration of Status with fixed admission periods. I checked the rule and its status: a D. Mass. preliminary injunction (14 Sep 2026) blocked it, so D/S still applies. Added a caveat to the F-1 D/S paragraph.",
+    "edits": [
+      {
+        "file": "Student Atlas/frontend/src/data/sections/student-visa.ts",
+        "oldText": "the student can remain in the US as long as their [TERM: sevis|SEVIS] record and [TERM: i-20] are valid.",
+        "newText": "the student can remain in the US as long as their [TERM: sevis|SEVIS] record and [TERM: i-20] are valid. A DHS final rule published in July 2026 would replace D/S with a fixed admission period (the program length on the I-20, capped at four years, plus 30 days to arrive and 30 days to depart), but a federal court blocked it the day before it was due to take effect on 15 September 2026. For now D/S still applies — check Study in the States for the latest position before you travel."
+      }
+    ]
+  },
+  "resolvedAt": "2026-09-27T09:20:53.779Z",
   "error": null
 }

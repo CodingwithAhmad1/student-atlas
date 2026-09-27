@@ -13,10 +13,13 @@
   "newHash": "2f1b30a55a7baab2b66c8cd96bfc90554d37476aaed9d708ecbcaa649abab030",
   "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\tcurrent\n@@ -1,4 +1,4 @@\n Title: Employer Nomination Scheme (subclass 186) visa\n Description: For skilled workers who are nominated by an employer to live and work in Australia.\n-Alert: Subclass 186 (updated 29/07/2026 4:21:48 PM)\n-Skilled visa income thresholds have increased in line with changes to annual Average Weekly Ordinary Time Earnings. For more information see Annual indexation of skilled visa income thresholds from 1 July 2026.​We prioritise applications in the Employer Nomination Scheme (subclass 186) in accordance with Ministerial Direction No. 119. We are now processing applications that were generally lodged in:June 2026 - Australian law enforcement or defence interestsJune 2025 - Healthcare and teaching occupations (onshore applicants); September 2024 - Construction occupations (onshore applicants)July 2024 - All other applications where the applicant was in Australia at the time of applicationJuly 2024 - All other applications where the applicant was outside Australia at the time of application.​\n\\ No newline at end of file\n+Alert: Subclass 186 (updated 19/09/2026 12:03:28 AM)\n+Skilled visa income thresholds have increased in line with changes to annual Average Weekly Ordinary Time Earnings. For more information see Annual indexation of skilled visa income thresholds from 1 July 2026.​We prioritise visa applications for the Employer Nomination Scheme (subclass 186) visa under Ministerial Direction 122. We are currently processing visa applications that were lodged in:August 2024 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or Australia's law enforcement and defence interests.February 2025 – Visa applications from applicants who were in Australia at the time they lodged their application.July 2024 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at anytime.July 2024 – All other visa applications from applicants who were outside Australia at the time they lodged their application.Please note. As we transition to the new priorities under Ministerial Direction 122, processing timeframes may fluctuate. Some published timeframes may temporarily move backwards while applications are reprioritised. ​\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "minor",
+  "summary": "Subclass 186 processing priorities moved to Ministerial Direction 122.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the processing-priority banner changed (Ministerial Direction 119 → 122, new queue dates). The guide does not quote 186 processing queues or times.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-27T09:19:33.394Z",
   "error": null
 }

@@ -13,10 +13,13 @@
   "newHash": "b6cef368e1a151c9db917a23c7255f4d6859a0d8db01b58a2c54649f5a3b0730",
   "diff": "Index: studyinthestates.dhs.gov/students/the-form-i-20\n===================================================================\n--- studyinthestates.dhs.gov/students/the-form-i-20\tprevious\n+++ studyinthestates.dhs.gov/students/the-form-i-20\tcurrent\n@@ -66,9 +66,9 @@\n Working in the United States\n Obtaining a Social Security Number\n Training Opportunities in the United States\n+Applying for Practical Training\n Understanding E-Verify\n Individual Taxpayer Identification Number (ITIN)\n-Applying for Practical Training\n Complete\n M-1 Extensions of Stay\n Change of Status\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Navigation menu reordered.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the order of the site navigation menu changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-27T09:20:53.881Z",
   "error": null
 }

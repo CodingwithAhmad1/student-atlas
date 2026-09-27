@@ -82,7 +82,7 @@ export const glossary: Record<string, GlossaryTerm> = {
   rqf: {
     label: "RQF",
     definition:
-      "Regulated Qualifications Framework — the UK system for classifying job skill levels. Skilled Worker visa roles must be Level 3 or above.",
+      "Regulated Qualifications Framework — the UK system for classifying job skill levels. Since 22 July 2025, Skilled Worker visa roles must generally be Level 6 (degree level) or above.",
   },
   ilr: {
     label: "ILR",
