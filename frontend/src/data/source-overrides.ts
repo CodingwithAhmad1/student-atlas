@@ -137,7 +137,11 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "justice.gov.et/nationality-proclamation-378-2003": { country: "INTL", category: "citizenship" },
   "gov.za/home-affairs-citizenship-portal-2025": { country: "INTL", category: "citizenship" },
   "mitos.gov.gr/loss-greek-citizenship-foreign": { country: "INTL", category: "citizenship" },
-  "kdmid.ru/138-fz-citizenship": { country: "INTL", category: "citizenship" },
+  "kdmid.ru/138-fz-citizenship": {
+    country: "INTL",
+    category: "citizenship",
+    skipReason: "kdmid.ru times out for automated clients outside Russia (every run since 2026-09-27); verify this page manually.",
+  },
   "pravo.by/citizenship-law-136-z": { country: "INTL", category: "citizenship", skipReason: "pravo.by rejects automated clients (HTTP 403); verify this page manually." },
   "snovmr.gov.ua/multiple-citizenship-2026": { country: "INTL", category: "citizenship" },
   "lex.uz/citizenship-law-zru-610": { country: "INTL", category: "citizenship" },
@@ -155,7 +159,11 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "presidencia.gob.do/constitucion-2015": { country: "INTL", category: "citizenship" },
   "asambleanacional.gob.ve/constitucion": { country: "INTL", category: "citizenship" },
   "gacetaoficial.gob.cu/constitucion": { country: "INTL", category: "citizenship" },
-  "cne.ao/lei-2-16-nacionalidade": { country: "INTL", category: "citizenship" },
+  "cne.ao/lei-2-16-nacionalidade": {
+    country: "INTL",
+    category: "citizenship",
+    skipReason: "The host sends an incomplete TLS certificate chain, so automated clients cannot verify it; verify this page manually.",
+  },
   "parlamento.mz/constituicao": { country: "INTL", category: "citizenship" },
   "legifrance.gouv.fr/code-civil-art-23": { country: "INTL", category: "citizenship", skipReason: "Légifrance rejects automated clients (HTTP 403); verify this page manually." },
   "sgg.gouv.bj/loi-2022-32-nationalite": { country: "INTL", category: "citizenship" },
@@ -186,4 +194,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "sn.usembassy.gov/visas": { skipReason: "usembassy.gov rejects automated clients (HTTP 403); verify this page manually." },
   "iq.usembassy.gov/nonimmigrant-visas": { skipReason: "usembassy.gov rejects automated clients (HTTP 403); verify this page manually." },
   "state.gov/embassy-caracas-resumption": { skipReason: "state.gov rejects automated clients (HTTP 403); verify this page manually." },
+  // A randomised "related posts" list churns on every fetch.
+  "minesup.gov.cm/equivalence-platform": { stripSelectors: [".related-posts"] },
 };

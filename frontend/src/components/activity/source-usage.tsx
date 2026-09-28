@@ -6,17 +6,25 @@ const SHOW_NAMES = 8;
 
 /** "Where this page is used": base content, trait columns and nationalities. */
 export function SourceUsage({ citationIds }: { citationIds: string[] }) {
-  const [usage, setUsage] = useState<CitationUsage | null>(null);
   const key = citationIds.join("|");
+  // Results are tagged with their key, so a stale one is never shown for new ids.
+  const [result, setResult] = useState<{ key: string; usage: CitationUsage | null } | null>(null);
 
   useEffect(() => {
     let live = true;
-    citationUsage(key.split("|")).then((u) => live && setUsage(u));
+    citationUsage(key.split("|"))
+      .then((usage) => live && setResult({ key, usage }))
+      .catch(() => live && setResult({ key, usage: null }));
     return () => {
       live = false;
     };
   }, [key]);
 
+  const current = result?.key === key ? result : null;
+  const usage = current?.usage ?? null;
+  if (current && !usage) {
+    return <p className="text-xs text-muted-foreground">Could not load where this page is used. Reload to try again.</p>;
+  }
   if (!usage) {
     return <p className="text-xs text-muted-foreground">Checking where this page is used…</p>;
   }

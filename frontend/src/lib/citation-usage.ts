@@ -1,7 +1,7 @@
 import { nationalityRegistry } from "@/data/nationalities/registry";
 import { sections } from "@/data/sections";
+import { buildOverlay } from "@/data/traits/build-overlay";
 import { nationalityTraits } from "@/data/traits/nationality-traits";
-import { generateOverlay, mergeOverlays } from "@/data/traits/trait-rules";
 import { traitsCitedBy } from "@/data/traits/trait-sources";
 import type { TraitKey } from "@/data/traits/types";
 
@@ -35,12 +35,15 @@ function loadIndex() {
         const traits = nationalityTraits[meta.slug];
         if (!traits) return;
         const hand = (await meta.load()).default;
-        const merged = mergeOverlays(generateOverlay(meta, traits, sections), hand);
-        byNationality.set(meta.slug, citesIn(merged));
+        byNationality.set(meta.slug, citesIn(buildOverlay(meta, hand)));
       })
     );
     return { base, byNationality };
   })();
+  // A failed chunk load (offline, redeploy) must not stick: retry next time.
+  index.catch(() => {
+    index = null;
+  });
   return index;
 }
 

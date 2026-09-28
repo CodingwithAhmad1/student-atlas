@@ -93,8 +93,15 @@ export function generateOverlay(
       ?.subSections.find((s) => s.slug === subSlug)
       ?.countries.find((c) => c.country === country)?.blocks;
 
-  const setProfile = (sectionSlug: string, subSlug: string, country: Country, profile: IdentifiedBlock[] | undefined) => {
+  const setProfile = (
+    sectionSlug: string,
+    subSlug: string,
+    country: Country,
+    profile: IdentifiedBlock[] | undefined,
+    domestic = false
+  ) => {
     if (!profile) return;
+    if (subject.destination === country && !domestic) return; // domestic column: rules don't apply
     const sec = (overlay[sectionSlug] ??= {});
     const sub = (sec[subSlug] ??= {});
     sub[country] = { ...(sub[country] ?? {}), profile };
@@ -127,7 +134,7 @@ export function generateOverlay(
       if (!profile) continue;
       for (const sub of section.subSections) {
         if (profile[sub.slug] && sub.countries.some((c) => c.country === home)) {
-          setProfile(section.slug, sub.slug, home, profile[sub.slug]);
+          setProfile(section.slug, sub.slug, home, profile[sub.slug], true);
         }
       }
     }

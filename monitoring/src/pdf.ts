@@ -26,7 +26,11 @@ export async function pdfToText(bytes: Uint8Array): Promise<string> {
     const { text } = await extractText(doc, { mergePages: false });
     pages = Array.isArray(text) ? text : [text];
   } catch {
-    pages = [];
+    // Not a readable PDF at all (e.g. an HTML error page sent as a PDF).
+    return (
+      `The file could not be read as a PDF (${bytes.length} bytes). ` +
+      `The watcher compares the file itself; SHA-256 ${digest}. Check the link by opening it.`
+    );
   }
   const cleaned = cleanText(pages.join("\n"));
   if (cleaned.length >= MIN_PDF_TEXT) return cleaned;

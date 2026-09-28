@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import type { NationalityOverlay } from "@/data/types";
 import { nationalityRegistry } from "@/data/nationalities/registry";
-import { sections } from "@/data/sections";
-import { nationalityTraits } from "@/data/traits/nationality-traits";
-import { generateOverlay, mergeOverlays } from "@/data/traits/trait-rules";
 
 interface OverlayState {
   overlay: NationalityOverlay | null;
@@ -37,12 +34,11 @@ export function useNationalityOverlay(nationalityName: string | null): OverlaySt
   useEffect(() => {
     if (!meta) return;
     let cancelled = false;
-    meta
-      .load()
-      .then((mod) => {
+    // The trait table and rules load with the overlay, not in the entry chunk.
+    Promise.all([meta.load(), import("@/data/traits/build-overlay")])
+      .then(([mod, { buildOverlay }]) => {
         if (cancelled) return;
-        const generated = generateOverlay(meta, nationalityTraits[meta.slug], sections);
-        setLoaded({ name: meta.name, overlay: mergeOverlays(generated, mod.default), error: null });
+        setLoaded({ name: meta.name, overlay: buildOverlay(meta, mod.default), error: null });
       })
       .catch((err: unknown) => {
         if (cancelled) return;
