@@ -8,7 +8,7 @@ _Last updated: 2026-09-28. Context for future sessions — see `CLAUDE.md`,
 
 - **Expansion to the 100 most populous nationalities is complete on branch
   `atlas-expansion`** (not yet merged; Ahmad pushes). Phases 0–3 of
-  `EXPANSION-PLAN.md` are done: 100 nationalities × 18 traits, every column
+  `EXPANSION-PLAN.md` are done: 100 nationalities × 19 traits, every column
   derived from its source page (2026-09-27/28); 53 Tier B and 196 Tier A cited
   hand callouts (plus 14 from a Tier B retry); 93 of 100 dual-nationality rows
   cited to home-government pages (8 of them from archived copies).
@@ -93,9 +93,13 @@ page is back and cite it instead. Caveats: Ivory Coast is the 1961 text (the
 art. 48); Syria's decree is kept in force by the 2025 Constitutional
 Declaration (art. 51); Iran and Syria are `restricted` because a foreign
 nationality taken without permission is not recognised and carries penalties.
-- Candidate trait: US tax-treaty student exemptions (IRS Publication 901
-  lists about 50 countries with student articles). Seen for Israel and
-  Uzbekistan in the retry; not added as hand callouts because it is a list.
+- `usTaxTreatyStudent` (added 2026-09-28) is read from IRS Publication 901's
+  "Students and Apprentices" list: 41 of our nationalities `available`,
+  Russia `suspended` (since 16 August 2024). The C.I.S. entry stands for the
+  countries still under the US-USSR treaty (Azerbaijan, Belarus, Tajikistan,
+  Uzbekistan among ours), so `check_trait_column` reports them as not
+  mentioned; keep them `available` while Publication 901 says the treaty
+  applies.
 
 ## Review calendar
 

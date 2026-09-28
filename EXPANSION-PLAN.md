@@ -547,3 +547,5 @@ Tier counts: A 25 (+3 destinations), B 35, C 37.
   most consequential piece of generated content in the expansion. Note that
   the existing china.ts overlay still discusses Proclamation 10043; V4 must
   carry per-nationality proclamation references, not a single global one.
+
+Trait 19 (2026-09-28): `usTaxTreatyStudent` from IRS Publication 901 (US student after-arrival callout).
