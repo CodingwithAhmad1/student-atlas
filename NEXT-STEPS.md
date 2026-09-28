@@ -10,7 +10,8 @@ _Last updated: 2026-09-28. Context for future sessions — see `CLAUDE.md`,
   `atlas-expansion`** (not yet merged; Ahmad pushes). Phases 0–3 of
   `EXPANSION-PLAN.md` are done: 100 nationalities × 18 traits, every column
   derived from its source page (2026-09-27/28); 53 Tier B and 196 Tier A cited
-  hand callouts; 76 of 100 dual-nationality rows cited to home-government pages.
+  hand callouts (plus 14 from a Tier B retry); 85 of 100 dual-nationality rows
+  cited to home-government pages.
 - The monitor runs every 12 hours on GitHub Actions and is **detection-only**.
   It now watches about 275 sources (was 55). A full dry run on 2026-09-28:
   202 new sources snapshot cleanly, 2 churning gov.br pages fixed, 2 u.ae
@@ -45,9 +46,12 @@ around it):
 3. **Visa Bulletin** — confirm separate employment-based columns only for
    China, India (`severe`), Mexico and the Philippines (`moderate`).
 4. **US embassy leads** — Russians directed to US posts in Warsaw or Astana;
-   a March 2026 release on resuming operations at US Embassy Caracas; which
-   countries are in the (now permanent) US visa bond programme (reported:
-   Algeria, Tunisia, Ethiopia, Uganda, Cambodia, Senegal).
+   which countries are in the (now permanent) US visa bond programme
+   (reported: Algeria, Tunisia, Ethiopia, Uganda, Cambodia, Senegal). Senegal
+   and Venezuela are confirmed on their embassy pages and have hand callouts;
+   once the full list is read on travel.state.gov, turn it into a trait.
+   Caracas: operations resumed 30 March 2026, consular services "eventual"
+   (Venezuela callout; recheck).
 5. **Content checks** — China's two Australian callouts (Chinese ImmiAccount,
    Frequent Traveller stream); Indonesia's PILN rule reportedly equating a
    non-Honours Australian bachelor's with Diploma Tiga; Bangladesh Bank
@@ -55,13 +59,19 @@ around it):
 
 **Claude can do:**
 
-- Dual nationality: 24 still `unknown` (afghanistan, burkina-faso, burundi,
-  cambodia, chad, ghana, guatemala, iran, israel, ivory-coast, kazakhstan,
-  malawi, myanmar, niger, north-korea, romania, rwanda, saudi-arabia, senegal,
-  somalia, south-sudan, sudan, syria, tunisia). A third research pass with a
-  fresh web-search budget may close some.
-- Tier B nationalities with no hand callouts yet (sources would not load):
-  Peru, Senegal, Israel, Morocco, Uzbekistan, Iraq, Cameroon, Venezuela.
+- Dual nationality: 15 still `unknown` after three passes (afghanistan,
+  burkina-faso, burundi, cambodia, chad, guatemala, iran, israel, ivory-coast,
+  myanmar, niger, north-korea, south-sudan, sudan, syria). Most have no
+  reachable official text; leads: Cambodia's 2025 amendment to the Law on
+  Nationality, Burkina Faso's 2025 code (loi 012-2025/ALT), Niger's loi
+  2014-60, Guatemala's Ley de Nacionalidad (minex.gob.gt, 403 to automated
+  clients), Israel's Population Authority and embassy pages (gov.il 403).
+- Israel has no hand callouts: every Israeli government page refused
+  automated clients (IDF deferral for students abroad, National Insurance
+  status for students abroad are the leads).
+- Candidate trait: US tax-treaty student exemptions (IRS Publication 901
+  lists about 50 countries with student articles). Seen for Israel and
+  Uzbekistan in the retry; not added as hand callouts because it is a list.
 
 ## Review calendar
 

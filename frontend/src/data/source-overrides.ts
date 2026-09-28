@@ -169,4 +169,21 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "portal.cscse.edu.cn/degree-authentication": { country: "INTL", skipReason: "The host refuses automated clients from outside China (network error); verify this page manually." },
   "u.ae/armed-forces": { country: "INTL", skipReason: "u.ae renders its content with JavaScript, so automated fetches see no text; verify this page manually." },
   "u.ae/qualification-recognition": { country: "INTL", skipReason: "u.ae renders its content with JavaScript, so automated fetches see no text; verify this page manually." },
+  // Dual-nationality retry (2026-09-28).
+  "migration.gov.rw/organic-law-nationality-2021": { country: "INTL", category: "citizenship" },
+  "justice.gov.tn/code-nationalite": { country: "INTL", category: "citizenship" },
+  "dri.gouv.sn/loi-61-10-nationalite": { country: "INTL", category: "citizenship" },
+  "sri.ro/legea-21-1991-cetatenie": { country: "INTL", category: "citizenship" },
+  "adilet.zan.kz/law-on-citizenship": { country: "INTL", category: "citizenship", skipReason: "The page renders its content client-side, so the watcher sees only the title; verify this page manually (the site's API, /api/documents/by-ngr/Z910004800_?language=eng, returns the text)." },
+  "saudipedia.com/saudi-nationality-law": { country: "INTL", category: "citizenship" },
+  "malawiembassyusa.com/dual-citizenship-sop": { country: "INTL", category: "citizenship" },
+  "icric.gov.so/constitution-chapters-1-4": { country: "INTL", category: "citizenship" },
+  "petrocom.gov.gh/constitution-art-8": { country: "INTL", category: "citizenship" },
+  // Tier B retry (2026-09-28): pages automated clients cannot read.
+  "consulado.pe/autorizacion-viaje-menores": { skipReason: "The host sends an incomplete TLS certificate chain, so automated clients cannot verify it; verify this page manually." },
+  "ve.usembassy.gov/visas": { skipReason: "usembassy.gov rejects automated clients (HTTP 403); verify this page manually." },
+  "ma.usembassy.gov/visas": { skipReason: "usembassy.gov rejects automated clients (HTTP 403); verify this page manually." },
+  "sn.usembassy.gov/visas": { skipReason: "usembassy.gov rejects automated clients (HTTP 403); verify this page manually." },
+  "iq.usembassy.gov/nonimmigrant-visas": { skipReason: "usembassy.gov rejects automated clients (HTTP 403); verify this page manually." },
+  "state.gov/embassy-caracas-resumption": { skipReason: "state.gov rejects automated clients (HTTP 403); verify this page manually." },
 };

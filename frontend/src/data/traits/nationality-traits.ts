@@ -192,7 +192,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-28", citationId: "malawiembassyusa.com/dual-citizenship-sop", note: "Only Malawians by birth or descent can be dual citizens, and they must notify and register the other citizenship for the Minister's approval." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   chad: {
@@ -232,7 +232,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "sri.ro/legea-21-1991-cetatenie", note: "Romanian citizenship ends only by approved renunciation or, in rare cases, withdrawal. The cited official page is in Romanian." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   somalia: {
@@ -252,7 +252,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "icric.gov.so/constitution-chapters-1-4", note: "The cited official page is in Somali." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   guatemala: {
@@ -1392,7 +1392,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-28", citationId: "adilet.zan.kz/law-on-citizenship", note: "Kazakh citizens who take another citizenship must report it within 30 calendar days." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   chile: {
@@ -1432,7 +1432,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-28", citationId: "dri.gouv.sn/loi-61-10-nationalite", note: "Article 18 of the 1961 nationality code makes the loss automatic for an adult who voluntarily takes another nationality. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   netherlands: {
@@ -1532,7 +1532,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "migration.gov.rw/organic-law-nationality-2021", note: "Rwandans who take another nationality must declare it to the immigration authority within three months." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   tunisia: {
@@ -1552,7 +1552,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-28", citationId: "justice.gov.tn/code-nationalite", note: "Naturalising abroad does not end Tunisian nationality automatically, but the nationality code lets the government withdraw it by decree. The cited official page is in Arabic." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   jordan: {
@@ -1932,7 +1932,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "petrocom.gov.gh/constitution-art-8" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   "saudi-arabia": {
@@ -1952,7 +1952,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-28", citationId: "saudipedia.com/saudi-nationality-law", note: "Saudis need the Prime Minister's permission before taking another nationality; without it they stay Saudi, but the government may withdraw Saudi nationality." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   nepal: {

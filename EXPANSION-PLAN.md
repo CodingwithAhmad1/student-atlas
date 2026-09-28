@@ -329,6 +329,9 @@ after-arrival, UK and AU citizenship) got one so callouts can anchor there.
 Tier A done 2026-09-28: 196 cited callouts for all 25, and the four
 pre-existing overlays pruned or corrected. Phase 2 content work is complete
 apart from the manual checks listed in NEXT-STEPS.
+Retry 2026-09-28: 14 callouts for 7 of the 8 Tier B nationalities that had
+none (Israel still none); dual nationality 85 of 100 cited (15 unknown).
+US embassy pages load only in a browser, so they carry a `skipReason`.
 
 ### Phase 3 — Hardening (1 session)
 1. First full monitor cycle with the new sources; tune `stripSelectors`.

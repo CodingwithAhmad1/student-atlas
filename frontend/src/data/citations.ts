@@ -1406,4 +1406,114 @@ export const citations: Record<string, Citation> = {
     url: "https://www.gob.mx/sep/acciones-y-programas/revalidacion-de-estudios-del-tipo-superior-sep-18-019",
     label: "Secretaría de Educación Pública — Revalidación de Estudios del Tipo Superior (SEP-18-019) (in Spanish)",
   },
+  "migration.gov.rw/organic-law-nationality-2021": {
+    id: "migration.gov.rw/organic-law-nationality-2021",
+    url: "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/og_special_of_28.07.2021_ubwenegihugu_nyarwanda.pdf",
+    label: "Directorate General of Immigration and Emigration (Rwanda) — Official Gazette n° Special of 28/07/2021: Organic Law n° 002/2021.OL governing Rwandan Nationality",
+  },
+  "justice.gov.tn/code-nationalite": {
+    id: "justice.gov.tn/code-nationalite",
+    url: "https://www.justice.gov.tn/fileadmin/medias/references_juridiques/codes_juridiques/NationaliteArabe.pdf",
+    label: "Ministère de la Justice (Tunisie) — Code de la nationalité tunisienne (in Arabic)",
+  },
+  "dri.gouv.sn/loi-61-10-nationalite": {
+    id: "dri.gouv.sn/loi-61-10-nationalite",
+    url: "https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf",
+    label: "Journal officiel du Sénégal — Loi n° 61-10 du 7 mars 1961 déterminant la nationalité sénégalaise (in French)",
+  },
+  "sri.ro/legea-21-1991-cetatenie": {
+    id: "sri.ro/legea-21-1991-cetatenie",
+    url: "https://sri.ro/fisiere/legislatie/L21-1991.pdf",
+    label: "Romanian Intelligence Service (SRI) — Law 21/1991 on Romanian citizenship, republished 2010 (in Romanian)",
+  },
+  "adilet.zan.kz/law-on-citizenship": {
+    id: "adilet.zan.kz/law-on-citizenship",
+    url: "https://adilet.zan.kz/eng/docs/Z910004800_",
+    label: "Adilet (Ministry of Justice) — Law on Citizenship of the Republic of Kazakhstan",
+  },
+  "saudipedia.com/saudi-nationality-law": {
+    id: "saudipedia.com/saudi-nationality-law",
+    url: "https://saudipedia.com/en/saudi-nationality-law",
+    label: "Saudipedia (Ministry of Media) — Saudi Nationality Law",
+  },
+  "malawiembassyusa.com/dual-citizenship-sop": {
+    id: "malawiembassyusa.com/dual-citizenship-sop",
+    url: "https://www.malawiembassyusa.com/_files/ugd/34560e_7d35cedc4048449992ff072fce225374.pdf",
+    label: "Malawi Department of Immigration (via the Embassy of Malawi, Washington) — Dual Citizenship Standard Operating Procedures",
+  },
+  "icric.gov.so/constitution-chapters-1-4": {
+    id: "icric.gov.so/constitution-chapters-1-4",
+    url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
+    label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
+  },
+  "petrocom.gov.gh/constitution-art-8": {
+    id: "petrocom.gov.gh/constitution-art-8",
+    url: "https://petrocom.gov.gh/wp-content/uploads/2022/08/constitutionofghana.pdf",
+    label: "Petroleum Commission, Ghana — Constitution of the Republic of Ghana, as amended in 1996",
+  },
+  "consulado.pe/autorizacion-viaje-menores": {
+    id: "consulado.pe/autorizacion-viaje-menores",
+    url: "https://www.consulado.pe/es/NuevaYork/tramite/paginas/Tramites-Notariales/Autorizacion-de-viajes-de-menores-de-edad.aspx",
+    label: "Consulado General del Perú en Nueva York — Autorización de viajes de menores de edad (in Spanish)",
+  },
+  "peru.embassy.gov.au/apply": {
+    id: "peru.embassy.gov.au/apply",
+    url: "https://peru.embassy.gov.au/lima/apply.html",
+    label: "Australian Embassy Peru — Applying for a visa or citizenship",
+  },
+  "gov.uk/foreign-travel-advice/venezuela/entry-requirements": {
+    id: "gov.uk/foreign-travel-advice/venezuela/entry-requirements",
+    url: "https://www.gov.uk/foreign-travel-advice/venezuela/entry-requirements",
+    label: "GOV.UK (FCDO) — Venezuela travel advice: Entry requirements",
+  },
+  "ve.usembassy.gov/visas": {
+    id: "ve.usembassy.gov/visas",
+    url: "https://ve.usembassy.gov/visas/",
+    label: "U.S. Embassy in Caracas — Visas",
+  },
+  "state.gov/embassy-caracas-resumption": {
+    id: "state.gov/embassy-caracas-resumption",
+    url: "https://www.state.gov/releases/office-of-the-spokesperson/2026/03/resumption-of-operations-at-u-s-embassy-caracas/",
+    label: "U.S. Department of State — Resumption of Operations at U.S. Embassy Caracas",
+  },
+  "oc.gov.ma/voyages-pour-etudes": {
+    id: "oc.gov.ma/voyages-pour-etudes",
+    url: "https://www.oc.gov.ma/fr/etudiants-marocains-a-letranger/voyages-pour-etudes-a-l-etranger",
+    label: "Office des Changes — Voyages pour études à l'étranger (in French)",
+  },
+  "ma.usembassy.gov/visas": {
+    id: "ma.usembassy.gov/visas",
+    url: "https://ma.usembassy.gov/visas/",
+    label: "U.S. Embassy & Consulate in Morocco — Visas",
+  },
+  "sn.usembassy.gov/visas": {
+    id: "sn.usembassy.gov/visas",
+    url: "https://sn.usembassy.gov/visas/",
+    label: "U.S. Embassy in Senegal — Visas",
+  },
+  "gov.uk/tb-clinics-uzbekistan": {
+    id: "gov.uk/tb-clinics-uzbekistan",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-uzbekistan/tuberculosis-testing-in-uzbekistan",
+    label: "GOV.UK — Tuberculosis testing in Uzbekistan",
+  },
+  "lex.uz/military-duty-law": {
+    id: "lex.uz/military-duty-law",
+    url: "https://lex.uz/ru/docs/78721",
+    label: "Lex.uz (Ministry of Justice) — Law on Universal Military Duty and Military Service (in Russian)",
+  },
+  "gov.uk/tb-clinics-iraq": {
+    id: "gov.uk/tb-clinics-iraq",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-iraq/tuberculosis-testing-in-iraq",
+    label: "GOV.UK — Tuberculosis testing in Iraq",
+  },
+  "iq.usembassy.gov/nonimmigrant-visas": {
+    id: "iq.usembassy.gov/nonimmigrant-visas",
+    url: "https://iq.usembassy.gov/nonimmigrant-visas/",
+    label: "U.S. Embassy & Consulate in Iraq — Nonimmigrant Visas",
+  },
+  "minesup.gov.cm/equivalence-platform": {
+    id: "minesup.gov.cm/equivalence-platform",
+    url: "https://www.minesup.gov.cm/index.php/2024/12/27/communique-19/",
+    label: "Ministère de l'Enseignement Supérieur (Cameroun) — Communiqué on the equivalence platform (in French)",
+  },
 };
