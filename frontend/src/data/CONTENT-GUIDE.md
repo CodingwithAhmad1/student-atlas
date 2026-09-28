@@ -28,6 +28,7 @@ clients are `manual` and raise a `stale-check` alert when past their interval.
 | `ukVisaBrake` | UK visa brake: prominent callout on the UK student (and, for `student-skilled`, sponsored-work) columns |
 | `auVisitorStream` | AU ETA (601) / eVisitor (651) profile, or Visitor 600 |
 | `auBiometricsRequired`, `auHealthExamLikely` | AU application-step callouts |
+| `usTaxTreatyStudent` | US student after-arrival callout: treaty students article available, or suspended (Russia) — IRS Publication 901 |
 | `ukDifferentialEvidence`, `ukTbTestRequired`, `ukMajorityEnglish` | UK student documents callouts |
 | `auEnglishExempt` | AU student English callout |
 | `usNationalityWorkVisas`, `ukYouthMobility`, `auWorkingHoliday` | Post-study work alternatives |
@@ -123,7 +124,7 @@ date, and the watcher closes the alert on its next run.
 
 ### 1. Derive the traits row
 Read each column's source page (`traits/trait-sources.ts` says what to look
-for) and decide the 17 values. `check_trait_column(trait)` shows how the page
+for) and decide the 19 values. `check_trait_column(trait)` shows how the page
 names countries. Dual nationality needs a home-country government citation
 (`add_citations` first) or the value `"unknown"`. The page must state the rule
 for adults who naturalise abroad (no inferring it from passport or renunciation

@@ -31,6 +31,7 @@ TRAIT_VALUES: dict[str, object] = {
     "ukTbTestRequired": bool,
     "ukMajorityEnglish": bool,
     "auEnglishExempt": bool,
+    "usTaxTreatyStudent": ("none", "available", "suspended"),
     "usNationalityWorkVisas": ["E-3", "H-1B1", "TN", "E-2"],
     "ukYouthMobility": ("none", "18-30", "18-35", "ballot", "india-yps"),
     "auWorkingHoliday": ("none", "417", "462", "462-ballot"),
@@ -359,6 +360,7 @@ PRESENCE_MEANS: dict[str, object] = {
     "auEnglishExempt": True,
     "usEntryRestriction": None,
     "ukVisaBrake": None,
+    "usTaxTreatyStudent": None,  # C.I.S. members are covered by one entry; Russia is suspended
     "ukYouthMobility": None,
     "sanctionsRegime": None,
 }
@@ -376,6 +378,7 @@ REGIONS: dict[str, tuple[str, str | None]] = {
     "auHealthExamLikely": ("Countries with low risk of tuberculosis", "Countries with low risk of hepatitis"),
     "auEnglishExempt": ("citizen and hold a passport from", "you are an applicant who"),
     "auVisitorStream": ("eligible for an ETA", "If you hold more than one passport"),
+    "usTaxTreatyStudent": ("Students and Apprentices", "Wages and Pensions Paid by a Foreign Government"),
 }
 
 

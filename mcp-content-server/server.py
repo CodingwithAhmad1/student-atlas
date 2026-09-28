@@ -542,7 +542,7 @@ const overlay: NationalityOverlay = {
 traits/nationality-traits.ts has one row per nationality and one column per fact
 (ukVisaNational, usVwp, usEntryRestriction, ukVisaBrake, auVisitorStream, auBiometricsRequired,
 auHealthExamLikely, ukDifferentialEvidence, ukTbTestRequired, ukMajorityEnglish,
-auEnglishExempt, usNationalityWorkVisas, ukYouthMobility, auWorkingHoliday,
+auEnglishExempt, usTaxTreatyStudent, usNationalityWorkVisas, ukYouthMobility, auWorkingHoliday,
 usVisaBulletinBacklog, usDiversityVisaEligible, dualNationalityAtHome, sanctionsRegime).
 traits/trait-rules.ts turns a row into profile choices and cited callouts; each column
 cites one source page (traits/trait-sources.ts). dualNationalityAtHome rows cite their
@@ -613,7 +613,7 @@ def create_nationality(
         label: Adjective for headings, e.g. "Bangladeshi".
         tier: "A", "B" or "C" (how much hand-written content it will get).
         traits_json: Complete row, {trait: value} or {trait: {value, verifiedAt?, citationId?, note?}}
-            for all 18 traits (see get_content_schema). Missing verifiedAt defaults to today.
+            for all 19 traits (see get_content_schema). Missing verifiedAt defaults to today.
         destination: "US", "UK" or "AU" only when the nationality is itself a destination.
     """
     require_auth(ctx)

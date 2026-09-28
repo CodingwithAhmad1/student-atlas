@@ -76,6 +76,12 @@ export const traitSources: Record<TraitKey, TraitSource> = {
     verifiedAt: "2026-09-27",
     note: "Student (500) English requirement: passport holders of the UK, USA, Canada, NZ and Ireland are exempt.",
   },
+  usTaxTreatyStudent: {
+    citationId: "irs.gov/p901",
+    checkKind: "monitored",
+    verifiedAt: "2026-09-28",
+    note: "IRS Publication 901, 'Students and Apprentices' list. The C.I.S. entry covers the countries still under the US-USSR treaty (Armenia, Azerbaijan, Belarus, Georgia, Kyrgyzstan, Moldova, Tajikistan, Turkmenistan, Uzbekistan). Russia's students article is suspended since 16 August 2024 (value 'suspended'). The treaty does not cover Hong Kong; Taiwan has none. Benefits depend on residence, not nationality.",
+  },
   usNationalityWorkVisas: {
     citationId: "uscis.gov/e-2",
     checkKind: "manual",

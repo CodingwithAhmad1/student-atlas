@@ -21,6 +21,7 @@ export interface Verified<T> {
 export type UsEntryRestriction = "none" | "partial" | "full";
 /** UK "visa brake": out-of-country applications on these routes are refused for this nationality. */
 export type UkVisaBrake = "none" | "student" | "student-skilled";
+export type UsTaxTreatyStudent = "none" | "available" | "suspended";
 export type AuVisitorStream = "eta601" | "evisitor651" | "visitor600";
 export type UsNationalityWorkVisa = "E-3" | "H-1B1" | "TN" | "E-2";
 export type UkYouthMobility = "none" | "18-30" | "18-35" | "ballot" | "india-yps";
@@ -66,6 +67,8 @@ export interface NationalityTraits {
   ukMajorityEnglish: Verified<boolean>;
   /** Passport exempts the holder from the Student (500) English test. */
   auEnglishExempt: Verified<boolean>;
+  /** A US income tax treaty with a students article covers residents of this country (IRS Publication 901). */
+  usTaxTreatyStudent: Verified<UsTaxTreatyStudent>;
 
   // ── Working ─────────────────────────────────────────────────
   /** Nationality-specific US work visas beyond the H-1B lottery. */
@@ -102,6 +105,7 @@ export const TRAIT_KEYS: TraitKey[] = [
   "ukTbTestRequired",
   "ukMajorityEnglish",
   "auEnglishExempt",
+  "usTaxTreatyStudent",
   "usNationalityWorkVisas",
   "ukYouthMobility",
   "auWorkingHoliday",

@@ -195,6 +195,27 @@ export function generateOverlay(
     for (const [section, sub] of where) addCallout(section, sub, "UK", [p(text)]);
   }
 
+  // ── US tax treaty: students article (IRS Publication 901) ──
+  const treaty = traits.usTaxTreatyStudent;
+  if (treaty.value === "available") {
+    addCallout("student", "after-arrival", "US", [
+      p(
+        `An income tax treaty between the United States and ${name} has a students article. ` +
+          `If you were a resident of ${name} when you arrived, you may be exempt from US income tax on some income while you study, ` +
+          `such as payments from abroad for your maintenance and study and, depending on the treaty, grants or limited earnings from work. ` +
+          `IRS Publication 901 sets out the conditions and limits. ${cite("usTaxTreatyStudent")}`
+      ),
+    ]);
+  } else if (treaty.value === "suspended") {
+    addCallout("student", "after-arrival", "US", [
+      p(
+        `The United States has suspended the students article of its income tax treaty with ${name}, ` +
+          `so students resident in ${name} cannot claim the treaty's exemptions on US income while the suspension lasts. ` +
+          `${asOf(treaty)} ${cite("usTaxTreatyStudent")}`
+      ),
+    ]);
+  }
+
   // ── Comprehensive sanctions ──
   if (traits.sanctionsRegime.value === "comprehensive") {
     const text =

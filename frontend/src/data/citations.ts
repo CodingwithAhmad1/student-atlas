@@ -1556,4 +1556,9 @@ export const citations: Record<string, Citation> = {
     url: "https://web.archive.org/web/20240610164342/http://moj.gov.sy/sites/default/files/%D8%A7%D9%84%D9%85%D8%B1%D8%B3%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%B4%D8%B1%D9%8A%D8%B9%D9%8A%20%D8%B1%D9%82%D9%85%20276%20%D9%84%D9%84%D8%B9%D8%A7%D9%85%201969%20%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%82%20%D8%A8%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D9%8A%D8%A9.pdf",
     label: "Ministry of Justice (Syria) — Legislative Decree No. 276 of 1969 on Syrian Arab Nationality (in Arabic) (archived copy)*",
   },
+  "irs.gov/p901": {
+    id: "irs.gov/p901",
+    url: "https://www.irs.gov/publications/p901",
+    label: "IRS — Publication 901, U.S. Tax Treaties",
+  },
 };
