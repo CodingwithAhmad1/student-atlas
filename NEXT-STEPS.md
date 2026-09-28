@@ -10,8 +10,8 @@ _Last updated: 2026-09-28. Context for future sessions — see `CLAUDE.md`,
   `atlas-expansion`** (not yet merged; Ahmad pushes). Phases 0–3 of
   `EXPANSION-PLAN.md` are done: 100 nationalities × 18 traits, every column
   derived from its source page (2026-09-27/28); 53 Tier B and 196 Tier A cited
-  hand callouts (plus 14 from a Tier B retry); 85 of 100 dual-nationality rows
-  cited to home-government pages.
+  hand callouts (plus 14 from a Tier B retry); 93 of 100 dual-nationality rows
+  cited to home-government pages (8 of them from archived copies).
 - The monitor runs every 12 hours on GitHub Actions and is **detection-only**.
   It now watches about 275 sources (was 55). A full dry run on 2026-09-28:
   202 new sources snapshot cleanly, 2 churning gov.br pages fixed, 2 u.ae
@@ -63,16 +63,36 @@ around it):
 
 **Claude can do:**
 
-- Dual nationality: 15 still `unknown` after three passes (afghanistan,
-  burkina-faso, burundi, cambodia, chad, guatemala, iran, israel, ivory-coast,
-  myanmar, niger, north-korea, south-sudan, sudan, syria). Most have no
-  reachable official text; leads: Cambodia's 2025 amendment to the Law on
-  Nationality, Burkina Faso's 2025 code (loi 012-2025/ALT), Niger's loi
-  2014-60, Guatemala's Ley de Nacionalidad (minex.gob.gt, 403 to automated
-  clients), Israel's Population Authority and embassy pages (gov.il 403).
-- Israel has no hand callouts: every Israeli government page refused
-  automated clients (IDF deferral for students abroad, National Insurance
-  status for students abroad are the leads).
+- Israel has only practical (uncited, asterisked) callouts: check IDF status
+  before leaving, and ask Bituach Leumi about insurance rights abroad. Every
+  Israeli government site (gov.il, embassies.gov.il, btl.gov.il) refuses
+  automated clients, so nothing more specific could be cited.
+
+### Dual nationality: could not be retrieved or confirmed (7 of 100)
+
+Four research passes (2026-09-27/28). These rows stay `unknown`, and readers
+see the generic "not yet verified" line.
+
+| Country | What was tried | Why it is still unknown |
+|---|---|---|
+| Afghanistan | 2000 Citizenship Law read in Official Gazette 792 (archived from moj.gov.af); MoJ renunciation page (archived 2026) | Art. 7 bars dual citizenship, but no official source says the current authorities apply this law; the MoJ says all laws are under Sharia review. |
+| Burkina Faso | an.bf register of laws, an.bf news, jobf.gov.bf, ecertificat-nationalite.gov.bf | The 2025 family code (loi 012-2025/ALT) replaced the old rule; no official copy is online (jobf.gov.bf is a paid portal and returned 502). |
+| Chad | presidence.td, journalofficiel.td, archives | The 1962 nationality ordinance is only on the official gazette site, which shows a Cloudflare bot check; not bypassed, and no archived copy exists. |
+| Israel | gov.il and embassies.gov.il (live and archived), Knesset PDF | Live pages refuse automated clients; archived pages only describe the renunciation procedure; the Knesset PDF is a scan of the 1952 original. |
+| Myanmar | mlis.gov.mm (live and archived), embassies in London, Kuala Lumpur, Washington | The legal database refuses connections and its archived pages never captured the law text; no embassy page states s.16 of the 1982 law. |
+| Niger | gouv.ne, assemblee.ne, sgg.gouv.ne, diplomatie.gouv.ne, archives | No official copy of loi 2014-60; the Foreign Ministry page predates it, so it cannot support either verdict. |
+| North Korea | — | No official DPRK publication of the nationality law exists online. |
+
+### Dual nationality: cited from archived copies (label ends in "(archived copy)*")
+
+Burundi, Cambodia, Guatemala, Iran, Ivory Coast, South Sudan, Sudan and Syria
+were read from Internet Archive copies of official pages (live pages offline
+or blocked). Each has a `skipReason`; once a year, check whether the official
+page is back and cite it instead. Caveats: Ivory Coast is the 1961 text (the
+2004, 2005 and 2013 amendments could not be read; none is reported to change
+art. 48); Syria's decree is kept in force by the 2025 Constitutional
+Declaration (art. 51); Iran and Syria are `restricted` because a foreign
+nationality taken without permission is not recognised and carries penalties.
 - Candidate trait: US tax-treaty student exemptions (IRS Publication 901
   lists about 50 countries with student articles). Seen for Israel and
   Uzbekistan in the retry; not added as hand callouts because it is a list.

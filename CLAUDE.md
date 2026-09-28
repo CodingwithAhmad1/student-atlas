@@ -55,6 +55,10 @@ browser and re-stamp the column.
 - Pushing to `main` from a Claude session is blocked by auto mode; Ahmad pushes.
 - Sites that block automated clients get a `skipReason` in
   `frontend/src/data/source-overrides.ts`. Never use bot-detection evasion.
+- If an official page is offline or blocked, an Internet Archive copy of it
+  may be cited, labelled "(archived copy)*", with a `skipReason`.
+- Pages or content that could not be retrieved or confirmed are written up in
+  `NEXT-STEPS.md` (what was tried, why it failed), not guessed.
 - Content strings write non-ASCII characters inconsistently (`£`, `£`,
   `£`). `apply_edits` matches all forms; plain `grep` for `£115` will miss
   escaped ones.

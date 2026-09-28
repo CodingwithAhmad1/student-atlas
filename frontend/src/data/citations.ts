@@ -1516,4 +1516,44 @@ export const citations: Record<string, Citation> = {
     url: "https://www.minesup.gov.cm/index.php/2024/12/27/communique-19/",
     label: "Ministère de l'Enseignement Supérieur (Cameroun) — Communiqué on the equivalence platform (in French)",
   },
+  "amategeko.gov.bi/loi-1-013-2000-code-nationalite": {
+    id: "amategeko.gov.bi/loi-1-013-2000-code-nationalite",
+    url: "https://web.archive.org/web/20220726052942/https://amategeko.gov.bi/wp-content/uploads/2019/12/BOB_No8-bis-2000.pdf",
+    label: "Bulletin officiel du Burundi n° 8 bis/2000 — Loi n° 1/013 portant réforme du Code de la nationalité (in French) (archived copy)*",
+  },
+  "gouv.ci/code-nationalite-61-415": {
+    id: "gouv.ci/code-nationalite-61-415",
+    url: "https://web.archive.org/web/20231023203659/https://www.gouv.ci/doc/accords/1511882127CODE-DE-LA-NATIONALITE-61-415.pdf",
+    label: "Journal officiel de Côte d'Ivoire — Loi n° 61-415 portant Code de la nationalité ivoirienne (in French) (archived copy)*",
+  },
+  "coj.gov.kh/law-on-nationality-2018": {
+    id: "coj.gov.kh/law-on-nationality-2018",
+    url: "https://web.archive.org/web/20230808103931/https://www.coj.gov.kh/wp-content/uploads/2018/06/%E1%9E%85%E1%9F%92%E1%9E%94%E1%9E%B6%E1%9E%94%E1%9F%8B%E1%9E%9F%E1%9F%92%E1%9E%8F%E1%9E%B8%E1%9E%96%E1%9E%B8%E1%9E%9F%E1%9E%89%E1%9F%92%E1%9E%87%E1%9E%B6%E1%9E%8F%E1%9E%B7-1.pdf",
+    label: "Council of Jurists (Office of the Council of Ministers) — Law on Nationality 2018 (in Khmer) (archived copy)*",
+  },
+  "minex.gob.gt/ley-de-nacionalidad": {
+    id: "minex.gob.gt/ley-de-nacionalidad",
+    url: "https://web.archive.org/web/20140408124926/http://www.minex.gob.gt/ADMINPORTAL/Data/DOC/LeyNacionalidad1.pdf",
+    label: "Ministerio de Relaciones Exteriores de Guatemala — Ley de Nacionalidad (in Spanish) (archived copy)*",
+  },
+  "rc.majlis.ir/civil-code": {
+    id: "rc.majlis.ir/civil-code",
+    url: "https://web.archive.org/web/20250807001102/https://rc.majlis.ir/fa/law/show/92778",
+    label: "Islamic Parliament Research Center — Civil Code, articles 988–989 (in Persian) (archived copy)*",
+  },
+  "mojca.gov.ss/transitional-constitution": {
+    id: "mojca.gov.ss/transitional-constitution",
+    url: "https://web.archive.org/web/20240711210216/https://mojca.gov.ss/wp-content/uploads/2023/04/The-Transitional-Constitution-of-the-Repulic-of-South-Sudan.pdf",
+    label: "Ministry of Justice and Constitutional Affairs (South Sudan) — Transitional Constitution, article 45 (archived copy)*",
+  },
+  "moj.gov.sd/nationality-act-1994": {
+    id: "moj.gov.sd/nationality-act-1994",
+    url: "https://web.archive.org/web/20220627174929/https://moj.gov.sd/sudanlaws/epub/EPUB/xhtml/stotdt.html",
+    label: "Ministry of Justice (Sudan) — Sudanese Nationality Act 1994 (in Arabic) (archived copy)*",
+  },
+  "moj.gov.sy/nationality-decree-276-1969": {
+    id: "moj.gov.sy/nationality-decree-276-1969",
+    url: "https://web.archive.org/web/20240610164342/http://moj.gov.sy/sites/default/files/%D8%A7%D9%84%D9%85%D8%B1%D8%B3%D9%88%D9%85%20%D8%A7%D9%84%D8%AA%D8%B4%D8%B1%D9%8A%D8%B9%D9%8A%20%D8%B1%D9%82%D9%85%20276%20%D9%84%D9%84%D8%B9%D8%A7%D9%85%201969%20%D8%A7%D9%84%D9%85%D8%AA%D8%B9%D9%84%D9%82%20%D8%A8%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9%20%D8%A7%D9%84%D8%B3%D9%88%D8%B1%D9%8A%D8%A9.pdf",
+    label: "Ministry of Justice (Syria) — Legislative Decree No. 276 of 1969 on Syrian Arab Nationality (in Arabic) (archived copy)*",
+  },
 };

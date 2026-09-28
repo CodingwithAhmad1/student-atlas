@@ -129,7 +129,10 @@ names countries. Dual nationality needs a home-country government citation
 for adults who naturalise abroad (no inferring it from passport or renunciation
 pages). A page in another language is fine when there is no English one: end
 the citation label with the language ("… (in French)") and end the row's note
-with "The cited official page is in French."
+with "The cited official page is in French." If the official page is offline
+or blocked, an Internet Archive copy of that same official page may be cited:
+end its label with "(archived copy)*" and give it a `skipReason`. A live
+official page always wins.
 
 ### 2. Create the nationality
 ```

@@ -272,7 +272,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "minex.gob.gt/ley-de-nacionalidad", note: "Guatemala treats a dual national as only Guatemalan while in Guatemala. Guatemalan nationality ends only where the other country makes renouncing it compulsory, and it can then be recovered. The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   guinea: {
@@ -332,7 +332,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "amategeko.gov.bi/loi-1-013-2000-code-nationalite", note: "Burundi's nationality code gives Burundians by birth or descent the right to hold dual nationality. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   bolivia: {
@@ -472,7 +472,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-28", citationId: "gouv.ci/code-nationalite-61-415", note: "The loss takes effect on the date the foreign nationality is acquired. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   "north-korea": {
@@ -552,7 +552,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-28", citationId: "moj.gov.sy/nationality-decree-276-1969", note: "Syrians are meant to get permission before naturalising abroad. Without it they stay Syrian, but the law allows a fine or a short prison sentence and lets the government withdraw nationality by decree. The cited official page is in Arabic." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   belgium: {
@@ -612,7 +612,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "mojca.gov.ss/transitional-constitution" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   "dominican-republic": {
@@ -1072,7 +1072,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "moj.gov.sd/nationality-act-1994", note: "Sudanese who acquire South Sudanese nationality lose Sudanese nationality automatically; this does not apply to naturalising in the United States, the United Kingdom or Australia. The cited official page is in Arabic." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   uganda: {
@@ -1492,7 +1492,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "coj.gov.kh/law-on-nationality-2018", note: "Cambodian nationality is lost only by an approved renunciation or, for serious acts such as treason, by revocation. The cited official page is in Khmer." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   zimbabwe: {
@@ -1792,7 +1792,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "restricted", verifiedAt: "2026-09-28", citationId: "rc.majlis.ir/civil-code", note: "Iran does not recognise a foreign nationality taken without government permission: the person stays Iranian, but the law allows forced sale of their Iranian real estate and bars them from government posts. The cited official page is in Persian." },
     sanctionsRegime: { value: "comprehensive", verifiedAt: "2026-09-27" },
   },
   turkey: {
