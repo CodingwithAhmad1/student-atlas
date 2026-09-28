@@ -8,7 +8,7 @@
  *
  * Rows are complete by construction: TypeScript refuses a nationality whose
  * row is missing a column, so "unknown" is only a legal value where the type
- * says so (dual nationality, see decision D3 in EXPANSION-PLAN.md).
+ * says so (dual nationality, see the content rules in HANDBOOK.md).
  */
 
 /** A trait value with the date it was last checked against its source. */

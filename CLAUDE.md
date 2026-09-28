@@ -2,8 +2,8 @@
 
 Visa/immigration guide for international students going to the US, UK and
 Australia, with nationality-specific content for the 100 most populous
-nationalities (see `EXPANSION-PLAN.md`).
-Start with `NEXT-STEPS.md` for current status.
+nationalities. Start with `HANDBOOK.md`: structure, content rules, check-up
+calendar, open manual items and the launch checklist.
 
 ## Layout
 
@@ -12,15 +12,13 @@ Start with `NEXT-STEPS.md` for current status.
   see `frontend/src/data/CONTENT-GUIDE.md`). Nationality-dependent facts are
   columns in `traits/nationality-traits.ts`, one source page per column
   (`traits/trait-sources.ts`), rendered by `traits/trait-rules.ts`.
-- `EXPANSION-PLAN.md` — the 100-nationality expansion: design, decisions,
-  phases. `AUDIT-2026-09.md` is the audit of the original overlays.
 - `monitoring/` — GitHub Actions watcher (every 12 h, detection only). Writes
   snapshots, alerts and `frontend/src/data/monitoring/status.json`. See
   `monitoring/README.md`.
 - `mcp-content-server/` — MCP server for reviewing alerts and editing content.
   Local config: `Student Atlas/.mcp.json` (gitignored; copy from
   `mcp-content-server/.mcp.json.example`).
-- `archive/` — retired code and docs; nothing there is used.
+- `archive/` — retired Flask-era code; nothing there is used.
 
 ## Commands
 
@@ -52,13 +50,15 @@ browser and re-stamp the column.
   sessions. Do git-writing work in a dedicated worktree
   (`git worktree add ../Zim-Side-Quests-<topic> -b <branch>`), and check
   `git diff --cached --name-only` before committing.
-- Pushing to `main` from a Claude session is blocked by auto mode; Ahmad pushes.
+- Pushing to or merging into `main` from a Claude session is blocked by auto
+  mode: push a branch, open a PR, and Ahmad merges.
 - Sites that block automated clients get a `skipReason` in
   `frontend/src/data/source-overrides.ts`. Never use bot-detection evasion.
 - If an official page is offline or blocked, an Internet Archive copy of it
   may be cited, labelled "(archived copy)*", with a `skipReason`.
 - Pages or content that could not be retrieved or confirmed are written up in
-  `NEXT-STEPS.md` (what was tried, why it failed), not guessed.
+  `HANDBOOK.md` §7 (what was tried, why it failed), not guessed. Keep §7
+  (open items) and §6 (calendar) current when work lands.
 - Content strings write non-ASCII characters inconsistently (`£`, `£`,
   `£`). `apply_edits` matches all forms; plain `grep` for `£115` will miss
   escaped ones.
@@ -77,9 +77,10 @@ browser and re-stamp the column.
   it; official government sources only. A page in another language is fine
   with "(in French)" etc. at the end of the citation label. Drafts from
   subagents are reviewed against their evidence before they are written.
-- Hosts that block all automated clients (including the browser pane):
-  travel.state.gov, state.gov, *.usembassy.gov, federalregister.gov,
-  ecfr.gov, and at times immi.homeaffairs.gov.au. Hand these to Ahmad.
+- Hosts that block automated fetches: travel.state.gov (also in the browser
+  pane: hand it to Ahmad), federalregister.gov, ecfr.gov, gov.il. state.gov
+  and *.usembassy.gov open in the browser pane; cite them (with a
+  `skipReason`) only when no automatically readable page says the same.
 - A fact that applies wherever the student goes (exit permits, military
   service, foreign-exchange rules) goes into each destination column.
 - After adding a batch of citations, run `npx tsx src/churn-check.ts` in

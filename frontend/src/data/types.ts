@@ -59,7 +59,7 @@ export interface CalloutOverlay {
   afterBlockId: string;
   blocks: ContentBlock[];
   /**
-   * Uncited practical advice (decision D2 in EXPANSION-PLAN.md). Rendered with
+   * Uncited practical advice (content rules in HANDBOOK.md). Rendered with
    * an asterisk and a small-print note; may not contain numbers, fees, dates
    * or durations, and may not carry [CITE] markers — check-content enforces it.
    */
@@ -96,7 +96,7 @@ export interface NationalityMeta {
   /** Adjective for headings, e.g. "Pakistani" → "For Pakistani applicants". */
   label: string;
   /**
-   * How much hand-written content the nationality gets (EXPANSION-PLAN.md §6).
+   * How much hand-written content the nationality gets (tiers: HANDBOOK.md §3).
    * Trait coverage is identical across tiers.
    */
   tier: "A" | "B" | "C";
