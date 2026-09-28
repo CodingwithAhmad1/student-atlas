@@ -6,6 +6,8 @@ interface OverlayState {
   overlay: NationalityOverlay | null;
   nationalitySlug: string | null;
   nationalityLabel: string | null;
+  /** A nationality is chosen but the guide has no content for it yet (base rules only). */
+  unsupported: boolean;
   isLoading: boolean;
   error: string | null;
 }
@@ -17,9 +19,10 @@ interface Loaded {
 }
 
 /**
- * Lazily loads the overlay for a nationality. While a new nationality loads,
- * no overlay is returned, so the previous nationality's content can never be
- * shown under the new name.
+ * Lazily loads the overlay for a nationality. The rendered overlay is the
+ * trait-generated content (`trait-rules.ts`) with the hand-written file merged
+ * on top. While a new nationality loads, no overlay is returned, so the
+ * previous nationality's content can never be shown under the new name.
  */
 export function useNationalityOverlay(nationalityName: string | null): OverlayState {
   const meta = nationalityName
@@ -31,10 +34,11 @@ export function useNationalityOverlay(nationalityName: string | null): OverlaySt
   useEffect(() => {
     if (!meta) return;
     let cancelled = false;
-    meta
-      .load()
-      .then((mod) => {
-        if (!cancelled) setLoaded({ name: meta.name, overlay: mod.default, error: null });
+    // The trait table and rules load with the overlay, not in the entry chunk.
+    Promise.all([meta.load(), import("@/data/traits/build-overlay")])
+      .then(([mod, { buildOverlay }]) => {
+        if (cancelled) return;
+        setLoaded({ name: meta.name, overlay: buildOverlay(meta, mod.default), error: null });
       })
       .catch((err: unknown) => {
         if (cancelled) return;
@@ -52,14 +56,22 @@ export function useNationalityOverlay(nationalityName: string | null): OverlaySt
   }, [meta, attempt]);
 
   if (!meta) {
-    // Not in the registry: base content only.
-    return { overlay: null, nationalitySlug: null, nationalityLabel: null, isLoading: false, error: null };
+    // Not in the registry: base content only, and say so.
+    return {
+      overlay: null,
+      nationalitySlug: null,
+      nationalityLabel: null,
+      unsupported: nationalityName !== null,
+      isLoading: false,
+      error: null,
+    };
   }
   const current = loaded?.name === meta.name ? loaded : null;
   return {
     overlay: current?.overlay ?? null,
     nationalitySlug: current?.overlay ? meta.slug : null,
     nationalityLabel: meta.label,
+    unsupported: false,
     isLoading: current === null,
     error: current?.error ?? null,
   };

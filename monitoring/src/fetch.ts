@@ -1,3 +1,5 @@
+import { isPdf, pdfToText } from "./pdf";
+
 const USER_AGENT =
   "StudentAtlasMonitor/1.0 (personal project; +https://github.com/HariharRengan/Zim-Side-Quests)";
 
@@ -7,6 +9,8 @@ const MAX_RETRIES = 2;
 export interface FetchResult {
   status: number;
   html: string;
+  /** Set instead of meaningful `html` when the response is a PDF (extracted text). */
+  pdfText?: string;
 }
 
 export class FetchError extends Error {
@@ -47,7 +51,8 @@ export async function fetchPage(url: string): Promise<FetchResult> {
       response = await fetch(url, {
         headers: {
           "User-Agent": USER_AGENT,
-          Accept: "text/html,application/xhtml+xml",
+          // PDFs are cited too (laws, gazettes); some servers answer 406 to an HTML-only Accept.
+          Accept: "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
           "Accept-Language": "en",
         },
         redirect: "follow",
@@ -66,7 +71,11 @@ export async function fetchPage(url: string): Promise<FetchResult> {
     }
 
     if (response.ok) {
-      return { status: response.status, html: await response.text() };
+      const bytes = new Uint8Array(await response.arrayBuffer());
+      if (isPdf(bytes, response.headers.get("content-type"))) {
+        return { status: response.status, html: "", pdfText: await pdfToText(bytes) };
+      }
+      return { status: response.status, html: new TextDecoder().decode(bytes) };
     }
 
     const retryable = response.status >= 500 || response.status === 429;

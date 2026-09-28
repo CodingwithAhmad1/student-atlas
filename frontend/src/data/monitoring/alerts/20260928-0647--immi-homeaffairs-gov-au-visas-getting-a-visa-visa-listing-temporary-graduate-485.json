@@ -1,0 +1,27 @@
+{
+  "id": "20260928-0647--immi-homeaffairs-gov-au-visas-getting-a-visa-visa-listing-temporary-graduate-485",
+  "kind": "change",
+  "sourceId": "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
+  "relatedSourceIds": [
+    "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485/fees-and-charges"
+  ],
+  "sourceLabel": "Australian Department of Home Affairs — Temporary Graduate Visa (Subclass 485)",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485",
+  "country": "AU",
+  "category": "work",
+  "detectedAt": "2026-09-28T06:47:35.584Z",
+  "updatedAt": "2026-09-28T06:47:35.584Z",
+  "oldHash": "aed5dc1a14efd9cd93e11fd0708ec0754e7456ee4cba31e33b3cc724ed6134ea",
+  "newHash": "2f3af2bca106ce7800b41e28e161c33cf7fe162a39825071b469a2eb27f2e5f5",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/temporary-graduate-485\tcurrent\n@@ -1,2 +1,5 @@\n Title: Temporary Graduate visa - Subclass 485\n-Description: A temporary visa that allows international students to live, study and work after you have finished your studies.\n\\ No newline at end of file\n+Description: A temporary visa that allows international students to live, study and work after you have finished your studies.\n+Temporary Graduate visa\n+A temporary visa that allows international students to live, study and work after you have finished your studies.\n+You must: be aged 35 years or under when you apply. *Exceptions apply hold an eligible visa have held a Student visa in the last 6 months have a recent qualification in a CRICOS-registered course apply for your eligible stream (it is not possible to change streams after you apply) attach required evidence when you apply\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": "noise",
+  "summary": "The watcher now reads the whole page; no change on the page itself.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Expected after the watcher change that reads Home Affairs pages from their embedded page data: the old baseline held only a fragment of the page. Checked that no text or figure was removed; the full text becomes the new baseline.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-28T06:48:51.617Z",
+  "error": null
+}

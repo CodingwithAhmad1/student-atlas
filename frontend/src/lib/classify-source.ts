@@ -6,6 +6,7 @@ export type SourceCategory =
   | "work"
   | "residency"
   | "citizenship"
+  | "eligibility"
   | "general";
 
 export type SourceCountry = "US" | "UK" | "AU" | "INTL";
@@ -27,7 +28,11 @@ export function classifySource(
     lcId.includes("fmjfee") ||
     lcId.includes("usembassy") ||
     lcId.includes("ustraveldocs") ||
-    lcId.includes("ceac.state")
+    lcId.includes("ceac.state") ||
+    lcId.includes("dhs.gov") ||
+    lcId.includes("whitehouse.gov") ||
+    lcId.includes("ice.gov") ||
+    lcId.includes("ofac.treasury")
   ) {
     countryCode = "us";
   } else if (lcId.includes("gov.uk") || lcId.includes("ukvcas")) {
@@ -35,7 +40,10 @@ export function classifySource(
   } else if (
     lcId.includes("homeaffairs") ||
     lcId.includes("immi.") ||
-    lcId.includes("privatehealth.gov.au")
+    lcId.includes("privatehealth.gov.au") ||
+    lcId.includes("embassy.gov.au") ||
+    lcId.includes("highcommission.gov.au") ||
+    lcId.includes("dfat.gov.au")
   ) {
     countryCode = "au";
   }
@@ -45,6 +53,8 @@ export function classifySource(
   if (
     lcLabel.includes("citizen") ||
     lcLabel.includes("citizenship") ||
+    lcLabel.includes("dual nationality") ||
+    lcLabel.includes("nationality law") ||
     lcLabel.includes("naturaliz")
   ) {
     category = "citizenship";

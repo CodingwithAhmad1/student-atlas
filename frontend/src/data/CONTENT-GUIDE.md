@@ -10,7 +10,33 @@ see `mcp-content-server/.mcp.json.example`. Remote clients use SSE
 
 ---
 
-## Content Architecture (3 Layers)
+## Content Architecture (4 Layers)
+
+### Layer 0: Nationality traits (`traits/`)
+Every fact that depends on the reader's nationality is a **column** in
+`traits/nationality-traits.ts` (one row per nationality, one trait per line).
+Each column has exactly one source page in `traits/trait-sources.ts`, and
+`traits/trait-rules.ts` turns a row into profile choices (ETA, ESTA, eVisitor,
+domestic) and generated, cited callouts. Columns whose source blocks automated
+clients are `manual` and raise a `stale-check` alert when past their interval.
+
+| Trait | Drives |
+|---|---|
+| `ukVisaNational` | UK Standard Visitor vs ETA profile |
+| `usVwp` | US ESTA profile |
+| `usEntryRestriction` | Proclamation 10998 callout on every US column (none / partial / full) |
+| `ukVisaBrake` | UK visa brake: prominent callout on the UK student (and, for `student-skilled`, sponsored-work) columns |
+| `auVisitorStream` | AU ETA (601) / eVisitor (651) profile, or Visitor 600 |
+| `auBiometricsRequired`, `auHealthExamLikely` | AU application-step callouts |
+| `ukDifferentialEvidence`, `ukTbTestRequired`, `ukMajorityEnglish` | UK student documents callouts |
+| `auEnglishExempt` | AU student English callout |
+| `usNationalityWorkVisas`, `ukYouthMobility`, `auWorkingHoliday` | Post-study work alternatives |
+| `usVisaBulletinBacklog`, `usDiversityVisaEligible` | US sponsorship / residency callouts |
+| `dualNationalityAtHome` | Cross-cutting dual-nationality line (cites the home-country page; may be `unknown`) |
+| `sanctionsRegime` | Cross-cutting notice on every column when comprehensive |
+
+The trait-generated overlay and the hand-written overlay are merged at render
+time (`mergeOverlays`): hand profiles win, callouts append.
 
 ### Layer 1: Base Content (`sections/*.ts`)
 Nationality-agnostic content covering the most common visa path for each destination.
@@ -35,7 +61,13 @@ Reusable content that **replaces** base content entirely for a given country + s
 | `domestic-au-*.ts` | `domesticAu{Visit,Student,Work,Residency}` | AU nationals viewing AU column |
 
 ### Layer 3: Nationality Overlays (`nationalities/*.ts`)
-Per-nationality customizations with **callouts** (injected after specific blocks) and optional **profile** references.
+Hand-written extras per nationality: **callouts** injected after specific blocks
+(base or profile blocks — the profile the traits select counts). Every callout
+must contain a `[CITE: id]`, or carry `practical: true` and then **no digits at
+all** (it renders with an asterisk and a "not from an official source" note).
+Consulate wait times, processing estimates, refusal-rate commentary and currency
+conversions never go in. `profile:` references are still allowed but rarely
+needed — the traits choose profiles.
 
 ---
 
@@ -77,22 +109,36 @@ changed source page. Work through them one at a time:
 7. Commit the content change together with the alert JSON, and push. The next
    monitor run adopts the reviewed page as the new baseline.
 
+**Trait columns.** When `get_alert` lists "Trait columns fed by this source",
+review the column instead of prose: `check_trait_column(trait)` fetches the
+page and proposes flips for every nationality; verify them on the page, then
+`set_trait_column(trait, {"slug": value, ...}, "YYYY-MM-DD")` writes them (and
+stamps the column's date). A `stale-check` alert means a manual column is past
+its interval: check the page in a real browser, `set_trait_column` with today's
+date, and the watcher closes the alert on its next run.
+
 ---
 
 ## Adding a New Nationality (Step by Step)
 
-### 1. Determine visa paths
-- Does this nationality qualify for UK ETA? → use `touristVisaUkEta` profile
-- Does this nationality qualify for AU ETA (601)? → use `touristVisaAuEta` profile
-- Does this nationality qualify for US ESTA/VWP? → use `touristVisaUsVwp` profile
-- Is this nationality's home country one of US/UK/AU? → use domestic profiles
-- Otherwise → callout-only overlay (like Pakistan, China)
+### 1. Derive the traits row
+Read each column's source page (`traits/trait-sources.ts` says what to look
+for) and decide the 17 values. `check_trait_column(trait)` shows how the page
+names countries. Dual nationality needs a home-country government citation
+(`add_citations` first) or the value `"unknown"`. The page must state the rule
+for adults who naturalise abroad (no inferring it from passport or renunciation
+pages). A page in another language is fine when there is no English one: end
+the citation label with the language ("… (in French)") and end the row's note
+with "The cited official page is in French."
 
 ### 2. Create the nationality
 ```
-create_nationality(name, slug, label, uses_uk_eta, uses_au_eta, uses_us_vwp)
+create_nationality(name, slug, label, tier, traits_json, destination?)
 ```
-This creates `nationalities/{slug}.ts` with empty callouts and adds to `registry.ts`.
+`tier` is A, B or C (EXPANSION-PLAN.md §6). This writes the traits row, an
+empty `nationalities/{slug}.ts`, the registry entry and the dropdown entry in
+one type-checked step. `trait_coverage(slug)` shows the row; the generated
+callouts follow from it.
 
 ### 3. Find block IDs for callout targeting
 ```
@@ -110,7 +156,9 @@ Where `blocks_json` is a JSON array of plain content blocks (no ids):
 [{"type": "paragraph", "text": "Content here..."}]
 ```
 
-### 5. Set profiles (if applicable)
+### 5. Set profiles (rarely)
+Profiles are chosen by the traits. Only use `set_profile` for a hand-written
+profile that the traits cannot express.
 ```
 set_profile(slug, section_slug, subsection_slug, country, 'profileVar["subsection"]')
 ```
@@ -151,16 +199,16 @@ write_content_file("nationalities/slug.ts", modified_content)
 
 ## Common Patterns
 
-### Callout-only (e.g. Pakistan, China)
-No profile imports. All countries use base content. Callouts add nationality-specific notes.
+### Traits only (Tier C)
+An empty overlay `{}`; everything the reader sees for their nationality is
+generated from the traits row.
 
-### ETA/VWP profile (e.g. UAE → UK ETA + AU ETA)
-Import profile, set `profile: profileVar["subsection"]` on the country entry.
-Callouts target the **profile's** block IDs (not base content IDs).
+### Cited extras (Tier A/B)
+Callouts with `[CITE]`, anchored on base block IDs or on the IDs of the profile
+the traits select (e.g. `uk-eta-refused` for a non-visa national).
 
-### Domestic profile (e.g. UK → UK column)
-Import domestic profile, set it on the home country column for every subsection.
-Content says "you're a citizen, no visa needed" etc.
+### Practical advice
+`practical: true` on the callout, no `[CITE]`, no digits.
 
 ### Cross-cutting (dual nationality)
 Use `_crossCutting` instead of a country code. Applies to all destination columns.
@@ -185,8 +233,12 @@ Target `dual-origin-position` or `dual-destination-position` block IDs.
 | `compare_nationalities(a, b)` | Side-by-side comparison |
 | `list_available_profiles()` | All profiles and who uses them |
 | `get_content_schema()` | Block types, markup and structure docs |
-| `get_nationality_template(name, slug, ...)` | Generate template (preview) |
-| `create_nationality(name, slug, label, ...)` | Create file + registry entry |
+| `get_nationality_template(name, slug)` | Overlay skeleton (preview) |
+| `create_nationality(name, slug, label, tier, traits_json, destination?)` | Traits row + file + registry + dropdown (type-checked) |
+| `trait_coverage(slug?)` | Trait values, dates and stale flags |
+| `check_trait_column(trait)` | Compare a column with its live source page (never writes) |
+| `set_trait_column(trait, values_json, verified_at)` | Write a column and stamp its date |
+| `set_trait(slug, trait, value_json, verified_at, citation_id?, note?)` | Write one value |
 | `add_callout(slug, section, subsection, country, afterId, blocks)` | Add callout |
 | `remove_callout(slug, section, subsection, country, afterId, n?)` | Remove a callout |
 | `set_profile(slug, section, subsection, country, expr)` | Set/remove profile (adds import) |
@@ -202,12 +254,14 @@ Target `dual-origin-position` or `dual-destination-position` block IDs.
 
 ## Currently Implemented Nationalities
 
-| Name | Slug | Tourist profiles | Notes |
-|---|---|---|---|
-| UAE | `uae` | UK ETA, AU ETA | Gulf nationality, no dual nationality |
-| Pakistan | `pakistan` | None | Callout-only, bilateral dual nationality agreement |
-| India | `india` | UK ETA | No dual nationality, OCI card available |
-| China | `china` | None | Callout-only, no dual nationality (Article 9) |
-| United Kingdom | `uk` | US VWP, AU ETA, UK domestic | All UK columns use domestic profiles |
-| United States | `us` | UK ETA, AU ETA, US domestic | All US columns use domestic profiles |
-| Australia | `au` | US VWP, UK ETA, AU domestic | All AU columns use domestic profiles |
+| Name | Slug | Tier | Hand callouts | Notes |
+|---|---|---|---|---|
+| UAE | `uae` | A | 9 | Visitor 600 (not ETA-eligible), differential evidence, no dual nationality |
+| Pakistan | `pakistan` | A | 7 | TB test, biometrics, health exam; dual nationality with listed countries |
+| India | `india` | A | 7 | Visa national, TB test, severe visa-bulletin backlog, OCI |
+| China | `china` | A | 11 | Differential evidence, TB test, severe backlog, Article 9 |
+| United Kingdom | `uk` | A | 1 | Destination: domestic profiles; VWP, AU ETA, 417 |
+| United States | `us` | A | 0 | Destination: domestic profiles; UK ETA, AU ETA, 462 |
+| Australia | `au` | A | 0 | Destination: domestic profiles; VWP, UK ETA, E-3, Youth Mobility |
+
+`trait_coverage()` is the live version of this table.

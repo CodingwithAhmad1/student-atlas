@@ -10,7 +10,10 @@ export type ActivityStatus =
   | "approved" // reviewed; site content was updated to match
   | "dismissed"; // reviewed (or auto-resolved); no content change needed
 
-export type AlertKind = "change" | "unreachable";
+export type AlertKind =
+  | "change" // the page text differs from the reviewed baseline
+  | "unreachable" // the page failed 3 checks in a row
+  | "stale-check"; // a manually checked trait column is past its check interval
 
 export type Significance = "noise" | "minor" | "meaningful";
 
@@ -109,6 +112,7 @@ export const CATEGORY_LABELS: Record<SourceCategory, string> = {
   work: "Work",
   residency: "Residency",
   citizenship: "Citizenship",
+  eligibility: "Eligibility list",
   general: "General",
 };
 

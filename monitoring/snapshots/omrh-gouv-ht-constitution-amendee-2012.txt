@@ -1,0 +1,1 @@
+Scanned PDF with no text layer (22 pages). The watcher compares the file itself; SHA-256 8f94fa4e87086fbccd449fbc3ca807fb83d34d0eace0b48af1c0cc91341a5b9b. Check a change by opening the PDF.

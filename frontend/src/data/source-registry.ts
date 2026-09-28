@@ -1,6 +1,7 @@
 // Relative imports (not "@/") so the monitoring watcher can load this file via tsx.
 import { citations } from "./citations";
 import { sourceOverrides } from "./source-overrides";
+import { traitsCitedBy } from "./traits/trait-sources";
 import {
   classifySource,
   type SourceCategory,
@@ -26,6 +27,8 @@ export interface MonitoredSource {
   stripSelectors?: string[];
   /** When set, the watcher does not fetch this page. */
   skipReason?: string;
+  /** Trait columns (traits/trait-sources.ts) derived from this page, if any. */
+  affectsTraits: string[];
 }
 
 export function slugify(id: string): string {
@@ -58,6 +61,7 @@ function buildRegistry(): MonitoredSource[] {
       label: cite.label,
       country: override?.country ?? heuristic.country,
       category: override?.category ?? heuristic.category,
+      affectsTraits: traitsCitedBy(cite.id),
       ...(override?.contentSelector
         ? { contentSelector: override.contentSelector }
         : {}),

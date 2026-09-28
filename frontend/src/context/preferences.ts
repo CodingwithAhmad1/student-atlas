@@ -20,6 +20,8 @@ export interface PreferencesContextValue {
   overlayLoading: boolean;
   /** Set when the nationality content failed to load (e.g. offline). */
   overlayError: string | null;
+  /** The chosen nationality has no guide content yet; pages show the base rules only. */
+  nationalityUnsupported: boolean;
   reset: () => void;
 }
 

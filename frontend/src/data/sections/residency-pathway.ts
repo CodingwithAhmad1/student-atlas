@@ -277,6 +277,7 @@ export const residencyPathway: Section = {
           country: "UK",
           blocks: [
             {
+              id: "uk-cit-intro",
               block: {
                 type: "paragraph",
                 text: "British citizenship through naturalisation requires: [CITE: gov.uk/apply-citizenship-indefinite-leave-to-remain]",
@@ -315,6 +316,7 @@ export const residencyPathway: Section = {
           country: "AU",
           blocks: [
             {
+              id: "au-cit-intro",
               block: {
                 type: "paragraph",
                 text: "Australian citizenship by conferral (naturalisation) requires: [CITE: homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident]",

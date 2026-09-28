@@ -729,6 +729,7 @@ export const studentVisa: Section = {
           country: "UK",
           blocks: [
             {
+              id: "uk-arrival-intro",
               block: {
                 type: "heading",
                 level: 3,

@@ -20,9 +20,19 @@ sys.path.insert(0, str(HERE.parent))
 
 import alerts as review  # noqa: E402
 import server  # noqa: E402
+import traits as trait_table  # noqa: E402
 import tsscan  # noqa: E402
 
 REAL_APP = HERE.parent.parent
+
+TEST_TRAITS = {
+    "ukVisaNational": True, "usVwp": False, "usEntryRestriction": "none", "ukVisaBrake": "none", "auVisitorStream": "visitor600",
+    "auBiometricsRequired": False, "auHealthExamLikely": True, "ukDifferentialEvidence": False,
+    "ukTbTestRequired": True, "ukMajorityEnglish": False, "auEnglishExempt": False,
+    "usNationalityWorkVisas": [], "ukYouthMobility": "none", "auWorkingHoliday": "none",
+    "usVisaBulletinBacklog": "none", "usDiversityVisaEligible": True,
+    "dualNationalityAtHome": {"value": "unknown"}, "sanctionsRegime": "none",
+}
 server._auth_required = False  # stdio semantics; ctx is never touched
 CTX = None
 
@@ -95,12 +105,15 @@ class ContentToolTests(ScratchFrontend):
         registry_before = self.read("nationalities/registry.ts")
         countries_before = self.read("countries.ts")
 
-        out = server.create_nationality("Testland", "testland", "Testlandish", CTX, uses_uk_eta=True, uses_au_eta=True)
+        self.assertIn("Error", server.create_nationality("Testland", "testland", "Testlandish", "C", "{}", CTX))
+        out = server.create_nationality("Testland", "testland", "Testlandish", "C", json.dumps(TEST_TRAITS), CTX)
         self.assertIn("Created", out, out)
-        self.assertIn("Error", server.create_nationality("Testland", "testland", "Testlandish", CTX))
+        self.assertIn("testland: {", self.read("traits/nationality-traits.ts"))
+        self.assertIn('tier: "C"', self.read("nationalities/registry.ts"))
+        self.assertIn("Error", server.create_nationality("Testland", "testland", "Testlandish", "C", json.dumps(TEST_TRAITS), CTX))
 
         # Callouts: into an existing empty array, a populated one, and cross-cutting.
-        para = json.dumps([{"type": "paragraph", "text": 'Quote "test" and back\\slash — ok'}])
+        para = json.dumps([{"type": "paragraph", "text": 'Quote "test" and back\\slash — ok [CITE: gov.uk/uk-eta]'}])
         for args in (
             ("visit", "entry-requirement", "US", "us-entry-intro"),
             ("visit", "entry-requirement", "US", "us-entry-intro"),
@@ -111,21 +124,22 @@ class ContentToolTests(ScratchFrontend):
                 self.skipTest(f"anchor {args[3]} not in current content: {res}")
             self.assertIn("Added callout", res, res)
         self.assertIn("Error", server.add_callout("testland", "visit", "entry-requirement", "US", "nope-id", para, CTX))
-        legacy = json.dumps([{"id": "x", "block": {"type": "bullet-list", "items": ["a", 'b"c']}}])
+        legacy = json.dumps([{"id": "x", "block": {"type": "bullet-list", "items": ["a [CITE: gov.uk/uk-eta]", 'b"c']}}])
         self.assertIn("Added", server.add_callout("testland", "student", "overview", "UK", "uk-overview-kvlist", legacy, CTX))
 
         self.assertIn("Set", server.set_profile("testland", "visit", "how-to-apply", "US", 'touristVisaUsVwp["how-to-apply"]', CTX))
         self.assertIn("import { touristVisaUsVwp }", self.read("nationalities/testland.ts"))
-        self.assertIn("Removed", server.set_profile("testland", "visit", "how-to-apply", "UK", "", CTX))
+        self.assertIn("No profile", server.set_profile("testland", "visit", "how-to-apply", "UK", "", CTX))
 
         self.assertIn("Removed", server.remove_callout("testland", "visit", "entry-requirement", "US", "us-entry-intro", CTX, occurrence=2))
-        self.assertIn("Added", server.add_nationality_to_dropdown("Testland", CTX))
+        # create_nationality already added the dropdown entry.
         self.assertIn("already", server.add_nationality_to_dropdown("Testland", CTX))
 
         self.assert_typechecks()
 
         self.assertIn("Deleted", server.delete_nationality("testland", CTX))
         self.assertEqual(self.read("nationalities/registry.ts"), registry_before)
+        self.assertNotIn("testland", self.read("traits/nationality-traits.ts"))
         def names(src: str) -> list[str]:
             arr = tsscan.literal_after(src, "countries: string[] =")
             return [json.loads(src[s:e]) for s, e in tsscan.array_items(src, arr)]
@@ -142,11 +156,70 @@ class ContentToolTests(ScratchFrontend):
         self.assertIn('id: "example.gov/a"', self.read("citations.ts"))
         self.assert_typechecks()
 
-    def test_template_covers_every_subsection(self):
-        tpl = server.build_template("X", False, False, False)
-        for _, subs in server.section_structure():
-            for sub, _, _ in subs:
-                self.assertIn(f'"{sub}"', tpl)
+    def test_hyphenated_slug_rows_are_quoted_and_parse(self):
+        text = trait_table.add_row("south-testland", TEST_TRAITS, "2026-01-01")
+        self.assertTrue(text.startswith('  "south-testland": {'), text[:40])
+        src = trait_table.insert_row("export const nationalityTraits = {\n};\n", text)
+        self.assertIn("south-testland", trait_table.parse_rows(src))
+        self.assertNotIn("south-testland", trait_table.parse_rows(trait_table.remove_row(src, "south-testland")))
+
+    def test_presence_ignores_names_inside_longer_names(self):
+        self.assertFalse(trait_table._present("Papua New Guinea, Equatorial Guinea", "Guinea"))
+        self.assertTrue(trait_table._present("Guinea, Guinea Bissau", "Guinea"))
+        self.assertFalse(trait_table._present("Hong Kong (SAR of China)", "China"))
+        self.assertTrue(trait_table._present("Korea (North)", "North Korea"))
+
+    def test_trait_table_is_complete_and_parseable(self):
+        rows = trait_table.load_rows()
+        self.assertGreaterEqual(len(rows), 7)
+        for slug, row in rows.items():
+            self.assertEqual(sorted(row), sorted(trait_table.TRAIT_KEYS), slug)
+            for key, entry in row.items():
+                trait_table.validate_value(key, entry["value"])
+        # Every column source and every dual-nationality citation exists.
+        cites = self.read("citations.ts")
+        for key, src in trait_table.sources().items():
+            self.assertIn(f'"{src["citationId"]}"', cites, key)
+        for slug, row in rows.items():
+            dual = row["dualNationalityAtHome"]
+            if dual["value"] != "unknown":
+                self.assertIn(f'"{dual["citationId"]}"', cites, slug)
+
+    def test_set_trait_and_column_roundtrip(self):
+        before = self.read("traits/nationality-traits.ts")
+        self.assertIn("passed", trait_table.set_trait("uae", "ukTbTestRequired", True, "2026-01-02"))
+        self.assertTrue(trait_table.load_rows()["uae"]["ukTbTestRequired"]["value"])
+        with self.assertRaises(trait_table.TraitError):
+            trait_table.set_trait("uae", "auVisitorStream", "nope", "2026-01-02")
+        with self.assertRaises(trait_table.TraitError):
+            trait_table.render_line("dualNationalityAtHome", "allowed", "2026-01-02", citation_id="")
+        self.assertIn("uaecabinet", trait_table.render_line("dualNationalityAtHome", "allowed", "2026-01-02", citation_id="uaecabinet.ae/en/details/federal-laws"))
+        out = trait_table.set_trait_column("ukTbTestRequired", {"uae": False, "pakistan": True}, "2026-01-03")
+        self.assertIn("passed", out, out)
+        self.assertIn('verifiedAt: "2026-01-03"', self.read("traits/trait-sources.ts"))
+        self.assertIn("uae", trait_table.coverage("uae"))
+        self.assertEqual(trait_table.load_rows()["uae"]["ukTbTestRequired"]["verifiedAt"], "2026-01-03")
+        # A value the compiler rejects is rolled back.
+        path = self.data / "traits" / "nationality-traits.ts"
+        rows = trait_table.load_rows()
+        broken = trait_table._replace_line(path.read_text(), rows["uae"]["usVwp"]["line"], '    usVwp: { value: "maybe", verifiedAt: "2026-01-01" },')
+        self.assertIn("rolled back", trait_table._write_checked({path: broken}, "test"))
+        self.assertFalse(rows["uae"]["usVwp"]["value"] == "maybe")
+        # Rows survive a remove/insert cycle untouched.
+        src = path.read_text()
+        removed = trait_table.remove_row(src, "china")
+        self.assertNotIn("  china: {", removed)
+        self.assertIn("  china: {", trait_table.insert_row(removed, src[src.index("  china: {"):src.index("  },", src.index("  china: {")) + 4] + "\n"))
+        path.write_text(before)
+
+    def test_check_column_offline(self):
+        registry = [("uae", "United Arab Emirates"), ("pakistan", "Pakistan"), ("india", "India")]
+        page = "Visa national list: Bangladesh, India, Nigeria."
+        out = trait_table.check_column("ukVisaNational", registry, fetch=lambda url: page)
+        self.assertIn("pakistan: true → false", out)
+        self.assertIn("Unchanged (2)", out)
+        out = trait_table.check_column("usVisaBulletinBacklog", registry, fetch=lambda url: page)
+        self.assertIn("manual column", out)
 
 
 class ReviewTests(ScratchFrontend):

@@ -1,0 +1,25 @@
+{
+  "id": "20260928-0647--immi-homeaffairs-gov-au-visas-getting-a-visa-visa-listing-employer-nomination-scheme-186",
+  "kind": "change",
+  "sourceId": "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Department of Home Affairs — Employer Nomination Scheme (Subclass 186)",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186",
+  "country": "AU",
+  "category": "residency",
+  "detectedAt": "2026-09-28T06:47:35.584Z",
+  "updatedAt": "2026-09-28T06:47:35.584Z",
+  "oldHash": "40025ea3fd7bd9c9131e1f1ca5ed17a2fc30fe354d5a3d2b10d998017563a64e",
+  "newHash": "cc2174e52f7a3df32d86e5bf68fa60e50660d0a6640a688bb5c1a1eae64c413d",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\tcurrent\n@@ -1,4 +1,8 @@\n Title: Employer Nomination Scheme (subclass 186) visa\n Description: For skilled workers who are nominated by an employer to live and work in Australia.\n Alert: Subclass 186\n-Skilled visa income thresholds have increased in line with changes to annual Average Weekly Ordinary Time Earnings. For more information see Annual indexation of skilled visa income thresholds from 1 July 2026.We prioritise visa applications for the Employer Nomination Scheme (subclass 186) visa under Ministerial Direction 122. We are currently processing visa applications that were lodged in:August 2024 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or Australia's law enforcement and defence interests.February 2025 – Visa applications from applicants who were in Australia at the time they lodged their application.July 2024 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at anytime.July 2024 – All other visa applications from applicants who were outside Australia at the time they lodged their application.Please note. As we transition to the new priorities under Ministerial Direction 122, processing timeframes may fluctuate. Some published timeframes may temporarily move backwards while applications are reprioritised.\n\\ No newline at end of file\n+Skilled visa income thresholds have increased in line with changes to annual Average Weekly Ordinary Time Earnings. For more information see Annual indexation of skilled visa income thresholds from 1 July 2026.We prioritise visa applications for the Employer Nomination Scheme (subclass 186) visa under Ministerial Direction 122. We are currently processing visa applications that were lodged in:August 2024 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or Australia's law enforcement and defence interests.February 2025 – Visa applications from applicants who were in Australia at the time they lodged their application.July 2024 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at anytime.July 2024 – All other visa applications from applicants who were outside Australia at the time they lodged their application.Please note. As we transition to the new priorities under Ministerial Direction 122, processing timeframes may fluctuate. Some published timeframes may temporarily move backwards while applications are reprioritised.\n+Employer Nomination Scheme visa\n+This visa lets skilled workers, who are nominated by their employer, live and work in Australia permanently.\n+You must have the necessary skills for the job You must be nominated by an Australian employer You must meet our health and character requirements\n+Warning text here. Anchor with information here\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": "noise",
+  "summary": "The watcher now reads the whole page; no change on the page itself.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Expected after the watcher change that reads Home Affairs pages from their embedded page data: the old baseline held only a fragment of the page. Checked that no text or figure was removed; the full text becomes the new baseline.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-28T06:48:51.614Z",
+  "error": null
+}

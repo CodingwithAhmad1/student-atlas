@@ -58,6 +58,12 @@ export type Profile = {
 export interface CalloutOverlay {
   afterBlockId: string;
   blocks: ContentBlock[];
+  /**
+   * Uncited practical advice (decision D2 in EXPANSION-PLAN.md). Rendered with
+   * an asterisk and a small-print note; may not contain numbers, fees, dates
+   * or durations, and may not carry [CITE] markers — check-content enforces it.
+   */
+  practical?: boolean;
 }
 
 export interface CountryOverlay {
@@ -89,6 +95,16 @@ export interface NationalityMeta {
   slug: string;
   /** Adjective for headings, e.g. "Pakistani" → "For Pakistani applicants". */
   label: string;
+  /**
+   * How much hand-written content the nationality gets (EXPANSION-PLAN.md §6).
+   * Trait coverage is identical across tiers.
+   */
+  tier: "A" | "B" | "C";
+  /** ISO date the nationality's traits and hand-written callouts were last reviewed. */
+  reviewedAt: string;
+  /** Set when the nationality is one of the destinations: its own column uses domestic profiles. */
+  destination?: Country;
+  /** Hand-written overlay (extras on top of the trait-generated content). */
   load: () => Promise<{ default: NationalityOverlay }>;
 }
 
@@ -97,5 +113,17 @@ export interface NationalityMeta {
 export interface ResolvedBlock {
   block: ContentBlock;
   isCallout?: boolean;
+  /** Uncited practical advice (see CalloutOverlay.practical). */
+  practical?: boolean;
   nationalityLabel?: string;
 }
+
+/** A callout block as shown in the nationality box. */
+export interface CalloutBlock {
+  block: ContentBlock;
+  practical?: boolean;
+}
+
+/** Small-print note shown once under any box containing a practical callout. */
+export const PRACTICAL_NOTE =
+  "* Practical guidance from experience, not from an official source.";

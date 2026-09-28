@@ -1,0 +1,1289 @@
+Currency and Exchanges
+guidelines for individuals
+2026-01-07
+Currency and Exchanges guidelines for individuals Disclaimer
+2 of 35 19/2021
+Financial Surveillance Department
+Version control sheet for the Currency and Exchanges guidelines for individuals
+Version number Issue date Circular number
+1.0 2016-07-29 7-2016
+1.1 2016-11-03 9-2016
+1.2 2017-01-03 2-2017
+1.3 2017-03-01 7-2017
+1.4 2017-08-25 10-2017
+1.5 2017-08-30 11-2017
+1.6 2017-11-17 13-2017
+1.7 2018-02-02 2-2018
+1.8 2018-05-07 8-2018
+1.9 2018-05-28 10-2018
+1.10 2018-06-22 11-2018
+1.11 2018-08-02 12-2018
+1.12 2018-09-03 14-2018
+1.13 2018-10-11 15-2018
+1.14 2018-10-31 16-2018
+1.15 2019-02-08 2-2019
+1.16 2019-02-08 3-2019
+1.17 2019-03-05 4-2019
+1.18 2019-03-05 5-2019
+1.19 2019-04-18 7-2019 and 9-2019
+1.20 2019-07-02 13-2019
+1.21 2019-07-18 15-2019
+1.22 2019-11-12 23-2019 and 24-2019
+1.23 2020-06-10 4-2020
+1.24 2020-07-10 5-2020
+1.25 2020-08-13 6-2020
+1.26 2020-10-02 11-2020
+1.27 2020-10-08 12-2020
+1.28 2020-10-14 13-2020
+1.29 2020-12-14 19-2020
+1.30 2021-01-04 1-2021
+1.31 2021-01-29 2-2021
+1.32 2021-02-19 4-2021
+1.33 2021-02-26 6-2021
+1.34 2021-05-21 8-2021, 9-2021, 10-2021
+1.35 2021-05-21 11-2021
+1.36 2021-05-25 12-2021
+1.37 2021-06-15 13-2021, 14-2021, 15-2021
+1.38 2021-06-29 16-2021
+1.39 2021-07-08 17-2021
+1.40 2021-07-30 18-2021
+1.41 2021-08-20 19-2021
+Currency and Exchanges guidelines for individuals Disclaimer
+3 of 35 1/2026
+Version number Issue date Circular number
+1.42 2021-10-20 20-2021
+1.43 2021-02-22 1-2022
+1.44 2022-04-05 14-2022
+1.45 2022-04-08 15-2022
+1.46 2022-04-25 16-2022
+1.47 2022-09-28 22-2022
+1.48 2022-11-02 23-2022
+1.49 2023-02-03 1-2023
+1.50 2023-04-04 2-2023
+1.51 2023-05-24 3-2023, 5-2023, 6-2023
+1.52 2023-10-13 7-2023, 8-2023
+1.53 2024-01-26 1-2024
+1.54 2024-04-19 3-2024
+1.55 2024-04-24 4-2024
+1.56 2024-05-07 5-2024
+1.57 2024-05-07 6-2024
+1.58 2024-06-20 7-2024
+1.59 2024-07-12 8-2024
+1.60 2024-08-05 9-2024
+1.61 2024-09-12 10-2024
+1.62 2024-10-04 11-2024
+1.63 2024-10-16 12-2024
+1.64 2025-03-17 5-2025
+1.65 2025-04-15 6-2025
+1.66 2025-04-25 7-2025
+1.67 2025-05-16 8-2025
+1.68 2025-10-28 16-2025
+1.69 2026-01-07 1-2026
+Currency and Exchanges guidelines for individuals Disclaimer
+4 of 35 20/2021
+Disclaimer
+The Currency and Exchanges guidelines for individuals (guidelines) are issued to
+assist individuals and other interested parties by providing a general understanding of
+the exchange control system in the Republic of South Africa. It does not have any
+statutory force nor does it replace or supersede the Exchange Control Regulations
+(Regulations) promulgated in terms of section 9 of the Currency and Exchanges Act,
+1933 (Act No. 9 of 1933) or any permission, exemption or condition granted or attached
+to certain transactions in terms of the Regulations.
+The arrangements set out in the guidelines should in no manner be construed as
+absolving individuals from their duties and obligations under any other law, including
+but not limited to the Prevention of Organised Crime Act, 1998 (Act No. 121 of 1998),
+the Financial Intelligence Centre Act, 2001 (Act No. 38 of 2001) and the Protection of
+Constitutional Democracy against Terrorist and Related Activities Act, 2004
+(Act No. 33 of 2004).
+The Financial Surveillance Department of the South African Reserve Bank (Financial
+Surveillance Department) views contraventions of the Exchange Control Regulations,
+as well as any actions to circumvent the permissions and conditions contained in the
+Currency and Exchanges Manual for Authorised Dealers in foreign exchange
+(Authorised Dealer Manual) and the Currency and Exchanges Manual for Authorised
+Dealers in foreign exchange with limited authority (ADLA Manual) in a serious light.
+The Exchange Control Regulations, Orders and Rules, Authorised Dealer Manual and
+the ADLA Manual are available on the South African Reserve Bank website:
+www.resbank.co.za.
+---oOo---
+Currency and Exchanges guidelines for individuals Table of contents
+5 of 35 6/2023
+Table of contents
+Disclaimer ....................................................................................................................................... 4
+Definitions ....................................................................................................................................... 6
+1. Introduction ..................................................................................................................... 10
+2. Authorised entities........................................................................................................... 10
+2.1 Authorised Dealers.......................................................................................................... 10
+2.2 Authorised Dealer in foreign exchange with limited authority ........................................... 11
+3. South African resident individuals ................................................................................... 12
+3.1 Single discretionary allowance ........................................................................................ 13
+3.2 Krugerrand coins ............................................................................................................. 13
+3.3 Travel allowance ............................................................................................................. 13
+3.4 Study allowances ............................................................................................................ 14
+3.5 Residents temporarily abroad.......................................................................................... 15
+3.6 Foreign capital allowance ................................................................................................ 16
+3.7 Foreign currency holdings and other foreign assets held by resident individuals ............. 17
+3.8 Intellectual property ......................................................................................................... 19
+3.9 Import payments ............................................................................................................. 20
+3.9.1 Import payments via credit and/or debit cards ................................................................. 20
+3.9.2 Import payments via an Authorised Dealer in foreign exchange ...................................... 20
+3.9.3 Philatelic imports and numismatic imports ....................................................................... 21
+3.10 Miscellaneous commercial payments and receipts .......................................................... 21
+3.11 Securities control............................................................................................................. 22
+3.12 Legacies and distributions ............................................................................................... 23
+3.12.1 Legacies and distributions from resident estates ............................................................. 23
+3.12.2 Gifts and/or donations from non-residents ....................................................................... 23
+3.12.3 Foreign inheritance and legacies from bona fide non-resident estate .............................. 23
+3.12.4 Foreign inheritance and legacies from South African estates with foreign assets ............ 23
+3.13 Export of goods ............................................................................................................... 24
+3.14 Residents borrowing abroad ........................................................................................... 25
+4. Private individuals who cease to be residents for tax purposes in South Africa ............... 27
+5. Foreign nationals............................................................................................................. 29
+6. Immigrants ...................................................................................................................... 31
+7. The cross-border foreign exchange transaction reporting requirements .......................... 32
+7.1 Integrated form................................................................................................................ 33
+8. Transactions with Common Monetary Area residents ..................................................... 34
+8.1 Introduction ..................................................................................................................... 34
+8.2 General ........................................................................................................................... 34
+8.3 Travel .............................................................................................................................. 34
+8.4 Export of motor vehicles .................................................................................................. 34
+---oOo---
+Currency and Exchanges guidelines for individuals Definitions
+6 of 35 20/2021
+Definitions
+In the Currency and Exchanges guidelines for individuals, unless the context indicates
+otherwise:
+ADLA means an Authorised Dealer in foreign exchange with limited authority, including
+Bureaux de Change, independent money transfer operators and value transfer service
+providers, who are authorised by the Financial Surveillance Department to deal in foreign
+exchange transactions as determined by the Financial Surveillance Department.
+ADLA Manual means the Currency and Exchanges Manual for ADLAs issued by the
+Financial Surveillance Department to ADLAs under the powers delegated by the Minister of
+Finance. The ADLA Manual contains the permissions, conditions and limits applicable to
+the transactions in foreign exchange that may be undertaken by ADLAs and/or on behalf of
+their clients, as well as details of related administrative responsibilities.
+Authorised Dealer means, in relation to any transaction in respect of gold, a person
+authorised by the Treasury to deal in gold and, in relation to any transaction in respect of
+foreign exchange, a person authorised by the Treasury to deal in foreign exchange.
+Authorised Dealer Manual means the Currency and Exchanges Manual for Authorised
+Dealers issued by the Financial Surveillance Department to Authorised Dealers under the
+powers delegated by the Minister of Finance. The Authorised Dealer Manual contains the
+permissions, conditions and limits applicable to the transactions in foreign exchange that
+may be undertaken by Authorised Dealers and/or on behalf of their clients, as well as details
+of related administrative responsibilities.
+CMA means the Common Monetary Area, which consists of Lesotho, Namibia, South Africa
+and eSwatini.
+Cross-border foreign exchange transaction means the purchase or sale of foreign
+exchange with or for Rand.
+Customs means Customs and Excise, a division of the South African Revenue Service.
+Financial assistance includes the lending of currency, the granting of credit, the taking up
+of securities, the conclusion of a hire purchase or a lease, the financing of sales or stocks,
+discounting, factoring, the guaranteeing of acceptance credits, the guaranteeing or
+acceptance of any obligation, a suretyship, a buy-back and a leaseback, but excluding:
+(i) the granting of credit by a seller in respect of any commercial transaction directly
+involving the passing of ownership of the goods sold from seller to purchaser; and
+(ii) the granting of credit solely in respect of the payment for services rendered.
+Financial Surveillance Department means the Financial Surveillance Department of the
+South African Reserve Bank (responsible for the administration of exchange control on
+behalf of the Treasury).
+Foreign bank account means a f oreign c urrency b a n k account conducted by
+residents with a bank outside the CMA in terms of the provisions of the Authorised Dealer
+Currency and Exchanges guidelines for individuals Definitions
+7 of 35 20/2021
+Manual or a specific authority granted by the Financial Surveillance Department.
+Foreign currency means any currency other than currency that is legal tender in South
+Africa, but excludes the currencies of Lesotho, Namibia and eSwatini. Foreign currency is
+deemed to include any bill of exchange, letter of credit, money order, postal order,
+promissory note, travellers’ cheque or any other instrument of foreign exchange.
+Foreign currency account means an account conducted by residents (natural persons
+and institutional investors only) and non-residents in the nostro-administration of
+Authorised Dealers in terms of the provisions of the Authorised Dealer Manual or a specific
+authority granted by the Financial Surveillance Department.
+Foreign direct investment means the objective of obtaining a lasting interest by a resident
+entity in one economy (direct investor) in an entity resident in an economy other than that of
+the investor (direct investment enterprise). The lasting interest implies the existence of a long-
+term relationship between the direct investor and the direct investment enterprise, and a
+significant degree of influence on the management of the enterprise. A direct investment
+enterprise is defined as ‘an incorporated or unincorporated enterprise in which a foreign
+investor owns 10 per cent or more of the ordinary shares or voting power of an incorporated
+enterprise or the equivalent of an unincorporated enterprise’.
+Foreign nationals mean natural persons from countries outside the CMA who are
+temporarily resident in South Africa, excluding those on holiday or business visits.
+Gold as referred to in Regulations 2 and 5 includes all forms of gold other than wrought
+gold, as well as ingots, amalgam, concentrates or salts of gold buttons and trade scrap.
+Gold as referred to in Regulation 3 includes wrought gold and gold coins.
+Immigrants mean natural persons who immigrated from countries outside the CMA with
+the firm intention of taking up or who have taken up permanent residence in South Africa.
+Integrated form means the electronic or paper format of a contract between an Authorised
+Dealer or ADLA and its client resulting in a balance-of-payments reporting obligation. It
+includes a declaration to the effect that the information provided is true and correct.
+ITAC means International Trade Administration Commission of South Africa established in
+terms of section 7 of the International Trade Administration Act, 2002 (Act No. 71 of 2002).
+MRN means the Movement Reference Number issued by Customs once goods have been
+cleared.
+Non-resident means a person (i.e. a natural person or legal entity) whose normal place of
+residence, domicile or registration is outside the CMA.
+Non-resident Rand means Rand to or from a non-resident account that may be deemed, in
+certain circumstances permissible elsewhere in the Authorised Dealer Manual, as an
+acceptable payment mechanism in lieu of foreign currency. It should be noted that non-
+resident Rand cannot in any manner be defined as foreign currency. It is purely Rand held
+in a non-resident account or Rand received from a non-resident source.
+Non-resident Rand account means the Rand account of a non-resident conducted in the
+Currency and Exchanges Guidelines for Individuals
+8 of 35 5/2025
+books of an Authorised Dealer.
+Passenger ticket means a ticket issued in respect of travel arrangements, inclusive of
+electronically issued tickets (e-tickets).
+Rand means the monetary unit of South Africa as defined in section 15 of the South African
+Reserve Bank Act, 1989 (Act No. 90 of 1989).
+Regulations mean the Exchange Control Regulations, 1961 as promulgated by
+Government Notice R.1111 of 1961-12-01, as amended from time to time.
+Related party means a party to a transaction that has a direct or indirect interest in the other
+party and has the ability to control the other party or exercise significant influence over the
+other party in making financial and operating decisions or both parties are under common
+control. For the purpose of the Authorised Dealer Manual, this includes transactions between
+parties that belong to the same group of companies such as parent, subsidiary, fellow
+subsidiary and/or an associate company.
+Reporting System means the electronic FinSurv Reporting System used to transmit data
+to the Financial Surveillance Department in an agreed format.
+Resident means any person (i.e. a natural person or legal entity) who has taken up
+permanent residence, is domiciled or is registered in South Africa.
+Resident temporarily abroad means any resident who has departed from South Africa to
+any country outside the CMA with no intention of taking up permanent residence in another
+country, but excluding those residents who are abroad on holiday or business travel.
+Restricted Authorised Dealer means a person authorised by the Financial Surveillance
+Department to deal in foreign exchange utilising a locally issued credit card for permissible
+cross border transactions.
+SADC means the Southern African Development Community consisting of Angola,
+Botswana, Democratic Republic of the Congo, Lesotho, Madagascar, Malawi, Mauritius,
+Mocambique, Namibia, Seychelles, South Africa, eSwatini, Union of the Comoros, United
+Republic of Tanzania, Zambia and Zimbabwe.
+SARS means the South African Revenue Service.
+SARS Customs Declaration comprises the following set of documents:
+(a) SARS Customs Declaration form, which is the form used by Customs to verify
+importers or exporters’ self-assessment of goods declared for a Customs procedure.
+The customs procedure is defined by the Procedure Category Code (A to L) in
+conjunction with the Customs Requested Procedure Code (RPC) on the declaration;
+and
+(b) SARS Customs Supporting documentation, which is the commercial documents
+(e.g. suppliers invoice, regulatory permit, transport document, currency
+Currency and Exchanges guidelines for individuals Definitions
+9 of 35 20/2021
+conversion/duty calculation worksheet) upon which the SARS Customs Declaration
+Form is completed; and
+(c) SARS Customs Status Notification, which is the response issued by Customs
+(Electronic Data Interchange (EDI) Response Notification/Customs Release
+Notification) specifying the status or decision of Customs in respect of goods
+declared.
+Single discretionary allowance means the R1 million allowance available to residents
+(natural persons) 18 years and older per calendar year.
+Securities include quoted stocks, shares, warrants, debentures and rights, as well as
+unquoted shares in public companies, shares in private companies, Government, Municipal
+and Public utility stocks, non-resident owned mortgage bonds and/or participations in
+mortgage bonds and short-term debt instruments. The terms scrip and share certificates
+include any temporary or substitute documents of title such as Letters of Allocation,
+Warrants, Letters of Allotments, Orphan Certificates, Balance Receipts and any other
+receipts for scrip.
+South Africa means the Republic of South Africa.
+Treasury means, in relation to any matter contemplated in the Regulations, the Minister of
+Finance or an officer in National Treasury who, by virtue of the division of work in National
+Treasury, deals with the matter on the authority of the Minister of Finance.
+---oOo---
+Currency and Exchanges guidelines for individuals Definitions
+10 of 35 7/2024
+1. Introduction
+This document provides an overview of permissible foreign exchange related
+transactions and the applicable requirements for individuals including private
+individuals who have ceased to be residents for tax purposes in South Africa,
+immigrants, foreign nationals and CMA residents when transacting with Authorised
+Dealers or with ADLAs within the parameters of their respective appointment letters.
+Enquiries must be directed to an Authorised Dealer or, where applicable, an ADLA.
+Any request to the Financial Surveillance Department must be channelled through
+an Authorised Dealer or ADLA. Full details applicable to the request must be provided
+to the Authorised Dealer or ADLA who will place a comprehensive request before the
+Financial Surveillance Department.
+2. Authorised entities
+2.1 Authorised Dealers
+The offices in South Africa of the under mentioned banks are authorised to act, for
+the purposes of the Exchange Control Regulations, as Authorised Dealers:
+Name of entity - Authorised Dealer
+ABSA Bank Limited
+Access Bank (South Africa) Limited
+Albaraka Bank Limited
+Bank of China Johannesburg Branch
+Bank of Communications Co. Limited Johannesburg Branch
+Bank of Taiwan South Africa Branch
+Bidvest Bank Limited
+Capitec Bank Limited
+China Construction Bank, Johannesburg Branch
+Citibank, N.A., South Africa
+Deutsche Bank AG, Johannesburg Branch
+Discovery Bank Limited
+FirstRand Bank Limited
+Goldman Sachs International Bank, Johannesburg Branch
+Habib Overseas Bank Limited
+HBZ Bank Limited
+HSBC Bank plc - Johannesburg Branch
+Investec Bank Limited
+JPMorgan Chase Bank (Johannesburg Branch)
+Nedbank Limited
+Currency and Exchanges guidelines for individuals Definitions
+11 of 35 16/2025
+Sasfin Bank Limited
+Standard Chartered Bank – Johannesburg Branch
+State Bank of India
+The Standard Bank of South Africa Limited
+Restricted Authorised Dealer
+The office in South Africa of the under-mentioned bank is authorised to act, for the
+purposes of the Regulations, as a Restricted Authorised Dealer in respect of
+permissible credit card transactions per the quoted sections of the Currency and
+Exchanges Manual for Authorised Dealers:
+Name of entity – Restricted Authorised Dealer
+African Bank Limited – Sections B.4(B) and B.16
+Bank Zero Mutual Bank – Sections B.4(B) and B.16
+OM Bank Limited – Sections B.4(B) and B.16
+Tyme Bank Limited – Sections B.4(B) and B.16
+2.2 Authorised Dealer in foreign exchange with limited authority
+The offices in South Africa of the entities listed hereunder are authorised to
+act, for the purposes of the Regulations, as ADLAs. The ADLAs, dependent on their
+category of appointment, are only authorised to conclude travel related transactions
+and certain specified transactions under the single discretionary allowance:
+Name of entity – ADLA Category of
+appointment
+Border Forex (Pty) Limited Two
+Forex World (Pty) Limited Two
+Global Foreign Exchange (Pty) Limited Two
+Home Remitt (Pty) Limited Two
+Imali Express (Pty) Limited Two
+Inter Africa Bureau de Change (Pty) Limited Two
+Interchange RSA (Pty) Limited Two
+Mukuru Africa (Pty) Limited Two
+NEC Money (Pty) Limited Two
+Sikhona Forex RF (Pty) Limited trading as Ria Money
+Transfer Two
+Tourvest Financial Services (Pty) Limited trading as
+Travelex Two
+Travel Forex (Pty) Limited trading as Travelex Two
+Access Forex (Pty) Limited Three (MTO)
+Clicksendnow (Pty) Limited Three (MTO)
+Currency and Exchanges Guidelines for Individuals
+12 of 35 8/2025
+Name of entity – ADLA Category of
+appointment
+eZi Remit (Pty) Limited Three (MTO)
+Kastelo Africa (Pty) Limited Three (MTO)
+Kawena Exchange (Pty) Limited Three (VTSP)
+Sasai Fintech (Pty) Limited Three (MTO)
+SendHome (Pty) Limited Three (MTO)
+Shop2Shop Money Transfer (Pty) Limited Three (MTO)
+Shoprite Money Transfers (Pty) Limited trading as
+ShopriteSend Three (MTO)
+Teeenaar (Pty) Limited Three (MTO)
+Terra Payment Services South Africa (RF) (Pty) Limited Three (MTO)
+Tayo Pay (Pty) Limited Three (MTO)
+WorldRemit South Africa (Pty) Limited Three (MTO)
+Hello Paisa (Pty) Limited Four
+Mama Money (Pty) Limited Four
+Southeast Exchange Company (South Africa) (Pty)
+Limited Four
+Category One : Travel related transactions only.
+Category Two : Travel related transactions and certain prescribed single
+discretionary allowance of R1 million per applicant within the
+calendar year and offer money remittance services in
+partnership with external money transfer operators.
+Category Three: Independent money transfer operator or value transfer service
+provider, facilitating transactions not exceeding R5 000 per
+transaction per day within a limit of R25 000 per applicant per
+calendar month.
+Category Four : A combination of the services provided by Category Two and
+Category Three ADLAs.
+3. South African resident individuals
+The foreign exchange restrictions on South African resident individuals have been
+liberalised with the intention of reducing the administrative burden for individuals
+undertaking foreign exchange transactions.
+Individuals are permitted to conduct a foreign currency account with an Authorised
+Dealer and/or a foreign bank account for the following purposes:
+(a) for travel as authorised (see section 3.3 (h));
+(b) foreign investment (see sections 3.1 and 3.6);
+(c) legitimate foreign earned income (see section 3.6.4); and
+Currency and Exchanges guidelines for individuals Definitions
+13 of 35 1/2026
+(d) foreign inheritance (see section 3.10).
+The following dispensations listed hereunder are available to individuals:
+3.1 Single discretionary allowance
+3.1.1 A single discretionary allowance within a limit of R1 million per calendar year is
+available to all South African residents who are 18 years and older, and in possession
+of a valid green bar-coded South African identity document or smart identity
+document card. This dispensation may be used for any legitimate purpose (including
+for investment purposes abroad as well as the sending of gift parcels in lieu of cash
+excluding gold and jewellery) at the discretion of the individual without any
+documentary evidence having to be produced to the Authorised Dealer, except for
+travel purposes outside the CMA, where certain prescribed documentation has to be
+produced. Any amount in respect of current transfers above the prescribed R1 million
+or any specific limit such as in 3.3.1 below, will be subject to verification by the
+Financial Surveillance Department and be approved upon submission of proof of the
+bona fide nature and legitimacy of the transfer. For additional transfers of a capital
+nature, a SARS TCS Pin is still required.
+3.1.2 Foreign currency in the form of foreign notes may only be accorded by an Authorised
+Dealer or ADLA for travel purposes.
+3.1.3 Resident importers making import payments under this dispensation must have a
+valid customs client number (CCN) issued by Customs. The registration code number
+70707070 may be used only in cases where the value of goods imported is less than
+R50 000 per consignment, subject to the limitation of three such consignments per
+calendar year. The attention of importers is drawn to the requirement that the
+consignment for which payment has been made from South Africa must be received
+within four months from the date of payment. Should such consignment not be
+received within the four month period, the importer must within 14 days of the expiry
+of such period advise the Authorised Dealer through whom foreign currency was
+purchased.
+3.1.4 Individuals should note that when effecting payments for current account transactions
+such payments may be made against the presentation to an Authorised Dealer of
+documentary evidence in terms of subsection 3.7, while any other legitimate payment
+may also be effected in terms of subsection 3.8 below. Such payments will not be
+deducted from an individual’s single discretionary allowance limit of R1 million per
+calendar year.
+3.2 Krugerrand coins
+In addition to the single discretionary allowance, residents may export Krugerrand
+coins or the equivalent in fractional Krugerrand coins up to an amount of R30 000 as
+gifts to non-residents, subject to the completion of the prescribed SARS Customs
+Declaration.
+3.3 Travel allowance
+3.3.1 Individuals may also use the single discretionary allowance to avail of a travel
+Currency and Exchanges guidelines for individuals
+14 of 35 1/2022
+allowance through an Authorised Dealer or ADLA subject to the following conditions:
+(a) individuals, who are under the age of 18 years may not avail of a single
+discretionary allowance as outlined in subsection 3.1 above, but may avail of
+a travel allowance not exceeding an amount of R200 000 per calendar year;
+(b) individuals may not avail of a travel allowance more than 60 days prior to their
+departure and must present a valid passenger ticket when travelling by air,
+bus, rail or ship;
+(c) foreign currency may be availed of in foreign currency notes or traveller’s
+cheques. The travel allowance may be transferred abroad to the traveller’s
+own bank account and/or spouse accounts, but not to the account of a third
+party. Minors travelling with parents, may have their travel allowances
+transferred to their parents’ bank account abroad;
+(d) bank credit and/or debit cards may also be used to avail up to 100 per cent of
+the authorised prescribed or remaining allowance;
+(e) in the event of any contravention of the provisions of the Regulations a
+cardholder may be deprived of the use of all cards apart from being liable to
+prosecution;
+(f) any unused foreign currency must be resold within 30 days to an Authorised
+Dealer or ADLA upon return to South Africa. However, business travellers
+going abroad on recurring business trips, where the next business trip is to
+commence within 90 days after returning from a previous business trip, any
+unutilised foreign currency may be retained by the traveller for use during
+subsequent business trips;
+(g) up to R25 000 in Rand notes, per person, may be taken in addition to the travel
+allowance, when proceeding on visits outside the CMA, to meet the travellers’
+immediate needs on return to South Africa;
+(h) a travel allowance may only be accorded by an Authorised Dealer or ADLA to
+a travellers abroad, without returning to South Africa, provided that the annual
+limit is not exceeded; and
+(i) foreign currency may be purchased by foreign diplomats, accredited foreign
+diplomatic staff as well as students with a valid student identity card from other
+CMA member countries whilst in South Africa. CMA residents, in South Africa,
+may be accorded foreign currency to cover unforeseen incidental costs whilst
+in transit, subject to an Authorised Dealer or ADLA viewing a passenger ticket
+confirming a destination outside the CMA.
+3.4 Study allowances
+3.4.1 Individuals proceeding abroad for study purposes may avail of the R1 million single
+discretionary allowance. Spouses accompanying students also qualify for the
+aforementioned facility.
+Currency and Exchanges guidelines for individuals
+15 of 35 1/2022
+Students may also export any household and personal effects, including jewellery
+(but excluding motor vehicles), up to a value of R200 000 per student under cover of
+the prescribed SARS Customs Declaration.
+In addition to the foregoing, Authorised Dealers may transfer directly to the institution
+concerned the relative tuition and academic fees for the academic year, against
+documentary evidence confirming the amount involved.
+Students under the age of 18 years also qualify for a study allowance to pay for costs
+associated with their studies abroad as well as a travel allowance of R200 000 per
+calendar year.
+To avail of this dispensation, residents must produce to an Authorised Dealer:
+(a) documentary evidence from the institutions concerned confirming that the
+student has been enrolled for a course for the period claimed; and
+(b) evidence of the tuition and academic fees in the form of a letter or prospectus
+from the institution to be attended.
+3.4.2 Should a student require a continuation of the above-mentioned transfers during a
+period following the initial 12 months, fresh documentary evidence complying with
+the requirements of 3.4.1 (a) and (b) above must be submitted to an Authorised
+Dealer.
+3.5 Residents temporarily abroad
+3.5.1 A resident proceeding abroad temporarily, may on departure and annually
+thereafter, through an Authorised Dealer and/or ADLA, avail of the R1 million single
+discretionary allowance and the R10 million foreign capital allowance without
+returning to South Africa (see subsection 3.6 below). The green barcoded identity
+document or Smart identity document card must be presented to an Authorised
+Dealer prior to the resident travelling temporarily abroad. In addition, with regard to
+the R10 million foreign capital allowance, a TCS PIN verifying the taxpayer’s tax
+compliance status obtained via SARS eFiling must be presented to an Authorised
+Dealer prior to effecting any transfers. Authorised Dealers must ensure that the
+amount to be transferred does not exceed the amount approved by SARS.
+Authorised Dealers should note that the TCS PIN can expire and should the
+Authorised Dealers find that the TCS PIN has indeed expired, then the Authorised
+Dealer must insist on a new TCS PIN verifying the taxpayer’s tax compliance status.
+Where residents temporarily abroad make use of a general or special power of
+attorney to facilitate future transfers, a certified copy of the valid green barcoded
+identity document or Smart ID card must accompany the power of attorney.
+The annual limit of the R1 million single discretionary allowance and the R10 million
+foreign capital allowance dispensations may not be exceeded without prior Financial
+Surveillance Department approval.
+Currency and Exchanges guidelines for individuals
+16 of 35 6/2023
+Residents temporarily abroad may use their local debit and/or credit cards whilst
+temporarily abroad within the overall single discretionary allowance limit of R1 million
+per applicant during a calendar year.
+3.5.2 Residents temporarily abroad may further receive pension and retirement annuity
+income but no other foreign currency may be availed of without the specific approval
+of the Financial Surveillance Department.
+3.5.3 Any household and personal effects, motor vehicles, caravans, trailers,
+motorcycles, stamps and coins (excluding coins that are legal tender in South Africa)
+per family unit or single person, where the insurance value does not exceed
+R1 million may be exported against the prescribed SARS Customs Declaration.
+3.5.4 Farming implements, where the insurance value does not exceed R1 million, may
+be exported, against the prescribed SARS Customs Declaration, by persons
+proceeding into Africa for farming purposes.
+3.6 Foreign capital allowance
+3.6.1 A foreign capital allowance may be availed of through an Authorised Dealer, which
+may be transferred to a foreign currency account with a local Authorised Dealer or
+invested abroad, within a limit of R10 million per calendar year per individual, subject
+to a TCS PIN verifying the taxpayer’s tax compliance status and green bar-coded
+South African identity document or Smart identity document card and is 18 years
+and older.
+3.6.2 The funds to be transferred must be converted to foreign currency by an Authorised
+Dealer.
+3.6.3 The Financial Surveillance Department will consider applications by private
+individuals via an Authorised Dealer to invest in different asset classes offshore in
+addition to the abovementioned allowance. Private individuals wishing to avail of
+this dispensation must first approach SARS to obtain a TCS PIN verifying their tax
+compliance status report, which must accompany their application to the Financial
+Surveillance Department for consideration.
+3.6.4 Private individuals may, as part of their single discretionary allowance and/or foreign
+capital allowance, export multi-listed domestic securities to a foreign securities
+register in a jurisdiction where such securities are listed, subject to tax compliance
+and reporting to the Financial Surveillance Department via a Central Securities
+Depository Participant, in conjunction with an Authorised Dealer.
+3.6.5 Private individuals may only fund online international trading accounts at registered
+brokers in terms of the single discretionary and/or foreign capital allowance, i.e. the
+Authorised Dealer concerned must convert the Rand into foreign currency and
+transfer such funds via the banking system as an Electronic Funds Transfer to a
+foreign bank account or the funds can be deposited in a foreign currency account at
+an Authorised Dealer. No South African debit, credit and virtual card may, however,
+be used to fund a foreign currency account at an Authorised Dealer or a bank
+abroad, nor may international trading accounts of private individuals be funded using
+Currency and Exchanges guidelines for individuals
+17 of 35 6/2023
+South African credit, debit and virtual card transfers. Online international trading
+accounts, inter alia include trading global currencies against each other, trading a
+contract for difference, trading in foreign stocks, trading commodities including
+crypto currencies and/or trading foreign indices using an online trading platform of
+the broker concerned.
+3.7 Foreign currency holdings and other foreign assets held by resident
+individuals
+3.7.1 Foreign currency holdings
+Individuals and foreign nationals who are holders of foreign currencies outside South
+Africa must, unless exempted elsewhere in terms of the provisions of this document,
+offer to sell their holdings to an Authorised Dealer within 30 days from the date of
+becoming entitled thereto.
+A serious view will be taken by the Financial Surveillance Department of any
+unauthorised retention of foreign currency balances, whether with foreign banks,
+overseas principals, agents or shippers.
+3.7.2 Funding structure
+Individuals may raise loans abroad to finance the acquisition of foreign assets without
+recourse to South Africa. Only authorised foreign assets may be used as collateral
+in this instance and under no circumstances may local guarantees or suretyships be
+issued or may South African assets be encumbered.
+Individuals are allowed to participate in offshore share incentive or share option
+schemes, provided that such participation is financed under the R10 million foreign
+capital allowance and/or the R1 million single discretionary allowance.
+Individuals are allowed to take up new shares in foreign companies that have
+accrued by way of rights on existing holdings of shares, provided that transfers in
+payment thereof are dealt with in terms of the R10 million foreign capital allowance
+and/or the R1 million single discretionary allowance.
+3.7.3 Income earned abroad and foreign capital introduced
+Income earned abroad on or after 1997-07-01 may be retained abroad. It should be
+noted that income earned abroad and own foreign capital introduced (excluding
+export proceeds, sale proceeds from the sale of South African assets and capital
+repatriated on which the 5 per cent levy has been paid in terms of the Exchange
+Control Amnesty and Amendment of Taxation Laws Act, 2003 (Act No. 12 of 2003)
+into South Africa from the above-mentioned date by individuals resident in South
+Africa, may be re-transferred abroad (excluding any growth on the funds introduced).
+Documentary evidence confirming that the income and/or capital had previously been
+converted to Rand must be furnished to the Authorised Dealer concerned and only
+the Rand equivalent of any amount repatriated is eligible for re-transfer abroad.
+Currency and Exchanges guidelines for individuals
+18 of 35 6/2023
+In cases where income is earned abroad as a result of services rendered by
+individuals normally resident in South Africa, such individuals should be physically
+abroad whilst rendering these services, in order to qualify for the aforementioned
+dispensation.
+3.7.4 Disposal of legal foreign assets
+Individuals may with effect from 2022-02-23 dispose of their authorised foreign
+assets to other individuals, subject to local tax disclosure and compliance by the
+relevant parties.
+It should be noted that where the authorised foreign asset is sold to a private
+individual with recourse to South Africa, the transfers in payment thereof must be
+dealt with in terms of the R10 million foreign capital allowance and/or the R1 million
+single discretionary allowance.
+Any sale of the authorised foreign assets to private individuals where payment will
+take place locally in Rands resulting in no cross-border flow of funds other than
+change of ownership, such transactions must be referred to the Financial
+Surveillance Department and will also be subject to local tax disclosure as well as
+compliance by the relevant parties.
+Contraventions that occurred before 2022-02-23 must still be regularised with the
+Financial Surveillance Department.
+3.7.5 Donations of legal foreign assets
+Individuals may with effect from 2022-02-23 donate authorised foreign assets to
+other private individuals, subject to local tax disclosure and compliance by the
+relevant parties.
+The donations may also be retained abroad, subject to local tax disclosure and
+compliance by the relevant private individuals.
+Contraventions that occurred before 2022-02-23 must still be regularised with the
+Financial Surveillance Department.
+3.7.6 Lending of legal foreign assets
+Individuals may with effect from 2022-02-23 lend authorised foreign assets to
+residents, including trusts, subject to local tax disclosure and compliance by the
+relevant parties.
+Where the authorised foreign assets are lent to other residents for use abroad, such
+transactions must take place without any recourse to South Africa. Any
+arrangements to repay such foreign commitments from South Africa and/or for
+repayments to take place locally in Rands, such transactions must be referred to the
+Financial Surveillance Department.
+Where the authorised foreign assets are lent to other residents for use locally, the
+matter must be referred to an Authorised Dealer.
+Currency and Exchanges guidelines for individuals
+19 of 35 6/2023
+Contraventions that occurred before 2022-02-23 must still be regularised with the
+Financial Surveillance Department.
+3.7.7 Reinvestment into South Africa (“loop structures”)
+Resident individuals with authorised foreign assets may invest in South Africa,
+provided that where South African assets are acquired through an offshore structure
+(loop structure), the investment is reported to an Authorised Dealer as and when the
+transaction(s) is finalised as well as the submission of an annual progress report to
+the Financial Surveillance Department via an Authorised Dealer. The aforementioned
+party also has to view an independent auditor’s written confirmation or suitable
+documentary evidence verifying that such transaction(s) are concluded on an arm’s
+length basis, for a fair and market related price.
+Upon completion of the aforementioned transaction, the Authorised Dealer must
+submit a report to the Financial Surveillance Department which should, inter alia,
+include the name(s) of the South African affiliated foreign investor(s), a description
+of the assets to be acquired (including inward foreign loans, the acquisition of shares
+and the acquisition of property), the name of the South African target investment
+company, if applicable and the date of the acquisition as well as the actual foreign
+currency amount introduced including a transaction reference number.
+Existing unauthorised loop structures (i.e. created by individuals prior to 2021-01-01)
+and/or unauthorised loop structures where the 40 per cent shareholding threshold
+was exceeded, must still be regularised with the Financial Surveillance Department.
+3.8 Intellectual property
+The transfer of South African owned intellectual property by way of sale, assignment
+or cession and/or the waiver of rights in favour of non-residents in whatever form,
+directly or indirectly, is not allowed without the prior written approval of the Financial
+Surveillance Department.
+South African residents may, however, sell, transfer and assign intellectual property
+to unrelated non-resident parties at an arm’s length and a fair and market related
+price, provided they present to Authorised Dealers the sale, transfer or assignment
+agreement and an auditor’s letter or intellectual property valuation certificate
+confirming the basis for calculating the sale price. The dispensation excludes sale
+and lease back agreements.
+All inward funds emanating from such transactions must be repatriated to South
+Africa within a period of 30 days from the date of becoming entitled thereto.
+South African residents may license intellectual property to non-resident parties at
+an arm’s length and a fair and market related price for the term of the agreement,
+provided that they present Authorised Dealers with the licence agreement and an
+auditor’s letter confirming the basis for calculating the royalty or licence fee.
+All royalties and/or fees emanating from such transactions must be repatriated to
+South Africa within a period of 30 days from the date of becoming entitled thereto.
+Currency and Exchanges guidelines for individuals
+20 of 35 11/2021
+The sale, transfer, assignment and/or licensing of intellectual property is subject to
+appropriate tax treatment.
+3.9 Import payments
+Payments effected under this section require the presentation of documentation and
+will not be deducted from the single discretionary allowance limit of R1 million per
+calendar year.
+3.9.1 Import payments via credit and/or debit cards
+Individuals with locally issued credit and/or debit cards are permitted to make foreign
+currency payments for small transactions (e.g. imports over the Internet) by means
+of such credit and/or debit cards. Payments are limited to R50 000 per transaction.
+Cardholders will, however, not be absolved from ad valorem excise and custom
+duties or from complying with the requirements imposed by Customs.
+Any singular transaction exceeding R50 000 may not be split to circumvent the limit
+applicable to this dispensation.
+3.9.2 Import payments via an Authorised Dealer in foreign exchange
+Individuals may purchase foreign currency for payment of imports via an Authorised
+Dealer.
+Where an import permit is required, residents must ensure that a covering import
+permit issued by ITAC is obtained.
+All applications for the importation of gold must be referred to the South African
+Diamond and Precious Metals Regulator in terms of the Precious Metals Act, 2005
+(Act No. 37 of 2005).
+Payments for imports must be made against the following documentation:
+(a) commercial invoices issued by the supplier;
+(b) any one of the transport documents as prescribed by the International
+Chamber of Commerce Uniform Customs and Practice for Documentary
+Credits (UCP 600) and its supplement for electronic presentation, the eUCP,
+evidencing transport of the relative goods to South Africa; or
+Foreign currency payments for imports into South Africa may be effected on
+any shipment and/or delivery term where the freight is included in the cost of
+the goods being imported.
+(c) Freight Forwarders Certificate of Receipt or Freight Forwarders Certificate of
+Transport; or
+(d) consignee’s copy of the prescribed SARS Customs Declaration.
+Currency and Exchanges Guidelines for Individuals
+21 of 35 23/2022
+In lieu of the documents referred to in points (b) and (c) above, arrival notifications
+issued by shipping companies may be tendered.
+All documentation must be retained by the resident for a period of at least five
+years.Since Botswana is a member of the Custom Union, imports from Botswana
+may be paid for against the commercial invoice issued by the supplier and the
+consignee’s copy of the prescribed SARS Customs Declaration.
+Where goods for which payment has been made from South Africa have not been or
+will not be consigned to South Africa within four months of the date of payment, the
+importer must within 14 days of the expiry of such period advise the Authorised
+Dealer through whom foreign currency was purchased of this fact.
+In cases where an importer fails to provide import documentation or to report the
+non-receipt of goods within the above-mentioned four month period to the Authorised
+Dealer concerned, such Authorised Dealer may cease providing foreign currency to
+the importer until the matter has been satisfactorily resolved. Any non-compliance
+will be reported to the Financial Surveillance Department who may issue an
+instruction to all Authorised Dealers that no foreign currency may be provided to such
+importer until the matter has been satisfactorily resolved.
+Individuals who wish to hedge their import commitments must approach their
+Authorised Dealer in this regard.
+3.9.3 Philatelic imports and numismatic imports
+Residents must approach their Authorised Dealers who may grant foreign currency
+in payment of import for numismatic (excluding South African gold coins minted in
+1962 and thereafter) and philatelic purposes. The Authorised Dealer will furnish
+applicants with a letter of authority for submission to the appropriate government
+department.
+The government department concerned will endorse, on the face of the letter, the
+value of each parcel received in South Africa during the relative period. When this
+authority has been fully used or on the date of its expiry, the relative letter of
+authority must be returned to the Authorised Dealer concerned before a new letter
+in respect of any subsequent period is issued.
+Matters relating to the importation of medals, medallions, pendants and other similar
+non-currency articles must be referred to ITAC.
+3.10 Miscellaneous commercial payments and receipts
+3.10.1 Payments effected under this section require the presentation of documentation
+and will not be deducted from the single discretionary allowance limit of R1 million
+per calendar year.
+3.10.2 Miscellaneous commercial payments inclusive of associated costs to non-residents
+may be effected via an Authorised Dealer in respect of legitimate foreign obligations.
+3.10.3 The following conditions are also applicable:
+Currency and Exchanges guidelines for individuals
+22 of 35 11/2021
+(a) foreign currency payments may also be made in advance against documentary
+evidence, e.g. an invoice or agreement;
+(b) residents may approach their Authorised Dealer to issue guarantees on their
+behalf in favour of non-residents with the exception of guarantees for capital
+transactions and currency transfer guarantees, which need to be referred via
+an Authorised Dealer to the Financial Surveillance Department. Authorised
+Dealers may also, where applicable, approve the extension of the
+aforementioned guarantees;
+(c) residents may not participate in lotteries organised abroad, as such
+participation contravenes the Lotteries Act, 1997 (Act No. 57 of 1997).
+Furthermore, in terms of the National Gambling Act, 2004 (Act No. 7 of 2004),
+as amended by the National Gambling Amendment Act, 2008 (Act No. 10 of
+2008), residents may not participate in any gambling activities not authorised
+in terms of the afore-mentioned Act;
+(d) South African securities may be exported by residents for sale abroad only
+through an Authorised Dealer and the sale proceeds must be repatriated to
+South Africa;
+(e) residents may only purchase securities abroad within the R10 million foreign
+capital allowance, within the single discretionary allowance limit of R1 million
+per calendar year, or through the use of exempted foreign assets. All other
+applications for purchases of securities abroad must be referred by the
+Authorised Dealer to the Financial Surveillance Department; and
+(f) residents must sell to Authorised Dealers within 30 days all foreign bank notes
+received from non-residents as payment for legitimate transactions, e.g.
+services rendered, gratuities, tips or gifts.
+3.11 Securities control
+Residents may not act as a nominee for a non-resident purchasing shares or
+securities in South Africa, unless permission has been obtained via an Authorised
+Dealer from the Financial Surveillance Department.
+Residents of the CMA who deal in securities may not register an address outside
+the CMA without obtaining the specific prior written approval of the Financial
+Surveillance Department, via an Authorised Dealer. The applications to the Financial
+Surveillance Department must contain full and precise details of the request.
+Residents may under no circumstances have local dividends on South African
+registered shares paid outside the CMA without specific prior written approval from
+the Financial Surveillance Department.
+Individuals can invest without restriction in locally managed investment products that
+have foreign exposures, such as collective investment schemes and long-term
+insurance policies.
+Currency and Exchanges guidelines for individuals
+23 of 35 6/2023
+3.12 Legacies and distributions
+3.12.1 Legacies and distributions from resident estates
+Cash bequests and the cash proceeds of legacies and distributions from resident
+estates due to non-resident private individuals, non-resident entities and/or trusts
+may be remitted abroad, provided that the Liquidation and Distribution Account
+bearing a Master of the High Court reference number is available. In cases where
+the total assets of the resident estate is less than R250 000, cash bequests and the
+cash proceeds of legacies due to non-resident private individuals, non-resident
+entities and/or trusts may be remitted abroad, provided that the Last Will and
+Testament and Letter of Executorship or Authority are available.
+In all cases where such an estate holds authorised foreign assets, distribution of
+the foreign assets may be effected to non-residents, provided that all foreign
+administrative and related costs have been met from the foreign portion of the
+estate.
+Other assets inherited by non-residents may be exported under cover of the
+required SARS Customs Declaration provided that such articles are bequeathed to
+the beneficiaries in terms of the deceased’s will or otherwise in terms of the
+Liquidation and Distribution Account bearing a Master of the High Court reference
+number.
+Capital distributions from local testamentary trusts due to non-residents may be
+remitted abroad, provided that the trustees resolution confirming the capital
+distribution and the Last Will and Testament confirming that the beneficiary is
+entitled to such capital distribution are available.
+Distributions as a result of the renunciation of a beneficiary’s right to capital of a
+testamentary trust must be referred via an Authorised Dealer to the Financial
+Surveillance Department.
+3.12.2 Gifts and/or donations from non-residents
+Individuals may, with effect from 2022-02-23, receive and retain abroad monetary
+and other legitimate gifts and donations received from a non-resident source without
+having to declare it to an Authorised Dealer, subject to local tax disclosure and
+compliance. These dispensations shall not apply retrospectively and any
+contravention before 2022-02-23 must still be regularised with the Financial
+Surveillance Department.
+3.12.3 Foreign inheritance and legacies from bona fide non-resident estate
+Individuals are not required to declare to their Authorised Dealer inheritances or
+legacies from bona fide foreign estates that accrued after 1998-03-17 and may retain
+the capital and any income generated thereon abroad.
+3.12.4 Foreign inheritance and legacies from South African estates with foreign assets
+Currency and Exchanges guidelines for individuals
+24 of 35 6/2023
+Individuals may without reference to the Financial Surveillance Department retain
+foreign assets inherited from a South African estate, subject to local tax disclosure
+and compliance.
+Where it is disclosed to the Financial Surveillance Department that the foreign
+assets inherited were held by the deceased in a manner contrary to the provisions
+of the Regulations, an application for regularisation of such assets must be
+submitted via an Authorised Dealer to the Financial Surveillance Department.
+If approved, the retention of such assets abroad may be subject to the payment of a
+levy.
+Foreign assets inherited and which were held abroad by the resident beneficiary not
+in compliance with the provisions of the Regulations, must apply for regularisation
+via an Authorised Dealer to the Financial Surveillance Department.
+3.13 Export of goods
+3.13.1 Individuals exporting goods must comply with the following conditions:
+(a) complete a SARS Customs Declaration;
+(b) sell goods exported within a reasonable time, but no later than six months from
+the date of shipment;
+(c) receive the full foreign currency proceeds in South Africa not later than six
+months from the date of shipment;
+(d) receive payment in foreign currency or Rand from a Rand from a Non-resident
+Rand account in the name of the non-resident and/or Rand from a vostro
+account held in the books of the Authorised Dealer;
+(e) offer for sale to an Authorised Dealer the full foreign currency proceeds within
+30 days after becoming entitled thereto; and
+(f) report in writing to an Authorised Dealer the non-receipt of the full foreign
+currency proceeds, within the prescribed period, as well as the failure to sell
+the goods exported within six months from the date of shipment.
+3.13.2 All motor vehicles exported for sale abroad must have an export permit issued in
+terms of the International Trade Administration Act, 2002 (Act No. 71 of 2002).
+In respect of the temporary export of motor vehicles to all countries outside the CMA,
+residents must complete the prescribed SARS Customs Declaration and such vehicle
+must be returned to South Africa within a period of six months.
+3.13.3 All temporary exports of items or goods such as personal effects and jewellery to
+countries outside the CMA, for which no payment is to be received in South Africa,
+must where required, be supported by the prescribed SARS Customs Declaration.
+These goods or replacement items must be returned to South Africa within a period
+of six months.
+Currency and Exchanges guidelines for individuals
+25 of 35 11/2021
+Should the insurance value of the above-mentioned goods taken by the traveller
+exceed R200 000, the prior written approval of the Financial Surveillance Department
+must be obtained.
+Requests to export any items or goods, with an insurance value in excess of R50 000,
+for which no payment will be received and where the items exported will not be
+returned to South Africa, must be referred to the Financial Surveillance Department.
+3.13.4 Residents who wish to hedge their exchange rate or currency risk must approach
+their Authorised Dealer in this regard.
+3.14 Residents borrowing abroad
+3.14.1 Resident individuals must approach their Authorised Dealer to obtain approval to
+avail of inward foreign loans and foreign trade finance facilities from any non-resident
+and such loans must be recorded via the Loan Reporting System by the Authorised
+Dealer concerned.
+3.14.2 All applications for inward foreign loans and foreign trade finance facilities must, inter
+alia, contain the following information which must be furnished to the Authorised
+Dealer:
+(a) full names of the local borrower;
+(b) identity number or temporary resident permit number or registration number of
+the borrower;
+(c) full names of the foreign lender;
+(d) domicile of the foreign lender;
+(e) relationship between the foreign lender and the borrower;
+(f) denomination of the loan;
+(g) currency and amount of principal sum;
+(h) interest rate and margin;
+(i) purpose of the loan;
+(j) details of the type of security required, if any;
+(k) tenor. In instances where a loan will be repaid at a fixed future date, the date
+on which the loan will be repaid must be provided and, where a loan will be
+repaid in instalments, the date of the first instalment should be provided as well
+as the interval of the instalments, e.g. monthly/quarterly intervals;
+(l) copy of the loan agreement, if available/applicable;
+Currency and Exchanges guidelines for individuals
+26 of 35 6/2023
+(m) full detas of early repayment options, as well as currency switch options, if any;
+(n) in the case of foreign trade finance facilities, written confirmation from the
+borrower to the effect that the relative import or export transaction is not being
+financed elsewhere; and
+(o) detail of any commitment fees, raising fees and/or any other administration
+fees payable by the borrower.
+3.14.3 The following minimum requirements must be met for the loan to be approved by the
+Authorised Dealer:
+(a) the tenor of each loan must be at least one month;
+(b) the interest rate in respect of third party foreign denominated loans may not
+exceed the base lending rate plus 3 per cent or, in the case of shareholders’
+loans, the base lending rate as determined by commercial banks in the country
+of denomination;
+(c) the interest rate in respect of Rand denominated loans may not exceed the
+base rate, i.e. prime rate, plus 5 per cent on third party loans or the base rate,
+in the case of shareholders' loans;
+(d) the fixed interest rate linked to the base rate, if applicable, may not exceed the
+interest rate mentioned in (b) or (c) above. In this regard, approved inward
+foreign loans should always be adjusted accordingly in line with the set criteria;
+(e) the loan funds to be introduced may not represent or be sourced from a South
+African resident’s foreign capital allowance, foreign earnings retained abroad,
+funds for which amnesty had been granted in terms of the Exchange Control
+Amnesty and Amendment of Taxation Laws Act, 2003 (Act No. 12 of 2003),
+funds regularised under the Exchange Control Voluntary Disclosure
+Programme and/or foreign inheritances;
+(f) the loan funds may not be invested in foreign sinking funds;
+(g) no upfront payment of commitment fees, raising fees and/or any other
+administration fees are payable by the borrower;
+(h) the above-mentioned fees may be paid from South Africa once the loan funds
+have been received and converted into Rand locally, provided that such fees
+do not exceed 5 per cent of the principal sum; and
+(i) early repayments may be effected offshore, provided that the relevant loans
+are fully drawn down, reported correctly on the Loan Reporting System and
+that there are no anomalies on the Loan Reporting System.
+If the above-mentioned requirements cannot be met, a suitable application must be
+submitted via an Authorised Dealer to the Financial Surveillance Department.
+Currency and Exchanges guidelines for individuals
+27 of 35 11/2021
+4. Private individuals who cease to be residents for tax purposes in South Africa
+4.1 The concept of emigration as recognised by the Financial Surveillance Department
+has now been phased out with effect from 2021-03-01.
+4.2 The distinction between South African resident assets and non-resident assets
+remains extant.
+4.3 Authorised Dealers may allow the transfer of assets abroad, provided a private
+individual:
+(a) has ceased to be a resident for tax purposes in South Africa;
+(b) has obtained a TCS in respect of “emigration” from SARS; and
+(c) is tax compliant upon verification of the TCS.
+4.4 In addition to (4.3) above, private individuals may in the same calendar year that they
+ceased to be residents transfer via an Authorised Dealer up to R1 million as a travel
+allowance, without the requirement to obtain a TCS PIN letter. This is a once-off
+dispensation and cannot be used in subsequent calendar years. Private individuals
+ceasing to be residents for tax purposes only qualify for the aforementioned travel
+allowance, and may not avail of any unutilised portion of the single discretionary
+allowance available to residents.
+4.5 In addition, household and personal effects up to an amount of R1 million per family
+unit may be exported under a SARS Customs Declaration form within the same
+calendar year that the individual ceases to be a resident for tax purposes provided
+such assets have been declared on the relevant forms. Transactions of this nature
+will be treated similar to cash. For amounts in excess of R1 million, the provisions of
+(4.6) and (4.7) below will apply.
+4.6 In addition to the transfers mentioned in (4.5) above, Authorised Dealers may allow
+the transfer of up to a total amount of R10 million per calendar year per private
+individual who ceases to be a resident for tax purposes in South Africa and is 18
+years and older, provided that the individual is tax compliant and submits the
+applicable TCS Application for verification.
+4.7 South African non-tax residents who transfer more than R10 million offshore are
+subject, initially to a more stringent verification process by SARS; as well as a
+subsequent approval process from the Financial Surveillance Department. Such
+transfers will trigger a risk management test that will, inter alia, include verification of
+the tax status and the source of funds, as well as risk assess the private individual in
+terms of the anti-money laundering and countering terror financing requirements, as
+prescribed in the Financial Intelligence Centre Act, 2001 (Act No. 38 of 2001).
+4.8 With regard to (4.7) above, it is imperative that the application to the Financial
+Surveillance Department is accompanied by, inter alia, a TCS PIN letter that will
+contain the tax number and TCS PIN to verify the taxpayer’s tax compliance status
+and amount requested to be transferred.
+Currency and Exchanges guidelines for individuals
+28 of 35 6/2023
+4.9 Any requests for further transfers of remaining assets will be subject to a TCS
+application in respect of Foreign Investment Allowance (FIA) irrespective of the date
+of emigration, i.e. prior or after 2021-03-01.
+4.10 The externalisation of listed and unlisted domestic securities by individuals who
+cease to be residents for tax purposes will be treated similar to cash, which will form
+part of the foreign capital allowance and is also subject to the TCS process at SARS.
+4.11 In respect of the withdrawal of retirement funds (lump sum benefits from pension
+preservation, provident preservation and retirement annuity funds) when South
+African residents cease to be residents for tax purposes in South Africa, payment of
+lump sum benefits to such individuals shall only be allowed by Authorised Dealers if
+the individual member has remained non-tax resident for at least three consecutive
+years. The requirements stated in (4.6) and (4.7) above will apply.
+4.12 All assets that were previously blocked as per a specific directive that was given by
+the Financial Surveillance Department in terms of the provisions of Exchange Control
+Regulation 4(2), may be dealt with as follows:
+(a) In respect of income and capital distributions from inter vivos trusts, such
+distributions may be transferred abroad, subject to the TCS process being
+completed by the private individual and/or beneficiaries of the trust. For any
+transfers above R10 million, the requirements of (4.7) above will apply.
+(b) With regard to pre-inheritance gifts, such funds may be transferred abroad,
+subject to the TCS process being completed by the resident donor. For any
+transfers above R10 million, the requirements of (4.7) above will apply.
+4.13 Applications by private individuals who cease to be residents for tax purposes and
+who are no longer active on the SARS registered database and receive an
+inheritance or life insurance policy (excluding lump sum benefits from pension
+preservation, provident preservation, retirement annuity funds and annuities from
+insurers) up to R10 million, will not be required to apply to SARS for a Manual Letter
+of Compliance - Transfer of funds. For applications above R10 million, applicants are
+required to obtain a Manual Letter of Compliance - Transfer of funds, from SARS.
+4.14 On a once-off basis, the remaining cash balances not exceeding R100 000 in total
+of private individuals who have ceased to be residents for tax purposes, may be
+remitted offshore without reference to the SARS.
+4.15 With regard to the gathering of statistical information on the assets and liabilities
+declared by South African residents who cease to be residents for tax purposes, the
+Financial Surveillance Department will rely on information collected by SARS via
+the SARS TCR01 form.
+4.16 In terms of the TCS system, a TCS PIN letter will be issued to the South African
+residents who cease to be residents for tax purposes that will contain the tax
+number. Authorised Dealers must use the TCS PIN to verify the applicant’s tax
+compliance status via SARS eFiling prior to effecting any transfers. Authorised
+Dealers must ensure that the amount to be transferred does not exceed the amount
+approved by SARS. Authorised Dealers should note that the TCS PIN can expire
+Currency and Exchanges guidelines for individuals
+29 of 35 11/2021
+and should the Authorised Dealers find that the TCS PIN has indeed expired, the
+Authorised Dealers must request that the taxpayer must submit a new TCS
+application to SARS to be issued with a TCS PIN.
+4.17 Income due to private individuals who ceased to be residents for tax purposes in
+South Africa may be transferred offshore, provided the Authorised Dealers ensure
+that the amounts to be transferred are legitimately due to private individuals who
+ceased to be residents for tax purposes in South Africa, ensure that suitable
+arrangements are made to meet all local liabilities and verify a TCS of good
+standing at least once a year to confirm that the private individual who ceased to be
+resident for tax purposes in South Africa is tax compliant in respect of the transfer of
+income referred below. With regard to (g) and (h) below, a TCS of good standing is
+required at least once a year on applications up to R10 million and a tax compliance
+status request – TCS FIA is required for above R10 million applications.
+(a) interest and profit;
+(b) dividends: Authorised Dealers may allow the transfer of dividends, profit
+and/or income distributions from quoted companies, non-quoted companies
+and other entities in proportion of percentage shareholding and/or ownership.
+Authorised Dealers may not allow the transfer from South Africa of any
+income earned outside South Africa, unless such funds represent the profits
+of wholly-owned subsidiaries or of branches of South African registered
+companies previously transferred to South Africa;
+(c) income distributions from close corporations;
+(d) directors’ fees or members’ fees;
+(e) pension payments paid by registered funds only;
+(f) cash bonuses on insurance policies;
+(g) income received from a trust created in terms of a last will and testament;
+(h) income received from an inter vivos trust;
+(i) rentals on fixed property including rental pool agreements, provided that
+rentals are substantiated by the production of a copy of the rental or rental
+pool agreement;
+(j) annuity payments;
+(k) refunds paid by SARS, provided that Authorised Dealers are satisfied that the
+beneficiaries are permanently resident outside the CMA; and
+(l) salaries and/or fees payable in respect of services rendered.
+5. Foreign nationals
+5.1 On taking up temporary residence in South Africa, foreign nationals (except those
+Currency and Exchanges guidelines for individuals
+30 of 35 11/2021
+who are purely in South Africa on a temporary visit) are required, on arrival, to declare
+in writing to an Authorised Dealer:
+(a) whether they are in possession of foreign assets and, if so, give an undertaking
+to the effect that they will not place such foreign assets at the disposal of a third
+party normally resident in South Africa; and
+(b) that they have not applied for similar facilities through another Authorised
+Dealer.
+5.2 On receipt of such completed declarations and undertakings, foreign nationals may:
+(a) conduct their banking on a resident basis;
+(b) dispose of or otherwise invest their foreign assets, including foreign cash funds
+held by them, subsequent accruals, as well as foreign income, without
+interference from the Financial Surveillance Department;
+(c) conduct Non-resident Rand accounts or foreign currency accounts in the books
+of an Authorised Dealer; and
+(aa) transfer abroad funds accumulated during their stay in South Africa
+provided that the source from which they have acquired such funds can
+be substantiated; and
+(bb) the value of such funds is reasonable in relation to their income generating
+activities in South Africa during the period.
+(d) retransfer abroad capital which has been introduced into South Africa, provided
+the individual can substantiate the original introduction of such funds.
+(e) retransfer abroad household and personal effects, including motor vehicles,
+provided that the items have been purchased with funds which would have been
+transferable and/or the items have been imported into South Africa. The
+individual must be able to substantiate the importation of any goods by
+presenting documentary evidence to an Authorised Dealer. These effects may
+be transferred abroad under cover of the required SARS Customs Declaration
+5.3 The above provision excludes single transactions up to an amount of R3 000 per
+transaction per day within a limit of R10 000 per applicant per calendar month. While
+the personal banking of foreign nationals temporarily resident in South Africa may be
+conducted on a resident basis, any interest held by such individuals in local entities
+(i.e. legal persons) will be deemed as non-resident for the purposes of local financial
+assistance.
+5.4 On presentation of documentary evidence to an Authorised Dealer, foreign nationals
+may also transfer lump-sum commutations and monthly pensions abroad.
+5.5 In the case of mine labourers who are returning or who have already returned
+permanently to countries outside the CMA, Authorised Dealers may approve the
+transfer abroad of lump sum commutations as well as monthly pensions. Migrant
+Currency and Exchanges guidelines for individuals
+31 of 35 11/2021
+labourers are also permitted, in terms of existing arrangements with Customs to take
+with them reasonable amounts in the form of Rand notes representing their earnings
+in South Africa.
+5.6 Bonuses and surplus pension distributions may be transferred abroad provided that
+documentary evidence is presented to the Authorised Dealer confirming same prior
+to any transfer.
+6. Immigrants
+6.1 On taking up permanent residence in South Africa:
+(a) immigrants are required, on arrival in South Africa to declare to an Authorised
+Dealer, whether they are in possession of foreign assets and, if so, give an
+undertaking that they will not place such foreign assets at the disposal of a third
+party normally resident in South Africa; and
+(b) immigrants must provide their Authorised Dealer with documentary evidence
+substantiating that they have been granted permanent residence in South
+Africa. They will then be regarded as immigrants with effect from the date of
+their arrival in South Africa.
+6.2 Persons who have applied for, but who have not been granted permanent residence
+in South Africa, may avail of a single discretionary allowance of R1 million per
+calendar year. The funds tendered in payment must represent either savings from
+local earnings or the proceeds of foreign currency introduced to and exchanged in
+South Africa.
+6.3 Immigrants may be permitted to:
+(a) dispose of or otherwise invest their foreign assets, including foreign cash funds
+held by them, subsequent accruals and foreign earned income, without
+interference from the Financial Surveillance Department, provided the
+necessary declaration and undertaking were completed as outlined in 6.1(a)
+above.
+(b) Within five years of the date of their immigration, retransfer or re-export all own
+assets introduced or imported during the five-year period (including growth),
+provided that:
+(aa) the necessary declarations and undertakings were completed on their
+arrival in South Africa as outlined in 6.1(a) above; and
+(bb) they can substantiate the original introduction or importation of such
+assets.
+(c) Within five years of the date of their immigration, transfer abroad their South
+African assets in excess of those referred to in 6.3 (b) above, provided that:
+(aa) the Authorised Dealer concerned is satisfied that the individuals will be
+leaving South Africa permanently;
+Currency and Exchanges guidelines for individuals
+32 of 35 11/2021
+(bb) the Authorised Dealer is satisfied that the assets to be transferred are
+reasonable in relation to the growth resulting from such individual’s
+business or employment activities and/or is market related; and
+(cc) such transfers are not financed from local financial assistance facilities.
+(d) After five years of date of their immigration, Authorised Dealers may permit
+immigrants to retransfer or re-export the Rand equivalent of funds introduced
+or own assets imported (including growth), provided that:
+(aa) the necessary declarations and undertakings were completed on the
+arrival in South Africa; and
+(bb) they can substantiate the original introduction or importation of such
+assets.
+(e) Any household and personal effects, including motor vehicles, may be exported
+under cover of the prescribed SARS Customs Declaration provided that the
+goods to be exported have been purchased with funds that would have been
+transferable and/or have been imported into South Africa. The individual must,
+in need, be able to substantiate the importation thereof by the production of
+documentary evidence.
+6.4 Payments by immigrants:
+(a) Immigrants may approach their Authorised Dealer for the provision of foreign
+currency to cover current and arrear premiums due on foreign currency life
+insurance policies or contributions to pension and medical aid funds, provided
+that:
+(aa) the necessary declarations and undertakings were completed; and
+(bb) documentary evidence is presented, verifying the amounts due and that
+the commitment was entered into before the applicants took up residence
+in South Africa.
+(b) Immigrants may, against the presentation to an Authorised Dealer of
+documentary evidence confirming the amount involved, repay loans received in
+their previous country of domicile.
+(c) Immigrants may settle foreign tax commitments from South Africa against the
+production of documentary evidence confirming the amount involved.
+7. The cross-border foreign exchange transaction reporting requirements
+Individuals must note that the reporting of all cross-border foreign exchange
+transactions by an Authorised Dealer and/or ADLA to the Financial Surveillance
+Department is compulsory. Accordingly, individuals must provide full details
+pertaining to the relevant cross-border transaction as requested by the Authorised
+Dealer and/or ADLA concerned.
+Currency and Exchanges guidelines for individuals
+33 of 35 11/2021
+The objective of the Reporting System is to ensure accurate and comprehensive
+reporting of all data by Authorised Dealers and ADLAs on transactions, irrespective
+of the amount, for compilation of:
+(a) balance-of-payments statistics by the Economic Research and Statistics
+Department of the South African Reserve Bank;
+(b) foreign debt statistics and repayment profiles to support monetary policy
+decisions; and
+(c) statistical information relating to the nature, volume and values of the various
+cross-border flows and provide the appropriate information for economic and
+financial management decisions, as well as planning and policy formulation.
+7.1 Integrated form
+Individuals must complete an integrated form in respect of all cross-border foreign
+exchange transactions at an Authorised Dealer and/or ADLA.
+When the individual is physically present at the Authorised Dealer/ADLA, the
+integrated form must be completed and signed by the individual in respect of all
+inward and outward payments.
+When the individual is not physically present to complete and sign the integrated
+form, the Authorised Dealer/ADLA may complete and sign the integrated form, either
+physically or electronically, provided that the Authorised Dealer/ADLA has been
+authorised or mandated to do so by means of a letter, a facsimile message, an email
+message or by a recorded telephonic message to act on the individual’s behalf.
+As an exception to the arrangement outlined in the preceding paragraph, an
+integrated form need not be completed by the client of an Authorised Dealer in
+respect of inward payments under R50 000 per transaction. In this regard, individuals
+are advised to liaise with their Authorised Dealer regarding the conditions applicable
+to this dispensation.
+7.2 Declaration
+The following declaration is included in the integrated form to be signed by the
+individual:
+“I, the undersigned……………………………………., hereby declare that:
+1. I have read this document and know and understand the contents thereof;
+2. the information furnished above is in all respects both true and correct;
+3. the currency applied for will only be used for the specific purpose stated herein;
+4. the documentation presented in support of this application is in all respects
+authentic; and
+Currency and Exchanges guidelines for individuals
+34 of 35 1/2022
+5. I have been informed of the limit applicable to the above transaction and confirm
+that this limit will not be exceeded as a result of the conclusion of this
+transaction.
+6. I consent to this information being provided to the South African Revenue
+Service and/or the Financial Intelligence Centre.”
+8. Transactions with Common Monetary Area residents
+8.1 Introduction
+There are no foreign exchange restrictions between b a n k s o f the C M A member
+countries in respect of cross-border transactions amongst themselves. Lesotho,
+Namibia and eSwatini have their own monetary authorities and legislation. The
+application of exchange control within the CMA is governed by the Multilateral
+Monetary Agreement. Investments and transfers of funds in Rand from/to South
+Africa to/from other CMA countries do not require the approval of the Financial
+Surveillance Department.
+CMA country currencies comprise of the following: South African Rand, Lesotho
+Maloti, eSwatini Emalangeni and Namibian Dollar.
+8.2 General
+Individuals from other CMA countries should note that South African Authorised
+Dealers are not permitted to enter into foreign exchange transactions (i.e. in foreign
+currency other than CMA country currencies) with residents of other CMA countries.
+If such requests are received, residents of other CMA countries will be referred
+back to their bankers in the CMA country concerned.
+8.3 Travel
+As an exception to subsection 8.2 above, foreign currency may be purchased by
+diplomats, accredited foreign diplomatic staff as well as students with a valid student
+card from other CMA member countries while in South Africa.
+Authorised Dealers and/or ADLAs may also sell foreign currency to CMA residents
+in South Africa, to cover unforeseen incidental costs whilst in transit, subject to
+viewing a passenger ticket confirming a destination outside the CMA.
+CMA residents who travel overland to and from Namibia through Botswana qualify
+to be accorded the Botswana Pula equivalent of an amount not exceeding R25 000
+per calendar year. This allocation does not form part of the single discretionary
+allowance limit of R1 million per calendar year for South African residents.
+8.4 Export of motor vehicles
+Motor vehicles principally designed for the transport of persons and goods, but
+excluding vehicles exported by diplomatic and foreign representatives and new
+vehicles exported by local manufacturers or their appointed agents, may not be
+exported for sale outside the South African Customs Union, i.e. Botswana, Lesotho,
+Currency and Exchanges guidelines for individuals
+35 of 35 1/2022
+Namibia and eSwatini except by virtue of an export permit issued in terms of the
+International Trade Administration Act, 2002 (Act No. 71 of 2002).
+---oOo---

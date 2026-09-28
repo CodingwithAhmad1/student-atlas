@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDownIcon, ExternalLink } from "lucide-react";
 import { DiffViewer } from "@/components/activity/diff-viewer";
 import { ResolutionPreview } from "@/components/activity/resolution-preview";
+import { SourceUsage } from "@/components/activity/source-usage";
 import { StatusBadge } from "@/components/monitoring/shared";
 import { STATUS_DOT_STYLES, formatDateTime } from "@/lib/monitoring-format";
 import { cn } from "@/lib/utils";
@@ -77,6 +78,8 @@ export function ActivityCard({ alert }: { alert: ActivityAlert }) {
               <ExternalLink className="size-3" />
             </a>
           </div>
+
+          <SourceUsage citationIds={[alert.sourceId, ...alert.relatedSourceIds]} />
 
           {alert.error ? (
             <p className="rounded-md border border-orange-200 bg-orange-50 p-3 text-sm text-orange-900 dark:border-orange-900 dark:bg-orange-950/30 dark:text-orange-200">
