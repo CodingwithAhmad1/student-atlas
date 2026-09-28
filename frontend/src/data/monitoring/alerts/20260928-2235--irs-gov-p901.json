@@ -1,0 +1,22 @@
+{
+  "id": "20260928-2235--irs-gov-p901",
+  "kind": "change",
+  "sourceId": "irs.gov/p901",
+  "relatedSourceIds": [],
+  "sourceLabel": "IRS — Publication 901, U.S. Tax Treaties",
+  "sourceUrl": "https://www.irs.gov/publications/p901",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-09-28T22:35:19.751Z",
+  "updatedAt": "2026-09-28T22:35:19.751Z",
+  "oldHash": "40500363d50e242e3ce5b57001fb8c994081a8a28afc3ee1803e1b0348c3219d",
+  "newHash": "ebbace29708e7e3e968561da7a62c3f08cfc993327bb092f1b6040ea8d94bd2c",
+  "diff": "Index: irs.gov/p901\n===================================================================\n--- irs.gov/p901\tprevious\n+++ irs.gov/p901\tcurrent\n@@ -1375,6 +1375,5 @@\n Acquire technical, professional, or business experience from a person other than that resident of Sri Lanka or other than a person related to that resident; or\n Study at a university or other recognized educational institution.\n Sweden\n-A student, apprentice, or business trainee\n-\n+A student, apprentice, or business trainee \n … text truncated …\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

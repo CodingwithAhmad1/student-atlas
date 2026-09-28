@@ -1,0 +1,22 @@
+{
+  "id": "20260928-2235--ircc-canada-ca-dual-citizenship",
+  "kind": "change",
+  "sourceId": "ircc.canada.ca/dual-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "Immigration, Refugees and Citizenship Canada (IRCC) — What is dual citizenship?",
+  "sourceUrl": "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=356&top=5",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-09-28T22:35:19.751Z",
+  "updatedAt": "2026-09-28T22:35:19.751Z",
+  "oldHash": "b051d0d5d32ceeb1d49e474b7e3f441fda916302e17254b78529ac3ee45d578a",
+  "newHash": "0223b263a1e1cbca4c7daff22254e3687fd7e140401266ff9c11eba62b1b1aea",
+  "diff": "Index: ircc.canada.ca/dual-citizenship\n===================================================================\n--- ircc.canada.ca/dual-citizenship\tprevious\n+++ ircc.canada.ca/dual-citizenship\tcurrent\n@@ -6,4 +6,4 @@\n Travelling as a dual citizen\n Page details\n Date modified:\n-2026-09-01\n\\ No newline at end of file\n+2026-09-28\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

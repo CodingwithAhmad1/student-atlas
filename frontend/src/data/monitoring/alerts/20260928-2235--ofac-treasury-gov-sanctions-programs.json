@@ -1,0 +1,22 @@
+{
+  "id": "20260928-2235--ofac-treasury-gov-sanctions-programs",
+  "kind": "change",
+  "sourceId": "ofac.treasury.gov/sanctions-programs",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Treasury OFAC — Sanctions Programs and Country Information",
+  "sourceUrl": "https://ofac.treasury.gov/sanctions-programs-and-country-information",
+  "country": "INTL",
+  "category": "eligibility",
+  "detectedAt": "2026-09-28T22:35:19.751Z",
+  "updatedAt": "2026-09-28T22:35:19.751Z",
+  "oldHash": "993ea933b51ba78bd9b30355101eb37e7f265b7991d6ed172abffec5eb3cbd4c",
+  "newHash": "fb27fa2821bba74510e386cb15b71c1fceb569c142821bbfc73d024dacd924c1",
+  "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -87,7 +87,7 @@\n Ukraine-/Russia-related Sanctions\n May 08, 2026\n Venezuela-Related Sanctions\n-Sep 16, 2026\n+Sep 28, 2026\n Yemen-related Sanctions\n Nov 18, 2021\n Information on OFAC sanctions lists program tags and their definitions.\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
