@@ -791,4 +791,174 @@ export const citations: Record<string, Citation> = {
     url: "https://yemennic.net/archives/151",
     label: "National Information Center (المركز الوطني للمعلومات) — قانون رقم (6) لسنة 1990م بشأن الجنسية اليمنية (in Arabic)",
   },
+  "gov.uk/visa-brake": {
+    id: "gov.uk/visa-brake",
+    url: "https://www.gov.uk/guidance/visa-brake-changes-to-the-uk-visa-system",
+    label: "GOV.UK — Visa brake: changes to the UK visa system",
+  },
+  "govinfo.gov/8-cfr-212-1": {
+    id: "govinfo.gov/8-cfr-212-1",
+    url: "https://www.govinfo.gov/content/pkg/CFR-2025-title8-vol1/xml/CFR-2025-title8-vol1-sec212-1.xml",
+    label: "GovInfo (US Government Publishing Office) — 8 CFR 212.1 Documentary requirements for nonimmigrants",
+  },
+  "ice.gov/sevis-i901-faq": {
+    id: "ice.gov/sevis-i901-faq",
+    url: "https://www.ice.gov/sevis/i901/faq",
+    label: "U.S. Immigration and Customs Enforcement — I-901 SEVIS Fee Frequently Asked Questions",
+  },
+  "ice.gov/sevis/travel": {
+    id: "ice.gov/sevis/travel",
+    url: "https://www.ice.gov/sevis/travel",
+    label: "U.S. Immigration and Customs Enforcement — SEVIS: Travel",
+  },
+  "gov.uk/uk-immigration-id-check-app": {
+    id: "gov.uk/uk-immigration-id-check-app",
+    url: "https://www.gov.uk/guidance/using-the-uk-immigration-id-check-app",
+    label: "GOV.UK — Using the 'UK Immigration: ID Check' app",
+  },
+  "gov.uk/ihs-refund-eu-students": {
+    id: "gov.uk/ihs-refund-eu-students",
+    url: "https://www.gov.uk/apply-student-immigration-health-surcharge-refund",
+    label: "GOV.UK — Get an immigration health surcharge refund if you're a student from the EU, Switzerland, Norway, Iceland or Liechtenstein",
+  },
+  "bolashak.gov.kz/work-obligations": {
+    id: "bolashak.gov.kz/work-obligations",
+    url: "https://bolashak.gov.kz/en/vypuskniku/trudovaya-otrabotka",
+    label: "JSC Center for International Programs (Bolashak) — Work obligations",
+  },
+  "gov.uk/hc-217-explanatory-memorandum": {
+    id: "gov.uk/hc-217-explanatory-memorandum",
+    url: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-217-10-september-2024/explanatory-memorandum-to-the-statement-of-changes-to-the-immigration-rules-hc-217-10-september-2024-accessible-version",
+    label: "GOV.UK — Explanatory memorandum to the statement of changes to the Immigration Rules: HC 217, 10 September 2024",
+  },
+  "gov.uk/support-british-non-british-nationals-afghanistan": {
+    id: "gov.uk/support-british-non-british-nationals-afghanistan",
+    url: "https://www.gov.uk/guidance/support-for-british-and-non-british-nationals-in-afghanistan",
+    label: "GOV.UK — Support for British and non-British nationals in Afghanistan",
+  },
+  "gov.uk/find-a-visa-application-centre": {
+    id: "gov.uk/find-a-visa-application-centre",
+    url: "https://www.gov.uk/find-a-visa-application-centre",
+    label: "GOV.UK — Find a visa application centre",
+  },
+  "afghanistan.embassy.gov.au": {
+    id: "afghanistan.embassy.gov.au",
+    url: "https://afghanistan.embassy.gov.au/",
+    label: "Australian Interim Mission to Afghanistan — Home",
+  },
+  "embaccra.mfa.gov.dz/autres-services": {
+    id: "embaccra.mfa.gov.dz/autres-services",
+    url: "https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1",
+    label: "Ambassade d'Algérie à Accra — Autres services (in French)",
+  },
+  "cgparis.mfa.gov.dz/demande-renouvellement-sursis": {
+    id: "cgparis.mfa.gov.dz/demande-renouvellement-sursis",
+    url: "https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment",
+    label: "Consulat Général d'Algérie à Paris — Demande ou renouvellement de sursis (in French)",
+  },
+  "econsulat.tn/demande-de-sursis-militaire": {
+    id: "econsulat.tn/demande-de-sursis-militaire",
+    url: "https://www.econsulat.tn/fr/services-sociaux/demande-de-sursis-militaire",
+    label: "Ministère des Affaires étrangères, de la Migration et des Tunisiens à l'étranger — Demande de sursis militaire (in French)",
+  },
+  "gov.uk/british-embassy-khartoum-visa-section": {
+    id: "gov.uk/british-embassy-khartoum-visa-section",
+    url: "https://www.gov.uk/world/organisations/british-embassy-khartoum/office/visa-section",
+    label: "GOV.UK — British Embassy Khartoum: Visa section",
+  },
+  "justice.gov.et/proclamation-270-2002": {
+    id: "justice.gov.et/proclamation-270-2002",
+    url: "https://justice.gov.et/wp-content/uploads/2025/02/አዋጅ-ቁጥር-270-1994.pdf",
+    label: "Ethiopia Ministry of Justice — Proclamation No. 270/2002, Providing Foreign Nationals of Ethiopian Origin with Certain Rights",
+  },
+  "gov.uk/ancestry-visa": {
+    id: "gov.uk/ancestry-visa",
+    url: "https://www.gov.uk/ancestry-visa",
+    label: "GOV.UK — UK Ancestry visa",
+  },
+  "legislation.gov.uk/bna-1981-schedule-3": {
+    id: "legislation.gov.uk/bna-1981-schedule-3",
+    url: "https://www.legislation.gov.uk/ukpga/1981/61/schedule/3",
+    label: "legislation.gov.uk — British Nationality Act 1981, Schedule 3: Countries whose citizens are Commonwealth citizens",
+  },
+  "resbank.co.za/currency-exchanges-guidelines-individuals": {
+    id: "resbank.co.za/currency-exchanges-guidelines-individuals",
+    url: "https://www.resbank.co.za/content/dam/sarb/what-we-do/financial-surveillance/financial-surveillance-documents/2026/Currency%20and%20Exchanges%20Guidelines%20for%20Individuals.pdf",
+    label: "South African Reserve Bank — Currency and Exchanges guidelines for individuals",
+  },
+  "consulado.gob.cl/salir-con-menor": {
+    id: "consulado.gob.cl/salir-con-menor",
+    url: "https://www.consulado.gob.cl/quiero-viajar/info-para-viajar-fuera-de-chile/para-salir-de-chile-con-un-menor-de-edad",
+    label: "Consulado.gob.cl — Para salir de Chile con un menor de edad (in Spanish)",
+  },
+  "argentina.gob.ar/salida-de-menores": {
+    id: "argentina.gob.ar/salida-de-menores",
+    url: "https://www.argentina.gob.ar/justicia/derechofacil/leysimple/salida-de-menores-al-extranjero",
+    label: "Argentina.gob.ar — Ley simple: Salida de menores al extranjero (in Spanish)",
+  },
+  "argentina.gob.ar/migraciones-autorizacion-menores": {
+    id: "argentina.gob.ar/migraciones-autorizacion-menores",
+    url: "https://www.argentina.gob.ar/migraciones/autorizacion-de-salida-del-pais-para-menores-de-edad",
+    label: "Argentina.gob.ar — Autorización de salida del país para menores de edad (in Spanish)",
+  },
+  "ministeriodegobierno.gob.ec/requisitos-salir-del-pais": {
+    id: "ministeriodegobierno.gob.ec/requisitos-salir-del-pais",
+    url: "https://www.ministeriodegobierno.gob.ec/requisitos-para-salir-del-pais/",
+    label: "Ministerio de Gobierno — Requisitos para salir del país (in Spanish)",
+  },
+  "gov.uk/euss-what-status-means": {
+    id: "gov.uk/euss-what-status-means",
+    url: "https://www.gov.uk/settled-status-eu-citizens-families/what-settled-and-presettled-status-means",
+    label: "GOV.UK — Apply to the EU Settlement Scheme: what settled and pre-settled status means",
+  },
+  "gov.uk/settled-status-eu-citizens-families": {
+    id: "gov.uk/settled-status-eu-citizens-families",
+    url: "https://www.gov.uk/settled-status-eu-citizens-families",
+    label: "GOV.UK — Apply to the EU Settlement Scheme (settled and pre-settled status)",
+  },
+  "ofac.treasury.gov/faqs-russia": {
+    id: "ofac.treasury.gov/faqs-russia",
+    url: "https://ofac.treasury.gov/faqs/topic/6626",
+    label: "OFAC — Russian Harmful Foreign Activities Sanctions FAQs",
+  },
+  "gov.uk/tb-clinics-russia": {
+    id: "gov.uk/tb-clinics-russia",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-the-russian-federation/tuberculosis-testing-in-the-russian-federation",
+    label: "GOV.UK — Tuberculosis testing in the Russian Federation",
+  },
+  "gov.uk/tb-clinics-ukraine": {
+    id: "gov.uk/tb-clinics-ukraine",
+    url: "https://www.gov.uk/government/publications/ukraine-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-ukraine",
+    label: "GOV.UK — Tuberculosis testing in Ukraine",
+  },
+  "gov.uk/ukraine-permission-extension": {
+    id: "gov.uk/ukraine-permission-extension",
+    url: "https://www.gov.uk/guidance/applying-to-the-ukraine-permission-extension-scheme",
+    label: "GOV.UK — Applying to the Ukraine Permission Extension scheme",
+  },
+  "cscuk.fcdo.gov.uk/commonwealth-masters-scholarships": {
+    id: "cscuk.fcdo.gov.uk/commonwealth-masters-scholarships",
+    url: "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+    label: "Commonwealth Scholarship Commission in the UK — Commonwealth Master's Scholarships",
+  },
+  "cscuk.fcdo.gov.uk/commonwealth-phd-scholarships": {
+    id: "cscuk.fcdo.gov.uk/commonwealth-phd-scholarships",
+    url: "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships-for-least-developed-countries-and-vulnerable-states/",
+    label: "Commonwealth Scholarship Commission in the UK — Commonwealth PhD Scholarships",
+  },
+  "gov.uk/overseas-business-risk-myanmar": {
+    id: "gov.uk/overseas-business-risk-myanmar",
+    url: "https://www.gov.uk/government/publications/overseas-business-risk-myanmar-burma/overseas-business-risk-myanmar-burma",
+    label: "GOV.UK — Overseas Business Risk: Myanmar (Burma)",
+  },
+  "gov.uk/foreign-travel-advice/myanmar/safety": {
+    id: "gov.uk/foreign-travel-advice/myanmar/safety",
+    url: "https://www.gov.uk/foreign-travel-advice/myanmar/safety-and-security",
+    label: "GOV.UK — Myanmar travel advice: Safety and security",
+  },
+  "cambodia.embassy.gov.au/study": {
+    id: "cambodia.embassy.gov.au/study",
+    url: "https://cambodia.embassy.gov.au/penh/study.html",
+    label: "Australian Embassy Cambodia — Study Australia",
+  },
 };

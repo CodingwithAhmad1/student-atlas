@@ -76,11 +76,23 @@ every automated client, including the browser pane; do not work around it):
   government sites, scanned PDFs). Somalia may have a 2026 constitution
   (scanned, unread); Afghanistan and Syria have contested official texts.
   Worth one more try with a fresh web-search budget.
-- **Tier B hand callouts** (35 nationalities, 2–4 cited callouts each), then
-  **Tier A** (25, up to ~10 each), batches of 10 per plan §6. The deferred
-  traits (V5 US visa services in country, V6 reciprocity, V7 visa bond, S5
-  SEVIS payment) become cited hand callouts there. Drafting fans out to
-  subagents (one overlay file each); citations and writes stay serial.
+- **Tier B done (2026-09-28):** 53 cited hand callouts across 27 of the 35
+  (7 subagents drafted, every callout reviewed; 17 drafts dropped as
+  unsourced, obsolete or off-topic). A new monitored trait, `ukVisaBrake`
+  (GOV.UK visa brake: Student refused from outside the UK for Afghanistan,
+  Cameroon, Myanmar, Sudan; also Skilled Worker for Afghanistan), generates a
+  prominent callout like the US entry restriction. No hand callouts yet for
+  Peru, Senegal, Israel, Morocco, Uzbekistan, Iraq, Cameroon and Venezuela:
+  their official sources would not load.
+- **Leads that need a real browser** (usembassy.gov and state.gov return 403
+  to every automated client): Russians directed to US posts in Warsaw or
+  Astana; a March 2026 state.gov release on resuming operations at US Embassy
+  Caracas (the 2019 suspension may be over); which countries are in the US
+  visa bond programme (now permanent, from 3 August 2026; reported to include
+  Algeria, Tunisia, Ethiopia, Uganda, Cambodia, Senegal). Home Affairs
+  (immi.homeaffairs.gov.au) also returned 403 to the agents this time.
+- **Tier A** (25, up to ~10 cited callouts each) is next, same pipeline:
+  pack → drafting agents → review → apply.
 - `npx tsx scripts/show-generated.mts <slug>` (in `frontend/`) prints a
   nationality's generated content for spot checks.
 

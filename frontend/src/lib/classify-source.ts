@@ -40,7 +40,10 @@ export function classifySource(
   } else if (
     lcId.includes("homeaffairs") ||
     lcId.includes("immi.") ||
-    lcId.includes("privatehealth.gov.au")
+    lcId.includes("privatehealth.gov.au") ||
+    lcId.includes("embassy.gov.au") ||
+    lcId.includes("highcommission.gov.au") ||
+    lcId.includes("dfat.gov.au")
   ) {
     countryCode = "au";
   }

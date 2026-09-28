@@ -75,6 +75,7 @@ export const sourceOverrides: Record<string, SourceOverride> = {
 
   // ── Eligibility lists feeding the nationality traits (traits/trait-sources.ts) ──
   "gov.uk/visa-national-list": { category: "eligibility" },
+  "gov.uk/visa-brake": { category: "eligibility" },
   "gov.uk/tb-test-countries": { category: "eligibility" },
   "gov.uk/appendix-english-language": { category: "eligibility" },
   "gov.uk/appendix-student": {

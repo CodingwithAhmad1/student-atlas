@@ -174,6 +174,20 @@ export function generateOverlay(
     }
   }
 
+  // ── UK visa brake ──
+  const brake = traits.ukVisaBrake;
+  if (brake.value !== "none" && subject.destination !== "UK") {
+    const routes = brake.value === "student-skilled" ? "Student and Skilled Worker visa applications" : "Student visa applications";
+    const text =
+      `**UK ${routes} from ${label} nationals are currently refused.** Under the UK's visa brake, in force since 26 March 2026, ` +
+      `${routes} made from outside the UK are refused when the main applicant is a national of ${name}, even with a valid CAS or Certificate of Sponsorship. ` +
+      `Visas already granted stay valid, and people already in the UK can still extend or switch if they are eligible. ` +
+      `The brake is reviewed regularly and has no set end date. ${asOf(brake)} ${cite("ukVisaBrake")}`;
+    const where: [string, string][] = [["student", "overview"], ["student", "application-process"]];
+    if (brake.value === "student-skilled") where.push(["work", "getting-sponsored"]);
+    for (const [section, sub] of where) addCallout(section, sub, "UK", [p(text)]);
+  }
+
   // ── Comprehensive sanctions ──
   if (traits.sanctionsRegime.value === "comprehensive") {
     const text =

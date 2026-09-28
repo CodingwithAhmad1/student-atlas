@@ -25,6 +25,7 @@ clients are `manual` and raise a `stale-check` alert when past their interval.
 | `ukVisaNational` | UK Standard Visitor vs ETA profile |
 | `usVwp` | US ESTA profile |
 | `usEntryRestriction` | Proclamation 10998 callout on every US column (none / partial / full) |
+| `ukVisaBrake` | UK visa brake: prominent callout on the UK student (and, for `student-skilled`, sponsored-work) columns |
 | `auVisitorStream` | AU ETA (601) / eVisitor (651) profile, or Visitor 600 |
 | `auBiometricsRequired`, `auHealthExamLikely` | AU application-step callouts |
 | `ukDifferentialEvidence`, `ukTbTestRequired`, `ukMajorityEnglish` | UK student documents callouts |

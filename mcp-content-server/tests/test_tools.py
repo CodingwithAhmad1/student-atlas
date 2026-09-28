@@ -26,7 +26,7 @@ import tsscan  # noqa: E402
 REAL_APP = HERE.parent.parent
 
 TEST_TRAITS = {
-    "ukVisaNational": True, "usVwp": False, "usEntryRestriction": "none", "auVisitorStream": "visitor600",
+    "ukVisaNational": True, "usVwp": False, "usEntryRestriction": "none", "ukVisaBrake": "none", "auVisitorStream": "visitor600",
     "auBiometricsRequired": False, "auHealthExamLikely": True, "ukDifferentialEvidence": False,
     "ukTbTestRequired": True, "ukMajorityEnglish": False, "auEnglishExempt": False,
     "usNationalityWorkVisas": [], "ukYouthMobility": "none", "auWorkingHoliday": "none",

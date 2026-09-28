@@ -28,6 +28,12 @@ export const traitSources: Record<TraitKey, TraitSource> = {
     verifiedAt: "2026-09-27",
     note: "Proclamation 10998 (in force 1 Jan 2026): full-suspension and partial-suspension country lists. Partial covers B, F, M, J and immigrant visas.",
   },
+  ukVisaBrake: {
+    citationId: "gov.uk/visa-brake",
+    checkKind: "monitored",
+    verifiedAt: "2026-09-27",
+    note: "GOV.UK visa brake guidance: nationalities whose out-of-country Student (and Skilled Worker) applications are refused (from 26 March 2026: Student for Afghanistan, Cameroon, Myanmar, Sudan; Skilled Worker for Afghanistan).",
+  },
   auVisitorStream: {
     citationId: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/electronic-travel-authority-601",
     checkKind: "monitored",

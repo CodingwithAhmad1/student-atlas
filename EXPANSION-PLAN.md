@@ -323,7 +323,10 @@ committed with a green build. Adjustments:
   pages allowed): 40 more rows cited, 24 remain `unknown`. The
   watcher now accepts PDFs (several servers answered 406 to an HTML-only
   Accept header).
-Step 3 (Tier B, then Tier A hand callouts) is next.
+Tier B done 2026-09-28: 53 cited callouts for 27 of 35; new trait
+`ukVisaBrake` (18 traits). Base columns that had no block IDs (UK
+after-arrival, UK and AU citizenship) got one so callouts can anchor there.
+Tier A is next.
 
 ### Phase 3 — Hardening (1 session)
 1. First full monitor cycle with the new sources; tune `stripSelectors`.

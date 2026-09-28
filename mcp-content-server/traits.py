@@ -23,6 +23,7 @@ TRAIT_VALUES: dict[str, object] = {
     "ukVisaNational": bool,
     "usVwp": bool,
     "usEntryRestriction": ("none", "partial", "full"),
+    "ukVisaBrake": ("none", "student", "student-skilled"),
     "auVisitorStream": ("eta601", "evisitor651", "visitor600"),
     "auBiometricsRequired": bool,
     "auHealthExamLikely": bool,
@@ -357,6 +358,7 @@ PRESENCE_MEANS: dict[str, object] = {
     "auVisitorStream": "eta601",
     "auEnglishExempt": True,
     "usEntryRestriction": None,
+    "ukVisaBrake": None,
     "ukYouthMobility": None,
     "sanctionsRegime": None,
 }
