@@ -12,5 +12,5 @@ if (!url) {
   console.error("usage: npx tsx src/page-text.ts <url>");
   process.exit(2);
 }
-const { html } = await fetchPage(url);
-process.stdout.write(normalizeHtml(html, { url }));
+const { html, pdfText } = await fetchPage(url);
+process.stdout.write(pdfText ?? normalizeHtml(html, { url }));

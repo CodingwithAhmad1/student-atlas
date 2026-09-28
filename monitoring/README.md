@@ -83,17 +83,24 @@ npx tsx src/run.ts --source gov.uk/student-visa    # check one source for real
 npx tsx src/run.ts --source gov.uk/standard-visitor-visa --fixture fixtures/gov-uk-standard-visitor.html
 npm run check                                      # typecheck
 npx tsx src/page-text.ts https://www.gov.uk/...    # print a page as the watcher sees it
+npx tsx src/churn-check.ts                         # fetch every source twice; list pages that change between loads
 ```
 
 `--dry-run` writes nothing; `--fixture` replaces the network fetch with a saved
 HTML file (requires `--source`, and always implies `--dry-run`).
 
+**PDF sources.** Cited PDFs (laws, gazettes) are compared on their extracted
+text (`src/pdf.ts`, using unpdf), so a re-export of the same document does not
+alert and diffs stay readable. A scanned PDF has no text layer: its baseline is
+a one-line note with the file's SHA-256, so any new version of the file alerts
+and the reviewer opens the PDF to see what changed.
+
 ## Known limitations
 
 - Sources marked `skipReason` in `frontend/src/data/source-overrides.ts`
   cannot be monitored: `travel.state.gov` / `ceac.state.gov` / `ukvcas.co.uk` /
-  `uaecabinet.ae` block automated clients, and `cbp.gov/i94` is a JavaScript
-  app with no static text.
+  `uaecabinet.ae` / `legifrance.gouv.fr` / `pravo.by` block automated clients,
+  and `cbp.gov/i94` and `u.ae` are JavaScript apps with no static text.
   They are shown honestly as "Not monitorable" in the Activity page's Sources view — check
   them by hand now and then. (Headless-browser rendering was evaluated and is
   blocked by the same bot protection; we deliberately do not escalate against

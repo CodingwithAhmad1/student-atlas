@@ -1,6 +1,8 @@
 # Student Atlas — notes for Claude sessions
 
-Visa/immigration guide for international students (US, UK, AU destinations).
+Visa/immigration guide for international students going to the US, UK and
+Australia, with nationality-specific content for the 100 most populous
+nationalities (see `EXPANSION-PLAN.md`).
 Start with `NEXT-STEPS.md` for current status.
 
 ## Layout
@@ -65,3 +67,16 @@ browser and re-stamp the column.
   conversions). Consulate wait times and refusal-rate commentary never go in.
 - Never edit `traits/nationality-traits.ts` by hand-formatting: one trait per
   line, as the file header says, or the MCP tools stop parsing it.
+- A fact that is a list membership (who is on a government list) belongs in a
+  trait column with one source page, not in hand-written prose.
+- Every cited fact must come from a page fetched in the session that writes
+  it; official government sources only. A page in another language is fine
+  with "(in French)" etc. at the end of the citation label. Drafts from
+  subagents are reviewed against their evidence before they are written.
+- Hosts that block all automated clients (including the browser pane):
+  travel.state.gov, state.gov, *.usembassy.gov, federalregister.gov,
+  ecfr.gov, and at times immi.homeaffairs.gov.au. Hand these to Ahmad.
+- A fact that applies wherever the student goes (exit permits, military
+  service, foreign-exchange rules) goes into each destination column.
+- After adding a batch of citations, run `npx tsx src/churn-check.ts` in
+  `monitoring/` and fix any page that changes between loads.

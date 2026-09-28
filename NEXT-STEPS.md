@@ -1,115 +1,82 @@
 # Student Atlas — Status & Next Steps
 
-_Last updated: 2026-09-27. Context for future sessions — see `CLAUDE.md`,
-`monitoring/README.md` and `frontend/src/data/CONTENT-GUIDE.md`._
+_Last updated: 2026-09-28. Context for future sessions — see `CLAUDE.md`,
+`EXPANSION-PLAN.md`, `monitoring/README.md` and
+`frontend/src/data/CONTENT-GUIDE.md`._
 
 ## Status
 
-- The monitor runs every 12 hours on GitHub Actions and is **detection-only**
-  (no API key, no PRs). Changes become alerts, one open alert per source page.
-- Review happens in a Claude session through the content MCP server
-  (`list_alerts → get_alert → apply_edits → resolve_alert`, then commit + push).
-  The first full review is done: all 21 alerts resolved (4 approved,
-  17 dismissed), and a dry run of the watcher is quiet.
-- The Activity tab is read-only (Changes and Sources views).
-- Fees were verified on 2026-09-27: UK against GOV.UK; Australia against
-  immi.homeaffairs.gov.au (500, 600, 485, 482, 189/190/186 and the CSIT all
-  match). The Subclass 482 content now uses its current name, Skills in Demand.
-- Supported nationalities (branch `atlas-expansion`): the 100 most populous
-  (UN mid-2023), all on the trait model with every column derived from its
-  source page on 2026-09-27. Tier C and the new Tier A/B rows carry generated
-  content only so far; hand-written extras come next (see below).
-  Earlier errors the traits caught: the UAE is not on Australia's ETA list,
-  India is a UK visa national, Romania is not a VWP country (designation
-  rescinded 2025), and China, India and Vietnam can get the Australian 462
-  only through its ballot.
+- **Expansion to the 100 most populous nationalities is complete on branch
+  `atlas-expansion`** (not yet merged; Ahmad pushes). Phases 0–3 of
+  `EXPANSION-PLAN.md` are done: 100 nationalities × 18 traits, every column
+  derived from its source page (2026-09-27/28); 53 Tier B and 196 Tier A cited
+  hand callouts; 76 of 100 dual-nationality rows cited to home-government pages.
+- The monitor runs every 12 hours on GitHub Actions and is **detection-only**.
+  It now watches about 275 sources (was 55). A full dry run on 2026-09-28:
+  202 new sources snapshot cleanly, 2 churning gov.br pages fixed, 2 u.ae
+  pages marked not monitorable.
+- Review happens in a Claude session through the content MCP server. For a
+  list page, review the trait column (`check_trait_column` → `set_trait_column`).
+- The Activity tab shows, on each alert, where the page is used: base content,
+  which trait columns it feeds, and which nationalities' content cites it.
 
-## Checklist
+## After the branch lands
 
-- [ ] Expansion to 100 nationalities: design and decisions in
-      `EXPANSION-PLAN.md`. Phase 0 (audit, `AUDIT-2026-09.md`) and Phase 1
-      (trait layer, checker, watcher, MCP tools, the 7 migrated) done
-      2026-09-27 on branch `atlas-expansion`. Phase 2 step 1–2 done the
-      same day: all 100 registered with complete trait rows. Remaining
-      Phase 2 work is listed below.
-- [ ] First monitor run after the branch lands: expect one `change` alert per
-      Home Affairs page (about 12) because the watcher now reads the page
-      body from the embedded JSON instead of just the alert banners. Review
-      them once and dismiss as the new baseline.
+- [ ] First monitor run: expect one `change` alert per Home Affairs page
+      (about 12) because the watcher reads the page body from the embedded
+      JSON. Dismiss them once as the new baseline.
+- [ ] Expect ~200 "first snapshot" entries and no alerts from the new sources.
+- [ ] If/when the site is deployed: host must rebuild on pushes to `main`.
 
-- [ ] Review new alerts as they arrive (Activity tab → open items)
-- [ ] If/when the site is deployed: host must rebuild on pushes to `main`
-      (monitoring data is bundled at build time)
+## Open checks
 
-## Phase 2 — remaining work
-
-State on 2026-09-27: 100 nationalities × 17 traits, 0 stale, build green.
-Work in the `atlas-expansion` worktree. Open the Claude session in the
-worktree (or call `mcp-content-server` functions from the shell): the
-`.mcp.json` server edits the checkout it was launched from.
-
-**Needs Ahmad in a real browser** (travel.state.gov serves a bot check to
-every automated client, including the browser pane; do not work around it):
+**Needs Ahmad in a real browser** (travel.state.gov and usembassy.gov serve a
+bot check to every automated client, including the browser pane; never work
+around it):
 
 1. **E-2 treaty countries** —
    https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/treaty.html.
-   New rows carry no E-2 value yet (only E-3/H-1B1/TN from USCIS pages);
-   Pakistan, UK and Australia have E-2 from Phase 1, also never checked
-   against this page. Give Claude the list of top-100 countries marked E-2
+   Only Pakistan, UK and Australia carry E-2 (from Phase 1, never checked
+   against this page). Give Claude the list of top-100 countries marked E-2
    and it will `set_trait_column("usNationalityWorkVisas", …)`.
-2. **Diversity Visa ineligible list** — the DV instructions page. Current
-   values follow the DV-2026 list as quoted in search results (Bangladesh,
-   Brazil, Canada, China, Colombia, Cuba, Dominican Republic, Haiti, Honduras,
-   India, Mexico, Nigeria, Pakistan, Philippines, South Korea, UK, Venezuela,
-   Vietnam ineligible). Confirm, and re-check when DV-2027 instructions
+2. **Diversity Visa ineligible list** — values follow the DV-2026 list as
+   quoted in search results. Confirm, and re-check when DV-2027 instructions
    appear.
-3. **Visa Bulletin** — confirm the employment-based chart still has separate
-   columns only for China, India, Mexico and the Philippines (India/China
-   `severe`, Mexico/Philippines `moderate`).
+3. **Visa Bulletin** — confirm separate employment-based columns only for
+   China, India (`severe`), Mexico and the Philippines (`moderate`).
+4. **US embassy leads** — Russians directed to US posts in Warsaw or Astana;
+   a March 2026 release on resuming operations at US Embassy Caracas; which
+   countries are in the (now permanent) US visa bond programme (reported:
+   Algeria, Tunisia, Ethiopia, Uganda, Cambodia, Senegal).
+5. **Content checks** — China's two Australian callouts (Chinese ImmiAccount,
+   Frequent Traveller stream); Indonesia's PILN rule reportedly equating a
+   non-Honours Australian bachelor's with Diploma Tiga; Bangladesh Bank
+   guidelines cited are the 2018 edition.
 
 **Claude can do:**
 
-- **Dual nationality: 24 still `unknown`.** Two research passes
-  (D3 amended by Ahmad on 2026-09-27 to allow official non-English pages)
-  cite 76 of 100. Left: afghanistan, burkina-faso, burundi, cambodia, chad, ghana, guatemala, iran, israel, ivory-coast, kazakhstan, malawi, myanmar, niger, north-korea, romania, rwanda, saudi-arabia, senegal, somalia, south-sudan, sudan, syria, tunisia. Each failed because no official
-  page stating the rule could be fetched (bot blocks, dead or JavaScript-only
-  government sites, scanned PDFs). Somalia may have a 2026 constitution
-  (scanned, unread); Afghanistan and Syria have contested official texts.
-  Worth one more try with a fresh web-search budget.
-- **Tier B done (2026-09-28):** 53 cited hand callouts across 27 of the 35
-  (7 subagents drafted, every callout reviewed; 17 drafts dropped as
-  unsourced, obsolete or off-topic). A new monitored trait, `ukVisaBrake`
-  (GOV.UK visa brake: Student refused from outside the UK for Afghanistan,
-  Cameroon, Myanmar, Sudan; also Skilled Worker for Afghanistan), generates a
-  prominent callout like the US entry restriction. No hand callouts yet for
-  Peru, Senegal, Israel, Morocco, Uzbekistan, Iraq, Cameroon and Venezuela:
-  their official sources would not load.
-- **Leads that need a real browser** (usembassy.gov and state.gov return 403
-  to every automated client): Russians directed to US posts in Warsaw or
-  Astana; a March 2026 state.gov release on resuming operations at US Embassy
-  Caracas (the 2019 suspension may be over); which countries are in the US
-  visa bond programme (now permanent, from 3 August 2026; reported to include
-  Algeria, Tunisia, Ethiopia, Uganda, Cambodia, Senegal). Home Affairs
-  (immi.homeaffairs.gov.au) also returned 403 to the agents this time.
-- **Tier A done (2026-09-28):** 196 cited callouts across all 25 (9 agents;
-  ALL-destination facts appear once per column). Themes: approved TB clinic
-  cities, home-country foreign-exchange rules for tuition (RBI LRS, SAFE
-  quota, Bangladesh Bank, Thai banks), document attestation and apostille,
-  military service and exit rules (Korea, Taiwan, Turkey, Egypt, Thailand,
-  Colombia, Mexico, Brazil, UAE, Algeria/Tunisia), scholarship return bonds
-  (LPDP, YLSY, CAPES, Commonwealth), degree recognition on return (UGC, HEC,
-  CSCSE, YÖK, Saudi equivalency, UAE Resolution 5/2025), Canadian and Mexican
-  US-entry specifics. Existing overlays pruned: 7 UAE, 4 India, 3 Pakistan
-  callouts removed as speculative or unsupported; 3 China callouts corrected
-  (F-1 issue window is 365 days; 2-year UK visit visa cited to the fee table;
-  funds evidence per the UKVI guidance).
-- **Manual checks from Tier A:** China's two Australian callouts (Chinese
-  ImmiAccount, Frequent Traveller stream) could not be re-verified
-  (Home Affairs blocks agents); the Indonesian PILN rule reportedly equating
-  a non-Honours Australian bachelor's with Diploma Tiga (pages blocked);
-  Bangladesh Bank guidelines cited are the 2018 edition.
-- `npx tsx scripts/show-generated.mts <slug>` (in `frontend/`) prints a
-  nationality's generated content for spot checks.
+- Dual nationality: 24 still `unknown` (afghanistan, burkina-faso, burundi,
+  cambodia, chad, ghana, guatemala, iran, israel, ivory-coast, kazakhstan,
+  malawi, myanmar, niger, north-korea, romania, rwanda, saudi-arabia, senegal,
+  somalia, south-sudan, sudan, syria, tunisia). A third research pass with a
+  fresh web-search budget may close some.
+- Tier B nationalities with no hand callouts yet (sources would not load):
+  Peru, Senegal, Israel, Morocco, Uzbekistan, Iraq, Cameroon, Venezuela.
+
+## Review calendar
+
+| When | What | How |
+|---|---|---|
+| Every 12 h (automatic) | ~275 monitored sources | Activity tab → open alerts |
+| Monthly | Visa Bulletin backlog column | Browser; `set_trait_column` (stale-check alert at 90 days) |
+| Every 180 days | E-2 treaty list; Working Holiday 417/462 lists | Browser; stale-check alert raises it |
+| Every 365 days | DV ineligible list (new instructions ~October); dual nationality rows | Browser / home-government pages |
+| April | UK fee changes | GOV.UK fee table; `visa-facts.ts` by hand |
+| 1 July | Australian fee changes | Home Affairs in a browser; `visa-facts.ts` by hand |
+| October | US fiscal year: fees, DV cycle | Alerts + browser |
+| Ad hoc | US proclamations, UK visa brake reviews | Alerts on whitehouse.gov / gov.uk visa brake |
+| 1 Jan 2027 | UK Graduate Route drops to 18 months | Revisit wording |
+| After adding citations | Churn check | `npx tsx src/churn-check.ts` in `monitoring/` |
 
 ## Standing notes
 
@@ -118,8 +85,9 @@ every automated client, including the browser pane; do not work around it):
 - Home Affairs fee amounts render client-side; a page's "Cost" can look blank
   in plain fetches. Check fees in a real browser.
 - Sources marked "Not monitorable" in `frontend/src/data/source-overrides.ts`
-  (travel.state.gov, ceac, ukvcas, uaecabinet, fmjfee block bots or serve only
-  error pages; i94 is JS-only) need an occasional manual check.
+  (travel.state.gov, ceac, ukvcas, uaecabinet, fmjfee, legifrance, pravo.by,
+  CSCSE and several home-government pages block bots or serve only error
+  pages; i94 and u.ae are JS-only) need an occasional manual check.
 - Watch items from the review: the H-1B $100,000 payment guidance (vacated by a
   court, June 2026; may be appealed) and the F-1 Duration of Status rule
   (blocked by a preliminary injunction, 14 Sep 2026).
@@ -128,5 +96,8 @@ every automated client, including the browser pane; do not work around it):
 - Local quirk: privatehealth.gov.au (and sometimes portal.ahu.go.id) doesn't
   resolve on this Mac's DNS, and dol.gov sometimes blocks local fetches; all
   work in CI.
-- Cited PDFs (laws, gazettes, constitutions) are hashed as raw bytes; a
-  re-upload of the same text alerts. Phase 3: extract PDF text before hashing.
+- Cited PDFs are compared on their extracted text; scanned PDFs (no text
+  layer) on a hash of the file, so any new version alerts and needs opening.
+- cne.ao (Angola nationality law) has an incomplete TLS certificate chain and
+  kdmid.ru times out intermittently; if they reach 3 failures the watcher
+  raises an "unreachable" alert. Decide then whether to add a skipReason.

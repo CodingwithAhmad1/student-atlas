@@ -167,4 +167,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "yemennic.net/nationality-law": { country: "INTL", category: "citizenship" },
   // Tier A (2026-09-28)
   "portal.cscse.edu.cn/degree-authentication": { country: "INTL", skipReason: "The host refuses automated clients from outside China (network error); verify this page manually." },
+  "u.ae/armed-forces": { country: "INTL", skipReason: "u.ae renders its content with JavaScript, so automated fetches see no text; verify this page manually." },
+  "u.ae/qualification-recognition": { country: "INTL", skipReason: "u.ae renders its content with JavaScript, so automated fetches see no text; verify this page manually." },
 };

@@ -36,6 +36,8 @@ const STRIP_SELECTORS = [
   ".consent-banner",
   "#onetrust-consent-sdk",
   ".osano-cm-window",
+  // gov.br service pages: "Serviços recomendados para você" rotates on every load.
+  ".govbr-recom-wrapper",
   // GOV.UK chrome that survives inside <main> on some templates.
   ".gem-c-feedback",
   ".govuk-phase-banner",

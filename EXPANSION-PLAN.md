@@ -336,6 +336,15 @@ apart from the manual checks listed in NEXT-STEPS.
 3. Update `NEXT-STEPS.md` calendar and `CLAUDE.md` rules (column-first
    reviews; no volatile numbers in overlays).
 
+**Phase 3 outcome (2026-09-28).** Full dry run over ~275 sources: 202 new
+snapshots, 12 expected Home Affairs baseline changes, 2 churning gov.br pages
+fixed (global strip of the rotating "recommended services" widget), 2 u.ae
+pages marked not monitorable. Cited PDFs are now compared on extracted text
+(scans on a file hash). `churn-check.ts` fetches every source twice to catch
+rotating content. The Activity tab shows where each alerting page is used
+(base content, trait columns, nationalities); the eligibility filter shipped
+in Phase 1. Calendar and rules are in `NEXT-STEPS.md` and `CLAUDE.md`.
+
 ## 8. Risks
 
 - **Blocked sources** (all of travel.state.gov, Visa Bulletin, reciprocity,

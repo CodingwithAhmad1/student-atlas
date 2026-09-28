@@ -108,8 +108,8 @@ async function fetchAll(
       return hostLimit(target.url)(() =>
         globalLimit(async (): Promise<FetchOutcome> => {
           try {
-            const { status, html } = await fetchPage(target.url);
-            const text = normalizeFor(target, html);
+            const { status, html, pdfText } = await fetchPage(target.url);
+            const text = pdfText ?? normalizeFor(target, html);
             // A blank page after normalization is a JS shell, and a short
             // maintenance/error notice is an interstitial — neither is a
             // monitorable baseline, so treat them as failed checks.
