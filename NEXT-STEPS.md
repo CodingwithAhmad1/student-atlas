@@ -15,7 +15,8 @@ _Last updated: 2026-09-28. Context for future sessions — see `CLAUDE.md`,
 - The monitor runs every 12 hours on GitHub Actions and is **detection-only**.
   It now watches about 275 sources (was 55). A full dry run on 2026-09-28:
   202 new sources snapshot cleanly, 2 churning gov.br pages fixed, 2 u.ae
-  pages marked not monitorable.
+  pages marked not monitorable. kdmid.ru and cne.ao (never reachable from
+  automated clients) are now skipped too.
 - Review happens in a Claude session through the content MCP server. For a
   list page, review the trait column (`check_trait_column` → `set_trait_column`).
 - The Activity tab shows, on each alert, where the page is used: base content,
@@ -23,10 +24,13 @@ _Last updated: 2026-09-28. Context for future sessions — see `CLAUDE.md`,
 
 ## After the branch lands
 
-- [ ] First monitor run: expect one `change` alert per Home Affairs page
-      (about 12) because the watcher reads the page body from the embedded
-      JSON. Dismiss them once as the new baseline.
-- [ ] Expect ~200 "first snapshot" entries and no alerts from the new sources.
+- [x] First full watcher run done on the branch before merging (2026-09-28):
+      296 sources snapshot; the 12 Home Affairs alerts from the new extractor
+      were checked (text only added, nothing removed) and dismissed, and the
+      full page text is the new baseline.
+- [ ] minesup.gov.cm (Cameroon equivalence communiqué) timed out at merge
+      time; CI records its first snapshot when the host is back. If it raises
+      an unreachable alert, give it a `skipReason`.
 - [ ] If/when the site is deployed: host must rebuild on pushes to `main`.
 
 ## Open checks
@@ -108,6 +112,7 @@ around it):
   work in CI.
 - Cited PDFs are compared on their extracted text; scanned PDFs (no text
   layer) on a hash of the file, so any new version alerts and needs opening.
-- cne.ao (Angola nationality law) has an incomplete TLS certificate chain and
-  kdmid.ru times out intermittently; if they reach 3 failures the watcher
-  raises an "unreachable" alert. Decide then whether to add a skipReason.
+- Pages the watcher skips (`skipReason`) need a look by hand once a year:
+  travel.state.gov, *.usembassy.gov, state.gov, u.ae, cne.ao (incomplete TLS
+  chain), kdmid.ru (times out), consulado.pe, adilet.zan.kz (JavaScript only)
+  and the others listed on the Activity tab as not monitorable.

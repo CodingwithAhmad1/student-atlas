@@ -1,0 +1,156 @@
+Banker and Debt Manager to Government
+Commercial Banking
+Co-operative Banking
+Non-banking
+Financial Inclusion and Development
+Financial Market
+Foreign Exchange Management
+Consumer Education and Protection
+Issuer of Currency
+Payment and Settlement System
+FinTech
+Research
+Others
+Deposit Insurance and Credit Guarantee Corporation
+Frequently Asked Questions
+Date : Apr 06, 2023
+Liberalised Remittance Scheme
+(Updated as on April 06, 2023)
+The legal framework for administration of foreign exchange transactions in India is provided by the Foreign Exchange Management Act, 1999, (FEMA), which came into force with effect from June 1, 2000. Under FEMA, all transactions involving foreign exchange have been classified either as capital or current account transactions. All transactions undertaken by a resident that do not alter his / her assets or liabilities, including contingent liabilities, outside India are current account transactions.
+In terms of Section 5 of the FEMA, persons resident in India 1 are free to buy or sell foreign exchange for any current account transaction except for those transactions for which drawal of foreign exchange has been prohibited by Central Government, such as remittance out of lottery winnings; remittance of income from racing/riding, etc., or any other hobby; remittance for purchase of lottery tickets, banned / proscribed magazines, football pools, sweepstakes, etc.; remittance of dividend by any company to which the requirement of dividend balancing is applicable; payment of commission on exports under Rupee State Credit Route except commission up to 10% of invoice value of exports of tea and tobacco; payment of commission on exports made towards equity investment in Joint Ventures / Wholly Owned Subsidiaries abroad of Indian companies; remittance of interest income on funds held in Non-Resident Special Rupee (Account) Scheme and payment related to “call back services” of telephones.
+Foreign Exchange Management (Current Account Transactions) Rules, 2000 - Notification [GSR No. 381(E)] dated May 3, 2000 and the revised Schedule III to the Rules as given in the Notification G.S.R. 426(E) dated May 26, 2015 is available in the Official Gazette as well as, as an Annex to our Master Direction on ‘Other Remittance Facilities’ available on our website www.rbi.org.in.
+These FAQs attempt to put in place the common queries that users have on the subject in an easy-to-understand language. However, for undertaking a transaction, the Foreign Exchange Management Act, 1999 (FEMA) and the Regulations/Rules made or directions issued thereunder may be referred to.
+Q 1. What is the Liberalised Remittance Scheme (LRS) of USD 2,50,000 ?
+Q 2. What are the prohibited items under the Scheme?
+Q 3. What are the purposes under FEM (CAT) Amendment Rules, 2015, under which a resident individual can avail of foreign exchange facility?
+Q 4. Under LRS are resident individuals required to repatriate the income earned on investments abroad, over and above the principal amount?
+Q 5. Can remittances under the LRS facility be consolidated in respect of family members?
+Q 6. Is the AD required to check permissibility of remittances based on nature of transaction or allow the same based on remitters declaration?
+Q 7. Is it mandatory for resident individuals to have Permanent Account Number (PAN) for sending outward remittances under the Scheme?
+Q 8. Are there any restrictions on the frequency of the remittance?
+Q 9. Resident individuals (but not permanently resident in India) can remit up to net salary after deduction of taxes. However, if he has exhausted the limit of USD 2,50,000 as net salary remittance and desires to remit any other income under LRS is it permissible as the limit will be over and above USD 2,50,000?
+Q 10. Para 5.4 of AP DIR Circular 106 dated June 01, 2015 states that the applicants should have maintained the bank account with the bank for a minimum period of one year prior to the remittance for capital account transactions. Whether this restriction applies to current account transactions?
+Q 11. Are there any restrictions towards remittances to Mauritius and Pakistan for permissible current account transactions?
+Q 12. What are the requirements to be complied with by the remitter?
+Q 13. Can remittances be made only in US Dollars?
+Q 14. Are intermediaries expected to seek specific approval for making overseas investments available to clients?
+Q 15. Are there any restrictions on the kind/quality of debt or equity instruments an individual can invest in?
+Q 16. Whether credit facilities (fund or non-fund based) in Indian Rupees or foreign currency can be extended by AD banks to resident individuals?
+Q 17. Can bankers open foreign currency accounts in India for residents under LRS?
+Q 18. Can an Offshore Banking Unit (OBU) in India be treated on par with a branch of the bank outside India for the purpose of opening of foreign currency accounts by residents under the Scheme?
+Q 19. What are the documents required for withdrawal/remittance of foreign exchange for purposes mentioned in para 1 of Schedule III to FEM (CAT) Amendment Rules, 2015?
+Q 20. Whether documents viz 15 CA, 15 CB have to be taken in all outward remittance cases including remittances for maintenance etc.?
+Q 21. Will the expenses incurred by an LLP to sponsor the education expense of its partners who are pursuing higher studies for the benefit of the LLP will be outside the LRS limit of such individuals (partners)?
+Q 22. Clarification on remittance by sole proprietor under LRS.
+Q 23. Whether prior approval is required to open, maintain and hold foreign currency account with a bank outside India for making remittances under the LRS?
+Q 24. What are the facilities under Schedule III of FEM (CAT) Amendment Rules, 2015 available for persons other than individual?
+Q 25. Can a resident individual make a rupee loan to a NRI/PIO who is a close relative of resident individual, by of crossed cheque/ electronic transfer?
+Q 26. Can a resident individual make a rupee gift to a NRI/PIO who is a close relative of resident individual, by of crossed cheque/ electronic transfer?
+Q 1. What is the Liberalised Remittance Scheme (LRS) of USD 2,50,000 ?
+Ans. Under the Liberalised Remittance Scheme, all resident individuals, including minors, are allowed to freely remit up to USD 2,50,000 per financial year (April – March) for any permissible current or capital account transaction or a combination of both. Further, resident individuals can avail of foreign exchange facility for the purposes mentioned in Para 1 of Schedule III of FEM (CAT) Amendment Rules 2015, dated May 26, 2015, within the limit of USD 2,50,000 only.
+The Scheme was introduced on February 4, 2004, with a limit of USD 25,000. The LRS limit has been revised in stages consistent with prevailing macro and micro economic conditions.
+In case of remitter being a minor, the LRS declaration form must be countersigned by the minor’s natural guardian. The Scheme is not available to corporates, partnership firms, HUF, Trusts etc.
+Q 2. What are the prohibited items under the Scheme?
+Ans. The remittance facility under the Scheme is not available for the following:
+Remittance for any purpose specifically prohibited under Schedule-I (like purchase of lottery tickets/sweep stakes, proscribed magazines, etc.) or any item restricted under Schedule II of Foreign Exchange Management (Current Account Transactions) Rules, 2000.
+Remittance from India for margins or margin calls to overseas exchanges / overseas counterparty.
+Remittances for purchase of FCCBs issued by Indian companies in the overseas secondary market.
+Remittance for trading in foreign exchange abroad.
+Capital account remittances, directly or indirectly, to countries identified by the Financial Action Task Force (FATF) as “non- cooperative countries and territories”, from time to time.
+Remittances directly or indirectly to those individuals and entities identified as posing significant risk of committing acts of terrorism as advised separately by the Reserve Bank to the banks.
+Gifting by a resident to another resident, in foreign currency, for the credit of the latter’s foreign currency account held abroad under LRS.
+Q 3. What are the purposes under FEM (CAT) Amendment Rules, 2015, under which a resident individual can avail of foreign exchange facility?
+Ans. Individuals can avail of foreign exchange facility for the following purposes within the LRS limit of USD 2,50,000 on financial year basis:
+Private visits to any country (except Nepal and Bhutan)
+Gift or donation
+Going abroad for employment
+Emigration
+Maintenance of close relatives abroad
+Travel for business, or attending a conference or specialised training or for meeting expenses for meeting medical expenses, or check-up abroad, or for accompanying as attendant to a patient going abroad for medical treatment/ check-up
+Expenses in connection with medical treatment abroad
+Studies abroad
+Any other current account transaction which is not covered under the definition of current account in FEMA 1999.
+The AD bank may undertake the remittance transaction without RBI’s permission for all residual current account transactions which are not prohibited/ restricted transactions under Schedule I, II or III of FEM (CAT) Rules, 2000, as amended or are defined in FEMA 1999. It is for the AD to satisfy themselves about the genuineness of the transaction, as hitherto.
+Q 4. Under LRS are resident individuals required to repatriate the income earned on investments abroad, over and above the principal amount?
+Ans. The investor who has remitted funds under LRS can retain and reinvest the income earned from his investments made under the Scheme. However, the received/realised/unspent/unused foreign exchange, unless reinvested, shall be repatriated and surrendered to an authorised person within a period of 180 days from the date of such receipt/ realisation/ purchase/ acquisition or date of return to India, as the case may be.
+Further, any additional repatriation requirement with respect to investments made under Overseas Investments Rules and Regulations 2022 shall also be adhered to.
+Q 5. Can remittances under the LRS facility be consolidated in respect of family members?
+Ans. Remittances under the facility can be consolidated in respect of family members subject to the individual family members complying with the terms and conditions of the Scheme. However, clubbing is not permitted by other family members for capital account transactions such as opening a bank account and investment, if they are not the co-owners/co-partners of the investment/ overseas bank account. Remittances for acquiring immovable property outside India from a person resident outside India, may be consolidated in respect of relatives if such relatives, being persons resident in India, comply with the terms and conditions of the Scheme.
+Q 6. Is the AD required to check permissibility of remittances based on nature of transaction or allow the same based on remitter's declaration?
+Ans. AD will be guided by the nature of transaction as declared by the remitter in Form A2 and will thereafter certify that the remittance is in conformity with the instructions issued by the Reserve Bank in this regard from time to time. However, the ultimate responsibility is of the remitter to ensure compliance to the extant FEMA rules/regulations.
+Q 7. Is it mandatory for resident individuals to have Permanent Account Number (PAN) for sending outward remittances under the Scheme?
+Ans. Yes, it is mandatory for the resident individual to provide his/her Permanent Account Number (PAN) for all transactions under LRS made through Authorized Persons.
+Q 8. Are there any restrictions on the frequency of the remittance?
+Ans. There are no restrictions on the frequency of remittances under LRS. However, the total amount of foreign exchange purchased from or remitted through, all sources in India during a financial year should be within the cumulative limit of USD 2,50,000.
+Once a remittance is made for an amount up to USD 2,50,000 during the financial year, a resident individual would not be eligible to make any further remittances under this scheme, even if the proceeds of the investments have been brought back into the country.
+Q 9. Resident individuals (but not permanently resident in India) can remit up to net salary after deduction of taxes. However, if he has exhausted the limit of USD 2,50,000 as net salary remittance and desires to remit any other income under LRS is it permissible as the limit will be over and above USD 2,50,000?
+Ans. Resident individuals (but not permanently resident in India) who have remitted their entire earnings and salary and wish to further remit ‘other income’ may approach RBI with documents through their AD bank for consideration.
+Q 10. Para 5.4 of AP DIR Circular 106 dated June 01, 2015 states that the applicants should have maintained the bank account with the bank for a minimum period of one year prior to the remittance for capital account transactions. Whether this restriction applies to current account transactions?
+Ans. No. The rationale is that remittance facility for current account transactions under Schedule III of FEM (CAT) Amendment Rules, 2015, such as private and business visits, up to the LRS limit of USD 250, 000 can also be provided by FFMCs. As FFMCs cannot maintain accounts of remitters, the proviso (as mentioned in para 5.4 of the circular ibid) has been confined to capital account transactions. However, FFMCs, are required to ensure that the "Know Your Customer" guidelines and the Anti-Money Laundering Rules in force have been complied with while allowing the current account transactions.
+Q 11. Are there any restrictions towards remittances to Mauritius and Pakistan for permissible current account transactions?
+Ans. No, there are no restrictions towards remittances for current account transactions to Mauritius and Pakistan.
+Remittances directly or indirectly to countries identified by the Financial Action Task Force (FATF) as “non- cooperative countries and territories”, from time to time; and remittances directly or indirectly to those individuals and entities identified as posing significant risk of committing acts of terrorism as advised separately by the Reserve Bank to the banks are not permissible.
+Q 12. What are the requirements to be complied with by the remitter?
+Ans. The individual will have to designate a branch of an AD through which all the capital account remittances under the Scheme will be made. The applicants should have maintained the bank account with the bank for a minimum period of one year prior to the remittance.
+For remittances pertaining to permissible capital account transactions, if the applicant seeking to make the remittance is a new customer of the bank, Authorised Dealers should carry out due diligence on the opening, operation and maintenance of the account. Further, the AD should obtain bank statement for the previous year from the applicant to satisfy themselves regarding the source of funds. If such a bank statement is not available, copies of the latest Income Tax Assessment Order or Return filed by the applicant may be obtained. He has to furnish Form A-2 regarding the purpose of the remittance and declare that the funds belong to him and will not be used for purposes prohibited or regulated under the Scheme.
+Q 13. Can remittances be made only in US Dollars?
+Ans. The remittances can be made in any freely convertible foreign currency.
+Q 14. Are intermediaries expected to seek specific approval for making overseas investments available to clients?
+Ans. Banks including those not having operational presence in India are required to obtain prior approval from Reserve Bank for soliciting deposits for their foreign/overseas branches or for acting as agents for overseas mutual funds or any other foreign financial services company.
+Q 15. Are there any restrictions on the kind/quality of debt or equity instruments an individual can invest in?
+Ans. No ratings or guidelines have been prescribed under LRS of USD 2,50,000 on the quality of the investment an individual can make. However, the individual investor is expected to exercise due diligence while taking a decision regarding the investments which he or she proposes to make and such investments shall be in accordance with Overseas Investment Rules and Regulations, 2022 and the directions made thereunder.
+Q 16. Whether credit facilities (fund or non-fund based) in Indian Rupees or foreign currency can be extended by AD banks to resident individuals?
+Ans. LRS does not envisage extension of fund and non-fund based facilities by the AD banks to their resident individual customers to facilitate remittances for capital account transactions under LRS.
+However, AD banks may extend fund and non-fund based facilities to resident individuals to facilitate current account remittances under the Scheme.
+Q 17. Can bankers open foreign currency accounts in India for residents under LRS?
+Ans. No.
+Q 18. Can an Offshore Banking Unit (OBU) in India be treated on par with a branch of the bank outside India for the purpose of opening of foreign currency accounts by residents under the Scheme?
+Ans. No.
+Q 19. What are the documents required for withdrawal/remittance of foreign exchange for purposes mentioned in para 1 of Schedule III to FEM (CAT) Amendment Rules, 2015?
+Ans. Permanent Account Number (PAN) is mandatory for all transactions under LRS.
+Q 20. Whether documents viz 15 CA, 15 CB have to be taken in all outward remittance cases including remittances for maintenance etc.?
+Ans. In terms of A. P. (DIR Series) circular No. 151 dated June 30, 2014, Reserve Bank of India will not issue any instructions under the FEMA, regarding the procedure to be followed in respect of deduction of tax at source while allowing remittances to the non-residents. It shall be mandatory on the part of ADs to comply with the requirement of the tax laws, as applicable.
+Q 21. Will the expenses incurred by an LLP to sponsor the education expense of its partners who are pursuing higher studies for the benefit of the LLP will be outside the LRS limit of such individuals (partners)?
+Ans. LLP is a body corporate and has a legal entity separate from its partners. Therefore, if the LLP incurs/sponsors the education expense of its partners who are pursuing higher studies for the benefit of the LLP, then the same shall be outside the LRS limit of the individual partners and would instead be deemed as residual current account transaction undertaken by the LLP without any limits.
+Q 22. Clarification on remittance by sole proprietor under LRS.
+Ans. In a sole proprietorship business, there is no legal distinction between the individual / owner and as such the owner of the business can remit USD up to the permissible limit under LRS. If a sole proprietorship firm intends to remit the money under LRS by debiting its current account then the eligibility of the proprietor in his individual capacity has to be reckoned. Hence, if an individual in his own capacity remits USD 250,000 in a financial year under LRS, he cannot remit another USD 250,000 in the capacity of owner of the sole proprietorship business as there is no legal distinction.
+Q 23. Whether prior approval is required to open, maintain and hold foreign currency account with a bank outside India for making remittances under the LRS?
+Ans: No.
+Q 24. What are the facilities under Schedule III of FEM (CAT) Amendment Rules, 2015 available for persons other than individual?
+Ans. The following facilities are available to persons other than individuals:
+Donations up-to one per cent of their foreign exchange earnings during the previous three financial years or USD 5,000,000, whichever is less, for- (a) creation of Chairs in reputed educational institutes, (b) contribution to funds (not being an investment fund) promoted by educational institutes; and (c) contribution to a technical institution or body or association in the field of activity of the donor Company.
+Commission, per transaction, to agents abroad for sale of residential flats or commercial plots in India up to USD 25,000 or five percent of the inward remittance whichever is less.
+Remittances up to USD 10,000,000 per project for any consultancy services in respect of infrastructure projects and USD 1,000,000 per project, for other consultancy services procured from outside India.
+Remittances up to five per cent of investment brought into India or USD 100,000 whichever is less, by an entity in India by way of reimbursement of pre-incorporation expenses.
+Remittances up to USD 250,000 per financial year for purposes stipulated under Para 1 of Schedule III to FEM (CAT) Amendment Rules, 2015. However, all residual current account transactions undertaken by such entities are otherwise permissible without any specified limit and are to be disposed off at the level of AD, as hitherto. It is for the AD to satisfy themselves about the genuineness of the transaction.
+Anything in excess of above limits requires prior approval of the Reserve Bank of India.
+Q 25. Can a resident individual make a rupee loan to a NRI/PIO who is a close relative of resident individual, by of crossed cheque/ electronic transfer?
+Ans. A resident individual is permitted to make a rupee loan to a NRI/PIO who is a close relative of the resident individual (‘relative’ as defined in Section 2(77) of the Companies Act, 2013) by way of crossed cheque/ electronic transfer subject to the following conditions:
+(i) The loan is free of interest and the minimum maturity of the loan is one year.
+(ii) The loan amount should be within the overall LRS limit of USD 2,50,000, per financial year, available to the resident individual. It would be the responsibility of the lender to ensure that the amount of loan is within the LRS limit of USD 2,50,000 during the financial year.
+(iii) The loan shall be utilised for meeting the borrower's personal requirements or for his own business purposes in India.
+(iv) The loan shall not be utilised, either singly or in association with other person, for any of the activities in which investment by persons resident outside India is prohibited, namely;
+the business of chit fund, or
+Nidhi Company, or
+agricultural or plantation activities or in real estate business, or construction of farmhouses, or
+trading in Transferable Development Rights (TDRs).
+Explanation: For the purpose of item (c) above, real estate business shall not include development of townships, construction of residential / commercial premises, roads or bridges.
+(v) The loan amount should be credited to the NRO a/c of the NRI /PIO. Credit of such loan amount may be treated as an eligible credit to NRO a/c.
+(vi) The loan amount shall not be remitted outside India.
+(vii) Repayment of loan shall be made by way of inward remittances through normal banking channels or by debit to the Non-resident Ordinary (NRO)/ Non-resident External (NRE) / Foreign Currency Non-resident (FCNR) account of the borrower or out of the sale proceeds of the shares or securities or immovable property against which such loan was granted.
+Q 26. Can a resident individual make a rupee gift to a NRI/PIO who is a close relative of resident individual, by of crossed cheque/ electronic transfer?
+Ans. A resident individual can make a rupee gift to a NRI/PIO who is a close relative of the resident individual [relative’ as defined in Section 2(77) of the Companies Act, 2013] by way of crossed cheque /electronic transfer. The amount should be credited to the Non-Resident (Ordinary) Rupee Account (NRO) a/c of the NRI / PIO and credit of such gift amount may be treated as an eligible credit to NRO a/c. The gift amount would be within the overall limit of USD 250,000 per financial year as permitted under the LRS for a resident individual. It would be the responsibility of the resident donor to ensure that the gift amount being remitted is under the LRS and all the remittances made by the donor during the financial year including the gift amount have not exceeded the limit prescribed under the LRS.
+1 A 'person resident in India' is defined in Section 2(v) of FEMA, 1999 as :
+(i) a person residing in India for more than one hundred and eighty-two days during the course of the preceding financial year but does not include-
+(A) a person who has gone out of India or who stays outside India, in either case-
+(a) for or on taking up employment outside India, or
+(b) for carrying on outside India a business or vocation outside India, or
+(c) for any other purpose, in such circumstances as would indicate his intention to stay outside India for an uncertain period;
+(B) a person who has come to or stays in India, in either case, otherwise than-
+(a) for or on taking up employment in India, or
+(b) for carrying on in India a business or vocation in India, or
+(c) for any other purpose, in such circumstances as would indicate his intention to stay in India for an uncertain period;
+(ii) any person or body corporate registered or incorporated in India,
+(iii) an office, branch or agency in India owned or controlled by a person resident outside India,
+(iv) an office, branch or agency outside India owned or controlled by a person resident in India.
+Top

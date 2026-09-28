@@ -1,0 +1,25 @@
+{
+  "id": "20260928-0647--immi-homeaffairs-gov-au-visas-getting-a-visa-visa-listing-skilled-independent-189",
+  "kind": "change",
+  "sourceId": "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Department of Home Affairs — Skilled Independent Visa (Subclass 189)",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189",
+  "country": "AU",
+  "category": "residency",
+  "detectedAt": "2026-09-28T06:47:35.584Z",
+  "updatedAt": "2026-09-28T06:47:35.584Z",
+  "oldHash": "0e46e9c6e25b76586ac3e67b945070dae3ada5a9a1df0c20536b5ee12392ffe1",
+  "newHash": "420060339c7984538ccd448988104eaa8ae2efcdae8692ba5ec85f35384f6a0c",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189\tcurrent\n@@ -5,4 +5,8 @@\n Alert: 189 visa landing page banner\n We prioritise applications for the Skilled – Independent (subclass 189) visa (Points-tested stream) under Ministerial Direction No. 122. We are currently processing applications that were lodged in:November 2025 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or in Australia's law enforcement and defence interests.June 2026 – Visa applications from applicants who were in Australia at the time they lodged their application.November 2025 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at any time.November 2025 – All other visa applications from applicants who were outside Australia when they applied.Please note, as we transition to the new priorities under Ministerial Direction No. 122, processing timeframes may fluctuate. Some published timeframes may temporarily move backwards while applications are reprioritised.\n Alert: 189 visa permanently closed to new applications on 1 July 2023\n-The Skilled Independent (subclass 189) (New Zealand stream) visa permanently closed to new applications on 1 July 2023. For more information see Recent changes.\n\\ No newline at end of file\n+The Skilled Independent (subclass 189) (New Zealand stream) visa permanently closed to new applications on 1 July 2023. For more information see Recent changes.\n+Skilled independent visa\n+This visa is for invited workers, eligible New Zealand citizens and eligible Hong Kong or British National (Overseas) passport holders with skills we need, to live and work permanently anywhere in Australia.\n+See the relevant stream\n+Warning text here. Anchor with information here\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": "noise",
+  "summary": "The watcher now reads the whole page; no change on the page itself.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Expected after the watcher change that reads Home Affairs pages from their embedded page data: the old baseline held only a fragment of the page. Checked that no text or figure was removed; the full text becomes the new baseline.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-28T06:48:51.615Z",
+  "error": null
+}

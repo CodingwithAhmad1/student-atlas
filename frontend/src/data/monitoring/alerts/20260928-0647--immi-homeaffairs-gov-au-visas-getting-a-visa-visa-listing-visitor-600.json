@@ -1,0 +1,25 @@
+{
+  "id": "20260928-0647--immi-homeaffairs-gov-au-visas-getting-a-visa-visa-listing-visitor-600",
+  "kind": "change",
+  "sourceId": "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Department of Home Affairs — Visitor Visa (Subclass 600)",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600",
+  "country": "AU",
+  "category": "visitor",
+  "detectedAt": "2026-09-28T06:47:35.584Z",
+  "updatedAt": "2026-09-28T06:47:35.584Z",
+  "oldHash": "1c9c579b6d5b2ace5ed78f099cdb29a01136ab8c1773b5a4e8490b0102a94cef",
+  "newHash": "00298bdc387e19ca7fd0a8b524253103c249ad19746a552073ed8512280b8e29",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600\tcurrent\n@@ -1,4 +1,6 @@\n Title: Visitor visa (subclass 600)\n Description: For tourists, business visitors or to visit family for 3, 6 or 12 months.\n Alert: visitor visa holder - Restricting visa hopping to the Student visa program.\n-Find out what you can do to help us process your application faster.You may be eligible for a Subclass 601 Electronic Travel Authority or Subclass 651 eVisitor. Check if you are eligible at Explore visa options.If you are a Papua New Guinean passport holder, find out more about new visa arrangements from 1 July 2026\n\\ No newline at end of file\n+Find out what you can do to help us process your application faster.You may be eligible for a Subclass 601 Electronic Travel Authority or Subclass 651 eVisitor. Check if you are eligible at Explore visa options.If you are a Papua New Guinean passport holder, find out more about new visa arrangements from 1 July 2026\n+For tourists, business visitors or to visit family for 3, 6 or 12 months\n+be a genuine visitor have enough funds to support your stay and leave\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": "noise",
+  "summary": "The watcher now reads the whole page; no change on the page itself.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Expected after the watcher change that reads Home Affairs pages from their embedded page data: the old baseline held only a fragment of the page. Checked that no text or figure was removed; the full text becomes the new baseline.",
+    "edits": []
+  },
+  "resolvedAt": "2026-09-28T06:48:51.618Z",
+  "error": null
+}
