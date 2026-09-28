@@ -165,4 +165,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "tgr.gov.ma/code-nationalite-marocaine": { country: "INTL", category: "citizenship" },
   "cspd.gov.jo/nationality-law": { country: "INTL", category: "citizenship" },
   "yemennic.net/nationality-law": { country: "INTL", category: "citizenship" },
+  // Tier A (2026-09-28)
+  "portal.cscse.edu.cn/degree-authentication": { country: "INTL", skipReason: "The host refuses automated clients from outside China (network error); verify this page manually." },
 };

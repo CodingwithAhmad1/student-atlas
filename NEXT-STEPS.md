@@ -91,8 +91,23 @@ every automated client, including the browser pane; do not work around it):
   visa bond programme (now permanent, from 3 August 2026; reported to include
   Algeria, Tunisia, Ethiopia, Uganda, Cambodia, Senegal). Home Affairs
   (immi.homeaffairs.gov.au) also returned 403 to the agents this time.
-- **Tier A** (25, up to ~10 cited callouts each) is next, same pipeline:
-  pack → drafting agents → review → apply.
+- **Tier A done (2026-09-28):** 196 cited callouts across all 25 (9 agents;
+  ALL-destination facts appear once per column). Themes: approved TB clinic
+  cities, home-country foreign-exchange rules for tuition (RBI LRS, SAFE
+  quota, Bangladesh Bank, Thai banks), document attestation and apostille,
+  military service and exit rules (Korea, Taiwan, Turkey, Egypt, Thailand,
+  Colombia, Mexico, Brazil, UAE, Algeria/Tunisia), scholarship return bonds
+  (LPDP, YLSY, CAPES, Commonwealth), degree recognition on return (UGC, HEC,
+  CSCSE, YÖK, Saudi equivalency, UAE Resolution 5/2025), Canadian and Mexican
+  US-entry specifics. Existing overlays pruned: 7 UAE, 4 India, 3 Pakistan
+  callouts removed as speculative or unsupported; 3 China callouts corrected
+  (F-1 issue window is 365 days; 2-year UK visit visa cited to the fee table;
+  funds evidence per the UKVI guidance).
+- **Manual checks from Tier A:** China's two Australian callouts (Chinese
+  ImmiAccount, Frequent Traveller stream) could not be re-verified
+  (Home Affairs blocks agents); the Indonesian PILN rule reportedly equating
+  a non-Honours Australian bachelor's with Diploma Tiga (pages blocked);
+  Bangladesh Bank guidelines cited are the 2018 edition.
 - `npx tsx scripts/show-generated.mts <slug>` (in `frontend/`) prints a
   nationality's generated content for spot checks.
 

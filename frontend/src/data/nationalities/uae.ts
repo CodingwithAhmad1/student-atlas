@@ -11,22 +11,44 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "UAE nationals applying for an Australian Subclass 500 visa typically experience straightforward processing. Australia does not require an in-person interview for student visa applications — the entire process is done online. Having comprehensive financial documentation prepared from the outset is the single most effective way to avoid delays. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                text: "Under Resolution No. (5) of 2025, an Emirati student abroad, self-funded or on a scholarship, must study at a university ranked in the world's top 100 for the subject and the top 100 overall in the United States, the United Kingdom or Australia, or in the top 50 for the subject anywhere, using rankings the Ministry of Higher Education and Scientific Research accredits. [CITE: mohesr.gov.ae/resolution-5-2025] A qualification from a university that does not meet the standard is not recognised for employment, promotion or qualification-related benefits in the federal government sector. [CITE: mohesr.gov.ae/resolution-5-2025] **Check the ranking before accepting an offer.**",
               },
             ],
           },
         ],
       },
+      US: { callouts: [
+          {
+            afterBlockId: "us-overview-kvlist",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Under Resolution No. (5) of 2025, an Emirati student abroad, self-funded or on a scholarship, must study at a university ranked in the world's top 100 for the subject and the top 100 overall in the United States, the United Kingdom or Australia, or in the top 50 for the subject anywhere, using rankings the Ministry of Higher Education and Scientific Research accredits. [CITE: mohesr.gov.ae/resolution-5-2025] A qualification from a university that does not meet the standard is not recognised for employment, promotion or qualification-related benefits in the federal government sector. [CITE: mohesr.gov.ae/resolution-5-2025] **Check the ranking before accepting an offer.**",
+              },
+            ],
+          },
+        ] },
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-overview-kvlist",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Under Resolution No. (5) of 2025, an Emirati student abroad, self-funded or on a scholarship, must study at a university ranked in the world's top 100 for the subject and the top 100 overall in the United States, the United Kingdom or Australia, or in the top 50 for the subject anywhere, using rankings the Ministry of Higher Education and Scientific Research accredits. [CITE: mohesr.gov.ae/resolution-5-2025] A qualification from a university that does not meet the standard is not recognised for employment, promotion or qualification-related benefits in the federal government sector. [CITE: mohesr.gov.ae/resolution-5-2025] **Check the ranking before accepting an offer.**",
+              },
+            ],
+          },
+        ] },
     },
     documents: {
       UK: {
         callouts: [
           {
-            afterBlockId: "uk-docs-financial-rule",
+            afterBlockId: "uk-docs-identity",
             blocks: [
               {
                 type: "paragraph",
-                text: "UAE families commonly hold funds across multiple accounts or in investment portfolios. For the UK application, only funds held in a bank account (not stocks, bonds, or real estate equity) count toward the financial threshold. If funds need to be consolidated into a single account to meet the threshold, this should be done well before the 28-day window begins — not within it. A transfer made within the 28-day period that artificially inflates the balance will be visible on statements and may trigger a refusal. [CITE: gov.uk/student-visa/money]",
+                text: "Federal Law No. 6 of 2014 makes national service mandatory for all medically fit Emirati men, and the term is 11 months for those with a high school diploma or higher. [CITE: u.ae/armed-forces] Citizens who fail to enlist without a valid reason by the age of 29 face a prison term, a fine or both, so male students should settle their service before a long course abroad. [CITE: u.ae/armed-forces]",
               },
             ],
           },
@@ -35,16 +57,27 @@ const overlay: NationalityOverlay = {
       AU: {
         callouts: [
           {
-            afterBlockId: "au-docs-financial",
+            afterBlockId: "au-docs-identity",
             blocks: [
               {
                 type: "paragraph",
-                text: "Australia is more flexible than the UK on the form that financial evidence takes. A UAE family that holds wealth in investment accounts, fixed deposits, or property can provide a broader range of financial documents. A letter from a UAE bank confirming the family’s overall financial position is often accepted alongside bank statements. This is a meaningful practical difference for high-net-worth UAE families who do not keep large sums in liquid current accounts. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                text: "Federal Law No. 6 of 2014 makes national service mandatory for all medically fit Emirati men, and the term is 11 months for those with a high school diploma or higher. [CITE: u.ae/armed-forces] Citizens who fail to enlist without a valid reason by the age of 29 face a prison term, a fine or both, so male students should settle their service before a long course abroad. [CITE: u.ae/armed-forces]",
               },
             ],
           },
         ],
       },
+      US: { callouts: [
+          {
+            afterBlockId: "us-docs-identity",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Federal Law No. 6 of 2014 makes national service mandatory for all medically fit Emirati men, and the term is 11 months for those with a high school diploma or higher. [CITE: u.ae/armed-forces] Citizens who fail to enlist without a valid reason by the age of 29 face a prison term, a fine or both, so male students should settle their service before a long course abroad. [CITE: u.ae/armed-forces]",
+              },
+            ],
+          },
+        ] },
     },
     "application-process": {
       AU: {
@@ -74,6 +107,24 @@ const overlay: NationalityOverlay = {
               },
             ],
           },
+          {
+            afterBlockId: "us-arrival-travel",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Abu Dhabi is one of CBP's preclearance airports, where US officers inspect travellers before they board a US-bound flight. [CITE: cbp.gov/preclearance] A student flying from Abu Dhabi therefore needs the passport, visa and Form I-20 in hand before boarding, not only on landing.",
+              },
+            ],
+          },
+          {
+            afterBlockId: "us-arrival-travel",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "The Ministry of Foreign Affairs' Twajudi service lets UAE nationals register their details before travelling or while abroad, so the ministry can contact them in an emergency. Registration is free and uses UAE Pass on the ministry's website or the UAE MOFA app. [CITE: mofa.gov.ae/twajudi]",
+              },
+            ],
+          },
         ],
       },
       AU: {
@@ -83,12 +134,23 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Australian work rights during study are notably more generous than many other destinations. For families where the student is expected to contribute to living costs through part-time work, this is a meaningful practical difference. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                text: "The Ministry of Foreign Affairs' Twajudi service lets UAE nationals register their details before travelling or while abroad, so the ministry can contact them in an emergency. Registration is free and uses UAE Pass on the ministry's website or the UAE MOFA app. [CITE: mofa.gov.ae/twajudi]",
               },
             ],
           },
         ],
       },
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-arrival-intro",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "The Ministry of Foreign Affairs' Twajudi service lets UAE nationals register their details before travelling or while abroad, so the ministry can contact them in an emergency. Registration is free and uses UAE Pass on the ministry's website or the UAE MOFA app. [CITE: mofa.gov.ae/twajudi]",
+              },
+            ],
+          },
+        ] },
     },
   },
 
@@ -102,39 +164,41 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "UAE nationals on OPT are not subject to any nationality-specific work restrictions. The OPT experience for a UAE graduate in the US is the same as for any other nationality. The H-1B lottery — the primary path to remaining after OPT — also treats all nationalities equally in the lottery itself. The Green Card backlog, however, differs significantly by nationality and is discussed in the Getting sponsored section. [CITE: uscis.gov/h-1b]",
+                text: "Graduates returning to the UAE use the Ministry of Higher Education and Scientific Research's University Qualifications Recognition service for a degree from an accredited institution outside the UAE. The recognition report is the official document for employment, further study, visas and government services in the UAE. [CITE: u.ae/qualification-recognition]",
               },
             ],
           },
         ],
       },
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-psw-transition",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Graduates returning to the UAE use the Ministry of Higher Education and Scientific Research's University Qualifications Recognition service for a degree from an accredited institution outside the UAE. The recognition report is the official document for employment, further study, visas and government services in the UAE. [CITE: u.ae/qualification-recognition]",
+              },
+            ],
+          },
+        ] },
+      AU: { callouts: [
+          {
+            afterBlockId: "au-psw-application",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Graduates returning to the UAE use the Ministry of Higher Education and Scientific Research's University Qualifications Recognition service for a degree from an accredited institution outside the UAE. The recognition report is the official document for employment, further study, visas and government services in the UAE. [CITE: u.ae/qualification-recognition]",
+              },
+            ],
+          },
+        ] },
     },
     "getting-sponsored": {
       UK: {
-        callouts: [
-          {
-            afterBlockId: "uk-sponsor-salary",
-            blocks: [
-              {
-                type: "paragraph",
-                text: "The Skilled Worker visa salary threshold of £41,700 applies to most sponsored roles in the UK. For UAE families benchmarking against local salaries, UK graduate salaries in most sectors — particularly outside London — may initially fall below this threshold for entry-level roles. The new entrant rate of £33,400 mitigates this for the first few years. Students intending to remain in the UK after graduation should target roles at employers with active sponsor licences and salaries that meet the threshold — London-based roles in technology, finance, and professional services most reliably meet this bar. [CITE: gov.uk/skilled-worker-visa/your-job]",
-              },
-            ],
-          },
-        ],
+        callouts: [],
       },
       AU: {
-        callouts: [
-          {
-            afterBlockId: "au-sponsor-189",
-            blocks: [
-              {
-                type: "paragraph",
-                text: "For UAE graduates, Australia offers the most straightforward path to permanent residency of the three countries — particularly through the Subclass 189 points-tested route, which requires no employer sponsor and is not subject to a lottery. A UAE graduate with a strong academic record, high English proficiency, and Australian study experience is well-positioned to achieve a competitive points score. The absence of a nationality-based queue (unlike the US EB categories) means the timeline is predictable. This is a meaningful advantage that is frequently overlooked by Gulf families who default to comparing the US and UK. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189]",
-              },
-            ],
-          },
-        ],
+        callouts: [],
       },
     },
   },

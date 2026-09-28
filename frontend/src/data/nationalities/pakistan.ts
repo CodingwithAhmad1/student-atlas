@@ -6,19 +6,19 @@ const overlay: NationalityOverlay = {
   visit: {
     "how-to-apply": {
       US: {
-        callouts: [
+        callouts: [],
+      },
+      AU: { callouts: [
           {
-            afterBlockId: "us-apply-assessment",
-            practical: true,
+            afterBlockId: "au-600-apply-form",
             blocks: [
               {
                 type: "paragraph",
-                text: "Pakistani applicants should expect more detailed questioning about ties to Pakistan, particularly around employment stability, property ownership, and family obligations. Applicants who are self-employed or retired tend to face closer review. Having a clearly written letter explaining the purpose of the visit (visiting a child at university), evidence of the child's enrollment, and a detailed travel itinerary significantly strengthens the application.",
+                text: "As of September 2026, applicants in Pakistan no longer need to book an appointment to give biometrics; they take their passport, identification and the biometrics letter to the collection centre. The Australian High Commission in Islamabad does not answer visa enquiries or give application updates, so questions go to the Home Affairs Global Service Centre. [CITE: pakistan.highcommission.gov.au/visas]",
               },
             ],
           },
-        ],
-      },
+        ] },
     },
   },
 
@@ -40,17 +40,7 @@ const overlay: NationalityOverlay = {
         ],
       },
       UK: {
-        callouts: [
-          {
-            afterBlockId: "uk-docs-financial-rule",
-            blocks: [
-              {
-                type: "paragraph",
-                text: "For Pakistani families, the 28-day rule requires particular attention. Funds must be held in a bank account (not prize bonds, national savings certificates, or property equity). Pakistani bank statements should be on official letterhead with stamps. [CITE: gov.uk/student-visa/money]",
-              },
-            ],
-          },
-        ],
+        callouts: [],
       },
       AU: {
         callouts: [
@@ -66,6 +56,32 @@ const overlay: NationalityOverlay = {
           },
         ],
       },
+    },
+    "application-process": {
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-process-tb",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "GOV.UK lists Home Office-approved TB test clinics for Pakistan in Islamabad, Lahore, Karachi and Mirpur. A certificate from any clinic not on the list is not accepted. [CITE: gov.uk/tb-clinics-pakistan]",
+              },
+            ],
+          },
+        ] },
+    },
+    overview: {
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-overview-kvlist",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Pakistani citizens who live permanently in Pakistan are eligible for **Commonwealth Master's Scholarships** [CITE: cscuk.fcdo.gov.uk/commonwealth-masters-scholarships] and Commonwealth PhD Scholarships for least developed countries and vulnerable states [CITE: cscuk.fcdo.gov.uk/commonwealth-phd-scholarships]. Applications go through a national nominating agency, not directly to the Commonwealth Scholarship Commission, and scholars commit to returning home afterwards. [CITE: cscuk.fcdo.gov.uk/commonwealth-masters-scholarships]",
+              },
+            ],
+          },
+        ] },
     },
   },
 
@@ -83,6 +99,15 @@ const overlay: NationalityOverlay = {
               },
             ],
           },
+          {
+            afterBlockId: "us-psw-cliff",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]",
+              },
+            ],
+          },
         ],
       },
       AU: {
@@ -96,22 +121,32 @@ const overlay: NationalityOverlay = {
               },
             ],
           },
-        ],
-      },
-    },
-    "getting-sponsored": {
-      AU: {
-        callouts: [
           {
-            afterBlockId: "au-sponsor-189",
+            afterBlockId: "au-psw-application",
             blocks: [
               {
                 type: "paragraph",
-                text: "Australia's points-tested Subclass 189 pathway is particularly accessible to Pakistani graduates. There is no nationality-based queue — applications are assessed purely on points. A Pakistani graduate with an Australian qualification, strong English ability, and relevant work experience can achieve a competitive points score. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-independent-189]",
+                text: "Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]",
               },
             ],
           },
         ],
+      },
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-psw-transition",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]",
+              },
+            ],
+          },
+        ] },
+    },
+    "getting-sponsored": {
+      AU: {
+        callouts: [],
       },
     },
   },

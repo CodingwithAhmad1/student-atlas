@@ -12,7 +12,16 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals apply through VFS Global centres in Beijing, Shanghai, Guangzhou, Chengdu, and several other cities. A helpful detail: the UK offers Chinese applicants a 2-year standard visitor visa at the same fee as the 6-month visa, and there is also a longer-term visit visa option. For parents planning multiple visits over the course of a degree, the 2-year visa can save both money and hassle. [CITE: gov.uk/standard-visitor-visa]",
+                text: "Chinese nationals applying in mainland China under the Chinese visa scheme can get a **2-year visit visa for the 6-month visa fee**. For parents planning several visits over the course of a degree, the 2-year visa can save both money and hassle. [CITE: gov.uk/visit-visa-fees-2026]",
+              },
+            ],
+          },
+          {
+            afterBlockId: "uk-svv-intro",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "The UK visitor visa requirement for Chinese nationals does not apply to holders of a Hong Kong SAR or Macao SAR passport. [CITE: gov.uk/visa-national-list]",
               },
             ],
           },
@@ -31,6 +40,17 @@ const overlay: NationalityOverlay = {
           },
         ],
       },
+      US: { callouts: [
+          {
+            afterBlockId: "us-entry-no-restriction",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Chinese nationals with a 10-year B-1/B-2 visa in a Chinese passport must also hold a valid **EVUS enrollment** (at evus.gov) to travel; airlines may refuse boarding without one. An enrollment generally lasts two years, or until the visa or passport expires if sooner. [CITE: cbp.gov/evus-faq]",
+              },
+            ],
+          },
+        ] },
     },
     "how-to-apply": {
       US: {
@@ -73,7 +93,16 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The UK's strict 28-day financial evidence rule requires Chinese applicants to show funds in a bank account (not property or investments) for the full 28-day period before the date of application. Chinese bank certificates (cun kuan zheng ming) are accepted, but must be accompanied by certified English translations. An important heads-up: funds held in WeChat Pay or Alipay balances are NOT accepted — they must be in a bank account. If you need to transfer funds from investments, make sure the full required amount has been sitting in the bank for at least 28 days before you apply. [CITE: gov.uk/student-visa/money]",
+                text: "The UK's 28-day rule means the money must be held for the full 28 days before you apply. Besides bank statements, certificates of deposit and letters from the bank are accepted, but not accounts at institutions that are not regulated in their country or do not keep electronic records, and not stocks, shares or cryptocurrency. [CITE: gov.uk/student-visa/money] [CITE: gov.uk/financial-evidence-students]",
+              },
+            ],
+          },
+          {
+            afterBlockId: "uk-docs-financial-rule",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "China's foreign-exchange rules give each person an annual quota equivalent to US$50,000 for buying foreign currency. Study-abroad costs can be bought outside that quota by showing the bank your ID and documents that state the amount and purpose of the payment. [CITE: safe.gov.cn/tianjin-personal-fx-2026-07]",
               },
             ],
           },
@@ -90,8 +119,28 @@ const overlay: NationalityOverlay = {
               },
             ],
           },
+          {
+            afterBlockId: "au-docs-financial",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "China's foreign-exchange rules give each person an annual quota equivalent to US$50,000 for buying foreign currency. Study-abroad costs can be bought outside that quota by showing the bank your ID and documents that state the amount and purpose of the payment. [CITE: safe.gov.cn/tianjin-personal-fx-2026-07]",
+              },
+            ],
+          },
         ],
       },
+      US: { callouts: [
+          {
+            afterBlockId: "us-docs-financial",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "China's foreign-exchange rules give each person an annual quota equivalent to US$50,000 for buying foreign currency. Study-abroad costs can be bought outside that quota by showing the bank your ID and documents that state the amount and purpose of the payment. [CITE: safe.gov.cn/tianjin-personal-fx-2026-07]",
+              },
+            ],
+          },
+        ] },
     },
     "application-process": {
       US: {
@@ -101,7 +150,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "US Embassy and Consulate posts in China process a high volume of F-1 visas annually. Apply as early as possible: F-1 visas can be issued up to 120 days before the programme start date. The interview itself is typically brief and conducted in English or with an interpreter, so there is no need to be anxious about it. [CITE: studyinthestates.dhs.gov/students/the-form-i-20]",
+                text: "US Embassy and Consulate posts in China process a high volume of F-1 visas. Apply as early as possible: F-1 visas can be issued up to 365 days before the programme start date. [CITE: studyinthestates.dhs.gov/students/the-form-i-20]",
               },
             ],
           },
@@ -116,6 +165,15 @@ const overlay: NationalityOverlay = {
               {
                 type: "paragraph",
                 text: "VFS Global centres across China handle UK visa biometrics appointments, with centres in many major cities, so most families will have one within reach. During peak season, appointments book up quickly, so schedule as early as you can. Priority and super priority services are available at additional cost and well worth considering if your term start date is fixed.",
+              },
+            ],
+          },
+          {
+            afterBlockId: "uk-process-tb",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "The Home Office-approved TB clinics in mainland China are in Beijing, Chengdu, Chongqing, Dongguan, Fuzhou, Guangzhou, Hangzhou, Harbin, Jinan, Nanjing, Shanghai, Shenyang, Shenzhen, Wuhan and Xi'an. [CITE: gov.uk/tb-clinics-china] Bring your passport or ID card, and children under 17 must be accompanied by a parent or legal guardian. [CITE: gov.uk/tb-testing-china]",
               },
             ],
           },
@@ -138,8 +196,39 @@ const overlay: NationalityOverlay = {
               },
             ],
           },
+          {
+            afterBlockId: "au-psw-application",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Graduates returning to China can have a foreign degree assessed by the Ministry of Education's Chinese Service Center for Scholarly Exchange, which confirms that it is genuine and how it corresponds to Chinese qualifications. The application is made online through the national government services platform. [CITE: portal.cscse.edu.cn/degree-authentication]",
+              },
+            ],
+          },
         ],
       },
+      US: { callouts: [
+          {
+            afterBlockId: "us-psw-cliff",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Graduates returning to China can have a foreign degree assessed by the Ministry of Education's Chinese Service Center for Scholarly Exchange, which confirms that it is genuine and how it corresponds to Chinese qualifications. The application is made online through the national government services platform. [CITE: portal.cscse.edu.cn/degree-authentication]",
+              },
+            ],
+          },
+        ] },
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-psw-transition",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Graduates returning to China can have a foreign degree assessed by the Ministry of Education's Chinese Service Center for Scholarly Exchange, which confirms that it is genuine and how it corresponds to Chinese qualifications. The application is made online through the national government services platform. [CITE: portal.cscse.edu.cn/degree-authentication]",
+              },
+            ],
+          },
+        ] },
     },
     "getting-sponsored": {
       AU: {

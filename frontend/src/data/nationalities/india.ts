@@ -5,18 +5,19 @@ const overlay: NationalityOverlay = {
   student: {
     overview: {
       US: {
-        callouts: [
+        callouts: [],
+      },
+      UK: { callouts: [
           {
-            afterBlockId: "us-overview-kvlist",
+            afterBlockId: "uk-overview-kvlist",
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian nationals represent one of the largest F-1 student populations in the US. The application process is standard, but extremely long interview wait times at Indian consulates mean planning must start early. Administrative processing (221g) is less common for Indian F-1 applicants than for some other South Asian nationalities but can still occur, particularly for students in certain STEM research fields. The most common reason for F-1 refusal among Indian applicants is not sufficiently demonstrating non-immigrant intent — the consular officer must be satisfied the student intends to return to India after study, even though the F-1 pathway may eventually lead to immigration. [CITE: travel.state.gov/student-visa]",
+                text: "Indian citizens who live permanently in India are eligible for **Commonwealth Master's Scholarships**, which pay full tuition, return airfare and a monthly stipend for a UK master's degree. Applications go through a national nominating agency, not directly to the Commonwealth Scholarship Commission, and scholars commit to returning home afterwards. [CITE: cscuk.fcdo.gov.uk/commonwealth-masters-scholarships]",
               },
             ],
           },
-        ],
-      },
+        ] },
     },
     documents: {
       US: {
@@ -31,6 +32,15 @@ const overlay: NationalityOverlay = {
             ],
             practical: true,
           },
+          {
+            afterBlockId: "us-docs-financial",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Under the Reserve Bank of India's **Liberalised Remittance Scheme**, every resident individual, including a minor, can send up to USD 250,000 abroad per financial year (April to March), and studies abroad is one of the permitted purposes. [CITE: rbi.org.in/lrs-faq]",
+              },
+            ],
+          },
         ],
       },
       UK: {
@@ -40,7 +50,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian families should note that only funds in bank accounts count toward the UK’s financial requirement — fixed deposits, mutual funds, PPF accounts, and property equity cannot be directly used. Indian bank statements should be on official letterhead with the bank’s stamp and signature. Online-generated statements from most major Indian banks (SBI, HDFC, ICICI) are accepted if they include security features. [CITE: gov.uk/student-visa/money]",
+                text: "Under the Reserve Bank of India's **Liberalised Remittance Scheme**, every resident individual, including a minor, can send up to USD 250,000 abroad per financial year (April to March), and studies abroad is one of the permitted purposes. [CITE: rbi.org.in/lrs-faq]",
               },
             ],
           },
@@ -53,7 +63,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Australia accepts a broader range of financial evidence than the UK, which benefits Indian families who may hold wealth across multiple instruments. Fixed deposits, education loans from recognised Indian banks, and scholarship letters are all accepted. The financial requirement is not rigidly fixed — Australia assesses the overall financial capacity rather than applying a strict threshold. This is more flexible than both the US and UK approaches. However, the source of funds should be clearly explained — large unexplained deposits will attract scrutiny. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                text: "Under the Reserve Bank of India's **Liberalised Remittance Scheme**, every resident individual, including a minor, can send up to USD 250,000 abroad per financial year (April to March), and studies abroad is one of the permitted purposes. [CITE: rbi.org.in/lrs-faq]",
               },
             ],
           },
@@ -73,6 +83,15 @@ const overlay: NationalityOverlay = {
             ],
             practical: true,
           },
+          {
+            afterBlockId: "uk-process-tb",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "GOV.UK lists Home Office-approved TB test clinics for India in Bangalore, Bathinda, Chandigarh, Chennai, Coimbatore, Goa, Gujarat, Guwahati, Hyderabad, Kerala, Kolkata, Lucknow, Ludhiana, Mumbai, Nagpur, Navi Mumbai, New Delhi, Noida and Pune. A certificate from any clinic not on the list is not accepted. [CITE: gov.uk/tb-clinics-india]",
+              },
+            ],
+          },
         ],
       },
     },
@@ -84,12 +103,34 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Indian students face the same challenge as the initial application when renewing F-1 visa stamps: extremely long wait times at Indian consulates. Many Indian students choose to get their visa stamp renewed at a US consulate in a third country (Canada and Mexico are popular choices) rather than risk delays at Indian posts. If returning to India for breaks, check wait times at your nearest consulate well in advance and consider the interview waiver option if your previous visa qualifies. [CITE: studyinthestates.dhs.gov/students/travel]",
+                text: "The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
               },
             ],
           },
         ],
       },
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-arrival-intro",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+              },
+            ],
+          },
+        ] },
+      AU: { callouts: [
+          {
+            afterBlockId: "au-arrival-work",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+              },
+            ],
+          },
+        ] },
     },
   },
 
@@ -108,8 +149,39 @@ const overlay: NationalityOverlay = {
             ],
             practical: true,
           },
+          {
+            afterBlockId: "au-psw-application",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Back in India, a University Grants Commission **equivalence certificate** makes a foreign degree valid for further study at UGC-regulated universities and for public jobs that require a UGC-recognised qualification; applications are made online. Degrees earned through a franchising arrangement are not considered, and medicine, pharmacy, nursing, law and architecture fall under their own statutory councils instead. [CITE: ugc.gov.in/foreign-equivalence-regulations-2025]",
+              },
+            ],
+          },
         ],
       },
+      US: { callouts: [
+          {
+            afterBlockId: "us-psw-cliff",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Back in India, a University Grants Commission **equivalence certificate** makes a foreign degree valid for further study at UGC-regulated universities and for public jobs that require a UGC-recognised qualification; applications are made online. Degrees earned through a franchising arrangement are not considered, and medicine, pharmacy, nursing, law and architecture fall under their own statutory councils instead. [CITE: ugc.gov.in/foreign-equivalence-regulations-2025]",
+              },
+            ],
+          },
+        ] },
+      UK: { callouts: [
+          {
+            afterBlockId: "uk-psw-transition",
+            blocks: [
+              {
+                type: "paragraph",
+                text: "Back in India, a University Grants Commission **equivalence certificate** makes a foreign degree valid for further study at UGC-regulated universities and for public jobs that require a UGC-recognised qualification; applications are made online. Degrees earned through a franchising arrangement are not considered, and medicine, pharmacy, nursing, law and architecture fall under their own statutory councils instead. [CITE: ugc.gov.in/foreign-equivalence-regulations-2025]",
+              },
+            ],
+          },
+        ] },
     },
   },
 };

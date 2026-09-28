@@ -961,4 +961,449 @@ export const citations: Record<string, Citation> = {
     url: "https://cambodia.embassy.gov.au/penh/study.html",
     label: "Australian Embassy Cambodia — Study Australia",
   },
+  "gov.uk/visit-visa-fees-2026": {
+    id: "gov.uk/visit-visa-fees-2026",
+    url: "https://www.gov.uk/government/publications/visa-regulations-revised-table/home-office-immigration-and-nationality-fees-8-april-2026",
+    label: "GOV.UK — Home Office immigration and nationality fees: 8 April 2026",
+  },
+  "gov.uk/financial-evidence-students": {
+    id: "gov.uk/financial-evidence-students",
+    url: "https://www.gov.uk/guidance/financial-evidence-for-student-and-child-student-route-applicants",
+    label: "GOV.UK — Financial evidence for Student and Child Student route applicants",
+  },
+  "gov.uk/tb-clinics-india": {
+    id: "gov.uk/tb-clinics-india",
+    url: "https://www.gov.uk/government/publications/india-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-india",
+    label: "GOV.UK — Tuberculosis testing in India",
+  },
+  "rbi.org.in/lrs-faq": {
+    id: "rbi.org.in/lrs-faq",
+    url: "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=115",
+    label: "Reserve Bank of India — Liberalised Remittance Scheme (LRS) FAQs",
+  },
+  "mea.gov.in/students-registration-portal": {
+    id: "mea.gov.in/students-registration-portal",
+    url: "https://www.mea.gov.in/Students-Registration-Portal",
+    label: "Ministry of External Affairs, India — Students Registration Portal",
+  },
+  "ugc.gov.in/foreign-equivalence-regulations-2025": {
+    id: "ugc.gov.in/foreign-equivalence-regulations-2025",
+    url: "https://www.ugc.gov.in/pdfnews/8668638_UGC-(Recognition-and-Grant-of-Equivalence-to-Qualifications-obtained-from-Foreign-Educational-Institutions)-Regulations-2025.pdf",
+    label: "University Grants Commission — Recognition and Grant of Equivalence to Qualifications obtained from Foreign Educational Institutions Regulations, 2025 (Gazette, 4 April 2025)",
+  },
+  "gov.uk/tb-clinics-pakistan": {
+    id: "gov.uk/tb-clinics-pakistan",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-pakistan/tuberculosis-testing-in-pakistan",
+    label: "GOV.UK — Tuberculosis testing in Pakistan",
+  },
+  "pakistan.highcommission.gov.au/visas": {
+    id: "pakistan.highcommission.gov.au/visas",
+    url: "https://pakistan.highcommission.gov.au/ISLM/Visas_and_Migration.html",
+    label: "Australian High Commission Pakistan — Visas and Citizenship",
+  },
+  "hec.gov.pk/foreign-degree-equivalence": {
+    id: "hec.gov.pk/foreign-degree-equivalence",
+    url: "https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx",
+    label: "Higher Education Commission Pakistan — Recognition/Equivalence of Foreign Degrees",
+  },
+  "gov.uk/tb-clinics-bangladesh": {
+    id: "gov.uk/tb-clinics-bangladesh",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-bangladesh/tuberculosis-testing-in-bangladesh",
+    label: "GOV.UK — Tuberculosis testing in Bangladesh",
+  },
+  "bb.org.bd/gfet-ch11": {
+    id: "bb.org.bd/gfet-ch11",
+    url: "https://www.bb.org.bd/aboutus/regulationguideline/foreignexchange/feguidevol1/11.pdf",
+    label: "Bangladesh Bank — Guidelines for Foreign Exchange Transactions, Vol. 1, Chapter 11: Private Remittances",
+  },
+  "bangladesh.highcommission.gov.au/visas": {
+    id: "bangladesh.highcommission.gov.au/visas",
+    url: "https://bangladesh.highcommission.gov.au/daca/Visas_and_Migration.html",
+    label: "Australian High Commission Bangladesh — Visas and migration",
+  },
+  "gov.uk/tb-clinics-china": {
+    id: "gov.uk/tb-clinics-china",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/approved-tuberculosis-testing-clinics-in-china",
+    label: "GOV.UK — Approved tuberculosis testing clinics in China",
+  },
+  "gov.uk/tb-testing-china": {
+    id: "gov.uk/tb-testing-china",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-china/tuberculosis-testing-in-china",
+    label: "GOV.UK — Tuberculosis testing in China",
+  },
+  "cbp.gov/evus-faq": {
+    id: "cbp.gov/evus-faq",
+    url: "https://www.cbp.gov/travel/international-visitors/electronic-visa-update-system-evus/frequently-asked-questions",
+    label: "U.S. Customs and Border Protection — Electronic Visa Update System (EVUS) Frequently Asked Questions",
+  },
+  "safe.gov.cn/tianjin-personal-fx-2026-07": {
+    id: "safe.gov.cn/tianjin-personal-fx-2026-07",
+    url: "https://www.safe.gov.cn/tianjin/2026/0706/3085.html",
+    label: "国家外汇管理局天津市分局 — 2026年外汇管理互联网信息：个人外汇（07） (in Chinese)",
+  },
+  "portal.cscse.edu.cn/degree-authentication": {
+    id: "portal.cscse.edu.cn/degree-authentication",
+    url: "https://portal.cscse.edu.cn/lxfwzx/ywjs/xlxwrz/index.html",
+    label: "教育部留学服务中心 — 国（境）外学历学位认证 (in Chinese)",
+  },
+  "law.moj.gov.tw/conscript-exit-regulations": {
+    id: "law.moj.gov.tw/conscript-exit-regulations",
+    url: "https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0040006",
+    label: "全國法規資料庫 — 役男出境處理辦法 (in Chinese)",
+  },
+  "law.moj.gov.tw/foreign-degree-recognition": {
+    id: "law.moj.gov.tw/foreign-degree-recognition",
+    url: "https://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=H0030039",
+    label: "全國法規資料庫 — 大學辦理國外學歷採認辦法 (in Chinese)",
+  },
+  "gov.uk/tb-clinics-south-korea": {
+    id: "gov.uk/tb-clinics-south-korea",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-south-korea/tuberculosis-testing-in-south-korea",
+    label: "GOV.UK — Tuberculosis testing in South Korea",
+  },
+  "gov.uk/faster-travel-uk-border": {
+    id: "gov.uk/faster-travel-uk-border",
+    url: "https://www.gov.uk/government/publications/coming-to-the-uk/faster-travel-through-the-uk-border",
+    label: "GOV.UK — Faster travel through the UK border",
+  },
+  "mma.go.kr/overseas-travel-permit": {
+    id: "mma.go.kr/overseas-travel-permit",
+    url: "https://www.mma.go.kr/contents.do?mc=usr0000186",
+    label: "병무청 — 허가 절차 안내 (in Korean)",
+  },
+  "mma.go.kr/study-abroad-permit": {
+    id: "mma.go.kr/study-abroad-permit",
+    url: "https://www.mma.go.kr/contents.do?mc=mma0000786",
+    label: "병무청 — 유학 (국외이주 목적 외 허가) (in Korean)",
+  },
+  "laws.e-gov.go.jp/passport-act-art16": {
+    id: "laws.e-gov.go.jp/passport-act-art16",
+    url: "https://laws.e-gov.go.jp/api/1/articles;lawNum=%E6%98%AD%E5%92%8C%E4%BA%8C%E5%8D%81%E5%85%AD%E5%B9%B4%E6%B3%95%E5%BE%8B%E7%AC%AC%E4%BA%8C%E7%99%BE%E5%85%AD%E5%8D%81%E4%B8%83%E5%8F%B7;article=16",
+    label: "e-Gov (Digital Agency) — Passport Act, Article 16 (in Japanese)",
+  },
+  "gov.uk/uk-border-control/at-border-control": {
+    id: "gov.uk/uk-border-control/at-border-control",
+    url: "https://www.gov.uk/uk-border-control/at-border-control",
+    label: "GOV.UK — Entering the UK: at border control",
+  },
+  "gov.uk/tb-clinics-vietnam": {
+    id: "gov.uk/tb-clinics-vietnam",
+    url: "https://www.gov.uk/government/publications/vietnam-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-vietnam",
+    label: "GOV.UK — Tuberculosis testing in Vietnam",
+  },
+  "hcmc.vietnam.embassy.gov.au/visas-and-migration": {
+    id: "hcmc.vietnam.embassy.gov.au/visas-and-migration",
+    url: "https://hcmc.vietnam.embassy.gov.au/hchi/visas_and_migration.html",
+    label: "Australian Consulate-General Ho Chi Minh City — Visas and migration",
+  },
+  "xaydungchinhsach.chinhphu.vn/thong-tu-65-2026": {
+    id: "xaydungchinhsach.chinhphu.vn/thong-tu-65-2026",
+    url: "https://xaydungchinhsach.chinhphu.vn/thong-tu-so-65-2026-tt-bgddt-quy-dinh-cong-nhan-van-bang-do-co-so-giao-duc-nuoc-ngoai-cap-de-su-dung-tai-viet-nam-119260813161727367.htm",
+    label: "Government of Vietnam portal — Circular 65/2026/TT-BGDĐT on recognising foreign degrees for use in Vietnam (in Vietnamese)",
+  },
+  "gov.uk/tb-clinics-thailand": {
+    id: "gov.uk/tb-clinics-thailand",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-thailand/tuberculosis-testing-in-thailand",
+    label: "GOV.UK — Tuberculosis testing in Thailand",
+  },
+  "tdc.mi.th/deferral-study-abroad": {
+    id: "tdc.mi.th/deferral-study-abroad",
+    url: "https://www.tdc.mi.th/pdf/tdcservice/service_sd_004.pdf",
+    label: "Territorial Defence Command — Deferral of conscription selection for students studying abroad (in Thai)",
+  },
+  "bot.or.th/fx-transfer-documents": {
+    id: "bot.or.th/fx-transfer-documents",
+    url: "https://www.bot.or.th/content/dam/bot/documents/th/our-roles/financial-markets/foreign-exchange-regulations/FX-Regulation/Banking-doc-fortransfer-BanksAssociation-16Jun66.pdf",
+    label: "Bank of Thailand — Supporting documents for foreign-exchange transactions, Thai Bankers' Association guidance (in Thai)",
+  },
+  "thailand.embassy.gov.au/visas-and-migration": {
+    id: "thailand.embassy.gov.au/visas-and-migration",
+    url: "https://thailand.embassy.gov.au/bkok/Visas_and_Migration.html",
+    label: "Australian Embassy Thailand — Visas and migration",
+  },
+  "gov.uk/tb-clinics-indonesia": {
+    id: "gov.uk/tb-clinics-indonesia",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-indonesia/tuberculosis-testing-in-indonesia",
+    label: "GOV.UK — Tuberculosis testing in Indonesia",
+  },
+  "portal.ahu.go.id/apostille-kanwil": {
+    id: "portal.ahu.go.id/apostille-kanwil",
+    url: "https://portal.ahu.go.id/id/detail/20-publication/3810-kabar-gembira-mulai-saat-ini-pencetakan-sertifikat-apostille-bisa-di-kanwil-kemenkumham-seluruh-indonesia",
+    label: "Direktorat Jenderal AHU — Pencetakan sertifikat apostille bisa di Kanwil Kemenkumham seluruh Indonesia (in Indonesian)",
+  },
+  "peduliwni.kemlu.go.id": {
+    id: "peduliwni.kemlu.go.id",
+    url: "https://peduliwni.kemlu.go.id/",
+    label: "Kementerian Luar Negeri — Portal Peduli WNI (in Indonesian)",
+  },
+  "lpdp.kemenkeu.go.id/beasiswa-reguler-2024": {
+    id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2024",
+    url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2024/",
+    label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2024 (in Indonesian)",
+  },
+  "imigrasi.go.id/faq-sduwhv": {
+    id: "imigrasi.go.id/faq-sduwhv",
+    url: "https://www.imigrasi.go.id/faq/sduwhv",
+    label: "Direktorat Jenderal Imigrasi — FAQ SDUWHV (in Indonesian)",
+  },
+  "gov.uk/tb-clinics-malaysia": {
+    id: "gov.uk/tb-clinics-malaysia",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-malaysia/tuberculosis-testing-in-malaysia",
+    label: "GOV.UK — Tuberculosis testing in Malaysia",
+  },
+  "mqa.gov.my/esisraf-luar-negara": {
+    id: "mqa.gov.my/esisraf-luar-negara",
+    url: "https://www2.mqa.gov.my/esisraf/luarnegara.cfm",
+    label: "Malaysian Qualifications Agency — eSisraf: Sistem Pengiktirafan Kelayakan Perkhidmatan Awam, luar negara (in Malay)",
+  },
+  "gov.uk/tb-clinics-philippines": {
+    id: "gov.uk/tb-clinics-philippines",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-the-philippines/tuberculosis-testing-in-the-philippines",
+    label: "GOV.UK — Tuberculosis testing in the Philippines",
+  },
+  "caraga.ched.gov.ph/how-to-apply-for-cav": {
+    id: "caraga.ched.gov.ph/how-to-apply-for-cav",
+    url: "https://caraga.ched.gov.ph/how-to-apply-for-cav/",
+    label: "Commission on Higher Education, Caraga Region — How to apply for Certification, Authentication, and Verification (C.A.V.) of Student's Academic Records",
+  },
+  "moest.gov.np/faq": {
+    id: "moest.gov.np/faq",
+    url: "https://moest.gov.np/pages/1048911821/",
+    label: "Ministry of Education, Science and Technology (Nepal) — Frequently asked questions (in Nepali)",
+  },
+  "moest.gov.np/higher-education-division": {
+    id: "moest.gov.np/higher-education-division",
+    url: "https://moest.gov.np/pages/1006912529/",
+    label: "Ministry of Education, Science and Technology (Nepal) — Higher Education Division (in Nepali)",
+  },
+  "gov.uk/tb-clinics-nepal": {
+    id: "gov.uk/tb-clinics-nepal",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-nepal/tuberculosis-testing-in-nepal",
+    label: "GOV.UK — Tuberculosis testing in Nepal",
+  },
+  "nepal.embassy.gov.au/visa-immigration": {
+    id: "nepal.embassy.gov.au/visa-immigration",
+    url: "https://nepal.embassy.gov.au/kmdu/visa_immigration.html",
+    label: "Australian Embassy Nepal — Australian visas",
+  },
+  "gov.uk/tb-clinics-sri-lanka": {
+    id: "gov.uk/tb-clinics-sri-lanka",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinic-in-sri-lanka/tuberculosis-testing-in-sri-lanka",
+    label: "GOV.UK — Tuberculosis testing in Sri Lanka",
+  },
+  "dfe.lk/faqs": {
+    id: "dfe.lk/faqs",
+    url: "https://www.dfe.lk/web/index.php?option=com_content&view=article&id=402&Itemid=742&lang=en",
+    label: "Central Bank of Sri Lanka, Department of Foreign Exchange — FAQs",
+  },
+  "cscuk.fcdo.gov.uk/national-nominating-agencies": {
+    id: "cscuk.fcdo.gov.uk/national-nominating-agencies",
+    url: "https://cscuk.fcdo.gov.uk/apply/national-nominating-agencies/",
+    label: "Commonwealth Scholarship Commission in the UK — National nominating agencies",
+  },
+  "mfa.gov.lk/degree-certificates-foreign-universities": {
+    id: "mfa.gov.lk/degree-certificates-foreign-universities",
+    url: "https://mfa.gov.lk/en/degree-certificates-awarded-by-foreign-universities/",
+    label: "Ministry of Foreign Affairs (Sri Lanka) — Degree certificates awarded by foreign universities",
+  },
+  "mohesr.gov.ae/resolution-5-2025": {
+    id: "mohesr.gov.ae/resolution-5-2025",
+    url: "https://mohesr.gov.ae/Ar/Legislation/Documents/Resolution_No._(5)_of_2025_regarding_the_governance_of_higher_education_studies_for_citizen_students_outside_the_country_EN.pdf",
+    label: "Ministry of Higher Education and Scientific Research — Resolution No. (5) of 2025 regarding the Standards for UAE Nationals Studying Abroad",
+  },
+  "u.ae/armed-forces": {
+    id: "u.ae/armed-forces",
+    url: "https://u.ae/en/information-and-services/justice-safety-and-the-law/Safety/armed-forces",
+    label: "The Official Platform of the UAE Government — Armed Forces",
+  },
+  "cbp.gov/preclearance": {
+    id: "cbp.gov/preclearance",
+    url: "https://www.cbp.gov/travel/preclearance",
+    label: "U.S. Customs and Border Protection — Preclearance",
+  },
+  "mofa.gov.ae/twajudi": {
+    id: "mofa.gov.ae/twajudi",
+    url: "https://www.mofa.gov.ae/en/Services/Twajudi-",
+    label: "UAE Ministry of Foreign Affairs — Twajudi",
+  },
+  "u.ae/qualification-recognition": {
+    id: "u.ae/qualification-recognition",
+    url: "https://u.ae/en/information-and-services/education/higher-education/Student-admission-and-qualification-recognition",
+    label: "The Official Platform of the UAE Government — Student admission and qualification recognition",
+  },
+  "eqs.moe.gov.sa/equivalency-rules-summary": {
+    id: "eqs.moe.gov.sa/equivalency-rules-summary",
+    url: "https://eqs.moe.gov.sa/app/content/docs/RulesAndRegulationsSummary.pdf?20240630_233630000=",
+    label: "Saudi Ministry of Education — Summary of university certificate equivalency rules and notices for students abroad (in Arabic)",
+  },
+  "govinfo.gov/31-cfr-560-550": {
+    id: "govinfo.gov/31-cfr-560-550",
+    url: "https://www.govinfo.gov/content/pkg/CFR-2025-title31-vol3/xml/CFR-2025-title31-vol3-sec560-550.xml",
+    label: "U.S. Government Publishing Office — 31 CFR 560.550 Certain noncommercial, personal remittances to or from Iran authorized",
+  },
+  "vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme": {
+    id: "vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme",
+    url: "https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413",
+    label: "Embassy of Türkiye in Washington — Öğrenci Askerlik Erteleme (in Turkish)",
+  },
+  "mevzuat.gov.tr/7179-askeralma-kanunu": {
+    id: "mevzuat.gov.tr/7179-askeralma-kanunu",
+    url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.7179.pdf",
+    label: "Mevzuat Bilgi Sistemi — Askeralma Kanunu No. 7179 (in Turkish)",
+  },
+  "mevzuat.gov.tr/yurtdisi-diploma-denklik-yonetmeligi": {
+    id: "mevzuat.gov.tr/yurtdisi-diploma-denklik-yonetmeligi",
+    url: "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=24138&MevzuatTertip=5",
+    label: "Mevzuat Bilgi Sistemi — Yurtdışı Yükseköğretim Diplomaları Tanıma ve Denklik Yönetmeliği (in Turkish)",
+  },
+  "yyegm.meb.gov.tr/sss": {
+    id: "yyegm.meb.gov.tr/sss",
+    url: "https://yyegm.meb.gov.tr/www/sss.php",
+    label: "Ministry of National Education, General Directorate of Higher Education and Education Abroad — Sıkça Sorulan Sorular (in Turkish)",
+  },
+  "egyptembassy.net/military-service": {
+    id: "egyptembassy.net/military-service",
+    url: "https://egyptembassy.net/consular-services/military-service/",
+    label: "Embassy of Egypt in Washington — Military Service (in Arabic)",
+  },
+  "scu.eg/degree-equivalence": {
+    id: "scu.eg/degree-equivalence",
+    url: "https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/",
+    label: "Supreme Council of Universities — General Administration for Degree Equivalence (in Arabic)",
+  },
+  "egyptembassy.net/personal-legalization": {
+    id: "egyptembassy.net/personal-legalization",
+    url: "https://egyptembassy.net/consular-services/legalization/personal-legalization-procedure/",
+    label: "Embassy of Egypt in Washington — Authentication of Personal Documents",
+  },
+  "gov.uk/tb-clinics-nigeria": {
+    id: "gov.uk/tb-clinics-nigeria",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-nigeria/tuberculosis-testing-in-nigeria",
+    label: "GOV.UK — Tuberculosis testing in Nigeria",
+  },
+  "cbn.gov.ng/fx-market": {
+    id: "cbn.gov.ng/fx-market",
+    url: "https://www.cbn.gov.ng/intops/FXMarket.html",
+    label: "Central Bank of Nigeria — Foreign Exchange Market",
+  },
+  "education.gov.ng/attestation": {
+    id: "education.gov.ng/attestation",
+    url: "https://education.gov.ng/attestation-of-academic-documents/",
+    label: "Federal Ministry of Education — Attestation of Academic Documents",
+  },
+  "fmino.gov.ng/ess-online-verification": {
+    id: "fmino.gov.ng/ess-online-verification",
+    url: "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
+    label: "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
+  },
+  "nysc.gov.ng/foreign-trained-graduates": {
+    id: "nysc.gov.ng/foreign-trained-graduates",
+    url: "https://www.nysc.gov.ng/foreignmobreg.html",
+    label: "NYSC — Foreign Trained Graduates Requirements",
+  },
+  "gov.uk/tb-clinics-ghana": {
+    id: "gov.uk/tb-clinics-ghana",
+    url: "https://www.gov.uk/government/publications/ghana-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-ghana",
+    label: "GOV.UK — Tuberculosis testing in Ghana",
+  },
+  "cems.gtec.edu.gh": {
+    id: "cems.gtec.edu.gh",
+    url: "https://cems.gtec.edu.gh/",
+    label: "Ghana Tertiary Education Commission — Credential Evaluation Service",
+  },
+  "gov.uk/tb-clinics-kenya": {
+    id: "gov.uk/tb-clinics-kenya",
+    url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-kenya/tuberculosis-testing-in-kenya",
+    label: "GOV.UK — Tuberculosis testing in Kenya",
+  },
+  "mfa.ecitizen.go.ke": {
+    id: "mfa.ecitizen.go.ke",
+    url: "https://mfa.ecitizen.go.ke/",
+    label: "State Department for Foreign Affairs (eCitizen) — Authentication of documents",
+  },
+  "gov.br/pf/autorizacao-para-menor": {
+    id: "gov.br/pf/autorizacao-para-menor",
+    url: "https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-autorizacao-para-menor-informacoes-e",
+    label: "Polícia Federal — Documentação: Autorização para menor, informações e modelos (in Portuguese)",
+  },
+  "gov.br/alistar-se-no-servico-militar-no-exterior": {
+    id: "gov.br/alistar-se-no-servico-militar-no-exterior",
+    url: "https://www.gov.br/pt-br/servicos/alistar-se-no-servico-militar-no-exterior",
+    label: "Governo Federal (gov.br) — Alistar-se no serviço militar no exterior (in Portuguese)",
+  },
+  "gov.br/pf/regularidade-servico-militar": {
+    id: "gov.br/pf/regularidade-servico-militar",
+    url: "https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-regularidade-servico-militar-documentos",
+    label: "Polícia Federal — Documentação: Regularidade com Serviço Militar (in Portuguese)",
+  },
+  "gov.br/receitafederal/nao-residente": {
+    id: "gov.br/receitafederal/nao-residente",
+    url: "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/preenchimento/dsdp/nao-residente",
+    label: "Receita Federal — Residente e Não Residente (in Portuguese)",
+  },
+  "gov.br/comunicar-saida-definitiva-do-pais": {
+    id: "gov.br/comunicar-saida-definitiva-do-pais",
+    url: "https://www.gov.br/pt-br/servicos/comunicar-saida-definitiva-do-pais",
+    label: "Governo Federal (gov.br) — Comunicar saída definitiva do país (in Portuguese)",
+  },
+  "gov.br/capes/ex-bolsistas": {
+    id: "gov.br/capes/ex-bolsistas",
+    url: "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/informacoes-internacionais/ex-bolsistas",
+    label: "CAPES — Ex-bolsistas (in Portuguese)",
+  },
+  "gov.br/revalidar-diploma": {
+    id: "gov.br/revalidar-diploma",
+    url: "https://www.gov.br/pt-br/servicos/reconhecer-ou-revalidar-diploma-de-curso-superior-obtido-no-exterior",
+    label: "Governo Federal (gov.br) — Revalidação e Reconhecimento de Diplomas Estrangeiros (in Portuguese)",
+  },
+  "migracioncolombia.gov.co/salida-menores": {
+    id: "migracioncolombia.gov.co/salida-menores",
+    url: "https://www.migracioncolombia.gov.co/tramites-y-servicios/instructivos/salida-del-pais-para-menores-de-edad",
+    label: "Migración Colombia — Salida del país para niños, niñas y adolescentes (in Spanish)",
+  },
+  "mineducacion.gov.co/legalizacion-educacion-superior": {
+    id: "mineducacion.gov.co/legalizacion-educacion-superior",
+    url: "https://www.mineducacion.gov.co/portal/salaprensa/Noticias/393112:Legalizar-documentos-de-Educacion-Superior-expedidos-en-Colombia-un-tramite-agil-y-en-linea",
+    label: "Ministerio de Educación Nacional — Legalizar documentos de Educación Superior expedidos en Colombia: un trámite ágil y en línea (in Spanish)",
+  },
+  "colombiacompra.gov.co/ley-1861-2017": {
+    id: "colombiacompra.gov.co/ley-1861-2017",
+    url: "https://relatoria.colombiacompra.gov.co/normativa/ley-1861-de-2017/",
+    label: "Colombia Compra Eficiente — Ley 1861 de 2017 (servicio de reclutamiento) (in Spanish)",
+  },
+  "mineducacion.gov.co/convalidacion-proceso": {
+    id: "mineducacion.gov.co/convalidacion-proceso",
+    url: "https://www.mineducacion.gov.co/portal/convalidaciones/Convalidaciones-Educacion-Superior/350670:Conozca-el-proceso",
+    label: "Ministerio de Educación Nacional — Convalidaciones: Conozca el proceso (in Spanish)",
+  },
+  "cbp.gov/whti-faqs": {
+    id: "cbp.gov/whti-faqs",
+    url: "https://www.cbp.gov/travel/us-citizens/western-hemisphere-travel-initiative/faqs",
+    label: "U.S. Customs and Border Protection — Western Hemisphere Travel Initiative (WHTI) Frequently Asked Questions",
+  },
+  "cbp.gov/cbp-dec-13-09": {
+    id: "cbp.gov/cbp-dec-13-09",
+    url: "https://www.cbp.gov/bulletins/Vol_47_No_27_Title.pdf",
+    label: "U.S. Customs and Border Protection — CBP Dec. No. 13-09: Extension of Border Zone in the State of New Mexico",
+  },
+  "gob.mx/inm-formato-sam": {
+    id: "gob.mx/inm-formato-sam",
+    url: "https://www.gob.mx/inm/articulos/preguntas-y-respuestas-relativo-al-formato-de-salida-de-menores-sam?idiom=es",
+    label: "Instituto Nacional de Migración — Preguntas y respuestas relativo al Formato de salida de menores (SAM) (in Spanish)",
+  },
+  "secihti.mx/bext-2026": {
+    id: "secihti.mx/bext-2026",
+    url: "https://secihti.mx/wp-content/uploads/2026/03/Convocatoria_BEXT_CYH_2026-20260311T004308.pdf",
+    label: "SECIHTI — Convocatoria 2026 Becas de Posgrado en Ciencia y Humanidades en el Extranjero (in Spanish)",
+  },
+  "consulmex.sre.gob.mx/nuevayork-cartilla": {
+    id: "consulmex.sre.gob.mx/nuevayork-cartilla",
+    url: "https://consulmex.sre.gob.mx/nuevayork/index.php/espanol/servicios-consulares/cartilla-militar",
+    label: "Consulado General de México en Nueva York — Cartilla del Servicio Militar Nacional (in Spanish)",
+  },
+  "gob.mx/sep-revalidacion-superior": {
+    id: "gob.mx/sep-revalidacion-superior",
+    url: "https://www.gob.mx/sep/acciones-y-programas/revalidacion-de-estudios-del-tipo-superior-sep-18-019",
+    label: "Secretaría de Educación Pública — Revalidación de Estudios del Tipo Superior (SEP-18-019) (in Spanish)",
+  },
 };
