@@ -139,7 +139,7 @@ official page always wins.
 ```
 create_nationality(name, slug, label, tier, traits_json, destination?)
 ```
-`tier` is A, B or C (EXPANSION-PLAN.md §6). This writes the traits row, an
+`tier` is A, B or C (HANDBOOK.md §3). This writes the traits row, an
 empty `nationalities/{slug}.ts`, the registry entry and the dropdown entry in
 one type-checked step. `trait_coverage(slug)` shows the row; the generated
 callouts follow from it.
@@ -256,16 +256,9 @@ Target `dual-origin-position` or `dual-destination-position` block IDs.
 
 ---
 
-## Currently Implemented Nationalities
+## Implemented Nationalities
 
-| Name | Slug | Tier | Hand callouts | Notes |
-|---|---|---|---|---|
-| UAE | `uae` | A | 9 | Visitor 600 (not ETA-eligible), differential evidence, no dual nationality |
-| Pakistan | `pakistan` | A | 7 | TB test, biometrics, health exam; dual nationality with listed countries |
-| India | `india` | A | 7 | Visa national, TB test, severe visa-bulletin backlog, OCI |
-| China | `china` | A | 11 | Differential evidence, TB test, severe backlog, Article 9 |
-| United Kingdom | `uk` | A | 1 | Destination: domestic profiles; VWP, AU ETA, 417 |
-| United States | `us` | A | 0 | Destination: domestic profiles; UK ETA, AU ETA, 462 |
-| Australia | `au` | A | 0 | Destination: domestic profiles; VWP, UK ETA, E-3, Youth Mobility |
-
-`trait_coverage()` is the live version of this table.
+All 100 nationalities in `nationalities/registry.ts` (tiers A 28, B 35, C 37).
+`trait_coverage()` gives the live table; `npx tsx scripts/show-generated.mts
+<slug>` prints the generated content for one nationality. Open gaps (unknown
+dual-nationality rows, uncited nationalities) are listed in `HANDBOOK.md` §7.

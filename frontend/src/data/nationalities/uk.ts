@@ -3,10 +3,9 @@ import type { NationalityOverlay } from "../types";
 /**
  * United Kingdom — nationality overlay.
  *
- * Domestic profiles for the UK columns, ESTA and the Australian ETA, the
+ * Domestic profiles for the UK columns, ESTA and the Australian eVisitor, the
  * Working Holiday visa and dual nationality are generated from
- * `traits/nationality-traits.ts`. Only hand-written extras live here
- * (audit: AUDIT-2026-09.md, uk.ts rows).
+ * `traits/nationality-traits.ts`. Only hand-written extras live here.
  */
 const overlay: NationalityOverlay = {
   student: {

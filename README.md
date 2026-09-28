@@ -6,10 +6,10 @@ Personalised visa and immigration guidance for international students. Users sel
 
 ```
 Student Atlas/
+├── HANDBOOK.md         # Structure, check-ups, manual tasks, launch checklist
 ├── frontend/           # React + TypeScript + Vite (main app — static content from data files)
 ├── monitoring/         # Source-change watcher, detection only (see monitoring/README.md)
 ├── mcp-content-server/ # MCP server: alert review + content editing
-├── docs/               # Source content material
 └── archive/            # Retired Flask app, unused backend, old docs (see archive/README.md)
 ```
 
@@ -27,17 +27,20 @@ npm run check:content  # citations, glossary terms, callout anchors, profiles
 
 ### Content System
 
-Three-layer overlay architecture for scalable multi-nationality content:
+Four layers, merged for the reader's nationality:
 
-1. **Base content** (`src/data/sections/`) — nationality-agnostic visa info
-2. **Profiles** (`src/data/profiles/`) — reusable alternative visa paths (ETA, VWP, domestic)
-3. **Nationality overlays** (`src/data/nationalities/`) — per-nationality callouts and profile references
+1. **Traits** (`src/data/traits/`) — a 100 × 19 table of nationality facts, each column read from one official list page, plus the rules that turn it into generated callouts and profile swaps
+2. **Base content** (`src/data/sections/`) — nationality-agnostic visa info
+3. **Profiles** (`src/data/profiles/`) — alternative content blocks (ETA, ESTA, eVisitor, domestic)
+4. **Nationality overlays** (`src/data/nationalities/`) — hand-written, cited callouts per nationality
 
-See `src/data/CONTENT-GUIDE.md` for the full content management workflow.
+See `src/data/CONTENT-GUIDE.md` for the content workflow and `HANDBOOK.md` for the whole system.
 
-### Currently supported nationalities
+### Supported nationalities
 
-UAE, Pakistan, India, China, United Kingdom, United States, Australia
+The 100 most populous nationalities (UN mid-2023), in three depth tiers; every
+one has the full 19-trait row. See `HANDBOOK.md` for how the content, checks
+and manual reviews fit together.
 
 ## Source Monitoring & Activity Feed
 
