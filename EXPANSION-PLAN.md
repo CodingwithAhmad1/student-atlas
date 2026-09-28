@@ -330,7 +330,9 @@ Tier A done 2026-09-28: 196 cited callouts for all 25, and the four
 pre-existing overlays pruned or corrected. Phase 2 content work is complete
 apart from the manual checks listed in NEXT-STEPS.
 Retry 2026-09-28: 14 callouts for 7 of the 8 Tier B nationalities that had
-none (Israel still none); dual nationality 85 of 100 cited (15 unknown).
+none (Israel: practical callouts only); dual nationality 85 of 100 cited
+(15 unknown). Pass 4 (2026-09-28, archived official copies allowed and
+marked "*"): 93 of 100 cited, 7 unknown (see NEXT-STEPS).
 US embassy pages load only in a browser, so they carry a `skipReason`.
 
 ### Phase 3 — Hardening (1 session)

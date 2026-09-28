@@ -196,4 +196,13 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "state.gov/embassy-caracas-resumption": { skipReason: "state.gov rejects automated clients (HTTP 403); verify this page manually." },
   // A randomised "related posts" list churns on every fetch.
   "minesup.gov.cm/equivalence-platform": { stripSelectors: [".related-posts"] },
+  // Dual-nationality pass 4 (2026-09-28): archived copies of official pages (label ends in *).
+  "amategeko.gov.bi/loi-1-013-2000-code-nationalite": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
+  "gouv.ci/code-nationalite-61-415": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
+  "coj.gov.kh/law-on-nationality-2018": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
+  "minex.gob.gt/ley-de-nacionalidad": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
+  "rc.majlis.ir/civil-code": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
+  "mojca.gov.ss/transitional-constitution": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
+  "moj.gov.sd/nationality-act-1994": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
+  "moj.gov.sy/nationality-decree-276-1969": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
 };
