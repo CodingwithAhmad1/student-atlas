@@ -1,0 +1,22 @@
+{
+  "id": "20260929-1125--fmino-gov-ng-ess-online-verification",
+  "kind": "change",
+  "sourceId": "fmino.gov.ng/ess-online-verification",
+  "relatedSourceIds": [],
+  "sourceLabel": "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
+  "sourceUrl": "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "c1c61d5ec542adfbf54573e023880dd6b1645b507c71752eb69f8d723440c9f7",
+  "newHash": "e9f7341dbe52dbd120cd51927d4fb6dd38455cacbdbaf04041dc40a890093aa2",
+  "diff": "Index: fmino.gov.ng/ess-online-verification\n===================================================================\n--- fmino.gov.ng/ess-online-verification\tprevious\n+++ fmino.gov.ng/ess-online-verification\tcurrent\n@@ -21,6 +21,6 @@\n Mrs. Folasade Boriowo\n Director, Press and Public Relations\n RELATED ARTICLESMORE FROM AUTHOR\n-BPP vs CIPSMN: Federal High Court Adjourns To November 17, 2026\n-WPRF 2026: Nigeria Ready To Showcase Its Growing Global Influence, Says Information Minister\n-FG Pledges To Consolidate Reforms, Deliver Greater Opportunities To Citizens\n\\ No newline at end of file\n+World Rabies Day 2026: FMLD, Partners Mobilise Nigerians for Stronger Fight Against Rabies\n+‎BPSR DG Urges Workers to Take Ownership of Retirement Planning\n+UNGA 81: Udeh Seeks $1bn Silicon Valley Investment for Nigeria’s Innovation Drive\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

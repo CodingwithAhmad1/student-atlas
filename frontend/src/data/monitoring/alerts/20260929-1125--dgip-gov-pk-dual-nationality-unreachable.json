@@ -1,0 +1,22 @@
+{
+  "id": "20260929-1125--dgip-gov-pk-dual-nationality-unreachable",
+  "kind": "unreachable",
+  "sourceId": "dgip.gov.pk/dual-nationality",
+  "relatedSourceIds": [],
+  "sourceLabel": "Government of Pakistan, Directorate General of Immigration & Passports — Dual Nationality",
+  "sourceUrl": "https://dgip.gov.pk/immigration/dual_nationality.php",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "c534dba6732a6562351807fa64492de9f8fee14bbbff8781f022a7598ed7c312",
+  "newHash": "unreachable-2026-09-29",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://dgip.gov.pk/immigration/dual_nationality.php: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://dgip.gov.pk/immigration/dual_nationality.php: fetch failed"
+}

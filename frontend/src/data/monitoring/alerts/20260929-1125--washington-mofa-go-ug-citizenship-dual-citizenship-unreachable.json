@@ -1,0 +1,22 @@
+{
+  "id": "20260929-1125--washington-mofa-go-ug-citizenship-dual-citizenship-unreachable",
+  "kind": "unreachable",
+  "sourceId": "washington.mofa.go.ug/citizenship-dual-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "Embassy of the Republic of Uganda, Washington — Citizenship & Dual Citizenship",
+  "sourceUrl": "https://washington.mofa.go.ug/consular/citizenship-dual-citizenship",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "ca96116650e6b815d92ffb10a4d291f47cd83177fb4887aaef60eb47d3ddaf57",
+  "newHash": "unreachable-2026-09-29",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://washington.mofa.go.ug/consular/citizenship-dual-citizenship). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://washington.mofa.go.ug/consular/citizenship-dual-citizenship"
+}

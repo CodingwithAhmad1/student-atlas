@@ -1,0 +1,22 @@
+{
+  "id": "20260929-1125--imigrasi-go-id-faq-sduwhv-unreachable",
+  "kind": "unreachable",
+  "sourceId": "imigrasi.go.id/faq-sduwhv",
+  "relatedSourceIds": [],
+  "sourceLabel": "Direktorat Jenderal Imigrasi — FAQ SDUWHV (in Indonesian)",
+  "sourceUrl": "https://www.imigrasi.go.id/faq/sduwhv",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "65bbbeb514a1c337de73b844c1685460d9848ec672e11cd19e6eb29f7a2bae30",
+  "newHash": "unreachable-2026-09-29",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.imigrasi.go.id/faq/sduwhv). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://www.imigrasi.go.id/faq/sduwhv"
+}

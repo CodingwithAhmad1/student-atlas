@@ -1,0 +1,25 @@
+{
+  "id": "20260929-1125--immi-homeaffairs-gov-au-visas-getting-a-visa-visa-listing-student-500",
+  "kind": "change",
+  "sourceId": "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+  "relatedSourceIds": [
+    "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/fees",
+    "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500/student-visa-500-how-to-apply"
+  ],
+  "sourceLabel": "Australian Department of Home Affairs — Student Visa (Subclass 500)",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+  "country": "AU",
+  "category": "student",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "8ae6ebe0172e8c4879d712c0377c28a551ad2258ee5c54b820cd59f933815921",
+  "newHash": "bac51391068890a01dec23ccabd7a98cb2c708408c5d868dd9d324dbee8dffaa",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500\tcurrent\n@@ -1,8 +1,6 @@\n Description: Visit Australia to study full-time in a recognised educational institution.\n Alert: Student visa 500 - ASEAN\n The CRICOS course, BSB80120 Graduate Diploma of Management (Learning) was cancelled under Instrument [F2026L01160] on 4 September 2026. Affected students can find information on the Department of Education website, at Graduate Diploma of Management (Learning) Course Cancellation. Further information for student visa holders is also available under Education provider default.\n-Alert: Visa 500\n-From 23 March 2024 the Genuine Student requirement replaces the Genuine Temporary Entrant (GTE) requirement for Student visas. Also, applications lodged for a Student or Temporary Graduate visa will be assessed under the New English Language Requirements.\n Visit Australia to participate in a course of study.\n When you have this visa\n apply online in or outside Australia be enrolled in a course of study in Australia and hold a valid Confirmation of Enrolment (CoE) when we decide your visa hold Overseas Student Health Cover (OSHC), or fall in one of the exemption categories be 6 years or older prove you have a welfare arrangement, if you are under 18 If in Australia hold an eligible substantive visa. See, ‘Have this Visa if applying while in Australia” in Eligibility Tab. Note: A CoE is no longer valid if it is cancelled or the course is complete A substantive visa ceases to be in effect if another substantive visa is granted Applications are received Australian Eastern Standard Time (AEST) (or Australian Eastern daylight standard time (AEDST) when applicable) Help with your visa If you are getting help with your visa, before you pay someone, read information on Who can help with your visa application. Apply\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

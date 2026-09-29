@@ -1,0 +1,22 @@
+{
+  "id": "20260929-1125--ica-gov-pg-citizenship-and-dual-citizenship-unreachable",
+  "kind": "unreachable",
+  "sourceId": "ica.gov.pg/citizenship-and-dual-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "Papua New Guinea Immigration and Citizenship Authority (ICA) — Citizenship and Dual Citizenship",
+  "sourceUrl": "https://ica.gov.pg/citizenship/citizenship-and-dual-citizenship",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "0d8380c95f5b6f77bd2db208797d048d85f66cd69c12aa649132700b5e504517",
+  "newHash": "unreachable-2026-09-29",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://ica.gov.pg/citizenship/citizenship-and-dual-citizenship). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://ica.gov.pg/citizenship/citizenship-and-dual-citizenship"
+}

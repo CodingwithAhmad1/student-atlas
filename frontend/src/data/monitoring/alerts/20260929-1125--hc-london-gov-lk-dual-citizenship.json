@@ -1,0 +1,22 @@
+{
+  "id": "20260929-1125--hc-london-gov-lk-dual-citizenship",
+  "kind": "change",
+  "sourceId": "hc-london.gov.lk/dual-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "High Commission of Sri Lanka in London (Ministry of Foreign Affairs, Sri Lanka) — Dual Citizenship",
+  "sourceUrl": "https://www.hc-london.gov.lk/en/dual-citizenship",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "6e2ad3f898ebcf11bf69de457e6f92a18a1a3c28d227316b31c456cc5c930a43",
+  "newHash": "6841d377dfbef279a6bce560ae22be63d3db8fc9b34d630777f55b64c1ebb9bb",
+  "diff": "Index: hc-london.gov.lk/dual-citizenship\n===================================================================\n--- hc-london.gov.lk/dual-citizenship\tprevious\n+++ hc-london.gov.lk/dual-citizenship\tcurrent\n@@ -58,23 +58,17 @@\n ·\n Bank\n confirmation letter stating the deposit will be maintained for a minimum of\n-three (3) years from the date of application (The bank letter must be issued\n-within three (3) months of the application date)\n+three (3) years from the date of application (The bank letter must be issued within three (3) months of the application date)\n Category\n F – Treasury Bond (TB) or Security Investment Account (SIA) (USD 25,000 or\n above) – [1.F]\n Applicants must submit a certificate from the relevant authority\n confirming that the investment will be maintained for at least three (3) years\n-and will not be withdrawn\n-before maturity, even after obtaining dual\n+and will not be withdrawn before maturity, even after obtaining dual\n citizenship.\n Category\n G – Spouse or Unmarried Child (under 22 years) – [1.G]\n-Applications for unmarried\n-children must be submitted before the age of 21 years and 6 months. This\n-category applies only to persons whose Sri Lankan citizenship has ceased\n-under Sections 19, 20, or 21 of the Citizenship Act No. 18 of 1948, or those whose\n-citizenship is likely to cease.\n+With effect from 01.11.2026, applications for unmarried children must be submitted before the age of 21 years. This category applies only to persons whose Sri Lankan citizenship has ceased under Sections 19, 20, or 21 of the Citizenship Act,No. 18 of 1948, or those whose citizenship is likely to cease.\n Applicants must submit:\n ·\n Original\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

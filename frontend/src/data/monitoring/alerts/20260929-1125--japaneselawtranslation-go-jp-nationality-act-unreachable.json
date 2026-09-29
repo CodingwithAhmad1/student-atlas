@@ -1,0 +1,22 @@
+{
+  "id": "20260929-1125--japaneselawtranslation-go-jp-nationality-act-unreachable",
+  "kind": "unreachable",
+  "sourceId": "japaneselawtranslation.go.jp/nationality-act",
+  "relatedSourceIds": [],
+  "sourceLabel": "Japanese Law Translation (Ministry of Justice) — Nationality Act",
+  "sourceUrl": "https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-09-29T11:25:03.838Z",
+  "updatedAt": "2026-09-29T11:25:03.838Z",
+  "oldHash": "39b5a63aea2df6ad7da72c2b49ad6afae9309860ae3902711611f3432a678956",
+  "newHash": "unreachable-2026-09-29",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en"
+}
