@@ -31,13 +31,13 @@ Dec 08, 2023
 Chinese Military Companies Sanctions
 Jun 01, 2022
 Counter Narcotics Trafficking Sanctions
-Sep 16, 2026
+Sep 29, 2026
 Counter Terrorism Sanctions
-Sep 24, 2026
+Sep 29, 2026
 Countering America's Adversaries Through Sanctions Act-Related Sanctions
 Feb 24, 2026
 Cuba Sanctions
-Sep 17, 2026
+Sep 29, 2026
 Cyber-Related Sanctions
 Aug 24, 2026
 Democratic Republic of the Congo-Related Sanctions
@@ -53,7 +53,7 @@ Mar 25, 2025
 International Criminal Court-Related Sanctions
 Aug 18, 2026
 Iran Sanctions
-Sep 17, 2026
+Sep 29, 2026
 Iraq-Related Sanctions
 Jul 09, 2025
 Lebanon-Related Sanctions
@@ -67,7 +67,7 @@ May 28, 2026
 Nicaragua-related Sanctions
 Apr 16, 2026
 Non-Proliferation Sanctions
-Aug 24, 2026
+Sep 29, 2026
 North Korea Sanctions
 Mar 12, 2026
 Promoting Accountability for Assad and Regional Stabilization Sanctions (PAARSS)
