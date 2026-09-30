@@ -1,0 +1,22 @@
+{
+  "id": "20260930-2128--oc-gov-ma-voyages-pour-etudes",
+  "kind": "change",
+  "sourceId": "oc.gov.ma/voyages-pour-etudes",
+  "relatedSourceIds": [],
+  "sourceLabel": "Office des Changes — Voyages pour études à l'étranger (in French)",
+  "sourceUrl": "https://www.oc.gov.ma/fr/etudiants-marocains-a-letranger/voyages-pour-etudes-a-l-etranger",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-09-30T21:28:16.808Z",
+  "updatedAt": "2026-09-30T21:28:16.808Z",
+  "oldHash": "936ac77939ab1dca70e93602586fb933115cf45502be603136d82e19b06ab402",
+  "newHash": "35e1fea6eeb4e9b7d16e8d87879d0f257f1d404eadcf102ac3d95c601b831a0e",
+  "diff": "Index: oc.gov.ma/voyages-pour-etudes\n===================================================================\n--- oc.gov.ma/voyages-pour-etudes\tprevious\n+++ oc.gov.ma/voyages-pour-etudes\tcurrent\n@@ -5,12 +5,12 @@\n Voyages pour études à l’étranger\n SOUS-MENUS\n Actualités\n+31 aoû 2026\n+Indicateurs des échanges extérieurs à fin Août 2026\n 10 aoû 2026\n-Publication de la Circulaire N 2/2026 relative aux obligations de vigilance et de veille interne des sociétés holding offshore\n+Publication de la Circulaire N 2/2026\n 31 juil 2026\n Indicateurs des échanges extérieurs à fin Juillet 2026\n-23 juil 2026\n-L’Office des Changes publie son Rapport de Gestion 2025\n S'abonner à Flux RSS Actualités\n Toute l'actualité\n Article 144 - Définition\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

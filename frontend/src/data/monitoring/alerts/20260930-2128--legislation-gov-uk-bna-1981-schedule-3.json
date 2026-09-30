@@ -1,0 +1,22 @@
+{
+  "id": "20260930-2128--legislation-gov-uk-bna-1981-schedule-3",
+  "kind": "change",
+  "sourceId": "legislation.gov.uk/bna-1981-schedule-3",
+  "relatedSourceIds": [],
+  "sourceLabel": "legislation.gov.uk — British Nationality Act 1981, Schedule 3: Countries whose citizens are Commonwealth citizens",
+  "sourceUrl": "https://www.legislation.gov.uk/ukpga/1981/61/schedule/3",
+  "country": "UK",
+  "category": "citizenship",
+  "detectedAt": "2026-09-30T21:28:16.808Z",
+  "updatedAt": "2026-09-30T21:28:16.808Z",
+  "oldHash": "30700bee11b38ebf0e56882c348cd08d99e7480eb6ee0343cc16500ef3880912",
+  "newHash": "9cd59147867a47f3cfe7e4c33981dfd17a193d9bfb83d6d7687363704e9f82fd",
+  "diff": "Index: legislation.gov.uk/bna-1981-schedule-3\n===================================================================\n--- legislation.gov.uk/bna-1981-schedule-3\tprevious\n+++ legislation.gov.uk/bna-1981-schedule-3\tcurrent\n@@ -51,7 +51,7 @@\n 02/06/2021- Amendment\n 15/12/2023- Amendment\n Changes to legislation:\n-British Nationality Act 1981, SCHEDULE 3 is up to date with all changes known to be in force on or before 28 September 2026. There are changes that may be brought into force at a future date. Changes that have been made appear in the content and are referenced with annotations.\n+British Nationality Act 1981, SCHEDULE 3 is up to date with all changes known to be in force on or before 30 September 2026. There are changes that may be brought into force at a future date. Changes that have been made appear in the content and are referenced with annotations.\n Changes to Legislation\n Revised legislation carried on this site may not be fully up to date. Changes and effects are recorded by our editorial team in lists which can be found in the ‘Changes to Legislation’ area. Where those effects have yet to be applied to the text of the legislation by the editorial team they are also listed alongside the legislation in the affected provisions. Use the ‘more’ link to open the changes and effects relevant to the provision you are viewing.\n View outstanding changes\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
