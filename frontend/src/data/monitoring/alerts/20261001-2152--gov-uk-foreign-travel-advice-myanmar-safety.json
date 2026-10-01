@@ -1,0 +1,22 @@
+{
+  "id": "20261001-2152--gov-uk-foreign-travel-advice-myanmar-safety",
+  "kind": "change",
+  "sourceId": "gov.uk/foreign-travel-advice/myanmar/safety",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Myanmar travel advice: Safety and security",
+  "sourceUrl": "https://www.gov.uk/foreign-travel-advice/myanmar/safety-and-security",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-10-01T21:52:02.743Z",
+  "updatedAt": "2026-10-01T21:52:02.743Z",
+  "oldHash": "b2fdf9fa97972c600f6198567e21f9944595a84942eb153f52107d2a37b30b80",
+  "newHash": "0ed170e630d46f80269a6497c9abed5457b3a700291b31f1864cd3c7673526e5",
+  "diff": "Index: gov.uk/foreign-travel-advice/myanmar/safety\n===================================================================\n--- gov.uk/foreign-travel-advice/myanmar/safety\tprevious\n+++ gov.uk/foreign-travel-advice/myanmar/safety\tcurrent\n@@ -4,6 +4,8 @@\n FCDO advises against all travel to parts of Myanmar (Burma).\n Warning\n FCDO advises against all but essential travel to parts of Myanmar (Burma).\n+Subscriptions\n+Get email alerts\n Safety and security\n This guide also has safety and security advice for regions of Myanmar.\n Terrorism\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

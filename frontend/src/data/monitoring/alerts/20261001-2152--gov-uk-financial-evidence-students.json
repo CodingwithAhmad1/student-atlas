@@ -1,0 +1,22 @@
+{
+  "id": "20261001-2152--gov-uk-financial-evidence-students",
+  "kind": "change",
+  "sourceId": "gov.uk/financial-evidence-students",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Financial evidence for Student and Child Student route applicants",
+  "sourceUrl": "https://www.gov.uk/guidance/financial-evidence-for-student-and-child-student-route-applicants",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-10-01T21:52:02.743Z",
+  "updatedAt": "2026-10-01T21:52:02.743Z",
+  "oldHash": "0865fab50fb584f341519a389e3be2dcec28d522b1ec85175ba4787ff44714ba",
+  "newHash": "df042b036eb86ff351d2e348063e0ca00d484228f5abd23305c4e37d810f3c2b",
+  "diff": "Index: gov.uk/financial-evidence-students\n===================================================================\n--- gov.uk/financial-evidence-students\tprevious\n+++ gov.uk/financial-evidence-students\tcurrent\n@@ -1,13 +1,29 @@\n Guidance\n Financial evidence for Student and Child Student visa applicants\n Find out how much money you need to get a Student or Child Student visa, and how to prove you have the money.\n+Updates to this page\n From:\n UK Visas and Immigration\n Published:\n 5 October 2020\n 31 December 2025\n-—\n-See all updates\n+Show all updates\n+31 December 2025\n+Updated the 'How much money you need - Student visa' section to reflect the changes in the living cost requirements.\n+2 January 2025\n+Student visa living costs requirement figures amended in line with changes to Immigration Rules.\n+1 November 2024\n+If you apply on or after 2 January 2025, you’ll need £1,483 per month to support yourself on a course in London and £1,136 per month outside London.\n+4 April 2024\n+Removed information about the Doctorate Extension Scheme, which is no longer open.\n+5 August 2022\n+List of unacceptable evidence updated.\n+6 September 2021\n+Updated 'Control of the funds' section to clarify how the 28 days are calculated.\n+10 December 2020\n+Financial requirement figures amended in line with 1 December changes to Immigration Rules.\n+5 October 2020\n+First published.\n Overview\n When you apply for a Student or Child Student visa, you must show you have enough money to pay for your:\n course fees\n@@ -166,23 +182,5 @@\n Tunisia\n United Arab Emirates\n USA\n-Updates to this page\n-Show all updates\n-31 December 2025\n-Updated the 'How much money you need - Student visa' section to reflect the changes in the living cost requirements.\n-2 January 2025\n-Student visa living costs requirement figures amended in line with changes to Immigration Rules.\n-1 November 2024\n-If you apply on or after 2 January 2025, you’ll need £1,483 per month to support yourself on a course in London and £1,136 per month outside London.\n-4 April 2024\n-Removed information about the Doctorate Extension Scheme, which is no longer open.\n-5 August 2022\n-List of unacceptable evidence updated.\n-6 September 2021\n-Updated 'Control of the funds' section to clarify how the 28 days are calculated.\n-10 December 2020\n-Financial requirement figures amended in line with 1 December changes to Immigration Rules.\n-5 October 2020\n-First published.\n Sign up for emails or print this page\n Contents\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

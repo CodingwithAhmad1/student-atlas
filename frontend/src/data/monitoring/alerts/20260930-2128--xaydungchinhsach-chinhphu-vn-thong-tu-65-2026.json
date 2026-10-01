@@ -13,10 +13,13 @@
   "newHash": "318d235e8f76a8c697ba40a8d82d9d373e997d9e6b6529644d1c2b9071ea0633",
   "diff": "Index: xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\n===================================================================\n--- xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tprevious\n+++ xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tcurrent\n@@ -75,7 +75,6 @@\n Bộ Giáo dục và Đào tạo\n Đọc nhiều\n NGÀY VĂN HÓA VIỆT NAM - 24/11, người lao động được nghỉ, hưởng nguyên lương\n-Chính sách và cuộc sống\n (Chinhphu.vn) - Quốc hội đã thông qua Nghị quyết quy định ngày 24/11 hằng năm là “Ngày Văn hóa Việt Nam”, người lao động được nghỉ làm việc và hưởng nguyên lương. Bộ Nội vụ đề xuất 2 phương án nghỉ Ngày Văn hóa Việt Nam năm 2026.\n Danh mục 111 NGÀNH được nhận HỌC BỔNG hằng tháng\n Hướng dẫn thực hiện chính sách\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The page returned to the last reviewed version.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-01T21:52:02.743Z",
   "error": null
 }

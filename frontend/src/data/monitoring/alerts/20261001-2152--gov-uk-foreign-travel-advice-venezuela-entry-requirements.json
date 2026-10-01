@@ -1,0 +1,22 @@
+{
+  "id": "20261001-2152--gov-uk-foreign-travel-advice-venezuela-entry-requirements",
+  "kind": "change",
+  "sourceId": "gov.uk/foreign-travel-advice/venezuela/entry-requirements",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK (FCDO) — Venezuela travel advice: Entry requirements",
+  "sourceUrl": "https://www.gov.uk/foreign-travel-advice/venezuela/entry-requirements",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-10-01T21:52:02.743Z",
+  "updatedAt": "2026-10-01T21:52:02.743Z",
+  "oldHash": "3042c9fea001f3d61036350168d31e24496b96da99cde31d177f6284d1b5a457",
+  "newHash": "33da8f74aac0b40f14cd67ab136c2a8513318f46d9a4d1fb4a962e47aeaa5b67",
+  "diff": "Index: gov.uk/foreign-travel-advice/venezuela/entry-requirements\n===================================================================\n--- gov.uk/foreign-travel-advice/venezuela/entry-requirements\tprevious\n+++ gov.uk/foreign-travel-advice/venezuela/entry-requirements\tcurrent\n@@ -4,6 +4,8 @@\n FCDO advises against all travel to parts of Venezuela.\n Warning\n FCDO advises against all but essential travel to parts of Venezuela.\n+Subscriptions\n+Get email alerts\n Entry requirements\n This information is for people travelling on a full ‘British citizen’ passport from the UK. It is based on the UK government’s understanding of Venezuela’s current rules for the most common types of travel.\n The authorities in Venezuela set and enforce entry rules. If you’re not sure how these requirements apply to you, contact the Venezuelan Embassy in the UK (in Spanish).\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

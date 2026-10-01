@@ -1,0 +1,22 @@
+{
+  "id": "20261001-2152--gov-uk-visa-brake",
+  "kind": "change",
+  "sourceId": "gov.uk/visa-brake",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Visa brake: changes to the UK visa system",
+  "sourceUrl": "https://www.gov.uk/guidance/visa-brake-changes-to-the-uk-visa-system",
+  "country": "UK",
+  "category": "eligibility",
+  "detectedAt": "2026-10-01T21:52:02.743Z",
+  "updatedAt": "2026-10-01T21:52:02.743Z",
+  "oldHash": "093b11562306a8c42763d3f463fe2431b131b4a3075e940ccb13dc18ea990dd5",
+  "newHash": "c1a9748d9e42d8e3fa37c2106e91fb34f0e9cae74d49267a1a97592c5670f343",
+  "diff": "Index: gov.uk/visa-brake\n===================================================================\n--- gov.uk/visa-brake\tprevious\n+++ gov.uk/visa-brake\tcurrent\n@@ -1,13 +1,17 @@\n Guidance\n Visa brake: changes to the UK visa system\n Information on what a visa brake is and which applicants it affects.\n+Updates to this page\n From:\n UK Visas and Immigration\n Published:\n 5 March 2026\n 26 March 2026\n-—\n-See all updates\n+Show all updates\n+26 March 2026\n+Updated guidance to reflect that the visa brake is now in force.\n+5 March 2026\n+First published.\n Overview\n The UK government has introduced a restriction that refuses visas for people applying for certain UK visas on specific routes and for specific nationalities. This is known as a visa brake.\n The visa brake applies to specific visa routes and nationalities where high numbers and proportions of people who are issued visas later claim asylum.\n@@ -41,11 +45,5 @@\n check the How to apply for a visa to come to the UK page on GOV.UK\n use the Check if you need a UK visa service\n If you need help with an existing application, contact UK Visas and Immigration.\n-Updates to this page\n-Show all updates\n-26 March 2026\n-Updated guidance to reflect that the visa brake is now in force.\n-5 March 2026\n-First published.\n Sign up for emails or print this page\n Contents\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
