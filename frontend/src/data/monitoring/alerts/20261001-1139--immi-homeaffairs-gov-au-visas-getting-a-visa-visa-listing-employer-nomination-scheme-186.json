@@ -1,0 +1,22 @@
+{
+  "id": "20261001-1139--immi-homeaffairs-gov-au-visas-getting-a-visa-visa-listing-employer-nomination-scheme-186",
+  "kind": "change",
+  "sourceId": "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Department of Home Affairs — Employer Nomination Scheme (Subclass 186)",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186",
+  "country": "AU",
+  "category": "residency",
+  "detectedAt": "2026-10-01T11:39:23.257Z",
+  "updatedAt": "2026-10-01T11:39:23.257Z",
+  "oldHash": "cc2174e52f7a3df32d86e5bf68fa60e50660d0a6640a688bb5c1a1eae64c413d",
+  "newHash": "dbf4974a0cd9c8c357e2911996609974f673b2fdca28fc1eb49a69789ec51c30",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/employer-nomination-scheme-186\tcurrent\n@@ -1,7 +1,7 @@\n Title: Employer Nomination Scheme (subclass 186) visa\n Description: For skilled workers who are nominated by an employer to live and work in Australia.\n Alert: Subclass 186\n-Skilled visa income thresholds have increased in line with changes to annual Average Weekly Ordinary Time Earnings. For more information see Annual indexation of skilled visa income thresholds from 1 July 2026.We prioritise visa applications for the Employer Nomination Scheme (subclass 186) visa under Ministerial Direction 122. We are currently processing visa applications that were lodged in:August 2024 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or Australia's law enforcement and defence interests.February 2025 – Visa applications from applicants who were in Australia at the time they lodged their application.July 2024 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at anytime.July 2024 – All other visa applications from applicants who were outside Australia at the time they lodged their application.Please note. As we transition to the new priorities under Ministerial Direction 122, processing timeframes may fluctuate. Some published timeframes may temporarily move backwards while applications are reprioritised.\n+Skilled visa income thresholds have increased in line with changes to annual Average Weekly Ordinary Time Earnings. For more information see Annual indexation of skilled visa income thresholds from 1 July 2026.We prioritise visa applications for the Employer Nomination Scheme (subclass 186) visa under Ministerial Direction 122. We are currently processing visa applications that were lodged in:July 2025 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or Australia's law enforcement and defence interests.March 2025 – Visa applications from applicants who were in Australia at the time they lodged their application.July 2024 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at anytime.July 2024 – All other visa applications from applicants who were outside Australia at the time they lodged their application.Please note: While the Department transitions to the new processing priorities under Ministerial Direction 122, published allocation dates and processing timeframes may fluctuate. Some timeframes may temporarily increase as applications are reprioritised.\n Employer Nomination Scheme visa\n This visa lets skilled workers, who are nominated by their employer, live and work in Australia permanently.\n You must have the necessary skills for the job You must be nominated by an Australian employer You must meet our health and character requirements\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

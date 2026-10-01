@@ -1,0 +1,22 @@
+{
+  "id": "20261001-1139--pbgdpl-gov-vn-cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai-unreachable",
+  "kind": "unreachable",
+  "sourceId": "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai",
+  "relatedSourceIds": [],
+  "sourceLabel": "Cổng thông tin phổ biến, giáo dục pháp luật (Bộ Tư pháp) — Từ 1/7/2009: Công dân Việt Nam được đồng thời có quốc tịch nước ngoài (in Vietnamese)",
+  "sourceUrl": "https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-01T11:39:23.257Z",
+  "updatedAt": "2026-10-01T11:39:23.257Z",
+  "oldHash": "b1a1e8f07cd747df9826f6afd6601a87f59c7722955709e536285127f4561280",
+  "newHash": "unreachable-2026-10-01",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 503 from https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 503 from https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi"
+}

@@ -13,10 +13,13 @@
   "newHash": "51135d7bc1c870425059aea9705404f6279a943cbff3e1e41c6987e18301f1fb",
   "diff": "Index: gov.br/alistar-se-no-servico-militar-no-exterior\n===================================================================\n--- gov.br/alistar-se-no-servico-militar-no-exterior\tprevious\n+++ gov.br/alistar-se-no-servico-militar-no-exterior\tcurrent\n@@ -75,6 +75,10 @@\n O usuário do serviço público, conforme estabelecido pela lei nº13.460/17, tem direito a atendimento presencial, quando necessário, em instalações salubres, seguras, sinalizadas, acessíveis e adequadas ao serviço e ao atendimento.\n Informação sobre quem tem direito a tratamento prioritário\n Tem direito a atendimento prioritário as pessoas com deficiência, os idosos com idade igual ou superior a 60 anos, as gestantes, as lactantes, as pessoas com crianças de colo e os obesos, conforme estabelecido pela lei 10.048, de 8 de novembro de 2000.\n+Serviços relacionados\n+Serviço militar\n+Serviço Militar Obrigatório\n+O Serviço Militar consiste no exercício de atividades específicas desempenhadas pelas Forças Armadas.\n Ouvidoria\n Denúncia\n Denúncia\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The page returned to the last reviewed version.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-01T11:39:23.257Z",
   "error": null
 }
