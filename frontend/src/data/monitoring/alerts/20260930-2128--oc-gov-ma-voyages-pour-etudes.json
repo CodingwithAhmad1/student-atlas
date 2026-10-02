@@ -13,10 +13,13 @@
   "newHash": "35e1fea6eeb4e9b7d16e8d87879d0f257f1d404eadcf102ac3d95c601b831a0e",
   "diff": "Index: oc.gov.ma/voyages-pour-etudes\n===================================================================\n--- oc.gov.ma/voyages-pour-etudes\tprevious\n+++ oc.gov.ma/voyages-pour-etudes\tcurrent\n@@ -5,12 +5,12 @@\n Voyages pour études à l’étranger\n SOUS-MENUS\n Actualités\n+31 aoû 2026\n+Indicateurs des échanges extérieurs à fin Août 2026\n 10 aoû 2026\n-Publication de la Circulaire N 2/2026 relative aux obligations de vigilance et de veille interne des sociétés holding offshore\n+Publication de la Circulaire N 2/2026\n 31 juil 2026\n Indicateurs des échanges extérieurs à fin Juillet 2026\n-23 juil 2026\n-L’Office des Changes publie son Rapport de Gestion 2025\n S'abonner à Flux RSS Actualités\n Toute l'actualité\n Article 144 - Définition\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Only the 'Actualités' news sidebar changed (a new monthly trade-indicators item, a shortened circular headline, an older item dropped); the study-abroad rules are unchanged.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Office des Changes study-abroad page: only the news sidebar changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:18.665Z",
   "error": null
 }

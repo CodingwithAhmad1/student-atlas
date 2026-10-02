@@ -13,10 +13,13 @@
   "newHash": "c4b30e46c76f926c463a2e169d58ee74d1838d71f5bb1e220b36361f5148d4bc",
   "diff": "Index: gob.mx/sre-double-nationality\n===================================================================\n--- gob.mx/sre-double-nationality\tprevious\n+++ gob.mx/sre-double-nationality\tcurrent\n@@ -2,16 +2,16 @@\n Secretaría de Relaciones Exteriores\n Documentos\n Publicaciones Recientes\n+2026-09-25 19:14:00 -0600\n+Foreign Secretary Roberto Velasco Presents Mexico's Vision on Global Challenges at UN General Assembly\n+2026-09-25 18:02:00 -0600\n+Presenta canciller visión de México sobre los desafíos globales en la Asamblea General de Naciones Unidas\n 2026-09-23 08:39:00 -0600\n Foreign Secretary Roberto Velasco Takes Part in Pacific Alliance–ASEAN Meeting During the 81st UN General Assembly\n 2026-09-23 08:33:00 -0600\n El canciller Roberto Velasco participa en la reunión Alianza del Pacífico–ASEAN durante la 81ª Asamblea General de las Naciones Unidas\n 2026-09-22 22:20:00 -0600\n Canciller Velasco participa en encuentro sobre mediación internacional en conflictos con Noruega, Qatar y Suiza\n-2026-09-22 22:01:00 -0600\n-Foreign Secretary Roberto Velasco Participates in International Conflict Mediation Meeting with Norway, Qatar and Switzerland\n-2026-09-22 20:30:00 -0600\n-In New York, Secretary Velasco Attends Meeting on Franco-Mexican Initiative to Regulate Veto in Security Council in Cases of Mass Atrocities\n Double Nationality\n If you have another nationality in addition to Mexican nationality, this information is for you.\n Secretaría de Relaciones Exteriores |\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Only the 'Publicaciones Recientes' news list in the page header rotated (two new UN General Assembly items added, two older items dropped); the Double Nationality text is unchanged.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Mexico's Double Nationality page: only the news headlines changed; dual nationality is still allowed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:17.795Z",
   "error": null
 }

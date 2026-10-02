@@ -13,10 +13,13 @@
   "newHash": "c1a9748d9e42d8e3fa37c2106e91fb34f0e9cae74d49267a1a97592c5670f343",
   "diff": "Index: gov.uk/visa-brake\n===================================================================\n--- gov.uk/visa-brake\tprevious\n+++ gov.uk/visa-brake\tcurrent\n@@ -1,13 +1,17 @@\n Guidance\n Visa brake: changes to the UK visa system\n Information on what a visa brake is and which applicants it affects.\n+Updates to this page\n From:\n UK Visas and Immigration\n Published:\n 5 March 2026\n 26 March 2026\n-—\n-See all updates\n+Show all updates\n+26 March 2026\n+Updated guidance to reflect that the visa brake is now in force.\n+5 March 2026\n+First published.\n Overview\n The UK government has introduced a restriction that refuses visas for people applying for certain UK visas on specific routes and for specific nationalities. This is known as a visa brake.\n The visa brake applies to specific visa routes and nationalities where high numbers and proportions of people who are issued visas later claim asylum.\n@@ -41,11 +45,5 @@\n check the How to apply for a visa to come to the UK page on GOV.UK\n use the Check if you need a UK visa service\n If you need help with an existing application, contact UK Visas and Immigration.\n-Updates to this page\n-Show all updates\n-26 March 2026\n-Updated guidance to reflect that the visa brake is now in force.\n-5 March 2026\n-First published.\n Sign up for emails or print this page\n Contents\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "The update history block moved from the bottom to the top; the covered routes and nationalities are unchanged.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "UK visa brake page: layout change only; the nationalities covered are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:14.740Z",
   "error": null
 }

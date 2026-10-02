@@ -13,10 +13,13 @@
   "newHash": "b614b1b89a0ea17733e22fb50fedc4d5ecb32c7ede26a9ef8dc60352c026bedb",
   "diff": "Index: gov.uk/tb-clinics-indonesia\n===================================================================\n--- gov.uk/tb-clinics-indonesia\tprevious\n+++ gov.uk/tb-clinics-indonesia\tcurrent\n@@ -89,6 +89,23 @@\n the TB test fee\n if you have had TB in the past or have any other lung disease you should provide details of your previous screening and, if possible, your medical notes and x-ray results\n Tangerang clinics\n+RS Premier Bintaro Jl. M.H. Thamrin Blok B3 No. 1\n+Dr Erlynda Taufik\n+Sektor 7 Kawasan Niaga - Bintaro Jaya\n+Tangerang 15224\n+Telephone: +62 (21) 7455 500\n+Email: erlynda.taufik@asia1health.com\n+Website: www.rspremierbintaro.com\n+Operating hours: Monday to Saturday, 7am to 3pm\n+Test fees\n+11 years and above\n+Below 11 years\n+IDR 850.000\n+IDR 400.000\n+What you should bring with you\n+proof of identification, which contains your photograph, such as your passport\n+the TB test fee\n+if you have had TB in the past or have any other lung disease you should provide details of your previous screening and, if possible, your medical notes and x-ray results\n RSPI Bintaro Jaya\n CBD Emerald Blok CE/C\n no.1 Jl. Boulevard Bintaro Jaya\n@@ -109,23 +126,6 @@\n proof of identification, which contains your photograph, such as your passport\n the TB test fee\n if you have had TB in the past or have any other lung disease, you should provide details of your previous screening and, if possible, your medical notes and x-ray results\n-RS Premier Bintaro Jl. M.H. Thamrin Blok B3 No. 1\n-Dr Erlynda Taufik\n-Sektor 7 Kawasan Niaga - Bintaro Jaya\n-Tangerang 15224\n-Telephone: +62 (21) 7455 500\n-Email: Erlynda.Taufik@rsdhealth.co.id\n-Website: www.rspremierbintaro.com\n-Operating hours: Monday to Saturday, 7am to 3pm\n-Test fees\n-11 years and above\n-Below 11 years\n-IDR 850.000\n-IDR 400.000\n-What you should bring with you\n-proof of identification, which contains your photograph, such as your passport\n-the TB test fee\n-if you have had TB in the past or have any other lung disease you should provide details of your previous screening and, if possible, your medical notes and x-ray results\n Attending the clinic\n You should contact one of the approved clinics to book an appointment and make it clear you need the test for a UK visa application.\n You can expect to get an appointment within a few days of your request. At busy times you may have to wait 10 days for an appointment, especially during the UK student visa peak season between June and September.\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "minor",
+  "summary": "The RS Premier Bintaro clinic entry moved to the top of the Tangerang list and its contact email changed; fees, hours and the set of clinic cities are unchanged.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Indonesia TB clinic list: one clinic's email changed and the list was reordered; the clinic cities we list are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:11.454Z",
   "error": null
 }

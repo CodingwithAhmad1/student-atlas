@@ -214,12 +214,28 @@ flags it: update it whenever a fee or threshold changes in the prose.
 
 ---
 
-## 7. What needs a person (open items as of 2026-09-28)
+## 7. What needs a person (open items as of 2026-10-02)
 
 ### Alerts waiting for review
-Raised by the 28 September run: Sri Lanka DFE FAQ (`dfe.lk/faqs`), Taiwan
-conscript exit regulations (`law.moj.gov.tw`), Vietnam Circular 65/2026
-(`xaydungchinhsach.chinhphu.vn`). Review with the content server.
+All 35 open alerts were reviewed on 2 October 2026; one stays open: the
+Vietnamese dual-nationality page (`pbgdpl.gov.vn`) returns HTTP 503. It closes
+itself once the page responds; if it stays down, cite an archived copy.
+
+### Follow-ups from the 2 October review
+1. **Australia, Student visa from 2 October 2026.** The guide now says most
+   applicants cannot include family and most must apply from outside
+   Australia. Still open:
+   - Nationals of listed Pacific Island and ASEAN countries may still include
+     family (exemption 4 on the Subclass 500 page). That is a list membership,
+     so it needs a new trait column (`auStudentFamilyExempt`) rather than prose.
+   - The guide still says "GTE statement"; Genuine Student replaced it in March
+     2024 (touches the `gte` glossary term).
+   - The detailed exemptions are on Home Affairs' "Student visa changes" page,
+     which is not cited yet.
+2. **IRS Publication 901 is only partly monitored.** The watcher cuts page
+   text at 200,000 characters, which ends mid-"Sweden", so treaty articles for
+   later countries are not compared; `check_trait_column usTaxTreatyStudent`
+   also reads too little of the page. Needs a watcher fix.
 
 ### Checks only a real browser can do
 travel.state.gov and usembassy.gov block automated clients.
