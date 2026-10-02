@@ -13,10 +13,13 @@
   "newHash": "9cb704da89871df543e23206b429afc9c5baad23b703cd2721b9298bc24a82f5",
   "diff": "Index: gov.br/alistar-se-no-servico-militar-no-exterior\n===================================================================\n--- gov.br/alistar-se-no-servico-militar-no-exterior\tprevious\n+++ gov.br/alistar-se-no-servico-militar-no-exterior\tcurrent\n@@ -75,10 +75,6 @@\n O usuário do serviço público, conforme estabelecido pela lei nº13.460/17, tem direito a atendimento presencial, quando necessário, em instalações salubres, seguras, sinalizadas, acessíveis e adequadas ao serviço e ao atendimento.\n Informação sobre quem tem direito a tratamento prioritário\n Tem direito a atendimento prioritário as pessoas com deficiência, os idosos com idade igual ou superior a 60 anos, as gestantes, as lactantes, as pessoas com crianças de colo e os obesos, conforme estabelecido pela lei 10.048, de 8 de novembro de 2000.\n-Serviços relacionados\n-Serviço militar\n-Serviço Militar Obrigatório\n-O Serviço Militar consiste no exercício de atividades específicas desempenhadas pelas Forças Armadas.\n Ouvidoria\n Denúncia\n Denúncia\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "The 'Serviços relacionados' (related services) footer block briefly disappeared; a live fetch on 2026-10-02 is identical to the baseline, so it was a rendering flicker.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "gov.br military enlistment abroad page: a related-services footer flickered; enlistment rules unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:19.234Z",
   "error": null
 }

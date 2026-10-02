@@ -76,6 +76,12 @@ export const traitSources: Record<TraitKey, TraitSource> = {
     verifiedAt: "2026-09-27",
     note: "Student (500) English requirement: passport holders of the UK, USA, Canada, NZ and Ireland are exempt.",
   },
+  auStudentFamilyExempt: {
+    citationId: "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500",
+    checkKind: "monitored",
+    verifiedAt: "2026-10-02",
+    note: "Student (500), 'Meet an exemption if you want to include family members', Exemption 4: nationals of 12 Pacific Island countries and 11 ASEAN countries (from 2 October 2026). Top-100 rows on the list: Cambodia, Indonesia, Malaysia, Myanmar, Papua New Guinea, Philippines, Thailand, Vietnam.",
+  },
   usTaxTreatyStudent: {
     citationId: "irs.gov/p901",
     checkKind: "monitored",

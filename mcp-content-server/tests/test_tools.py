@@ -28,7 +28,7 @@ REAL_APP = HERE.parent.parent
 TEST_TRAITS = {
     "ukVisaNational": True, "usVwp": False, "usEntryRestriction": "none", "ukVisaBrake": "none", "auVisitorStream": "visitor600",
     "auBiometricsRequired": False, "auHealthExamLikely": True, "ukDifferentialEvidence": False,
-    "ukTbTestRequired": True, "ukMajorityEnglish": False, "auEnglishExempt": False, "usTaxTreatyStudent": "none",
+    "ukTbTestRequired": True, "ukMajorityEnglish": False, "auEnglishExempt": False, "auStudentFamilyExempt": False, "usTaxTreatyStudent": "none",
     "usNationalityWorkVisas": [], "ukYouthMobility": "none", "auWorkingHoliday": "none",
     "usVisaBulletinBacklog": "none", "usDiversityVisaEligible": True,
     "dualNationalityAtHome": {"value": "unknown"}, "sanctionsRegime": "none",

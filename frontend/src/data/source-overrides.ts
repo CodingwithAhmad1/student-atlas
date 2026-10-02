@@ -122,7 +122,11 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "elaw.klri.re.kr/nationality-act": { country: "INTL", category: "citizenship" },
   "washington.mofa.go.ug/citizenship-dual-citizenship": { country: "INTL", category: "citizenship" },
   "csidn.cancilleria.gob.ar/argentine-citizenship": { country: "INTL", category: "citizenship", skipReason: "The host fails TLS negotiation with automated clients (network error); verify this page manually." },
-  "mofa.gov.iq/washington/passport-issuance": { country: "INTL", category: "citizenship" },
+  "mofa.gov.iq/washington/passport-issuance": {
+    country: "INTL",
+    category: "citizenship",
+    stripSelectors: [".postbox__meta"], // page-view counter
+  },
   "ircc.canada.ca/dual-citizenship": { country: "INTL", category: "citizenship" },
   "gov.pl/renunciation-of-polish-citizenship": { country: "INTL", category: "citizenship" },
   "malaysia.gov.my/kewarganegaraan": { country: "INTL", category: "citizenship", skipReason: "The page renders its content client-side, so the watcher sees only the title; verify this page manually." },

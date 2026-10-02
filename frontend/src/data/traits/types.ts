@@ -67,6 +67,8 @@ export interface NationalityTraits {
   ukMajorityEnglish: Verified<boolean>;
   /** Passport exempts the holder from the Student (500) English test. */
   auEnglishExempt: Verified<boolean>;
+  /** Exempt from Australia's October 2026 Student (500) family rule as a listed Pacific Island or ASEAN national. */
+  auStudentFamilyExempt: Verified<boolean>;
   /** A US income tax treaty with a students article covers residents of this country (IRS Publication 901). */
   usTaxTreatyStudent: Verified<UsTaxTreatyStudent>;
 
@@ -105,6 +107,7 @@ export const TRAIT_KEYS: TraitKey[] = [
   "ukTbTestRequired",
   "ukMajorityEnglish",
   "auEnglishExempt",
+  "auStudentFamilyExempt",
   "usTaxTreatyStudent",
   "usNationalityWorkVisas",
   "ukYouthMobility",

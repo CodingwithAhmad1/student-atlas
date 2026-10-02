@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T12:02:40.662Z",
+  "generatedAt": "2026-10-02T12:04:55.698Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -1337,12 +1337,12 @@
       "country": "INTL",
       "category": "citizenship",
       "label": "Embassy of the Republic of Iraq in Washington — Passport Issuance",
-      "lastCheckedAt": "2026-10-02T11:09:54.342Z",
-      "lastChangedAt": "2026-09-28T06:47:35.584Z",
-      "lastHash": "3f14e50f50dc2b521f286d058ebb15faa401f1342c89cbad2add288db1d58eaf",
-      "lastHttpStatus": 403,
-      "consecutiveFailures": 9,
-      "lastError": "HTTP 403 from https://mofa.gov.iq/washington/passport-issuance/",
+      "lastCheckedAt": "2026-10-02T12:04:55.698Z",
+      "lastChangedAt": "2026-10-02T12:04:55.698Z",
+      "lastHash": "f39e8dbcd18eaf6492693bbf0b3019b077cc22b01bfbd6149ca6c60c1968c440",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "ircc.canada.ca/dual-citizenship": {
@@ -2849,9 +2849,9 @@
       "country": "INTL",
       "category": "general",
       "label": "全國法規資料庫 — 大學辦理國外學歷採認辦法 (in Chinese)",
-      "lastCheckedAt": "2026-10-02T11:09:54.342Z",
+      "lastCheckedAt": "2026-10-02T11:55:37.365Z",
       "lastChangedAt": "2026-10-02T11:09:54.342Z",
-      "lastHash": "eeeffd0589ed771ddbac646d51aa620bdea07743ca336855c3d603ec314dc25b",
+      "lastHash": "b47d8b5435e54438a4b46fd4ef06fb294aaa4509e829262c9609c6cea630497e",
       "lastHttpStatus": 200,
       "consecutiveFailures": 0,
       "lastError": null,
@@ -3619,7 +3619,7 @@
       "country": "INTL",
       "category": "general",
       "label": "Governo Federal (gov.br) — Alistar-se no serviço militar no exterior (in Portuguese)",
-      "lastCheckedAt": "2026-10-02T11:09:54.342Z",
+      "lastCheckedAt": "2026-10-02T11:55:39.937Z",
       "lastChangedAt": "2026-10-02T11:09:54.342Z",
       "lastHash": "9cb704da89871df543e23206b429afc9c5baad23b703cd2721b9298bc24a82f5",
       "lastHttpStatus": 200,

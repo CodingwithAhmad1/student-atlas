@@ -70,7 +70,7 @@ export const visaFacts: Record<
         validity_model: "Fixed: course length + extra period",
         // WATCH OUT — proposal: OSHC is mandatory private insurance; must maintain course progress
         watch_out:
-          "OSHC mandatory private insurance purchased separately — must maintain satisfactory course progress.",
+          "From 2 October 2026, most must apply from outside Australia and cannot include partners or children.",
         processing_time: "4–6 weeks from complete application",
         post_study_work: "Subclass 485: 2–5 yrs by qualification",
         language_requirement: "Not specified",

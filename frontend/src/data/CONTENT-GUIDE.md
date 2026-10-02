@@ -31,6 +31,7 @@ clients are `manual` and raise a `stale-check` alert when past their interval.
 | `usTaxTreatyStudent` | US student after-arrival callout: treaty students article available, or suspended (Russia) — IRS Publication 901 |
 | `ukDifferentialEvidence`, `ukTbTestRequired`, `ukMajorityEnglish` | UK student documents callouts |
 | `auEnglishExempt` | AU student English callout |
+| `auStudentFamilyExempt` | AU student overview callout: can still include family (Pacific Island / ASEAN exemption, from 2 October 2026) |
 | `usNationalityWorkVisas`, `ukYouthMobility`, `auWorkingHoliday` | Post-study work alternatives |
 | `usVisaBulletinBacklog`, `usDiversityVisaEligible` | US sponsorship / residency callouts |
 | `dualNationalityAtHome` | Cross-cutting dual-nationality line (cites the home-country page; may be `unknown`) |
@@ -124,7 +125,7 @@ date, and the watcher closes the alert on its next run.
 
 ### 1. Derive the traits row
 Read each column's source page (`traits/trait-sources.ts` says what to look
-for) and decide the 19 values. `check_trait_column(trait)` shows how the page
+for) and decide the 20 values. `check_trait_column(trait)` shows how the page
 names countries. Dual nationality needs a home-country government citation
 (`add_citations` first) or the value `"unknown"`. The page must state the rule
 for adults who naturalise abroad (no inferring it from passport or renunciation

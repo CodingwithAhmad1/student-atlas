@@ -115,7 +115,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The visa for international students in Australia is the [TERM: subclass-500|Student visa \u2014 Subclass 500]. It is issued by the Australian Department of Home Affairs. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                text: "The visa for international students in Australia is the [TERM: subclass-500|Student visa \u2014 Subclass 500]. It is issued by the Australian Department of Home Affairs. From 2 October 2026, most applicants must apply from outside Australia: a Student visa holder can apply for a further Student visa in Australia only if they meet an exemption. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
               },
             },
             {
@@ -147,7 +147,7 @@ export const studentVisa: Section = {
                   {
                     label: "Dependants",
                     value:
-                      "A spouse or de facto partner and dependent children may be included in the application as secondary applicants. A spouse of a student visa holder can work up to 48 hours per fortnight (or unlimited if the student is undertaking a masters or doctoral degree).",
+                      "From 2 October 2026, most Student visa applicants can no longer include family members (partners and children). Exemptions include Doctoral (PhD) students, students sponsored by DFAT or Defence, fully funded foreign government scholarship recipients, and nationals of listed Pacific Island and ASEAN countries. Family members can no longer apply later, separately, as subsequent entrants. Family members on a Student visa can work up to 48 hours a fortnight while the course is in session, or more if the student is studying a master's or doctoral degree. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
                   },
                   {
                     label: "Program types covered",
@@ -409,11 +409,11 @@ export const studentVisa: Section = {
               },
             },
             {
-              id: "au-docs-gte",
+              id: "au-docs-genuine-student",
               block: {
                 type: "bullet-list",
                 items: [
-                  '[TERM: gte|Genuine Temporary Entrant (GTE)] statement \u2014 a written statement explaining why the student wants to study in Australia and why they intend to return home afterwards. This is unique to the Australian application and is taken seriously by processing officers. It should be well-written and specific \u2014 generic statements about "gaining an education" are insufficient.',
+                  '[TERM: genuine-student|Genuine Student] answers \u2014 written answers in English, of up to 150 words each, to the Genuine Student questions in the online application, showing that studying in Australia is the main reason for the visa, plus supporting documents. There is an extra question for anyone who has held a Student visa before or is applying in Australia from another visa. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]',
                 ],
               },
             },
@@ -604,7 +604,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 4,
                 title: "Submit the online application",
-                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, [TERM: gte|GTE] statement, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $2,500 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, [TERM: genuine-student|Genuine Student] answers, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $2,500 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
               },
             },
             {

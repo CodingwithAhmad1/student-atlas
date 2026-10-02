@@ -24,7 +24,7 @@ changes for that passport.
   analytics. Preferences live in the browser's localStorage.
 
 Current size: 312 citations (305 distinct pages, 38 of them not
-automatically monitorable), 19 nationality traits, 100 × 19 trait values,
+automatically monitorable), 20 nationality traits, 100 × 20 trait values,
 170 distinct hand-written callouts (304 placements across columns).
 
 ---
@@ -79,7 +79,7 @@ Depth by tier: **Tier A** (28, the largest student-sending countries and the
 three destinations) up to ~10 hand callouts each; **Tier B** (35) 2–4;
 **Tier C** (37) traits only. Every nationality has the full trait row.
 
-### The 19 traits
+### The 20 traits
 
 | Trait | Source | Kept current by |
 |---|---|---|
@@ -94,6 +94,7 @@ three destinations) up to ~10 hand callouts each; **Tier B** (35) 2–4;
 | `ukTbTestRequired` | GOV.UK TB test countries | watcher |
 | `ukMajorityEnglish` | Appendix English Language | watcher |
 | `auEnglishExempt` | Home Affairs Student 500 page | watcher |
+| `auStudentFamilyExempt` | Home Affairs Student 500 page (family exemption 4) | watcher |
 | `usTaxTreatyStudent` | IRS Publication 901 | watcher |
 | `ukYouthMobility` | GOV.UK Youth Mobility eligibility | watcher |
 | `sanctionsRegime` | OFAC sanctions programs | watcher |
@@ -175,7 +176,7 @@ Manage it at claude.ai/code/routines.
 
 **Checks in every build** (`npm run build` runs `check:content`): every
 `[CITE]` and `[TERM]` exists, callout anchors exist, practical callouts have no
-numbers, all 100 rows have all 19 traits, no trait is past its review date.
+numbers, all 100 rows have all 20 traits, no trait is past its review date.
 The build fails if any of these fail.
 
 ---
@@ -229,12 +230,27 @@ flags it: update it whenever a fee or threshold changes in the prose.
 
 ---
 
-## 7. What needs a person (open items as of 2026-09-28)
+## 7. What needs a person (open items as of 2026-10-02)
 
 ### Alerts waiting for review
-Raised by the 28 September run: Sri Lanka DFE FAQ (`dfe.lk/faqs`), Taiwan
-conscript exit regulations (`law.moj.gov.tw`), Vietnam Circular 65/2026
-(`xaydungchinhsach.chinhphu.vn`). Review with the content server.
+All 35 open alerts were reviewed on 2 October 2026; one stays open: the
+Vietnamese dual-nationality page (`pbgdpl.gov.vn`) returns HTTP 503. It closes
+itself once the page responds; if it stays down, cite an archived copy.
+
+### Follow-ups from the 2 October review
+1. **Australia, Student visa from 2 October 2026.** The guide now says most
+   applicants cannot include family and most must apply from outside
+   Australia. Still open:
+   - Done 2 October: the Pacific Island / ASEAN family exemption is the
+     `auStudentFamilyExempt` trait (8 of the 100 rows).
+   - Done 2 October: "GTE statement" replaced by the Genuine Student answers
+     (glossary term `genuine-student`, cited to the Subclass 500 page).
+   - No separate citation needed: the Subclass 500 page itself lists every
+     exemption (checked 2 October), and it is already monitored.
+2. **IRS Publication 901 is only partly monitored.** The watcher cuts page
+   text at 200,000 characters, which ends mid-"Sweden", so treaty articles for
+   later countries are not compared; `check_trait_column usTaxTreatyStudent`
+   also reads too little of the page. Needs a watcher fix.
 
 ### Checks only a real browser can do
 travel.state.gov and usembassy.gov block automated clients.
@@ -306,15 +322,22 @@ The app is a static single-page app: `cd frontend && npm run build` produces
 `frontend/dist/`. Any static host works (Cloudflare Pages, Netlify, Vercel,
 GitHub Pages).
 
+**Chosen host: Vercel (free Hobby plan).** Project settings: root directory
+`Student Atlas/frontend`, framework Vite (from `vercel.json`), Node 22, Git
+connected to `main` so every push redeploys. Watcher commits carry
+`[skip ci]`; if Vercel skips those, new alerts appear on the next ordinary
+deploy.
+
 **Must do**
 - [ ] **Rebuild on every push to `main`.** The watcher commits new alerts and
       status twice a day, and they are bundled at build time. Set the host's
       root directory to `Student Atlas/frontend`, build command `npm run build`,
       output `dist`, Node 22.
 - [ ] **SPA fallback.** The app uses browser routes (`/student/documents`,
-      `/activity`, …). Rewrite unknown paths to `/index.html` (Netlify
-      `_redirects`: `/* /index.html 200`; Cloudflare Pages and Vercel handle it
-      with their SPA settings), or deep links will 404.
+      `/activity`, …). Rewrite unknown paths to `/index.html`, or deep links
+      will 404. Vercel: done by `frontend/vercel.json` (static files are served
+      first, everything else goes to `index.html`). Netlify: `_redirects` with
+      `/* /index.html 200`. Cloudflare Pages: automatic without a `404.html`.
 - [ ] **Clear the open items in §7** that affect readers (browser checks,
       pending alerts), and do a final `npm run build` with no failures.
 - [ ] **Read the disclaimer** (home page, `home-content.ts`): "an information

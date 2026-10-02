@@ -106,10 +106,10 @@ export const glossary: Record<string, GlossaryTerm> = {
     definition:
       "The Australian government register of education institutions approved to teach international students.",
   },
-  gte: {
-    label: "GTE",
+  "genuine-student": {
+    label: "Genuine Student",
     definition:
-      "Genuine Temporary Entrant — an Australian visa requirement where the student explains in writing why they intend to study temporarily.",
+      "Australia's Student visa requirement (replacing Genuine Temporary Entrant, GTE, in 2024): the applicant must show that studying in Australia is the main reason for the visa.",
   },
   vevo: {
     label: "VEVO",
