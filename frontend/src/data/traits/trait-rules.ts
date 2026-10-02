@@ -277,6 +277,14 @@ export function generateOverlay(
       ),
     ]);
   }
+  if (traits.auStudentFamilyExempt.value) {
+    addCallout("student", "overview", "AU", [
+      p(
+        `${Name} is on Australia's list of Pacific Island and ASEAN countries whose nationals can still include family members (partners and children) in a Student (subclass 500) application under the rules that apply from 2 October 2026. ` +
+          `Apply from outside Australia to include them; inside Australia, family can be included only in limited cases, such as when you need more time to finish your main course. ${cite("auStudentFamilyExempt")}`
+      ),
+    ]);
+  }
 
   // ── Work: nationality-specific routes ──
   const workVisas = traits.usNationalityWorkVisas.value;
