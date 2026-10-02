@@ -13,10 +13,13 @@
   "newHash": "cc775dbe3de234e33531046062af2b4210c4054b2cec53aa7f03834eb2109a29",
   "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -23,7 +23,7 @@\n Balkans-Related Sanctions\n Nov 20, 2025\n Belarus Sanctions\n-Sep 17, 2026\n+Sep 30, 2026\n Burma-Related Sanctions\n May 28, 2026\n Central African Republic Sanctions\n@@ -31,13 +31,13 @@\n Chinese Military Companies Sanctions\n Jun 01, 2022\n Counter Narcotics Trafficking Sanctions\n-Sep 16, 2026\n+Sep 30, 2026\n Counter Terrorism Sanctions\n-Sep 24, 2026\n+Sep 30, 2026\n Countering America's Adversaries Through Sanctions Act-Related Sanctions\n Feb 24, 2026\n Cuba Sanctions\n-Sep 17, 2026\n+Sep 29, 2026\n Cyber-Related Sanctions\n Aug 24, 2026\n Democratic Republic of the Congo-Related Sanctions\n@@ -53,13 +53,13 @@\n International Criminal Court-Related Sanctions\n Aug 18, 2026\n Iran Sanctions\n-Sep 17, 2026\n+Oct 01, 2026\n Iraq-Related Sanctions\n Jul 09, 2025\n Lebanon-Related Sanctions\n Feb 27, 2026\n Libya Sanctions\n-May 28, 2026\n+Sep 30, 2026\n Magnitsky Sanctions\n Aug 17, 2023\n Mali-Related Sanctions\n@@ -67,7 +67,7 @@\n Nicaragua-related Sanctions\n Apr 16, 2026\n Non-Proliferation Sanctions\n-Aug 24, 2026\n+Sep 29, 2026\n North Korea Sanctions\n Mar 12, 2026\n Promoting Accountability for Assad and Regional Stabilization Sanctions (PAARSS)\n@@ -83,11 +83,11 @@\n Sudan and Darfur Sanctions\n Jun 26, 2026\n Transnational Criminal Organizations\n-Sep 09, 2026\n+Oct 01, 2026\n Ukraine-/Russia-related Sanctions\n May 08, 2026\n Venezuela-Related Sanctions\n-Sep 16, 2026\n+Sep 28, 2026\n Yemen-related Sanctions\n Nov 18, 2021\n Information on OFAC sanctions lists program tags and their definitions.\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Only the 'last updated' dates next to several sanctions programs changed (e.g. Iran Sep 17 to Oct 01, Cuba Sep 17 to Sep 29); no program was added or removed.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "OFAC refreshed the update dates on several sanctions programs; the list of programs is unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:17.357Z",
   "error": null
 }

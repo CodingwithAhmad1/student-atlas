@@ -13,10 +13,13 @@
   "newHash": "03e6df7e57a3b678cfb309f20dd8b63e9023cc1cc7b329770670a907beb563f7",
   "diff": "Index: migrationsverket.se/what-swedish-citizenship-means\n===================================================================\n--- migrationsverket.se/what-swedish-citizenship-means\tprevious\n+++ migrationsverket.se/what-swedish-citizenship-means\tcurrent\n@@ -16,6 +16,9 @@\n You may also encounter problems if you travel to a country other than those countries of which you are a citizen. This is especially true if you did not enter the country with your Swedish passport but instead used your other passport. Then the authorities in that country can claim that Sweden does not have the right to help you.\n Information services survey External link, opens in new window.\n News\n+2026-09-30\n+The Swedish language test for citizenship may be postponed\n+The new Swedish language test may be introduced later than planned. The requirement to have knowledge of Swedish will remain, but for the time being, you can show your knowledge in other ways.\n 2026-09-24\n New look – same agency\n The Swedish Migration Agency has a new logo. On 24 September, the new logo will replace the old logo on the Agency’s website. The new logo will be rolled out gradually across all digital services and communications.\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "minor",
+  "summary": "A news item was added saying the new Swedish language test for citizenship may be postponed; the dual-citizenship text is unchanged.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Migrationsverket citizenship page: news item about a postponed citizenship language test; dual citizenship is still allowed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:18.241Z",
   "error": null
 }

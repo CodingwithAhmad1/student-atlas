@@ -13,10 +13,13 @@
   "newHash": "ebbace29708e7e3e968561da7a62c3f08cfc993327bb092f1b6040ea8d94bd2c",
   "diff": "Index: irs.gov/p901\n===================================================================\n--- irs.gov/p901\tprevious\n+++ irs.gov/p901\tcurrent\n@@ -1375,6 +1375,5 @@\n Acquire technical, professional, or business experience from a person other than that resident of Sri Lanka or other than a person related to that resident; or\n Study at a university or other recognized educational institution.\n Sweden\n-A student, apprentice, or business trainee\n-\n+A student, apprentice, or business trainee \n … text truncated …\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Whitespace-only change at the truncated end of the page text (a trailing space after 'A student, apprentice, or business trainee' under Sweden); a whitespace-insensitive diff of baseline vs candidate is empty.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "IRS Publication 901 changed only in whitespace; no tax-treaty entries changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:16.905Z",
   "error": null
 }

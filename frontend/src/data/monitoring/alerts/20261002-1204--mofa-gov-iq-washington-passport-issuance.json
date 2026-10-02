@@ -1,0 +1,25 @@
+{
+  "id": "20261002-1204--mofa-gov-iq-washington-passport-issuance",
+  "kind": "change",
+  "sourceId": "mofa.gov.iq/washington/passport-issuance",
+  "relatedSourceIds": [],
+  "sourceLabel": "Embassy of the Republic of Iraq in Washington — Passport Issuance",
+  "sourceUrl": "https://mofa.gov.iq/washington/passport-issuance/",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-02T12:04:55.698Z",
+  "updatedAt": "2026-10-02T12:04:55.698Z",
+  "oldHash": "3f14e50f50dc2b521f286d058ebb15faa401f1342c89cbad2add288db1d58eaf",
+  "newHash": "f39e8dbcd18eaf6492693bbf0b3019b077cc22b01bfbd6149ca6c60c1968c440",
+  "diff": "Index: mofa.gov.iq/washington/passport-issuance\n===================================================================\n--- mofa.gov.iq/washington/passport-issuance\tprevious\n+++ mofa.gov.iq/washington/passport-issuance\tcurrent\n@@ -1,6 +1,5 @@\n Passport Issuance\n 04 May\n-2716\n If the citizen loses his passport then he needs a new passport .\n First: Some Instructions for a new passport issuance :\n – if the citizen possesses no identity documents , he contact his family in Iraq and ask them to take original documents that prove his Iraqi nationality to the Consular Department which inform the embassy with that.\n",
+  "diffTruncated": false,
+  "significance": "noise",
+  "summary": "Only the page-view counter changed; it is now excluded from monitoring.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the page's view counter changed; the passport guidance is the same.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T12:04:57.964Z",
+  "error": null
+}

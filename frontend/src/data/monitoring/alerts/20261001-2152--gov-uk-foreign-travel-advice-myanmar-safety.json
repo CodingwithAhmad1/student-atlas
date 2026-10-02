@@ -13,10 +13,13 @@
   "newHash": "0ed170e630d46f80269a6497c9abed5457b3a700291b31f1864cd3c7673526e5",
   "diff": "Index: gov.uk/foreign-travel-advice/myanmar/safety\n===================================================================\n--- gov.uk/foreign-travel-advice/myanmar/safety\tprevious\n+++ gov.uk/foreign-travel-advice/myanmar/safety\tcurrent\n@@ -4,6 +4,8 @@\n FCDO advises against all travel to parts of Myanmar (Burma).\n Warning\n FCDO advises against all but essential travel to parts of Myanmar (Burma).\n+Subscriptions\n+Get email alerts\n Safety and security\n This guide also has safety and security advice for regions of Myanmar.\n Terrorism\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "A 'Subscriptions / Get email alerts' navigation link was added; no advice changed.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Myanmar travel advice: an email-alerts link was added, nothing else changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:13.900Z",
   "error": null
 }

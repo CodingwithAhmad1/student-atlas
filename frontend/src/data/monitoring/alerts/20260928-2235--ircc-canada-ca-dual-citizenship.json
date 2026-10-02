@@ -13,10 +13,13 @@
   "newHash": "0223b263a1e1cbca4c7daff22254e3687fd7e140401266ff9c11eba62b1b1aea",
   "diff": "Index: ircc.canada.ca/dual-citizenship\n===================================================================\n--- ircc.canada.ca/dual-citizenship\tprevious\n+++ ircc.canada.ca/dual-citizenship\tcurrent\n@@ -6,4 +6,4 @@\n Travelling as a dual citizen\n Page details\n Date modified:\n-2026-09-01\n\\ No newline at end of file\n+2026-09-28\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
-  "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "noise",
+  "summary": "Only the page's 'Date modified' stamp changed (2026-09-01 to 2026-09-28).",
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the modified date on IRCC's dual-citizenship page changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:56:16.412Z",
   "error": null
 }

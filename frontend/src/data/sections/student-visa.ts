@@ -115,7 +115,7 @@ export const studentVisa: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "The visa for international students in Australia is the [TERM: subclass-500|Student visa \u2014 Subclass 500]. It is issued by the Australian Department of Home Affairs. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                text: "The visa for international students in Australia is the [TERM: subclass-500|Student visa \u2014 Subclass 500]. It is issued by the Australian Department of Home Affairs. From 2 October 2026, most applicants must apply from outside Australia: a Student visa holder can apply for a further Student visa in Australia only if they meet an exemption. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
               },
             },
             {
@@ -147,7 +147,7 @@ export const studentVisa: Section = {
                   {
                     label: "Dependants",
                     value:
-                      "A spouse or de facto partner and dependent children may be included in the application as secondary applicants. A spouse of a student visa holder can work up to 48 hours per fortnight (or unlimited if the student is undertaking a masters or doctoral degree).",
+                      "From 2 October 2026, most Student visa applicants can no longer include family members (partners and children). Exemptions include Doctoral (PhD) students, students sponsored by DFAT or Defence, fully funded foreign government scholarship recipients, and nationals of listed Pacific Island and ASEAN countries. Family members can no longer apply later, separately, as subsequent entrants. Family members on a Student visa can work up to 48 hours a fortnight while the course is in session, or more if the student is studying a master's or doctoral degree. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
                   },
                   {
                     label: "Program types covered",

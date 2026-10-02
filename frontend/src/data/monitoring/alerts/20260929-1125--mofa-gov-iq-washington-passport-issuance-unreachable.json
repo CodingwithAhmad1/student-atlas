@@ -13,10 +13,13 @@
   "newHash": "unreachable-2026-09-29",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://mofa.gov.iq/washington/passport-issuance/). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The page loaded normally when re-checked on 2 October 2026; the failed checks were temporary.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-02T11:54:07.128Z",
   "error": "HTTP 403 from https://mofa.gov.iq/washington/passport-issuance/"
 }
