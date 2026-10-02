@@ -44,6 +44,10 @@ live page, `set_trait_column(trait, values, date)` writes them. A `stale-check`
 alert means a manual column is past its interval: check the page in a real
 browser and re-stamp the column.
 
+A weekly cloud routine does this review on its own and opens a PR: decisions
+follow `monitoring/REVIEW-POLICY.md`, steps `monitoring/review-routine-prompt.md`,
+tools via `mcp-content-server/atlas_cli.py` (same functions, no MCP needed).
+
 ## Rules and gotchas
 
 - The repo root is a monorepo shared with other projects and other Claude
