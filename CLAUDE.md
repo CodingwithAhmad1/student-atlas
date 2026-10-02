@@ -17,7 +17,11 @@ calendar, open manual items and the launch checklist.
   `monitoring/README.md`.
 - `mcp-content-server/` — MCP server for reviewing alerts and editing content.
   Local config: `Student Atlas/.mcp.json` (gitignored; copy from
-  `mcp-content-server/.mcp.json.example`).
+  `mcp-content-server/.mcp.json.example`). `atlas_cli.py` exposes the same
+  review tools on the command line (cloud routines, or a worktree, where the
+  MCP server would edit the main checkout instead).
+- Hosting: Vercel (Hobby), root `Student Atlas/frontend`, config in
+  `frontend/vercel.json` (SPA rewrite). See HANDBOOK §9.
 - `archive/` — retired Flask-era code; nothing there is used.
 
 ## Commands

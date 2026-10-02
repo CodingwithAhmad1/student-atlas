@@ -72,6 +72,7 @@ function normalizeFor(target: MonitoredTarget, html: string): string {
     url: target.url,
     contentSelector: target.contentSelector,
     stripSelectors: target.stripSelectors,
+    maxTextChars: target.maxTextChars,
   });
 }
 
@@ -108,7 +109,7 @@ async function fetchAll(
       return hostLimit(target.url)(() =>
         globalLimit(async (): Promise<FetchOutcome> => {
           try {
-            const { status, html, pdfText } = await fetchPage(target.url);
+            const { status, html, pdfText } = await fetchPage(target.url, target.maxTextChars);
             const text = pdfText ?? normalizeFor(target, html);
             // A blank page after normalization is a JS shell, and a short
             // maintenance/error notice is an interstitial — neither is a
@@ -288,12 +289,12 @@ class Run {
     status.lastHash = newHash;
 
     const open = findOpenAlert(this.alerts, target.sourceId, "change");
-    let baseline = readSnapshot(target.key);
+    let baseline = readSnapshot(target.key, target.maxTextChars);
 
     // The alert for this page was resolved since the last run: the text it
     // showed has been reviewed, so it is the new baseline. Any change since
     // then is diffed against it and raises a fresh alert.
-    const reviewed = open ? null : readCandidate(target.key);
+    const reviewed = open ? null : readCandidate(target.key, target.maxTextChars);
     if (reviewed !== null) {
       console.log(`✓ ${target.sourceId}: review finished — reviewed text is the new baseline`);
       baseline = reviewed;

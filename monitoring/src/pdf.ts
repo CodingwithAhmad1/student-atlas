@@ -18,7 +18,7 @@ const MIN_PDF_TEXT = 200;
  * A scanned PDF has no text layer: fall back to a hash of the file so that a
  * new version still alerts, with a readable one-line baseline.
  */
-export async function pdfToText(bytes: Uint8Array): Promise<string> {
+export async function pdfToText(bytes: Uint8Array, maxTextChars?: number): Promise<string> {
   const digest = createHash("sha256").update(bytes).digest("hex");
   let pages: string[] = [];
   try {
@@ -32,7 +32,7 @@ export async function pdfToText(bytes: Uint8Array): Promise<string> {
       `The watcher compares the file itself; SHA-256 ${digest}. Check the link by opening it.`
     );
   }
-  const cleaned = cleanText(pages.join("\n"));
+  const cleaned = cleanText(pages.join("\n"), maxTextChars);
   if (cleaned.length >= MIN_PDF_TEXT) return cleaned;
   return (
     `Scanned PDF with no text layer (${pages.length} page${pages.length === 1 ? "" : "s"}). ` +

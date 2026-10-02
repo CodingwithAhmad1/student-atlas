@@ -108,8 +108,12 @@ const NOISE_LINE_PATTERNS: RegExp[] = [
   /^if you use assistive technology .* accessible format/i,
 ];
 
-/** Normalized text is capped so a runaway page cannot bloat the repo. */
-const MAX_TEXT_CHARS = 200_000;
+/**
+ * Normalized text is capped so a runaway page cannot bloat the repo. A long
+ * page that is monitored in full (IRS Publication 901) raises its own cap with
+ * `maxTextChars` in source-overrides.ts.
+ */
+export const MAX_TEXT_CHARS = 200_000;
 const TRUNCATION_MARKER = "… text truncated …";
 
 export function isNoiseLine(line: string): boolean {
@@ -282,9 +286,9 @@ function extractHomeAffairs(html: string, pagePath: string): string | null {
 /**
  * Text-level cleanup shared by every extractor: strips invisible characters,
  * collapses whitespace, drops noise lines, and caps the length. Idempotent, so
- * it is also safe to re-apply to stored snapshots.
+ * it is also safe to re-apply to stored snapshots (with the same cap).
  */
-export function cleanText(text: string): string {
+export function cleanText(text: string, maxChars: number = MAX_TEXT_CHARS): string {
   const lines = text
     .replace(/[\u200B-\u200D\uFEFF\u00AD]/g, "") // zero-width chars, soft hyphens
     .replace(/\u00A0/g, " ") // non-breaking spaces
@@ -294,8 +298,8 @@ export function cleanText(text: string): string {
     .filter((line) => !isNoiseLine(line));
 
   const out = lines.join("\n");
-  return out.length > MAX_TEXT_CHARS
-    ? `${out.slice(0, MAX_TEXT_CHARS)}\n${TRUNCATION_MARKER}`
+  return out.length > maxChars
+    ? `${out.slice(0, maxChars)}\n${TRUNCATION_MARKER}`
     : out;
 }
 
@@ -303,6 +307,8 @@ export interface NormalizeOptions {
   url?: string;
   contentSelector?: string;
   stripSelectors?: string[];
+  /** Per-source length cap (default MAX_TEXT_CHARS). */
+  maxTextChars?: number;
 }
 
 /**
@@ -315,10 +321,13 @@ export function normalizeHtml(html: string, opts: NormalizeOptions = {}): string
     const parsed = new URL(opts.url);
     if (parsed.hostname.endsWith("homeaffairs.gov.au")) {
       const extracted = extractHomeAffairs(html, parsed.pathname);
-      if (extracted !== null) return cleanText(extracted);
+      if (extracted !== null) return cleanText(extracted, opts.maxTextChars);
     }
   }
-  return cleanText(normalizeGeneric(html, opts.contentSelector, opts.stripSelectors));
+  return cleanText(
+    normalizeGeneric(html, opts.contentSelector, opts.stripSelectors),
+    opts.maxTextChars
+  );
 }
 
 function normalizeGeneric(

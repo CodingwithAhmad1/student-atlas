@@ -99,6 +99,12 @@ and the reviewer opens the PDF to see what changed.
 
 ## Known limitations
 
+- Normalized text is capped at 200,000 characters (`MAX_TEXT_CHARS` in
+  `src/normalize.ts`); text past the cap is not compared. A long page that must
+  be watched in full gets `maxTextChars` in `frontend/src/data/source-overrides.ts`
+  (IRS Publication 901 does). Raising a cap shows the newly compared text in the
+  page's alert once; after review the next run makes it the baseline.
+
 - Sources marked `skipReason` in `frontend/src/data/source-overrides.ts`
   cannot be monitored: `travel.state.gov` / `ceac.state.gov` / `ukvcas.co.uk` /
   `uaecabinet.ae` / `legifrance.gouv.fr` / `pravo.by` block automated clients,
