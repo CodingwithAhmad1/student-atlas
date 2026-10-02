@@ -29,7 +29,7 @@ npm run check:content  # citations, glossary terms, callout anchors, profiles
 
 Four layers, merged for the reader's nationality:
 
-1. **Traits** (`src/data/traits/`) — a 100 × 19 table of nationality facts, each column read from one official list page, plus the rules that turn it into generated callouts and profile swaps
+1. **Traits** (`src/data/traits/`) — a 100 × 20 table of nationality facts, each column read from one official list page, plus the rules that turn it into generated callouts and profile swaps
 2. **Base content** (`src/data/sections/`) — nationality-agnostic visa info
 3. **Profiles** (`src/data/profiles/`) — alternative content blocks (ETA, ESTA, eVisitor, domestic)
 4. **Nationality overlays** (`src/data/nationalities/`) — hand-written, cited callouts per nationality

@@ -409,11 +409,11 @@ export const studentVisa: Section = {
               },
             },
             {
-              id: "au-docs-gte",
+              id: "au-docs-genuine-student",
               block: {
                 type: "bullet-list",
                 items: [
-                  '[TERM: gte|Genuine Temporary Entrant (GTE)] statement \u2014 a written statement explaining why the student wants to study in Australia and why they intend to return home afterwards. This is unique to the Australian application and is taken seriously by processing officers. It should be well-written and specific \u2014 generic statements about "gaining an education" are insufficient.',
+                  '[TERM: genuine-student|Genuine Student] answers \u2014 written answers in English, of up to 150 words each, to the Genuine Student questions in the online application, showing that studying in Australia is the main reason for the visa, plus supporting documents. There is an extra question for anyone who has held a Student visa before or is applying in Australia from another visa. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]',
                 ],
               },
             },
@@ -604,7 +604,7 @@ export const studentVisa: Section = {
                 type: "step",
                 number: 4,
                 title: "Submit the online application",
-                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, [TERM: gte|GTE] statement, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $2,500 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
+                body: "The application is submitted through ImmiAccount at immi.homeaffairs.gov.au. The CoE number, [TERM: genuine-student|Genuine Student] answers, financial evidence, OSHC certificate, and identity documents are uploaded. The visa fee of AUD $2,500 is paid online. [CITE: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500]",
               },
             },
             {
