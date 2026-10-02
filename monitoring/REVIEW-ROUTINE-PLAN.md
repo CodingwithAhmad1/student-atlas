@@ -57,6 +57,12 @@ push, open the PR (or comment on the open one) with a decision table and a
   it reads the prompt from `main`): cron `0 6 * * 1`, `claude-opus-5-5`, repo
   `HariharRengan/Zim-Side-Quests`, environment `Default`.
 
+## Escalation (added 2026-10-02)
+The routine emails Ahmad through the claude.ai Gmail connector only in three
+cases: a major policy shift it could not apply, the routine broken, or a
+backlog ignored for weeks. At most one email per run. Rules: §7 of
+`review-routine-prompt.md`; setup brief: `ROUTINE-SETUP.md`.
+
 ## Ahmad's steps
 1. claude.ai → Code → environments → `Default` → network access **Full**.
 2. Merge this PR.

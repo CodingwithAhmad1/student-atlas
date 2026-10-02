@@ -153,7 +153,10 @@ using the same tools through `mcp-content-server/atlas_cli.py`. It opens one
 PR per run (or comments on last week's if it is still open) and never pushes
 to `main`; merging the PR is the approval. Its steps are in
 `monitoring/review-routine-prompt.md`; the environment needs Full network
-access. Manage it at claude.ai/code/routines.
+access. It emails Ahmad (Gmail connector) only in three extreme cases: a major
+policy shift it could not apply, the routine itself broken, or a backlog left
+for weeks (§7 of the prompt). Setup brief: `monitoring/ROUTINE-SETUP.md`.
+Manage it at claude.ai/code/routines.
 
 **Checks in every build** (`npm run build` runs `check:content`): every
 `[CITE]` and `[TERM]` exists, callout anchors exist, practical callouts have no
