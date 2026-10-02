@@ -1,13 +1,33 @@
 Guidance
 Using the ‘UK Immigration: ID Check’ app
 Information on using the app when applying to work, study or live in the UK.
+Updates to this page
 From:
 UK Visas and Immigration
 Published:
 5 October 2020
 20 March 2026
-—
-See all updates
+Show all updates
+20 March 2026
+Added links to videos on how to scan a passport biometric chip and how to take a suitable digital photo.
+26 January 2026
+Updated because you no longer need to travel to the UK within 90 days after receiving a decision of proven identity at a VAC.
+27 March 2025
+Amended to reflect that expired biometric residence permits (BRPs) may be used 18 months after the expiry date printed on the card.
+31 December 2024
+Updated to explain that you can either use your current or expired Biometric Residence Permit (BRP) if your application route allows to complete the identity verification stage of your application.
+13 March 2024
+iPhone users now need at least iOS 15 to download the app.
+12 October 2023
+Updated the requirements for installing the app on iPhones and Android phones.
+14 December 2021
+Updated to include details on using a Biometric Residence Permit (BRP) to verify your identity.
+23 February 2021
+Added information on applying for the BNO visa using the ID check app.
+6 October 2020
+Added video.
+5 October 2020
+First published.
 You can no longer use the ‘UK Immigration: ID Check’ app to complete the identity verification stage of your Ukraine scheme visa application.
 Find out how to apply for the Ukraine Family Scheme or Ukraine Sponsorship Scheme (Homes for Ukraine).
 You can use the ‘UK Immigration: ID Check’ app to complete the identity verification stage of your application.
@@ -112,27 +132,5 @@ Top tips for using the UK Immigration: ID Check app for EU, EEA and Swiss citize
 Top tips for using the UK Immigration: ID Check app for EU, EEA and Swiss citizens.
 Top tips for using the UK Immigration: ID Check app for BNO visa applicants
 Top tips for using the UK Immigration: ID Check app for BNO visa applicants.
-Updates to this page
-Show all updates
-20 March 2026
-Added links to videos on how to scan a passport biometric chip and how to take a suitable digital photo.
-26 January 2026
-Updated because you no longer need to travel to the UK within 90 days after receiving a decision of proven identity at a VAC.
-27 March 2025
-Amended to reflect that expired biometric residence permits (BRPs) may be used 18 months after the expiry date printed on the card.
-31 December 2024
-Updated to explain that you can either use your current or expired Biometric Residence Permit (BRP) if your application route allows to complete the identity verification stage of your application.
-13 March 2024
-iPhone users now need at least iOS 15 to download the app.
-12 October 2023
-Updated the requirements for installing the app on iPhones and Android phones.
-14 December 2021
-Updated to include details on using a Biometric Residence Permit (BRP) to verify your identity.
-23 February 2021
-Added information on applying for the BNO visa using the ID check app.
-6 October 2020
-Added video.
-5 October 2020
-First published.
 Sign up for emails or print this page
 Contents

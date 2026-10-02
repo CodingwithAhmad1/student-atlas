@@ -1,0 +1,22 @@
+{
+  "id": "20261002-2122--mea-gov-in-students-registration-portal-unreachable",
+  "kind": "unreachable",
+  "sourceId": "mea.gov.in/students-registration-portal",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ministry of External Affairs, India — Students Registration Portal",
+  "sourceUrl": "https://www.mea.gov.in/Students-Registration-Portal",
+  "country": "INTL",
+  "category": "student",
+  "detectedAt": "2026-10-02T21:22:48.611Z",
+  "updatedAt": "2026-10-02T21:22:48.611Z",
+  "oldHash": "b5a2e6bd9bfe12d488f9e27f11df58ac63779f0fb2f0a8e86ca8704f2f8ff80b",
+  "newHash": "unreachable-2026-10-02",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.mea.gov.in/Students-Registration-Portal). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://www.mea.gov.in/Students-Registration-Portal"
+}

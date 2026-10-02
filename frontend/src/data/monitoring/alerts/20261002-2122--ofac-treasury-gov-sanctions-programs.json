@@ -1,0 +1,22 @@
+{
+  "id": "20261002-2122--ofac-treasury-gov-sanctions-programs",
+  "kind": "change",
+  "sourceId": "ofac.treasury.gov/sanctions-programs",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Treasury OFAC — Sanctions Programs and Country Information",
+  "sourceUrl": "https://ofac.treasury.gov/sanctions-programs-and-country-information",
+  "country": "INTL",
+  "category": "eligibility",
+  "detectedAt": "2026-10-02T21:22:48.611Z",
+  "updatedAt": "2026-10-02T21:22:48.611Z",
+  "oldHash": "cc775dbe3de234e33531046062af2b4210c4054b2cec53aa7f03834eb2109a29",
+  "newHash": "b1178982cd99ed6137a78f0c6927c9a23ab76797411b748e49829e99e561085a",
+  "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -33,7 +33,7 @@\n Counter Narcotics Trafficking Sanctions\n Sep 30, 2026\n Counter Terrorism Sanctions\n-Sep 30, 2026\n+Oct 02, 2026\n Countering America's Adversaries Through Sanctions Act-Related Sanctions\n Feb 24, 2026\n Cuba Sanctions\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

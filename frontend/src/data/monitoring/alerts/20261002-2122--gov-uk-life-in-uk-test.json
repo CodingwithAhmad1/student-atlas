@@ -1,0 +1,22 @@
+{
+  "id": "20261002-2122--gov-uk-life-in-uk-test",
+  "kind": "change",
+  "sourceId": "gov.uk/life-in-uk-test",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Life in the UK Test",
+  "sourceUrl": "https://www.gov.uk/life-in-the-uk-test",
+  "country": "UK",
+  "category": "residency",
+  "detectedAt": "2026-10-02T21:22:48.611Z",
+  "updatedAt": "2026-10-02T21:22:48.611Z",
+  "oldHash": "9bfb334201605f39f440a18e92ab6e2d06685c7b08997911f01020cca7e36065",
+  "newHash": "ec7c939a56085484b783c2579dc63f1041968e72065b8f28686ed2e8670331f8",
+  "diff": "Index: gov.uk/life-in-uk-test\n===================================================================\n--- gov.uk/life-in-uk-test\tprevious\n+++ gov.uk/life-in-uk-test\tcurrent\n@@ -1,8 +1,9 @@\n Life in the UK Test\n Skip contents\n Book the Life in the UK Test\n-This is the only official government service for booking the Life in the UK Test. You need to take the test as part of your application for British citizenship or settlement in the UK.\n-You must book your Life in the UK Test online at least 3 days in advance. It costs £50.\n+This is the only official government service for booking the Life in the UK Test.\n+You may need to take the test as part of your application for British citizenship or settlement in the UK. When you apply, check the guidance and application form to find out if you need to take a Life in the UK Test.\n+You must book your test online at least 3 days in advance. It costs £50.\n There are over 30 test centres in the UK. You can choose where to take your test when you book.\n Prepare for the test\n You’ll only be tested on information from the official Guide for New Residents. You should study it to prepare for the test.\n@@ -24,9 +25,7 @@\n valid travel document with a photo (you cannot use an emergency travel document)\n biometric residence permit (BRP) or biometric residence card (BRC) - your test must be no later than 24 months after the expiry date printed on the card or before 31 December 2026, whichever comes first\n You must use ID with a photo that looks like you.\n-If you do not have any of these documents, email the Home Office for help.\n-Nationality enquiries\n-nationalityenquiries@homeoffice.gov.uk\n+If you do not have any of these documents, contact UKVI for help.\n If you have changed gender (including a different name)\n Email the Home Office if you do not want test centre staff to see your previous gender or for it to show on your test result.\n Email before booking the test.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

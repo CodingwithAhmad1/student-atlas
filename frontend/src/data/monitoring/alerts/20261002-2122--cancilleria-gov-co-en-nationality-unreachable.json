@@ -1,0 +1,22 @@
+{
+  "id": "20261002-2122--cancilleria-gov-co-en-nationality-unreachable",
+  "kind": "unreachable",
+  "sourceId": "cancilleria.gov.co/en/nationality",
+  "relatedSourceIds": [],
+  "sourceLabel": "Colombia Ministry of Foreign Affairs (Cancillería) — Nationality",
+  "sourceUrl": "https://www.cancilleria.gov.co/en/nationality",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-02T21:22:48.611Z",
+  "updatedAt": "2026-10-02T21:22:48.611Z",
+  "oldHash": "dff3cf6ee9b11b79f2300785b91f30807b2a31e89f34d35fa53ac28e9f0d85f1",
+  "newHash": "unreachable-2026-10-02",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.cancilleria.gov.co/en/nationality). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://www.cancilleria.gov.co/en/nationality"
+}
