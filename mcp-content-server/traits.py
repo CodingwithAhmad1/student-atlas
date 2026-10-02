@@ -323,7 +323,7 @@ def columns_for_citation(citation_ids: list[str]) -> str:
 ALIASES: dict[str, list[str]] = {
     "United States": ["United States of America", "USA", "U.S.", "United States"],
     "United Kingdom": ["United Kingdom", "UK", "British Citizen", "Britain"],
-    "South Korea": ["South Korea", "Korea, Republic of", "Republic of Korea", "Korea (South)"],
+    "South Korea": ["South Korea", "Korea, Republic of", "Republic of Korea", "Korea (South)", "Korea, South"],
     "North Korea": ["North Korea", "Korea, Democratic People's Republic", "Democratic People's Republic of Korea", "DPRK", "Korea (North)"],
     "China": ["China", "People's Republic of China"],
     "Taiwan": ["Taiwan"],
@@ -380,6 +380,51 @@ REGIONS: dict[str, tuple[str, str | None]] = {
     "auVisitorStream": ("eligible for an ETA", "If you hold more than one passport"),
     "usTaxTreatyStudent": ("Students and Apprentices", "Wages and Pensions Paid by a Foreign Government"),
 }
+
+# Columns whose start marker first appears in a table of contents (IRS Pub. 901
+# lists every section heading, then its countries, near the top): match the
+# longest start→end span, which is the section itself, not the contents entry.
+REGION_LONGEST = {"usTaxTreatyStudent"}
+
+# One entry on the page that covers several countries: (heading in the region,
+# pattern over the whole page whose group 1 lists the member countries). Pub. 901
+# discusses the U.S.-U.S.S.R. treaty once, under "Commonwealth of Independent
+# States", and names the members it still applies to in its introduction.
+GROUP_ENTRIES: dict[str, list[tuple[str, str]]] = {
+    "usTaxTreatyStudent": [
+        (
+            "Commonwealth of Independent States",
+            r"following members of the Commonwealth of Independent States \(C\.I\.S\.\):\s*([^.]+)\.",
+        ),
+    ],
+}
+
+
+def _region(text: str, start: str, end: str | None, longest: bool = False) -> str:
+    """Text from `start` to the next `end` (whole text if `start` is absent)."""
+    spans = []
+    i = text.find(start)
+    while i >= 0:
+        j = text.find(end, i + len(start)) if end else -1
+        spans.append(text[i : j if j > 0 else None])
+        if not longest:
+            break
+        i = text.find(start, i + len(start))
+    return max(spans, key=len) if spans else text
+
+
+def _group_members(trait: str, page: str, region: str) -> tuple[dict[str, str], list[str]]:
+    """{member-list text: heading} for group entries in the region, plus warnings."""
+    found, warnings = {}, []
+    for heading, pattern in GROUP_ENTRIES.get(trait, []):
+        if heading not in region:
+            continue
+        m = re.search(pattern, page)
+        if m:
+            found[m.group(1)] = heading
+        else:
+            warnings.append(f"The {heading} entry is on the page but its member list was not found — check its members by hand.")
+    return found, warnings
 
 
 def page_text(url: str) -> str:
@@ -438,14 +483,12 @@ def check_column(trait: str, registry: list[tuple[str, str]], fetch=page_text) -
     um = re.search(rf'"{re.escape(src["citationId"])}": \{{\n\s*id: "[^"]*",\n\s*url: "([^"]+)"', cite_src)
     if not um:
         raise TraitError(f"Citation {src['citationId']} not found in citations.ts")
-    text = fetch(um.group(1))
+    page = fetch(um.group(1))
+    text = page
     region = REGIONS.get(trait)
     if region:
-        start, end = region
-        i = text.find(start)
-        if i >= 0:
-            j = text.find(end, i + len(start)) if end else -1
-            text = text[i : j if j > 0 else None]
+        text = _region(page, *region, longest=trait in REGION_LONGEST)
+    groups, group_warnings = _group_members(trait, page, text)
     rows = load_rows()
     meaning = PRESENCE_MEANS.get(trait)
     flips, agree, presence_only, missing = [], [], [], []
@@ -457,9 +500,12 @@ def check_column(trait: str, registry: list[tuple[str, str]], fetch=page_text) -
         if trait.startswith(_OWN_COLUMN_PREFIX.get(slug, "-")):
             continue  # a destination's own column is not used
         present = _present(text, name)
+        via = "" if present else next((h for members, h in groups.items() if _present(members, name)), "")
+        present = present or bool(via)
         current = row[trait]["value"]
         if meaning is None:
-            presence_only.append(f"{slug}: {'mentioned' if present else 'not mentioned'} (current {json.dumps(current)})")
+            how = f"mentioned (as a member under {via})" if via else ("mentioned" if present else "not mentioned")
+            presence_only.append(f"{slug}: {how} (current {json.dumps(current)})")
             continue
         if trait == "auVisitorStream":
             # eVisitor takes precedence for passports on both lists (free, no app).
@@ -473,6 +519,8 @@ def check_column(trait: str, registry: list[tuple[str, str]], fetch=page_text) -
     out = [f"# check_trait_column({trait}) against {src['citationId']} ({len(text):,} chars of page text considered)"]
     out.append(f"Presence on the page means: {json.dumps(meaning) if meaning is not None else 'reviewer decides (presence reported only)'}")
     out.append(f"\n## Proposed changes ({len(flips)})\n" + ("\n".join(f"- {f}" for f in flips) or "- none"))
+    if group_warnings:
+        out.append("\n## Warnings\n" + "\n".join(f"- {w}" for w in group_warnings))
     if presence_only:
         out.append("\n## Presence report\n" + "\n".join(f"- {p}" for p in presence_only))
     out.append(f"\n## Unchanged ({len(agree)}): {', '.join(agree) or 'none'}")

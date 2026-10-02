@@ -20,8 +20,8 @@ const perHost = (url: string) => {
   return hostLimits.get(host)!;
 };
 async function textOf(s: (typeof monitoredSources)[number]) {
-  const { html, pdfText } = await fetchPage(s.url);
-  return pdfText ?? normalizeHtml(html, { url: s.url, contentSelector: s.contentSelector, stripSelectors: s.stripSelectors });
+  const { html, pdfText } = await fetchPage(s.url, s.maxTextChars);
+  return pdfText ?? normalizeHtml(html, { url: s.url, contentSelector: s.contentSelector, stripSelectors: s.stripSelectors, maxTextChars: s.maxTextChars });
 }
 const targets = monitoredSources.filter((s) => !s.skipReason);
 const first = await Promise.all(targets.map((s) => perHost(s.url)(() => limit(async () => { try { return await textOf(s); } catch { return null; } }))));

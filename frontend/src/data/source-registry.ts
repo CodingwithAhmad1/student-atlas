@@ -25,6 +25,8 @@ export interface MonitoredSource {
   category: SourceCategory;
   contentSelector?: string;
   stripSelectors?: string[];
+  /** Raised length cap for this page's normalized text (see source-overrides.ts). */
+  maxTextChars?: number;
   /** When set, the watcher does not fetch this page. */
   skipReason?: string;
   /** Trait columns (traits/trait-sources.ts) derived from this page, if any. */
@@ -68,6 +70,7 @@ function buildRegistry(): MonitoredSource[] {
       ...(override?.stripSelectors
         ? { stripSelectors: override.stripSelectors }
         : {}),
+      ...(override?.maxTextChars ? { maxTextChars: override.maxTextChars } : {}),
       ...(override?.skipReason ? { skipReason: override.skipReason } : {}),
     });
   }

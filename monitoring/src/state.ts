@@ -63,14 +63,17 @@ export function candidatePath(key: string): string {
   return join(SNAPSHOTS_DIR, `${key}${CANDIDATE_SUFFIX}`);
 }
 
-/** Stored text is re-cleaned so text-level normalizer changes cannot surface as diffs. */
-function readText(path: string): string | null {
+/**
+ * Stored text is re-cleaned so text-level normalizer changes cannot surface as
+ * diffs. Pass the source's own `maxTextChars` so a raised cap is not undone.
+ */
+function readText(path: string, maxTextChars?: number): string | null {
   if (!existsSync(path)) return null;
-  return cleanText(readFileSync(path, "utf8"));
+  return cleanText(readFileSync(path, "utf8"), maxTextChars);
 }
 
-export function readSnapshot(key: string): string | null {
-  return readText(snapshotPath(key));
+export function readSnapshot(key: string, maxTextChars?: number): string | null {
+  return readText(snapshotPath(key), maxTextChars);
 }
 
 export function writeSnapshot(key: string, text: string): void {
@@ -78,8 +81,8 @@ export function writeSnapshot(key: string, text: string): void {
   writeFileSync(snapshotPath(key), text, "utf8");
 }
 
-export function readCandidate(key: string): string | null {
-  return readText(candidatePath(key));
+export function readCandidate(key: string, maxTextChars?: number): string | null {
+  return readText(candidatePath(key), maxTextChars);
 }
 
 export function writeCandidate(key: string, text: string): void {

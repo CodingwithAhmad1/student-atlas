@@ -221,6 +221,38 @@ class ContentToolTests(ScratchFrontend):
         out = trait_table.check_column("usVisaBulletinBacklog", registry, fetch=lambda url: page)
         self.assertIn("manual column", out)
 
+    def test_check_column_reads_treaty_section_not_contents(self):
+        # Shaped like IRS Pub. 901: a contents list repeats the section headings
+        # (with no member names), the C.I.S. members are named once in the
+        # introduction, and South Korea is headed "Korea, South".
+        page = "\n".join([
+            "U.S.-U.S.S.R. income tax treaty. The U.S.-U.S.S.R. income tax treaty remains in effect for the "
+            "following members of the Commonwealth of Independent States (C.I.S.): Armenia, Azerbaijan, Belarus, "
+            "Georgia, Kyrgyzstan, Moldova, Tajikistan, Turkmenistan, and Uzbekistan. That treaty will remain in effect.",
+            "Students and Apprentices", "Commonwealth of Independent States (C.I.S.)", "Korea, South", "Sweden",
+            "Wages and Pensions Paid by a Foreign Government", "Pakistan",
+            "Students and Apprentices",
+            "Commonwealth of Independent States (C.I.S.)",
+            "An individual who is a resident of a C.I.S. member and who is temporarily in the United States ...",
+            "Korea, South", "An individual who is a resident of South Korea ...",
+            "Sweden", "A student, apprentice, or business trainee ...",
+            "Switzerland", "Thailand", "United Kingdom", "Venezuela",
+            "Wages and Pensions Paid by a Foreign Government", "Pakistan", "Brazil",
+        ])
+        registry = [("tajikistan", "Tajikistan"), ("south-korea", "South Korea"), ("thailand", "Thailand"),
+                    ("pakistan", "Pakistan"), ("brazil", "Brazil")]
+        out = trait_table.check_column("usTaxTreatyStudent", registry, fetch=lambda url: page)
+        self.assertIn("tajikistan: mentioned (as a member under Commonwealth of Independent States)", out)
+        self.assertIn("south-korea: mentioned (current", out)
+        self.assertIn("thailand: mentioned (current", out)  # only in the section, not the contents
+        self.assertIn("pakistan: not mentioned", out)  # past the section's end
+        self.assertIn("brazil: not mentioned", out)
+        self.assertNotIn("Warnings", out)
+        # The C.I.S. heading without its member list is flagged, not silently "not mentioned".
+        out = trait_table.check_column("usTaxTreatyStudent", registry, fetch=lambda url: page.split("\n", 1)[1])
+        self.assertIn("tajikistan: not mentioned", out)
+        self.assertIn("member list was not found", out)
+
 
 class ReviewTests(ScratchFrontend):
     def setUp(self):

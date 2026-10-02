@@ -13,10 +13,10 @@ if (!url) {
   console.error("usage: npx tsx src/page-text.ts <url>");
   process.exit(2);
 }
-const { html, pdfText } = await fetchPage(url);
-// Use the source's own selectors, if any, so the text matches the watcher's.
+// Use the source's own selectors and cap, if any, so the text matches the watcher's.
 const source = monitoredSources.find((s) => s.url === url);
+const { html, pdfText } = await fetchPage(url, source?.maxTextChars);
 process.stdout.write(
   pdfText ??
-    normalizeHtml(html, { url, contentSelector: source?.contentSelector, stripSelectors: source?.stripSelectors })
+    normalizeHtml(html, { url, contentSelector: source?.contentSelector, stripSelectors: source?.stripSelectors, maxTextChars: source?.maxTextChars })
 );

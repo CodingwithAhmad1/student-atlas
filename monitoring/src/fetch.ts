@@ -40,9 +40,10 @@ function retryDelayMs(attempt: number, retryAfter: string | null): number {
 /**
  * Fetch a page with timeout and retries. Retries network errors, 5xx and 429;
  * other HTTP errors (404, 403, ...) fail immediately — they are a signal about
- * the source, not a transient condition.
+ * the source, not a transient condition. `maxTextChars` caps a PDF's
+ * extracted text (HTML is capped by normalizeHtml).
  */
-export async function fetchPage(url: string): Promise<FetchResult> {
+export async function fetchPage(url: string, maxTextChars?: number): Promise<FetchResult> {
   let lastError: unknown = null;
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
@@ -73,7 +74,7 @@ export async function fetchPage(url: string): Promise<FetchResult> {
     if (response.ok) {
       const bytes = new Uint8Array(await response.arrayBuffer());
       if (isPdf(bytes, response.headers.get("content-type"))) {
-        return { status: response.status, html: "", pdfText: await pdfToText(bytes) };
+        return { status: response.status, html: "", pdfText: await pdfToText(bytes, maxTextChars) };
       }
       return { status: response.status, html: new TextDecoder().decode(bytes) };
     }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T11:09:54.342Z",
+  "generatedAt": "2026-10-02T12:02:40.662Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -4263,9 +4263,9 @@
       "country": "INTL",
       "category": "general",
       "label": "IRS — Publication 901, U.S. Tax Treaties",
-      "lastCheckedAt": "2026-10-02T11:09:54.342Z",
-      "lastChangedAt": "2026-09-28T22:35:19.751Z",
-      "lastHash": "ebbace29708e7e3e968561da7a62c3f08cfc993327bb092f1b6040ea8d94bd2c",
+      "lastCheckedAt": "2026-10-02T12:02:40.662Z",
+      "lastChangedAt": "2026-10-02T12:02:40.662Z",
+      "lastHash": "28ccd6531e5c00d361522347436db85acb7c52c07f220316ddf93dc15885a609",
       "lastHttpStatus": 200,
       "consecutiveFailures": 0,
       "lastError": null,

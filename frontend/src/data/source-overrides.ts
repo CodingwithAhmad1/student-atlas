@@ -16,6 +16,14 @@ export interface SourceOverride {
    */
   stripSelectors?: string[];
   /**
+   * Raises the watcher's 200,000-character cap on this page's normalized text
+   * (MAX_TEXT_CHARS in monitoring/src/normalize.ts) for a long page that must
+   * be compared in full. Changing it changes the stored text, so the page's
+   * open alert picks up the difference and is reviewed once; set it with
+   * headroom so the page does not hit the new cap as it grows.
+   */
+  maxTextChars?: number;
+  /**
    * Set when automated monitoring cannot fetch this page (bot protection,
    * TLS blocking). The watcher skips it and the Activity tab reports it as
    * not monitorable instead of endlessly failing.
@@ -72,6 +80,11 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "studyinthestates.dhs.gov": {
     stripSelectors: [".paragraph--type--recent-blogs"],
   },
+
+  // The treaty articles run alphabetically past the default 200,000-character
+  // cap (it cut the text mid-"Sweden", so Switzerland … Venezuela were not
+  // compared). The full publication is ~272,000 characters (2026-10-02).
+  "irs.gov/p901": { maxTextChars: 400_000 },
 
   // ── Eligibility lists feeding the nationality traits (traits/trait-sources.ts) ──
   "gov.uk/visa-national-list": { category: "eligibility" },
