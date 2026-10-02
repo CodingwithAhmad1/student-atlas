@@ -286,15 +286,22 @@ The app is a static single-page app: `cd frontend && npm run build` produces
 `frontend/dist/`. Any static host works (Cloudflare Pages, Netlify, Vercel,
 GitHub Pages).
 
+**Chosen host: Vercel (free Hobby plan).** Project settings: root directory
+`Student Atlas/frontend`, framework Vite (from `vercel.json`), Node 22, Git
+connected to `main` so every push redeploys. Watcher commits carry
+`[skip ci]`; if Vercel skips those, new alerts appear on the next ordinary
+deploy.
+
 **Must do**
 - [ ] **Rebuild on every push to `main`.** The watcher commits new alerts and
       status twice a day, and they are bundled at build time. Set the host's
       root directory to `Student Atlas/frontend`, build command `npm run build`,
       output `dist`, Node 22.
 - [ ] **SPA fallback.** The app uses browser routes (`/student/documents`,
-      `/activity`, …). Rewrite unknown paths to `/index.html` (Netlify
-      `_redirects`: `/* /index.html 200`; Cloudflare Pages and Vercel handle it
-      with their SPA settings), or deep links will 404.
+      `/activity`, …). Rewrite unknown paths to `/index.html`, or deep links
+      will 404. Vercel: done by `frontend/vercel.json` (static files are served
+      first, everything else goes to `index.html`). Netlify: `_redirects` with
+      `/* /index.html 200`. Cloudflare Pages: automatic without a `404.html`.
 - [ ] **Clear the open items in §7** that affect readers (browser checks,
       pending alerts), and do a final `npm run build` with no failures.
 - [ ] **Read the disclaimer** (home page, `home-content.ts`): "an information
