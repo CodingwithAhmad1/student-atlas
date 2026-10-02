@@ -1,6 +1,6 @@
 # Student Atlas — Handbook
 
-_Last updated 2026-09-28. This is the single reference for how the project is
+_Last updated 2026-10-02. This is the single reference for how the project is
 built, how it stays accurate, what needs a person, and what to do before
 launch. Detailed references it points to: `frontend/src/data/CONTENT-GUIDE.md`
 (content model and editing tools) and `monitoring/README.md` (the watcher)._
@@ -237,20 +237,25 @@ All 35 open alerts were reviewed on 2 October 2026; one stays open: the
 Vietnamese dual-nationality page (`pbgdpl.gov.vn`) returns HTTP 503. It closes
 itself once the page responds; if it stays down, cite an archived copy.
 
-### Follow-ups from the 2 October review
-1. **Australia, Student visa from 2 October 2026.** The guide now says most
-   applicants cannot include family and most must apply from outside
-   Australia. Still open:
-   - Done 2 October: the Pacific Island / ASEAN family exemption is the
-     `auStudentFamilyExempt` trait (8 of the 100 rows).
-   - Done 2 October: "GTE statement" replaced by the Genuine Student answers
-     (glossary term `genuine-student`, cited to the Subclass 500 page).
-   - No separate citation needed: the Subclass 500 page itself lists every
-     exemption (checked 2 October), and it is already monitored.
-2. **IRS Publication 901 is only partly monitored.** The watcher cuts page
-   text at 200,000 characters, which ends mid-"Sweden", so treaty articles for
-   later countries are not compared; `check_trait_column usTaxTreatyStudent`
-   also reads too little of the page. Needs a watcher fix.
+### Done in the 2 October review (for the record)
+- **Australia, Student visa from 2 October 2026**: most applicants cannot
+  include family and most must apply from outside Australia (AU overview,
+  dependants item, TL;DR card). The Pacific Island / ASEAN family exemption
+  is the `auStudentFamilyExempt` trait (8 rows). "GTE statement" became the
+  Genuine Student answers (glossary `genuine-student`).
+- **IRS Publication 901 is monitored in full**: per-source `maxTextChars`
+  in `source-overrides.ts` (400k for p901; the default cap stays 200k), and
+  `check_trait_column usTaxTreatyStudent` reads the Students and Apprentices
+  section itself.
+
+### Weekly review routine: not created yet
+The files are on `main` (`monitoring/ROUTINE-SETUP.md`), but creating the
+routine failed with `repo_access_denied`: Ahmad's claude.ai GitHub connection
+cannot see `HariharRengan/Zim-Side-Quests`. Fix: `/login` with the claude.ai
+account and `/web-setup` in the terminal CLI, or the Claude GitHub app
+installed on HariharRengan's account (Harihar approves). Also set the cloud
+environment to Full network access and connect Gmail. Then hand
+`ROUTINE-SETUP.md` to a Claude chat to create it.
 
 ### Checks only a real browser can do
 travel.state.gov and usembassy.gov block automated clients.
@@ -329,11 +334,10 @@ connected to `main` so every push redeploys. Watcher commits carry
 deploy.
 
 **Must do**
-- [ ] **Rebuild on every push to `main`.** The watcher commits new alerts and
-      status twice a day, and they are bundled at build time. Set the host's
-      root directory to `Student Atlas/frontend`, build command `npm run build`,
-      output `dist`, Node 22.
-- [ ] **SPA fallback.** The app uses browser routes (`/student/documents`,
+- [ ] **Create the Vercel project** with the settings above, so it rebuilds
+      on every push to `main` (the watcher commits new alerts and status twice
+      a day, and they are bundled at build time).
+- [x] **SPA fallback.** The app uses browser routes (`/student/documents`,
       `/activity`, …). Rewrite unknown paths to `/index.html`, or deep links
       will 404. Vercel: done by `frontend/vercel.json` (static files are served
       first, everything else goes to `index.html`). Netlify: `_redirects` with
