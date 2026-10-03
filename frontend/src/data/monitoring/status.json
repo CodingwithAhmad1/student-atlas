@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-02T21:22:48.611Z",
+  "generatedAt": "2026-10-03T07:07:43.191Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -161,7 +161,7 @@
       "country": "UK",
       "category": "student",
       "label": "GOV.UK — Student Visa",
-      "lastCheckedAt": "2026-10-02T21:22:48.611Z",
+      "lastCheckedAt": "2026-10-03T07:07:43.191Z",
       "lastChangedAt": null,
       "lastHash": "9dcecf5c8c15edfeaf9374a0ff2fc6ee0b7057269a51f4dde73b21e84ea245fc",
       "lastHttpStatus": 200,
