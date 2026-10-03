@@ -15,37 +15,19 @@ import {
   FileTextIcon,
   LoaderIcon,
   AlertCircleIcon,
+  type LucideIcon,
 } from "lucide-react";
+import { REPORT_SECTIONS, type ReportSection } from "@/lib/report-sections";
 
-const SECTIONS = [
-  {
-    slug: "visit",
-    title: "Tourist Visa",
-    description: "Entry requirements and short-stay applications",
-    icon: PlaneIcon,
-  },
-  {
-    slug: "student",
-    title: "Student Visa",
-    description: "Application process, documents, and after arrival",
-    icon: GraduationCapIcon,
-  },
-  {
-    slug: "work",
-    title: "Work Visa",
-    description: "Post-study work rights and employer sponsorship",
-    icon: BriefcaseIcon,
-  },
-  {
-    slug: "residency",
-    title: "Residency Pathway",
-    description: "Permanent residency, citizenship, and dual nationality",
-    icon: HomeIcon,
-  },
-] as const;
+const SECTION_ICONS: Record<ReportSection["slug"], LucideIcon> = {
+  visit: PlaneIcon,
+  student: GraduationCapIcon,
+  work: BriefcaseIcon,
+  residency: HomeIcon,
+};
 
 export function ReportPage() {
-  const { preferences, isConfigured } = usePreferences();
+  const { preferences, isConfigured, nationalityUnsupported } = usePreferences();
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const [generating, setGenerating] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -59,6 +41,10 @@ export function ReportPage() {
     });
   };
 
+  const allSelected = selected.size === REPORT_SECTIONS.length;
+  const toggleAll = () =>
+    setSelected(allSelected ? new Set() : new Set(REPORT_SECTIONS.map((s) => s.slug)));
+
   const canGenerate = isConfigured && selected.size > 0;
 
   const handleGenerate = async () => {
@@ -69,11 +55,11 @@ export function ReportPage() {
     await new Promise((r) => setTimeout(r, 50));
     try {
       // jsPDF is large; load it only when a report is requested.
-      const { generateReport } = await import("@/lib/generate-pdf");
+      const { generateReport } = await import("@/lib/pdf");
       await generateReport({
         nationality: preferences.nationality,
         destinations: preferences.destinations,
-        sections: SECTIONS.filter((s) => selected.has(s.slug)).map(
+        sections: REPORT_SECTIONS.filter((s) => selected.has(s.slug)).map(
           (s) => s.slug
         ),
       });
@@ -111,18 +97,31 @@ export function ReportPage() {
         <DestinationsPreferenceControl layout="stacked" />
       </div>
 
+      {nationalityUnsupported && (
+        <p className="mb-8 rounded-md border border-border bg-muted/50 p-3 text-sm text-muted-foreground">
+          We don't have nationality-specific guidance for {preferences.nationality} yet, so the
+          report will show the general rules only.
+        </p>
+      )}
+
       {/* Section selector */}
       <div className="mb-8">
-        <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-          Select sections to include
-        </h2>
+        <div className="mb-3 flex items-center justify-between">
+          <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+            Select sections to include
+          </h2>
+          <Button variant="ghost" size="sm" onClick={toggleAll}>
+            {allSelected ? "Clear all" : "Select all"}
+          </Button>
+        </div>
         <div className="grid gap-3">
-          {SECTIONS.map((section) => {
+          {REPORT_SECTIONS.map((section) => {
             const isSelected = selected.has(section.slug);
-            const Icon = section.icon;
+            const Icon = SECTION_ICONS[section.slug];
             return (
               <button
                 key={section.slug}
+                aria-pressed={isSelected}
                 onClick={() => toggle(section.slug)}
                 className={`
                   flex items-center gap-4 rounded-lg border p-4 text-left transition-all cursor-pointer
@@ -148,7 +147,7 @@ export function ReportPage() {
                 <div className="flex-1 min-w-0">
                   <div className="font-medium">{section.title}</div>
                   <div className="text-sm text-muted-foreground">
-                    {section.description}
+                    {section.summary}
                   </div>
                 </div>
                 <div
