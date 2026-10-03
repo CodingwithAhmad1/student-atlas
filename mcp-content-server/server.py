@@ -1132,7 +1132,7 @@ def apply_edits(edits: list[dict[str, str]], ctx: Context, alert_id: str = "") -
         return f"Error: {e}"
     if alert_id:
         _review_edits.setdefault(alert_id, []).extend(
-            {"file": f"Student Atlas/frontend/src/data/{p.rel}", "oldText": p.old, "newText": p.new}
+            {"file": f"frontend/src/data/{p.rel}", "oldText": p.old, "newText": p.new}
             for p in planned
         )
     lines = [f"Applied {len(planned)} edit(s); {status}."]

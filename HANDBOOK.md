@@ -32,7 +32,7 @@ automatically monitorable), 20 nationality traits, 100 × 20 trait values,
 ## 2. Repository layout
 
 ```
-Student Atlas/
+student-atlas/
 ├── HANDBOOK.md            ← this file
 ├── CLAUDE.md              ← rules for Claude sessions working on the repo
 ├── README.md              ← short overview and quick start
@@ -201,7 +201,7 @@ npx tsc --noEmit
 # Content server (local review tools)
 cd mcp-content-server && pip install -r requirements.txt
 python3 -m unittest discover tests
-# Claude Code config: copy mcp-content-server/.mcp.json.example to Student Atlas/.mcp.json
+# Claude Code config: copy mcp-content-server/.mcp.json.example to .mcp.json
 ```
 
 Show the generated content for one nationality:
@@ -251,9 +251,9 @@ itself once the page responds; if it stays down, cite an archived copy.
 ### Weekly review routine: not created yet
 The files are on `main` (`monitoring/ROUTINE-SETUP.md`), but creating the
 routine failed with `repo_access_denied`: Ahmad's claude.ai GitHub connection
-cannot see `HariharRengan/Zim-Side-Quests`. Fix: `/login` with the claude.ai
-account and `/web-setup` in the terminal CLI, or the Claude GitHub app
-installed on HariharRengan's account (Harihar approves). Also set the cloud
+could not see the old repo `HariharRengan/Zim-Side-Quests`. The project now
+lives in Ahmad's own private repo `CodingwithAhmad1/student-atlas`: install
+the Claude GitHub app on it (or `/web-setup` in the terminal CLI) and retry. Also set the cloud
 environment to Full network access and connect Gmail. Then hand
 `ROUTINE-SETUP.md` to a Claude chat to create it.
 
@@ -328,7 +328,7 @@ The app is a static single-page app: `cd frontend && npm run build` produces
 GitHub Pages).
 
 **Chosen host: Vercel (free Hobby plan).** Project settings: root directory
-`Student Atlas/frontend`, framework Vite (from `vercel.json`), Node 22, Git
+`frontend`, framework Vite (from `vercel.json`), Node 22, Git
 connected to `main` so every push redeploys. Watcher commits carry
 `[skip ci]`; if Vercel skips those, new alerts appear on the next ordinary
 deploy.

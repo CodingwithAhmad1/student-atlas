@@ -3,7 +3,7 @@
 Each test class works on a scratch copy of the frontend (node_modules
 symlinked) so the real TypeScript compiler can check what the tools wrote.
 
-    cd "Student Atlas/mcp-content-server" && python3 -m unittest discover tests
+    cd mcp-content-server && python3 -m unittest discover tests
 """
 
 from __future__ import annotations

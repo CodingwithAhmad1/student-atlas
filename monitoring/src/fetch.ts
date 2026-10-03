@@ -1,7 +1,7 @@
 import { isPdf, pdfToText } from "./pdf";
 
 const USER_AGENT =
-  "StudentAtlasMonitor/1.0 (personal project; +https://github.com/HariharRengan/Zim-Side-Quests)";
+  "StudentAtlasMonitor/1.0 (personal project; +https://github.com/CodingwithAhmad1/student-atlas)";
 
 const TIMEOUT_MS = 30_000;
 const MAX_RETRIES = 2;

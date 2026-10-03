@@ -31,13 +31,13 @@ jobs:
         with:
           node-version: 22
           cache: npm
-          cache-dependency-path: Student Atlas/monitoring/package-lock.json
+          cache-dependency-path: monitoring/package-lock.json
 
       - name: Install watcher dependencies
-        run: npm ci --prefix "Student Atlas/monitoring"
+        run: npm ci --prefix monitoring
 
       - name: Run watcher
-        working-directory: Student Atlas/monitoring
+        working-directory: monitoring
         env:
           SOURCE: ${{ inputs.source }}
         run: |
@@ -51,9 +51,9 @@ jobs:
         run: |
           git config user.name "atlas-monitor[bot]"
           git config user.email "actions@users.noreply.github.com"
-          git add "Student Atlas/monitoring/snapshots" \
-                  "Student Atlas/monitoring/archive" \
-                  "Student Atlas/frontend/src/data/monitoring"
+          git add monitoring/snapshots \
+                  monitoring/archive \
+                  frontend/src/data/monitoring
           if git diff --cached --quiet; then
             echo "No state changes to commit."
             exit 0

@@ -70,7 +70,7 @@ Kinds: `change`, `unreachable`, `stale-check`.
 - No secrets: the workflow only needs its default `GITHUB_TOKEN` to commit
   state (commits carry `[skip ci]`).
 - **Deploys**: monitoring data is bundled at build time, so the hosted site
-  must rebuild on pushes to `main` that touch `Student Atlas/` for new
+  must rebuild on pushes to `main` that touch the repo root for new
   activity (and reviewed edits) to appear.
 - Budget: ~2 runs/day × under a minute fits easily in the private-repo GitHub
   Actions free tier.
@@ -78,7 +78,7 @@ Kinds: `change`, `unreachable`, `stale-check`.
 ## Running locally
 
 ```bash
-cd "Student Atlas/monitoring"
+cd monitoring
 npm ci
 npx tsx src/run.ts --dry-run                       # sweep every source, write nothing
 npx tsx src/run.ts --source gov.uk/student-visa    # check one source for real

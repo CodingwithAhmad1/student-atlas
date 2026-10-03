@@ -20,9 +20,9 @@ import { OPEN_ALERT_STATUSES } from "./types";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 
-/** "<repo>/Student Atlas/monitoring" */
+/** "<repo>/monitoring" */
 export const MONITORING_DIR = resolve(HERE, "..");
-/** "<repo>/Student Atlas" */
+/** "<repo>" */
 export const APP_DIR = resolve(MONITORING_DIR, "..");
 export const FRONTEND_DIR = join(APP_DIR, "frontend");
 

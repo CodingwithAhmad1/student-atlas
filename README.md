@@ -5,7 +5,7 @@ Personalised visa and immigration guidance for international students. Users sel
 ## Project Structure
 
 ```
-Student Atlas/
+student-atlas/
 ├── HANDBOOK.md         # Structure, check-ups, manual tasks, launch checklist
 ├── frontend/           # React + TypeScript + Vite (main app — static content from data files)
 ├── monitoring/         # Source-change watcher, detection only (see monitoring/README.md)
@@ -59,7 +59,7 @@ rebuild on pushes to `main` for new activity to appear.
 
 Python FastMCP server (`mcp-content-server/`) for alert review and content
 editing. Locally, connect Claude Code over stdio — copy
-`mcp-content-server/.mcp.json.example` to `Student Atlas/.mcp.json`. For remote
+`mcp-content-server/.mcp.json.example` to `.mcp.json`. For remote
 clients, `./start.sh` serves SSE on `127.0.0.1:8765` (password in
 `mcp-content-server/.env`).
 

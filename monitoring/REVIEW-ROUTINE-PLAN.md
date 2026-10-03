@@ -55,7 +55,7 @@ push, open the PR (or comment on the open one) with a decision table and a
 - HANDBOOK §4/§6, CLAUDE.md and `monitoring/README.md` describe the routine
 - The routine itself (created with RemoteTrigger after this PR merges, since
   it reads the prompt from `main`): cron `0 6 * * 1`, `claude-opus-5-5`, repo
-  `HariharRengan/Zim-Side-Quests`, environment `Default`.
+  `CodingwithAhmad1/student-atlas`, environment `Default`.
 
 ## Escalation (added 2026-10-02)
 The routine emails Ahmad through the claude.ai Gmail connector only in three

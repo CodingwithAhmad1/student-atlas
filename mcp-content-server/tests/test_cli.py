@@ -1,6 +1,6 @@
 """Tests for atlas_cli.py (the review routine's command-line access to the tools).
 
-    cd "Student Atlas/mcp-content-server" && python3 -m unittest discover tests
+    cd mcp-content-server && python3 -m unittest discover tests
 """
 
 from __future__ import annotations

@@ -16,11 +16,11 @@ calendar, open manual items and the launch checklist.
   snapshots, alerts and `frontend/src/data/monitoring/status.json`. See
   `monitoring/README.md`.
 - `mcp-content-server/` — MCP server for reviewing alerts and editing content.
-  Local config: `Student Atlas/.mcp.json` (gitignored; copy from
+  Local config: `.mcp.json` (gitignored; copy from
   `mcp-content-server/.mcp.json.example`). `atlas_cli.py` exposes the same
   review tools on the command line (cloud routines, or a worktree, where the
   MCP server would edit the main checkout instead).
-- Hosting: Vercel (Hobby), root `Student Atlas/frontend`, config in
+- Hosting: Vercel (Hobby), root `frontend`, config in
   `frontend/vercel.json` (SPA rewrite). See HANDBOOK §9.
 - `archive/` — retired Flask-era code; nothing there is used.
 
@@ -54,9 +54,9 @@ tools via `mcp-content-server/atlas_cli.py` (same functions, no MCP needed).
 
 ## Rules and gotchas
 
-- The repo root is a monorepo shared with other projects and other Claude
-  sessions. Do git-writing work in a dedicated worktree
-  (`git worktree add ../Zim-Side-Quests-<topic> -b <branch>`), and check
+- The checkout may be shared with other Claude sessions. Do git-writing work
+  in a dedicated worktree
+  (`git worktree add ../student-atlas-<topic> -b <branch>`), and check
   `git diff --cached --name-only` before committing.
 - Pushing to or merging into `main` from a Claude session is blocked by auto
   mode: push a branch, open a PR, and Ahmad merges.
