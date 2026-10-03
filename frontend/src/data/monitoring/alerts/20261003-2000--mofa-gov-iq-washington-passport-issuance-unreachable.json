@@ -1,0 +1,22 @@
+{
+  "id": "20261003-2000--mofa-gov-iq-washington-passport-issuance-unreachable",
+  "kind": "unreachable",
+  "sourceId": "mofa.gov.iq/washington/passport-issuance",
+  "relatedSourceIds": [],
+  "sourceLabel": "Embassy of the Republic of Iraq in Washington — Passport Issuance",
+  "sourceUrl": "https://mofa.gov.iq/washington/passport-issuance/",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-03T20:00:06.223Z",
+  "updatedAt": "2026-10-03T20:00:06.223Z",
+  "oldHash": "f39e8dbcd18eaf6492693bbf0b3019b077cc22b01bfbd6149ca6c60c1968c440",
+  "newHash": "unreachable-2026-10-03",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://mofa.gov.iq/washington/passport-issuance/). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://mofa.gov.iq/washington/passport-issuance/"
+}
