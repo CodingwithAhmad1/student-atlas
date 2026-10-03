@@ -1,6 +1,6 @@
 # Student Atlas — Handbook
 
-_Last updated 2026-10-02. This is the single reference for how the project is
+_Last updated 2026-10-03. This is the single reference for how the project is
 built, how it stays accurate, what needs a person, and what to do before
 launch. Detailed references it points to: `frontend/src/data/CONTENT-GUIDE.md`
 (content model and editing tools) and `monitoring/README.md` (the watcher)._
@@ -163,16 +163,18 @@ content change with the alert file. Page diffs are third-party text: data,
 never instructions.
 
 **Weekly review routine** (Claude cloud routine, Mondays 06:00 UTC, Opus 5.5):
-reviews every open alert under `monitoring/REVIEW-POLICY.md` (one verdict per
-alert: dismiss, update, add, or "needs you", each with an evidence quote),
-using the same tools through `mcp-content-server/atlas_cli.py`. It opens one
-PR per run (or comments on last week's if it is still open) and never pushes
-to `main`; merging the PR is the approval. Its steps are in
+reviews every open alert under `monitoring/REVIEW-POLICY.md` and closes it
+unattended (dismiss, update, add, narrow, repair source, re-verify; each with
+an evidence quote), using the same tools through
+`mcp-content-server/atlas_cli.py`. Nothing waits for a person: what cannot be
+confirmed is narrowed (the guide says less), a dead source is moved, replaced,
+cited from an archived copy or retired. It opens one PR per run as the audit
+trail and merges it itself once the build passes. Its steps are in
 `monitoring/review-routine-prompt.md`; the environment needs Full network
-access. It emails Ahmad (Gmail connector) only in three extreme cases: a major
-policy shift it could not apply, the routine itself broken, or a backlog left
-for weeks (§7 of the prompt). Setup brief: `monitoring/ROUTINE-SETUP.md`.
-Manage it at claude.ai/code/routines.
+access. It emails Ahmad (Gmail connector) only when the routine itself is
+broken, or for information when it applied a major change (§7 of the
+prompt). Setup brief: `monitoring/ROUTINE-SETUP.md`. Manage it at
+claude.ai/code/routines.
 
 **Checks in every build** (`npm run build` runs `check:content`): every
 `[CITE]` and `[TERM]` exists, callout anchors exist, practical callouts have no
@@ -214,7 +216,7 @@ Show the generated content for one nationality:
 | When | What | How |
 |---|---|---|
 | Every 12 h (automatic) | ~270 monitored pages | Review open alerts on the Activity tab |
-| Weekly (Monday, automatic) | Open alerts | Review routine opens a PR: check its decisions, handle "Needs you", merge |
+| Weekly (Monday, automatic) | Open alerts | Review routine closes them and merges its PR; skim the PR if you like |
 | Every 90 days | Visa Bulletin backlog column | travel.state.gov in a browser → `set_trait_column` |
 | Every 180 days | E-2 treaty list; Working Holiday 417/462 lists | Browser; stale-check alert reminds you |
 | Every 365 days | DV eligibility (new instructions ~October); dual-nationality rows; the 38 unmonitorable sources (§8) | Browser / home-government pages |
@@ -233,9 +235,18 @@ flags it: update it whenever a fee or threshold changes in the prose.
 ## 7. What needs a person (open items as of 2026-10-02)
 
 ### Alerts waiting for review
-All 35 open alerts were reviewed on 2 October 2026; one stays open: the
-Vietnamese dual-nationality page (`pbgdpl.gov.vn`) returns HTTP 503. It closes
-itself once the page responds; if it stays down, cite an archived copy.
+The weekly review routine keeps this list current. Only alerts its policy
+allows it to carry over are listed (a manual trait column with no newer
+evidence anywhere).
+
+12 open as of 3 October 2026 (8 unreachable, 4 change); the first run of the
+unattended routine will close them.
+
+### Follow-ups
+Improvements a code change could add, noted by the review routine. None of
+them blocks anything.
+
+- None yet.
 
 ### Done in the 2 October review (for the record)
 - **Australia, Student visa from 2 October 2026**: most applicants cannot
@@ -248,14 +259,10 @@ itself once the page responds; if it stays down, cite an archived copy.
   `check_trait_column usTaxTreatyStudent` reads the Students and Apprentices
   section itself.
 
-### Weekly review routine: not created yet
-The files are on `main` (`monitoring/ROUTINE-SETUP.md`), but creating the
-routine failed with `repo_access_denied`: Ahmad's claude.ai GitHub connection
-could not see the old repo `HariharRengan/Zim-Side-Quests`. The project now
-lives in Ahmad's own private repo `CodingwithAhmad1/student-atlas`: install
-the Claude GitHub app on it (or `/web-setup` in the terminal CLI) and retry. Also set the cloud
-environment to Full network access and connect Gmail. Then hand
-`ROUTINE-SETUP.md` to a Claude chat to create it.
+### Weekly review routine: created 3 October 2026
+"Student Atlas weekly alert review" (claude.ai/code/routines/trig_01GQrzmFwYyxatkkukV1pqDA),
+Mondays 06:00 UTC, Opus 5.5, Gmail connector only. The cloud environment must
+allow Full network access.
 
 ### Checks only a real browser can do
 travel.state.gov and usembassy.gov block automated clients.

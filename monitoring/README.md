@@ -24,8 +24,9 @@ needed content edit and records the outcome. Git is the only datastore.
 3. **Review** (MCP) — `list_alerts` → `get_alert` (diff plus every passage
    citing the source) → `apply_edit` (exact-string, build-checked) →
    `resolve_alert` (`approved` or `dismissed`, with a note). Commit and push.
-   A weekly Claude cloud routine does the same on its own and opens a PR for
-   Ahmad to merge (`REVIEW-POLICY.md`, `review-routine-prompt.md`).
+   A weekly Claude cloud routine does the same on its own, closes every
+   alert (repairing or retiring dead sources) and merges its own PR
+   (`REVIEW-POLICY.md`, `review-routine-prompt.md`).
 4. **Advance** — on the next run after an alert is resolved, its candidate
    text (exactly what the reviewer saw) becomes the new baseline. If the page
    changed again after review, a fresh alert shows only what changed since

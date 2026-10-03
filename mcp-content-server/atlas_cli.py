@@ -32,14 +32,16 @@ import server  # noqa: E402
 
 STATE_FILE = HERE / ".review-edits.json"
 
-# Review and read-only tools. Tools that create or delete files, or add sources
-# (create_nationality, write_content_file, delete_nationality, add_citations),
-# are deliberately not exposed: the routine may not add new sources.
+# Review, source-repair and read-only tools. Tools that create or delete whole
+# files (create_nationality, write_content_file, delete_nationality) are
+# deliberately not exposed. The routine may add, repair and retire sources under
+# REVIEW-POLICY.md ("Sources").
 COMMANDS = (
     "list_alerts", "get_alert", "refresh_alert", "apply_edits", "resolve_alert",
     "check_trait_column", "set_trait_column", "set_trait", "trait_coverage",
     "search_content", "read_content_file", "get_block_ids", "get_profile_block_ids",
     "get_nationality_summary", "add_callout", "remove_callout", "validate_content",
+    "add_citations", "fix_source", "remove_citation",
 )
 
 

@@ -67,3 +67,22 @@ backlog ignored for weeks. At most one email per run. Rules: §7 of
 1. claude.ai → Code → environments → `Default` → network access **Full**.
 2. Merge this PR.
 3. Check the first run's PR before relying on it.
+
+## Unattended mode (Ahmad, 2026-10-03)
+Supersedes "nothing lands on `main` without Ahmad merging" and the
+**Needs you** verdict above. Ahmad should never need to step in:
+
+- Every alert is closed by the run that sees it. What cannot be confirmed is
+  **Narrowed** (the guide says less, never guesses); unreachable sources go
+  down a ladder: back already, moved, replaced by another official page,
+  archived copy, retired. Stale manual columns are re-verified from any
+  evidence newer than their date, or carried over (the only alerts left
+  open). Details: `REVIEW-POLICY.md`.
+- New tools for this: `fix_source` (URL, label, skipReason),
+  `remove_citation`, `apply_edits --drop_citation/--cite_as`, and
+  `--alert_id` recording on every editing command; `add_citations` is now
+  exposed in the CLI.
+- The routine merges its own PR after the build passes on top of the latest
+  `main`. The PR stays as the audit trail; any change can be reverted.
+- Email only when the routine is broken (a person must fix the setup), or
+  for information when it applied a major change.

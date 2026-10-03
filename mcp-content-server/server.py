@@ -12,6 +12,7 @@ Run:
 
 from __future__ import annotations
 
+import difflib
 import hmac
 import json
 import os
@@ -774,6 +775,7 @@ def add_callout(
     after_block_id: str,
     blocks: str,
     ctx: Context,
+    alert_id: str = "",
 ) -> str:
     """Append a callout to a nationality overlay.
 
@@ -784,8 +786,11 @@ def add_callout(
         country: "US", "UK", "AU" or "_crossCutting".
         after_block_id: Base or profile block id to insert after (get_block_ids / get_profile_block_ids).
         blocks: JSON array of ContentBlocks, e.g. [{"type": "paragraph", "text": "..."}].
+        alert_id: The alert this callout answers (recorded by resolve_alert).
     """
     require_auth(ctx)
+    if err := _check_alert(alert_id):
+        return err
     if country not in (*COUNTRIES, "_crossCutting"):
         return "Error: country must be US, UK, AU or _crossCutting."
     try:
@@ -818,8 +823,12 @@ def add_callout(
         body = src[:close].rstrip()
         sep = "" if body.endswith(("{", ",")) else ","
         new = body + sep + f"\n{base}  callouts: [\n{callout},\n{base}  ],\n{base}" + src[close:]
+    before = _snapshot(filepath)
     filepath.write_text(new)
-    return f"Added callout after '{after_block_id}' to {slug}/{section_slug}/{subsection_slug}/{country}. Run validate_content()."
+    return _record_changes(
+        alert_id, before,
+        f"Added callout after '{after_block_id}' to {slug}/{section_slug}/{subsection_slug}/{country}. Run validate_content().",
+    )
 
 
 @mcp.tool()
@@ -831,14 +840,18 @@ def remove_callout(
     after_block_id: str,
     ctx: Context,
     occurrence: int = 1,
+    alert_id: str = "",
 ) -> str:
     """Remove a callout (identified by its anchor) from a nationality overlay.
 
     Args:
         after_block_id: The callout's afterBlockId.
         occurrence: Which callout to remove when several share the anchor (1-based).
+        alert_id: The alert this removal answers (recorded by resolve_alert).
     """
     require_auth(ctx)
+    if err := _check_alert(alert_id):
+        return err
     filepath = nationality_file(slug)
     if not filepath.exists():
         return f"Error: nationalities/{slug}.ts not found."
@@ -860,19 +873,25 @@ def remove_callout(
         return f"Error: no callout anchored at '{after_block_id}' there."
     if not 1 <= occurrence <= len(matches):
         return f"Error: {len(matches)} callout(s) share that anchor; occurrence must be 1..{len(matches)}."
+    before = _snapshot(filepath)
     filepath.write_text(remove_array_item(src, arr, matches[occurrence - 1]))
-    return f"Removed callout #{occurrence} anchored at '{after_block_id}'. Run validate_content()."
+    return _record_changes(
+        alert_id, before, f"Removed callout #{occurrence} anchored at '{after_block_id}'. Run validate_content()."
+    )
 
 
 @mcp.tool()
-def add_citations(citations_json: str, ctx: Context) -> str:
+def add_citations(citations_json: str, ctx: Context, alert_id: str = "") -> str:
     """Add citations to citations.ts. New citations are automatically monitored
     for changes by the source watcher.
 
     Args:
         citations_json: {"gov.uk/example": {"url": "https://...", "label": "GOV.UK — Example"}, ...}
+        alert_id: The alert these sources answer (recorded by resolve_alert).
     """
     require_auth(ctx)
+    if err := _check_alert(alert_id):
+        return err
     try:
         new = json.loads(citations_json)
     except json.JSONDecodeError as e:
@@ -900,8 +919,11 @@ def add_citations(citations_json: str, ctx: Context) -> str:
     close = find_matching(src, obj)
     body = src[:close].rstrip()
     sep = "" if body.endswith(("{", ",")) else ","
+    before = _snapshot(path)
     path.write_text(body + sep + "\n" + "\n".join(entries) + "\n" + src[close:])
-    return f"Added {len(entries)} citation(s): {list(new)}. They are monitored from the next watcher run."
+    return _record_changes(
+        alert_id, before, f"Added {len(entries)} citation(s): {list(new)}. They are monitored from the next watcher run."
+    )
 
 
 @mcp.tool()
@@ -981,6 +1003,232 @@ def set_profile(
 _review_edits: dict[str, list[dict]] = {}
 
 
+def _check_alert(alert_id: str) -> str:
+    """'' when alert_id is empty or names an existing alert, else an error message."""
+    if not alert_id:
+        return ""
+    try:
+        review.load_alert(alert_id)
+    except review.ReviewError as e:
+        return f"Error: {e}"
+    return ""
+
+
+def _trait_files() -> tuple[Path, Path]:
+    return DATA_DIR / "traits" / "nationality-traits.ts", DATA_DIR / "traits" / "trait-sources.ts"
+
+
+def _snapshot(*paths: Path) -> dict[Path, str]:
+    return {p: p.read_text() if p.exists() else "" for p in paths}
+
+
+def _record_changes(alert_id: str, before: dict[Path, str], result: str) -> str:
+    """Record what a tool changed in `before`'s files against alert_id (as
+    before/after line blocks, the way apply_edits records its edits)."""
+    if not alert_id or result.startswith("Error"):
+        return result
+    edits = []
+    for path, old in before.items():
+        new = path.read_text() if path.exists() else ""
+        if new == old:
+            continue
+        a, b = old.splitlines(), new.splitlines()
+        for tag, i1, i2, j1, j2 in difflib.SequenceMatcher(a=a, b=b, autojunk=False).get_opcodes():
+            if tag != "equal":
+                edits.append({
+                    "file": f"frontend/src/data/{data_rel(path.resolve())}",
+                    "oldText": "\n".join(a[i1:i2]).strip(),
+                    "newText": "\n".join(b[j1:j2]).strip(),
+                })
+    if not edits:
+        return result
+    _review_edits.setdefault(alert_id, []).extend(edits)
+    return f"{result}\nRecorded {len(edits)} change(s) against {alert_id}; finish with resolve_alert."
+
+
+def _remove_entry(src: str, obj_open: int, key: str) -> str | None:
+    """`src` without the object entry `key` (its whole line(s) and trailing comma),
+    or None when there is no such entry."""
+    for e in object_entries(src, obj_open):
+        if e.key != key:
+            continue
+        start = src.rfind("\n", 0, e.key_start) + 1
+        end = e.value_end
+        if src.startswith(",", end):
+            end += 1
+        if src.startswith("\n", end):
+            end += 1
+        return src[:start] + src[end:]
+    return None
+
+
+def _set_skip_reason(src: str, obj_open: int, key: str, reason: str) -> str:
+    """Set (reason) or clear ("") the skipReason of `key` in sourceOverrides."""
+    entry = next((e for e in object_entries(src, obj_open) if e.key == key), None)
+    if entry is None:
+        if not reason:
+            return src
+        close = find_matching(src, obj_open)
+        body = src[:close].rstrip()
+        sep = "" if body.endswith(("{", ",")) else ","
+        return body + sep + f"\n  {ts_string(key)}: {{ skipReason: {ts_string(reason)} }},\n" + src[close:]
+    current = get_entry(src, entry.value_start, "skipReason")
+    if current and reason:
+        return src[: current.value_start] + ts_string(reason) + src[current.value_end :]
+    if current:  # clear it; drop the whole entry when nothing else is left
+        others = [e for e in object_entries(src, entry.value_start) if e.key != "skipReason"]
+        if not others:
+            return _remove_entry(src, obj_open, key) or src
+        start, end = current.key_start, current.value_end
+        if src.startswith(",", end):
+            end += 1
+        while end < len(src) and src[end] in " \t":
+            end += 1
+        if src[end] == "\n":  # property on its own line: take the line
+            start = src.rfind("\n", 0, start) + 1
+            end += 1
+            return src[:start] + src[end:]
+        prev = src[:start].rstrip()
+        if prev.endswith(","):  # `a, skipReason: "…" }` → `a }`
+            return prev[:-1] + " " + src[current.value_end :].lstrip(",").lstrip()
+        return src[:start] + src[end:]
+    if not reason:
+        return src
+    close = find_matching(src, entry.value_start)
+    body = src[:close].rstrip()
+    sep = "" if body.endswith(("{", ",")) else ","
+    if "\n" in src[entry.value_start : close]:
+        indent = line_indent(src, entry.key_start) + "  "
+        return body + sep + f"\n{indent}skipReason: {ts_string(reason)},\n{line_indent(src, entry.key_start)}" + src[close:]
+    return body + sep + f" skipReason: {ts_string(reason)} " + src[close:]
+
+
+def _citation_references(citation_id: str) -> list[str]:
+    """Data files (outside citations.ts / source-overrides.ts) that still use citation_id."""
+    cite = re.compile(r"\[CITE:\s*" + re.escape(citation_id) + r"\s*\]")
+    field_ = re.compile(r"citationId:\s*" + re.escape(ts_string(citation_id)))
+    refs = []
+    for path in sorted(DATA_DIR.rglob("*.ts")):
+        rel = data_rel(path.resolve())
+        if rel in ("citations.ts", "source-overrides.ts") or rel.startswith("monitoring/"):
+            continue
+        text = path.read_text()
+        n = len(cite.findall(text)) + len(field_.findall(text))
+        if n:
+            refs.append(f"{rel} ({n})")
+    return refs
+
+
+@mcp.tool()
+def fix_source(
+    citation_id: str,
+    ctx: Context,
+    url: str = "",
+    label: str = "",
+    skip_reason: str = "",
+    clear_skip_reason: bool = False,
+    alert_id: str = "",
+) -> str:
+    """Repair an existing citation whose page moved, went offline or blocks the
+    watcher: change its URL and/or label in citations.ts, and set or clear its
+    skipReason in source-overrides.ts (a skipped source is shown as "Not
+    monitorable" and no longer raises unreachable alerts). Type-checked, rolled
+    back on failure.
+
+    Args:
+        citation_id: Existing citations.ts id (the alert's sourceId).
+        url: New https:// URL (the page's new address, or an Internet Archive copy).
+        label: New label (an archived copy's label ends in "(archived copy)*").
+        skip_reason: Why the watcher cannot check this page; shown publicly.
+        clear_skip_reason: Remove the skipReason (the page is fetchable again).
+        alert_id: The alert this repair answers (recorded by resolve_alert).
+    """
+    require_auth(ctx)
+    if err := _check_alert(alert_id):
+        return err
+    if not (url or label or skip_reason or clear_skip_reason):
+        return "Error: nothing to change (give url, label, skip_reason or clear_skip_reason)."
+    if skip_reason and clear_skip_reason:
+        return "Error: give skip_reason or clear_skip_reason, not both."
+    if url and not url.startswith("https://"):
+        return "Error: url must start with https://."
+    cpath, opath = DATA_DIR / "citations.ts", DATA_DIR / "source-overrides.ts"
+    before = _snapshot(cpath, opath)
+    csrc = before[cpath]
+    try:
+        obj = literal_after(csrc, "Record<string, Citation> =")
+        entry = next((e for e in object_entries(csrc, obj) if e.key == citation_id), None)
+        if entry is None:
+            return f"Error: no citation '{citation_id}' in citations.ts."
+        # Replace later fields first so earlier offsets stay valid.
+        fields = [(f, v) for f, v in (("url", url), ("label", label)) if v]
+        spans = []
+        for name, value in fields:
+            found = get_entry(csrc, entry.value_start, name)
+            if not found:
+                return f"Error: citation '{citation_id}' has no {name} field."
+            spans.append((found.value_start, found.value_end, ts_string(value)))
+        for start, end, text in sorted(spans, reverse=True):
+            csrc = csrc[:start] + text + csrc[end:]
+        osrc = before[opath]
+        if skip_reason or clear_skip_reason:
+            osrc = _set_skip_reason(osrc, literal_after(osrc, "Record<string, SourceOverride> ="), citation_id, skip_reason)
+    except ScanError as e:
+        return f"Error: {e}"
+    cpath.write_text(csrc)
+    opath.write_text(osrc)
+    ok, output = review.run_typecheck()
+    if not ok:
+        for path, text in before.items():
+            path.write_text(text)
+        return "Error: type-check failed; rolled back:\n" + "\n".join(output.splitlines()[:30])
+    changed = [w for w, v in (("url", url), ("label", label), ("skipReason", skip_reason)) if v]
+    if clear_skip_reason:
+        changed.append("skipReason cleared")
+    return _record_changes(alert_id, before, f"Updated {citation_id}: {', '.join(changed)}; type-check passed.")
+
+
+@mcp.tool()
+def remove_citation(citation_id: str, ctx: Context, alert_id: str = "") -> str:
+    """Retire a source: delete the citation from citations.ts (and its entry in
+    source-overrides.ts), so it is no longer cited or monitored. Refuses while any
+    content still uses it: first rewrite or drop those passages with
+    apply_edits(drop_citation=...), remove_callout, or set_trait (another citation,
+    or value "unknown"). Type-checked, rolled back on failure.
+
+    Args:
+        citation_id: The citations.ts id to remove.
+        alert_id: The alert this answers (recorded by resolve_alert).
+    """
+    require_auth(ctx)
+    if err := _check_alert(alert_id):
+        return err
+    trait_src = (DATA_DIR / "traits" / "trait-sources.ts").read_text()
+    if re.search(r"citationId:\s*" + re.escape(ts_string(citation_id)), trait_src):
+        return f"Error: '{citation_id}' is a trait column's source (trait-sources.ts); that needs a code change."
+    refs = _citation_references(citation_id)
+    if refs:
+        return f"Error: '{citation_id}' is still used in: {', '.join(refs)}. Remove those uses first."
+    cpath, opath = DATA_DIR / "citations.ts", DATA_DIR / "source-overrides.ts"
+    before = _snapshot(cpath, opath)
+    try:
+        csrc = _remove_entry(before[cpath], literal_after(before[cpath], "Record<string, Citation> ="), citation_id)
+        if csrc is None:
+            return f"Error: no citation '{citation_id}' in citations.ts."
+        osrc = before[opath]
+        osrc = _remove_entry(osrc, literal_after(osrc, "Record<string, SourceOverride> ="), citation_id) or osrc
+    except ScanError as e:
+        return f"Error: {e}"
+    cpath.write_text(csrc)
+    opath.write_text(osrc)
+    ok, output = review.run_typecheck()
+    if not ok:
+        for path, text in before.items():
+            path.write_text(text)
+        return "Error: type-check failed; rolled back:\n" + "\n".join(output.splitlines()[:30])
+    return _record_changes(alert_id, before, f"Removed citation {citation_id}; type-check passed.")
+
+
 # ── Nationality traits ───────────────────────────────────────────
 
 
@@ -1015,7 +1263,7 @@ def check_trait_column(trait: str, ctx: Context) -> str:
 
 
 @mcp.tool()
-def set_trait_column(trait: str, values_json: str, verified_at: str, ctx: Context) -> str:
+def set_trait_column(trait: str, values_json: str, verified_at: str, ctx: Context, alert_id: str = "") -> str:
     """Write a whole trait column after re-checking its source page. Also stamps
     the column's verifiedAt in trait-sources.ts. Type-checked, rolled back on failure.
 
@@ -1023,13 +1271,17 @@ def set_trait_column(trait: str, values_json: str, verified_at: str, ctx: Contex
         trait: Column name (not dualNationalityAtHome — use set_trait per row).
         values_json: {"slug": value, ...} — rows you leave out keep their old value and date.
         verified_at: YYYY-MM-DD the page was checked.
+        alert_id: The alert this re-check answers (recorded by resolve_alert).
     """
     require_auth(ctx)
+    if err := _check_alert(alert_id):
+        return err
     try:
         values = json.loads(values_json)
         if not isinstance(values, dict) or not values:
             return "Error: values_json must be a non-empty JSON object {slug: value}."
-        return trait_table.set_trait_column(trait, values, verified_at)
+        before = _snapshot(*_trait_files())
+        return _record_changes(alert_id, before, trait_table.set_trait_column(trait, values, verified_at))
     except (json.JSONDecodeError, trait_table.TraitError) as e:
         return f"Error: {e}"
 
@@ -1043,6 +1295,7 @@ def set_trait(
     ctx: Context,
     citation_id: str = "",
     note: str = "",
+    alert_id: str = "",
 ) -> str:
     """Set one trait value for one nationality. Type-checked, rolled back on failure.
 
@@ -1053,10 +1306,17 @@ def set_trait(
         verified_at: YYYY-MM-DD the source was checked.
         citation_id: dualNationalityAtHome only — the home-country government page (citations.ts id).
         note: dualNationalityAtHome only — one-sentence nuance (e.g. OCI card).
+        alert_id: The alert this change answers (recorded by resolve_alert).
     """
     require_auth(ctx)
+    if err := _check_alert(alert_id):
+        return err
     try:
-        return trait_table.set_trait(slug, trait, json.loads(value_json), verified_at, citation_id, note)
+        before = _snapshot(*_trait_files())
+        return _record_changes(
+            alert_id, before,
+            trait_table.set_trait(slug, trait, json.loads(value_json), verified_at, citation_id, note),
+        )
     except (json.JSONDecodeError, trait_table.TraitError) as e:
         return f"Error: {e}"
 
@@ -1107,7 +1367,9 @@ def refresh_alert(alert_id: str, ctx: Context) -> str:
 
 
 @mcp.tool()
-def apply_edits(edits: list[dict[str, str]], ctx: Context, alert_id: str = "") -> str:
+def apply_edits(
+    edits: list[dict[str, str]], ctx: Context, alert_id: str = "", drop_citation: str = "", cite_as: str = ""
+) -> str:
     """Apply exact-string content edits atomically, then type-check (all rolled back on failure).
 
     Each edit: {"file": "sections/tourist-visa.ts", "old_text": "...", "new_text": "..."}.
@@ -1119,6 +1381,11 @@ def apply_edits(edits: list[dict[str, str]], ctx: Context, alert_id: str = "") -
     Args:
         edits: The edits to apply together.
         alert_id: The alert these edits resolve (recorded by resolve_alert).
+        drop_citation: A citation id whose [CITE] markers these edits may remove
+            (when its source is being retired with remove_citation). Other markers
+            must still be unchanged.
+        cite_as: With drop_citation, an existing citation id whose markers may take
+            the dropped ones' place (the same fact, now cited to a replacement page).
     """
     require_auth(ctx)
     if alert_id:
@@ -1127,7 +1394,7 @@ def apply_edits(edits: list[dict[str, str]], ctx: Context, alert_id: str = "") -
         except review.ReviewError as e:
             return f"Error: {e}"
     try:
-        planned, status = review.apply_edits(edits)
+        planned, status = review.apply_edits(edits, drop_citation=drop_citation.strip(), cite_as=cite_as.strip())
     except (review.ReviewError, ScanError) as e:
         return f"Error: {e}"
     if alert_id:
