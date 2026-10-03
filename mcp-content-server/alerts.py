@@ -262,7 +262,15 @@ class PlannedEdit:
     notes: list[str] = field(default_factory=list)
 
 
-def plan_edit(file: str, old_text: str, new_text: str, current: str | None = None) -> PlannedEdit:
+def _cite_id(marker: str) -> str | None:
+    m = CITE_RE.fullmatch(marker)
+    return m.group(1) if m else None
+
+
+def plan_edit(
+    file: str, old_text: str, new_text: str, current: str | None = None,
+    drop_citation: str = "", cite_as: str = "",
+) -> PlannedEdit:
     path = resolve_editable(file)
     rel = path.relative_to(DATA_DIR.resolve()).as_posix()
     content = current if current is not None else path.read_text()
@@ -284,10 +292,28 @@ def plan_edit(file: str, old_text: str, new_text: str, current: str | None = Non
     if old != old_text:
         notes.append("matched using the file's \\u escapes")
 
-    if sorted(MARKER_RE.findall(old)) != sorted(MARKER_RE.findall(new)):
+    old_markers, new_markers = MARKER_RE.findall(old), MARKER_RE.findall(new)
+    if cite_as and not drop_citation:
+        raise ReviewError("cite_as replaces drop_citation's markers; give both")
+    if drop_citation:
+        # Retiring or replacing a source: its markers may go (or become
+        # cite_as markers); nothing else may change.
+        dropped_old = [m for m in old_markers if _cite_id(m) == drop_citation]
+        dropped_new = [m for m in new_markers if _cite_id(m) == drop_citation]
+        old_markers = [m for m in old_markers if m not in dropped_old]
+        new_markers = [m for m in new_markers if m not in dropped_new]
+        if len(dropped_new) > len(dropped_old):
+            raise ReviewError(f"{rel}: drop_citation may only remove [CITE: {drop_citation}] markers, not add them")
+        if cite_as:
+            added = [m for m in new_markers if _cite_id(m) == cite_as]
+            if len(added) > len(dropped_old) - len(dropped_new):
+                raise ReviewError(f"{rel}: each [CITE: {cite_as}] must replace a removed [CITE: {drop_citation}]")
+            new_markers = [m for m in new_markers if m not in added]
+    if sorted(old_markers) != sorted(new_markers):
         raise ReviewError(
             f"{rel}: [CITE]/[TERM] markers were added, removed or changed — "
             "citation changes need a deliberate content edit, not a review edit"
+            + (f" (only [CITE: {drop_citation}] may be removed or replaced)" if drop_citation else "")
         )
     if _unescaped_quotes(old) != _unescaped_quotes(new):
         raise ReviewError(
@@ -312,8 +338,12 @@ def run_typecheck() -> tuple[bool, str]:
     return True, ""
 
 
-def apply_edits(edits: list[dict], check: bool = True) -> tuple[list[PlannedEdit], str]:
-    """Validate every edit, apply them together, type-check, roll back on failure."""
+def apply_edits(
+    edits: list[dict], check: bool = True, drop_citation: str = "", cite_as: str = ""
+) -> tuple[list[PlannedEdit], str]:
+    """Validate every edit, apply them together, type-check, roll back on failure.
+    With `drop_citation`, edits may also remove that citation's [CITE] markers,
+    or (with `cite_as`) replace them with markers of another existing citation."""
     if not edits:
         raise ReviewError("No edits given.")
     originals: dict[Path, str] = {}
@@ -327,7 +357,7 @@ def apply_edits(edits: list[dict], check: bool = True) -> tuple[list[PlannedEdit
         path = resolve_editable(file)
         originals.setdefault(path, path.read_text())
         current = working.get(path, originals[path])
-        p = plan_edit(file, old, new, current)
+        p = plan_edit(file, old, new, current, drop_citation, cite_as)
         working[path] = current.replace(p.old, p.new, 1)
         planned.append(p)
 

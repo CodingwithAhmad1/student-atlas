@@ -327,5 +327,98 @@ class ReviewTests(ScratchFrontend):
             review.resolve_alert(aid, "dismissed", "again", [])
 
 
+class SourceRepairTests(ScratchFrontend):
+    """fix_source / remove_citation / apply_edits(drop_citation): what the review
+    routine uses to repair or retire a source it cannot reach."""
+
+    CID = "dgip.gov.pk/dual-nationality"  # has a one-line override and one trait-row use
+    FILES = ("citations.ts", "source-overrides.ts", "traits/nationality-traits.ts", "traits/trait-sources.ts")
+
+    def setUp(self):
+        self.saved = {f: self.read(f) for f in self.FILES}
+        review.ALERTS_DIR.mkdir(parents=True, exist_ok=True)
+        self.aid = "20990101-0000--dgip-unreachable"
+        (review.ALERTS_DIR / f"{self.aid}.json").write_text(json.dumps({
+            "id": self.aid, "kind": "unreachable", "sourceId": self.CID, "status": "manual",
+        }))
+        server._review_edits.clear()
+
+    def tearDown(self):
+        for f, text in self.saved.items():
+            (self.data / f).write_text(text)
+        (review.ALERTS_DIR / f"{self.aid}.json").unlink(missing_ok=True)
+        server._review_edits.clear()
+
+    def test_fix_source_archive_copy_and_back(self):
+        archived = "https://web.archive.org/web/2026/https://dgip.gov.pk/immigration/dual_nationality.php"
+        out = server.fix_source(
+            self.CID, CTX, url=archived, label="DGIP — Dual Nationality (archived copy)*",
+            skip_reason="Cited from an Internet Archive copy.", alert_id=self.aid,
+        )
+        self.assertIn("type-check passed", out)
+        self.assertIn(archived, self.read("citations.ts"))
+        override = next(l for l in self.read("source-overrides.ts").splitlines() if self.CID in l)
+        self.assertIn('category: "citizenship", skipReason: "Cited from an Internet Archive copy." }', override)
+        files = {e["file"] for e in server._review_edits[self.aid]}
+        self.assertEqual(files, {"frontend/src/data/citations.ts", "frontend/src/data/source-overrides.ts"})
+
+        self.assertIn("skipReason cleared", server.fix_source(self.CID, CTX, clear_skip_reason=True))
+        self.assertEqual(self.read("source-overrides.ts"), self.saved["source-overrides.ts"])
+
+    def test_fix_source_new_override_entry_and_guards(self):
+        cid = "gov.uk/uk-eta"
+        self.assertNotIn(f'"{cid}"', self.saved["source-overrides.ts"])
+        server.fix_source(cid, CTX, skip_reason="Blocks automated clients.")
+        self.assertIn(f'"{cid}": {{ skipReason: "Blocks automated clients." }},', self.read("source-overrides.ts"))
+        server.fix_source(cid, CTX, clear_skip_reason=True)
+        self.assertEqual(self.read("source-overrides.ts"), self.saved["source-overrides.ts"])
+        self.assertIn("Error", server.fix_source("no/such-id", CTX, label="x"))
+        self.assertIn("https://", server.fix_source(cid, CTX, url="http://x"))
+        self.assertIn("nothing to change", server.fix_source(cid, CTX))
+        self.assertIn("No alert", server.fix_source(cid, CTX, label="x", alert_id="20990101-0000--missing"))
+
+    def test_remove_citation_only_when_unused(self):
+        out = server.remove_citation(self.CID, CTX, alert_id=self.aid)
+        self.assertIn("still used in: traits/nationality-traits.ts (1)", out)
+        self.assertIn("trait column's source", server.remove_citation("gov.uk/visa-national-list", CTX))
+
+        out = server.set_trait("pakistan", "dualNationalityAtHome", '"unknown"', "2099-01-01", CTX, alert_id=self.aid)
+        self.assertIn("Recorded", out)
+        out = server.remove_citation(self.CID, CTX, alert_id=self.aid)
+        self.assertIn("type-check passed", out)
+        self.assertNotIn(self.CID, self.read("citations.ts"))
+        self.assertNotIn(self.CID, self.read("source-overrides.ts"))
+        files = {e["file"] for e in server._review_edits[self.aid]}
+        self.assertIn("frontend/src/data/traits/nationality-traits.ts", files)
+        self.assertIn("frontend/src/data/citations.ts", files)
+
+    def test_drop_citation_edits_remove_only_that_marker(self):
+        import re
+        f, src = None, ""
+        for path in sorted((self.data / "sections").glob("*.ts")):
+            text = path.read_text()
+            m = re.search(r"[^\[\]\"\n]{20}\[CITE: ([^\]]+)\]", text)
+            if m and text.count(m.group(0)) == 1:
+                f, src, seg, cid = f"sections/{path.name}", text, m.group(0), m.group(1)
+                break
+        self.assertIsNotNone(f)
+        stripped = seg.split(" [CITE:")[0].split("[CITE:")[0]
+        with self.assertRaises(review.ReviewError):
+            review.plan_edit(f, seg, stripped)
+        with self.assertRaises(review.ReviewError):
+            review.plan_edit(f, seg, stripped, drop_citation="some/other-id")
+        planned = review.plan_edit(f, seg, stripped, drop_citation=cid)
+        self.assertNotIn("[CITE:", planned.new)
+        with self.assertRaises(review.ReviewError):  # may not add the marker either
+            review.plan_edit(f, seg, seg + f" [CITE: {cid}]", drop_citation=cid)
+
+        swapped = seg.replace(f"[CITE: {cid}]", "[CITE: gov.uk/uk-eta]")
+        with self.assertRaises(review.ReviewError):  # cite_as needs drop_citation
+            review.plan_edit(f, seg, swapped, cite_as="gov.uk/uk-eta")
+        self.assertIn("gov.uk/uk-eta", review.plan_edit(f, seg, swapped, drop_citation=cid, cite_as="gov.uk/uk-eta").new)
+        with self.assertRaises(review.ReviewError):  # one replacement per dropped marker
+            review.plan_edit(f, seg, swapped + " [CITE: gov.uk/uk-eta]", drop_citation=cid, cite_as="gov.uk/uk-eta")
+
+
 if __name__ == "__main__":
     unittest.main()
