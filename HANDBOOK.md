@@ -347,10 +347,7 @@ deploy.
 - [ ] **Read the disclaimer** (home page, `home-content.ts`): "an information
       resource, not legal advice"; make sure you are happy with it.
 - [ ] **Domain and title**: `index.html` has the title and description; add a
-      social preview image if you want link previews. Once the domain is
-      final, set `SITE_URL` in `frontend/src/lib/pdf/pages.ts` so the PDF
-      report prints it on the cover and in the footer (nothing is printed
-      while it is `null`).
+      social preview image if you want link previews.
 
 **Should do**
 - [ ] Check on a phone and with a keyboard only (navigation, dropdown, PDF export).

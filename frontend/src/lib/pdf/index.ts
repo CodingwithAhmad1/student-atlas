@@ -10,7 +10,7 @@ import { Writer, gap } from "./layout";
 import { countryBarRow, flowResolved, type Ctx } from "./blocks";
 import {
   formatDate, pageTitleRow, renderCover, renderDivider, renderHeadersAndFooters, renderIntroduction,
-  renderSources, renderToc, SITE_URL, type TocEntry,
+  renderSources, renderToc, type TocEntry,
 } from "./pages";
 import { CitationIndex } from "./text";
 import { CONTENT_W, GAP, MARGIN_X, TYPE } from "./theme";
@@ -121,7 +121,7 @@ export async function generateReport({ nationality, destinations, sections }: Re
   renderHeadersAndFooters(
     writer,
     `${label ? `${label} nationals` : nationality} · ${destinations.join(", ")}`,
-    `Student Atlas${SITE_URL ? ` · ${SITE_URL}` : ""} · Reference guide, not legal advice · ${date}`
+    `Student Atlas · Reference guide, not legal advice · ${date}`
   );
 
   let parent = null;
