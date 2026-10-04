@@ -130,7 +130,7 @@ export const residencyPathway: Section = {
             {
               block: {
                 type: "paragraph",
-                text: "Applicants must pass the Life in the UK test — a 24-question multiple-choice test covering British history, culture, and values. The test is taken at an approved test centre and costs £50. [CITE: gov.uk/life-in-uk-test]",
+                text: "You may need to pass the Life in the UK test as part of your settlement or citizenship application (the application guidance and form say whether you do) — a 24-question multiple-choice test covering British history, culture, and values. The test is taken at an approved test centre and costs £50. [CITE: gov.uk/life-in-uk-test]",
               },
             },
             {

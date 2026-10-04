@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T20:00:06.223Z",
+  "generatedAt": "2026-10-04T08:21:24.174Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -707,7 +707,7 @@
       "country": "UK",
       "category": "residency",
       "label": "GOV.UK — Life in the UK Test",
-      "lastCheckedAt": "2026-10-03T20:00:06.223Z",
+      "lastCheckedAt": "2026-10-04T08:21:24.174Z",
       "lastChangedAt": "2026-10-02T21:22:48.611Z",
       "lastHash": "ec7c939a56085484b783c2579dc63f1041968e72065b8f28686ed2e8670331f8",
       "lastHttpStatus": 200,
