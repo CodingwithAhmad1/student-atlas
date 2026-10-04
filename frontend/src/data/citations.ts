@@ -976,11 +976,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=115",
     label: "Reserve Bank of India — Liberalised Remittance Scheme (LRS) FAQs",
   },
-  "mea.gov.in/students-registration-portal": {
-    id: "mea.gov.in/students-registration-portal",
-    url: "https://www.mea.gov.in/Students-Registration-Portal",
-    label: "Ministry of External Affairs, India — Students Registration Portal",
-  },
   "ugc.gov.in/foreign-equivalence-regulations-2025": {
     id: "ugc.gov.in/foreign-equivalence-regulations-2025",
     url: "https://www.ugc.gov.in/pdfnews/8668638_UGC-(Recognition-and-Grant-of-Equivalence-to-Qualifications-obtained-from-Foreign-Educational-Institutions)-Regulations-2025.pdf",
@@ -1555,5 +1550,10 @@ export const citations: Record<string, Citation> = {
     id: "moj.go.jp/en/nationality-qa",
     url: "https://www.moj.go.jp/EN/MINJI/minji78.html",
     label: "Ministry of Justice, Japan — Nationality Q&A",
+  },
+  "indembassy-amman.gov.in/madad-student-registration": {
+    id: "indembassy-amman.gov.in/madad-student-registration",
+    url: "https://indembassy-amman.gov.in/MADAD.html",
+    label: "Embassy of India, Amman — MADAD: the Student Registration Module for Indian Students",
   },
 };

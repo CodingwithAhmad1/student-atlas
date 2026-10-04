@@ -103,7 +103,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+                text: "Indian students can register on the Student Registration Module of the MADAD portal. [CITE: indembassy-amman.gov.in/madad-student-registration]",
               },
             ],
           },
@@ -115,7 +115,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+                text: "Indian students can register on the Student Registration Module of the MADAD portal. [CITE: indembassy-amman.gov.in/madad-student-registration]",
               },
             ],
           },
@@ -126,7 +126,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+                text: "Indian students can register on the Student Registration Module of the MADAD portal. [CITE: indembassy-amman.gov.in/madad-student-registration]",
               },
             ],
           },
