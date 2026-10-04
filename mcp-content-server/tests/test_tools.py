@@ -365,6 +365,18 @@ class SourceRepairTests(ScratchFrontend):
         self.assertIn("skipReason cleared", server.fix_source(self.CID, CTX, clear_skip_reason=True))
         self.assertEqual(self.read("source-overrides.ts"), self.saved["source-overrides.ts"])
 
+    def test_fix_source_keeps_trailing_comment_outside_the_comma(self):
+        cid = "mofa.gov.iq/washington/passport-issuance"
+        server.fix_source(cid, CTX, skip_reason="Blocks automated clients.")
+        src = self.read("source-overrides.ts")
+        self.assertIn('stripSelectors: [".postbox__meta"], // page-view counter\n    skipReason: "Blocks automated clients.",', src)
+        self.assertNotIn("counter,", src)
+        server.fix_source(cid, CTX, clear_skip_reason=True)
+        self.assertEqual(self.read("source-overrides.ts"), self.saved["source-overrides.ts"])
+        self.assertEqual(server.with_separator("  a: 1 // note"), "  a: 1, // note")
+        self.assertEqual(server.with_separator('  url: "https://x"'), '  url: "https://x",')
+        self.assertEqual(server.with_separator("  b: [1], // c"), "  b: [1], // c")
+
     def test_fix_source_new_override_entry_and_guards(self):
         cid = "gov.uk/uk-eta"
         self.assertNotIn(f'"{cid}"', self.saved["source-overrides.ts"])
