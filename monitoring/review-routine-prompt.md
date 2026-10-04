@@ -40,6 +40,9 @@ guess) and explain it in the PR.
   pass them as `@/tmp/file.json`.
 
 ## 1. Set up
+The environment's setup script installs the dependencies before you start.
+Check: `ls frontend/node_modules monitoring/node_modules >/dev/null && python3
+-c "import mcp"`. Only if that fails, install them yourself:
 ```bash
 pip install -r mcp-content-server/requirements.txt
 npm ci --prefix frontend
