@@ -13,10 +13,29 @@
   "newHash": "unreachable-2026-10-01",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 503 from https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Vietnamese Ministry of Justice page on dual nationality is offline, so the guide no longer states Vietnam's dual-nationality rule and asks readers to confirm it with a Vietnamese embassy.",
+    "edits": [
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-27\", citationId: \"pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai\", note: \"The cited page describes the 2008 Law on Vietnamese Nationality. The cited official page is in Vietnamese.\" },",
+        "newText": "dualNationalityAtHome: { value: \"unknown\", verifiedAt: \"2026-10-04\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai\": {\n    id: \"pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai\",\n    url: \"https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi\",\n    label: \"Cổng thông tin phổ biến, giáo dục pháp luật (Bộ Tư pháp) — Từ 1/7/2009: Công dân Việt Nam được đồng thời có quốc tịch nước ngoài (in Vietnamese)\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-04T08:33:55.398Z",
   "error": "HTTP 503 from https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi"
 }

@@ -13,10 +13,13 @@
   "newHash": "ee543e7373c421b678a7bd8b03252fd8fae8295d1041a469473d55c035d1a889",
   "diff": "Index: legislation.gov.uk/bna-1981-schedule-3\n===================================================================\n--- legislation.gov.uk/bna-1981-schedule-3\tprevious\n+++ legislation.gov.uk/bna-1981-schedule-3\tcurrent\n@@ -51,7 +51,7 @@\n 02/06/2021- Amendment\n 15/12/2023- Amendment\n Changes to legislation:\n-British Nationality Act 1981, SCHEDULE 3 is up to date with all changes known to be in force on or before 30 September 2026. There are changes that may be brought into force at a future date. Changes that have been made appear in the content and are referenced with annotations.\n+British Nationality Act 1981, SCHEDULE 3 is up to date with all changes known to be in force on or before 03 October 2026. There are changes that may be brought into force at a future date. Changes that have been made appear in the content and are referenced with annotations.\n Changes to Legislation\n Revised legislation carried on this site may not be fully up to date. Changes and effects are recorded by our editorial team in lists which can be found in the ‘Changes to Legislation’ area. Where those effects have yet to be applied to the text of the legislation by the editorial team they are also listed alongside the legislation in the affected provisions. Use the ‘more’ link to open the changes and effects relevant to the provision you are viewing.\n View outstanding changes\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the 'up to date as of' date changed on the legislation page; the list of Commonwealth countries is the same.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-04T08:22:41.325Z",
   "error": null
 }

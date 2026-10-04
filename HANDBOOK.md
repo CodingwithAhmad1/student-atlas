@@ -1,6 +1,6 @@
 # Student Atlas — Handbook
 
-_Last updated 2026-10-03. This is the single reference for how the project is
+_Last updated 2026-10-04. This is the single reference for how the project is
 built, how it stays accurate, what needs a person, and what to do before
 launch. Detailed references it points to: `frontend/src/data/CONTENT-GUIDE.md`
 (content model and editing tools) and `monitoring/README.md` (the watcher)._
@@ -240,14 +240,26 @@ The weekly review routine keeps this list current. Only alerts its policy
 allows it to carry over are listed (a manual trait column with no newer
 evidence anywhere).
 
-12 open as of 3 October 2026 (8 unreachable, 4 change); the first run of the
-unattended routine will close them.
+None (the 4 October 2026 review closed all 13).
 
 ### Follow-ups
 Improvements a code change could add, noted by the review routine. None of
 them blocks anything.
 
-- None yet.
+- 2026-10-04: `add_citations` adds no `source-overrides.ts` entry, so the new
+  `moj.go.jp/en/nationality-qa` (dual nationality) and
+  `indembassy-amman.gov.in/madad-student-registration` (student registration)
+  sources have no `country: "INTL"` / category. A tool option for that would
+  file them with the other home-country pages.
+- 2026-10-04: web.archive.org could not be reached from the cloud routine
+  (HTTP 403 / connection reset), so source-ladder step 4 was unavailable.
+  Vietnam's dual-nationality row was retired to "unknown" because
+  pbgdpl.gov.vn returned 503 and no other official page states the rule
+  explicitly. Restore it when pbgdpl.gov.vn or an archived copy is reachable.
+- 2026-10-04: `immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news`
+  extracts only its title and description, although the HTML carries the
+  news text (e.g. the planned ballot for Indonesian Work and Holiday visa
+  applicants). Extraction support would let it be cited and monitored.
 
 ### Done in the 2 October review (for the record)
 - **Australia, Student visa from 2 October 2026**: most applicants cannot

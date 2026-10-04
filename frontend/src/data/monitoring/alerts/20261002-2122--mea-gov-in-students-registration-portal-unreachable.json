@@ -13,10 +13,39 @@
   "newHash": "unreachable-2026-10-02",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.mea.gov.in/Students-Registration-Portal). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Ministry of External Affairs page on student registration stopped answering, so the guide now cites an Indian embassy page and only says that students can register on the MADAD portal.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"indembassy-amman.gov.in/madad-student-registration\": {\n    id: \"indembassy-amman.gov.in/madad-student-registration\",\n    url: \"https://indembassy-amman.gov.in/MADAD.html\",\n    label: \"Embassy of India, Amman — MADAD: the Student Registration Module for Indian Students\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/nationalities/india.ts",
+        "oldText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+        "newText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"Indian students can register on the Student Registration Module of the MADAD portal. [CITE: indembassy-amman.gov.in/madad-student-registration]"
+      },
+      {
+        "file": "frontend/src/data/nationalities/india.ts",
+        "oldText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+        "newText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"Indian students can register on the Student Registration Module of the MADAD portal. [CITE: indembassy-amman.gov.in/madad-student-registration]"
+      },
+      {
+        "file": "frontend/src/data/nationalities/india.ts",
+        "oldText": "afterBlockId: \"au-arrival-work\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"The Ministry of External Affairs runs a voluntary registration portal for Indian students abroad on MADAD; missions use it for grievance redressal and to contact students in an emergency. [CITE: mea.gov.in/students-registration-portal]",
+        "newText": "afterBlockId: \"au-arrival-work\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"Indian students can register on the Student Registration Module of the MADAD portal. [CITE: indembassy-amman.gov.in/madad-student-registration]"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"mea.gov.in/students-registration-portal\": {\n    id: \"mea.gov.in/students-registration-portal\",\n    url: \"https://www.mea.gov.in/Students-Registration-Portal\",\n    label: \"Ministry of External Affairs, India — Students Registration Portal\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-04T08:33:25.446Z",
   "error": "HTTP 403 from https://www.mea.gov.in/Students-Registration-Portal"
 }
