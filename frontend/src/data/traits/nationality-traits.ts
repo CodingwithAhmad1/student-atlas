@@ -1948,7 +1948,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462-ballot", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai", note: "The cited page describes the 2008 Law on Vietnamese Nationality. The cited official page is in Vietnamese." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-04" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   iran: {

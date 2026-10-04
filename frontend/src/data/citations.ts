@@ -616,11 +616,6 @@ export const citations: Record<string, Citation> = {
     url: "https://portal.ahu.go.id/uploads/_uploads/dl/PP_UU/Dit.Tatanegara/UU%20No.%2012%20Th%202006.pdf",
     label: "Direktorat Jenderal Administrasi Hukum Umum (Kementerian Hukum) — UU No. 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia (in Indonesian)",
   },
-  "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai": {
-    id: "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai",
-    url: "https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi",
-    label: "Cổng thông tin phổ biến, giáo dục pháp luật (Bộ Tư pháp) — Từ 1/7/2009: Công dân Việt Nam được đồng thời có quốc tịch nước ngoài (in Vietnamese)",
-  },
   "report.dopa.go.th/nationality-act-2508": {
     id: "report.dopa.go.th/nationality-act-2508",
     url: "https://report.dopa.go.th/laws/document/2/226.pdf",

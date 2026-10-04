@@ -148,7 +148,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "presidence.cd/constitution-2011": { country: "INTL", category: "citizenship" },
   "omrh.gouv.ht/constitution-amendee-2012": { country: "INTL", category: "citizenship" },
   "portal.ahu.go.id/uu-12-2006-kewarganegaraan": { country: "INTL", category: "citizenship" },
-  "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai": { country: "INTL", category: "citizenship" },
   "report.dopa.go.th/nationality-act-2508": { country: "INTL", category: "citizenship" },
   "bdlaws.minlaw.gov.bd/citizenship-order-1972-art-2b": { country: "INTL", category: "citizenship" },
   "justice.gov.et/nationality-proclamation-378-2003": { country: "INTL", category: "citizenship" },
