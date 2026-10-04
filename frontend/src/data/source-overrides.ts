@@ -102,6 +102,8 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "immi.homeaffairs.gov.au/biometrics": { category: "eligibility" },
   "ofac.treasury.gov/sanctions-programs": { country: "INTL", category: "eligibility" },
   // Home-country dual-nationality pages (decision D3).
+  "moj.go.jp/en/nationality-qa": { country: "INTL", category: "citizenship" },
+  "indembassy-amman.gov.in/madad-student-registration": { country: "INTL", category: "student" },
   "dgip.gov.pk/dual-nationality": { country: "INTL", category: "citizenship", skipReason: "dgip.gov.pk does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04." },
   "nia.gov.cn/nationality-law": { country: "INTL", category: "citizenship" },
   "immi.homeaffairs.gov.au/dual-citizen": { category: "citizenship" },
@@ -124,7 +126,7 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "mofa.gov.iq/washington/passport-issuance": {
     country: "INTL",
     category: "citizenship",
-    stripSelectors: [".postbox__meta"], // page-view counter,
+    stripSelectors: [".postbox__meta"], // page-view counter
     skipReason: "mofa.gov.iq does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04.",
   },
   "ircc.canada.ca/dual-citizenship": { country: "INTL", category: "citizenship" },
