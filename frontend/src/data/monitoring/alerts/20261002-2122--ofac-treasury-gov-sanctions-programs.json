@@ -13,10 +13,13 @@
   "newHash": "b1178982cd99ed6137a78f0c6927c9a23ab76797411b748e49829e99e561085a",
   "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -33,7 +33,7 @@\n Counter Narcotics Trafficking Sanctions\n Sep 30, 2026\n Counter Terrorism Sanctions\n-Sep 30, 2026\n+Oct 02, 2026\n Countering America's Adversaries Through Sanctions Act-Related Sanctions\n Feb 24, 2026\n Cuba Sanctions\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the last-updated date of one sanctions programme changed on the OFAC list; the list of programmes is the same.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-04T08:22:24.690Z",
   "error": null
 }
