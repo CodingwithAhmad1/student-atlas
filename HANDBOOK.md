@@ -168,12 +168,13 @@ unattended (dismiss, update, add, narrow, repair source, re-verify; each with
 an evidence quote), using the same tools through
 `mcp-content-server/atlas_cli.py`. Nothing waits for a person: what cannot be
 confirmed is narrowed (the guide says less), a dead source is moved, replaced,
-cited from an archived copy or retired. It opens one PR per run as the audit
-trail and merges it itself once the build passes. Its steps are in
+cited from an archived copy or retired. It opens one PR per run for Ahmad,
+who approves the changes by merging it (the site promises that
+a person approves every change). Its steps are in
 `monitoring/review-routine-prompt.md`; the environment needs Full network
-access. It emails Ahmad (Gmail connector) only when the routine itself is
-broken, or for information when it applied a major change (§7 of the
-prompt). Setup brief: `monitoring/ROUTINE-SETUP.md`. Manage it at
+access. It emails Ahmad (Gmail connector) when a review is ready to merge
+(marked URGENT for a major change or a PR left open 14 days) and when the
+routine itself is broken (§7 of the prompt). Setup brief: `monitoring/ROUTINE-SETUP.md`. Manage it at
 claude.ai/code/routines.
 
 **Checks in every build** (`npm run build` runs `check:content`): every
@@ -216,7 +217,7 @@ Show the generated content for one nationality:
 | When | What | How |
 |---|---|---|
 | Every 12 h (automatic) | ~270 monitored pages | Review open alerts on the Activity tab |
-| Weekly (Monday, automatic) | Open alerts | Review routine closes them and merges its PR; skim the PR if you like |
+| Weekly (Monday, automatic) | Open alerts | Review routine closes them and emails you its PR: check the decisions, merge |
 | Every 90 days | Visa Bulletin backlog column | travel.state.gov in a browser → `set_trait_column` |
 | Every 180 days | E-2 treaty list; Working Holiday 417/462 lists | Browser; stale-check alert reminds you |
 | Every 365 days | DV eligibility (new instructions ~October); dual-nationality rows; the 38 unmonitorable sources (§8) | Browser / home-government pages |

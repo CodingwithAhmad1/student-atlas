@@ -97,8 +97,9 @@ export function ActivityPage() {
         <h1 className="text-3xl font-bold tracking-tight">Activity</h1>
         <p className="text-lg leading-relaxed text-muted-foreground">
           Every change our monitor detects on the official sources behind this
-          guide appears here. Each change is reviewed by a person, and the
-          outcome — content updated, or no change needed — is recorded with it.
+          guide appears here. Each change is reviewed every week and approved
+          by a person, and the outcome — content updated, or no change needed —
+          is recorded with it.
           The Sources view shows the health of every monitored page.
         </p>
         <p className="text-xs text-muted-foreground">

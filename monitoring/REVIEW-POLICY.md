@@ -7,9 +7,9 @@ applies.
 
 ## The principle
 
-**Every alert is closed by the run that sees it. Nobody else will look.**
-The review routine works unattended and merges its own PR, so there is no
-"leave it for a person" bucket. When something cannot be settled the normal
+**Every alert is closed by the run that sees it.** The review routine works
+unattended; Ahmad approves its weekly PR by merging it, but he does not do
+the research, so there is no "leave it for a person" bucket. When something cannot be settled the normal
 way, it is settled by **saying less**, never by guessing:
 
 - If the page states a fact explicitly, publish exactly that.

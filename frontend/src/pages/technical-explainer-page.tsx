@@ -161,8 +161,8 @@ export function TechnicalExplainerPage() {
         </p>
         <p className="text-muted-foreground leading-relaxed">
           Student Atlas runs a three-stage pipeline to detect policy changes
-          quickly and publish reviewed updates promptly. No stage runs without
-          human oversight — automation assists, but people approve.
+          quickly and publish reviewed updates promptly. Automation detects and
+          reviews changes; a person approves every update before it goes live.
         </p>
 
         <div className="grid gap-4">
@@ -176,18 +176,20 @@ export function TechnicalExplainerPage() {
             logged with the date, time, and URL. Sources that block automated
             checks are reported honestly as not monitorable.
           </PipelineStage>
-          <PipelineStage step={2} title="AI-assisted review">
+          <PipelineStage step={2} title="Weekly AI review">
             Each alert records exactly what changed on the page since it was
-            last reviewed. A reviewer works through open alerts with an AI
-            assistant that pulls up the change next to every passage of the
-            guide citing that source, and proposes the precise wording update
-            where one is needed. Edits are restricted to the guide&apos;s
-            content files, must keep every citation intact, and are type-checked
-            and build-verified before they are kept.
+            last reviewed. Once a week, an AI reviewer works through every open
+            alert under a published review policy: it compares the change with
+            every passage of the guide citing that source and drafts the precise
+            wording update where one is needed. It writes only what the official
+            page states; when something cannot be confirmed, it removes or
+            softens the claim rather than guessing. Edits keep every citation
+            intact and are type-checked and build-verified.
           </PipelineStage>
           <PipelineStage step={3} title="Human approval">
-            No change goes live without a person comparing the proposed update
-            against the official source and explicitly approving it. Every
+            The week&apos;s review arrives as one set of proposed changes, each
+            with the official source and the evidence behind it. Nothing goes
+            live until a person reads it and explicitly approves it. Every
             outcome — content updated, or no change needed — is recorded on the
             Activity feed with a timestamp, the source URL that triggered it,
             and the exact before-and-after text.
@@ -198,7 +200,7 @@ export function TechnicalExplainerPage() {
           <h3 className="font-semibold mb-2">What this means for you</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Our target is to detect policy changes within 24 hours and publish
-            reviewed updates within 48 hours of detection. Compared to static
+            reviewed updates within 7 days of detection. Compared to static
             immigration guides that may go months between revisions, this
             pipeline is designed to keep Student Atlas meaningfully current —
             at no cost to you.
@@ -242,8 +244,8 @@ export function TechnicalExplainerPage() {
             may not catch immediately
           </li>
           <li>
-            AI-suggested wording is a starting point, not a final authority.
-            Human reviewers verify every change before publication
+            AI-drafted wording is a starting point, not a final authority. A
+            person approves every change before publication
           </li>
           <li>
             Always verify details with official government sources before making
