@@ -109,7 +109,7 @@ export function ActivityPage() {
         </p>
       </header>
 
-      <section className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <section className="grid gap-4 sm:grid-cols-3">
         <SummaryCard
           label="Sources monitored"
           value={summary.totalSources}
@@ -117,7 +117,6 @@ export function ActivityPage() {
         />
         <SummaryCard label="Open items" value={summary.openAlerts} hint="Awaiting review" />
         <SummaryCard label="Content updates" value={summary.publishedUpdates} hint="Changes that updated the guide" />
-        <SummaryCard label="Sources needing attention" value={summary.unhealthySources} hint="Repeated fetch failures" />
       </section>
 
       <div role="tablist" aria-label="Activity views" className="flex gap-1 border-b">
