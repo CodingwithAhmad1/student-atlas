@@ -124,6 +124,18 @@ def safe_path(relative: str) -> Path:
     return resolved
 
 
+
+def with_separator(body: str) -> str:
+    """`body` (source up to an insertion point, right-stripped) ending in a
+    comma when its last code token needs one. A trailing `// comment` on the
+    last line is kept after the comma, not swallowed by it."""
+    start = body.rfind("\n") + 1
+    m = re.search(r"\s*//[^\n]*$", body[start:])
+    code, comment = (body[: start + m.start()], body[start + m.start():]) if m and '"' not in body[start + m.start():] else (body, "")
+    if code.rstrip().endswith(("{", "[", ",")):
+        return body
+    return code.rstrip() + "," + comment
+
 def data_rel(path: Path) -> str:
     return path.relative_to(DATA_DIR.resolve()).as_posix()
 
@@ -234,7 +246,7 @@ def insert_object_entry(src: str, open_idx: int, key: str, value_text: str, inde
     """`src` with `key: value_text,` appended as the last entry of the object at `open_idx`."""
     close = find_matching(src, open_idx)
     body = src[:close].rstrip()
-    sep = "" if body.endswith(("{", ",")) else ","
+    body, sep = with_separator(body), ""
     key_ts = key if re.match(r"^[A-Za-z_$][\w$]*$", key) else ts_string(key)
     return body + sep + f"\n{indent}{key_ts}: {value_text},\n{indent[:-2]}" + src[close:]
 
@@ -821,7 +833,7 @@ def add_callout(
     else:
         close = find_matching(src, ctry.value_start)
         body = src[:close].rstrip()
-        sep = "" if body.endswith(("{", ",")) else ","
+        body, sep = with_separator(body), ""
         new = body + sep + f"\n{base}  callouts: [\n{callout},\n{base}  ],\n{base}" + src[close:]
     before = _snapshot(filepath)
     filepath.write_text(new)
@@ -918,7 +930,7 @@ def add_citations(citations_json: str, ctx: Context, alert_id: str = "") -> str:
         )
     close = find_matching(src, obj)
     body = src[:close].rstrip()
-    sep = "" if body.endswith(("{", ",")) else ","
+    body, sep = with_separator(body), ""
     before = _snapshot(path)
     path.write_text(body + sep + "\n" + "\n".join(entries) + "\n" + src[close:])
     return _record_changes(
@@ -1070,7 +1082,7 @@ def _set_skip_reason(src: str, obj_open: int, key: str, reason: str) -> str:
             return src
         close = find_matching(src, obj_open)
         body = src[:close].rstrip()
-        sep = "" if body.endswith(("{", ",")) else ","
+        body, sep = with_separator(body), ""
         return body + sep + f"\n  {ts_string(key)}: {{ skipReason: {ts_string(reason)} }},\n" + src[close:]
     current = get_entry(src, entry.value_start, "skipReason")
     if current and reason:
@@ -1096,7 +1108,7 @@ def _set_skip_reason(src: str, obj_open: int, key: str, reason: str) -> str:
         return src
     close = find_matching(src, entry.value_start)
     body = src[:close].rstrip()
-    sep = "" if body.endswith(("{", ",")) else ","
+    body, sep = with_separator(body), ""
     if "\n" in src[entry.value_start : close]:
         indent = line_indent(src, entry.key_start) + "  "
         return body + sep + f"\n{indent}skipReason: {ts_string(reason)},\n{line_indent(src, entry.key_start)}" + src[close:]
