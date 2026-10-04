@@ -251,9 +251,6 @@ them blocks anything.
   `indembassy-amman.gov.in/madad-student-registration` (student registration)
   sources have no `country: "INTL"` / category. A tool option for that would
   file them with the other home-country pages.
-- 2026-10-04: `fix_source --skip_reason` on an entry whose last line ends in a
-  comment (`mofa.gov.iq/washington/passport-issuance`) left a stray comma
-  inside that comment. Harmless; the tool could insert before the comment.
 - 2026-10-04: web.archive.org could not be reached from the cloud routine
   (HTTP 403 / connection reset), so source-ladder step 4 was unavailable.
   Vietnam's dual-nationality row was retired to "unknown" because
