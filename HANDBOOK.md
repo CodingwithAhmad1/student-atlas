@@ -246,16 +246,17 @@ None (the 4 October 2026 review closed all 13).
 Improvements a code change could add, noted by the review routine. None of
 them blocks anything.
 
-- 2026-10-04: `add_citations` adds no `source-overrides.ts` entry, so the new
-  `moj.go.jp/en/nationality-qa` (dual nationality) and
-  `indembassy-amman.gov.in/madad-student-registration` (student registration)
-  sources have no `country: "INTL"` / category. A tool option for that would
-  file them with the other home-country pages.
+- 2026-10-04: `add_citations` adds no `source-overrides.ts` entry, so a new
+  home-country source gets no `country: "INTL"` / category. (The two from
+  the 4 October run were filed by hand.) A tool option would let the routine
+  do it.
 - 2026-10-04: web.archive.org could not be reached from the cloud routine
   (HTTP 403 / connection reset), so source-ladder step 4 was unavailable.
   Vietnam's dual-nationality row was retired to "unknown" because
   pbgdpl.gov.vn returned 503 and no other official page states the rule
   explicitly. Restore it when pbgdpl.gov.vn or an archived copy is reachable.
+  The routine now checks at setup whether snapshots load, skips step 4 when
+  they do not, and flags each source it retired without an archive check.
 - 2026-10-04: `immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news`
   extracts only its title and description, although the HTML carries the
   news text (e.g. the planned ballot for Indonesian Work and Holiday visa
