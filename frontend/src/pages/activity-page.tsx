@@ -110,11 +110,7 @@ export function ActivityPage() {
       </header>
 
       <section className="grid gap-4 sm:grid-cols-3">
-        <SummaryCard
-          label="Sources monitored"
-          value={summary.totalSources}
-          hint={summary.sourcesNeverChecked > 0 ? `${summary.sourcesNeverChecked} awaiting first check` : undefined}
-        />
+        <SummaryCard label="Sources monitored" value={summary.totalSources} />
         <SummaryCard label="Open items" value={summary.openAlerts} hint="Awaiting review" />
         <SummaryCard label="Content updates" value={summary.publishedUpdates} hint="Changes that updated the guide" />
       </section>
