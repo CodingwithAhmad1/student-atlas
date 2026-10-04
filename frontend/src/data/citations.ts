@@ -1141,11 +1141,6 @@ export const citations: Record<string, Citation> = {
     url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2024/",
     label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2024 (in Indonesian)",
   },
-  "imigrasi.go.id/faq-sduwhv": {
-    id: "imigrasi.go.id/faq-sduwhv",
-    url: "https://www.imigrasi.go.id/faq/sduwhv",
-    label: "Direktorat Jenderal Imigrasi — FAQ SDUWHV (in Indonesian)",
-  },
   "gov.uk/tb-clinics-malaysia": {
     id: "gov.uk/tb-clinics-malaysia",
     url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-malaysia/tuberculosis-testing-in-malaysia",
