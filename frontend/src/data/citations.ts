@@ -456,11 +456,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.gob.mx/sre/documentos/double-nationality",
     label: "Secretaría de Relaciones Exteriores (Government of Mexico) — Double Nationality",
   },
-  "japaneselawtranslation.go.jp/nationality-act": {
-    id: "japaneselawtranslation.go.jp/nationality-act",
-    url: "https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en",
-    label: "Japanese Law Translation (Ministry of Justice) — Nationality Act",
-  },
   "newyorkpcg.org/dual-citizenship-ra9225": {
     id: "newyorkpcg.org/dual-citizenship-ra9225",
     url: "https://newyorkpcg.org/pcgny/consular-services/dual-citizenship/",
@@ -1555,5 +1550,10 @@ export const citations: Record<string, Citation> = {
     id: "irs.gov/p901",
     url: "https://www.irs.gov/publications/p901",
     label: "IRS — Publication 901, U.S. Tax Treaties",
+  },
+  "moj.go.jp/en/nationality-qa": {
+    id: "moj.go.jp/en/nationality-qa",
+    url: "https://www.moj.go.jp/EN/MINJI/minji78.html",
+    label: "Ministry of Justice, Japan — Nationality Q&A",
   },
 };

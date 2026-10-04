@@ -111,7 +111,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   // Home-government dual-nationality pages (decision D3), added in Phase 2 of the expansion.
   "nigeriaconsulatenewyork.org/faqs-dual-citizenship": { country: "INTL", category: "citizenship" },
   "gob.mx/sre-double-nationality": { country: "INTL", category: "citizenship" },
-  "japaneselawtranslation.go.jp/nationality-act": { country: "INTL", category: "citizenship" },
   "newyorkpcg.org/dual-citizenship-ra9225": { country: "INTL", category: "citizenship" },
   "egyptembassy.net/dual-citizenship-approval": { country: "INTL", category: "citizenship" },
   "auswaertiges-amt.de/nationality-law": { country: "INTL", category: "citizenship" },

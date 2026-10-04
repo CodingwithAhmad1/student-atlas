@@ -1882,7 +1882,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "417", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "japaneselawtranslation.go.jp/nationality-act" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-10-04", citationId: "moj.go.jp/en/nationality-qa" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   philippines: {

@@ -13,10 +13,34 @@
   "newHash": "unreachable-2026-10-02",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The English translation of Japan's Nationality Act stopped answering, so the guide now cites the Ministry of Justice's own Nationality Q&A, which says the same thing.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"moj.go.jp/en/nationality-qa\": {\n    id: \"moj.go.jp/en/nationality-qa\",\n    url: \"https://www.moj.go.jp/EN/MINJI/minji78.html\",\n    label: \"Ministry of Justice, Japan — Nationality Q&A\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"prohibited\", verifiedAt: \"2026-09-27\", citationId: \"japaneselawtranslation.go.jp/nationality-act\" },",
+        "newText": "dualNationalityAtHome: { value: \"prohibited\", verifiedAt: \"2026-10-04\", citationId: \"moj.go.jp/en/nationality-qa\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"japaneselawtranslation.go.jp/nationality-act\": {\n    id: \"japaneselawtranslation.go.jp/nationality-act\",\n    url: \"https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en\",\n    label: \"Japanese Law Translation (Ministry of Justice) — Nationality Act\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"japaneselawtranslation.go.jp/nationality-act\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-04T08:32:37.639Z",
   "error": "HTTP 403 from https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en"
 }
