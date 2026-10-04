@@ -105,8 +105,10 @@ The routine may add, repair and retire sources, under these rules:
   on. Check each one (`search_content --query "[CITE: <id>]"` lists them).
   Facts it does not state are **Narrowed** away.
 - A new or repaired *live* page must be stable: fetch it twice at least
-  60 seconds apart and compare. If the text changes between loads, use a
-  different page or an archived copy.
+  60 seconds apart with `npx tsx src/page-text.ts <url>` and `diff` the two
+  outputs. If the text changes between loads, use a different page or an
+  archived copy. Do not run `churn-check.ts` for this: it re-fetches every
+  monitored source twice (about ten minutes) to check one page.
 - New citation ids follow the existing pattern `<host>/<short-name>`. A
   page in another language ends its label with "(in French)" etc.
 - Never use bot-detection evasion: no browser automation, no spoofed
@@ -127,8 +129,10 @@ which step settled it.
    - and it *has* failed before: the watcher cannot reach it reliably.
      Confirm every cited fact on the live page, then
      `fix_source --skip_reason "<host> does not answer the watcher's
-     automated checks reliably; verified by hand on <date>."`. Or use
-     step 4 if the page rarely changes.
+     automated checks reliably; verified by hand on <YYYY-MM-DD> (answered
+     1 hand check in a row)."`
+     Keep that wording exactly: "Hand-checked sources" below reads the date
+     and the count back. Or use step 4 if the page rarely changes.
 2. **Moved.** Find the same document at a new official address: links from
    the site's parent or index page, the site's search, the newest archived
    copy's links, a web search restricted to the domain. It must be the
@@ -143,7 +147,11 @@ which step settled it.
    move each use over: `apply_edits --drop_citation <old> --cite_as <new>`
    for prose, `set_trait … --citation_id <new>` for trait rows. Then
    `remove_citation <old>`.
-4. **Archived copy.** For a page that rarely changes (laws, decrees,
+4. **Archived copy.** Only when the setup check found archive.org
+   snapshots readable (§1 of the run steps). If it did not, skip this step
+   and write "archive step skipped: web.archive.org unreachable from the
+   cloud" against the source in the PR, so a retirement in step 5 is visibly
+   one made without an archive check. For a page that rarely changes (laws, decrees,
    nationality acts, standing guidance), take the newest Internet Archive
    snapshot (`https://archive.org/wayback/available?url=<url>`). For a page
    with fees, lists or dates, only a snapshot from the last 180 days will
@@ -164,6 +172,30 @@ A trait column's own source (in `trait-sources.ts`) cannot be removed: use
 steps 1, 2 or 4. If none works, set a `skipReason` on it ("could not be
 verified automatically; the column keeps its last verified date"), resolve
 the alert, and add a §7 "Follow-ups" line.
+
+### Hand-checked sources (every run, no alert needed)
+A `skipReason` that says "verified by hand on <date>" takes a page off the
+watcher, so nothing would ever notice it changing. Every run re-checks
+those pages instead:
+
+- Pick the entries in `source-overrides.ts` whose hand-check date is more
+  than 90 days old, oldest first, at most 10 per run.
+- Fetch each one. If it returns the real page, confirm every cited fact
+  (`search_content --query "[CITE: <id>]"`, plus trait rows that cite it):
+  - all still there: re-stamp with `fix_source --skip_reason` using today's
+    date and the count plus one ("answered 2 hand checks in a row"; an
+    entry without a count counts as 1). At **3 in a row** the page has
+    answered reliably for months: `fix_source --clear_skip_reason`, then
+    `npx tsx src/run.ts --source <id>` (real run) to give it back to the
+    watcher, and review any change alert that raises in this run;
+  - a fact changed or is gone: **Update** or **Narrow** exactly as for a
+    change alert, then re-stamp.
+- If the fetch fails, run the source ladder from step 2 (moved, replaced,
+  archived copy, retire), and restart the count at 1 if it stays
+  hand-checked.
+- These changes have no alert, so leave out `--alert_id`. Commit each
+  source on its own as `Student Atlas review: re-verify <citation id>` and
+  list it in the PR under "Hand-checked sources".
 
 ### The stale-check ladder (`stale-check` alerts)
 The column's source blocks automated clients. Only stamp a date you have

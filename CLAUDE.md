@@ -96,5 +96,7 @@ are the source-repair tools.
   `skipReason`) only when no automatically readable page says the same.
 - A fact that applies wherever the student goes (exit permits, military
   service, foreign-exchange rules) goes into each destination column.
-- After adding a batch of citations, run `npx tsx src/churn-check.ts` in
-  `monitoring/` and fix any page that changes between loads.
+- After adding a batch of citations by hand, run `npx tsx src/churn-check.ts` in
+  `monitoring/` and fix any page that changes between loads. (The review
+  routine checks its one or two new pages individually instead; see
+  `monitoring/REVIEW-POLICY.md` "Sources".)

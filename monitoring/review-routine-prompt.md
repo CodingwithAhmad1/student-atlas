@@ -54,15 +54,26 @@ If it fails (e.g. `host_not_allowed`), the run cannot work: send the
 **Routine broken** email (§7) saying the environment needs **Full** network
 access, and end the run.
 
-Check whether `gh` works: `gh auth status`. If it does not, you cannot open
-the PR yourself; §6 says what to do instead.
+Check whether Internet Archive snapshots are readable (the source ladder's
+archive step needs them):
+`npx tsx src/page-text.ts "https://web.archive.org/web/2025/https://www.gov.uk/student-visa" | head -3`
+(from `monitoring/`). Note the result: it decides whether step 4 of the
+source ladder is available this run. The availability API
+(`archive.org/wayback/available`) answering is not enough; the snapshot
+page itself must load.
+
+Check whether `gh` works: `gh auth status`. If it does not, use the
+built-in GitHub tools (`mcp__github__*`, e.g. `list_pull_requests`,
+`create_pull_request`, `add_issue_comment`) for everything below that says
+`gh`.
 
 ## 2. Find the working branch
 ```bash
 gh pr list --state open --search "Atlas weekly review in:title" --json number,headRefName,title
 ```
-(Without `gh`: `git ls-remote --heads origin 'claude/atlas-review-*'` and
-pick the newest branch that is not yet merged into `origin/main`.)
+(Or the GitHub tools' `list_pull_requests`. With neither:
+`git ls-remote --heads origin 'claude/atlas-review-*'` and pick the newest
+branch that is not yet merged into `origin/main`.)
 
 - If an earlier review branch is still open (Ahmad has not merged it yet),
   check it out and `git merge origin/main` (no rebase). Settle
@@ -104,6 +115,11 @@ Review **every** open alert, one at a time, `pending` and `manual` alike:
 
 Alerts raised during the run by your own `run.ts --source` calls (step 1 or
 2 of the source ladder) are reviewed in this run too, before §4.
+
+Then re-check the hand-checked sources (policy: "Hand-checked sources"):
+the oldest ten whose hand-check date is more than 90 days old. This runs
+even when no alert was open; with nothing to re-check and no alerts, end
+the run with "No open alerts".
 
 ## 4. Check everything
 ```bash
@@ -154,6 +170,9 @@ N alerts reviewed: U updated, A added, W narrowed, S sources repaired
 ## Sources changed
 - `<citation id>`: moved / archived copy / replaced by `<id>` / retired / skipReason, and why.
 
+## Hand-checked sources
+- `<citation id>`: re-stamped (count N) / given back to the watcher / updated / repaired.
+
 ## Carried over
 - `<alert id>`: what was tried, when the next run will try again.
 
@@ -169,9 +188,10 @@ Commit messages end with:
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
 
-Without `gh` you cannot open the PR: push the branch and put this link in
-the email (§7) and in the run's final message, so Ahmad can open the PR in
-one click with the body you wrote:
+Open the PR with `gh pr create`, or the GitHub tools' `create_pull_request`
+when `gh` is not signed in. Only if neither works: put this link in the
+email (§7) and in the run's final message, so Ahmad can open the PR in one
+click with the body you wrote:
 `https://github.com/CodingwithAhmad1/student-atlas/compare/main...<branch>?expand=1`.
 
 **Conflicts.** When `git merge origin/main` conflicts:
@@ -214,3 +234,9 @@ final message when there is no PR) instead.
 - Body: plain text. The PR link (or the compare link from §6), the summary
   line, any major change with its evidence quote and source URL, and what
   Ahmad needs to do. Do not paste whole page diffs.
+
+## 8. End the run
+After the email (or after deciding no email is due), write the run's final
+message (the same summary as the PR) and stop. Do not subscribe to PR
+activity, wait for CI or deploy previews, or follow up on the PR: Ahmad
+reviews it, and next week's run picks up anything that changed.
