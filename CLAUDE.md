@@ -50,7 +50,7 @@ browser and re-stamp the column.
 
 A weekly cloud routine does this review on its own, closes every alert
 without a person (what it cannot confirm it narrows; dead sources it repairs
-or retires) and merges its own PR: decisions follow
+or retires) and opens a PR that Ahmad merges: decisions follow
 `monitoring/REVIEW-POLICY.md`, steps `monitoring/review-routine-prompt.md`,
 tools via `mcp-content-server/atlas_cli.py` (same functions, no MCP needed).
 `fix_source`, `remove_citation` and `apply_edits --drop_citation/--cite_as`
@@ -63,8 +63,8 @@ are the source-repair tools.
   (`git worktree add ../student-atlas-<topic> -b <branch>`), and check
   `git diff --cached --name-only` before committing.
 - Pushing to or merging into `main` from a Claude session is blocked by auto
-  mode: push a branch, open a PR, and Ahmad merges. The one exception is the
-  weekly review routine, which merges its own review PR after its checks.
+  mode: push a branch, open a PR, and Ahmad merges. The weekly review PR
+  too: that merge is the human approval the site promises.
 - Sites that block automated clients get a `skipReason` in
   `frontend/src/data/source-overrides.ts`. Never use bot-detection evasion.
 - If an official page is offline or blocked, an Internet Archive copy of it

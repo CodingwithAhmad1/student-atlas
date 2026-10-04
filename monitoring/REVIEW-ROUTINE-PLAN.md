@@ -86,3 +86,11 @@ Supersedes "nothing lands on `main` without Ahmad merging" and the
   `main`. The PR stays as the audit trail; any change can be reverted.
 - Email only when the routine is broken (a person must fix the setup), or
   for information when it applied a major change.
+
+## Human merge restored (Ahmad, 2026-10-04)
+Supersedes the auto-merge in "Unattended mode": the site promises that a
+person approves every change, so Ahmad merges the weekly PR himself. The
+routine still closes every alert on its branch (no "needs you" bucket) and
+emails him each week a review is ready, with a compare link when `gh` is not
+signed in on the cloud machine. The site's stated timing is now: detected
+within 12 hours, reviewed weekly, published within 7 days.
