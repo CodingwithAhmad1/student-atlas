@@ -7,10 +7,7 @@ import type {
   SourceStatus,
   SourceStatusFile,
 } from "@/types/monitoring";
-import {
-  OPEN_ALERT_STATUSES,
-  UNHEALTHY_FAILURE_THRESHOLD,
-} from "@/types/monitoring";
+import { OPEN_ALERT_STATUSES } from "@/types/monitoring";
 
 // All alert records are committed to the repo by the monitoring workflow and
 // the content review (MCP) flow, and bundled at build time — the deployed feed
@@ -55,17 +52,11 @@ export interface ActivityData {
 
 export function useActivityData(): ActivityData {
   const summary = useMemo<MonitoringSummary>(() => {
-    const monitorable = sources.filter((s) => s.skipReason === null);
     return {
       totalSources: sources.length,
       openAlerts: alerts.filter((a) => OPEN_ALERT_STATUSES.includes(a.status))
         .length,
       publishedUpdates: alerts.filter((a) => a.status === "approved").length,
-      unhealthySources: sources.filter(
-        (s) => s.consecutiveFailures >= UNHEALTHY_FAILURE_THRESHOLD
-      ).length,
-      sourcesNeverChecked: monitorable.filter((s) => s.lastCheckedAt === null)
-        .length,
     };
   }, []);
 

@@ -87,8 +87,6 @@ export interface MonitoringSummary {
   totalSources: number;
   openAlerts: number;
   publishedUpdates: number;
-  unhealthySources: number;
-  sourcesNeverChecked: number;
 }
 
 export const OPEN_ALERT_STATUSES: ActivityStatus[] = ["pending", "manual"];
