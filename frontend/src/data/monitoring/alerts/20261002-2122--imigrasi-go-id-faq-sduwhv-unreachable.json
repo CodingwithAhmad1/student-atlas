@@ -13,10 +13,24 @@
   "newHash": "unreachable-2026-10-02",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.imigrasi.go.id/faq/sduwhv). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "Indonesia's immigration website can no longer be reached and Australia has announced a new ballot for Indonesian Work and Holiday visa applicants, so the guide no longer describes the old support-letter process.",
+    "edits": [
+      {
+        "file": "frontend/src/data/nationalities/indonesia.ts",
+        "oldText": "{\n            afterBlockId: \"au-psw-application\",\n            blocks: [{ type: \"paragraph\", text: \"Indonesian applicants for the Work and Holiday visa first need a support letter (SDUWHV) from Indonesia's Directorate General of Immigration, applied for online at sduwhv.imigrasi.go.id during intake periods it announces on its website and social media. [CITE: imigrasi.go.id/faq-sduwhv]\" }],\n          },",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"imigrasi.go.id/faq-sduwhv\": {\n    id: \"imigrasi.go.id/faq-sduwhv\",\n    url: \"https://www.imigrasi.go.id/faq/sduwhv\",\n    label: \"Direktorat Jenderal Imigrasi — FAQ SDUWHV (in Indonesian)\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-04T08:32:02.434Z",
   "error": "HTTP 403 from https://www.imigrasi.go.id/faq/sduwhv"
 }

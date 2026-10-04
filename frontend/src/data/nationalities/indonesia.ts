@@ -96,10 +96,6 @@ const overlay: NationalityOverlay = {
             afterBlockId: "au-psw-application",
             blocks: [{ type: "paragraph", text: "Students funded by an Indonesian **LPDP scholarship** must return to Indonesia after their studies and contribute there for twice the length of study plus one year (2N+1), consecutively. [CITE: lpdp.kemenkeu.go.id/beasiswa-reguler-2024] Plan any post-study work visa around that obligation." }],
           },
-          {
-            afterBlockId: "au-psw-application",
-            blocks: [{ type: "paragraph", text: "Indonesian applicants for the Work and Holiday visa first need a support letter (SDUWHV) from Indonesia's Directorate General of Immigration, applied for online at sduwhv.imigrasi.go.id during intake periods it announces on its website and social media. [CITE: imigrasi.go.id/faq-sduwhv]" }],
-          },
         ],
       },
     },

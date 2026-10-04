@@ -13,10 +13,19 @@
   "newHash": "unreachable-2026-10-02",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://dgip.gov.pk/immigration/dual_nationality.php: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The official page could not be reached by our automatic checks; it was checked by hand on 4 October 2026, still says the same, and will be checked by hand from now on.",
+    "edits": [
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"dgip.gov.pk/dual-nationality\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": "\"dgip.gov.pk/dual-nationality\": { country: \"INTL\", category: \"citizenship\", skipReason: \"dgip.gov.pk does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04.\" },"
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-04T08:24:59.735Z",
   "error": "Network error fetching https://dgip.gov.pk/immigration/dual_nationality.php: fetch failed"
 }

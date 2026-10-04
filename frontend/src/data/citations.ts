@@ -456,11 +456,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.gob.mx/sre/documentos/double-nationality",
     label: "Secretaría de Relaciones Exteriores (Government of Mexico) — Double Nationality",
   },
-  "japaneselawtranslation.go.jp/nationality-act": {
-    id: "japaneselawtranslation.go.jp/nationality-act",
-    url: "https://www.japaneselawtranslation.go.jp/en/laws/view/3784/en",
-    label: "Japanese Law Translation (Ministry of Justice) — Nationality Act",
-  },
   "newyorkpcg.org/dual-citizenship-ra9225": {
     id: "newyorkpcg.org/dual-citizenship-ra9225",
     url: "https://newyorkpcg.org/pcgny/consular-services/dual-citizenship/",
@@ -620,11 +615,6 @@ export const citations: Record<string, Citation> = {
     id: "portal.ahu.go.id/uu-12-2006-kewarganegaraan",
     url: "https://portal.ahu.go.id/uploads/_uploads/dl/PP_UU/Dit.Tatanegara/UU%20No.%2012%20Th%202006.pdf",
     label: "Direktorat Jenderal Administrasi Hukum Umum (Kementerian Hukum) — UU No. 12 Tahun 2006 tentang Kewarganegaraan Republik Indonesia (in Indonesian)",
-  },
-  "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai": {
-    id: "pbgdpl.gov.vn/cong-dan-viet-nam-dong-thoi-co-quoc-tich-nuoc-ngoai",
-    url: "https://pbgdpl.gov.vn/SMPT_Publishing_UC/TinTuc/PrintTL.aspx?idb=1&ItemID=590&l=/noidung/tintuc/Lists/Gioithieuvanbanmoi",
-    label: "Cổng thông tin phổ biến, giáo dục pháp luật (Bộ Tư pháp) — Từ 1/7/2009: Công dân Việt Nam được đồng thời có quốc tịch nước ngoài (in Vietnamese)",
   },
   "report.dopa.go.th/nationality-act-2508": {
     id: "report.dopa.go.th/nationality-act-2508",
@@ -981,11 +971,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=115",
     label: "Reserve Bank of India — Liberalised Remittance Scheme (LRS) FAQs",
   },
-  "mea.gov.in/students-registration-portal": {
-    id: "mea.gov.in/students-registration-portal",
-    url: "https://www.mea.gov.in/Students-Registration-Portal",
-    label: "Ministry of External Affairs, India — Students Registration Portal",
-  },
   "ugc.gov.in/foreign-equivalence-regulations-2025": {
     id: "ugc.gov.in/foreign-equivalence-regulations-2025",
     url: "https://www.ugc.gov.in/pdfnews/8668638_UGC-(Recognition-and-Grant-of-Equivalence-to-Qualifications-obtained-from-Foreign-Educational-Institutions)-Regulations-2025.pdf",
@@ -1140,11 +1125,6 @@ export const citations: Record<string, Citation> = {
     id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2024",
     url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2024/",
     label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2024 (in Indonesian)",
-  },
-  "imigrasi.go.id/faq-sduwhv": {
-    id: "imigrasi.go.id/faq-sduwhv",
-    url: "https://www.imigrasi.go.id/faq/sduwhv",
-    label: "Direktorat Jenderal Imigrasi — FAQ SDUWHV (in Indonesian)",
   },
   "gov.uk/tb-clinics-malaysia": {
     id: "gov.uk/tb-clinics-malaysia",
@@ -1560,5 +1540,15 @@ export const citations: Record<string, Citation> = {
     id: "irs.gov/p901",
     url: "https://www.irs.gov/publications/p901",
     label: "IRS — Publication 901, U.S. Tax Treaties",
+  },
+  "moj.go.jp/en/nationality-qa": {
+    id: "moj.go.jp/en/nationality-qa",
+    url: "https://www.moj.go.jp/EN/MINJI/minji78.html",
+    label: "Ministry of Justice, Japan — Nationality Q&A",
+  },
+  "indembassy-amman.gov.in/madad-student-registration": {
+    id: "indembassy-amman.gov.in/madad-student-registration",
+    url: "https://indembassy-amman.gov.in/MADAD.html",
+    label: "Embassy of India, Amman — MADAD: the Student Registration Module for Indian Students",
   },
 };
