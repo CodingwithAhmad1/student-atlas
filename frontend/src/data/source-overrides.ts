@@ -139,7 +139,7 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "bmeia.gv.at/dual-citizenship": { country: "INTL", category: "citizenship" },
   "mzv.gov.cz/czech-citizenship-legislation": { country: "INTL", category: "citizenship" },
   "migrationsverket.se/what-swedish-citizenship-means": { country: "INTL", category: "citizenship" },
-  "ica.gov.pg/citizenship-and-dual-citizenship": { country: "INTL", category: "citizenship" },
+  "ica.gov.pg/citizenship-and-dual-citizenship": { country: "INTL", category: "citizenship", skipReason: "ica.gov.pg does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04." },
   "washington.mfa.gov.hu/about-hungarian-citizenship": { country: "INTL", category: "citizenship" },
   "giwmscdnone.gov.np/nepal-citizenship-act-2063": { country: "INTL", category: "citizenship" },
   "minjustice.cm/justitia-13-nationalite": { country: "INTL", category: "citizenship" },
