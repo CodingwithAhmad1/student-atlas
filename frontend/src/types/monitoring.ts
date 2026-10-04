@@ -87,7 +87,6 @@ export interface MonitoringSummary {
   totalSources: number;
   openAlerts: number;
   publishedUpdates: number;
-  unhealthySources: number;
   sourcesNeverChecked: number;
 }
 
