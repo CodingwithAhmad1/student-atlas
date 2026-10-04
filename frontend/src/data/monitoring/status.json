@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T08:21:24.174Z",
+  "generatedAt": "2026-10-04T08:23:03.703Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -2835,12 +2835,12 @@
       "country": "INTL",
       "category": "general",
       "label": "全國法規資料庫 — 役男出境處理辦法 (in Chinese)",
-      "lastCheckedAt": "2026-10-03T20:00:06.223Z",
+      "lastCheckedAt": "2026-10-04T08:23:03.703Z",
       "lastChangedAt": "2026-10-03T09:32:28.272Z",
-      "lastHash": "85e1a4a1d55aefcb4659d221c4feb24cee0eacbb1ca8e2fee3ed708cf4d3dca1",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 1,
-      "lastError": "Network error fetching https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=D0040006: fetch failed",
+      "lastHash": "6b5b7dd9caad266fac66ccddd29532f897f97c860cfee128c392d7075bea8aa4",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "law.moj.gov.tw/foreign-degree-recognition": {
