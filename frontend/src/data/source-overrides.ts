@@ -102,7 +102,7 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "immi.homeaffairs.gov.au/biometrics": { category: "eligibility" },
   "ofac.treasury.gov/sanctions-programs": { country: "INTL", category: "eligibility" },
   // Home-country dual-nationality pages (decision D3).
-  "dgip.gov.pk/dual-nationality": { country: "INTL", category: "citizenship" },
+  "dgip.gov.pk/dual-nationality": { country: "INTL", category: "citizenship", skipReason: "dgip.gov.pk does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04." },
   "nia.gov.cn/nationality-law": { country: "INTL", category: "citizenship" },
   "immi.homeaffairs.gov.au/dual-citizen": { category: "citizenship" },
   "gov.uk/dual-citizenship": { category: "citizenship" },
