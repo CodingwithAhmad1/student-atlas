@@ -1,6 +1,6 @@
 # Student Atlas — Handbook
 
-_Last updated 2026-10-04. This is the single reference for how the project is
+_Last updated 2026-10-05. This is the single reference for how the project is
 built, how it stays accurate, what needs a person, and what to do before
 launch. Detailed references it points to: `frontend/src/data/CONTENT-GUIDE.md`
 (content model and editing tools) and `monitoring/README.md` (the watcher)._
@@ -240,7 +240,7 @@ The weekly review routine keeps this list current. Only alerts its policy
 allows it to carry over are listed (a manual trait column with no newer
 evidence anywhere).
 
-None (the 4 October 2026 review closed all 13).
+None (the 5 October 2026 review closed both open alerts).
 
 ### Follow-ups
 Improvements a code change could add, noted by the review routine. None of
@@ -257,6 +257,7 @@ them blocks anything.
   explicitly. Restore it when pbgdpl.gov.vn or an archived copy is reachable.
   The routine now checks at setup whether snapshots load, skips step 4 when
   they do not, and flags each source it retired without an archive check.
+  Still HTTP 403 from the cloud on 2026-10-05.
 - 2026-10-04: `immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news`
   extracts only its title and description, although the HTML carries the
   news text (e.g. the planned ballot for Indonesian Work and Holiday visa
