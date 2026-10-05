@@ -1,0 +1,22 @@
+{
+  "id": "20261005-1222--fmino-gov-ng-ess-online-verification",
+  "kind": "change",
+  "sourceId": "fmino.gov.ng/ess-online-verification",
+  "relatedSourceIds": [],
+  "sourceLabel": "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
+  "sourceUrl": "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-05T12:22:13.707Z",
+  "updatedAt": "2026-10-05T12:22:13.707Z",
+  "oldHash": "3aa1895da95ff9aed3d37c1bb6c4e0a587d04631d8dec30792ef3701ab28e846",
+  "newHash": "fc95c0db14afb2eca4792587d80f28b4a3dde82f1f0565b00ed3dd8f7a068ad4",
+  "diff": "Index: fmino.gov.ng/ess-online-verification\n===================================================================\n--- fmino.gov.ng/ess-online-verification\tprevious\n+++ fmino.gov.ng/ess-online-verification\tcurrent\n@@ -21,6 +21,6 @@\n Mrs. Folasade Boriowo\n Director, Press and Public Relations\n RELATED ARTICLESMORE FROM AUTHOR\n-World Heart Day: Idris Calls For Stronger Action To Prevent Heart Disease, Save Lives\n-FG Declares Thursday, October 1St, 2026, Public Holiday To Mark Nigeria’s 66Th Independence Anniversary\n-Akpabio Assures Australia of Nigeria’s Support for IPU Presidency\n\\ No newline at end of file\n+FG Opens National Youth Confab 2026, Tasks Young Nigerians to Turn Dialogue into Action\n+Musawa Seeks Deeper Meaning For June 12\n+Remarks By The Honourable Minister Of Information And National Orientation, Alhaji Mohammed Idris, FNIPR, At The Independence Day Public Lecture To Mark Nigeria’s 66Th...\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

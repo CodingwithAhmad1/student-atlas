@@ -1,0 +1,22 @@
+{
+  "id": "20261005-1222--pakistan-highcommission-gov-au-visas",
+  "kind": "change",
+  "sourceId": "pakistan.highcommission.gov.au/visas",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian High Commission Pakistan — Visas and Citizenship",
+  "sourceUrl": "https://pakistan.highcommission.gov.au/ISLM/Visas_and_Migration.html",
+  "country": "AU",
+  "category": "citizenship",
+  "detectedAt": "2026-10-05T12:22:13.707Z",
+  "updatedAt": "2026-10-05T12:22:13.707Z",
+  "oldHash": "eb686e85324f912f84b480a20086683158468fdb2b63b1703ecb347fcf553ce4",
+  "newHash": "8675539422aab2db336a3c651c759a46d8c5ef081c46bf7328896d9cc5c60cef",
+  "diff": "Index: pakistan.highcommission.gov.au/visas\n===================================================================\n--- pakistan.highcommission.gov.au/visas\tprevious\n+++ pakistan.highcommission.gov.au/visas\tcurrent\n@@ -5,6 +5,9 @@\n Text size\n Visas and Citizenship\n Stay Safe from visa scams - Visit Visa Scams - Stay Safe for further information\n+Changes to Student visa application rules (subclasses 500 & 590)\n+From 2 October 2026, there are new rules for Student visa (subclass 500) and Student Guardian (subclass 590) visas. The rules change who can apply for and be granted a visa while in Australia, and whether family members can be included.\n+For more information visit Changes to Student visa application rules (subclasses 500 & 590) page on Department of Home Affairs website\n Visa and citizenship enquiries\n Please do not call the Australian High Commission with visa or citizenship enquiries.\n The Australian High Commission does not respond to enquiries about visas, citizenship, or provide visa application updates. Staff at the Australian High Commission are unable to give you advice about how to apply for an Australian visa.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
