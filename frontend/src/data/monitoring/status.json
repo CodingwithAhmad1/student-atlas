@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-04T20:14:58.363Z",
+  "generatedAt": "2026-10-05T06:09:00.846Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -2793,9 +2793,9 @@
       "country": "INTL",
       "category": "general",
       "label": "全國法規資料庫 — 役男出境處理辦法 (in Chinese)",
-      "lastCheckedAt": "2026-10-04T20:14:58.363Z",
+      "lastCheckedAt": "2026-10-05T06:09:00.846Z",
       "lastChangedAt": "2026-10-04T20:14:58.363Z",
-      "lastHash": "262765479005f4c87c77cffc48392ecd1989bade7855e37867bc5dc9f38aa0c9",
+      "lastHash": "6b5b7dd9caad266fac66ccddd29532f897f97c860cfee128c392d7075bea8aa4",
       "lastHttpStatus": 200,
       "consecutiveFailures": 0,
       "lastError": null,
