@@ -1,0 +1,22 @@
+{
+  "id": "20261005-2313--ofac-treasury-gov-sanctions-programs",
+  "kind": "change",
+  "sourceId": "ofac.treasury.gov/sanctions-programs",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Treasury OFAC — Sanctions Programs and Country Information",
+  "sourceUrl": "https://ofac.treasury.gov/sanctions-programs-and-country-information",
+  "country": "INTL",
+  "category": "eligibility",
+  "detectedAt": "2026-10-05T23:13:13.363Z",
+  "updatedAt": "2026-10-05T23:13:13.363Z",
+  "oldHash": "b1178982cd99ed6137a78f0c6927c9a23ab76797411b748e49829e99e561085a",
+  "newHash": "e012873b6480fb5c3b2a02c97ea02c46bf32a00856b0d4475731667c4898eaf5",
+  "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -23,7 +23,7 @@\n Balkans-Related Sanctions\n Nov 20, 2025\n Belarus Sanctions\n-Sep 30, 2026\n+Oct 05, 2026\n Burma-Related Sanctions\n May 28, 2026\n Central African Republic Sanctions\n@@ -31,9 +31,9 @@\n Chinese Military Companies Sanctions\n Jun 01, 2022\n Counter Narcotics Trafficking Sanctions\n-Sep 30, 2026\n+Oct 05, 2026\n Counter Terrorism Sanctions\n-Oct 02, 2026\n+Oct 05, 2026\n Countering America's Adversaries Through Sanctions Act-Related Sanctions\n Feb 24, 2026\n Cuba Sanctions\n@@ -53,9 +53,9 @@\n International Criminal Court-Related Sanctions\n Aug 18, 2026\n Iran Sanctions\n-Oct 01, 2026\n+Oct 05, 2026\n Iraq-Related Sanctions\n-Jul 09, 2025\n+Oct 05, 2026\n Lebanon-Related Sanctions\n Feb 27, 2026\n Libya Sanctions\n@@ -67,7 +67,7 @@\n Nicaragua-related Sanctions\n Apr 16, 2026\n Non-Proliferation Sanctions\n-Sep 29, 2026\n+Oct 05, 2026\n North Korea Sanctions\n Mar 12, 2026\n Promoting Accountability for Assad and Regional Stabilization Sanctions (PAARSS)\n@@ -87,7 +87,7 @@\n Ukraine-/Russia-related Sanctions\n May 08, 2026\n Venezuela-Related Sanctions\n-Sep 28, 2026\n+Oct 05, 2026\n Yemen-related Sanctions\n Nov 18, 2021\n Information on OFAC sanctions lists program tags and their definitions.\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
