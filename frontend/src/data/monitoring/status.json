@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-05T06:09:00.846Z",
+  "generatedAt": "2026-10-05T06:09:46.484Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -1533,12 +1533,12 @@
       "country": "INTL",
       "category": "citizenship",
       "label": "Government of Nepal, Nepal Law Commission — Nepal Citizenship Act 2063 (2006)",
-      "lastCheckedAt": "2026-10-04T20:14:58.363Z",
+      "lastCheckedAt": "2026-10-05T06:09:46.484Z",
       "lastChangedAt": "2026-09-28T06:47:35.584Z",
       "lastHash": "317f0f8353c614075f1fe46fb2738bb1de34bfd4109a2e62f3b92dfdf2ad06e6",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 3,
-      "lastError": "Network error fetching https://giwmscdnone.gov.np/media/app/public/275/posts/1721032585_65.pdf: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "minjustice.cm/justitia-13-nationalite": {
