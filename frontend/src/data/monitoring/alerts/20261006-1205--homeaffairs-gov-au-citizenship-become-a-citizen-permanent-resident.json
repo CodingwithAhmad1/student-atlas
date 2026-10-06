@@ -1,0 +1,22 @@
+{
+  "id": "20261006-1205--homeaffairs-gov-au-citizenship-become-a-citizen-permanent-resident",
+  "kind": "change",
+  "sourceId": "homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Home Affairs — Become a Citizen",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
+  "country": "AU",
+  "category": "citizenship",
+  "detectedAt": "2026-10-06T12:05:53.745Z",
+  "updatedAt": "2026-10-06T12:05:53.745Z",
+  "oldHash": "27b6f2ffcf075344334ef15f0453e89c6808d33483006a7d9b837573eb2f27c8",
+  "newHash": "7f0c55ae734f3a784ee225f7a9fb8ce6ba4ebba0a220766d3390c5219cfc68a4",
+  "diff": "Index: homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident\n===================================================================\n--- homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident\tprevious\n+++ homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident\tcurrent\n@@ -57,7 +57,7 @@\n We must be satisfied that you are likely to live or continue to live in Australia, or maintain a close and continuing link with Australia while overseas. Citizenship is a privilege that requires a long-term commitment to Australia. A close and continuing association with family or other social relationships in Australia, including people who are Australian citizens, may not be sufficient to be considered as having a close and continuing link to Australia on its own. When we assess your close and continuing link to Australia, we will consider your living arrangements and migration status, including: if you rent or own property and where this property is located if you have high value items and where these are located, such as a house, property, car or bank account any commitments or ties to Australia, such as your source of income, employment situation, family situation, and schooling arrangements your travel into and out of Australia, your reason for travel, the number of times you travelled into and out of Australia, and how long you were in each place participation in the Australian community, such as being part of community groups, clubs or charities that provides services or opportunities if you have close Australian permanent resident or citizen family members who intend to reside in Australia, such as a spouse, de facto partner or child/ren. For information on the supporting documents we require, see Evidence of close and continuing link to Australia.\n We cannot approve your application in certain circumstances\n We must not approve your citizenship application if we are not satisfied of your identity. Identity is assessed from birth.\n-We must not approve your application for Australian citizenship: • when proceedings for an offence against an Australian law (including proceedings by way of appeal or review) are pending. • when it is less than 2 years since you were released from prison after serving a prison sentence of 12 months or more, or 10 years if you are a repeat offender. • you are subject to certain conditions set by an Australian court (such as being released on parole, good behaviour or bail) where action may be taken against you for breach of those conditions. • you are in prison or a psychiatric institution by order of the court at the time of decision\n+We must not approve your application for Australian citizenship: when proceedings for an offence against an Australian law (including proceedings by way of appeal or review) are pending. when it is less than 2 years since you were released from prison after serving a prison sentence of 12 months or more, or 10 years if you are a repeat offender. you are subject to certain conditions set by an Australian court (such as being released on parole, good behaviour or bail) where action may be taken against you for breach of those conditions. you are in prison or a psychiatric institution by order of the court at the time of decision.\n Risk to National security\n We must not approve your citizenship application if you are assessed as a risk to the security of Australia.\n We must not approve your citizenship application if you ceased to be an Australian citizen in the past 12 months.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
