@@ -1,0 +1,22 @@
+{
+  "id": "20261006-2142--gov-uk-faster-travel-uk-border",
+  "kind": "change",
+  "sourceId": "gov.uk/faster-travel-uk-border",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Faster travel through the UK border",
+  "sourceUrl": "https://www.gov.uk/government/publications/coming-to-the-uk/faster-travel-through-the-uk-border",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-10-06T21:42:40.311Z",
+  "updatedAt": "2026-10-06T21:42:40.311Z",
+  "oldHash": "7316e1c11dbf06859749683b1f0d5f250497e42b2cb967e225684e1a4e894d24",
+  "newHash": "242fcc4df8b50ae6e54af94eb913a158fd214837794542b2ac4dc03487f4099f",
+  "diff": "Index: gov.uk/faster-travel-uk-border\n===================================================================\n--- gov.uk/faster-travel-uk-border\tprevious\n+++ gov.uk/faster-travel-uk-border\tcurrent\n@@ -5,7 +5,7 @@\n During popular travel periods, such as school holidays or Christmas holidays, we expect to see an increase in the number of travellers entering the UK border.\n We recommend that you follow the faster travel advice below to help us process you quickly and improve your experience at the UK border.\n Arriving at the border\n-Always keep your passport and travel documents with you – don’t be tempted to pack them away in your luggage as you will need to show your passport on your arrival.\n+Always keep your passport and travel documents with you – don’t be tempted to pack them away in your luggage as you may need to show your passport on your arrival.\n To avoid delays, when you arrive at UK passport control, please:\n remove your passport from its cover and have it open at the photo page\n take off any hats, headphones and sunglasses\n@@ -15,19 +15,22 @@\n There are over 290 eGates in place at 15 air and rail ports to enable quicker travel into the UK.\n You can normally use eGates if you:\n have a biometric symbol on the cover of your passport\n-have a valid immigration status (a valid ETA, eVisa, digital record of exemption, or are a British or Irish passport holder)\n are 8 years old or over (8 to 17 year olds must be accompanied by an adult)\n are at least 120cm tall\n-are one of the following:\n-a British citizen\n+are a British or Irish citizen or\n+have a valid immigration status (a valid ETA, eVisa, digital record of exemption and are one of the following:\n a national of an EU country, Australia, Canada, Iceland, Japan, Liechtenstein, New Zealand, Norway, Singapore, South Korea, Switzerland or the USA\n a member of the Registered Traveller Service\n-Adults travelling alone with children under 18 years old should use the eGates first. If 2 or more adults are travelling with children, you should follow this process when using the eGates:\n+Only one person can use the eGates at a time. Adults travelling alone with children under 18 years old should use the eGates first. If 2 or more adults are travelling with children, you should follow this process when using the eGates:\n 1. Adult 1\n 2. Child or children\n 3. Adult 2 or final adult\n Those travelling with ID cards cannot use the eGates.\n-Reasons you may not get through the eGates\n+Reasons you may not get through the eGates.\n+Contactless travel\n+Contactless travel is a new type of facial comparison technology that lets eligible passengers pass through eGates without presenting a passport.\n+From 6 October, it will be available for British citizens entering the UK on a British passport at participating airports, with rollout to other eGate-eligible nationalities expected by early 2027.\n+See the contactless travel factsheet for more information.\n Getting your passport stamped by a Border Force officer\n You must see a Border Force officer and get your passport stamped if you’re coming to the UK:\n with a Temporary Work - Creative Worker Certificate of Sponsorship for short-term assignments (up to 3 months)\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
