@@ -1,0 +1,22 @@
+{
+  "id": "20261008-2210--hec-gov-pk-foreign-degree-equivalence-unreachable",
+  "kind": "unreachable",
+  "sourceId": "hec.gov.pk/foreign-degree-equivalence",
+  "relatedSourceIds": [],
+  "sourceLabel": "Higher Education Commission Pakistan — Recognition/Equivalence of Foreign Degrees",
+  "sourceUrl": "https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-08T22:10:34.324Z",
+  "updatedAt": "2026-10-08T22:10:34.324Z",
+  "oldHash": "1fb4937fed3479402ec51c7a9de35c433a338a2855addd46e6c0e29dc82ff293",
+  "newHash": "unreachable-2026-10-08",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx: fetch failed"
+}

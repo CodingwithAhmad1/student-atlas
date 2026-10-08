@@ -1,0 +1,22 @@
+{
+  "id": "20261008-2210--chile-gob-cl-nacionalidad-unreachable",
+  "kind": "unreachable",
+  "sourceId": "chile.gob.cl/nacionalidad",
+  "relatedSourceIds": [],
+  "sourceLabel": "Gobierno de Chile (Chile en el Exterior) — Nacionalidad (in Spanish)",
+  "sourceUrl": "https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-08T22:10:34.324Z",
+  "updatedAt": "2026-10-08T22:10:34.324Z",
+  "oldHash": "f0c9530f4d0bd0fffb993e5a60eb0695b520e4f3675a2959f75b909b6752efe2",
+  "newHash": "unreachable-2026-10-08",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 404 from https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad"
+}
