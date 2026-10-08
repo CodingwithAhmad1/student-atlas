@@ -1,0 +1,22 @@
+{
+  "id": "20261008-1206--gov-uk-standard-visitor-visa",
+  "kind": "change",
+  "sourceId": "gov.uk/standard-visitor-visa",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Standard Visitor Visa",
+  "sourceUrl": "https://www.gov.uk/standard-visitor",
+  "country": "UK",
+  "category": "visitor",
+  "detectedAt": "2026-10-08T12:06:51.261Z",
+  "updatedAt": "2026-10-08T12:06:51.261Z",
+  "oldHash": "4ff1d614a032fec6bd79c9470ee204f5e6455d41b1e9cdc0c57e4a405cd92377",
+  "newHash": "3b6d346a096a1bd7b1c3e3db78a8619709db4faa6e43048891775a3b951be166",
+  "diff": "Index: gov.uk/standard-visitor-visa\n===================================================================\n--- gov.uk/standard-visitor-visa\tprevious\n+++ gov.uk/standard-visitor-visa\tcurrent\n@@ -17,6 +17,7 @@\n to pass through the UK to another country (‘in transit’)\n for certain business activities, for example attending a meeting or interview\n for certain paid engagements or events (a ‘permitted paid engagement’) as an expert in your profession, for example to give lectures or perform\n+for certain Erasmus+ placements\n to take part in a school exchange programme\n to do a recreational course of up to 30 days, for example a dance course\n to study, do a placement or take an exam\n@@ -37,6 +38,7 @@\n You may need to meet extra eligibility requirements if you’re visiting the UK:\n to study, do a placement or take an exam\n as an academic, senior doctor or dentist\n+for an Erasmus+ placement\n for a permitted paid engagement\n for medical reasons\n The rules on what you’ll need to enter the UK may be different if you’re travelling from Ireland, Jersey, Guernsey or the Isle of Man.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

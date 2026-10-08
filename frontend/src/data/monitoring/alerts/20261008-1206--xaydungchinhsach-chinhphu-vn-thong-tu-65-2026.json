@@ -1,0 +1,22 @@
+{
+  "id": "20261008-1206--xaydungchinhsach-chinhphu-vn-thong-tu-65-2026",
+  "kind": "change",
+  "sourceId": "xaydungchinhsach.chinhphu.vn/thong-tu-65-2026",
+  "relatedSourceIds": [],
+  "sourceLabel": "Government of Vietnam portal — Circular 65/2026/TT-BGDĐT on recognising foreign degrees for use in Vietnam (in Vietnamese)",
+  "sourceUrl": "https://xaydungchinhsach.chinhphu.vn/thong-tu-so-65-2026-tt-bgddt-quy-dinh-cong-nhan-van-bang-do-co-so-giao-duc-nuoc-ngoai-cap-de-su-dung-tai-viet-nam-119260813161727367.htm",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-08T12:06:51.261Z",
+  "updatedAt": "2026-10-08T12:06:51.261Z",
+  "oldHash": "968840bc5ac257b05fb0d569a6736b8f4639cd8a7cf1f1136f7199cbac970da2",
+  "newHash": "f82427556a3418529c41a7feb71ef1ac11585212ec1166c522cfc5f206d15519",
+  "diff": "Index: xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\n===================================================================\n--- xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tprevious\n+++ xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tcurrent\n@@ -87,7 +87,6 @@\n Hướng dẫn thực hiện chính sách\n (Chinhphu.vn) - Năm 2026, độ tuổi nghỉ hưu của người lao động nam là 61 tuổi 6 tháng, lao động nữ là 57 tuổi. Năm 2027, độ tuổi nghỉ hưu của người lao động nam sẽ là 61 tuổi 9 tháng, lao động nữ sẽ là 57 tuổi 4 tháng;...\n TOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia\n-Chính sách và cuộc sống\n (Chinhphu.vn) - Tổng Bí thư Tô Lâm đã ký ban hành Nghị quyết số 57-NQ/TW ngày 22/12/2024 của Bộ Chính trị về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia. Cổng TTĐT Chính phủ trân trọng giới thiệu toàn văn Nghị quyết.\n Chúng tôi\n luôn\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
