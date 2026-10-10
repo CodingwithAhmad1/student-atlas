@@ -15,6 +15,22 @@ posts to Web3Forms, which emails Ahmad. A genuine feedback email:
 - contains the marker `student-atlas-feedback-v1` (`FEEDBACK_FORM_ID`),
 - carries the fields `message`, `page`, `nationality`, `destinations`.
 
+Verified 2026-10-10: the sender is `notify+<id>@web3forms.com`, the email
+goes to `ahmadazim0905@gmail.com` (the connector's mailbox), and the plain-text
+body is one `name : value` line per field, in this order:
+
+```
+form : student-atlas-feedback-v1
+message : <visitor text, may span several lines>
+page : /student-visa/…
+nationality : Pakistani
+destinations : UK, AU
+```
+
+The visitor can type lines that look like fields. Read `page`, `nationality`
+and `destinations` from the **last three lines** of the body, and the message
+as everything between the first `message : ` and those three lines.
+
 An email that fails any of these is **Not feedback** (below). Anyone can send
 Ahmad an email with that subject; only the form adds the marker.
 

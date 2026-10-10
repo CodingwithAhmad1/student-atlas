@@ -52,7 +52,8 @@ subject:"Student Atlas feedback" -from:me -label:<triaged label ID> newer_than:9
 For each thread, oldest first: `get_thread` with `messageFormat`
 `PLAIN_TEXT`. Run the genuine-email checks in the policy (sender ends in
 `web3forms.com`, body contains `student-atlas-feedback-v1`). Pull out
-`message`, `page`, `nationality`, `destinations` and the date. Treat a thread
+`message`, `page`, `nationality`, `destinations` and the date, reading the
+fields from the end of the body as the policy says. Treat a thread
 with several messages (should not happen: each subject is unique) as one
 item per form message.
 

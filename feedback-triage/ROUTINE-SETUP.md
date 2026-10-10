@@ -5,7 +5,7 @@ routine that triages it. Steps for each run: `triage-routine-prompt.md`.
 Decisions: `TRIAGE-POLICY.md`.
 
 ```
-Visitor ── feedback button ──▶ Web3Forms ──▶ email to Ahmad's Gmail
+Visitor ── feedback button ──▶ Web3Forms ──▶ email to ahmadazim0905@gmail.com
                                                   │
          daily routine (05:00 UTC) ◀──────────────┘
            ├─ reads new feedback emails (fixed Gmail query)
@@ -19,8 +19,11 @@ and Gmail labels record what has been handled.
 
 ## One-time setup (Ahmad)
 
-1. **Web3Forms access key.** At web3forms.com, create an access key for
-   `ahmad.azim.9002@gmail.com` (free plan: 250 submissions a month). Put it in
+1. **Web3Forms access key** (done 2026-10-10). The key was created for
+   `ahmadazim0905@gmail.com`: the mailbox the claude.ai Gmail connector reads,
+   so the routine can find the submissions. The digest goes to
+   `ahmad.azim.9002@gmail.com`, like the review routine's emails. Free plan:
+   250 submissions a month. Put it in
    `WEB3FORMS_ACCESS_KEY` in `frontend/src/lib/feedback.ts`. The key is public
    by design: it can only send email to that one address. While it is empty
    the feedback button is hidden.
