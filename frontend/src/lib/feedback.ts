@@ -7,7 +7,7 @@
  * the fixed address it was created for), so it lives here, not in a secret.
  * Leave it empty and the feedback button is not shown.
  */
-export const WEB3FORMS_ACCESS_KEY = ""
+export const WEB3FORMS_ACCESS_KEY = "d1cd5807-fa40-45d3-9d38-17cf042bd426"
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit"
 
