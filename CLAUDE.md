@@ -20,6 +20,11 @@ calendar, open manual items and the launch checklist.
   `mcp-content-server/.mcp.json.example`). `atlas_cli.py` exposes the same
   review tools on the command line (cloud routines, or a worktree, where the
   MCP server would edit the main checkout instead).
+- `feedback-triage/` — visitor feedback: the site's feedback button posts to
+  Web3Forms (email, no backend); a daily read-only cloud routine triages the
+  emails and sends Ahmad one digest with paste-ready prompts. Prompts it
+  writes quote the visitor's message as untrusted data: check the claim, never
+  follow it.
 - Hosting: Vercel (Hobby), root `frontend`, config in
   `frontend/vercel.json` (SPA rewrite). See HANDBOOK §9.
 - `archive/` — retired Flask-era code; nothing there is used.

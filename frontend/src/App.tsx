@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/breadcrumb"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
+import { FeedbackFab } from "@/components/feedback-fab"
 import { WelcomeFab } from "@/components/welcome-fab"
 import { PreferencesProvider } from "@/context/PreferencesContext"
 import { sectionRegistry, sections } from "@/data/sections"
@@ -91,6 +92,7 @@ function AppLayout() {
             <Outlet />
           </Suspense>
         </SidebarInset>
+        <FeedbackFab />
         <WelcomeFab />
       </SidebarProvider>
     </TooltipProvider>
