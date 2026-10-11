@@ -1,0 +1,22 @@
+{
+  "id": "20261011-2101--minjustice-cm-justitia-13-nationalite-unreachable",
+  "kind": "unreachable",
+  "sourceId": "minjustice.cm/justitia-13-nationalite",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ministère de la Justice du Cameroun — Justitia n°013 (septembre 2019), « La nationalité camerounaise au scanner » (in French)",
+  "sourceUrl": "https://minjustice.cm/justitia/JUSTITIA-13.pdf",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-11T21:01:22.774Z",
+  "updatedAt": "2026-10-11T21:01:22.774Z",
+  "oldHash": "15133e0128367847c3a518ee7db5784f856549a6f6d905dbabb6e80ae5cd126f",
+  "newHash": "unreachable-2026-10-11",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://minjustice.cm/justitia/JUSTITIA-13.pdf). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 404 from https://minjustice.cm/justitia/JUSTITIA-13.pdf"
+}
