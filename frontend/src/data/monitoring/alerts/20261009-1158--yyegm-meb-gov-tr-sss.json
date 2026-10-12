@@ -13,10 +13,13 @@
   "newHash": "e9e68de13788bca1d9325afb402a63cded5d7a7e9806856ad32aba1cbf1482fa",
   "diff": "Index: yyegm.meb.gov.tr/sss\n===================================================================\n--- yyegm.meb.gov.tr/sss\tprevious\n+++ yyegm.meb.gov.tr/sss\tcurrent\n@@ -1,3 +1,5 @@\n+?>\n+S.S.S\n YÜKSEKÖĞRETİM VE YURT DIŞI EĞİTİM GENEL MÜDÜRLÜĞÜ\n T.C. MİLLİ EĞİTİM\n BAKANLIĞI\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Two stray header lines appeared at the top of the Turkish ministry's FAQ page; the scholarship rules we cite are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:18:03.568Z",
   "error": null
 }
