@@ -676,11 +676,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5901.pdf",
     label: "Mevzuat Bilgi Sistemi (mevzuat.gov.tr) — Türk Vatandaşlığı Kanunu (Law No. 5901) (in Turkish)",
   },
-  "chile.gob.cl/nacionalidad": {
-    id: "chile.gob.cl/nacionalidad",
-    url: "https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad",
-    label: "Gobierno de Chile (Chile en el Exterior) — Nacionalidad (in Spanish)",
-  },
   "mjusticia.gob.es/como-pierde-nacionalidad": {
     id: "mjusticia.gob.es/como-pierde-nacionalidad",
     url: "https://www.mjusticia.gob.es/es/ciudadania/nacionalidad/que-es-nacionalidad/como-pierde-nacionalidad",
@@ -1550,5 +1545,10 @@ export const citations: Record<string, Citation> = {
     id: "indembassy-amman.gov.in/madad-student-registration",
     url: "https://indembassy-amman.gov.in/MADAD.html",
     label: "Embassy of India, Amman — MADAD: the Student Registration Module for Indian Students",
+  },
+  "consulado.gob.cl/recuperacion-nacionalidad": {
+    id: "consulado.gob.cl/recuperacion-nacionalidad",
+    url: "https://www.consulado.gob.cl/servicios/recuperacion-de-la-nacionalidad-chilena",
+    label: "Consulado.gob.cl — Recuperación de la nacionalidad chilena (in Spanish)",
   },
 };

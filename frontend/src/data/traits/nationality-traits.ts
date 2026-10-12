@@ -1552,7 +1552,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "chile.gob.cl/nacionalidad", note: "The cited official page is in Spanish." },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-10-12", citationId: "consulado.gob.cl/recuperacion-nacionalidad", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   senegal: {
