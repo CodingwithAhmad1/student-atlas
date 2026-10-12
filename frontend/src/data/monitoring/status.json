@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T21:01:22.774Z",
+  "generatedAt": "2026-10-12T06:07:13.002Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -791,9 +791,9 @@
       "country": "AU",
       "category": "citizenship",
       "label": "Australian Home Affairs — Become a Citizen",
-      "lastCheckedAt": "2026-10-11T21:01:22.774Z",
-      "lastChangedAt": "2026-10-07T11:52:24.954Z",
-      "lastHash": "25bfe6e8be4824c7f717d0fdc5ac9f6825f092e06aa824dd4ca4d44240f8b54f",
+      "lastCheckedAt": "2026-10-12T06:07:13.002Z",
+      "lastChangedAt": "2026-10-12T06:07:13.002Z",
+      "lastHash": "29854d6caec69482bf4b759c36338b5fdcafed37aa9140916e191ed176d3c72b",
       "lastHttpStatus": 200,
       "consecutiveFailures": 0,
       "lastError": null,
