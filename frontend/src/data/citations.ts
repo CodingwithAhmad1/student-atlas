@@ -588,7 +588,7 @@ export const citations: Record<string, Citation> = {
   },
   "minjustice.cm/justitia-13-nationalite": {
     id: "minjustice.cm/justitia-13-nationalite",
-    url: "https://minjustice.cm/justitia/JUSTITIA-13.pdf",
+    url: "https://www.minjustice.cm/bibliotheque/277/pdf",
     label: "Ministère de la Justice du Cameroun — Justitia n°013 (septembre 2019), « La nationalité camerounaise au scanner » (in French)",
   },
   "service-public.gouv.tg/code-nationalite-1978": {

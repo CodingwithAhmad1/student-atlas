@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T06:07:13.002Z",
+  "generatedAt": "2026-10-12T06:17:25.848Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -1543,16 +1543,16 @@
     },
     "minjustice.cm/justitia-13-nationalite": {
       "sourceId": "minjustice.cm/justitia-13-nationalite",
-      "url": "https://minjustice.cm/justitia/JUSTITIA-13.pdf",
+      "url": "https://www.minjustice.cm/bibliotheque/277/pdf",
       "country": "INTL",
       "category": "citizenship",
       "label": "Ministère de la Justice du Cameroun — Justitia n°013 (septembre 2019), « La nationalité camerounaise au scanner » (in French)",
-      "lastCheckedAt": "2026-10-11T21:01:22.774Z",
+      "lastCheckedAt": "2026-10-12T06:17:25.848Z",
       "lastChangedAt": "2026-09-28T06:47:35.584Z",
       "lastHash": "15133e0128367847c3a518ee7db5784f856549a6f6d905dbabb6e80ae5cd126f",
-      "lastHttpStatus": 404,
-      "consecutiveFailures": 3,
-      "lastError": "HTTP 404 from https://minjustice.cm/justitia/JUSTITIA-13.pdf",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "service-public.gouv.tg/code-nationalite-1978": {
