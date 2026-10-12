@@ -13,10 +13,34 @@
   "newHash": "unreachable-2026-10-08",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "Pakistan's Higher Education Commission website is not available, so the guide no longer states its requirements for recognising foreign degrees.",
+    "edits": [
+      {
+        "file": "frontend/src/data/nationalities/pakistan.ts",
+        "oldText": "UK: { callouts: [\n          {\n            afterBlockId: \"uk-psw-transition\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]\",\n              },\n            ],\n          },\n        ] },",
+        "newText": "UK: { callouts: [] },"
+      },
+      {
+        "file": "frontend/src/data/nationalities/pakistan.ts",
+        "oldText": "{\n            afterBlockId: \"au-psw-application\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]\",\n              },\n            ],\n          },",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/nationalities/pakistan.ts",
+        "oldText": "{\n            afterBlockId: \"us-psw-cliff\",\n            blocks: [\n              {\n                type: \"paragraph\",\n                text: \"Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]\",\n              },\n            ],\n          },",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"hec.gov.pk/foreign-degree-equivalence\": {\n    id: \"hec.gov.pk/foreign-degree-equivalence\",\n    url: \"https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx\",\n    label: \"Higher Education Commission Pakistan — Recognition/Equivalence of Foreign Degrees\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-12T06:16:11.311Z",
   "error": "Network error fetching https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx: fetch failed"
 }

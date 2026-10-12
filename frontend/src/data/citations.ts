@@ -981,11 +981,6 @@ export const citations: Record<string, Citation> = {
     url: "https://pakistan.highcommission.gov.au/ISLM/Visas_and_Migration.html",
     label: "Australian High Commission Pakistan — Visas and Citizenship",
   },
-  "hec.gov.pk/foreign-degree-equivalence": {
-    id: "hec.gov.pk/foreign-degree-equivalence",
-    url: "https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx",
-    label: "Higher Education Commission Pakistan — Recognition/Equivalence of Foreign Degrees",
-  },
   "gov.uk/tb-clinics-bangladesh": {
     id: "gov.uk/tb-clinics-bangladesh",
     url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-bangladesh/tuberculosis-testing-in-bangladesh",
