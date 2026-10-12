@@ -13,10 +13,13 @@
   "newHash": "8d593827a97da3e179633cdc9bbbe9b92a3b50aa42eabf7d1f9cb0dfcdc67b35",
   "diff": "Index: consulado.gob.cl/salir-con-menor\n===================================================================\n--- consulado.gob.cl/salir-con-menor\tprevious\n+++ consulado.gob.cl/salir-con-menor\tcurrent\n@@ -2,6 +2,7 @@\n Emergencias consulares\n Alertas y recomendaciones para viajar\n Canales de Atención Consular\n+ATENCIÓN: Frente a la actual situación en Panamá, revisa nuestra información\n Seleccionaste como tu ubicación:\n Elige otro país para ver contenido específico según tu ubicación:\n Bienvenida al Consulado en línea de la República de Chile\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Chile's consular site added a travel-alert banner; the rules for minors leaving Chile are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:18:59.354Z",
   "error": null
 }
