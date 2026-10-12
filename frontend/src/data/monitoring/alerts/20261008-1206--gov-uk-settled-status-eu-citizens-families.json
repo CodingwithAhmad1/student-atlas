@@ -13,10 +13,13 @@
   "newHash": "2abee46846f90f59cfe5c76a49a5752563d7ed72cd097fbf1ec359fce11af0fb",
   "diff": "Index: gov.uk/settled-status-eu-citizens-families\n===================================================================\n--- gov.uk/settled-status-eu-citizens-families\tprevious\n+++ gov.uk/settled-status-eu-citizens-families\tcurrent\n@@ -3,16 +3,17 @@\n Overview\n If you’re from the EU, Switzerland, Norway, Iceland or Liechtenstein, you and your family might be able to apply to the EU Settlement Scheme to continue living in the UK. You might also be able to apply if you’re the family member of an eligible person of Northern Ireland.\n The deadline for most people to apply to the EU Settlement Scheme was 30 June 2021. This deadline does not apply if you already have pre-settled status and you’re applying for settled status.\n-If you’re joining a family member, your deadline will be based on when you first arrived in the UK after 31 December 2020, as long as:\n+If you’re joining a family member, your deadline will usually be based on when you last arrived in the UK after 31 December 2020, as long as:\n your family member was living in the UK by 31 December 2020\n you were their family member by 31 December 2020 (this does not apply to children born or adopted after this date)\n the family relationship still exists when you apply\n+If you’re reapplying after an unsuccessful application to the scheme, your deadline may be based on the last time you arrived in the UK before making the unsuccessful application.\n Check if you can still apply after 30 June 2021.\n You may be able to stay in the UK without applying - for example, if you’re an Irish citizen, or you already have indefinite leave to enter or remain.\n If your application is successful, you’ll get either settled or pre-settled status.\n If you already have pre-settled status\n You’ll usually be eligible for settled status once you’ve lived in the UK for 5 years in a row. It’s free to apply.\n-Your pre-settled status will be extended by 5 years just before it’s due to expire. You’ll be sent an email telling you when this happens.\n+Your pre-settled status will be extended by 5 years before it’s due to expire. You’ll be sent an email telling you when this happens.\n After your pre-settled status has been extended, it may be automatically converted to settled status. You can also apply for settled status as soon as you’re eligible.\n The Home Office may cancel the extension if they think you no longer meet the requirements.\n Find out about moving from pre-settled status to settled status.\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "GOV.UK clarified deadlines for family members joining someone under the EU Settlement Scheme; the main 30 June 2021 deadline we mention is unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:08:18.288Z",
   "error": null
 }
