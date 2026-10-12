@@ -13,10 +13,13 @@
   "newHash": "7803ffdac7c1ac6b17e3497117a01aae664d351b018b7a27aa506fb0a554c7f7",
   "diff": "Index: gov.uk/sponsor-migrants/sponsor-a-student\n===================================================================\n--- gov.uk/sponsor-migrants/sponsor-a-student\tprevious\n+++ gov.uk/sponsor-migrants/sponsor-a-student\tcurrent\n@@ -1,40 +1,15 @@\n Guidance\n Student sponsor guidance\n How to apply for a Student sponsor licence and how to sponsor a student.\n+Updates to this page\n From:\n UK Visas and Immigration\n Published:\n 1 October 2013\n-1 June 2026\n-—\n-See all updates\n-Documents\n-Applying for a Student sponsor licence (accessible)\n-HTML\n-Applying for a Student sponsor licence\n-PDF, 776 KB, 81 pages\n-Sponsorship duties (accessible)\n-HTML\n-Sponsorship duties\n-PDF, 1.13 MB, 112 pages\n-Student sponsor compliance (accessible)\n-HTML\n-Student sponsor compliance\n-PDF, 503 KB, 34 pages\n-Higher education regulatory reform (accessible)\n-HTML\n-Higher education regulatory reform\n-PDF, 280 KB, 14 pages\n-Details\n-This is the full policy guidance on sponsoring a student. Use this guide to find out how to:\n-apply for (or renew) a university or college sponsor licence\n-enrol international students who will be studying under the Student or Child Student routes\n-We are aware this publication may have accessibility issues, for example if you use assistive technology.\n-Contact us if you need this document in a different format.\n-We cannot answer any other questions through this form.\n-Read our accessible documents policy.\n-Updates to this page\n+9 October 2026\n Show all updates\n+9 October 2026\n+Updated Applying for a Student sponsor licence and Sponsorship duties in line with changes to the Immigration Rules.\n 1 June 2026\n 'Student sponsor compliance' has been updated. Changes are detailed in the 'changes since last publication' section.\n 7 April 2026\n@@ -129,5 +104,26 @@\n New version of guidance published for use on or after 6 April.\n 1 October 2013\n First published.\n+Documents\n+Applying for a Student sponsor licence\n+PDF, 1.22 MB, 89 pages\n+Sponsorship duties\n+PDF, 1.16 MB, 116 pages\n+Student sponsor compliance (accessible)\n+HTML\n+Student sponsor compliance\n+PDF, 503 KB, 34 pages\n+Higher education regulatory reform (accessible)\n+HTML\n+Higher education regulatory reform\n+PDF, 280 KB, 14 pages\n+Details\n+This is the full policy guidance on sponsoring a student. Use this guide to find out how to:\n+apply for (or renew) a university or college sponsor licence\n+enrol international students who will be studying under the Student or Child Student routes\n+We are aware this publication may have accessibility issues, for example if you use assistive technology.\n+Contact us if you need this document in a different format.\n+We cannot answer any other questions through this form.\n+Read our accessible documents policy.\n Sign up for emails or print this page\n Related content\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The Home Office published new versions of its student sponsor guidance; universities must still report students who stop attending, as the guide says.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:18:43.267Z",
   "error": null
 }
