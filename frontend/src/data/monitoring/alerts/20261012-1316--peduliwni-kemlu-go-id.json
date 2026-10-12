@@ -1,0 +1,22 @@
+{
+  "id": "20261012-1316--peduliwni-kemlu-go-id",
+  "kind": "change",
+  "sourceId": "peduliwni.kemlu.go.id",
+  "relatedSourceIds": [],
+  "sourceLabel": "Kementerian Luar Negeri — Portal Peduli WNI (in Indonesian)",
+  "sourceUrl": "https://peduliwni.kemlu.go.id/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-12T13:16:25.156Z",
+  "updatedAt": "2026-10-12T13:16:25.156Z",
+  "oldHash": "bbfd0a6365c68d3377bb9b055e1fd0d792273102478e543b75731f64e741a5b9",
+  "newHash": "6f4b3d516fbe45373e360c836f78b5c3484415b827347839cbb61031d8985de4",
+  "diff": "Index: peduliwni.kemlu.go.id\n===================================================================\n--- peduliwni.kemlu.go.id\tprevious\n+++ peduliwni.kemlu.go.id\tcurrent\n@@ -15,7 +15,7 @@\n Pelayanan dan Pelindungan WNI di Luar Negeri\n Kementerian Luar Negeri Republik Indonesia\n Buku Panduan\n-Video Tutorial Lapor Diri\n+Video Tutorial\n Masuk Aplikasi\n Pelayanan dan Pelindungan WNI di Luar Negeri\n Lupa Password?\n@@ -34,6 +34,11 @@\n Pelayanan dan Pelindungan WNI di Luar Negeri\n Kirim Ulang Email Aktivasi\n Pelayanan dan Pelindungan WNI di Luar Negeri\n+Video Tutorial Peduli WNI\n+Memuat video...\n+Direktorat Pelindungan WNI Kementerian Luar Negeri\n+Daftar Video\n+0 Video\n Anda saat ini tercatat sedang mengajukan perubahan status Tujuan Menetap - SSW(Specified Skilled Worker). Anda tidak bisa mengajukan pelayanan sementara sebelum Andamelakukan konfirmasi status visa kerja Anda.\n Silakan Diterima SSW - jika pengajuan SSW Anda telah diterima oleh Pemerintah Jepang danmendapat visa kerja yang baru.\n Pilih Ditolak SSW - jika pengajuan SSW Anda telah ditolak oleh Pemerintah Jepang\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
