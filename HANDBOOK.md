@@ -53,6 +53,7 @@ student-atlas/
 │   ├── src/               ← fetch, normalise, diff, alert; PDF text extraction
 │   └── snapshots/         ← reviewed text of every monitored page
 ├── mcp-content-server/    ← tool server for reviewing alerts and editing content (+ atlas_cli.py)
+├── feedback-triage/       ← daily routine that triages visitor feedback (policy, prompt, setup)
 └── archive/               ← retired Flask-era code, not used by anything
 ```
 
@@ -177,6 +178,17 @@ access. It emails Ahmad (Gmail connector) when a review is ready to merge
 routine itself is broken (§7 of the prompt). Setup brief: `monitoring/ROUTINE-SETUP.md`. Manage it at
 claude.ai/code/routines.
 
+**Visitor feedback** (no backend): the speech-bubble button above the compass
+(`components/feedback-fab.tsx`, `lib/feedback.ts`) posts to Web3Forms, which
+emails Ahmad (subject "Student Atlas feedback", with the page, nationality and
+destinations). A daily cloud routine (05:00 UTC) reads the new ones, decides
+under `feedback-triage/TRIAGE-POLICY.md` whether each needs action, and sends
+**one digest email** with a paste-ready Claude prompt per action item. It is
+read-only: it changes nothing in the repo, and Gmail labels ("Student
+Atlas/Feedback triaged") record what it has handled. Setup and settings:
+`feedback-triage/ROUTINE-SETUP.md`. While `WEB3FORMS_ACCESS_KEY` is empty the
+button is hidden.
+
 **Checks in every build** (`npm run build` runs `check:content`): every
 `[CITE]` and `[TERM]` exists, callout anchors exist, practical callouts have no
 numbers, all 100 rows have all 20 traits, no trait is past its review date.
@@ -217,6 +229,7 @@ Show the generated content for one nationality:
 | When | What | How |
 |---|---|---|
 | Every 12 h (automatic) | ~270 monitored pages | Review open alerts on the Activity tab |
+| Daily (automatic, only when there is feedback) | Visitor feedback | Digest email: paste each prompt into Claude Code, merge the PR it opens |
 | Weekly (Monday, automatic) | Open alerts | Review routine closes them and emails you its PR: check the decisions, merge |
 | Every 90 days | Visa Bulletin backlog column | travel.state.gov in a browser → `set_trait_column` |
 | Every 180 days | E-2 treaty list; Working Holiday 417/462 lists | Browser; stale-check alert reminds you |

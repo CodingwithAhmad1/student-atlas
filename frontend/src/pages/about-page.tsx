@@ -63,6 +63,19 @@ export function AboutPage() {
         </p>
       </div>
 
+      <div className="mt-10 rounded-lg border bg-muted/40 p-6">
+        <h2 className="text-lg font-semibold mb-2">Feedback</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Spotted something out of date, or have an idea? Use the speech-bubble
+          button at the bottom right of any page. Your message is emailed to the
+          site owner through the form service Web3Forms, together with the page
+          you were on and the nationality and destinations you selected. Nothing
+          else is collected, and no account is needed. Every suggestion is read;
+          changes to the guide still go through the same review as everything
+          else.
+        </p>
+      </div>
+
       <p className="mt-8 text-sm text-muted-foreground">
         Student Atlas is an independent resource and is not affiliated with any
         government immigration authority. Always verify details with official
