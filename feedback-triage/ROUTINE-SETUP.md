@@ -36,7 +36,7 @@ and Gmail labels record what has been handled.
 
 | Setting | Value |
 |---|---|
-| Name | `Student Atlas feedback triage` |
+| Name | `Student Atlas feedback triage` (`trig_01DULFRg9syyfUJFbrypfCCj`, created 2026-10-13) |
 | Schedule | Daily 05:00 UTC = 09:00 Asia/Dubai → cron `0 5 * * *` |
 | Model | `claude-opus-5-5` |
 | Repository | `https://github.com/CodingwithAhmad1/student-atlas` (read-only use) |
@@ -44,8 +44,13 @@ and Gmail labels record what has been handled.
 | Connectors | **Gmail** only. Creating through the API attaches every connector: trim `mcp_connections` to Gmail afterwards. |
 | Allowed tools | `Read`, `Glob`, `Grep`, `mcp__Gmail__list_labels`, `mcp__Gmail__create_label`, `mcp__Gmail__search_threads`, `mcp__Gmail__get_thread`, `mcp__Gmail__label_thread`, `mcp__Gmail__send_message` |
 
-Deliberately missing: `Bash`, `Write`, `Edit`, web fetch, GitHub tools, and
-every Gmail tool that replies, forwards, trashes, drafts or marks. The worst
+`allowed_tools` only pre-approves tools; it does **not** block the others (the
+first run on 2026-10-13 used Bash). The routine therefore also sets
+`disallowed_tools`: `Bash`, `Write`, `Edit`, `NotebookEdit`, `WebFetch`,
+`WebSearch`, `Agent`, and every other Gmail tool (reply, forward, drafts,
+`get_message`, trash/untrash, spam/unspam, label/unlabel message,
+`unlabel_thread`, `update_message_labels`, `update_label`, `delete_label`,
+sensitive labels). Keep that list when you change the routine. The worst
 a malicious message can do is change what the digest says.
 
 **Residual risk:** the Gmail connector can read the whole mailbox and send to

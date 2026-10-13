@@ -36,13 +36,22 @@ note its ID. If it does not exist, `create_label` with that display name
 
 ## 2. Find new feedback
 
-`search_threads` with `pageSize` 50 and exactly this query, with the ID from §1:
+`search_threads` with `pageSize` 50 and exactly this query:
 
 ```
-subject:"Student Atlas feedback" -from:me -label:<triaged label ID> newer_than:90d
+from:web3forms.com subject:"Student Atlas feedback" -label:student-atlas-feedback-triaged newer_than:90d
 ```
 
-- No threads: write "No new feedback." as the final message and **stop. No
+Gmail search takes the label by **name** (lowercase, `/` and spaces become
+`-`), not by the label ID: `-label:Label_2` does not exclude anything.
+`from:web3forms.com` keeps out other mail whose subject happens to contain
+the words (GitHub notifications did, on 2026-10-13).
+
+Then drop any returned thread that already carries the triaged label ID from
+§1 (a safety net if the query ever stops excluding it). Do not report
+dropped threads.
+
+- No threads left: write "No new feedback." as the final message and **stop. No
   email.**
 - More than 25 threads: handle the 25 oldest this run and say in the digest
   how many are left for tomorrow.
