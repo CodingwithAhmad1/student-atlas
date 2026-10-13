@@ -94,8 +94,7 @@ export function FeedbackFab() {
               <h2 className="text-base font-semibold">Thank you!</h2>
             </div>
             <p className="text-sm text-muted-foreground">
-              Your suggestion has been sent. Every message is read, though we can't
-              reply to it.
+              Your suggestion has been sent.
             </p>
             <Button variant="outline" size="sm" onClick={() => setStatus("idle")}>
               Send another
