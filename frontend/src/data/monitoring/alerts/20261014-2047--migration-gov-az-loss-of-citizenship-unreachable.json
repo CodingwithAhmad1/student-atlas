@@ -1,0 +1,22 @@
+{
+  "id": "20261014-2047--migration-gov-az-loss-of-citizenship-unreachable",
+  "kind": "unreachable",
+  "sourceId": "migration.gov.az/loss-of-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "State Migration Service of Azerbaijan (migration.gov.az) — Azərbaycan Respublikası vətəndaşlığının itirilməsi halları (in Azerbaijani)",
+  "sourceUrl": "https://migration.gov.az/az/useful/44",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-14T20:47:16.063Z",
+  "updatedAt": "2026-10-14T20:47:16.063Z",
+  "oldHash": "830cf3db05b94e29d75fbac833649d8bf47ae62eb6dddb84100b52025b856ac3",
+  "newHash": "unreachable-2026-10-14",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://migration.gov.az/az/useful/44: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://migration.gov.az/az/useful/44: fetch failed"
+}
