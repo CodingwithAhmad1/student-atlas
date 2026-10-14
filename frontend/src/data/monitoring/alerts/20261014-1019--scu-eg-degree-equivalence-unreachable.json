@@ -1,0 +1,22 @@
+{
+  "id": "20261014-1019--scu-eg-degree-equivalence-unreachable",
+  "kind": "unreachable",
+  "sourceId": "scu.eg/degree-equivalence",
+  "relatedSourceIds": [],
+  "sourceLabel": "Supreme Council of Universities — General Administration for Degree Equivalence (in Arabic)",
+  "sourceUrl": "https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-14T10:19:28.838Z",
+  "updatedAt": "2026-10-14T10:19:28.838Z",
+  "oldHash": "481fbba9f74726157b2686d3e4217b930544aad0d149daed8c363f2e2cfdc649",
+  "newHash": "unreachable-2026-10-14",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/: fetch failed"
+}
