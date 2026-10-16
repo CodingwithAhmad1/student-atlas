@@ -1,0 +1,22 @@
+{
+  "id": "20261016-0956--cscuk-fcdo-gov-uk-commonwealth-phd-scholarships",
+  "kind": "change",
+  "sourceId": "cscuk.fcdo.gov.uk/commonwealth-phd-scholarships",
+  "relatedSourceIds": [],
+  "sourceLabel": "Commonwealth Scholarship Commission in the UK — Commonwealth PhD Scholarships",
+  "sourceUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-phd-scholarships-for-least-developed-countries-and-vulnerable-states/",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-10-16T09:56:03.989Z",
+  "updatedAt": "2026-10-16T09:56:03.989Z",
+  "oldHash": "ecbf2bd25940a11264d697b84e214375db56a21a73290f937cd4a430a544a654",
+  "newHash": "10511b3ac347089cf8946537195c91c4c3261b1ee7591de9ecde23efcce30585",
+  "diff": "Index: cscuk.fcdo.gov.uk/commonwealth-phd-scholarships\n===================================================================\n--- cscuk.fcdo.gov.uk/commonwealth-phd-scholarships\tprevious\n+++ cscuk.fcdo.gov.uk/commonwealth-phd-scholarships\tcurrent\n@@ -35,6 +35,7 @@\n The save function should be used to avoid loss of data.\n Refreshing the browser window will cause candidates to exit the form and will result in any unsaved data being lost.\n Applications may not be edited after submitting.\n+For security reasons, the passport is not visible when viewing a submitted application.\n Candidates are advised to complete and submit applications as early as possible as we anticipate that the online application system will be very busy in the days leading up to the application deadline and we are not able to accept late applications if you run out of time to submit.\n Users should use system back buttons rather than those on the browser. Please note that clicking on the CSC logo will return users to the log in screen where they will need to pass 2FA again to enter again.\n As well as applying to the CSC, applicants must apply to a nominator.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
