@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react"
 import { BrowserRouter, Link, Navigate, Outlet, Route, Routes, useLocation, useParams } from "react-router-dom"
-import { AppSidebar } from "@/components/app-sidebar"
+import { AppSidebar, MobileMenuButton } from "@/components/app-sidebar"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar"
+import { CompassPinIcon } from "@/components/compass-pin-icon"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { FeedbackFab } from "@/components/feedback-fab"
 import { WelcomeFab } from "@/components/welcome-fab"
@@ -43,6 +44,16 @@ const PAGE_LABELS: Record<string, string> = {
   [TECHNICAL_EXPLAINER_ROUTE.path]: TECHNICAL_EXPLAINER_ROUTE.label,
 }
 
+/** Shown in the mobile header on pages without a breadcrumb. */
+function MobileBrand() {
+  return (
+    <Link to="/" className="flex items-center gap-1.5 md:hidden">
+      <CompassPinIcon className="size-6" />
+      <span className="text-sm font-semibold">Student Atlas</span>
+    </Link>
+  )
+}
+
 function AppBreadcrumb() {
   const { pathname } = useLocation()
   const [sectionSlug, subSlug] = pathname.split("/").filter(Boolean)
@@ -65,7 +76,7 @@ function AppBreadcrumb() {
     )
   }
   const label = PAGE_LABELS[pathname]
-  if (!label) return null
+  if (!label) return <MobileBrand />
   return (
     <Breadcrumb>
       <BreadcrumbList>
@@ -82,9 +93,11 @@ function AppLayout() {
     <TooltipProvider>
       <SidebarProvider>
         <AppSidebar />
-        <SidebarInset>
-          <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-            <div className="flex items-center gap-2 px-4">
+        <SidebarInset className="min-w-0 pb-28 md:pb-0">
+          {/* On phones the sidebar is a drawer, so the header carries its trigger and stays pinned. */}
+          <header className="sticky top-0 z-20 flex h-14 shrink-0 items-center gap-2 border-b bg-background/95 backdrop-blur transition-[width,height] ease-linear md:static md:h-16 md:border-0 md:bg-transparent md:backdrop-blur-none md:group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+            <div className="flex min-w-0 items-center gap-2 px-4">
+              <MobileMenuButton />
               <AppBreadcrumb />
             </div>
           </header>

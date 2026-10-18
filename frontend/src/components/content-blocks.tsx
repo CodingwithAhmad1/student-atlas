@@ -56,11 +56,11 @@ function KeyValueListBlock({ block }: BlockProps) {
   return (
     <dl className="space-y-1 text-sm">
       {block.items.map((item, i) => (
-        <div key={i} className="flex gap-2">
-          <dt className="font-medium text-foreground whitespace-nowrap">
-            {item.label}:
+        <div key={i} className="flex flex-col sm:flex-row sm:gap-2">
+          <dt className="font-medium text-foreground sm:max-w-1/2 sm:shrink-0">
+            <ParsedText text={item.label} />:
           </dt>
-          <dd className="text-foreground">
+          <dd className="min-w-0 text-foreground">
             <ParsedText text={item.value} />
           </dd>
         </div>

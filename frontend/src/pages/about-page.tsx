@@ -4,7 +4,7 @@ import { TECHNICAL_EXPLAINER_ROUTE } from "@/lib/routes";
 
 export function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl py-12 px-6">
+    <div className="mx-auto max-w-3xl py-12 px-6 w-full">
       <div className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight mb-3">Our Mission</h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
