@@ -86,12 +86,12 @@ export function DestinationsPreferenceControl({
 
   const rowClass =
     layout === "bar"
-      ? "flex items-center gap-2 min-w-0"
+      ? "flex items-start gap-2 min-w-0 sm:items-center"
       : "flex flex-wrap items-start gap-2";
 
   const valueWrapClass =
     layout === "bar"
-      ? "flex items-center gap-1.5 min-w-0"
+      ? "flex flex-wrap items-center gap-1.5 min-w-0"
       : "flex flex-1 min-w-0 flex-wrap items-center gap-1.5";
 
   return (

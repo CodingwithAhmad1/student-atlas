@@ -25,6 +25,7 @@ import {
   CodeIcon,
   ActivityIcon,
   CircleIcon,
+  MenuIcon,
 } from "lucide-react"
 import { CompassPinIcon } from "@/components/compass-pin-icon"
 import {
@@ -85,12 +86,34 @@ function SidebarToggle() {
   )
 }
 
+/** Opens the sidebar drawer on phones; the desktop sidebar has its own toggle. */
+export function MobileMenuButton() {
+  const { setOpenMobile } = useSidebar()
+
+  return (
+    <button
+      type="button"
+      onClick={() => setOpenMobile(true)}
+      className="-ml-2 flex size-10 shrink-0 cursor-pointer items-center justify-center rounded-md hover:bg-accent md:hidden"
+      aria-label="Open menu"
+    >
+      <MenuIcon className="size-5" />
+    </button>
+  )
+}
+
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const location = useLocation()
+  const { isMobile, setOpenMobile } = useSidebar()
+
+  // In the phone drawer, following a link should reveal the page it opens.
+  const closeDrawerOnLink = (event: React.MouseEvent) => {
+    if (isMobile && (event.target as Element).closest("a")) setOpenMobile(false)
+  }
 
   return (
     <Sidebar collapsible="icon" {...props}>
-      <SidebarHeader className="py-1.5 pb-0.5">
+      <SidebarHeader className="py-1.5 pb-0.5" onClick={closeDrawerOnLink}>
         <SidebarMenu>
           <SidebarMenuItem>
             <div className="flex items-center gap-1.5 px-2 py-0.5">
@@ -107,7 +130,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent onClick={closeDrawerOnLink}>
         <NavMain items={navMain} currentPath={location.pathname} />
         <SidebarSeparator />
         <NavMain items={[technicalNav]} currentPath={location.pathname} groupLabel={null} />

@@ -246,8 +246,9 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
         className={cn(
           "grid gap-8",
           destinations.length === 1 && "grid-cols-1",
-          destinations.length === 2 && "grid-cols-1 md:grid-cols-2",
-          destinations.length === 3 && "grid-cols-1 md:grid-cols-3"
+          // Side-by-side only once each column has room next to the sidebar.
+          destinations.length === 2 && "grid-cols-1 lg:grid-cols-2",
+          destinations.length === 3 && "grid-cols-1 xl:grid-cols-3"
         )}
       >
         {resolved.columns.map(({ country, callouts, body }, index) => {
@@ -256,9 +257,10 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
             <div
               key={country}
               className={cn(
-                "space-y-4",
-                index > 0 && destinations.length > 1 && "md:border-l md:border-border md:pl-8",
-                index === destinations.length - 1 && destinations.length === 2 && "md:border-r md:border-border md:pr-8"
+                "min-w-0 space-y-4",
+                index > 0 && destinations.length === 2 && "lg:border-l lg:border-border lg:pl-8",
+                index > 0 && destinations.length === 3 && "xl:border-l xl:border-border xl:pl-8",
+                index === destinations.length - 1 && destinations.length === 2 && "lg:border-r lg:border-border lg:pr-8"
               )}
             >
               <div className="rounded-lg border border-border bg-muted/50 px-4 py-3">
