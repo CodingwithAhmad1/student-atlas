@@ -1,0 +1,22 @@
+{
+  "id": "20261016-2000--gov-uk-tb-clinics-india",
+  "kind": "change",
+  "sourceId": "gov.uk/tb-clinics-india",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Tuberculosis testing in India",
+  "sourceUrl": "https://www.gov.uk/government/publications/india-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-india",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-10-16T20:00:52.170Z",
+  "updatedAt": "2026-10-16T20:00:52.170Z",
+  "oldHash": "ac2587f65e78f7d586adcf10f420931400594f88fea2405da1041c18ada570a6",
+  "newHash": "417ffe4499262d6a5fc2bb5dd73d0691e8fcdcfd15fcecd387fa3c63e275c94b",
+  "diff": "Index: gov.uk/tb-clinics-india\n===================================================================\n--- gov.uk/tb-clinics-india\tprevious\n+++ gov.uk/tb-clinics-india\tcurrent\n@@ -536,11 +536,13 @@\n The fee for TB screening is Indian Rupee 2,500 for each person.\n Nagpur\n Sanjiwani Chikitsa Kendra\n-Sanjiwani Chikitsa Kendra\n-c/o Jayant Poogalia\n-Dr Munje Marg,\n-Near Dinanath high school,\n-Dhantoli, Nagpur 440012\n+Anchee Bhawan\n+241/1, Bajaj Nagar Road\n+Next to HDFC Bank\n+Bajaj Nagar\n+Nagpur\n+Maharashtra – 440010,\n+India\n Telephone:\n +91 87902 09105\n Email: kamalpoogalia@yahoo.com\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

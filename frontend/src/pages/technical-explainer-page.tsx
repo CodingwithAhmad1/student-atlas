@@ -44,7 +44,7 @@ function ArchitectureLayer({
 
 export function TechnicalExplainerPage() {
   return (
-    <div className="mx-auto max-w-3xl py-12 px-6 space-y-10">
+    <div className="mx-auto max-w-3xl py-12 px-6 space-y-10 w-full">
       {/* Introduction */}
       <header>
         <h1 className="text-3xl font-bold tracking-tight mb-3">

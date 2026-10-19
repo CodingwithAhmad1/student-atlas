@@ -4,7 +4,7 @@ import { TECHNICAL_EXPLAINER_ROUTE } from "@/lib/routes";
 
 export function AboutPage() {
   return (
-    <div className="mx-auto max-w-3xl py-12 px-6">
+    <div className="mx-auto max-w-3xl py-12 px-6 w-full">
       <div className="mb-10">
         <h1 className="text-3xl font-bold tracking-tight mb-3">Our Mission</h1>
         <p className="text-lg text-muted-foreground leading-relaxed">
@@ -60,6 +60,19 @@ export function AboutPage() {
           </Link>{" "}
           for an overview of the system architecture, data model, and content
           pipeline.
+        </p>
+      </div>
+
+      <div className="mt-10 rounded-lg border bg-muted/40 p-6">
+        <h2 className="text-lg font-semibold mb-2">Feedback</h2>
+        <p className="text-muted-foreground leading-relaxed">
+          Spotted something out of date, or have an idea? Use the speech-bubble
+          button at the bottom right of any page. Your message is emailed to the
+          site owner through the form service Web3Forms, together with the page
+          you were on and the nationality and destinations you selected. Nothing
+          else is collected, and no account is needed. Every suggestion is read;
+          changes to the guide still go through the same review as everything
+          else.
         </p>
       </div>
 

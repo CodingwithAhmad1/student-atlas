@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState, useSyncExternalStore, type KeyboardEvent } from "react";
 import { ChevronDownIcon } from "lucide-react";
 import { ComparisonTable } from "@/components/comparison-table";
 import { ContentBlockRenderer } from "@/components/content-blocks";
@@ -10,11 +10,12 @@ import { usePreferences } from "@/context/preferences";
 import { citations } from "@/data/citations";
 import { mergeBlocks, mergeCrossCutting, splitCallouts } from "@/data/merge-content";
 import { sectionRegistry } from "@/data/sections";
-import { COUNTRY_LABELS, type ContentBlock } from "@/data/types";
+import { COUNTRY_LABELS, type ContentBlock, type Country } from "@/data/types";
 import { visaFacts } from "@/data/visa-facts";
 import { isCountryCompareRoute } from "@/lib/compare-routes";
 import { collectCitations } from "@/lib/inline-markup";
 import { DASHBOARD_ROUTE } from "@/lib/routes";
+import { readStorage, writeStorage } from "@/lib/storage";
 import { cn } from "@/lib/utils";
 
 /** Compact meta controls under the title */
@@ -74,6 +75,107 @@ function CitationFootnotes({ ids }: { ids: string[] }) {
   );
 }
 
+/** Phones (below md) show one destination column at a time. */
+const PHONE_QUERY = "(max-width: 767px)";
+const COUNTRY_TAB_KEY = "sa:country-tab";
+
+function subscribePhone(onChange: () => void) {
+  const mql = window.matchMedia(PHONE_QUERY);
+  mql.addEventListener("change", onChange);
+  return () => mql.removeEventListener("change", onChange);
+}
+
+function useIsPhone() {
+  return useSyncExternalStore(
+    subscribePhone,
+    () => window.matchMedia(PHONE_QUERY).matches,
+    () => false
+  );
+}
+
+/** Short enough for three tabs side by side at 320px; each panel's heading has the full name. */
+const TAB_LABELS: Record<Country, string> = { US: "US", UK: "UK", AU: "Australia" };
+
+const tabId = (country: Country) => `country-tab-${country}`;
+const panelId = (country: Country) => `country-panel-${country}`;
+
+function CountryTabs({
+  countries,
+  active,
+  onSelect,
+}: {
+  countries: Country[];
+  active: Country;
+  onSelect: (country: Country) => void;
+}) {
+  const barRef = useRef<HTMLDivElement>(null);
+
+  const select = (country: Country) => {
+    onSelect(country);
+    // If the reader had scrolled into a column, start the new one at its top.
+    requestAnimationFrame(() => {
+      const panel = document.getElementById(panelId(country));
+      const bar = barRef.current;
+      if (!panel || !bar) return;
+      const offset = panel.getBoundingClientRect().top - bar.getBoundingClientRect().bottom;
+      if (offset < 0) window.scrollBy({ top: offset - 8 });
+    });
+  };
+
+  const onKeyDown = (e: KeyboardEvent<HTMLButtonElement>) => {
+    const index = countries.indexOf(active);
+    let next: number;
+    if (e.key === "ArrowRight") next = index + 1;
+    else if (e.key === "ArrowLeft") next = index - 1;
+    else if (e.key === "Home") next = 0;
+    else if (e.key === "End") next = countries.length - 1;
+    else return;
+    e.preventDefault();
+    const country = countries[(next + countries.length) % countries.length];
+    select(country);
+    document.getElementById(tabId(country))?.focus();
+  };
+
+  return (
+    // Sticks under the phone header (h-14); hidden from md up, where every column shows.
+    <div
+      ref={barRef}
+      className="sticky top-14 z-10 -mx-4 bg-background/95 px-4 py-2 backdrop-blur md:hidden"
+    >
+      <div
+        role="tablist"
+        aria-label="Destination country"
+        className="flex rounded-lg border border-border bg-muted/50 p-1"
+      >
+        {countries.map((country) => {
+          const selected = country === active;
+          return (
+            <button
+              key={country}
+              type="button"
+              role="tab"
+              id={tabId(country)}
+              aria-selected={selected}
+              aria-controls={panelId(country)}
+              tabIndex={selected ? 0 : -1}
+              onClick={() => select(country)}
+              onKeyDown={onKeyDown}
+              className={cn(
+                "min-h-10 min-w-0 flex-1 truncate rounded-md px-2 text-sm font-medium transition-colors",
+                selected
+                  ? "bg-background text-foreground shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              )}
+            >
+              {TAB_LABELS[country]}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function NotFound({ what }: { what: string }) {
   return (
     <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
@@ -97,6 +199,10 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
   const pageKey = `${sectionSlug}/${subSectionSlug}`;
   const [compareOpenOn, setCompareOpenOn] = useState<string | null>(null);
   const compareExpanded = compareOpenOn === pageKey;
+
+  // Phone-only country switcher; the choice is remembered for the session.
+  const isPhone = useIsPhone();
+  const [storedTab, setStoredTab] = useState(() => readStorage(COUNTRY_TAB_KEY, "session"));
 
   const subSection = sectionRegistry
     .get(sectionSlug)
@@ -196,6 +302,14 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
     Object.keys(applicableFacts ?? {}).length > 0;
   const isSingle = destinations.length === 1;
 
+  const tabCountries = resolved.columns.map((c) => c.country);
+  const showTabs = tabCountries.length >= 2;
+  const activeTab = tabCountries.find((c) => c === storedTab) ?? tabCountries[0];
+  const selectTab = (country: Country) => {
+    setStoredTab(country);
+    writeStorage(COUNTRY_TAB_KEY, country, "session");
+  };
+
   return (
     <div className={cn("flex flex-1 flex-col gap-4 p-4 pt-0", isSingle && "max-w-4xl mx-auto w-full")}>
       <h1 className="text-2xl font-semibold tracking-tight">{subSection.title}</h1>
@@ -242,12 +356,17 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
         </div>
       )}
 
+      {showTabs && (
+        <CountryTabs countries={tabCountries} active={activeTab} onSelect={selectTab} />
+      )}
+
       <div
         className={cn(
           "grid gap-8",
           destinations.length === 1 && "grid-cols-1",
-          destinations.length === 2 && "grid-cols-1 md:grid-cols-2",
-          destinations.length === 3 && "grid-cols-1 md:grid-cols-3"
+          // Side-by-side only once each column has room next to the sidebar.
+          destinations.length === 2 && "grid-cols-1 lg:grid-cols-2",
+          destinations.length === 3 && "grid-cols-1 xl:grid-cols-3"
         )}
       >
         {resolved.columns.map(({ country, callouts, body }, index) => {
@@ -255,10 +374,17 @@ export function ContentPage({ sectionSlug, subSectionSlug }: ContentPageProps) {
           return (
             <div
               key={country}
+              id={panelId(country)}
+              {...(showTabs && isPhone && {
+                role: "tabpanel",
+                "aria-labelledby": tabId(country),
+              })}
               className={cn(
-                "space-y-4",
-                index > 0 && destinations.length > 1 && "md:border-l md:border-border md:pl-8",
-                index === destinations.length - 1 && destinations.length === 2 && "md:border-r md:border-border md:pr-8"
+                "min-w-0 space-y-4",
+                showTabs && country !== activeTab && "max-md:hidden",
+                index > 0 && destinations.length === 2 && "lg:border-l lg:border-border lg:pl-8",
+                index > 0 && destinations.length === 3 && "xl:border-l xl:border-border xl:pl-8",
+                index === destinations.length - 1 && destinations.length === 2 && "lg:border-r lg:border-border lg:pr-8"
               )}
             >
               <div className="rounded-lg border border-border bg-muted/50 px-4 py-3">

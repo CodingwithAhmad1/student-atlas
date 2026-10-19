@@ -49,7 +49,7 @@ export function WelcomeFab() {
         side="top"
         align="end"
         sideOffset={12}
-        className="flex h-[572px] w-[576px] flex-col rounded-xl border bg-background p-0 shadow-xl"
+        className="flex h-[min(572px,calc(100dvh-7rem))] w-[min(576px,calc(100vw-2rem))] flex-col rounded-xl border bg-background p-0 shadow-xl"
       >
         <header className="flex items-center justify-between border-b px-4 py-3">
           <div className="flex items-center gap-2">

@@ -15,7 +15,7 @@ function SetupFlow() {
     preferences.nationality !== null && preferences.destinations.length > 0;
 
   return (
-    <div className="mx-auto max-w-lg py-16 px-4">
+    <div className="mx-auto max-w-lg py-16 px-4 w-full">
       <div className="text-center mb-10">
         <h1 className="text-3xl font-bold tracking-tight mb-2">Student Atlas</h1>
         <p className="text-muted-foreground">
@@ -67,7 +67,7 @@ function ConfiguredHome() {
     .replace(/, ([^,]*)$/, ", and $1");
 
   return (
-    <div className="mx-auto max-w-4xl py-8 px-4">
+    <div className="mx-auto max-w-4xl py-8 px-4 w-full">
       <PreferenceBar />
 
       <div className="mt-8 space-y-2">

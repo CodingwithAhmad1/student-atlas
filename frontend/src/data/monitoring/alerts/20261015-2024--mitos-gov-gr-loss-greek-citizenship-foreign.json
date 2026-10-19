@@ -1,0 +1,22 @@
+{
+  "id": "20261015-2024--mitos-gov-gr-loss-greek-citizenship-foreign",
+  "kind": "change",
+  "sourceId": "mitos.gov.gr/loss-greek-citizenship-foreign",
+  "relatedSourceIds": [],
+  "sourceLabel": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (mitos.gov.gr) — Απώλεια Ελληνικής Ιθαγένειας λόγω Κτήσης Αλλοδαπής Ιθαγένειας (in Greek)",
+  "sourceUrl": "https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%91%CF%80%CF%8E%CE%BB%CE%B5%CE%B9%CE%B1_%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%99%CE%B8%CE%B1%CE%B3%CE%AD%CE%BD%CE%B5%CE%B9%CE%B1%CF%82_%CE%BB%CF%8C%CE%B3%CF%89_%CE%9A%CF%84%CE%AE%CF%83%CE%B7%CF%82_%CE%91%CE%BB%CE%BB%CE%BF%CE%B4%CE%B1%CF%80%CE%AE%CF%82_%CE%99%CE%B8%CE%B1%CE%B3%CE%AD%CE%BD%CE%B5%CE%B9%CE%B1%CF%82",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-15T20:24:34.259Z",
+  "updatedAt": "2026-10-18T19:30:43.874Z",
+  "oldHash": "7435fa86c6427731f33e6a020a93413a95ba2fb56d839c4986407466086372af",
+  "newHash": "12e3b1caa56b470edf3421fb6fb12381815903f04c9b1493c5e6b89246684009",
+  "diff": "Index: mitos.gov.gr/loss-greek-citizenship-foreign\n===================================================================\n--- mitos.gov.gr/loss-greek-citizenship-foreign\tprevious\n+++ mitos.gov.gr/loss-greek-citizenship-foreign\tcurrent\n@@ -104,23 +104,27 @@\n 0\n 0\n 2\n+6 μήνες\n+P2M18DT17H\n+P11M5DT10H\n+PT0S\n+PT0S\n+30\n+30\n 0\n+1\n+1\n+0\n+0\n+4\n 46278\n Όχι\n-22644000\n-5014800\n+Η διαδικασία αφορά στην απώλεια της ελληνικής ιθαγένειας μετά από άδεια του Υπουργού Εσωτερικών και απευθύνεται σε Έλληνες υπηκόους, μονίμους κατοίκους εξωτερικού, που πληρούν τις κατάλληλες προϋποθέσεις.\n Αόριστη\n Ταυτοποιητικό έγγραφο\n 192568\n 3777\n Δικαιολογητικό\n-Η διαδικασία αφορά στην απώλεια της ελληνικής ιθαγένειας μετά από άδεια του Υπουργού Εσωτερικών και απευθύνεται σε Έλληνες υπηκόους, μονίμους κατοίκους εξωτερικού, που πληρούν τις κατάλληλες προϋποθέσεις.\n-30.00\n-30.00\n-4\n-0\n-1\n-6 μήνες\n ,\n 1\n Μόνιμης κατοικίας/Διαμονής/Εγκατάστασης\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

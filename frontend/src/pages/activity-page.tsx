@@ -70,7 +70,7 @@ function ChangesView({ alerts }: { alerts: ActivityAlert[] }) {
         <div className="space-y-6">
           {byDay.map(([day, dayAlerts]) => (
             <div key={day} className="space-y-3">
-              <h2 className="sticky top-0 z-10 -mx-2 bg-background/95 px-2 py-1 text-sm font-semibold backdrop-blur">
+              <h2 className="sticky top-14 z-10 -mx-2 md:top-0 bg-background/95 px-2 py-1 text-sm font-semibold backdrop-blur">
                 {formatDayKey(day)}
               </h2>
               <div className="space-y-3 border-l-2 border-border/60 pl-4">
@@ -92,7 +92,7 @@ export function ActivityPage() {
   const view: View = params.get("view") === "sources" ? "sources" : "changes";
 
   return (
-    <div className="mx-auto max-w-4xl space-y-8 px-6 py-12">
+    <div className="mx-auto max-w-4xl space-y-8 px-6 py-12 w-full">
       <header className="space-y-3">
         <h1 className="text-3xl font-bold tracking-tight">Activity</h1>
         <p className="text-lg leading-relaxed text-muted-foreground">

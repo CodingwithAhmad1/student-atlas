@@ -82,7 +82,7 @@ export function ReportPage() {
   }
 
   return (
-    <div className="mx-auto max-w-2xl py-8 px-4">
+    <div className="mx-auto max-w-2xl py-8 px-4 w-full">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold tracking-tight">Generate Report</h1>

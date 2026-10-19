@@ -1,0 +1,22 @@
+{
+  "id": "20261016-0956--cscuk-fcdo-gov-uk-commonwealth-masters-scholarships",
+  "kind": "change",
+  "sourceId": "cscuk.fcdo.gov.uk/commonwealth-masters-scholarships",
+  "relatedSourceIds": [],
+  "sourceLabel": "Commonwealth Scholarship Commission in the UK — Commonwealth Master's Scholarships",
+  "sourceUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-masters-scholarships/",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-10-16T09:56:03.989Z",
+  "updatedAt": "2026-10-16T09:56:03.989Z",
+  "oldHash": "56292397cc86c0df7057890bac6a05c3420375772a9305a3cb0fe8a7ed17fd7c",
+  "newHash": "553e91e7acc1a7d26d39449762fc91984f293ce53097d5975b8bb65c308b3ef1",
+  "diff": "Index: cscuk.fcdo.gov.uk/commonwealth-masters-scholarships\n===================================================================\n--- cscuk.fcdo.gov.uk/commonwealth-masters-scholarships\tprevious\n+++ cscuk.fcdo.gov.uk/commonwealth-masters-scholarships\tcurrent\n@@ -35,6 +35,7 @@\n The save function should be used to avoid loss of data.\n Refreshing the browser window will cause candidates to exit the form and will result in any unsaved data being lost.\n Applications may not be edited after submitting.\n+For security reasons, the passport is not visible when viewing a submitted application.\n Candidates are advised to complete and submit applications as early as possible as we anticipate that the online application system will be very busy in the days leading up to the application deadline and we are not able to accept late applications if you run out of time to submit.\n Users should use system back buttons rather than those on the browser. Please note that clicking on the CSC logo will return users to the log in screen where they will need to pass 2FA again to enter again.\n As well as applying to the CSC, applicants must apply to a nominator.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

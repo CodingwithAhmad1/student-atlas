@@ -102,53 +102,68 @@ export function ComparisonTable({ countries, facts }: ComparisonTableProps) {
     }
   }
 
-  return (
-    <div className="overflow-x-auto -mx-4 px-4">
-      <table className="w-full text-sm border-collapse min-w-[500px]">
-        <thead>
-          <tr>
-            <th className="sticky left-0 bg-background text-left py-2 pr-4 font-semibold text-muted-foreground text-xs uppercase tracking-wide">
-              Attribute
-            </th>
-            {countries.map((c) => (
-              <th
-                key={c}
-                className="text-left py-2 px-3 font-semibold text-xs uppercase tracking-wide"
-              >
-                {COUNTRY_LABELS[c]}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {ROWS.map((row, idx) => (
-            <tr
-              key={row.key}
-              className={cn(idx % 2 === 0 && "bg-muted/30")}
-            >
-              <td className="sticky left-0 bg-inherit py-2.5 pr-4 font-medium text-foreground whitespace-nowrap">
-                {row.label}
-              </td>
-              {countries.map((c) => {
-                const f = facts[c];
-                const rawValue = f ? f[row.key] : "—";
-                const isBest =
-                  row.isCost && bestCostMap.get(row.key) === c;
+  const cell = (row: RowDef, c: Country) => (
+    <CellValue
+      value={facts[c]?.[row.key] ?? "—"}
+      isBoolean={row.isBoolean}
+      isBest={row.isCost && bestCostMap.get(row.key) === c}
+    />
+  );
 
-                return (
-                  <td key={c} className="py-2.5 px-3 text-foreground">
-                    <CellValue
-                      value={rawValue ?? "—"}
-                      isBoolean={row.isBoolean}
-                      isBest={isBest}
-                    />
-                  </td>
-                );
-              })}
+  return (
+    <>
+      {/* Phones: one block per attribute, countries listed beneath it. */}
+      <dl className="divide-y rounded-lg border md:hidden">
+        {ROWS.map((row) => (
+          <div key={row.key} className="space-y-1.5 px-3 py-2.5">
+            <dt className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              {row.label}
+            </dt>
+            {countries.map((c) => (
+              <dd key={c} className="flex gap-3 text-sm">
+                <span className="w-28 shrink-0 text-muted-foreground">{COUNTRY_LABELS[c]}</span>
+                <span className="min-w-0">{cell(row, c)}</span>
+              </dd>
+            ))}
+          </div>
+        ))}
+      </dl>
+      <div className="hidden overflow-x-auto -mx-4 px-4 md:block">
+        <table className="w-full text-sm border-collapse min-w-[500px]">
+          <thead>
+            <tr>
+              <th className="sticky left-0 bg-background text-left py-2 pr-4 font-semibold text-muted-foreground text-xs uppercase tracking-wide">
+                Attribute
+              </th>
+              {countries.map((c) => (
+                <th
+                  key={c}
+                  className="text-left py-2 px-3 font-semibold text-xs uppercase tracking-wide"
+                >
+                  {COUNTRY_LABELS[c]}
+                </th>
+              ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+          </thead>
+          <tbody>
+            {ROWS.map((row, idx) => (
+              <tr
+                key={row.key}
+                className={cn(idx % 2 === 0 && "bg-muted/30")}
+              >
+                <td className="sticky left-0 bg-inherit py-2.5 pr-4 font-medium text-foreground whitespace-nowrap">
+                  {row.label}
+                </td>
+                {countries.map((c) => (
+                  <td key={c} className="py-2.5 px-3 text-foreground">
+                    {cell(row, c)}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
