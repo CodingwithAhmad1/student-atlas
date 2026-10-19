@@ -1,0 +1,22 @@
+{
+  "id": "20261019-2137--education-gov-ng-attestation-unreachable",
+  "kind": "unreachable",
+  "sourceId": "education.gov.ng/attestation",
+  "relatedSourceIds": [],
+  "sourceLabel": "Federal Ministry of Education — Attestation of Academic Documents",
+  "sourceUrl": "https://education.gov.ng/attestation-of-academic-documents/",
+  "country": "INTL",
+  "category": "visitor",
+  "detectedAt": "2026-10-19T21:37:45.053Z",
+  "updatedAt": "2026-10-19T21:37:45.053Z",
+  "oldHash": "80beea29282b8d77891783328475c78015152abe8ad4730b0f397f166e985d55",
+  "newHash": "unreachable-2026-10-19",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 503 from https://education.gov.ng/attestation-of-academic-documents/). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 503 from https://education.gov.ng/attestation-of-academic-documents/"
+}
