@@ -1236,11 +1236,6 @@ export const citations: Record<string, Citation> = {
     url: "https://egyptembassy.net/consular-services/military-service/",
     label: "Embassy of Egypt in Washington — Military Service (in Arabic)",
   },
-  "scu.eg/degree-equivalence": {
-    id: "scu.eg/degree-equivalence",
-    url: "https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/",
-    label: "Supreme Council of Universities — General Administration for Degree Equivalence (in Arabic)",
-  },
   "egyptembassy.net/personal-legalization": {
     id: "egyptembassy.net/personal-legalization",
     url: "https://egyptembassy.net/consular-services/legalization/personal-legalization-procedure/",
