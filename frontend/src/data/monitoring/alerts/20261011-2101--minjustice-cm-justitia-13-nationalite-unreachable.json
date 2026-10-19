@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://minjustice.cm/justitia/JUSTITIA-13.pdf). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:17:25.848Z",
   "error": "HTTP 404 from https://minjustice.cm/justitia/JUSTITIA-13.pdf"
 }

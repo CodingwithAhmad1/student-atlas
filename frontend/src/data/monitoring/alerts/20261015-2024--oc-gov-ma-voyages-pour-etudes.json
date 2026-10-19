@@ -13,10 +13,13 @@
   "newHash": "f27ba1bcc2970297e14c5f238abd1a28bc19cfc682b8ff3ae6ef0b35b7955fcb",
   "diff": "Index: oc.gov.ma/voyages-pour-etudes\n===================================================================\n--- oc.gov.ma/voyages-pour-etudes\tprevious\n+++ oc.gov.ma/voyages-pour-etudes\tcurrent\n@@ -5,12 +5,12 @@\n Voyages pour études à l’étranger\n SOUS-MENUS\n Actualités\n+15 oct 2026\n+Publication des rapports statistiques annuels sur les échanges extérieurs du Maroc au titre de l’année 2025\n 31 aoû 2026\n Indicateurs des échanges extérieurs à fin Août 2026\n 10 aoû 2026\n Publication de la Circulaire N 2/2026\n-31 juil 2026\n-Indicateurs des échanges extérieurs à fin Juillet 2026\n S'abonner à Flux RSS Actualités\n Toute l'actualité\n Article 144 - Définition\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the news list beside Morocco's foreign-exchange page for students abroad changed; the rules we cite are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-19T06:08:40.847Z",
   "error": null
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T19:30:43.874Z",
+  "generatedAt": "2026-10-19T06:09:45.939Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -2807,9 +2807,9 @@
       "country": "INTL",
       "category": "general",
       "label": "全國法規資料庫 — 大學辦理國外學歷採認辦法 (in Chinese)",
-      "lastCheckedAt": "2026-10-18T19:30:43.874Z",
+      "lastCheckedAt": "2026-10-19T06:09:45.939Z",
       "lastChangedAt": "2026-10-18T19:30:43.874Z",
-      "lastHash": "203bda989f532d53eef61b11d999f7fd767c3dd6c7d80e0332b693667e9edfb6",
+      "lastHash": "b47d8b5435e54438a4b46fd4ef06fb294aaa4509e829262c9609c6cea630497e",
       "lastHttpStatus": 200,
       "consecutiveFailures": 0,
       "lastError": null,

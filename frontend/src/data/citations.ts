@@ -588,7 +588,7 @@ export const citations: Record<string, Citation> = {
   },
   "minjustice.cm/justitia-13-nationalite": {
     id: "minjustice.cm/justitia-13-nationalite",
-    url: "https://minjustice.cm/justitia/JUSTITIA-13.pdf",
+    url: "https://www.minjustice.cm/bibliotheque/277/pdf",
     label: "Ministère de la Justice du Cameroun — Justitia n°013 (septembre 2019), « La nationalité camerounaise au scanner » (in French)",
   },
   "service-public.gouv.tg/code-nationalite-1978": {
@@ -675,11 +675,6 @@ export const citations: Record<string, Citation> = {
     id: "mevzuat.gov.tr/5901-turk-vatandasligi-kanunu",
     url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5901.pdf",
     label: "Mevzuat Bilgi Sistemi (mevzuat.gov.tr) — Türk Vatandaşlığı Kanunu (Law No. 5901) (in Turkish)",
-  },
-  "chile.gob.cl/nacionalidad": {
-    id: "chile.gob.cl/nacionalidad",
-    url: "https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad",
-    label: "Gobierno de Chile (Chile en el Exterior) — Nacionalidad (in Spanish)",
   },
   "mjusticia.gob.es/como-pierde-nacionalidad": {
     id: "mjusticia.gob.es/como-pierde-nacionalidad",
@@ -986,11 +981,6 @@ export const citations: Record<string, Citation> = {
     url: "https://pakistan.highcommission.gov.au/ISLM/Visas_and_Migration.html",
     label: "Australian High Commission Pakistan — Visas and Citizenship",
   },
-  "hec.gov.pk/foreign-degree-equivalence": {
-    id: "hec.gov.pk/foreign-degree-equivalence",
-    url: "https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx",
-    label: "Higher Education Commission Pakistan — Recognition/Equivalence of Foreign Degrees",
-  },
   "gov.uk/tb-clinics-bangladesh": {
     id: "gov.uk/tb-clinics-bangladesh",
     url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-bangladesh/tuberculosis-testing-in-bangladesh",
@@ -1245,11 +1235,6 @@ export const citations: Record<string, Citation> = {
     id: "egyptembassy.net/military-service",
     url: "https://egyptembassy.net/consular-services/military-service/",
     label: "Embassy of Egypt in Washington — Military Service (in Arabic)",
-  },
-  "scu.eg/degree-equivalence": {
-    id: "scu.eg/degree-equivalence",
-    url: "https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/",
-    label: "Supreme Council of Universities — General Administration for Degree Equivalence (in Arabic)",
   },
   "egyptembassy.net/personal-legalization": {
     id: "egyptembassy.net/personal-legalization",
@@ -1550,5 +1535,10 @@ export const citations: Record<string, Citation> = {
     id: "indembassy-amman.gov.in/madad-student-registration",
     url: "https://indembassy-amman.gov.in/MADAD.html",
     label: "Embassy of India, Amman — MADAD: the Student Registration Module for Indian Students",
+  },
+  "consulado.gob.cl/recuperacion-nacionalidad": {
+    id: "consulado.gob.cl/recuperacion-nacionalidad",
+    url: "https://www.consulado.gob.cl/servicios/recuperacion-de-la-nacionalidad-chilena",
+    label: "Consulado.gob.cl — Recuperación de la nacionalidad chilena (in Spanish)",
   },
 };
