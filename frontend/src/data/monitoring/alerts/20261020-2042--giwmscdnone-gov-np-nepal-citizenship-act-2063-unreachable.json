@@ -1,0 +1,22 @@
+{
+  "id": "20261020-2042--giwmscdnone-gov-np-nepal-citizenship-act-2063-unreachable",
+  "kind": "unreachable",
+  "sourceId": "giwmscdnone.gov.np/nepal-citizenship-act-2063",
+  "relatedSourceIds": [],
+  "sourceLabel": "Government of Nepal, Nepal Law Commission — Nepal Citizenship Act 2063 (2006)",
+  "sourceUrl": "https://giwmscdnone.gov.np/media/app/public/275/posts/1721032585_65.pdf",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-20T20:42:13.886Z",
+  "updatedAt": "2026-10-20T20:42:13.886Z",
+  "oldHash": "317f0f8353c614075f1fe46fb2738bb1de34bfd4109a2e62f3b92dfdf2ad06e6",
+  "newHash": "unreachable-2026-10-20",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (terminated). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "terminated"
+}
