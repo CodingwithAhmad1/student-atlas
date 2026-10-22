@@ -1,0 +1,22 @@
+{
+  "id": "20261022-2038--oc-gov-ma-voyages-pour-etudes-unreachable",
+  "kind": "unreachable",
+  "sourceId": "oc.gov.ma/voyages-pour-etudes",
+  "relatedSourceIds": [],
+  "sourceLabel": "Office des Changes — Voyages pour études à l'étranger (in French)",
+  "sourceUrl": "https://www.oc.gov.ma/fr/etudiants-marocains-a-letranger/voyages-pour-etudes-a-l-etranger",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-22T20:38:15.624Z",
+  "updatedAt": "2026-10-22T20:38:15.624Z",
+  "oldHash": "f27ba1bcc2970297e14c5f238abd1a28bc19cfc682b8ff3ae6ef0b35b7955fcb",
+  "newHash": "unreachable-2026-10-22",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (page rendered no monitorable text (likely a JavaScript-only page)). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "page rendered no monitorable text (likely a JavaScript-only page)"
+}

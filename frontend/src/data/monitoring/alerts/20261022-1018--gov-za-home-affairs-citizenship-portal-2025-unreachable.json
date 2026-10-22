@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.za/news/media-statements/home-affairs-launches-new-citizenship-portal-24-nov-2025: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-22T20:38:15.624Z",
   "error": "Network error fetching https://www.gov.za/news/media-statements/home-affairs-launches-new-citizenship-portal-24-nov-2025: fetch failed"
 }

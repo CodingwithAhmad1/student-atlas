@@ -1,0 +1,22 @@
+{
+  "id": "20261022-2038--moest-gov-np-higher-education-division-unreachable",
+  "kind": "unreachable",
+  "sourceId": "moest.gov.np/higher-education-division",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ministry of Education, Science and Technology (Nepal) — Higher Education Division (in Nepali)",
+  "sourceUrl": "https://moest.gov.np/pages/1006912529/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-22T20:38:15.624Z",
+  "updatedAt": "2026-10-22T20:38:15.624Z",
+  "oldHash": "132461571f891e8e3f3a0cf4d83ec165bb3202a7378f5116fcd43867fe1a0573",
+  "newHash": "unreachable-2026-10-22",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://moest.gov.np/pages/1006912529/: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://moest.gov.np/pages/1006912529/: fetch failed"
+}
