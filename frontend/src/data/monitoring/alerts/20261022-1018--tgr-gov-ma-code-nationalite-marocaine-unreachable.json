@@ -1,0 +1,22 @@
+{
+  "id": "20261022-1018--tgr-gov-ma-code-nationalite-marocaine-unreachable",
+  "kind": "unreachable",
+  "sourceId": "tgr.gov.ma/code-nationalite-marocaine",
+  "relatedSourceIds": [],
+  "sourceLabel": "Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French)",
+  "sourceUrl": "https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-22T10:18:57.307Z",
+  "updatedAt": "2026-10-22T10:18:57.307Z",
+  "oldHash": "348aa0cf871d459084c650e14457ef942cdaca0aa4df4886963d4cfac121d5cf",
+  "newHash": "unreachable-2026-10-22",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939"
+}
