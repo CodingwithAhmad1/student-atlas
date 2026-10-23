@@ -1,0 +1,22 @@
+{
+  "id": "20261023-1012--gov-uk-uk-border-control-at-border-control",
+  "kind": "change",
+  "sourceId": "gov.uk/uk-border-control/at-border-control",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Entering the UK: at border control",
+  "sourceUrl": "https://www.gov.uk/uk-border-control/at-border-control",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-10-23T10:12:04.813Z",
+  "updatedAt": "2026-10-23T10:12:04.813Z",
+  "oldHash": "8a36f2781fde343757dd2c36ded97d3bb2781ce4c435be3ef8b7a223c0f22426",
+  "newHash": "26169665902527c016f3bfb0f5f99dbd12ed44959417e4b909a4800148e81597",
+  "diff": "Index: gov.uk/uk-border-control/at-border-control\n===================================================================\n--- gov.uk/uk-border-control/at-border-control\tprevious\n+++ gov.uk/uk-border-control/at-border-control\tcurrent\n@@ -15,7 +15,7 @@\n Read the guidance for school parties and groups coming to the UK by coach.\n If you’re a British citizen\n You can use the UK/EEA channel to get your passport or Gibraltar identity card checked - this is usually faster than the other channels.\n-You can use automatic eGates (ePassport gates) if your passport has a biometric symbol on the cover and you’re 8 years old or over. If you’re between 8 and 17 years old, you must be accompanied by an adult.\n+You can use automatic eGates (ePassport gates) if your passport has a biometric symbol on the cover and you’re 8 years old or over. If you’re between 8 and 17 years old, you must have an adult with you. Enter the eGates one at a time.\n You must be 120cm (3ft 11in) or taller to use the eGates.\n eGates use facial recognition technology to check your identity against the photo in your passport.\n If you’re from the EU, Switzerland, Norway, Iceland or Liechtenstein\n@@ -29,7 +29,7 @@\n your passport has a biometric symbol on the cover\n you’re 8 years old or over\n you have a valid digital immigration status or record of a digital exemption\n-If you’re between 8 and 17 years old, you must be accompanied by an adult.\n+If you’re between 8 and 17 years old, you must have an adult with you. Enter the eGates one at a time.\n You must be 120cm (3ft 11in) or taller to use the eGates.\n eGates use facial recognition technology to check your identity against the photo in your passport.\n If you’re from outside the EU, Switzerland, Norway, Iceland or Liechtenstein\n@@ -48,7 +48,7 @@\n South Korea\n United States\n You must be 120cm (3ft 11in) or taller to use the eGates.\n-If you’re between 8 and 17 years old, you must be accompanied by an adult to use the eGates.\n+If you’re between 8 and 17 years old, you must have an adult with you. Enter the eGates one at a time.\n You may also be able to use the UK/EEA immigration lanes and automatic eGates if you are a member of the Registered Traveller Service.\n When you must not use an eGate\n You must see a Border Force officer and get a stamp in your passport if you are entering the UK with a Temporary Work - Creative Worker certificate of sponsorship for up to 3 months (and you want to enter without a visa).\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
