@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.bb.org.bd/aboutus/regulationguideline/foreignexchange/feguidevol1/11.pdf). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-25T09:54:08.340Z",
   "error": "HTTP 403 from https://www.bb.org.bd/aboutus/regulationguideline/foreignexchange/feguidevol1/11.pdf"
 }
