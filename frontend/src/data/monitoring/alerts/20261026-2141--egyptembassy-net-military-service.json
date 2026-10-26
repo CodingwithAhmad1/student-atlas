@@ -1,0 +1,22 @@
+{
+  "id": "20261026-2141--egyptembassy-net-military-service",
+  "kind": "change",
+  "sourceId": "egyptembassy.net/military-service",
+  "relatedSourceIds": [],
+  "sourceLabel": "Embassy of Egypt in Washington — Military Service (in Arabic)",
+  "sourceUrl": "https://egyptembassy.net/consular-services/military-service/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-26T21:41:37.664Z",
+  "updatedAt": "2026-10-26T21:41:37.664Z",
+  "oldHash": "6ada2e384a8f1a538cb799599e30c122d0c7482df1522f5951ecb0a46cc2306a",
+  "newHash": "2a3d1ec3f0b0d8a9795ae8f220242cd0e093bad9c7470bcc17ace8287a2f6f11",
+  "diff": "Index: egyptembassy.net/military-service\n===================================================================\n--- egyptembassy.net/military-service\tprevious\n+++ egyptembassy.net/military-service\tcurrent\n@@ -42,8 +42,6 @@\n شهادة الميلاد المصرية المميكنة\n جواز سفر الوالد الأجنبى (إن وجد)\n الإجراءات في كل حالات الإعفاء والاستثناء:\n-ارسال بريد اليكترونى للقسم القنصلى مرفقا به صور المستندات للمراجعة قبل حضور المواطن\n-بعد مراجعة الأوراق يتم الرد على المواطن للحضور شخصيًا\n الحضور شخصيًا بالمستندات المطلوبة إلى مقر القسم القنصلى وإستيفاء النماذج المخصصة لطلب الإعفاء وإصدار الشهادات\n إذا كان سن طالب الإعفاء يقل عن 21 سنة يجب توقيع اثنين من المصريين بالخارج على كشف العائله، بصحة البيانات\n الرسوم: 10 دولار أمريكى\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
