@@ -1401,11 +1401,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.malawiembassyusa.com/_files/ugd/34560e_7d35cedc4048449992ff072fce225374.pdf",
     label: "Malawi Department of Immigration (via the Embassy of Malawi, Washington) — Dual Citizenship Standard Operating Procedures",
   },
-  "icric.gov.so/constitution-chapters-1-4": {
-    id: "icric.gov.so/constitution-chapters-1-4",
-    url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
-    label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
-  },
   "petrocom.gov.gh/constitution-art-8": {
     id: "petrocom.gov.gh/constitution-art-8",
     url: "https://petrocom.gov.gh/wp-content/uploads/2022/08/constitutionofghana.pdf",

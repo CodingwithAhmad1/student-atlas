@@ -276,7 +276,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "icric.gov.so/constitution-chapters-1-4", note: "The cited official page is in Somali." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-26" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   guatemala: {
