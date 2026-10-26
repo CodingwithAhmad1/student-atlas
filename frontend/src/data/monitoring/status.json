@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T06:03:58.943Z",
+  "generatedAt": "2026-10-26T06:04:45.584Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -2751,7 +2751,7 @@
       "country": "US",
       "category": "general",
       "label": "U.S. Customs and Border Protection — Electronic Visa Update System (EVUS) Frequently Asked Questions",
-      "lastCheckedAt": "2026-10-25T19:44:15.613Z",
+      "lastCheckedAt": "2026-10-26T06:04:45.584Z",
       "lastChangedAt": "2026-10-23T20:32:20.631Z",
       "lastHash": "898c142c5859a50d7ae412529e452362d05a49aba6ab474a426d629d71389504",
       "lastHttpStatus": 200,
