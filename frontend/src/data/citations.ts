@@ -831,11 +831,6 @@ export const citations: Record<string, Citation> = {
     url: "https://afghanistan.embassy.gov.au/",
     label: "Australian Interim Mission to Afghanistan — Home",
   },
-  "cgparis.mfa.gov.dz/demande-renouvellement-sursis": {
-    id: "cgparis.mfa.gov.dz/demande-renouvellement-sursis",
-    url: "https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment",
-    label: "Consulat Général d'Algérie à Paris — Demande ou renouvellement de sursis (in French)",
-  },
   "econsulat.tn/demande-de-sursis-militaire": {
     id: "econsulat.tn/demande-de-sursis-militaire",
     url: "https://www.econsulat.tn/fr/services-sociaux/demande-de-sursis-militaire",
