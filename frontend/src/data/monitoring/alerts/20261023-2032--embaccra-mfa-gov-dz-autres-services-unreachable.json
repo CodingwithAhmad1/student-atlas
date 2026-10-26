@@ -13,10 +13,39 @@
   "newHash": "unreachable-2026-10-23",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Algerian embassy page on national service could not be reached, so the guide now cites Algeria's national service law in the Official Journal instead.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"joradp.dz/loi-14-06-service-national\": {\n    id: \"joradp.dz/loi-14-06-service-national\",\n    url: \"https://www.joradp.dz/FTP/jo-francais/2014/F2014048.pdf\",\n    label: \"Journal officiel de la République algérienne — JO n° 48 du 10 août 2014 (loi 14-06 relative au service national) (in French)\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/nationalities/algeria.ts",
+        "oldText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over, and Algerian consulates abroad register nationals from age 17 and handle requests for a **deferral (sursis)** or an exemption [CITE: embaccra.mfa.gov.dz/autres-services].",
+        "newText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]."
+      },
+      {
+        "file": "frontend/src/data/nationalities/algeria.ts",
+        "oldText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over, and Algerian consulates abroad register nationals from age 17 and handle requests for a **deferral (sursis)** or an exemption [CITE: embaccra.mfa.gov.dz/autres-services].",
+        "newText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]."
+      },
+      {
+        "file": "frontend/src/data/nationalities/algeria.ts",
+        "oldText": "afterBlockId: \"au-arrival-work\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over, and Algerian consulates abroad register nationals from age 17 and handle requests for a **deferral (sursis)** or an exemption [CITE: embaccra.mfa.gov.dz/autres-services].",
+        "newText": "afterBlockId: \"au-arrival-work\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]."
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"embaccra.mfa.gov.dz/autres-services\": {\n    id: \"embaccra.mfa.gov.dz/autres-services\",\n    url: \"https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1\",\n    label: \"Ambassade d'Algérie à Accra — Autres services (in French)\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-26T06:19:24.752Z",
   "error": "Network error fetching https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1: fetch failed"
 }

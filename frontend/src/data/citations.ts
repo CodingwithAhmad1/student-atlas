@@ -831,11 +831,6 @@ export const citations: Record<string, Citation> = {
     url: "https://afghanistan.embassy.gov.au/",
     label: "Australian Interim Mission to Afghanistan — Home",
   },
-  "embaccra.mfa.gov.dz/autres-services": {
-    id: "embaccra.mfa.gov.dz/autres-services",
-    url: "https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1",
-    label: "Ambassade d'Algérie à Accra — Autres services (in French)",
-  },
   "cgparis.mfa.gov.dz/demande-renouvellement-sursis": {
     id: "cgparis.mfa.gov.dz/demande-renouvellement-sursis",
     url: "https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment",
@@ -1530,5 +1525,10 @@ export const citations: Record<string, Citation> = {
     id: "education.gov.ng/education-support-services",
     url: "https://education.gov.ng/education-support-services/",
     label: "Federal Ministry of Education — Department of Education Support Services",
+  },
+  "joradp.dz/loi-14-06-service-national": {
+    id: "joradp.dz/loi-14-06-service-national",
+    url: "https://www.joradp.dz/FTP/jo-francais/2014/F2014048.pdf",
+    label: "Journal officiel de la République algérienne — JO n° 48 du 10 août 2014 (loi 14-06 relative au service national) (in French)",
   },
 };
