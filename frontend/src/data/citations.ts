@@ -1251,11 +1251,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.cbn.gov.ng/intops/FXMarket.html",
     label: "Central Bank of Nigeria — Foreign Exchange Market",
   },
-  "education.gov.ng/attestation": {
-    id: "education.gov.ng/attestation",
-    url: "https://education.gov.ng/attestation-of-academic-documents/",
-    label: "Federal Ministry of Education — Attestation of Academic Documents",
-  },
   "fmino.gov.ng/ess-online-verification": {
     id: "fmino.gov.ng/ess-online-verification",
     url: "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
@@ -1530,5 +1525,10 @@ export const citations: Record<string, Citation> = {
     id: "consulado.gob.cl/recuperacion-nacionalidad",
     url: "https://www.consulado.gob.cl/servicios/recuperacion-de-la-nacionalidad-chilena",
     label: "Consulado.gob.cl — Recuperación de la nacionalidad chilena (in Spanish)",
+  },
+  "education.gov.ng/education-support-services": {
+    id: "education.gov.ng/education-support-services",
+    url: "https://education.gov.ng/education-support-services/",
+    label: "Federal Ministry of Education — Department of Education Support Services",
   },
 };

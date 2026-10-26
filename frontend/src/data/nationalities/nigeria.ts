@@ -28,7 +28,7 @@ const overlay: NationalityOverlay = {
           },
           {
             afterBlockId: "us-docs-identity",
-            blocks: [{ type: "paragraph", text: "The Federal Ministry of Education attests academic qualifications awarded in Nigeria for study abroad, checking SSCE results, O'Level certificates and transcripts. [CITE: education.gov.ng/attestation] As of September 2026, authentication and evaluation requests go through the online portal essverify.education.gov.ng, and transcripts must be emailed to the Ministry directly by the institution. [CITE: fmino.gov.ng/ess-online-verification]" }],
+            blocks: [{ type: "paragraph", text: "The Federal Ministry of Education authenticates Nigerian academic qualifications for further studies abroad. [CITE: education.gov.ng/education-support-services] As of September 2026, authentication and evaluation requests go through the online portal essverify.education.gov.ng, and transcripts must be emailed to the Ministry directly by the institution. [CITE: fmino.gov.ng/ess-online-verification]" }],
           },
         ],
       },
@@ -40,7 +40,7 @@ const overlay: NationalityOverlay = {
           },
           {
             afterBlockId: "uk-docs-identity",
-            blocks: [{ type: "paragraph", text: "The Federal Ministry of Education attests academic qualifications awarded in Nigeria for study abroad, checking SSCE results, O'Level certificates and transcripts. [CITE: education.gov.ng/attestation] As of September 2026, authentication and evaluation requests go through the online portal essverify.education.gov.ng, and transcripts must be emailed to the Ministry directly by the institution. [CITE: fmino.gov.ng/ess-online-verification]" }],
+            blocks: [{ type: "paragraph", text: "The Federal Ministry of Education authenticates Nigerian academic qualifications for further studies abroad. [CITE: education.gov.ng/education-support-services] As of September 2026, authentication and evaluation requests go through the online portal essverify.education.gov.ng, and transcripts must be emailed to the Ministry directly by the institution. [CITE: fmino.gov.ng/ess-online-verification]" }],
           },
         ],
       },
@@ -52,7 +52,7 @@ const overlay: NationalityOverlay = {
           },
           {
             afterBlockId: "au-docs-identity",
-            blocks: [{ type: "paragraph", text: "The Federal Ministry of Education attests academic qualifications awarded in Nigeria for study abroad, checking SSCE results, O'Level certificates and transcripts. [CITE: education.gov.ng/attestation] As of September 2026, authentication and evaluation requests go through the online portal essverify.education.gov.ng, and transcripts must be emailed to the Ministry directly by the institution. [CITE: fmino.gov.ng/ess-online-verification]" }],
+            blocks: [{ type: "paragraph", text: "The Federal Ministry of Education authenticates Nigerian academic qualifications for further studies abroad. [CITE: education.gov.ng/education-support-services] As of September 2026, authentication and evaluation requests go through the online portal essverify.education.gov.ng, and transcripts must be emailed to the Ministry directly by the institution. [CITE: fmino.gov.ng/ess-online-verification]" }],
           },
         ],
       },
