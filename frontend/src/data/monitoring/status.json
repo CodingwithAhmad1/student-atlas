@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T19:44:15.613Z",
+  "generatedAt": "2026-10-26T06:03:58.943Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -203,7 +203,7 @@
       "country": "AU",
       "category": "student",
       "label": "Australian Department of Home Affairs — Student Visa (Subclass 500)",
-      "lastCheckedAt": "2026-10-25T19:44:15.613Z",
+      "lastCheckedAt": "2026-10-26T06:03:58.943Z",
       "lastChangedAt": "2026-10-22T10:18:57.307Z",
       "lastHash": "f9d076cf70fbe5ec908bcdbe81ef283a53f7081f5192740ed3c345a573f31b52",
       "lastHttpStatus": 200,
