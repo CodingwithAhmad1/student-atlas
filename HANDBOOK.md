@@ -388,7 +388,11 @@ GitHub Pages).
 
 **Chosen host: Vercel (free Hobby plan).** Project settings: root directory
 `frontend`, framework Vite (from `vercel.json`), Node 22, Git
-connected to `main` so every push redeploys. Watcher commits carry
+connected to `main` so every push redeploys. Domain:
+**thestudentatlas.com** (registered at GoDaddy, DNS stays on GoDaddy's
+nameservers): `A @ 76.76.21.21` and `CNAME www cname.vercel-dns.com`; on
+Vercel `www` redirects (308) to the bare domain. `thestudentatlas.vercel.app`
+still works. Watcher commits carry
 `[skip ci]`; if Vercel skips those, new alerts appear on the next ordinary
 deploy.
 
@@ -405,7 +409,8 @@ deploy.
       pending alerts), and do a final `npm run build` with no failures.
 - [ ] **Read the disclaimer** (home page, `home-content.ts`): "an information
       resource, not legal advice"; make sure you are happy with it.
-- [ ] **Domain and title**: `index.html` has the title and description; add a
+- [ ] **Domain and title**: domain done (2026-10-24, see above). `index.html`
+      has the title and description; add a
       social preview image if you want link previews.
 
 **Should do**

@@ -1,0 +1,25 @@
+{
+  "id": "20261022-2038--moest-gov-np-faq-unreachable",
+  "kind": "unreachable",
+  "sourceId": "moest.gov.np/faq",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ministry of Education, Science and Technology (Nepal) — Frequently asked questions (in Nepali)",
+  "sourceUrl": "https://moest.gov.np/pages/1048911821/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-22T20:38:15.624Z",
+  "updatedAt": "2026-10-22T20:38:15.624Z",
+  "oldHash": "b563ae0c242cc3e8a819246cf8be87773983e924f0b64ae2ff9858fa005e2ef7",
+  "newHash": "unreachable-2026-10-22",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://moest.gov.np/pages/1048911821/: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-25T19:44:15.613Z",
+  "error": "Network error fetching https://moest.gov.np/pages/1048911821/: fetch failed"
+}

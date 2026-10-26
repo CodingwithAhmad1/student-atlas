@@ -13,34 +13,13 @@
   "newHash": "unreachable-2026-10-14",
   "diff": "",
   "diffTruncated": false,
-  "significance": "meaningful",
+  "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "approved",
+  "status": "dismissed",
   "resolution": {
-    "note": "The Egyptian Supreme Council of Universities page on degree recognition has been offline since mid-October, so the guide no longer states its rules on scientific supervision and full-time study.",
-    "edits": [
-      {
-        "file": "frontend/src/data/nationalities/egypt.ts",
-        "oldText": "},\n          {\n            afterBlockId: \"us-arrival-travel\",\n            blocks: [{ type: \"paragraph\", text: \"Egypt's Supreme Council of Universities makes being placed under the **scientific supervision** of Egypt's education missions a condition for recognising a foreign degree, and degrees in practical fields must have been studied full time. [CITE: scu.eg/degree-equivalence] Register for supervision early in the course rather than on return.\" }],",
-        "newText": ""
-      },
-      {
-        "file": "frontend/src/data/nationalities/egypt.ts",
-        "oldText": "callouts: [\n          {\n            afterBlockId: \"uk-arrival-intro\",\n            blocks: [{ type: \"paragraph\", text: \"Egypt's Supreme Council of Universities makes being placed under the **scientific supervision** of Egypt's education missions a condition for recognising a foreign degree, and degrees in practical fields must have been studied full time. [CITE: scu.eg/degree-equivalence] Register for supervision early in the course rather than on return.\" }],\n          },\n        ],",
-        "newText": "callouts: [],"
-      },
-      {
-        "file": "frontend/src/data/nationalities/egypt.ts",
-        "oldText": "callouts: [\n          {\n            afterBlockId: \"au-arrival-work\",\n            blocks: [{ type: \"paragraph\", text: \"Egypt's Supreme Council of Universities makes being placed under the **scientific supervision** of Egypt's education missions a condition for recognising a foreign degree, and degrees in practical fields must have been studied full time. [CITE: scu.eg/degree-equivalence] Register for supervision early in the course rather than on return.\" }],\n          },\n        ],",
-        "newText": "callouts: [],"
-      },
-      {
-        "file": "frontend/src/data/citations.ts",
-        "oldText": "\"scu.eg/degree-equivalence\": {\n    id: \"scu.eg/degree-equivalence\",\n    url: \"https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/\",\n    label: \"Supreme Council of Universities — General Administration for Degree Equivalence (in Arabic)\",\n  },",
-        "newText": ""
-      }
-    ]
+    "note": "The source is reachable again.",
+    "edits": []
   },
-  "resolvedAt": "2026-10-19T06:13:30.761Z",
+  "resolvedAt": "2026-10-20T20:42:13.886Z",
   "error": "Network error fetching https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/: fetch failed"
 }

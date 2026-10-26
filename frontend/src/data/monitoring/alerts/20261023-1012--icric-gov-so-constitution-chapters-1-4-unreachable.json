@@ -1,0 +1,22 @@
+{
+  "id": "20261023-1012--icric-gov-so-constitution-chapters-1-4-unreachable",
+  "kind": "unreachable",
+  "sourceId": "icric.gov.so/constitution-chapters-1-4",
+  "relatedSourceIds": [],
+  "sourceLabel": "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
+  "sourceUrl": "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-23T10:12:04.813Z",
+  "updatedAt": "2026-10-23T10:12:04.813Z",
+  "oldHash": "ee45ae60f66aba994d230c591f127ca27ca1393184be33fbf73aaa66cfd29796",
+  "newHash": "unreachable-2026-10-23",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf"
+}

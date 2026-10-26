@@ -1,0 +1,22 @@
+{
+  "id": "20261023-2032--cgparis-mfa-gov-dz-demande-renouvellement-sursis-unreachable",
+  "kind": "unreachable",
+  "sourceId": "cgparis.mfa.gov.dz/demande-renouvellement-sursis",
+  "relatedSourceIds": [],
+  "sourceLabel": "Consulat Général d'Algérie à Paris — Demande ou renouvellement de sursis (in French)",
+  "sourceUrl": "https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-23T20:32:20.631Z",
+  "updatedAt": "2026-10-23T20:32:20.631Z",
+  "oldHash": "18739df28d2df6eab410791abf760c62ba2035226df113e1c191050d05055b6b",
+  "newHash": "unreachable-2026-10-23",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment: fetch failed"
+}

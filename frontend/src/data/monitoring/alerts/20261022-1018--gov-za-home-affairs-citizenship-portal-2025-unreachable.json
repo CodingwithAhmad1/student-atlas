@@ -1,0 +1,25 @@
+{
+  "id": "20261022-1018--gov-za-home-affairs-citizenship-portal-2025-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.za/home-affairs-citizenship-portal-2025",
+  "relatedSourceIds": [],
+  "sourceLabel": "South African Government (Department of Home Affairs) — Home Affairs launches new citizenship portal, 24 Nov 2025",
+  "sourceUrl": "https://www.gov.za/news/media-statements/home-affairs-launches-new-citizenship-portal-24-nov-2025",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-22T10:18:57.307Z",
+  "updatedAt": "2026-10-22T10:18:57.307Z",
+  "oldHash": "2808a23b27fa86c1b89d1b6640420ec2bb1b0f61fcd32bc579a7caeddb024383",
+  "newHash": "unreachable-2026-10-22",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.za/news/media-statements/home-affairs-launches-new-citizenship-portal-24-nov-2025: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-22T20:38:15.624Z",
+  "error": "Network error fetching https://www.gov.za/news/media-statements/home-affairs-launches-new-citizenship-portal-24-nov-2025: fetch failed"
+}

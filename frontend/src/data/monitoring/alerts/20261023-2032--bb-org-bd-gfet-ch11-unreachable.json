@@ -1,0 +1,25 @@
+{
+  "id": "20261023-2032--bb-org-bd-gfet-ch11-unreachable",
+  "kind": "unreachable",
+  "sourceId": "bb.org.bd/gfet-ch11",
+  "relatedSourceIds": [],
+  "sourceLabel": "Bangladesh Bank — Guidelines for Foreign Exchange Transactions, Vol. 1, Chapter 11: Private Remittances",
+  "sourceUrl": "https://www.bb.org.bd/aboutus/regulationguideline/foreignexchange/feguidevol1/11.pdf",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-23T20:32:20.631Z",
+  "updatedAt": "2026-10-23T20:32:20.631Z",
+  "oldHash": "ae85cdd93dfe24876bdc3a6012c8a675fa85ad8fdf289535bdadb22477a4f4f4",
+  "newHash": "unreachable-2026-10-23",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.bb.org.bd/aboutus/regulationguideline/foreignexchange/feguidevol1/11.pdf). The page may have moved — the citation URL needs a manual review.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-25T09:54:08.340Z",
+  "error": "HTTP 403 from https://www.bb.org.bd/aboutus/regulationguideline/foreignexchange/feguidevol1/11.pdf"
+}

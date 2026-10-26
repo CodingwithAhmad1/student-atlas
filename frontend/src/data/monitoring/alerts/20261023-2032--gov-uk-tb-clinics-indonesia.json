@@ -1,0 +1,22 @@
+{
+  "id": "20261023-2032--gov-uk-tb-clinics-indonesia",
+  "kind": "change",
+  "sourceId": "gov.uk/tb-clinics-indonesia",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Tuberculosis testing in Indonesia",
+  "sourceUrl": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-indonesia/tuberculosis-testing-in-indonesia",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-10-23T20:32:20.631Z",
+  "updatedAt": "2026-10-23T20:32:20.631Z",
+  "oldHash": "b614b1b89a0ea17733e22fb50fedc4d5ecb32c7ede26a9ef8dc60352c026bedb",
+  "newHash": "49a5d67308b5fe6a1511e668c3d7a23960b81c2fee3855bdbe3d3c772ea9a5ea",
+  "diff": "Index: gov.uk/tb-clinics-indonesia\n===================================================================\n--- gov.uk/tb-clinics-indonesia\tprevious\n+++ gov.uk/tb-clinics-indonesia\tcurrent\n@@ -89,10 +89,15 @@\n the TB test fee\n if you have had TB in the past or have any other lung disease you should provide details of your previous screening and, if possible, your medical notes and x-ray results\n Tangerang clinics\n-RS Premier Bintaro Jl. M.H. Thamrin Blok B3 No. 1\n+RS Premier Bintaro\n Dr Erlynda Taufik\n-Sektor 7 Kawasan Niaga - Bintaro Jaya\n-Tangerang 15224\n+Dr Nathalia Wusis\n+Dr Grace Valerina Ndjurumana\n+Dr Rahayu Wibisono\n+Jl. MH Thamrin No. 1\n+Sektor 7 Bintaro Jaya\n+Kota Tangerang Selatan\n+Banten 15224\n Telephone: +62 (21) 7455 500\n Email: erlynda.taufik@asia1health.com\n Website: www.rspremierbintaro.com\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

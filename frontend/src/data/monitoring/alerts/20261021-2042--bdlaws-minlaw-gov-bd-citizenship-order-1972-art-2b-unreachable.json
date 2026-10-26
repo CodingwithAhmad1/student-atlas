@@ -1,0 +1,25 @@
+{
+  "id": "20261021-2042--bdlaws-minlaw-gov-bd-citizenship-order-1972-art-2b-unreachable",
+  "kind": "unreachable",
+  "sourceId": "bdlaws.minlaw.gov.bd/citizenship-order-1972-art-2b",
+  "relatedSourceIds": [],
+  "sourceLabel": "Laws of Bangladesh (Legislative and Parliamentary Affairs Division) — The Bangladesh Citizenship (Temporary Provisions) Order, 1972, Article 2B",
+  "sourceUrl": "https://bdlaws.minlaw.gov.bd/act-423/section-18668.html",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-21T20:42:48.078Z",
+  "updatedAt": "2026-10-21T20:42:48.078Z",
+  "oldHash": "3e236fa841fe8cfac7e3eb0f82ba465098b93bfd22dd35d95a8ea8d94f21f055",
+  "newHash": "unreachable-2026-10-21",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://bdlaws.minlaw.gov.bd/act-423/section-18668.html: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-25T09:54:08.340Z",
+  "error": "Network error fetching https://bdlaws.minlaw.gov.bd/act-423/section-18668.html: fetch failed"
+}

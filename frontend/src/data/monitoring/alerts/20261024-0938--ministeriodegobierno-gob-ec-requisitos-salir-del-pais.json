@@ -1,0 +1,22 @@
+{
+  "id": "20261024-0938--ministeriodegobierno-gob-ec-requisitos-salir-del-pais",
+  "kind": "change",
+  "sourceId": "ministeriodegobierno.gob.ec/requisitos-salir-del-pais",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ministerio de Gobierno — Requisitos para salir del país (in Spanish)",
+  "sourceUrl": "https://www.ministeriodegobierno.gob.ec/requisitos-para-salir-del-pais/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-24T09:38:53.001Z",
+  "updatedAt": "2026-10-24T09:38:53.001Z",
+  "oldHash": "6a16602fba2438f2d4589a3b1623e840134d7a2ab8a8820e2b9245fe293d8f8a",
+  "newHash": "63c2f4c4bacba26847bc47e9e37af4879ddcb533603c6e5338e967a233aa1641",
+  "diff": "Index: ministeriodegobierno.gob.ec/requisitos-salir-del-pais\n===================================================================\n--- ministeriodegobierno.gob.ec/requisitos-salir-del-pais\tprevious\n+++ ministeriodegobierno.gob.ec/requisitos-salir-del-pais\tcurrent\n@@ -46,5 +46,5 @@\n Imprimir\n Mail\n Entérate\n-150.000 jóvenes ya tienen su primera experiencia laboral\n+700.000 nuevas experiencias laborales\n Proyectos de vivienda .\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

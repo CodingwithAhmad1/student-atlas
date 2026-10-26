@@ -1,0 +1,22 @@
+{
+  "id": "20261023-2032--embaccra-mfa-gov-dz-autres-services-unreachable",
+  "kind": "unreachable",
+  "sourceId": "embaccra.mfa.gov.dz/autres-services",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ambassade d'Algérie à Accra — Autres services (in French)",
+  "sourceUrl": "https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-23T20:32:20.631Z",
+  "updatedAt": "2026-10-23T20:32:20.631Z",
+  "oldHash": "8e17f03a37c3282a0fd1954c34c8337c3150e5656f7b8baea74a006f3e5c804e",
+  "newHash": "unreachable-2026-10-23",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1: fetch failed"
+}

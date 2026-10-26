@@ -1,0 +1,22 @@
+{
+  "id": "20261024-1935--presidence-cd-constitution-2011-unreachable",
+  "kind": "unreachable",
+  "sourceId": "presidence.cd/constitution-2011",
+  "relatedSourceIds": [],
+  "sourceLabel": "Présidence de la République — Journal Officiel, Constitution de la République Démocratique du Congo (texte modifié 2011) (in French)",
+  "sourceUrl": "https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-10-24T19:35:11.702Z",
+  "updatedAt": "2026-10-24T19:35:11.702Z",
+  "oldHash": "e63f0b5af77e3eb96151ed00b027d82cd3d9a962027f36774e11359c97db81cf",
+  "newHash": "unreachable-2026-10-24",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf: fetch failed"
+}
