@@ -13,10 +13,13 @@
   "newHash": "49a5d67308b5fe6a1511e668c3d7a23960b81c2fee3855bdbe3d3c772ea9a5ea",
   "diff": "Index: gov.uk/tb-clinics-indonesia\n===================================================================\n--- gov.uk/tb-clinics-indonesia\tprevious\n+++ gov.uk/tb-clinics-indonesia\tcurrent\n@@ -89,10 +89,15 @@\n the TB test fee\n if you have had TB in the past or have any other lung disease you should provide details of your previous screening and, if possible, your medical notes and x-ray results\n Tangerang clinics\n-RS Premier Bintaro Jl. M.H. Thamrin Blok B3 No. 1\n+RS Premier Bintaro\n Dr Erlynda Taufik\n-Sektor 7 Kawasan Niaga - Bintaro Jaya\n-Tangerang 15224\n+Dr Nathalia Wusis\n+Dr Grace Valerina Ndjurumana\n+Dr Rahayu Wibisono\n+Jl. MH Thamrin No. 1\n+Sektor 7 Bintaro Jaya\n+Kota Tangerang Selatan\n+Banten 15224\n Telephone: +62 (21) 7455 500\n Email: erlynda.taufik@asia1health.com\n Website: www.rspremierbintaro.com\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "GOV.UK updated the address and doctors for the approved TB clinic in Tangerang; the clinic locations the guide lists are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-26T06:20:46.573Z",
   "error": null
 }
