@@ -601,11 +601,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.hcc.gov.mg/?p=8407",
     label: "Haute Cour Constitutionnelle de Madagascar — Arrêt n°04-HCC/AR du 22 août 2023 (in French)",
   },
-  "presidence.cd/constitution-2011": {
-    id: "presidence.cd/constitution-2011",
-    url: "https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf",
-    label: "Présidence de la République — Journal Officiel, Constitution de la République Démocratique du Congo (texte modifié 2011) (in French)",
-  },
   "omrh.gouv.ht/constitution-amendee-2012": {
     id: "omrh.gouv.ht/constitution-amendee-2012",
     url: "https://omrh.gouv.ht/Media/Publications/1-Constitution/Constitution1987Amend%C3%A9eJuin2012.pdf",

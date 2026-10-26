@@ -13,10 +13,29 @@
   "newHash": "unreachable-2026-10-24",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The official copy of the DR Congo constitution on the presidency's website can no longer be reached, so the guide no longer says whether DR Congo allows dual nationality.",
+    "edits": [
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"prohibited\", verifiedAt: \"2026-09-27\", citationId: \"presidence.cd/constitution-2011\", note: \"The cited official page is in French.\" },",
+        "newText": "dualNationalityAtHome: { value: \"unknown\", verifiedAt: \"2026-10-26\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"presidence.cd/constitution-2011\": {\n    id: \"presidence.cd/constitution-2011\",\n    url: \"https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf\",\n    label: \"Présidence de la République — Journal Officiel, Constitution de la République Démocratique du Congo (texte modifié 2011) (in French)\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"presidence.cd/constitution-2011\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-26T06:22:56.072Z",
   "error": "Network error fetching https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf: fetch failed"
 }

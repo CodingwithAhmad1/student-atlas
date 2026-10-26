@@ -147,7 +147,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "minjustice.cm/justitia-13-nationalite": { country: "INTL", category: "citizenship" },
   "service-public.gouv.tg/code-nationalite-1978": { country: "INTL", category: "citizenship" },
   "hcc.gov.mg/arret-04-hcc-ar-2023": { country: "INTL", category: "citizenship" },
-  "presidence.cd/constitution-2011": { country: "INTL", category: "citizenship" },
   "omrh.gouv.ht/constitution-amendee-2012": { country: "INTL", category: "citizenship" },
   "portal.ahu.go.id/uu-12-2006-kewarganegaraan": { country: "INTL", category: "citizenship" },
   "report.dopa.go.th/nationality-act-2508": { country: "INTL", category: "citizenship" },

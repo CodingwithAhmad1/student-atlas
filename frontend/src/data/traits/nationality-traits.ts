@@ -408,7 +408,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "presidence.cd/constitution-2011", note: "The cited official page is in French." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-26" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   yemen: {
