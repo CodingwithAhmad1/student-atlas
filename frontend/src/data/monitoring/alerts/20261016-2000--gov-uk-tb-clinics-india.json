@@ -13,10 +13,13 @@
   "newHash": "417ffe4499262d6a5fc2bb5dd73d0691e8fcdcfd15fcecd387fa3c63e275c94b",
   "diff": "Index: gov.uk/tb-clinics-india\n===================================================================\n--- gov.uk/tb-clinics-india\tprevious\n+++ gov.uk/tb-clinics-india\tcurrent\n@@ -536,11 +536,13 @@\n The fee for TB screening is Indian Rupee 2,500 for each person.\n Nagpur\n Sanjiwani Chikitsa Kendra\n-Sanjiwani Chikitsa Kendra\n-c/o Jayant Poogalia\n-Dr Munje Marg,\n-Near Dinanath high school,\n-Dhantoli, Nagpur 440012\n+Anchee Bhawan\n+241/1, Bajaj Nagar Road\n+Next to HDFC Bank\n+Bajaj Nagar\n+Nagpur\n+Maharashtra – 440010,\n+India\n Telephone:\n +91 87902 09105\n Email: kamalpoogalia@yahoo.com\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The approved TB clinic in Nagpur moved to a new address; Nagpur is still on the list of cities we mention.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-19T06:08:55.537Z",
   "error": null
 }

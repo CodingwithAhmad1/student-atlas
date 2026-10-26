@@ -13,10 +13,13 @@
   "newHash": "f74bd2ff69963f333d0a2a04af98e66572d787c7cb869ce7338961876fc4f5a0",
   "diff": "Index: xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\n===================================================================\n--- xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tprevious\n+++ xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tcurrent\n@@ -81,7 +81,6 @@\n Hướng dẫn thực hiện chính sách\n (Chinhphu.vn) - Toàn văn Quyết định số 1826/QĐ-BGDĐT của Bộ GDĐT ban hành danh mục 111 đào tạo (thuộc 15 nhóm ngành) người học được nhận học bổng theo Nghị định số 179/2026/NĐ-CP của Chính phủ.\n Chi tiết 34 ĐƠN VỊ HÀNH CHÍNH CẤP TỈNH\n-Chính sách và cuộc sống\n (Chinhphu.vn) - Kể từ ngày 12/6/2025, cả nước có 34 đơn vị hành chính cấp tỉnh, gồm 28 tỉnh và 6 thành phố. Trong đó có 19 tỉnh và 4 thành phố hình thành sau sắp xếp và 11 tỉnh, thành phố không thực hiện sắp xếp.\n Tra cứu TUỔI NGHỈ HƯU và THỜI ĐIỂM NGHỈ HƯU\n Hướng dẫn thực hiện chính sách\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only a sidebar heading on the Vietnamese government portal changed; the degree-recognition rules the guide describes are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-26T06:21:09.777Z",
   "error": null
 }

@@ -13,10 +13,34 @@
   "newHash": "unreachable-2026-10-23",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Algerian consulate's page on renewing a national service deferral is no longer available, so the guide no longer lists the documents it asked for.",
+    "edits": [
+      {
+        "file": "frontend/src/data/nationalities/algeria.ts",
+        "oldText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]. Renewing a deferral from abroad requires a school certificate and a copy of the residence permit among other documents, so Algerian students should keep their national service status current through the consulate covering where they study [CITE: cgparis.mfa.gov.dz/demande-renouvellement-sursis].",
+        "newText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]. Algerian students should keep their national service status current through the consulate covering where they study."
+      },
+      {
+        "file": "frontend/src/data/nationalities/algeria.ts",
+        "oldText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]. Renewing a deferral from abroad requires a school certificate and a copy of the residence permit among other documents, so Algerian students should keep their national service status current through the consulate covering where they study [CITE: cgparis.mfa.gov.dz/demande-renouvellement-sursis].",
+        "newText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]. Algerian students should keep their national service status current through the consulate covering where they study."
+      },
+      {
+        "file": "frontend/src/data/nationalities/algeria.ts",
+        "oldText": "afterBlockId: \"au-arrival-work\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]. Renewing a deferral from abroad requires a school certificate and a copy of the residence permit among other documents, so Algerian students should keep their national service status current through the consulate covering where they study [CITE: cgparis.mfa.gov.dz/demande-renouvellement-sursis].",
+        "newText": "afterBlockId: \"au-arrival-work\",\n            blocks: [{ type: \"paragraph\", text: \"National service is an obligation for Algerian nationals aged 19 and over. Nationals living abroad register for it at an Algerian diplomatic or consular post in the year they turn 17, and a student can ask for a **deferral (sursis)** for studies, renewable until the studies end, or for an exemption [CITE: joradp.dz/loi-14-06-service-national]. Algerian students should keep their national service status current through the consulate covering where they study."
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"cgparis.mfa.gov.dz/demande-renouvellement-sursis\": {\n    id: \"cgparis.mfa.gov.dz/demande-renouvellement-sursis\",\n    url: \"https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment\",\n    label: \"Consulat Général d'Algérie à Paris — Demande ou renouvellement de sursis (in French)\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-26T06:20:03.649Z",
   "error": "Network error fetching https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment: fetch failed"
 }

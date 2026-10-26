@@ -13,10 +13,13 @@
   "newHash": "a31294cd853d656487c52a25bd49f7f58144ed0beb87f7d0e6f34e74f3664e97",
   "diff": "Index: dri.gouv.sn/loi-61-10-nationalite\n===================================================================\n--- dri.gouv.sn/loi-61-10-nationalite\tprevious\n+++ dri.gouv.sn/loi-61-10-nationalite\tcurrent\n@@ -1,1 +1,3 @@\n-Please wait while your request is being verified...\n\\ No newline at end of file\n+Account Suspended\n+This Account has been suspended.\n+Contact your hosting provider for more information.\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The page now shows only a hosting error instead of the law; the guide's statement based on it was removed separately.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-26T06:09:08.811Z",
   "error": null
 }

@@ -588,7 +588,7 @@ export const citations: Record<string, Citation> = {
   },
   "minjustice.cm/justitia-13-nationalite": {
     id: "minjustice.cm/justitia-13-nationalite",
-    url: "https://minjustice.cm/justitia/JUSTITIA-13.pdf",
+    url: "https://www.minjustice.cm/bibliotheque/277/pdf",
     label: "Ministère de la Justice du Cameroun — Justitia n°013 (septembre 2019), « La nationalité camerounaise au scanner » (in French)",
   },
   "service-public.gouv.tg/code-nationalite-1978": {
@@ -600,11 +600,6 @@ export const citations: Record<string, Citation> = {
     id: "hcc.gov.mg/arret-04-hcc-ar-2023",
     url: "https://www.hcc.gov.mg/?p=8407",
     label: "Haute Cour Constitutionnelle de Madagascar — Arrêt n°04-HCC/AR du 22 août 2023 (in French)",
-  },
-  "presidence.cd/constitution-2011": {
-    id: "presidence.cd/constitution-2011",
-    url: "https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf",
-    label: "Présidence de la République — Journal Officiel, Constitution de la République Démocratique du Congo (texte modifié 2011) (in French)",
   },
   "omrh.gouv.ht/constitution-amendee-2012": {
     id: "omrh.gouv.ht/constitution-amendee-2012",
@@ -675,11 +670,6 @@ export const citations: Record<string, Citation> = {
     id: "mevzuat.gov.tr/5901-turk-vatandasligi-kanunu",
     url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.5901.pdf",
     label: "Mevzuat Bilgi Sistemi (mevzuat.gov.tr) — Türk Vatandaşlığı Kanunu (Law No. 5901) (in Turkish)",
-  },
-  "chile.gob.cl/nacionalidad": {
-    id: "chile.gob.cl/nacionalidad",
-    url: "https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad",
-    label: "Gobierno de Chile (Chile en el Exterior) — Nacionalidad (in Spanish)",
   },
   "mjusticia.gob.es/como-pierde-nacionalidad": {
     id: "mjusticia.gob.es/como-pierde-nacionalidad",
@@ -836,16 +826,6 @@ export const citations: Record<string, Citation> = {
     url: "https://afghanistan.embassy.gov.au/",
     label: "Australian Interim Mission to Afghanistan — Home",
   },
-  "embaccra.mfa.gov.dz/autres-services": {
-    id: "embaccra.mfa.gov.dz/autres-services",
-    url: "https://embaccra.mfa.gov.dz/fr/consular-services/others-services-1",
-    label: "Ambassade d'Algérie à Accra — Autres services (in French)",
-  },
-  "cgparis.mfa.gov.dz/demande-renouvellement-sursis": {
-    id: "cgparis.mfa.gov.dz/demande-renouvellement-sursis",
-    url: "https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment",
-    label: "Consulat Général d'Algérie à Paris — Demande ou renouvellement de sursis (in French)",
-  },
   "econsulat.tn/demande-de-sursis-militaire": {
     id: "econsulat.tn/demande-de-sursis-militaire",
     url: "https://www.econsulat.tn/fr/services-sociaux/demande-de-sursis-militaire",
@@ -985,11 +965,6 @@ export const citations: Record<string, Citation> = {
     id: "pakistan.highcommission.gov.au/visas",
     url: "https://pakistan.highcommission.gov.au/ISLM/Visas_and_Migration.html",
     label: "Australian High Commission Pakistan — Visas and Citizenship",
-  },
-  "hec.gov.pk/foreign-degree-equivalence": {
-    id: "hec.gov.pk/foreign-degree-equivalence",
-    url: "https://www.hec.gov.pk/english/services/students/DES/Pages/Procedure/Procedure-foreign.aspx",
-    label: "Higher Education Commission Pakistan — Recognition/Equivalence of Foreign Degrees",
   },
   "gov.uk/tb-clinics-bangladesh": {
     id: "gov.uk/tb-clinics-bangladesh",
@@ -1246,11 +1221,6 @@ export const citations: Record<string, Citation> = {
     url: "https://egyptembassy.net/consular-services/military-service/",
     label: "Embassy of Egypt in Washington — Military Service (in Arabic)",
   },
-  "scu.eg/degree-equivalence": {
-    id: "scu.eg/degree-equivalence",
-    url: "https://scu.eg/faq_categories/%D8%A7%D9%84%D8%A5%D8%AF%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D9%85%D8%B9%D8%A7%D8%AF%D9%84%D8%A9-%D8%A7%D9%84%D8%AF%D8%B1%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D9%85/",
-    label: "Supreme Council of Universities — General Administration for Degree Equivalence (in Arabic)",
-  },
   "egyptembassy.net/personal-legalization": {
     id: "egyptembassy.net/personal-legalization",
     url: "https://egyptembassy.net/consular-services/legalization/personal-legalization-procedure/",
@@ -1265,11 +1235,6 @@ export const citations: Record<string, Citation> = {
     id: "cbn.gov.ng/fx-market",
     url: "https://www.cbn.gov.ng/intops/FXMarket.html",
     label: "Central Bank of Nigeria — Foreign Exchange Market",
-  },
-  "education.gov.ng/attestation": {
-    id: "education.gov.ng/attestation",
-    url: "https://education.gov.ng/attestation-of-academic-documents/",
-    label: "Federal Ministry of Education — Attestation of Academic Documents",
   },
   "fmino.gov.ng/ess-online-verification": {
     id: "fmino.gov.ng/ess-online-verification",
@@ -1396,11 +1361,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.justice.gov.tn/fileadmin/medias/references_juridiques/codes_juridiques/NationaliteArabe.pdf",
     label: "Ministère de la Justice (Tunisie) — Code de la nationalité tunisienne (in Arabic)",
   },
-  "dri.gouv.sn/loi-61-10-nationalite": {
-    id: "dri.gouv.sn/loi-61-10-nationalite",
-    url: "https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf",
-    label: "Journal officiel du Sénégal — Loi n° 61-10 du 7 mars 1961 déterminant la nationalité sénégalaise (in French)",
-  },
   "sri.ro/legea-21-1991-cetatenie": {
     id: "sri.ro/legea-21-1991-cetatenie",
     url: "https://sri.ro/fisiere/legislatie/L21-1991.pdf",
@@ -1420,11 +1380,6 @@ export const citations: Record<string, Citation> = {
     id: "malawiembassyusa.com/dual-citizenship-sop",
     url: "https://www.malawiembassyusa.com/_files/ugd/34560e_7d35cedc4048449992ff072fce225374.pdf",
     label: "Malawi Department of Immigration (via the Embassy of Malawi, Washington) — Dual Citizenship Standard Operating Procedures",
-  },
-  "icric.gov.so/constitution-chapters-1-4": {
-    id: "icric.gov.so/constitution-chapters-1-4",
-    url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
-    label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
   },
   "petrocom.gov.gh/constitution-art-8": {
     id: "petrocom.gov.gh/constitution-art-8",
@@ -1550,5 +1505,20 @@ export const citations: Record<string, Citation> = {
     id: "indembassy-amman.gov.in/madad-student-registration",
     url: "https://indembassy-amman.gov.in/MADAD.html",
     label: "Embassy of India, Amman — MADAD: the Student Registration Module for Indian Students",
+  },
+  "consulado.gob.cl/recuperacion-nacionalidad": {
+    id: "consulado.gob.cl/recuperacion-nacionalidad",
+    url: "https://www.consulado.gob.cl/servicios/recuperacion-de-la-nacionalidad-chilena",
+    label: "Consulado.gob.cl — Recuperación de la nacionalidad chilena (in Spanish)",
+  },
+  "education.gov.ng/education-support-services": {
+    id: "education.gov.ng/education-support-services",
+    url: "https://education.gov.ng/education-support-services/",
+    label: "Federal Ministry of Education — Department of Education Support Services",
+  },
+  "joradp.dz/loi-14-06-service-national": {
+    id: "joradp.dz/loi-14-06-service-national",
+    url: "https://www.joradp.dz/FTP/jo-francais/2014/F2014048.pdf",
+    label: "Journal officiel de la République algérienne — JO n° 48 du 10 août 2014 (loi 14-06 relative au service national) (in French)",
   },
 };

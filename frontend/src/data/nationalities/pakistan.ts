@@ -99,15 +99,6 @@ const overlay: NationalityOverlay = {
               },
             ],
           },
-          {
-            afterBlockId: "us-psw-cliff",
-            blocks: [
-              {
-                type: "paragraph",
-                text: "Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]",
-              },
-            ],
-          },
         ],
       },
       AU: {
@@ -121,28 +112,9 @@ const overlay: NationalityOverlay = {
               },
             ],
           },
-          {
-            afterBlockId: "au-psw-application",
-            blocks: [
-              {
-                type: "paragraph",
-                text: "Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]",
-              },
-            ],
-          },
         ],
       },
-      UK: { callouts: [
-          {
-            afterBlockId: "uk-psw-transition",
-            blocks: [
-              {
-                type: "paragraph",
-                text: "Pakistani graduates returning with a foreign degree apply to the Higher Education Commission (HEC) for recognition and equivalence. For a foreign master's degree the HEC asks for the degree and transcript plus a bachelor's degree already attested by the HEC, so having Pakistani degrees attested before leaving saves a step later. [CITE: hec.gov.pk/foreign-degree-equivalence]",
-              },
-            ],
-          },
-        ] },
+      UK: { callouts: [] },
     },
     "getting-sponsored": {
       AU: {

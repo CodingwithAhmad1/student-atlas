@@ -13,10 +13,13 @@
   "newHash": "49953262d09f1f9744c0b9cd7779db635749998cfc1e9246f1c35e911af11623",
   "diff": "Index: fmino.gov.ng/ess-online-verification\n===================================================================\n--- fmino.gov.ng/ess-online-verification\tprevious\n+++ fmino.gov.ng/ess-online-verification\tcurrent\n@@ -21,6 +21,6 @@\n Mrs. Folasade Boriowo\n Director, Press and Public Relations\n RELATED ARTICLESMORE FROM AUTHOR\n-World Heart Day: Idris Calls For Stronger Action To Prevent Heart Disease, Save Lives\n-FG Declares Thursday, October 1St, 2026, Public Holiday To Mark Nigeria’s 66Th Independence Anniversary\n-Akpabio Assures Australia of Nigeria’s Support for IPU Presidency\n\\ No newline at end of file\n+Akpabio Charges Door-to-Door Movement to Champion National Renewal, Take Renewed Hope Message to Every Nigerian\n+FG, FAO Intensify Efforts To Contain Avian Influenza, Strengthen Animal Movement Control\n+FG Provides Update On FCT Ebola Case As Genetic Analysis Shows Virus Is Related To Virus Identified In Kenya\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the related-articles links on the Nigerian ministry's announcement changed; the announcement itself is the same.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:08:21.320Z",
   "error": null
 }
