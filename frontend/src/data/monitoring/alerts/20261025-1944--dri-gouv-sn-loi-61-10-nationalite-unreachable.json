@@ -13,10 +13,29 @@
   "newHash": "unreachable-2026-10-25",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "Senegal's official copy of its 1961 nationality law is no longer available, so the guide no longer says whether Senegal allows dual nationality.",
+    "edits": [
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"prohibited\", verifiedAt: \"2026-09-28\", citationId: \"dri.gouv.sn/loi-61-10-nationalite\", note: \"Article 18 of the 1961 nationality code makes the loss automatic for an adult who voluntarily takes another nationality. The cited official page is in French.\" },",
+        "newText": "dualNationalityAtHome: { value: \"unknown\", verifiedAt: \"2026-10-26\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"dri.gouv.sn/loi-61-10-nationalite\": {\n    id: \"dri.gouv.sn/loi-61-10-nationalite\",\n    url: \"https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf\",\n    label: \"Journal officiel du Sénégal — Loi n° 61-10 du 7 mars 1961 déterminant la nationalité sénégalaise (in French)\",\n  },",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"dri.gouv.sn/loi-61-10-nationalite\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-26T06:09:06.258Z",
   "error": "HTTP 404 from https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf"
 }

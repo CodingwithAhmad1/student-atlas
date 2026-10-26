@@ -197,7 +197,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   // Dual-nationality retry (2026-09-28).
   "migration.gov.rw/organic-law-nationality-2021": { country: "INTL", category: "citizenship" },
   "justice.gov.tn/code-nationalite": { country: "INTL", category: "citizenship" },
-  "dri.gouv.sn/loi-61-10-nationalite": { country: "INTL", category: "citizenship" },
   "sri.ro/legea-21-1991-cetatenie": { country: "INTL", category: "citizenship" },
   "adilet.zan.kz/law-on-citizenship": { country: "INTL", category: "citizenship", skipReason: "The page renders its content client-side, so the watcher sees only the title; verify this page manually (the site's API, /api/documents/by-ngr/Z910004800_?language=eng, returns the text)." },
   "saudipedia.com/saudi-nationality-law": { country: "INTL", category: "citizenship" },

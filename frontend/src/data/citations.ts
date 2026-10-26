@@ -1381,11 +1381,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.justice.gov.tn/fileadmin/medias/references_juridiques/codes_juridiques/NationaliteArabe.pdf",
     label: "Ministère de la Justice (Tunisie) — Code de la nationalité tunisienne (in Arabic)",
   },
-  "dri.gouv.sn/loi-61-10-nationalite": {
-    id: "dri.gouv.sn/loi-61-10-nationalite",
-    url: "https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf",
-    label: "Journal officiel du Sénégal — Loi n° 61-10 du 7 mars 1961 déterminant la nationalité sénégalaise (in French)",
-  },
   "sri.ro/legea-21-1991-cetatenie": {
     id: "sri.ro/legea-21-1991-cetatenie",
     url: "https://sri.ro/fisiere/legislatie/L21-1991.pdf",
