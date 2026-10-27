@@ -1,0 +1,22 @@
+{
+  "id": "20261027-1041--yyegm-meb-gov-tr-sss-unreachable",
+  "kind": "unreachable",
+  "sourceId": "yyegm.meb.gov.tr/sss",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ministry of National Education, General Directorate of Higher Education and Education Abroad — Sıkça Sorulan Sorular (in Turkish)",
+  "sourceUrl": "https://yyegm.meb.gov.tr/www/sss.php",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-27T10:41:29.637Z",
+  "updatedAt": "2026-10-27T10:41:29.637Z",
+  "oldHash": "2ae20505e69dda4ddbaee963e3c80f591fff015a59dcb2fbccd7df00ede16e5c",
+  "newHash": "unreachable-2026-10-27",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://yyegm.meb.gov.tr/www/sss.php: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://yyegm.meb.gov.tr/www/sss.php: fetch failed"
+}
