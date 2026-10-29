@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-29T21:51:58.949Z",
   "error": "Network error fetching https://cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment: fetch failed"
 }

@@ -1,0 +1,22 @@
+{
+  "id": "20261029-2151--xaydungchinhsach-chinhphu-vn-thong-tu-65-2026",
+  "kind": "change",
+  "sourceId": "xaydungchinhsach.chinhphu.vn/thong-tu-65-2026",
+  "relatedSourceIds": [],
+  "sourceLabel": "Government of Vietnam portal — Circular 65/2026/TT-BGDĐT on recognising foreign degrees for use in Vietnam (in Vietnamese)",
+  "sourceUrl": "https://xaydungchinhsach.chinhphu.vn/thong-tu-so-65-2026-tt-bgddt-quy-dinh-cong-nhan-van-bang-do-co-so-giao-duc-nuoc-ngoai-cap-de-su-dung-tai-viet-nam-119260813161727367.htm",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-29T21:51:58.949Z",
+  "updatedAt": "2026-10-29T21:51:58.949Z",
+  "oldHash": "318d235e8f76a8c697ba40a8d82d9d373e997d9e6b6529644d1c2b9071ea0633",
+  "newHash": "6d04e78555031076ffb72c07278cf744416ab66b26224093ce290199d2eb2d84",
+  "diff": "Index: xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\n===================================================================\n--- xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tprevious\n+++ xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tcurrent\n@@ -75,7 +75,8 @@\n Bộ Giáo dục và Đào tạo\n Đọc nhiều\n NGÀY VĂN HÓA VIỆT NAM - 24/11, người lao động được nghỉ, hưởng nguyên lương\n-(Chinhphu.vn) - Quốc hội đã thông qua Nghị quyết quy định ngày 24/11 hằng năm là “Ngày Văn hóa Việt Nam”, người lao động được nghỉ làm việc và hưởng nguyên lương. Bộ Nội vụ đề xuất 2 phương án nghỉ Ngày Văn hóa Việt Nam năm 2026.\n+Chính sách và cuộc sống\n+(Chinhphu.vn) - Quốc hội thông qua Nghị quyết quy định ngày 24/11 hằng năm là “Ngày Văn hóa Việt Nam”, người lao động được nghỉ làm việc và hưởng nguyên lương. Thủ tướng Chính phủ đã ban hành Kế hoạch tổ chức các hoạt động kỷ niệm \"Ngày Văn hóa Việt Nam\" giai đoạn 2026 - 2030\n Danh mục 111 NGÀNH được nhận HỌC BỔNG hằng tháng\n Hướng dẫn thực hiện chính sách\n (Chinhphu.vn) - Toàn văn Quyết định số 1826/QĐ-BGDĐT của Bộ GDĐT ban hành danh mục 111 đào tạo (thuộc 15 nhóm ngành) người học được nhận học bổng theo Nghị định số 179/2026/NĐ-CP của Chính phủ.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
