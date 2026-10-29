@@ -1,0 +1,22 @@
+{
+  "id": "20261029-1136--gov-uk-tb-clinics-vietnam",
+  "kind": "change",
+  "sourceId": "gov.uk/tb-clinics-vietnam",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Tuberculosis testing in Vietnam",
+  "sourceUrl": "https://www.gov.uk/government/publications/vietnam-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-vietnam",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-10-29T11:36:44.253Z",
+  "updatedAt": "2026-10-29T11:36:44.253Z",
+  "oldHash": "9af130ec29da38ba60456d02a32a95a0ca76f8493498b4ef73f3031be769f925",
+  "newHash": "e082c953dade88b88e81338005eccf0d37c7fe0794f13d1093902d6aaeac3980",
+  "diff": "Index: gov.uk/tb-clinics-vietnam\n===================================================================\n--- gov.uk/tb-clinics-vietnam\tprevious\n+++ gov.uk/tb-clinics-vietnam\tcurrent\n@@ -42,20 +42,18 @@\n 100 USD\n 40 USD\n IOM Hanoi\n-23rd Floor\n-Hanoi Landmark 72 Tower\n+10th Floor\n+Hanoi Keangnam Landmark 72 Tower\n Pham Hung Road\n-Me Tri Ward\n-Nam Tu Liem District\n+Yen Hoa Ward\n Hanoi\n Telephone: +84 24 3736 6258 / +84 9 6631 9066\n Email: iommedhan@iom.int\n-Fax: 04 3795 5883\n Test fees\n 11 years and above\n Below 11 years\n 100 USD\n-50 USD\n+40 USD\n The fee must be paid in Vietnamese Dong directly to the IOM clinic.\n Raffles Medical Hanoi\n 51 Xuan Dieu\n@@ -145,17 +143,16 @@\n 100 USD\n 40 USD\n IOM Ho Chi Minh City\n-1 B Pham Ngoc Thach\n-District 1\n+1B Pham Ngoc Thach\n+Sai Gon Ward\n Ho Chi Minh City\n Telephone: +84 28 3822 2057\n Email: iommedhcm@iom.int\n-Fax: +84 28 3822 1780\n Test fees\n 11 years and above\n Below 11 years\n 100 USD\n-50 USD\n+40 USD\n The fee must be paid in Vietnamese Dong directly to the IOM clinic.\n Raffles Medical Ho Chi Minh City\n 285B Dien Bien Phu\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
