@@ -1,0 +1,22 @@
+{
+  "id": "20261028-2144--egyptembassy-net-personal-legalization",
+  "kind": "change",
+  "sourceId": "egyptembassy.net/personal-legalization",
+  "relatedSourceIds": [],
+  "sourceLabel": "Embassy of Egypt in Washington — Authentication of Personal Documents",
+  "sourceUrl": "https://egyptembassy.net/consular-services/legalization/personal-legalization-procedure/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-10-28T21:44:09.581Z",
+  "updatedAt": "2026-10-28T21:44:09.581Z",
+  "oldHash": "601d757b8515263f34b33b234855b000d7db3ecc4dd0d6541f7a0b9072c82978",
+  "newHash": "50cb8e9f29bf73ee9423865a8749728b2a6ed9d2c06eb2e1c97bb63b497b19a1",
+  "diff": "Index: egyptembassy.net/personal-legalization\n===================================================================\n--- egyptembassy.net/personal-legalization\tprevious\n+++ egyptembassy.net/personal-legalization\tcurrent\n@@ -60,4 +60,25 @@\n Important Mailing Instructions\n We only accept mailers from the United States Postal Service (USPS). FedEx, UPS, and other carriers are not accepted.\n Please ensure your documents are sent in a USPS Priority Mail envelope (approximately 11″ x 8.5″).\n-Submissions received in unapproved packaging will remain pending and unprocessed until the correct envelope is provided.\n\\ No newline at end of file\n+Submissions received in unapproved packaging will remain pending and unprocessed until the correct envelope is provided.\n+Update Your Bank Account Information in Egypt (NBE / Banque Misr)\n+To update your bank account information with National Bank of Egypt (NBE) or Banque Misr, please follow these simple steps:\n+Complete the Data Update Form and bring it with you (Download file below).\n+Visit the Consular Section in person.\n+Present one original valid Egyptian identification document:\n+Egyptian National ID Card (valid), or\n+Egyptian Passport (valid).\n+Bring a clear color copy of the identification document presented (color copy preferred).\n+Sign the form before the consular officer.\n+Pay the signature authentication fee of $47.00 cash.\n+The bank will process your request and contact you directly if any additional documents or actions are required.\n+Important Notes\n+You do not need a notification from the bank to use this service.\n+The service is available to all customers of National Bank of Egypt and Banque Misr.\n+Please review the bank’s requirements and conditions before your visit.\n+Bank Links\n+Banque Misr:\n+https://www.banquemisr.com/Home/SMEs/Retail%20Banking/Pages/Initiative%20Update%20Your%20Data%20in%20Egypt?sc_lang=ar-EG\n+National Bank of Egypt (NBE):\n+https://www.nbe.com.eg/NBE/E/#/AR/ProductCategory?inParams=%7B%22CategoryID%22%3A%22UpdateYourKYCInitiative%22%7D\n+BANK INFORMATION UPDATEDownload\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
