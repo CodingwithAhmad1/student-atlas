@@ -65,7 +65,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     usEntryRestriction: { value: "none", verifiedAt: "2026-09-27" },
     ukVisaBrake: { value: "none", verifiedAt: "2026-09-27" },
     auVisitorStream: { value: "visitor600", verifiedAt: "2026-09-27" },
-    auBiometricsRequired: { value: false, verifiedAt: "2026-09-27" },
+    auBiometricsRequired: { value: true, verifiedAt: "2026-11-02" },
     auHealthExamLikely: { value: true, verifiedAt: "2026-09-27" },
     ukDifferentialEvidence: { value: false, verifiedAt: "2026-09-27" },
     ukTbTestRequired: { value: true, verifiedAt: "2026-09-27" },
