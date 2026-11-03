@@ -1,0 +1,22 @@
+{
+  "id": "20261103-1252--ociservices-gov-in",
+  "kind": "change",
+  "sourceId": "ociservices.gov.in",
+  "relatedSourceIds": [],
+  "sourceLabel": "Government of India — Overseas Citizenship of India (OCI) Services",
+  "sourceUrl": "https://ociservices.gov.in/onlineOCI",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-03T12:52:50.866Z",
+  "updatedAt": "2026-11-03T12:52:50.866Z",
+  "oldHash": "1556dcf1099af2e6816de9e2fb382b3cfb19f37f8cc340f42c99858a4dddb018",
+  "newHash": "614041d12849a57245d0fa1629202b885b80f56b9c3634b26b51092dfba2b54b",
+  "diff": "Index: ociservices.gov.in\n===================================================================\n--- ociservices.gov.in\tprevious\n+++ ociservices.gov.in\tcurrent\n@@ -99,7 +99,7 @@\n OCI Application Process Flow\n OCI Miscellaneous Application Process Flow\n OCI Miscellaneous Application Process Flow\n-The Ministry of Home Affairs has launched e-OCI card, which allows OCI holders to download a digital version of OCI card. Please refer to the SOPs and FAQs under the \"Useful Links\" for eOCI card generation and Email ID updation service. | Foreigners and OCI Card holders can complete and submit the e-Arrival card online within 72 hours before your arrival in India at\n+Penalty payment of USD 25 for delayed updation of passport details on the OCI portal has been waived off till 31st December, 2026. Kindly update your passport details in the OCI at earliest. | The Ministry of Home Affairs has launched e-OCI card, which allows OCI holders to download a digital version of OCI card. Please refer to the SOPs and FAQs under the \"Useful Links\" for eOCI card generation and Email ID updation service. | Foreigners and OCI Card holders can complete and submit the e-Arrival card online within 72 hours before your arrival in India at\n boi.gov.in or\n indianvisaonline.gov.in\n or via official 'Indian Visa Su-Swagatam' Mobile App.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

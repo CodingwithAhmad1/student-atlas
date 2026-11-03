@@ -1,0 +1,22 @@
+{
+  "id": "20261103-1252--nysc-gov-ng-foreign-trained-graduates-unreachable",
+  "kind": "unreachable",
+  "sourceId": "nysc.gov.ng/foreign-trained-graduates",
+  "relatedSourceIds": [],
+  "sourceLabel": "NYSC — Foreign Trained Graduates Requirements",
+  "sourceUrl": "https://www.nysc.gov.ng/foreignmobreg.html",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-03T12:52:50.866Z",
+  "updatedAt": "2026-11-03T12:52:50.866Z",
+  "oldHash": "096093d965524814472f0e893a9f4e009db8ea82661c2c877c094962c85055a9",
+  "newHash": "unreachable-2026-11-03",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.nysc.gov.ng/foreignmobreg.html: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.nysc.gov.ng/foreignmobreg.html: fetch failed"
+}
