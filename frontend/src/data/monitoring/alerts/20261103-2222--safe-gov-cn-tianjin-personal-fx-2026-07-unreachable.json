@@ -1,0 +1,22 @@
+{
+  "id": "20261103-2222--safe-gov-cn-tianjin-personal-fx-2026-07-unreachable",
+  "kind": "unreachable",
+  "sourceId": "safe.gov.cn/tianjin-personal-fx-2026-07",
+  "relatedSourceIds": [],
+  "sourceLabel": "国家外汇管理局天津市分局 — 2026年外汇管理互联网信息：个人外汇（07） (in Chinese)",
+  "sourceUrl": "https://www.safe.gov.cn/tianjin/2026/0706/3085.html",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-03T22:22:03.689Z",
+  "updatedAt": "2026-11-03T22:22:03.689Z",
+  "oldHash": "be4299c33a408242fd9b6f5af9c2d8a0492435d77407b2744c5421664aedef93",
+  "newHash": "unreachable-2026-11-03",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.safe.gov.cn/tianjin/2026/0706/3085.html: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.safe.gov.cn/tianjin/2026/0706/3085.html: fetch failed"
+}
