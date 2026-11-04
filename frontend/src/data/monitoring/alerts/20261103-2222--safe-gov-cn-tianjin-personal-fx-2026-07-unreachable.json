@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.safe.gov.cn/tianjin/2026/0706/3085.html: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-04T13:04:31.225Z",
   "error": "Network error fetching https://www.safe.gov.cn/tianjin/2026/0706/3085.html: fetch failed"
 }
