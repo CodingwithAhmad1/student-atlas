@@ -1,0 +1,22 @@
+{
+  "id": "20261104-2242--lex-uz-military-duty-law",
+  "kind": "change",
+  "sourceId": "lex.uz/military-duty-law",
+  "relatedSourceIds": [],
+  "sourceLabel": "Lex.uz (Ministry of Justice) — Law on Universal Military Duty and Military Service (in Russian)",
+  "sourceUrl": "https://lex.uz/ru/docs/78721",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-04T22:42:22.869Z",
+  "updatedAt": "2026-11-04T22:42:22.869Z",
+  "oldHash": "801b907df09ee213d6d6cfe2e2f3bdbbe1bbd15a4ab6979357fa003c8de1a0ad",
+  "newHash": "ed7e1ccb5abc0b6ae5ec2e92f1235db39379921c7c61f1a8a97fcae83bb11c6a",
+  "diff": "Index: lex.uz/military-duty-law\n===================================================================\n--- lex.uz/military-duty-law\tprevious\n+++ lex.uz/military-duty-law\tcurrent\n@@ -13,41 +13,6 @@\n Facebook\n Twitter\n Instagram\n-Все\n-Ссылка на последующую редакцию\n-Ссылка на предыдущую редакцию\n-Индексация по ОКОЗ\n-Индексация по ТСЗ\n-Источники изменений\n-Источники опубликования\n-03.01.2025\n-29.11.2023 01\n-18.05.2022\n-14.03.2022\n-30.09.2021\n-21.04.2021\n-26.08.2020\n-04.12.2019\n-05.09.2019 01\n-19.02.2019\n-24.07.2018\n-19.04.2018\n-14.06.2017\n-24.09.2016\n-23.12.2009\n-12.12.2008\n-11.09.2008\n-23.08.2006\n-18.12.2004\n-11.11.2003\n-11.02.2003\n-Вид\n-Рус\n-Eng\n-Ўзб\n-O’zb\n-Рус|Ўзб\n-Рус|O‘zb\n [ОКОЗ:\n 1.15.00.00.00 Оборона / 15.11.00.00 Воинская обязанность / 15.11.01.00 Общие положения;\n 2.15.00.00.00 Оборона / 15.12.00.00 Военная служба / 15.12.01.00 Общие положения]\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

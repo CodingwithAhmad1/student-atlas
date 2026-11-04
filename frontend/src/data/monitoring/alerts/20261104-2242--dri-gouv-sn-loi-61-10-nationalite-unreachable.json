@@ -1,0 +1,22 @@
+{
+  "id": "20261104-2242--dri-gouv-sn-loi-61-10-nationalite-unreachable",
+  "kind": "unreachable",
+  "sourceId": "dri.gouv.sn/loi-61-10-nationalite",
+  "relatedSourceIds": [],
+  "sourceLabel": "Journal officiel du Sénégal — Loi n° 61-10 du 7 mars 1961 déterminant la nationalité sénégalaise (in French)",
+  "sourceUrl": "https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-04T22:42:22.869Z",
+  "updatedAt": "2026-11-04T22:42:22.869Z",
+  "oldHash": "c19a192dff1f2561798a1b02a03e787d3cea382f0730e35cc94c2fb388bcd8cb",
+  "newHash": "unreachable-2026-11-04",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 404 from https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf"
+}
