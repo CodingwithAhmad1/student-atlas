@@ -13,10 +13,13 @@
   "newHash": "523abf73ebed31902e43e95fa39a4e7acca9c847f5afd70e7b4cb3522758e2ea",
   "diff": "Index: cscuk.fcdo.gov.uk/commonwealth-masters-scholarships\n===================================================================\n--- cscuk.fcdo.gov.uk/commonwealth-masters-scholarships\tprevious\n+++ cscuk.fcdo.gov.uk/commonwealth-masters-scholarships\tcurrent\n@@ -21,8 +21,8 @@\n Intended Beneficiaries: Commonwealth Master’s Scholarships are for candidates from eligible low and middle income Commonwealth countries, to undertake full-time taught Master’s study at a UK university.\n These scholarships are offered under the six CSC development themes.\n How to apply\n-Applications for Commonwealth Master’s Scholarships for the 2027/28 academic year are now open.\n-The closing date for applications is 16:00 BST on Tuesday 20 October.\n+Applications for Commonwealth Master’s Scholarships for the 2027/28 academic year are now closed.\n+The closing date for applications was 16:00 BST on Tuesday 20 October.\n Please note that this opportunity is for study in the UK beginning in September/October 2027.\n Applications to the CSC are made using the application system, CSC Central.\n The CSC is unable to accept any applications or documentation not submitted via CSC Central.\n@@ -35,6 +35,7 @@\n The save function should be used to avoid loss of data.\n Refreshing the browser window will cause candidates to exit the form and will result in any unsaved data being lost.\n Applications may not be edited after submitting.\n+For security reasons, the passport is not visible when viewing a submitted application.\n Candidates are advised to complete and submit applications as early as possible as we anticipate that the online application system will be very busy in the days leading up to the application deadline and we are not able to accept late applications if you run out of time to submit.\n Users should use system back buttons rather than those on the browser. Please note that clicking on the CSC logo will return users to the log in screen where they will need to pass 2FA again to enter again.\n As well as applying to the CSC, applicants must apply to a nominator.\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The scholarship page added a note that passports are hidden when viewing a submitted application; the eligibility and terms we describe are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-19T06:08:07.119Z",
   "error": null
 }

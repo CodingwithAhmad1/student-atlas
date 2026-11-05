@@ -13,10 +13,34 @@
   "newHash": "unreachable-2026-10-08",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "Chile's old nationality page is gone, so the guide now cites the Chilean consular service's page, which confirms Chileans lose their nationality only by formally renouncing it.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"consulado.gob.cl/recuperacion-nacionalidad\": {\n    id: \"consulado.gob.cl/recuperacion-nacionalidad\",\n    url: \"https://www.consulado.gob.cl/servicios/recuperacion-de-la-nacionalidad-chilena\",\n    label: \"Consulado.gob.cl — Recuperación de la nacionalidad chilena (in Spanish)\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-27\", citationId: \"chile.gob.cl/nacionalidad\", note: \"The cited official page is in Spanish.\" },",
+        "newText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-10-12\", citationId: \"consulado.gob.cl/recuperacion-nacionalidad\", note: \"The cited official page is in Spanish.\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"chile.gob.cl/nacionalidad\": {\n    id: \"chile.gob.cl/nacionalidad\",\n    url: \"https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad\",\n    label: \"Gobierno de Chile (Chile en el Exterior) — Nacionalidad (in Spanish)\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"chile.gob.cl/nacionalidad\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-12T06:14:32.379Z",
   "error": "HTTP 404 from https://www.chile.gob.cl/chile/tramites/para-chilenos/documentos/nacionalidad"
 }

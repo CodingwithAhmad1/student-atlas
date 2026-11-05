@@ -13,10 +13,39 @@
   "newHash": "unreachable-2026-10-19",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 503 from https://education.gov.ng/attestation-of-academic-documents/). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Nigerian Ministry of Education's attestation page was removed, so the guide now cites the ministry's Education Support Services page and no longer lists the specific documents checked.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"education.gov.ng/education-support-services\": {\n    id: \"education.gov.ng/education-support-services\",\n    url: \"https://education.gov.ng/education-support-services/\",\n    label: \"Federal Ministry of Education — Department of Education Support Services\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/nationalities/nigeria.ts",
+        "oldText": "afterBlockId: \"us-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"The Federal Ministry of Education attests academic qualifications awarded in Nigeria for study abroad, checking SSCE results, O'Level certificates and transcripts. [CITE: education.gov.ng/attestation]",
+        "newText": "afterBlockId: \"us-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"The Federal Ministry of Education authenticates Nigerian academic qualifications for further studies abroad. [CITE: education.gov.ng/education-support-services]"
+      },
+      {
+        "file": "frontend/src/data/nationalities/nigeria.ts",
+        "oldText": "afterBlockId: \"uk-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"The Federal Ministry of Education attests academic qualifications awarded in Nigeria for study abroad, checking SSCE results, O'Level certificates and transcripts. [CITE: education.gov.ng/attestation]",
+        "newText": "afterBlockId: \"uk-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"The Federal Ministry of Education authenticates Nigerian academic qualifications for further studies abroad. [CITE: education.gov.ng/education-support-services]"
+      },
+      {
+        "file": "frontend/src/data/nationalities/nigeria.ts",
+        "oldText": "afterBlockId: \"au-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"The Federal Ministry of Education attests academic qualifications awarded in Nigeria for study abroad, checking SSCE results, O'Level certificates and transcripts. [CITE: education.gov.ng/attestation]",
+        "newText": "afterBlockId: \"au-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"The Federal Ministry of Education authenticates Nigerian academic qualifications for further studies abroad. [CITE: education.gov.ng/education-support-services]"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"education.gov.ng/attestation\": {\n    id: \"education.gov.ng/attestation\",\n    url: \"https://education.gov.ng/attestation-of-academic-documents/\",\n    label: \"Federal Ministry of Education — Attestation of Academic Documents\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-10-26T06:13:35.149Z",
   "error": "HTTP 503 from https://education.gov.ng/attestation-of-academic-documents/"
 }

@@ -13,10 +13,13 @@
   "newHash": "bc64b7a1d2b19c7b067cbf77b4283b1ac8925b6a19180f48fe723727e6d45808",
   "diff": "Index: gov.uk/tb-clinics-russia\n===================================================================\n--- gov.uk/tb-clinics-russia\tprevious\n+++ gov.uk/tb-clinics-russia\tcurrent\n@@ -48,12 +48,27 @@\n olga.gilinskaya@gmail.com\n You can telephone Dr Olga Gilinskaya on +7 913 374 5775 during working hours Mondays to Fridays, 10am to 6pm.\n Yekaterinburg clinic\n-Health 365”\n+“Health 365”\n 83 Kuznetchnaya Street\n-Sverdlovsk Region\n+“Health 365” Clinic\n Yekaterinburg\n+Russia\n+620075\n Telephone: +7 343 270 1717\n-Email: info@zdorovo365.ru\n+Email:\n+yankaz@yandex.ru\n+visa-info@zdorovo365.ru\n+Website: www.zdorovo365.ru\n+Operating hours:\n+Monday to Friday, 8am to 9pm\n+Saturday, 9am to 4pm\n+Test fees\n+Medical examination\n+6500 Rub\n+Chest X-ray\n+1650 Rub (with the usual exception of children under the age of 11)\n+Sputum TB-Culture Test\n+3150 Rub (if needed due to medical indications)\n Attending the clinic\n You should contact one of the approved clinics to book an appointment and make it clear you need the test for a UK visa application.\n You can expect to get an appointment within a few days of your request. At busy times you may have to wait 10 days for an appointment, especially during the UK student visa peak season between June and September.\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The Yekaterinburg clinic's contact details and fees were updated; the four cities with approved clinics that the guide lists are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-02T06:04:40.519Z",
   "error": null
 }

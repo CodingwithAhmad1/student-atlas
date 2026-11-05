@@ -13,10 +13,13 @@
   "newHash": "383235735470a2b0cd9c4f9566773f1d9768c97b11043b265c49569973b2e799",
   "diff": "Index: gov.uk/sponsor-migrants/sponsor-a-student\n===================================================================\n--- gov.uk/sponsor-migrants/sponsor-a-student\tprevious\n+++ gov.uk/sponsor-migrants/sponsor-a-student\tcurrent\n@@ -5,18 +5,14 @@\n UK Visas and Immigration\n Published:\n 1 October 2013\n-1 June 2026\n+9 October 2026\n —\n See all updates\n Documents\n-Applying for a Student sponsor licence (accessible)\n-HTML\n Applying for a Student sponsor licence\n-PDF, 776 KB, 81 pages\n-Sponsorship duties (accessible)\n-HTML\n+PDF, 1.22 MB, 89 pages\n Sponsorship duties\n-PDF, 1.13 MB, 112 pages\n+PDF, 1.16 MB, 116 pages\n Student sponsor compliance (accessible)\n HTML\n Student sponsor compliance\n@@ -34,7 +30,10 @@\n We cannot answer any other questions through this form.\n Read our accessible documents policy.\n Updates to this page\n+9 October 2026\n Show all updates\n+9 October 2026\n+Updated Applying for a Student sponsor licence and Sponsorship duties in line with changes to the Immigration Rules.\n 1 June 2026\n 'Student sponsor compliance' has been updated. Changes are detailed in the 'changes since last publication' section.\n 7 April 2026\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The Home Office published new versions of its student sponsor guidance; universities must still report students who stop attending, as the guide says.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:18:43.267Z",
   "error": null
 }

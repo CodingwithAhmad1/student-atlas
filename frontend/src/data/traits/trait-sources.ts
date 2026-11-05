@@ -43,7 +43,7 @@ export const traitSources: Record<TraitKey, TraitSource> = {
   auBiometricsRequired: {
     citationId: "immi.homeaffairs.gov.au/biometrics",
     checkKind: "monitored",
-    verifiedAt: "2026-09-27",
+    verifiedAt: "2026-11-02",
     note: "Country/location table of Australian Biometrics Collection Centres (applicants in a listed country give biometrics).",
   },
   auHealthExamLikely: {

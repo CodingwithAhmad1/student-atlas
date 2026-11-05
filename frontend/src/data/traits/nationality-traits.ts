@@ -65,7 +65,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     usEntryRestriction: { value: "none", verifiedAt: "2026-09-27" },
     ukVisaBrake: { value: "none", verifiedAt: "2026-09-27" },
     auVisitorStream: { value: "visitor600", verifiedAt: "2026-09-27" },
-    auBiometricsRequired: { value: false, verifiedAt: "2026-09-27" },
+    auBiometricsRequired: { value: true, verifiedAt: "2026-11-02" },
     auHealthExamLikely: { value: true, verifiedAt: "2026-09-27" },
     ukDifferentialEvidence: { value: false, verifiedAt: "2026-09-27" },
     ukTbTestRequired: { value: true, verifiedAt: "2026-09-27" },
@@ -276,7 +276,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-28", citationId: "icric.gov.so/constitution-chapters-1-4", note: "The cited official page is in Somali." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-26" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   guatemala: {
@@ -408,7 +408,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-27", citationId: "presidence.cd/constitution-2011", note: "The cited official page is in French." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-26" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   yemen: {
@@ -1552,7 +1552,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "chile.gob.cl/nacionalidad", note: "The cited official page is in Spanish." },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-10-12", citationId: "consulado.gob.cl/recuperacion-nacionalidad", note: "The cited official page is in Spanish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   senegal: {
@@ -1574,7 +1574,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-09-28", citationId: "dri.gouv.sn/loi-61-10-nationalite", note: "Article 18 of the 1961 nationality code makes the loss automatic for an adult who voluntarily takes another nationality. The cited official page is in French." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-26" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   netherlands: {

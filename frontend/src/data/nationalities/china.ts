@@ -46,7 +46,7 @@ const overlay: NationalityOverlay = {
             blocks: [
               {
                 type: "paragraph",
-                text: "Chinese nationals with a 10-year B-1/B-2 visa in a Chinese passport must also hold a valid **EVUS enrollment** (at evus.gov) to travel; airlines may refuse boarding without one. An enrollment generally lasts two years, or until the visa or passport expires if sooner. [CITE: cbp.gov/evus-faq]",
+                text: "Chinese nationals with a 10-year B-1/B-2 visa in a Chinese passport must also hold a valid **EVUS enrollment** (at evus.gov) to travel; travellers without a valid enrollment cannot get a boarding pass. [CITE: cbp.gov/evus-faq]",
               },
             ],
           },

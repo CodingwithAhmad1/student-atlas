@@ -13,10 +13,13 @@
   "newHash": "63c2f4c4bacba26847bc47e9e37af4879ddcb533603c6e5338e967a233aa1641",
   "diff": "Index: ministeriodegobierno.gob.ec/requisitos-salir-del-pais\n===================================================================\n--- ministeriodegobierno.gob.ec/requisitos-salir-del-pais\tprevious\n+++ ministeriodegobierno.gob.ec/requisitos-salir-del-pais\tcurrent\n@@ -46,5 +46,5 @@\n Imprimir\n Mail\n Entérate\n-150.000 jóvenes ya tienen su primera experiencia laboral\n+700.000 nuevas experiencias laborales\n Proyectos de vivienda .\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only a news headline in the page sidebar changed; Ecuador's travel rules for minors are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-26T06:20:50.285Z",
   "error": null
 }

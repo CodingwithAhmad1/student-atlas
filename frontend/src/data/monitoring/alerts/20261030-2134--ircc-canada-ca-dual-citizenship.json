@@ -13,10 +13,13 @@
   "newHash": "84ae401df317b8af3c2835ce7ea21f251206b5310974254c3c794310c623261c",
   "diff": "Index: ircc.canada.ca/dual-citizenship\n===================================================================\n--- ircc.canada.ca/dual-citizenship\tprevious\n+++ ircc.canada.ca/dual-citizenship\tcurrent\n@@ -6,4 +6,4 @@\n Travelling as a dual citizen\n Page details\n Date modified:\n-2026-09-28\n\\ No newline at end of file\n+2026-11-03\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the 'date modified' stamp on the Canadian government's dual citizenship page changed; Canada still allows dual citizenship.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-02T06:07:12.129Z",
   "error": null
 }

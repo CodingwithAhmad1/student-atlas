@@ -13,10 +13,13 @@
   "newHash": "1d9175b58304b440f429fd5f54d4a112cf3fb1324ba1f51f15bfe8ca1e8f49b7",
   "diff": "Index: gov.uk/student-visa/apply\n===================================================================\n--- gov.uk/student-visa/apply\tprevious\n+++ gov.uk/student-visa/apply\tcurrent\n@@ -6,7 +6,7 @@\n have enough money to support yourself and pay for your course - the amount will vary depending on your circumstances\n can speak, read, write and understand English\n have consent from your parents if you’re 16 or 17 - you’ll need evidence of this when you apply\n-If you’re 16 or 17 and you want to study at an independent school in the UK, you may be eligible for a Child Student visa instead.\n+If you’re 16 or 17, you may be eligible for a Child Student visa instead.\n This visa has replaced the Tier 4 (General) student visa.\n When to apply\n When you can apply depends on whether you’re applying from inside or outside the UK.\n@@ -50,14 +50,15 @@\n You may be able to bring your partner and children (‘dependants’).\n What you can and cannot do\n You can:\n-study\n+study on a further or higher education course\n work as a student union sabbatical officer\n+do a traineeship through the Erasmus+ programme with a participating licensed student sponsor\n+study through the Erasmus+ programme at a participating academy or local authority-funded school (also known as a maintained school)\n You may be able to work - how much depends on what you’re studying and whether you’re working in or out of term-time.\n You cannot:\n claim public funds (benefits) and pensions\n work in certain jobs, for example as a professional sportsperson or sports coach\n be self-employed\n-study at an academy or a local authority-funded school (also known as a maintained school)\n If your application is successful, you’ll be told what you can and cannot do on a Student visa.\n View a printable version of the whole guide\n This page is Part of\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "GOV.UK added Erasmus+ study and traineeship options to the Student visa page; the fee, application steps and other details we state are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:08:40.779Z",
   "error": null
 }

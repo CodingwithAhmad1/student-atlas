@@ -13,10 +13,13 @@
   "newHash": "30ca803d34d98c740047a8f44adfbaf070a0993e5c6870771698ab4096dd5172",
   "diff": "Index: gov.uk/foreign-travel-advice/myanmar/safety\n===================================================================\n--- gov.uk/foreign-travel-advice/myanmar/safety\tprevious\n+++ gov.uk/foreign-travel-advice/myanmar/safety\tcurrent\n@@ -10,7 +10,7 @@\n This guide also has safety and security advice for regions of Myanmar.\n Terrorism\n There is a high threat of terrorist attack globally affecting UK interests and British nationals, including from groups and individuals who view the UK and British nationals as targets. Stay aware of your surroundings at all times.\n-UK Counter Terrorism Policing has information and advice on staying safe abroad and what to do in the event of a terrorist attack. Find out how to reduce your risk from terrorism while abroad.\n+UK Counter Terrorism Policing has information and advice on staying safe and what to do in the event of a terrorist attack. Find out how to reduce your risk from terrorism while abroad.\n Terrorism in Myanmar\n Terrorist attacks in Myanmar cannot be ruled out.\n Attacks could be indiscriminate including in places visited by foreign nationals. Stay aware of your surroundings, keep up to date with local media reports and follow the advice of trusted local sources.\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "A small wording change in the terrorism paragraph of the Myanmar travel advice; the conscription warning we cite is unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-10-12T06:10:15.219Z",
   "error": null
 }
