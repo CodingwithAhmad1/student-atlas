@@ -1,0 +1,22 @@
+{
+  "id": "20261104-2242--lex-uz-citizenship-law-zru-610",
+  "kind": "change",
+  "sourceId": "lex.uz/citizenship-law-zru-610",
+  "relatedSourceIds": [],
+  "sourceLabel": "National Database of Legislation (lex.uz) — Law No. ZRU-610 \"On Citizenship of the Republic of Uzbekistan\" (in Russian)",
+  "sourceUrl": "https://lex.uz/docs/4761986",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-04T22:42:22.869Z",
+  "updatedAt": "2026-11-04T22:42:22.869Z",
+  "oldHash": "6d754a42b90b8d402c29f3c22c9dca72a36105307215cf506f21aaabe8d30e3c",
+  "newHash": "ee8912375203ef5ca5f79886eefbe5ecfc4652254fd026ee24df6fbf6697812d",
+  "diff": "Index: lex.uz/citizenship-law-zru-610\n===================================================================\n--- lex.uz/citizenship-law-zru-610\tprevious\n+++ lex.uz/citizenship-law-zru-610\tcurrent\n@@ -13,26 +13,6 @@\n Facebook\n Twitter\n Instagram\n-Ҳаммаси\n-Кейинги таҳрирга ҳавола\n-Олдинги таҳрирга ҳавола\n-ҚТУК бўйича индекслаш\n-ҚМҚ бўйича индекслаш\n-Ўзгартиришлар манбаси\n-Расмий нашр манбаси\n-21.09.2024\n-07.02.2024\n-29.11.2023 01\n-14.03.2022\n-15.06.2021\n-21.04.2021\n-15.09.2020\n-Кўриниш\n-Рус\n-Ўзб\n-O’zb\n-Рус|Ўзб\n-Рус|O‘zb\n [ОКОЗ:\n 1.01.00.00.00 Конституционный строй / 01.05.00.00 Население / 01.05.01.00 Гражданство]\n [ТСЗ:\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

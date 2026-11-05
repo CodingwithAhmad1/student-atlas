@@ -13,29 +13,13 @@
   "newHash": "unreachable-2026-10-23",
   "diff": "",
   "diffTruncated": false,
-  "significance": "meaningful",
+  "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf). The page may have moved — the citation URL needs a manual review.",
-  "status": "approved",
+  "status": "dismissed",
   "resolution": {
-    "note": "The official copy of Somalia's amended constitution can no longer be opened, so the guide no longer says whether Somalia allows dual nationality.",
-    "edits": [
-      {
-        "file": "frontend/src/data/traits/nationality-traits.ts",
-        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-28\", citationId: \"icric.gov.so/constitution-chapters-1-4\", note: \"The cited official page is in Somali.\" },",
-        "newText": "dualNationalityAtHome: { value: \"unknown\", verifiedAt: \"2026-10-26\" },"
-      },
-      {
-        "file": "frontend/src/data/citations.ts",
-        "oldText": "\"icric.gov.so/constitution-chapters-1-4\": {\n    id: \"icric.gov.so/constitution-chapters-1-4\",\n    url: \"https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf\",\n    label: \"Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)\",\n  },",
-        "newText": ""
-      },
-      {
-        "file": "frontend/src/data/source-overrides.ts",
-        "oldText": "\"icric.gov.so/constitution-chapters-1-4\": { country: \"INTL\", category: \"citizenship\" },",
-        "newText": ""
-      }
-    ]
+    "note": "The source is reachable again.",
+    "edits": []
   },
-  "resolvedAt": "2026-10-26T06:12:22.630Z",
+  "resolvedAt": "2026-11-03T12:52:50.866Z",
   "error": "HTTP 403 from https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf"
 }
