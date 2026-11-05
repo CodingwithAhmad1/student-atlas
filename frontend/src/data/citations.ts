@@ -1521,4 +1521,9 @@ export const citations: Record<string, Citation> = {
     url: "https://www.joradp.dz/FTP/jo-francais/2014/F2014048.pdf",
     label: "Journal officiel de la République algérienne — JO n° 48 du 10 août 2014 (loi 14-06 relative au service national) (in French)",
   },
+  "icric.gov.so/constitution-chapters-1-4": {
+    id: "icric.gov.so/constitution-chapters-1-4",
+    url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
+    label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
+  },
 };
