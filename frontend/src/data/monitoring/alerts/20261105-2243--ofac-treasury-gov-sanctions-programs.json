@@ -1,0 +1,22 @@
+{
+  "id": "20261105-2243--ofac-treasury-gov-sanctions-programs",
+  "kind": "change",
+  "sourceId": "ofac.treasury.gov/sanctions-programs",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Treasury OFAC — Sanctions Programs and Country Information",
+  "sourceUrl": "https://ofac.treasury.gov/sanctions-programs-and-country-information",
+  "country": "INTL",
+  "category": "eligibility",
+  "detectedAt": "2026-11-05T22:43:22.123Z",
+  "updatedAt": "2026-11-05T22:43:22.123Z",
+  "oldHash": "864d32c0fac269ae01b76a96a00d58bd9536308db1523098d47157250ed49cc7",
+  "newHash": "f3f40a1b8914cc9ad8f5d9c2214f6c22aa7a6cb1133c9b64bcf9aa9dbf5bd1a0",
+  "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -37,9 +37,9 @@\n Countering America's Adversaries Through Sanctions Act-Related Sanctions\n Feb 24, 2026\n Cuba Sanctions\n-Oct 15, 2026\n+Nov 05, 2026\n Cyber-Related Sanctions\n-Oct 19, 2026\n+Nov 05, 2026\n Democratic Republic of the Congo-Related Sanctions\n Oct 28, 2026\n Foreign Interference in a United States Election Sanctions\n@@ -83,7 +83,7 @@\n Sudan and Darfur Sanctions\n Jun 26, 2026\n Transnational Criminal Organizations\n-Oct 01, 2026\n+Nov 05, 2026\n Ukraine-/Russia-related Sanctions\n Oct 09, 2026\n Venezuela-Related Sanctions\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

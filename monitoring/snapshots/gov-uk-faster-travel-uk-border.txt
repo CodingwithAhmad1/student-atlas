@@ -5,7 +5,7 @@ This publication is available at https://www.gov.uk/government/publications/gett
 During popular travel periods, such as school holidays or Christmas holidays, we expect to see an increase in the number of travellers entering the UK border.
 We recommend that you follow the faster travel advice below to help us process you quickly and improve your experience at the UK border.
 Arriving at the border
-Always keep your passport and travel documents with you – don’t be tempted to pack them away in your luggage as you will need to show your passport on your arrival.
+Always keep your passport and travel documents with you – don’t be tempted to pack them away in your luggage as you may need to show your passport on your arrival.
 To avoid delays, when you arrive at UK passport control, please:
 remove your passport from its cover and have it open at the photo page
 take off any hats, headphones and sunglasses
@@ -15,19 +15,22 @@ Use the eGates for quicker entry
 There are over 290 eGates in place at 15 air and rail ports to enable quicker travel into the UK.
 You can normally use eGates if you:
 have a biometric symbol on the cover of your passport
-have a valid immigration status (a valid ETA, eVisa, digital record of exemption, or are a British or Irish passport holder)
 are 8 years old or over (8 to 17 year olds must be accompanied by an adult)
 are at least 120cm tall
-are one of the following:
-a British citizen
+are a British or Irish citizen or
+have a valid immigration status (a valid ETA, eVisa, digital record of exemption and are one of the following:
 a national of an EU country, Australia, Canada, Iceland, Japan, Liechtenstein, New Zealand, Norway, Singapore, South Korea, Switzerland or the USA
 a member of the Registered Traveller Service
-Adults travelling alone with children under 18 years old should use the eGates first. If 2 or more adults are travelling with children, you should follow this process when using the eGates:
+Only one person can use the eGates at a time. Adults travelling alone with children under 18 years old should use the eGates first. If 2 or more adults are travelling with children, you should follow this process when using the eGates:
 1. Adult 1
 2. Child or children
 3. Adult 2 or final adult
 Those travelling with ID cards cannot use the eGates.
-Reasons you may not get through the eGates
+Reasons you may not get through the eGates.
+Contactless travel
+Contactless travel is a new type of facial comparison technology that lets eligible passengers pass through eGates without presenting a passport.
+It is available for eGate eligible nationals at participating airports.
+See the contactless travel factsheet for more information.
 Getting your passport stamped by a Border Force officer
 You must see a Border Force officer and get your passport stamped if you’re coming to the UK:
 with a Temporary Work - Creative Worker Certificate of Sponsorship for short-term assignments (up to 3 months)
