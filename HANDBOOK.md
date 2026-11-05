@@ -302,14 +302,15 @@ them blocks anything.
   `refresh_alert` instead, which auto-closed it. A watcher check that treats
   such error pages as fetch failures would avoid the alert. Happened again
   on 2026-10-31 (closed the same way on 2026-11-02).
-- 2026-10-26: three dual-nationality rows were retired to "unknown" with no
-  archive check: Senegal (dri.gouv.sn under maintenance, the law PDF 404),
-  Somalia (icric.gov.so HTTP 403; parliament.gov.so only has the superseded
-  2012 text) and DR Congo (presidence.cd connection reset). Restore them
-  when those sites, or archived copies, can be read again.
+- 2026-10-26: two dual-nationality rows are still "unknown" after being
+  retired with no archive check: Senegal (dri.gouv.sn under maintenance, the
+  law PDF 404, still 404 on 2026-11-05) and DR Congo (presidence.cd connection
+  reset). Restore them when those sites, or archived copies, can be read
+  again. Somalia was retired the same way and restored on 2026-11-05 when
+  icric.gov.so answered again (Article 8(3)).
 - 2026-10-26: the watcher saved a bot-check page ("Please wait while your
-  request is being verified...") as the baseline of three sources
-  (avkd.tj, coursupreme.org.gn, dri.gouv.sn), so the real text later showed
+  request is being verified...") as the baseline of four sources
+  (avkd.tj, coursupreme.org.gn, dri.gouv.sn, icric.gov.so), so the real text later showed
   up as a change alert. Treating such interstitials as fetch failures would
   avoid both the bad baseline and the alert.
 - 2026-11-02: the Algerian consulate page in Paris
