@@ -1,0 +1,22 @@
+{
+  "id": "20261106-2211--consulado-gob-cl-salir-con-menor",
+  "kind": "change",
+  "sourceId": "consulado.gob.cl/salir-con-menor",
+  "relatedSourceIds": [],
+  "sourceLabel": "Consulado.gob.cl — Para salir de Chile con un menor de edad (in Spanish)",
+  "sourceUrl": "https://www.consulado.gob.cl/quiero-viajar/info-para-viajar-fuera-de-chile/para-salir-de-chile-con-un-menor-de-edad",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-06T22:11:40.134Z",
+  "updatedAt": "2026-11-06T22:11:40.134Z",
+  "oldHash": "fbf1e398cb6812eb21c4b1a9cbe825bb4a2a731b1f89754178c1eaee829ae92c",
+  "newHash": "d1ab33413c2bbc53e0401a2011c1e243ef44e7df0377068849af95aac82a54fc",
+  "diff": "Index: consulado.gob.cl/salir-con-menor\n===================================================================\n--- consulado.gob.cl/salir-con-menor\tprevious\n+++ consulado.gob.cl/salir-con-menor\tcurrent\n@@ -9,8 +9,6 @@\n Para destacar la información local más relevante, elige tu ubicación actual :\n Continuar\n Inicio\n-Quiero Viajar\n-Info para Viajar fuera de Chile\n Para salir de Chile con un menor de edad\n Martes 27 de enero de 2015\n El Artículo 49° de la Ley de Menores (16.618) define entre otros aspectos, a quienes están facultados para que un menor de edad abandone el país (padres, tutores, padre que concurrió al reconocimiento, subsidiariamente el Tribunal competente, el tercero o padre que goza del régimen de relación directa y regular) y a su vez señala que el autorizante debe expresar esta voluntad mediante una escritura pública o privada autorizada por Notario Público.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

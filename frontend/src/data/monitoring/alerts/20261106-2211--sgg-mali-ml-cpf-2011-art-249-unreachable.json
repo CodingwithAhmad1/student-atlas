@@ -1,0 +1,22 @@
+{
+  "id": "20261106-2211--sgg-mali-ml-cpf-2011-art-249-unreachable",
+  "kind": "unreachable",
+  "sourceId": "sgg-mali.ml/cpf-2011-art-249",
+  "relatedSourceIds": [],
+  "sourceLabel": "Secrétariat général du Gouvernement du Mali — Journal officiel, Loi n° 2011-087 du 30 décembre 2011 portant Code des personnes et de la famille (in French)",
+  "sourceUrl": "https://sgg-mali.ml/JO/2012/mali-jo-2012-02-sp.pdf",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-06T22:11:40.134Z",
+  "updatedAt": "2026-11-06T22:11:40.134Z",
+  "oldHash": "bad597e8fa319703b08a25702eb80033ad6cabb92fb2cd36ae47213f2df259eb",
+  "newHash": "unreachable-2026-11-06",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://sgg-mali.ml/JO/2012/mali-jo-2012-02-sp.pdf: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://sgg-mali.ml/JO/2012/mali-jo-2012-02-sp.pdf: fetch failed"
+}
