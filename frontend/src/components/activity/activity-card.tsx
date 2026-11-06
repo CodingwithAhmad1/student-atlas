@@ -12,6 +12,9 @@ import { CATEGORY_LABELS, SIGNIFICANCE_LABELS } from "@/types/monitoring";
 export function ActivityCard({ alert }: { alert: ActivityAlert }) {
   const [expanded, setExpanded] = useState(false);
   const { status } = alert;
+  // Without a summary, a closed alert leads with its review note. Expanded, that
+  // note is already under "Review outcome", so it isn't repeated here.
+  const headline = alert.summary || (expanded ? null : alert.resolution?.note);
 
   return (
     <article className="relative rounded-lg border bg-background transition-shadow hover:shadow-sm">
@@ -42,20 +45,20 @@ export function ActivityCard({ alert }: { alert: ActivityAlert }) {
             </span>
           </span>
           <span className="block text-sm font-medium">{alert.sourceLabel}</span>
-          {alert.summary ? (
+          {headline ? (
             <span
               className={cn(
                 "block text-sm leading-relaxed text-muted-foreground",
                 !expanded && "line-clamp-2"
               )}
             >
-              {alert.summary}
+              {headline}
             </span>
-          ) : (
+          ) : status === "pending" ? (
             <span className="block text-sm italic text-muted-foreground">
               Change detected — awaiting review.
             </span>
-          )}
+          ) : null}
         </span>
         <ChevronDownIcon
           className={cn(
