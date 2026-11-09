@@ -546,11 +546,6 @@ export const citations: Record<string, Citation> = {
     url: "https://ind.nl/en/dutch-citizenship/losing-dutch-nationality",
     label: "Immigration and Naturalisation Service (IND), Netherlands — Losing Dutch Nationality",
   },
-  "zimgaborone.gov.zw/dual-citizenship": {
-    id: "zimgaborone.gov.zw/dual-citizenship",
-    url: "https://www.zimgaborone.gov.zw/?p=5732",
-    label: "Embassy of Zimbabwe in Botswana — Dual Citizenship",
-  },
   "diplomatie.belgium.be/nationality": {
     id: "diplomatie.belgium.be/nationality",
     url: "https://hongkongmacau.diplomatie.belgium.be/en/consular-services/nationality",
@@ -755,11 +750,6 @@ export const citations: Record<string, Citation> = {
     id: "joradp.dz/ordonnance-05-01-nationalite",
     url: "https://www.joradp.dz/FTP/jo-francais/2005/F2005015.pdf",
     label: "Journal officiel de la République algérienne — JO n° 15 du 27 février 2005 (ordonnance 05-01 modifiant le Code de la nationalité) (in French)",
-  },
-  "tgr.gov.ma/code-nationalite-marocaine": {
-    id: "tgr.gov.ma/code-nationalite-marocaine",
-    url: "https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939",
-    label: "Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French)",
   },
   "cspd.gov.jo/nationality-law": {
     id: "cspd.gov.jo/nationality-law",
@@ -1096,11 +1086,6 @@ export const citations: Record<string, Citation> = {
     url: "https://peduliwni.kemlu.go.id/",
     label: "Kementerian Luar Negeri — Portal Peduli WNI (in Indonesian)",
   },
-  "lpdp.kemenkeu.go.id/beasiswa-reguler-2024": {
-    id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2024",
-    url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2024/",
-    label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2024 (in Indonesian)",
-  },
   "gov.uk/tb-clinics-malaysia": {
     id: "gov.uk/tb-clinics-malaysia",
     url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-malaysia/tuberculosis-testing-in-malaysia",
@@ -1240,11 +1225,6 @@ export const citations: Record<string, Citation> = {
     id: "fmino.gov.ng/ess-online-verification",
     url: "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
     label: "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
-  },
-  "nysc.gov.ng/foreign-trained-graduates": {
-    id: "nysc.gov.ng/foreign-trained-graduates",
-    url: "https://www.nysc.gov.ng/foreignmobreg.html",
-    label: "NYSC — Foreign Trained Graduates Requirements",
   },
   "gov.uk/tb-clinics-ghana": {
     id: "gov.uk/tb-clinics-ghana",
@@ -1525,5 +1505,15 @@ export const citations: Record<string, Citation> = {
     id: "icric.gov.so/constitution-chapters-1-4",
     url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
     label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
+  },
+  "lpdp.kemenkeu.go.id/beasiswa-reguler-2025": {
+    id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2025",
+    url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2025/",
+    label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2025 (in Indonesian)",
+  },
+  "portal.nysc.org.ng/foreign-requirements": {
+    id: "portal.nysc.org.ng/foreign-requirements",
+    url: "https://portal.nysc.org.ng/nysc1/ForeignReq.aspx",
+    label: "NYSC — Requirements for Foreign-Trained Graduates",
   },
 };

@@ -13,10 +13,13 @@
   "newHash": "1adfc42a9cf2e918500f1be8d5563d19262f0d2846b66d95e19b123bf57d8b6c",
   "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/skilled-nominated-190\tcurrent\n@@ -1,6 +1,6 @@\n Description: This visa lets nominated skilled workers live and work in Australia as permanent residents.\n Alert: 190 visa page banner\n-We prioritise applications for the Skilled – Nominated (subclass 190) visa under Ministerial Direction No. 122. We are currently processing applications that were lodged in or before:March 2026 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or in Australia's law enforcement and defence interests.January 2026 – Visa applications where the primary applicant was in Australia at the time they lodged their application.February 2025 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at any time.February 2025 – All other visa applications from applicants who were outside Australia when they applied.Please note: While the Department transitions to the new processing priorities under Ministerial Direction No. 122, published allocation dates and processing timeframes may fluctuate. Some timeframes may temporarily increase as applications are reprioritised.\n+We prioritise applications for the Skilled – Nominated (subclass 190) visa under Ministerial Direction No. 122. We are currently processing applications that were lodged in or before:October 2026 – Construction, Healthcare, Teaching, Agriculture, Aquaculture, Fishing, and Resources sectors, or in Australia's law enforcement and defence interests.April 2026 – Visa applications where the primary applicant was in Australia at the time they lodged their application.February 2025 – Visa applications where the primary applicant was outside of Australia at the time they lodged their application and whose application is not combined with another person’s application at any time.February 2025 – All other visa applications from applicants who were outside Australia when they applied.Please note, while we transition to the new processing priorities under Ministerial Direction No. 122, published allocation dates and processing timeframes may fluctuate. Some timeframes may temporarily increase as applications are reprioritised.\n Skilled Nominated visa\n This visa lets nominated skilled workers live and work in Australia as permanent residents.\n Warning text and link\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the processing-queue dates in the page banner changed; nothing the guide states is affected.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-09T06:03:32.192Z",
   "error": null
 }

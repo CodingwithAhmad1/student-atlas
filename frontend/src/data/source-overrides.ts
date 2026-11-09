@@ -136,7 +136,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "hc-london.gov.lk/dual-citizenship": { country: "INTL", category: "citizenship" },
   "zambiaembassy.org/dual-citizenship": { country: "INTL", category: "citizenship" },
   "ind.nl/losing-dutch-nationality": { country: "INTL", category: "citizenship" },
-  "zimgaborone.gov.zw/dual-citizenship": { country: "INTL", category: "citizenship" },
   "diplomatie.belgium.be/nationality": { country: "INTL", category: "citizenship" },
   "bmeia.gv.at/dual-citizenship": { country: "INTL", category: "citizenship" },
   "mzv.gov.cz/czech-citizenship-legislation": { country: "INTL", category: "citizenship" },
@@ -186,7 +185,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "coursupreme.org.gn/code-civil-2019": { country: "INTL", category: "citizenship" },
   "sgg-mali.ml/cpf-2011-art-249": { country: "INTL", category: "citizenship" },
   "joradp.dz/ordonnance-05-01-nationalite": { country: "INTL", category: "citizenship" },
-  "tgr.gov.ma/code-nationalite-marocaine": { country: "INTL", category: "citizenship" },
   "cspd.gov.jo/nationality-law": { country: "INTL", category: "citizenship" },
   "yemennic.net/nationality-law": { country: "INTL", category: "citizenship" },
   // Tier A (2026-09-28)

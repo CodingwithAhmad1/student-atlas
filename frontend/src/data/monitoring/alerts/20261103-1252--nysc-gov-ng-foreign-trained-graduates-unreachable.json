@@ -13,10 +13,39 @@
   "newHash": "unreachable-2026-11-03",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.nysc.gov.ng/foreignmobreg.html: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The old NYSC requirements page no longer loads, so the guide now cites the NYSC portal's current list, which asks for a residence permit only from graduates of West African institutions.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"portal.nysc.org.ng/foreign-requirements\": {\n    id: \"portal.nysc.org.ng/foreign-requirements\",\n    url: \"https://portal.nysc.org.ng/nysc1/ForeignReq.aspx\",\n    label: \"NYSC — Requirements for Foreign-Trained Graduates\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/nationalities/nigeria.ts",
+        "oldText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [{ type: \"paragraph\", text: \"Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, departure and return dates, and a residence permit or visa covering the whole period of study, plus the data pages of every passport used. [CITE: nysc.gov.ng/foreign-trained-graduates]",
+        "newText": "afterBlockId: \"us-arrival-travel\",\n            blocks: [{ type: \"paragraph\", text: \"Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, the first departure date from Nigeria and the date of return after the period of study, plus the data pages of every passport used. Graduates of institutions in West African countries also need their residence permit. [CITE: portal.nysc.org.ng/foreign-requirements]"
+      },
+      {
+        "file": "frontend/src/data/nationalities/nigeria.ts",
+        "oldText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [{ type: \"paragraph\", text: \"Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, departure and return dates, and a residence permit or visa covering the whole period of study, plus the data pages of every passport used. [CITE: nysc.gov.ng/foreign-trained-graduates]",
+        "newText": "afterBlockId: \"uk-arrival-intro\",\n            blocks: [{ type: \"paragraph\", text: \"Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, the first departure date from Nigeria and the date of return after the period of study, plus the data pages of every passport used. Graduates of institutions in West African countries also need their residence permit. [CITE: portal.nysc.org.ng/foreign-requirements]"
+      },
+      {
+        "file": "frontend/src/data/nationalities/nigeria.ts",
+        "oldText": "afterBlockId: \"au-arrival-work\",\n            blocks: [{ type: \"paragraph\", text: \"Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, departure and return dates, and a residence permit or visa covering the whole period of study, plus the data pages of every passport used. [CITE: nysc.gov.ng/foreign-trained-graduates]",
+        "newText": "afterBlockId: \"au-arrival-work\",\n            blocks: [{ type: \"paragraph\", text: \"Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, the first departure date from Nigeria and the date of return after the period of study, plus the data pages of every passport used. Graduates of institutions in West African countries also need their residence permit. [CITE: portal.nysc.org.ng/foreign-requirements]"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"nysc.gov.ng/foreign-trained-graduates\": {\n    id: \"nysc.gov.ng/foreign-trained-graduates\",\n    url: \"https://www.nysc.gov.ng/foreignmobreg.html\",\n    label: \"NYSC — Foreign Trained Graduates Requirements\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-09T06:14:32.150Z",
   "error": "Network error fetching https://www.nysc.gov.ng/foreignmobreg.html: fetch failed"
 }

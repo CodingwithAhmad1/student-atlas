@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T21:15:55.382Z",
+  "generatedAt": "2026-11-09T06:11:09.204Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -2723,9 +2723,9 @@
       "country": "INTL",
       "category": "general",
       "label": "全國法規資料庫 — 役男出境處理辦法 (in Chinese)",
-      "lastCheckedAt": "2026-11-08T21:15:55.382Z",
+      "lastCheckedAt": "2026-11-09T06:11:09.204Z",
       "lastChangedAt": "2026-11-08T21:15:55.382Z",
-      "lastHash": "7c87629ea2d7b03e41c22691d52635ad3d926b23e3469fa05614f63fa0ea023a",
+      "lastHash": "6b5b7dd9caad266fac66ccddd29532f897f97c860cfee128c392d7075bea8aa4",
       "lastHttpStatus": 200,
       "consecutiveFailures": 0,
       "lastError": null,
@@ -2975,12 +2975,12 @@
       "country": "INTL",
       "category": "general",
       "label": "LPDP, Kementerian Keuangan — Beasiswa Reguler 2024 (in Indonesian)",
-      "lastCheckedAt": "2026-11-08T21:15:55.382Z",
+      "lastCheckedAt": "2026-11-09T06:06:24.281Z",
       "lastChangedAt": "2026-11-06T13:01:58.896Z",
       "lastHash": "6efab4e074fe5caf2efd1f7adcb77845c142addb49d3ccb8e25348a1c01e5703",
-      "lastHttpStatus": 200,
-      "consecutiveFailures": 0,
-      "lastError": null,
+      "lastHttpStatus": 503,
+      "consecutiveFailures": 1,
+      "lastError": "HTTP 503 from https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2024/",
       "skipReason": null
     },
     "gov.uk/tb-clinics-malaysia": {

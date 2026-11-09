@@ -13,10 +13,13 @@
   "newHash": "129e0e810d7cade1a813985b1377c7d39586258702e502292d9f4602cb02d19a",
   "diff": "Index: gov.uk/sponsor-migrants/sponsor-a-student\n===================================================================\n--- gov.uk/sponsor-migrants/sponsor-a-student\tprevious\n+++ gov.uk/sponsor-migrants/sponsor-a-student\tcurrent\n@@ -5,12 +5,16 @@\n UK Visas and Immigration\n Published:\n 1 October 2013\n-9 October 2026\n+6 November 2026\n —\n See all updates\n Documents\n+Applying for a Student sponsor licence (accessible)\n+HTML\n Applying for a Student sponsor licence\n-PDF, 1.22 MB, 89 pages\n+PDF, 1.23 MB, 89 pages\n+Sponsorship duties (accessible)\n+HTML\n Sponsorship duties\n PDF, 1.16 MB, 116 pages\n Student sponsor compliance (accessible)\n@@ -30,8 +34,10 @@\n We cannot answer any other questions through this form.\n Read our accessible documents policy.\n Updates to this page\n-9 October 2026\n+6 November 2026\n Show all updates\n+6 November 2026\n+Added accessible HTML versions of Applying for a Student sponsor licence and Sponsorship duties.\n 9 October 2026\n Updated Applying for a Student sponsor licence and Sponsorship duties in line with changes to the Immigration Rules.\n 1 June 2026\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The page added accessible HTML versions of two guidance documents; nothing the guide states is affected.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-09T06:04:17.465Z",
   "error": null
 }

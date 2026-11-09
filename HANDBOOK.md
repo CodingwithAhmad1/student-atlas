@@ -1,6 +1,6 @@
 # Student Atlas — Handbook
 
-_Last updated 2026-11-02. This is the single reference for how the project is
+_Last updated 2026-11-09. This is the single reference for how the project is
 built, how it stays accurate, what needs a person, and what to do before
 launch. Detailed references it points to: `frontend/src/data/CONTENT-GUIDE.md`
 (content model and editing tools) and `monitoring/README.md` (the watcher)._
@@ -253,7 +253,7 @@ The weekly review routine keeps this list current. Only alerts its policy
 allows it to carry over are listed (a manual trait column with no newer
 evidence anywhere).
 
-None (the 2 November 2026 review closed all 10 open alerts).
+None (the 9 November 2026 review closed all 25 open alerts).
 
 ### Follow-ups
 Improvements a code change could add, noted by the review routine. None of
@@ -271,7 +271,7 @@ them blocks anything.
   The routine now checks at setup whether snapshots load, skips step 4 when
   they do not, and flags each source it retired without an archive check.
   Still HTTP 403 from the cloud on 2026-10-05, 2026-10-12, 2026-10-19,
-  2026-10-26 and 2026-11-02.
+  2026-10-26, 2026-11-02 and 2026-11-09.
 - 2026-10-04: `immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news`
   extracts only its title and description, although the HTML carries the
   news text (e.g. the planned ballot for Indonesian Work and Holiday visa
@@ -283,8 +283,8 @@ them blocks anything.
 - 2026-10-12: `mcp-content-server/requirements.txt` (`mcp>=1.26.0`) now
   installs mcp 2.x, where `mcp.server.fastmcp` no longer exists, so
   `atlas_cli.py` fails to import. Pinning `mcp>=1.26.0,<2` fixes it (the run
-  used a venv with that pin). Still the case on 2026-10-19, 2026-10-26 and
-  2026-11-02.
+  used a venv with that pin). Still the case on 2026-10-19, 2026-10-26,
+  2026-11-02 and 2026-11-09.
 - 2026-10-12: a real `run.ts --source` that finds an `unreachable` source
   reachable again auto-closes the alert as `dismissed` with no edits, even
   when `fix_source` had just recorded a URL change on it (Cameroon's
@@ -301,7 +301,8 @@ them blocks anything.
   text the reviewed baseline, and the next check re-alerts. The run used
   `refresh_alert` instead, which auto-closed it. A watcher check that treats
   such error pages as fetch failures would avoid the alert. Happened again
-  on 2026-10-31 (closed the same way on 2026-11-02).
+  on 2026-10-31 (closed the same way on 2026-11-02) and on 2026-11-08
+  (closed the same way on 2026-11-09).
 - 2026-10-26: two dual-nationality rows are still "unknown" after being
   retired with no archive check: Senegal (dri.gouv.sn under maintenance, the
   law PDF 404, still 404 on 2026-11-05) and DR Congo (presidence.cd connection
@@ -320,6 +321,20 @@ them blocks anything.
   (the watcher on `main` later closed that alert as "reachable again").
   `apply_edits` refuses to add a `[CITE]` marker in a review edit, so the
   sentence was not restored. A deliberate content edit can bring it back.
+- 2026-11-09: two more dual-nationality rows were retired to "unknown" with
+  no archive check: Morocco (tgr.gov.ma and the Ministry of Justice portal
+  adala.justice.gov.ma, which hosts the consolidated code of 16 May 2024,
+  both returned HTTP 503) and Zimbabwe (zimgaborone.gov.zw did not connect;
+  the other official pages found conflict or do not state the rule).
+  Restore Morocco from the adala.justice.gov.ma consolidated PDF once it
+  answers.
+- 2026-11-09: the LPDP 2024 Regular Scholarship page now redirects to the
+  LPDP homepage; the Indonesia callouts now cite the 2025 page, which says
+  only that awardees return and contribute "sesuai dengan ketentuan yang
+  berlaku di LPDP". The "2N+1" length was dropped because official LPDP
+  pages now disagree (2N+1 on the PNS/TNI/POLRI 2025 page, "2n" on
+  bantuanlpdp.kemenkeu.go.id). lpdp.kemenkeu.go.id also answers HTTP 503
+  intermittently; if the new source keeps failing, hand-check it.
 
 ### Done in the 2 October review (for the record)
 - **Australia, Student visa from 2 October 2026**: most applicants cannot

@@ -13,10 +13,13 @@
   "newHash": "e241f30d2a324cc660acc154819fc72d8b52d40726e2b00c5495e468d9307b07",
   "diff": "Index: gob.mx/sre-double-nationality\n===================================================================\n--- gob.mx/sre-double-nationality\tprevious\n+++ gob.mx/sre-double-nationality\tcurrent\n@@ -2,16 +2,16 @@\n Secretaría de Relaciones Exteriores\n Documentos\n Publicaciones Recientes\n+2026-10-31 14:54:00 -0600\n+Secretary Velasco Concludes Participation in G20 Ministerial Meeting, Calls for Greater Economic Integration That Creates Shared Prosperity\n+2026-10-31 14:45:00 -0600\n+Secretario Velasco termina participación en Ministerial del G20 llamando a una mayor integración económica que genere prosperidad compartida\n 2026-10-30 12:57:00 -0600\n Foreign Secretary Roberto Velasco Álvarez Takes Part in G20 Foreign Ministers’ Meeting in Atlanta, Georgia\n 2026-10-30 12:52:00 -0600\n El canciller Roberto Velasco Álvarez participa en la Reunión de Ministros de Relaciones Exteriores del G20 en Atlanta, Georgia\n 2026-10-27 17:55:00 -0600\n Foreign Secretary Roberto Velasco Participates in Inauguration of 27th International Meeting on Gender Statistics\n-2026-10-27 17:50:00 -0600\n-Canciller Roberto Velasco Álvarez participa en la inauguración del XXVII Encuentro Internacional de Estadística de Género\n-2026-10-21 21:55:00 -0600\n-Secretario Velasco y la coordinadora residente de la ONU en México, Allegra Baiocchi, conmemoran el 81 aniversario de la organización\n Double Nationality\n If you have another nationality in addition to Mexican nationality, this information is for you.\n Secretaría de Relaciones Exteriores |\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the ministry's news list on the page changed; the double nationality information is unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-09T06:05:59.187Z",
   "error": null
 }
