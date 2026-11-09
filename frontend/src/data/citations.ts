@@ -1096,11 +1096,6 @@ export const citations: Record<string, Citation> = {
     url: "https://peduliwni.kemlu.go.id/",
     label: "Kementerian Luar Negeri — Portal Peduli WNI (in Indonesian)",
   },
-  "lpdp.kemenkeu.go.id/beasiswa-reguler-2024": {
-    id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2024",
-    url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2024/",
-    label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2024 (in Indonesian)",
-  },
   "gov.uk/tb-clinics-malaysia": {
     id: "gov.uk/tb-clinics-malaysia",
     url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-malaysia/tuberculosis-testing-in-malaysia",
@@ -1525,5 +1520,10 @@ export const citations: Record<string, Citation> = {
     id: "icric.gov.so/constitution-chapters-1-4",
     url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
     label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
+  },
+  "lpdp.kemenkeu.go.id/beasiswa-reguler-2025": {
+    id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2025",
+    url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2025/",
+    label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2025 (in Indonesian)",
   },
 };
