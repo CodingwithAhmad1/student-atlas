@@ -13,10 +13,13 @@
   "newHash": "7d1a895ea6de86d35f73f2d445b190bf621353d47f2ecb7e766b6b0a21dd03d9",
   "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -37,9 +37,9 @@\n Countering America's Adversaries Through Sanctions Act-Related Sanctions\n Feb 24, 2026\n Cuba Sanctions\n-Oct 15, 2026\n+Nov 05, 2026\n Cyber-Related Sanctions\n-Oct 19, 2026\n+Nov 05, 2026\n Democratic Republic of the Congo-Related Sanctions\n Oct 28, 2026\n Foreign Interference in a United States Election Sanctions\n@@ -53,7 +53,7 @@\n International Criminal Court-Related Sanctions\n Oct 09, 2026\n Iran Sanctions\n-Nov 04, 2026\n+Nov 06, 2026\n Iraq-Related Sanctions\n Oct 05, 2026\n Lebanon-Related Sanctions\n@@ -83,7 +83,7 @@\n Sudan and Darfur Sanctions\n Jun 26, 2026\n Transnational Criminal Organizations\n-Oct 01, 2026\n+Nov 05, 2026\n Ukraine-/Russia-related Sanctions\n Oct 09, 2026\n Venezuela-Related Sanctions\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the last-updated dates of some sanctions programmes changed; no programme was added or removed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-09T06:05:04.618Z",
   "error": null
 }
