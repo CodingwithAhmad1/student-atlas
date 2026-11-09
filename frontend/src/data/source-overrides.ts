@@ -136,7 +136,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "hc-london.gov.lk/dual-citizenship": { country: "INTL", category: "citizenship" },
   "zambiaembassy.org/dual-citizenship": { country: "INTL", category: "citizenship" },
   "ind.nl/losing-dutch-nationality": { country: "INTL", category: "citizenship" },
-  "zimgaborone.gov.zw/dual-citizenship": { country: "INTL", category: "citizenship" },
   "diplomatie.belgium.be/nationality": { country: "INTL", category: "citizenship" },
   "bmeia.gv.at/dual-citizenship": { country: "INTL", category: "citizenship" },
   "mzv.gov.cz/czech-citizenship-legislation": { country: "INTL", category: "citizenship" },

@@ -13,10 +13,29 @@
   "newHash": "unreachable-2026-11-08",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.zimgaborone.gov.zw/?p=5732: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Zimbabwean embassy page on dual citizenship is no longer available, so the guide no longer states whether Zimbabwe allows dual nationality.",
+    "edits": [
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-27\", citationId: \"zimgaborone.gov.zw/dual-citizenship\" },",
+        "newText": "dualNationalityAtHome: { value: \"unknown\", verifiedAt: \"2026-11-09\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"zimgaborone.gov.zw/dual-citizenship\": {\n    id: \"zimgaborone.gov.zw/dual-citizenship\",\n    url: \"https://www.zimgaborone.gov.zw/?p=5732\",\n    label: \"Embassy of Zimbabwe in Botswana — Dual Citizenship\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"zimgaborone.gov.zw/dual-citizenship\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-09T06:22:25.795Z",
   "error": "Network error fetching https://www.zimgaborone.gov.zw/?p=5732: fetch failed"
 }

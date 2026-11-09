@@ -546,11 +546,6 @@ export const citations: Record<string, Citation> = {
     url: "https://ind.nl/en/dutch-citizenship/losing-dutch-nationality",
     label: "Immigration and Naturalisation Service (IND), Netherlands — Losing Dutch Nationality",
   },
-  "zimgaborone.gov.zw/dual-citizenship": {
-    id: "zimgaborone.gov.zw/dual-citizenship",
-    url: "https://www.zimgaborone.gov.zw/?p=5732",
-    label: "Embassy of Zimbabwe in Botswana — Dual Citizenship",
-  },
   "diplomatie.belgium.be/nationality": {
     id: "diplomatie.belgium.be/nationality",
     url: "https://hongkongmacau.diplomatie.belgium.be/en/consular-services/nationality",
