@@ -1236,11 +1236,6 @@ export const citations: Record<string, Citation> = {
     url: "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
     label: "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
   },
-  "nysc.gov.ng/foreign-trained-graduates": {
-    id: "nysc.gov.ng/foreign-trained-graduates",
-    url: "https://www.nysc.gov.ng/foreignmobreg.html",
-    label: "NYSC — Foreign Trained Graduates Requirements",
-  },
   "gov.uk/tb-clinics-ghana": {
     id: "gov.uk/tb-clinics-ghana",
     url: "https://www.gov.uk/government/publications/ghana-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-ghana",
@@ -1525,5 +1520,10 @@ export const citations: Record<string, Citation> = {
     id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2025",
     url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2025/",
     label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2025 (in Indonesian)",
+  },
+  "portal.nysc.org.ng/foreign-requirements": {
+    id: "portal.nysc.org.ng/foreign-requirements",
+    url: "https://portal.nysc.org.ng/nysc1/ForeignReq.aspx",
+    label: "NYSC — Requirements for Foreign-Trained Graduates",
   },
 };
