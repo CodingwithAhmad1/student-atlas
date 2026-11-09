@@ -186,7 +186,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "coursupreme.org.gn/code-civil-2019": { country: "INTL", category: "citizenship" },
   "sgg-mali.ml/cpf-2011-art-249": { country: "INTL", category: "citizenship" },
   "joradp.dz/ordonnance-05-01-nationalite": { country: "INTL", category: "citizenship" },
-  "tgr.gov.ma/code-nationalite-marocaine": { country: "INTL", category: "citizenship" },
   "cspd.gov.jo/nationality-law": { country: "INTL", category: "citizenship" },
   "yemennic.net/nationality-law": { country: "INTL", category: "citizenship" },
   // Tier A (2026-09-28)

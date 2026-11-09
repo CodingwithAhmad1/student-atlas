@@ -13,10 +13,29 @@
   "newHash": "unreachable-2026-11-06",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 503 from https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The official copy of Morocco's nationality code is no longer available to us, so the guide no longer states whether Morocco allows dual nationality.",
+    "edits": [
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-27\", citationId: \"tgr.gov.ma/code-nationalite-marocaine\", note: \"Moroccan nationality ends only if a decree authorises the person to renounce it. The cited official page is in French.\" },",
+        "newText": "dualNationalityAtHome: { value: \"unknown\", verifiedAt: \"2026-11-09\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"tgr.gov.ma/code-nationalite-marocaine\": {\n    id: \"tgr.gov.ma/code-nationalite-marocaine\",\n    url: \"https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939\",\n    label: \"Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French)\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"tgr.gov.ma/code-nationalite-marocaine\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-09T06:19:22.461Z",
   "error": "HTTP 503 from https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939"
 }

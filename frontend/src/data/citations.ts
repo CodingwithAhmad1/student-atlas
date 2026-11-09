@@ -756,11 +756,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.joradp.dz/FTP/jo-francais/2005/F2005015.pdf",
     label: "Journal officiel de la République algérienne — JO n° 15 du 27 février 2005 (ordonnance 05-01 modifiant le Code de la nationalité) (in French)",
   },
-  "tgr.gov.ma/code-nationalite-marocaine": {
-    id: "tgr.gov.ma/code-nationalite-marocaine",
-    url: "https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939",
-    label: "Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French)",
-  },
   "cspd.gov.jo/nationality-law": {
     id: "cspd.gov.jo/nationality-law",
     url: "https://www.cspd.gov.jo/EBV4.0/Root_Storage/Root_Storage/AR/EB_Info_Page/2_%D9%82%D8%A7%D9%86%D9%88%D9%86_%D8%A7%D9%84%D8%AC%D9%86%D8%B3%D9%8A%D8%A9.pdf",
