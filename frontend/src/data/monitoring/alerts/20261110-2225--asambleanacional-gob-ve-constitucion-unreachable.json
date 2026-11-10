@@ -1,0 +1,22 @@
+{
+  "id": "20261110-2225--asambleanacional-gob-ve-constitucion-unreachable",
+  "kind": "unreachable",
+  "sourceId": "asambleanacional.gob.ve/constitucion",
+  "relatedSourceIds": [],
+  "sourceLabel": "Asamblea Nacional de Venezuela — Constitución de la República Bolivariana de Venezuela (in Spanish)",
+  "sourceUrl": "https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-10T22:25:51.585Z",
+  "updatedAt": "2026-11-10T22:25:51.585Z",
+  "oldHash": "57310af21eba78632fde495b0f4e2858ffda27c183b1a27ff27eb7b58d92675b",
+  "newHash": "unreachable-2026-11-10",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 404 from https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF"
+}
