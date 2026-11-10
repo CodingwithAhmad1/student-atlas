@@ -1,0 +1,22 @@
+{
+  "id": "20261110-1333--gov-uk-hc-217-explanatory-memorandum",
+  "kind": "change",
+  "sourceId": "gov.uk/hc-217-explanatory-memorandum",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Explanatory memorandum to the statement of changes to the Immigration Rules: HC 217, 10 September 2024",
+  "sourceUrl": "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-217-10-september-2024/explanatory-memorandum-to-the-statement-of-changes-to-the-immigration-rules-hc-217-10-september-2024-accessible-version",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-11-10T13:33:33.455Z",
+  "updatedAt": "2026-11-10T13:33:33.455Z",
+  "oldHash": "df69f8fbb95b26f90157f3b7b28d5f8997108db29b7bdc949f68319cbd6fb0f5",
+  "newHash": "226a5b86119fb3628f1d211a41f3f9b96cc884a85dda8f7b0265b6bf48b1b791",
+  "diff": "Index: gov.uk/hc-217-explanatory-memorandum\n===================================================================\n--- gov.uk/hc-217-explanatory-memorandum\tprevious\n+++ gov.uk/hc-217-explanatory-memorandum\tcurrent\n@@ -1,6 +1,6 @@\n Home Office\n UK Visas and Immigration\n-This was published under the 2024 to 2026 Starmer Labour government\n+This was first published under the 2024 to 2026 Starmer Labour government\n This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit nationalarchives.gov.uk/doc/open-government-licence/version/3 or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: psi@nationalarchives.gov.uk.\n Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.\n This publication is available at https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-217-10-september-2024/explanatory-memorandum-to-the-statement-of-changes-to-the-immigration-rules-hc-217-10-september-2024-accessible-version\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
