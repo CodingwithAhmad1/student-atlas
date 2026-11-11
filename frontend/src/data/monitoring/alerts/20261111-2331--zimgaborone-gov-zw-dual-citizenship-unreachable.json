@@ -1,0 +1,22 @@
+{
+  "id": "20261111-2331--zimgaborone-gov-zw-dual-citizenship-unreachable",
+  "kind": "unreachable",
+  "sourceId": "zimgaborone.gov.zw/dual-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "Embassy of Zimbabwe in Botswana — Dual Citizenship",
+  "sourceUrl": "https://www.zimgaborone.gov.zw/?p=5732",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-11T23:31:24.712Z",
+  "updatedAt": "2026-11-11T23:31:24.712Z",
+  "oldHash": "e4f3689dae9a1bb713c2dc1d728659bbf1dc1b9312087fe8ed7a8230b5e8a369",
+  "newHash": "unreachable-2026-11-11",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.zimgaborone.gov.zw/?p=5732: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.zimgaborone.gov.zw/?p=5732: fetch failed"
+}
