@@ -1,0 +1,22 @@
+{
+  "id": "20261113-1312--ice-gov-sevis-travel",
+  "kind": "change",
+  "sourceId": "ice.gov/sevis/travel",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Immigration and Customs Enforcement — SEVIS: Travel",
+  "sourceUrl": "https://www.ice.gov/sevis/travel",
+  "country": "US",
+  "category": "student",
+  "detectedAt": "2026-11-13T13:12:20.789Z",
+  "updatedAt": "2026-11-13T13:12:20.789Z",
+  "oldHash": "754e3b02f9f76607b4a0104a99baacf4864cf41d8a4ac5a8d78c2c6effbe86e7",
+  "newHash": "f1bd6cdc4f96abc8c66535e322aceb72369e3c608bc846fcade57a1631f71a80",
+  "diff": "Index: ice.gov/sevis/travel\n===================================================================\n--- ice.gov/sevis/travel\tprevious\n+++ ice.gov/sevis/travel\tcurrent\n@@ -435,5 +435,4 @@\n Can I re-enter if my primary has practical training pending?\n It is best to travel after practical training is approved.\n Are there any other requirements for M-2 nonimmigrants to travel outside the United States?\n-The questions above outline the general reentry requirements for M-2 nonimmigrants. If you have questions, consult with the DSO at your primary’s school or seek advise from your embassy or legal advisor. However, if you are not returning to your country of citizenship, you should check the requirements of the country you are visiting. Some countries will require a visa. You may also need a visa for countries where you are making a connecting flight. Be sure to check before you travel.\n-Local Footer Navigation\n\\ No newline at end of file\n+The questions above outline the general reentry requirements for M-2 nonimmigrants. If you have questions, consult with the DSO at your primary’s school or seek advise from your embassy or legal advisor. However, if you are not returning to your country of citizenship, you should check the requirements of the country you are visiting. Some countries will require a visa. You may also need a visa for countries where you are making a connecting flight. Be sure to check before you travel.\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
