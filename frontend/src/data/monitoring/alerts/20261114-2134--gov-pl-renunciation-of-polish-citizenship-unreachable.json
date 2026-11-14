@@ -1,0 +1,22 @@
+{
+  "id": "20261114-2134--gov-pl-renunciation-of-polish-citizenship-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.pl/renunciation-of-polish-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "Ministry of the Interior and Administration (Gov.pl) — Renunciation of Polish citizenship",
+  "sourceUrl": "https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-14T21:34:50.029Z",
+  "updatedAt": "2026-11-14T21:34:50.029Z",
+  "oldHash": "76501603d526f0e4d92454ded0a3638fb7698bc0e316715bfe379cad6cf61834",
+  "newHash": "unreachable-2026-11-14",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship: fetch failed"
+}
