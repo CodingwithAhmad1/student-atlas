@@ -14,10 +14,10 @@
   "diff": "",
   "diffTruncated": false,
   "significance": "meaningful",
-  "summary": "Brazil's dual-nationality row is now cited from an archived copy of the same amendment.",
+  "summary": "The official page went offline, so the guide now cites an archived copy of Brazil's 2023 nationality amendment, which says the same.",
   "status": "approved",
   "resolution": {
-    "note": "The Câmara page now returns HTTP 404 and planalto.gov.br redirects automated clients to its homepage. Source ladder step 4: cited from the Internet Archive copy of 22 July 2026, which still reads \"II - fizer pedido expresso de perda da nacionalidade brasileira perante autoridade brasileira competente\" (Brazilian nationality is lost only on an express request). brazil.dualNationalityAtHome stays \"allowed\".",
+    "note": "The Chamber of Deputies page for Brazil's 2023 constitutional amendment no longer loads, so the guide now cites the Internet Archive's copy of the same page, which still says Brazilians lose their nationality only by expressly asking to give it up.",
     "edits": [
       {
         "file": "frontend/src/data/citations.ts",
