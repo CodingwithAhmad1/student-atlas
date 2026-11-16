@@ -1,0 +1,22 @@
+{
+  "id": "20261113-1312--ice-gov-sevis-i901-faq",
+  "kind": "change",
+  "sourceId": "ice.gov/sevis-i901-faq",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Immigration and Customs Enforcement — I-901 SEVIS Fee Frequently Asked Questions",
+  "sourceUrl": "https://www.ice.gov/sevis/i901/faq",
+  "country": "US",
+  "category": "student",
+  "detectedAt": "2026-11-13T13:12:20.789Z",
+  "updatedAt": "2026-11-13T13:12:20.789Z",
+  "oldHash": "e048c10ccdc20d40b6b74c554bc5a5f464c671084b6f180fb9c251dabc1abb7a",
+  "newHash": "9fb9577787e281f84ba71e49eb710e1801b658803d14a08d390ada361539562b",
+  "diff": "Index: ice.gov/sevis-i901-faq\n===================================================================\n--- ice.gov/sevis-i901-faq\tprevious\n+++ ice.gov/sevis-i901-faq\tcurrent\n@@ -777,5 +777,4 @@\n How do I clear my debt if my check bounces or is rejected by my bank?\n You will need to contact the DHS Debt Management Center to clear your debt. See the section on returned checks for the correct process.\n What does a student or exchange visitor do if SEVIS shows that their payment status is Cancelled?\n-If your SEVIS record shows that your payment status is Cancelled, this essentially means that the payment is no longer valid under that SEVIS ID. If you have any questions about your payment status write to SEVP via mail or e-mail. Give your name, SEVIS ID number and explain the circumstances. SEVP will be able to provide you more information on why your I-901 fee is no longer valid.\n-Local Footer Navigation\n\\ No newline at end of file\n+If your SEVIS record shows that your payment status is Cancelled, this essentially means that the payment is no longer valid under that SEVIS ID. If you have any questions about your payment status write to SEVP via mail or e-mail. Give your name, SEVIS ID number and explain the circumstances. SEVP will be able to provide you more information on why your I-901 fee is no longer valid.\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

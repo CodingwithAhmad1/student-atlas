@@ -1,0 +1,22 @@
+{
+  "id": "20261112-1351--gov-uk-tb-clinics-nepal",
+  "kind": "change",
+  "sourceId": "gov.uk/tb-clinics-nepal",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Tuberculosis testing in Nepal",
+  "sourceUrl": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-nepal/tuberculosis-testing-in-nepal",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-11-12T13:51:05.597Z",
+  "updatedAt": "2026-11-12T13:51:05.597Z",
+  "oldHash": "e6bafac93a761766617b8593c01b2e229a0e60067b321525b1172205c087f098",
+  "newHash": "3dd37e5bb487a372102efcf0d8f9baab54a221a62cec6dce3839f9fcebf83dac",
+  "diff": "Index: gov.uk/tb-clinics-nepal\n===================================================================\n--- gov.uk/tb-clinics-nepal\tprevious\n+++ gov.uk/tb-clinics-nepal\tcurrent\n@@ -45,10 +45,13 @@\n 12 USD\n The fee will be payable in Nepalese rupees at the exchange rate set by the IOM. You will pay the IOM clinic directly for the cost of your TB test. The cost of the test is in addition to the visa application fee.\n Norvic International Hospital & Medical College Ltd\n-Maternity Road\n-Thapathali\n+AVS Department\n+Norvic International Centre for Health Evaluation (NICHE) Building\n+Norvic International Hospital\n+Maternity Hospital Road\n Kathmandu\n Nepal\n+Located in a separate building approximately 100 metres down the road from Norvic International Hospital.\n Telephone: 00977 1 5970032\n Email: visamed@norvichospital.com\n Website: www.norvichospital.com\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

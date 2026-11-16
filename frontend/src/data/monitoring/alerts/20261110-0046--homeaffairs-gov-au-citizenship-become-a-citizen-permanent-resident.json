@@ -1,0 +1,22 @@
+{
+  "id": "20261110-0046--homeaffairs-gov-au-citizenship-become-a-citizen-permanent-resident",
+  "kind": "change",
+  "sourceId": "homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Home Affairs — Become a Citizen",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident",
+  "country": "AU",
+  "category": "citizenship",
+  "detectedAt": "2026-11-10T00:46:26.188Z",
+  "updatedAt": "2026-11-10T00:46:26.188Z",
+  "oldHash": "29854d6caec69482bf4b759c36338b5fdcafed37aa9140916e191ed176d3c72b",
+  "newHash": "18af0f58a29a7cb8707341094a5bd22206dd8f6eb5353ba7df33e304b71cb621",
+  "diff": "Index: homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident\n===================================================================\n--- homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident\tprevious\n+++ homeaffairs.gov.au/citizenship/become-a-citizen/permanent-resident\tcurrent\n@@ -120,7 +120,7 @@\n See how to submit your citizenship application online in ImmiAccount. You must pay the fee when you lodge your application. See How to pay. Apply now\n In some situations, you might need to apply on paper. Use a paper application form if you: do not have a current or expired passport, or other travel document including a DFTTA, IMMICard, PLO56 (M56) or Titre de Voyage, or have not travelled into or out of Australia since July 1990, or are eligible for a fee exemption, or are claiming the Australian Defence Service residence exemption, or were born outside Australia and are stateless. Complete Form 1300t Australian citizenship General eligibility if you are aged between 18 and 59. Pre-pay your application fee online through ImmiAccount. Send your completed application with certified copies of your documents and the payment receipt to the address on the form. If you are applying for a fee exemption, send your completed application with certified copies of your documents to the address on the form.\n Citizenship appointment\n-Most people aged between 18 and 59 years will have an appointment to sit the citizenship test. We will send you an appointment letter with the details. The time from when you apply to your appointment date varies, but can take several months. Some applicants do not have to sit the citizenship test but may have an interview with us. Find out about the citizenship test and interview.\n+Most people aged between 18 and 59 years will have an appointment to sit the citizenship test. We will send you an appointment letter with the details. The time from when you apply to your appointment date varies, but can take several months. You should be ready to sit the test before lodging your application. You may be invited to an appointment shortly after you apply. Some applicants do not have to sit the citizenship test but may have an interview with us. Find out about the citizenship test and interview.\n Wait for our decision\n Provide us with any extra documents we ask for and let us know if your circumstances change after you apply for citizenship.\n Additional documents\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
