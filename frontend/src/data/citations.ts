@@ -1526,4 +1526,14 @@ export const citations: Record<string, Citation> = {
     url: "https://web.archive.org/web/20260721044344/https://www.zimgaborone.gov.zw/?p=5732",
     label: "Embassy of Zimbabwe in Botswana — Dual Citizenship (archived copy)*",
   },
+  "dri.gouv.sn/loi-61-10-nationalite": {
+    id: "dri.gouv.sn/loi-61-10-nationalite",
+    url: "https://web.archive.org/web/20240521080750id_/https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf",
+    label: "Journal officiel du Sénégal — Loi n° 61-10 du 7 mars 1961 déterminant la nationalité sénégalaise (in French) (archived copy)*",
+  },
+  "presidence.cd/constitution-2011": {
+    id: "presidence.cd/constitution-2011",
+    url: "https://web.archive.org/web/20260925125152id_/https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf",
+    label: "Présidence de la République — Journal Officiel, Constitution de la République Démocratique du Congo (texte modifié 2011) (in French) (archived copy)*",
+  },
 };
