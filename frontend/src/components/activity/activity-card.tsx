@@ -7,14 +7,19 @@ import { StatusBadge } from "@/components/monitoring/shared";
 import { STATUS_DOT_STYLES, formatDateTime } from "@/lib/monitoring-format";
 import { cn } from "@/lib/utils";
 import type { ActivityAlert } from "@/types/monitoring";
-import { CATEGORY_LABELS, SIGNIFICANCE_LABELS } from "@/types/monitoring";
+import { CATEGORY_LABELS, OPEN_ALERT_STATUSES, SIGNIFICANCE_LABELS } from "@/types/monitoring";
 
 export function ActivityCard({ alert }: { alert: ActivityAlert }) {
   const [expanded, setExpanded] = useState(false);
   const { status } = alert;
   // Without a summary, a closed alert leads with its review note. Expanded, that
   // note is already under "Review outcome", so it isn't repeated here.
-  const headline = alert.summary || (expanded ? null : alert.resolution?.note);
+  // An unreachable alert's summary is the watcher's "needs a manual review"
+  // text, which is out of date once the alert is closed: lead with the note.
+  const staleSummary =
+    alert.kind === "unreachable" && !OPEN_ALERT_STATUSES.includes(status) && Boolean(alert.resolution?.note);
+  const summary = staleSummary ? null : alert.summary;
+  const headline = summary || (expanded ? null : alert.resolution?.note);
 
   return (
     <article className="relative rounded-lg border bg-background transition-shadow hover:shadow-sm">
