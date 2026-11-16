@@ -304,11 +304,13 @@ them blocks anything.
   on 2026-10-31 (closed the same way on 2026-11-02) and on 2026-11-08
   (closed the same way on 2026-11-09) and on 2026-11-15 (closed the same
   way on 2026-11-16).
-- 2026-10-26: two dual-nationality rows are still "unknown" after being
-  retired with no archive check: Senegal (dri.gouv.sn under maintenance, the
-  law PDF 404, still 404 on 2026-11-05) and DR Congo (presidence.cd connection
-  reset). Restore them when those sites, or archived copies, can be read
-  again. Somalia was retired the same way and restored on 2026-11-05 when
+- 2026-10-26: Senegal (dri.gouv.sn law PDF 404) and DR Congo (presidence.cd
+  connection reset) were retired to "unknown" with no archive check. Restored
+  on 2026-11-16 from Internet Archive copies read from a local machine:
+  Senegal's 1961 code, art. 18 (the 2013 amendment, JO n° 6741 of 29 July
+  2013, changes arts. 5, 7, 7 bis, 9, 10, 12, 15, 20, 21 and repeals art. 8,
+  not art. 18; other amendments unread), and DR Congo's 2011 Constitution,
+  art. 10. Somalia was retired the same way and restored on 2026-11-05 when
   icric.gov.so answered again (Article 8(3)).
 - 2026-10-26: the watcher saved a bot-check page ("Please wait while your
   request is being verified...") as the baseline of four sources
@@ -400,10 +402,10 @@ verified; confirm with an embassy"):
 | Niger | No official copy of the 2014 law; the Foreign Ministry page predates it. |
 | North Korea | No official publication exists. |
 
-**Cited from archived copies (11)**: Brazil (since 2026-11-16: the Câmara page
+**Cited from archived copies (13)**: Brazil (since 2026-11-16: the Câmara page
 returns 404 and planalto.gov.br redirects automated clients), Burundi,
-Cambodia, Guatemala, Iran, Ivory Coast, Morocco and Zimbabwe (since
-2026-11-16), South Sudan, Sudan, Syria. Once a year, check whether the official page
+Cambodia, DR Congo, Guatemala, Iran, Ivory Coast, Morocco, Senegal and
+Zimbabwe (these four and Brazil since 2026-11-16), South Sudan, Sudan, Syria. Once a year, check whether the official page
 is back and cite it instead. Ivory Coast is the 1961 text (later amendments
 unread; none reported to change art. 48).
 
@@ -418,7 +420,7 @@ leaving; ask Bituach Leumi about insurance rights abroad.
 and appear as "not monitorable" on the Activity tab: travel.state.gov,
 *.usembassy.gov and state.gov (bot checks), u.ae and adilet.zan.kz
 (JavaScript only), cne.ao and consulado.pe (broken TLS chains), kdmid.ru
-(times out), legifrance and pravo.by (403), the 11 archived copies, and a few
+(times out), legifrance and pravo.by (403), the 13 archived copies, and a few
 others. Check them by hand once a year. Local quirk: some hosts
 (privatehealth.gov.au, dol.gov) fail from a home connection but work in CI.
 

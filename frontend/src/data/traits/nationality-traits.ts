@@ -408,7 +408,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-26" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-11-16", citationId: "presidence.cd/constitution-2011", note: "Article 10 of the Constitution: Congolese nationality is one and exclusive. The cited official page is in French." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   yemen: {
@@ -1574,7 +1574,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-26" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-11-16", citationId: "dri.gouv.sn/loi-61-10-nationalite", note: "Article 18 of the 1961 nationality code makes the loss automatic for an adult who voluntarily takes another nationality; the 2013 amendment did not change it. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   netherlands: {
