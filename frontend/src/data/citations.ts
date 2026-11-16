@@ -1536,4 +1536,24 @@ export const citations: Record<string, Citation> = {
     url: "https://web.archive.org/web/20260925125152id_/https://www.presidence.cd/uploads/files/Constitution%20de%20la%20RDC%20%202011.pdf",
     label: "Présidence de la République — Journal Officiel, Constitution de la République Démocratique du Congo (texte modifié 2011) (in French) (archived copy)*",
   },
+  "cdn.haiphong.gov.vn/luat-quoc-tich-hop-nhat-2025": {
+    id: "cdn.haiphong.gov.vn/luat-quoc-tich-hop-nhat-2025",
+    url: "https://cdn.haiphong.gov.vn/gov-hpg/6847/tintuc/2025/11/luat-quoc-tich-viet-nam638990000349809278.pdf",
+    label: "Công báo số 1033 + 1034 (03-8-2025), Văn phòng Quốc hội — Luật Quốc tịch Việt Nam, văn bản hợp nhất (in Vietnamese)",
+  },
+  "mewashingtondc.org/resume-citizenship-form": {
+    id: "mewashingtondc.org/resume-citizenship-form",
+    url: "https://mewashingtondc.org/wp-content/uploads/2017/04/PP_Form_1_6_Ka.pdf",
+    label: "Embassy of Myanmar, Washington, D.C. — Guidance for former Myanmar citizens applying to resume Myanmar citizenship (in Burmese)",
+  },
+  "knesset.gov.il/nationality-law-1952": {
+    id: "knesset.gov.il/nationality-law-1952",
+    url: "https://web.archive.org/web/20131021134727id_/http://knesset.gov.il/review/data/eng/law/kns2_nationality_eng.pdf",
+    label: "The Knesset — Nationality Law, 5712-1952 (English translation, as enacted) (archived copy)*",
+  },
+  "alt.bf/code-personnes-famille-2025": {
+    id: "alt.bf/code-personnes-famille-2025",
+    url: "https://www.alt.bf/storage/Loi/SAo3bdYwlPLnqD18k5yzQvn2v6xkaV8dm9ev1VHE.pdf",
+    label: "Assemblée législative de Transition — Loi n° 012-2025/ALT portant code des personnes et de la famille au Burkina Faso (in French)",
+  },
 };
