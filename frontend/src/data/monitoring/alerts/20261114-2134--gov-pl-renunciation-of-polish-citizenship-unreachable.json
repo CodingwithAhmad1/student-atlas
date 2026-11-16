@@ -13,10 +13,34 @@
   "newHash": "unreachable-2026-11-14",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Polish government page could not be reached, so the guide now cites Poland's Citizenship Act on the official legislation portal, which says the same.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"isap.sejm.gov.pl/polish-citizenship-act\": {\n    id: \"isap.sejm.gov.pl/polish-citizenship-act\",\n    url: \"https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20120000161/U/D20120161Lj.pdf\",\n    label: \"Internetowy System Aktów Prawnych (Sejm) — Ustawa z dnia 2 kwietnia 2009 r. o obywatelstwie polskim, Dz. U. 2012 poz. 161 (in Polish)\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-27\", citationId: \"gov.pl/renunciation-of-polish-citizenship\" },",
+        "newText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-11-16\", citationId: \"isap.sejm.gov.pl/polish-citizenship-act\", note: \"Polish citizenship is lost only by renouncing it with the President's consent. The cited official page is in Polish.\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"gov.pl/renunciation-of-polish-citizenship\": {\n    id: \"gov.pl/renunciation-of-polish-citizenship\",\n    url: \"https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship\",\n    label: \"Ministry of the Interior and Administration (Gov.pl) — Renunciation of Polish citizenship\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"gov.pl/renunciation-of-polish-citizenship\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-16T06:09:34.151Z",
   "error": "Network error fetching https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship: fetch failed"
 }

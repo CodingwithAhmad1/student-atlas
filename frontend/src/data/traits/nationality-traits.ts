@@ -1376,7 +1376,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "gov.pl/renunciation-of-polish-citizenship" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "isap.sejm.gov.pl/polish-citizenship-act", note: "Polish citizenship is lost only by renouncing it with the President's consent. The cited official page is in Polish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   morocco: {

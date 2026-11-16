@@ -130,7 +130,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
     skipReason: "mofa.gov.iq does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04.",
   },
   "ircc.canada.ca/dual-citizenship": { country: "INTL", category: "citizenship" },
-  "gov.pl/renunciation-of-polish-citizenship": { country: "INTL", category: "citizenship" },
   "malaysia.gov.my/kewarganegaraan": { country: "INTL", category: "citizenship", skipReason: "The page renders its content client-side, so the watcher sees only the title; verify this page manually." },
   "law.moj.gov.tw/nationality-act": { country: "INTL", category: "citizenship" },
   "hc-london.gov.lk/dual-citizenship": { country: "INTL", category: "citizenship" },

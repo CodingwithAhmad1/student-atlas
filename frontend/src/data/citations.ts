@@ -516,11 +516,6 @@ export const citations: Record<string, Citation> = {
     url: "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=356&top=5",
     label: "Immigration, Refugees and Citizenship Canada (IRCC) — What is dual citizenship?",
   },
-  "gov.pl/renunciation-of-polish-citizenship": {
-    id: "gov.pl/renunciation-of-polish-citizenship",
-    url: "https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship",
-    label: "Ministry of the Interior and Administration (Gov.pl) — Renunciation of Polish citizenship",
-  },
   "malaysia.gov.my/kewarganegaraan": {
     id: "malaysia.gov.my/kewarganegaraan",
     url: "https://www.malaysia.gov.my/en/categories/personal-identification/kewarganegaraan",
@@ -1515,5 +1510,10 @@ export const citations: Record<string, Citation> = {
     id: "portal.nysc.org.ng/foreign-requirements",
     url: "https://portal.nysc.org.ng/nysc1/ForeignReq.aspx",
     label: "NYSC — Requirements for Foreign-Trained Graduates",
+  },
+  "isap.sejm.gov.pl/polish-citizenship-act": {
+    id: "isap.sejm.gov.pl/polish-citizenship-act",
+    url: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20120000161/U/D20120161Lj.pdf",
+    label: "Internetowy System Aktów Prawnych (Sejm) — Ustawa z dnia 2 kwietnia 2009 r. o obywatelstwie polskim, Dz. U. 2012 poz. 161 (in Polish)",
   },
 };
