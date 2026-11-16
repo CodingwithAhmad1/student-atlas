@@ -13,10 +13,13 @@
   "newHash": "f1bd6cdc4f96abc8c66535e322aceb72369e3c608bc846fcade57a1631f71a80",
   "diff": "Index: ice.gov/sevis/travel\n===================================================================\n--- ice.gov/sevis/travel\tprevious\n+++ ice.gov/sevis/travel\tcurrent\n@@ -435,5 +435,4 @@\n Can I re-enter if my primary has practical training pending?\n It is best to travel after practical training is approved.\n Are there any other requirements for M-2 nonimmigrants to travel outside the United States?\n-The questions above outline the general reentry requirements for M-2 nonimmigrants. If you have questions, consult with the DSO at your primary’s school or seek advise from your embassy or legal advisor. However, if you are not returning to your country of citizenship, you should check the requirements of the country you are visiting. Some countries will require a visa. You may also need a visa for countries where you are making a connecting flight. Be sure to check before you travel.\n-Local Footer Navigation\n\\ No newline at end of file\n+The questions above outline the general reentry requirements for M-2 nonimmigrants. If you have questions, consult with the DSO at your primary’s school or seek advise from your embassy or legal advisor. However, if you are not returning to your country of citizenship, you should check the requirements of the country you are visiting. Some countries will require a visa. You may also need a visa for countries where you are making a connecting flight. Be sure to check before you travel.\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the page's footer navigation changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-16T06:04:57.646Z",
   "error": null
 }
