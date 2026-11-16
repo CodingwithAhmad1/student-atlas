@@ -322,15 +322,13 @@ them blocks anything.
   (the watcher on `main` later closed that alert as "reachable again").
   `apply_edits` refuses to add a `[CITE]` marker in a review edit, so the
   sentence was not restored. A deliberate content edit can bring it back.
-- 2026-11-09: two more dual-nationality rows were retired to "unknown" with
-  no archive check: Morocco (tgr.gov.ma and the Ministry of Justice portal
-  adala.justice.gov.ma, which hosts the consolidated code of 16 May 2024,
-  both returned HTTP 503) and Zimbabwe (zimgaborone.gov.zw did not connect;
-  the other official pages found conflict or do not state the rule).
-  Restore Morocco from the adala.justice.gov.ma consolidated PDF once it
-  answers. The watcher on `main` later closed both alerts as "reachable
-  again", but on 2026-11-16 tgr.gov.ma still returned HTTP 503 and
-  zimgaborone.gov.zw an expired certificate / HTTP 503, so both stay retired.
+- 2026-11-09: Morocco and Zimbabwe's dual-nationality rows were retired to
+  "unknown" because tgr.gov.ma and zimgaborone.gov.zw stopped answering and
+  the cloud run could not reach web.archive.org. Restored on 2026-11-16 from
+  Internet Archive copies read from a local machine (the 2024 copy of the
+  Moroccan code, art. 19; the July 2026 copy of the embassy page). Cite the
+  adala.justice.gov.ma consolidated code of 16 May 2024 instead once it
+  answers.
 - 2026-11-09: the LPDP 2024 Regular Scholarship page now redirects to the
   LPDP homepage; the Indonesia callouts now cite the 2025 page, which says
   only that awardees return and contribute "sesuai dengan ketentuan yang
@@ -402,9 +400,10 @@ verified; confirm with an embassy"):
 | Niger | No official copy of the 2014 law; the Foreign Ministry page predates it. |
 | North Korea | No official publication exists. |
 
-**Cited from archived copies (9)**: Brazil (since 2026-11-16: the Câmara page
+**Cited from archived copies (11)**: Brazil (since 2026-11-16: the Câmara page
 returns 404 and planalto.gov.br redirects automated clients), Burundi,
-Cambodia, Guatemala, Iran, Ivory Coast, South Sudan, Sudan, Syria. Once a year, check whether the official page
+Cambodia, Guatemala, Iran, Ivory Coast, Morocco and Zimbabwe (since
+2026-11-16), South Sudan, Sudan, Syria. Once a year, check whether the official page
 is back and cite it instead. Ivory Coast is the 1961 text (later amendments
 unread; none reported to change art. 48).
 
@@ -419,7 +418,7 @@ leaving; ask Bituach Leumi about insurance rights abroad.
 and appear as "not monitorable" on the Activity tab: travel.state.gov,
 *.usembassy.gov and state.gov (bot checks), u.ae and adilet.zan.kz
 (JavaScript only), cne.ao and consulado.pe (broken TLS chains), kdmid.ru
-(times out), legifrance and pravo.by (403), the 9 archived copies, and a few
+(times out), legifrance and pravo.by (403), the 11 archived copies, and a few
 others. Check them by hand once a year. Local quirk: some hosts
 (privatehealth.gov.au, dol.gov) fail from a home connection but work in CI.
 

@@ -1516,4 +1516,14 @@ export const citations: Record<string, Citation> = {
     url: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20120000161/U/D20120161Lj.pdf",
     label: "Internetowy System Aktów Prawnych (Sejm) — Ustawa z dnia 2 kwietnia 2009 r. o obywatelstwie polskim, Dz. U. 2012 poz. 161 (in Polish)",
   },
+  "tgr.gov.ma/code-nationalite-marocaine": {
+    id: "tgr.gov.ma/code-nationalite-marocaine",
+    url: "https://web.archive.org/web/20241114094941id_/https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939",
+    label: "Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French) (archived copy)*",
+  },
+  "zimgaborone.gov.zw/dual-citizenship": {
+    id: "zimgaborone.gov.zw/dual-citizenship",
+    url: "https://web.archive.org/web/20260721044344/https://www.zimgaborone.gov.zw/?p=5732",
+    label: "Embassy of Zimbabwe in Botswana — Dual Citizenship (archived copy)*",
+  },
 };

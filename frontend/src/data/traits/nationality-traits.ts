@@ -1398,7 +1398,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-11-09" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "tgr.gov.ma/code-nationalite-marocaine", note: "Moroccan nationality ends only if a decree authorises the person to renounce it. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   uzbekistan: {
@@ -1662,7 +1662,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-11-09" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "zimgaborone.gov.zw/dual-citizenship" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   rwanda: {
