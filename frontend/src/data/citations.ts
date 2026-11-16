@@ -516,11 +516,6 @@ export const citations: Record<string, Citation> = {
     url: "https://ircc.canada.ca/english/helpcentre/answer.asp?qnum=356&top=5",
     label: "Immigration, Refugees and Citizenship Canada (IRCC) — What is dual citizenship?",
   },
-  "gov.pl/renunciation-of-polish-citizenship": {
-    id: "gov.pl/renunciation-of-polish-citizenship",
-    url: "https://www.gov.pl/web/mswia-en/renunciation-of-polish-citizenship",
-    label: "Ministry of the Interior and Administration (Gov.pl) — Renunciation of Polish citizenship",
-  },
   "malaysia.gov.my/kewarganegaraan": {
     id: "malaysia.gov.my/kewarganegaraan",
     url: "https://www.malaysia.gov.my/en/categories/personal-identification/kewarganegaraan",
@@ -545,11 +540,6 @@ export const citations: Record<string, Citation> = {
     id: "ind.nl/losing-dutch-nationality",
     url: "https://ind.nl/en/dutch-citizenship/losing-dutch-nationality",
     label: "Immigration and Naturalisation Service (IND), Netherlands — Losing Dutch Nationality",
-  },
-  "zimgaborone.gov.zw/dual-citizenship": {
-    id: "zimgaborone.gov.zw/dual-citizenship",
-    url: "https://www.zimgaborone.gov.zw/?p=5732",
-    label: "Embassy of Zimbabwe in Botswana — Dual Citizenship",
   },
   "diplomatie.belgium.be/nationality": {
     id: "diplomatie.belgium.be/nationality",
@@ -683,8 +673,8 @@ export const citations: Record<string, Citation> = {
   },
   "camara.leg.br/ec-131-2023": {
     id: "camara.leg.br/ec-131-2023",
-    url: "https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html",
-    label: "Câmara dos Deputados — Emenda Constitucional nº 131, de 3 de outubro de 2023 (in Portuguese)",
+    url: "https://web.archive.org/web/20260722140625/https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html",
+    label: "Câmara dos Deputados — Emenda Constitucional nº 131, de 3 de outubro de 2023 (in Portuguese) (archived copy)*",
   },
   "tsc.gob.hn/constitucion": {
     id: "tsc.gob.hn/constitucion",
@@ -755,11 +745,6 @@ export const citations: Record<string, Citation> = {
     id: "joradp.dz/ordonnance-05-01-nationalite",
     url: "https://www.joradp.dz/FTP/jo-francais/2005/F2005015.pdf",
     label: "Journal officiel de la République algérienne — JO n° 15 du 27 février 2005 (ordonnance 05-01 modifiant le Code de la nationalité) (in French)",
-  },
-  "tgr.gov.ma/code-nationalite-marocaine": {
-    id: "tgr.gov.ma/code-nationalite-marocaine",
-    url: "https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939",
-    label: "Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French)",
   },
   "cspd.gov.jo/nationality-law": {
     id: "cspd.gov.jo/nationality-law",
@@ -1096,11 +1081,6 @@ export const citations: Record<string, Citation> = {
     url: "https://peduliwni.kemlu.go.id/",
     label: "Kementerian Luar Negeri — Portal Peduli WNI (in Indonesian)",
   },
-  "lpdp.kemenkeu.go.id/beasiswa-reguler-2024": {
-    id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2024",
-    url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2024/",
-    label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2024 (in Indonesian)",
-  },
   "gov.uk/tb-clinics-malaysia": {
     id: "gov.uk/tb-clinics-malaysia",
     url: "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-malaysia/tuberculosis-testing-in-malaysia",
@@ -1240,11 +1220,6 @@ export const citations: Record<string, Citation> = {
     id: "fmino.gov.ng/ess-online-verification",
     url: "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
     label: "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
-  },
-  "nysc.gov.ng/foreign-trained-graduates": {
-    id: "nysc.gov.ng/foreign-trained-graduates",
-    url: "https://www.nysc.gov.ng/foreignmobreg.html",
-    label: "NYSC — Foreign Trained Graduates Requirements",
   },
   "gov.uk/tb-clinics-ghana": {
     id: "gov.uk/tb-clinics-ghana",
@@ -1525,5 +1500,30 @@ export const citations: Record<string, Citation> = {
     id: "icric.gov.so/constitution-chapters-1-4",
     url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
     label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
+  },
+  "lpdp.kemenkeu.go.id/beasiswa-reguler-2025": {
+    id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2025",
+    url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2025/",
+    label: "LPDP, Kementerian Keuangan — Beasiswa Reguler 2025 (in Indonesian)",
+  },
+  "portal.nysc.org.ng/foreign-requirements": {
+    id: "portal.nysc.org.ng/foreign-requirements",
+    url: "https://portal.nysc.org.ng/nysc1/ForeignReq.aspx",
+    label: "NYSC — Requirements for Foreign-Trained Graduates",
+  },
+  "isap.sejm.gov.pl/polish-citizenship-act": {
+    id: "isap.sejm.gov.pl/polish-citizenship-act",
+    url: "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20120000161/U/D20120161Lj.pdf",
+    label: "Internetowy System Aktów Prawnych (Sejm) — Ustawa z dnia 2 kwietnia 2009 r. o obywatelstwie polskim, Dz. U. 2012 poz. 161 (in Polish)",
+  },
+  "tgr.gov.ma/code-nationalite-marocaine": {
+    id: "tgr.gov.ma/code-nationalite-marocaine",
+    url: "https://web.archive.org/web/20241114094941id_/https://www.tgr.gov.ma/wps/wcm/connect/9dec4e15-0d6a-4c68-b7a6-122295647939/1-58-250+code+dela+nationalit%C3%A9+marocaine+modifi%C3%A9+par+1-23-19+du+10.02.2023.docx?MOD=AJPERES&CACHEID=9dec4e15-0d6a-4c68-b7a6-122295647939",
+    label: "Trésorerie Générale du Royaume — Dahir n° 1-58-250 portant Code de la nationalité marocaine (version du 02.05.2023) (in French) (archived copy)*",
+  },
+  "zimgaborone.gov.zw/dual-citizenship": {
+    id: "zimgaborone.gov.zw/dual-citizenship",
+    url: "https://web.archive.org/web/20260721044344/https://www.zimgaborone.gov.zw/?p=5732",
+    label: "Embassy of Zimbabwe in Botswana — Dual Citizenship (archived copy)*",
   },
 };

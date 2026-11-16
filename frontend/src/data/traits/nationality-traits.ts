@@ -1376,7 +1376,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "gov.pl/renunciation-of-polish-citizenship" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "isap.sejm.gov.pl/polish-citizenship-act", note: "Polish citizenship is lost only by renouncing it with the President's consent. The cited official page is in Polish." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   morocco: {
@@ -1398,7 +1398,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "tgr.gov.ma/code-nationalite-marocaine", note: "Moroccan nationality ends only if a decree authorises the person to renounce it. The cited official page is in French." },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "tgr.gov.ma/code-nationalite-marocaine", note: "Moroccan nationality ends only if a decree authorises the person to renounce it. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   uzbekistan: {
@@ -1662,7 +1662,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "zimgaborone.gov.zw/dual-citizenship" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "zimgaborone.gov.zw/dual-citizenship" },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   rwanda: {

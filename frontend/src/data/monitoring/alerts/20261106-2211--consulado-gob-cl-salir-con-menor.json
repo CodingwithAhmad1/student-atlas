@@ -13,10 +13,13 @@
   "newHash": "d1ab33413c2bbc53e0401a2011c1e243ef44e7df0377068849af95aac82a54fc",
   "diff": "Index: consulado.gob.cl/salir-con-menor\n===================================================================\n--- consulado.gob.cl/salir-con-menor\tprevious\n+++ consulado.gob.cl/salir-con-menor\tcurrent\n@@ -9,8 +9,6 @@\n Para destacar la información local más relevante, elige tu ubicación actual :\n Continuar\n Inicio\n-Quiero Viajar\n-Info para Viajar fuera de Chile\n Para salir de Chile con un menor de edad\n Martes 27 de enero de 2015\n El Artículo 49° de la Ley de Menores (16.618) define entre otros aspectos, a quienes están facultados para que un menor de edad abandone el país (padres, tutores, padre que concurrió al reconocimiento, subsidiariamente el Tribunal competente, el tercero o padre que goza del régimen de relación directa y regular) y a su vez señala que el autorizante debe expresar esta voluntad mediante una escritura pública o privada autorizada por Notario Público.\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the page's navigation links changed; the travel authorisation rules for minors are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-09T06:05:56.350Z",
   "error": null
 }

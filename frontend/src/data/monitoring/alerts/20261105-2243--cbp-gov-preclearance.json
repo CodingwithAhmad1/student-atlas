@@ -13,10 +13,13 @@
   "newHash": "deb3e59f3779ff6ca31f78b3fd078ea36940d716ae57c65cd7bf38cd3419a494",
   "diff": "Index: cbp.gov/preclearance\n===================================================================\n--- cbp.gov/preclearance\tprevious\n+++ cbp.gov/preclearance\tcurrent\n@@ -7,7 +7,7 @@\n Today, CBP has more than 600 officers and agriculture specialists stationed at 16 Preclearance locations in 6 countries: Dublin and Shannon in Ireland; Aruba; Bermuda; Abu Dhabi in the United Arab Emirates; Nassau in the Bahamas; and Calgary, Toronto, Billy Bishop Toronto, Edmonton, Halifax, Montreal, Ottawa, Vancouver, Victoria, and Winnipeg in Canada.\n In 2025, CBP personnel stationed abroad precleared more than 22 million travelers, representing nearly 14.6 percent of all commercial air travelers to the United States.\n The Benefits of Preclearance\n-In operation since 1952, Preclearance has proven benefits for all major stakeholders in the air travel industry. Click below to learn about the specific benefits for each group.\n+In operation since 1952, Preclearance has proven benefits for all major stakeholders in the air travel industry. Read below to learn about the specific benefits for each group.\n No Security or Waiting Upon U.S. Arrival – Skip CBP and TSA inspection lines upon arrival in the U.S and proceed directly to a connecting flight or final destination.\n Easier Domestic Connections – Accept tighter connection windows at U.S. airports and be less likely to miss a domestic connection.\n Cost Savings – Access less expensive U.S. domestic gates and more flexible arrival times at airports in the U.S.\n@@ -26,8 +26,8 @@\n Billy Bishop International Airport\n 1 Island Airport\n Toronto, Ontario, M5V 1A1\n-06:00 a.m. – 08:00 p.m.\n-(571) 690-6600\n+6:00 a.m. – 08:00 p.m.\n+(437) 568-2600\n Calgary Preclearance\n Calgary International Airport\n P.O. Box 155\n@@ -151,6 +151,4 @@\n The history of U.S. Preclearance. from its start in 1903 to modern day.\n Watch the Preclearance History YouTube Video\n Explore the time-saving convenience of clearing customs before visiting the U.S.\n-Watch the Preclearance Future YouTube Video\n-Experience the Preclearance difference, curb to curb.\n-Watch the YouTube Video on Curb to Curb Service\n\\ No newline at end of file\n+Watch the Preclearance Future YouTube Video\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "CBP changed a contact phone number and some wording; Abu Dhabi is still listed as a preclearance location.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-09T06:05:03.159Z",
   "error": null
 }

@@ -62,7 +62,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "us-arrival-travel",
-            blocks: [{ type: "paragraph", text: "Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, departure and return dates, and a residence permit or visa covering the whole period of study, plus the data pages of every passport used. [CITE: nysc.gov.ng/foreign-trained-graduates] Keep old passports and visa pages until NYSC registration is done." }],
+            blocks: [{ type: "paragraph", text: "Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, the first departure date from Nigeria and the date of return after the period of study, plus the data pages of every passport used. Graduates of institutions in West African countries also need their residence permit. [CITE: portal.nysc.org.ng/foreign-requirements] Keep old passports and visa pages until NYSC registration is done." }],
           },
         ],
       },
@@ -70,7 +70,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "uk-arrival-intro",
-            blocks: [{ type: "paragraph", text: "Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, departure and return dates, and a residence permit or visa covering the whole period of study, plus the data pages of every passport used. [CITE: nysc.gov.ng/foreign-trained-graduates] Keep old passports and visa pages until NYSC registration is done." }],
+            blocks: [{ type: "paragraph", text: "Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, the first departure date from Nigeria and the date of return after the period of study, plus the data pages of every passport used. Graduates of institutions in West African countries also need their residence permit. [CITE: portal.nysc.org.ng/foreign-requirements] Keep old passports and visa pages until NYSC registration is done." }],
           },
         ],
       },
@@ -78,7 +78,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "au-arrival-work",
-            blocks: [{ type: "paragraph", text: "Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, departure and return dates, and a residence permit or visa covering the whole period of study, plus the data pages of every passport used. [CITE: nysc.gov.ng/foreign-trained-graduates] Keep old passports and visa pages until NYSC registration is done." }],
+            blocks: [{ type: "paragraph", text: "Nigerian graduates of foreign universities who want NYSC mobilisation must show, in their Nigerian passport, the entry visa for the country of study, the first departure date from Nigeria and the date of return after the period of study, plus the data pages of every passport used. Graduates of institutions in West African countries also need their residence permit. [CITE: portal.nysc.org.ng/foreign-requirements] Keep old passports and visa pages until NYSC registration is done." }],
           },
         ],
       },

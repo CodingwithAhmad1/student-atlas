@@ -78,7 +78,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "us-psw-cliff",
-            blocks: [{ type: "paragraph", text: "Students funded by an Indonesian **LPDP scholarship** must return to Indonesia after their studies and contribute there for twice the length of study plus one year (2N+1), consecutively. [CITE: lpdp.kemenkeu.go.id/beasiswa-reguler-2024] Plan any post-study work visa around that obligation." }],
+            blocks: [{ type: "paragraph", text: "Students funded by an Indonesian **LPDP scholarship** must return to Indonesia after their studies and contribute there under the rules LPDP sets for their award. [CITE: lpdp.kemenkeu.go.id/beasiswa-reguler-2025] Check how long that obligation lasts with LPDP and plan any post-study work visa around it." }],
           },
         ],
       },
@@ -86,7 +86,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "uk-psw-transition",
-            blocks: [{ type: "paragraph", text: "Students funded by an Indonesian **LPDP scholarship** must return to Indonesia after their studies and contribute there for twice the length of study plus one year (2N+1), consecutively. [CITE: lpdp.kemenkeu.go.id/beasiswa-reguler-2024] Plan any post-study work visa around that obligation." }],
+            blocks: [{ type: "paragraph", text: "Students funded by an Indonesian **LPDP scholarship** must return to Indonesia after their studies and contribute there under the rules LPDP sets for their award. [CITE: lpdp.kemenkeu.go.id/beasiswa-reguler-2025] Check how long that obligation lasts with LPDP and plan any post-study work visa around it." }],
           },
         ],
       },
@@ -94,7 +94,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "au-psw-application",
-            blocks: [{ type: "paragraph", text: "Students funded by an Indonesian **LPDP scholarship** must return to Indonesia after their studies and contribute there for twice the length of study plus one year (2N+1), consecutively. [CITE: lpdp.kemenkeu.go.id/beasiswa-reguler-2024] Plan any post-study work visa around that obligation." }],
+            blocks: [{ type: "paragraph", text: "Students funded by an Indonesian **LPDP scholarship** must return to Indonesia after their studies and contribute there under the rules LPDP sets for their award. [CITE: lpdp.kemenkeu.go.id/beasiswa-reguler-2025] Check how long that obligation lasts with LPDP and plan any post-study work visa around it." }],
           },
         ],
       },

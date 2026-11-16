@@ -13,10 +13,13 @@
   "newHash": "unreachable-2026-11-04",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The guide already stopped citing this Senegalese nationality law page in an earlier review, so nothing on the site depends on it.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-09T06:13:23.926Z",
   "error": "HTTP 404 from https://www.dri.gouv.sn/sites/default/files/LOI/1961/61_10.pdf"
 }

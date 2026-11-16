@@ -13,10 +13,13 @@
   "newHash": "3dd37e5bb487a372102efcf0d8f9baab54a221a62cec6dce3839f9fcebf83dac",
   "diff": "Index: gov.uk/tb-clinics-nepal\n===================================================================\n--- gov.uk/tb-clinics-nepal\tprevious\n+++ gov.uk/tb-clinics-nepal\tcurrent\n@@ -45,10 +45,13 @@\n 12 USD\n The fee will be payable in Nepalese rupees at the exchange rate set by the IOM. You will pay the IOM clinic directly for the cost of your TB test. The cost of the test is in addition to the visa application fee.\n Norvic International Hospital & Medical College Ltd\n-Maternity Road\n-Thapathali\n+AVS Department\n+Norvic International Centre for Health Evaluation (NICHE) Building\n+Norvic International Hospital\n+Maternity Hospital Road\n Kathmandu\n Nepal\n+Located in a separate building approximately 100 metres down the road from Norvic International Hospital.\n Telephone: 00977 1 5970032\n Email: visamed@norvichospital.com\n Website: www.norvichospital.com\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The Norvic clinic's street address in Kathmandu changed; the guide names the clinic and city only, which are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-16T06:05:40.940Z",
   "error": null
 }
