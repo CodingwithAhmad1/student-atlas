@@ -188,7 +188,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "alt.bf/code-personnes-famille-2025", note: "Under the 2025 family code, Burkinabè nationality is lost only by repudiating it where the code allows or by a decree granted on request. People who became Burkinabè by naturalisation can be stripped of it within ten years for swearing allegiance to another state. The cited official page is in French." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   malawi: {
@@ -1156,7 +1156,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "prohibited", verifiedAt: "2026-11-16", citationId: "mewashingtondc.org/resume-citizenship-form", note: "The embassy treats people who took another citizenship as former Myanmar citizens and says dual citizenship is not permitted. The cited official page is in Burmese." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   sudan: {
@@ -1750,7 +1750,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-09-27" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "knesset.gov.il/nationality-law-1952", note: "Under the Nationality Law, Israeli nationality ends only by a renunciation the Minister of the Interior approves (or a court revoking a naturalisation), and an Israeli who also holds another nationality is treated as Israeli. The cited page is the law as first enacted." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   indonesia: {
@@ -1948,7 +1948,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "462-ballot", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-10-04" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-16", citationId: "cdn.haiphong.gov.vn/luat-quoc-tich-hop-nhat-2025", note: "Under the Law on Vietnamese Nationality (as amended in 2025), Vietnamese nationality ends only by an approved renunciation, deprivation or annulment; taking another nationality is not a ground for loss. The cited official page is in Vietnamese." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   iran: {

@@ -266,8 +266,9 @@ them blocks anything.
 - 2026-10-04: web.archive.org could not be reached from the cloud routine
   (HTTP 403 / connection reset), so source-ladder step 4 was unavailable.
   Vietnam's dual-nationality row was retired to "unknown" because
-  pbgdpl.gov.vn returned 503 and no other official page states the rule
-  explicitly. Restore it when pbgdpl.gov.vn or an archived copy is reachable.
+  pbgdpl.gov.vn returned 503 (no archived copy). Restored on 2026-11-16 from
+  the 2025 consolidated Law on Vietnamese Nationality (Official Gazette text,
+  hosted on the Hai Phong city portal), art. 26.
   The routine now checks at setup whether snapshots load, skips step 4 when
   they do not, and flags each source it retired without an archive check.
   Still HTTP 403 from the cloud on 2026-10-05, 2026-10-12, 2026-10-19,
@@ -389,23 +390,28 @@ travel.state.gov and usembassy.gov block automated clients.
 
 ### Could not be retrieved or confirmed
 
-**Dual nationality: 7 of 100 rows are `unknown`** (readers see "not yet
+**Dual nationality: 4 of 100 rows are `unknown`** (readers see "not yet
 verified; confirm with an embassy"):
 
 | Country | Why |
 |---|---|
 | Afghanistan | The 2000 Citizenship Law bars dual citizenship, but no official source says the current authorities apply it. |
-| Burkina Faso | The 2025 family code replaced the rule; no official copy is online. |
-| Chad | The 1962 ordinance is only on the official gazette site, behind a bot check; no archived copy. |
-| Israel | Government sites refuse automated clients; archived pages only describe renunciation. |
-| Myanmar | The legal database refuses connections; archived pages never captured the law. |
-| Niger | No official copy of the 2014 law; the Foreign Ministry page predates it. |
+| Chad | The 1962 ordinance is only on the official gazette site (unreachable); no archived copy. The 2023 Constitution (presidence.td) leaves the rule to the law. |
+| Niger | No official copy of the 2014 law (Loi 2014-60); the Ministry of Justice nationality page is a placeholder. |
 | North Korea | No official publication exists. |
 
-**Cited from archived copies (13)**: Brazil (since 2026-11-16: the Câmara page
+Restored on 2026-11-16: Burkina Faso (2025 family code, art. 154-1, from the
+transition assembly's 90 MB scanned PDF; the download takes 15–30 s, close to
+the watcher's 30 s timeout, so an occasional failed check is expected),
+Israel (Knesset English text of the 1952 Nationality Law, archived copy; the
+law as enacted, later amendments to ss. 10–11 unread), Myanmar (Washington
+embassy guidance for former citizens; the 1982 law itself has no reachable
+official copy) and Vietnam.
+
+**Cited from archived copies (14)**: Brazil (since 2026-11-16: the Câmara page
 returns 404 and planalto.gov.br redirects automated clients), Burundi,
-Cambodia, DR Congo, Guatemala, Iran, Ivory Coast, Morocco, Senegal and
-Zimbabwe (these four and Brazil since 2026-11-16), South Sudan, Sudan, Syria. Once a year, check whether the official page
+Cambodia, DR Congo, Guatemala, Iran, Israel, Ivory Coast, Morocco, Senegal
+and Zimbabwe (these five and Brazil since 2026-11-16), South Sudan, Sudan, Syria. Once a year, check whether the official page
 is back and cite it instead. Ivory Coast is the 1961 text (later amendments
 unread; none reported to change art. 48).
 
@@ -420,7 +426,7 @@ leaving; ask Bituach Leumi about insurance rights abroad.
 and appear as "not monitorable" on the Activity tab: travel.state.gov,
 *.usembassy.gov and state.gov (bot checks), u.ae and adilet.zan.kz
 (JavaScript only), cne.ao and consulado.pe (broken TLS chains), kdmid.ru
-(times out), legifrance and pravo.by (403), the 13 archived copies, and a few
+(times out), legifrance and pravo.by (403), the 14 archived copies, and a few
 others. Check them by hand once a year. Local quirk: some hosts
 (privatehealth.gov.au, dol.gov) fail from a home connection but work in CI.
 
