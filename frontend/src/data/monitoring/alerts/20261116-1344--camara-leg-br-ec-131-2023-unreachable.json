@@ -13,10 +13,24 @@
   "newHash": "unreachable-2026-11-16",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
-  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 404 from https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "significance": "meaningful",
+  "summary": "Brazil's dual-nationality row is now cited from an archived copy of the same amendment.",
+  "status": "approved",
+  "resolution": {
+    "note": "The Câmara page now returns HTTP 404 and planalto.gov.br redirects automated clients to its homepage. Source ladder step 4: cited from the Internet Archive copy of 22 July 2026, which still reads \"II - fizer pedido expresso de perda da nacionalidade brasileira perante autoridade brasileira competente\" (Brazilian nationality is lost only on an express request). brazil.dualNationalityAtHome stays \"allowed\".",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "url: \"https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html\",\n    label: \"Câmara dos Deputados — Emenda Constitucional nº 131, de 3 de outubro de 2023 (in Portuguese)\",",
+        "newText": "url: \"https://web.archive.org/web/20260722140625/https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html\",\n    label: \"Câmara dos Deputados — Emenda Constitucional nº 131, de 3 de outubro de 2023 (in Portuguese) (archived copy)*\","
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"camara.leg.br/ec-131-2023\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": "\"camara.leg.br/ec-131-2023\": { country: \"INTL\", category: \"citizenship\", skipReason: \"Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead.\" },"
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-16T14:53:07.304Z",
   "error": "HTTP 404 from https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html"
 }

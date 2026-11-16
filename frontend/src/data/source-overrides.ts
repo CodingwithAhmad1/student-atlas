@@ -165,7 +165,7 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "mevzuat.gov.tr/5901-turk-vatandasligi-kanunu": { country: "INTL", category: "citizenship" },
   "mjusticia.gob.es/como-pierde-nacionalidad": { country: "INTL", category: "citizenship" },
   "files.diariodarepublica.pt/lei-organica-1-2026": { country: "INTL", category: "citizenship" },
-  "camara.leg.br/ec-131-2023": { country: "INTL", category: "citizenship" },
+  "camara.leg.br/ec-131-2023": { country: "INTL", category: "citizenship", skipReason: "Cited from an Internet Archive copy because the official page is offline or blocked; the copy never changes. Check once a year whether the official page is back and cite it instead." },
   "tsc.gob.hn/constitucion": { country: "INTL", category: "citizenship" },
   "asambleanacional.gob.ec/constitucion": { country: "INTL", category: "citizenship" },
   "anc.pj.gob.pe/constitucion-1993": { country: "INTL", category: "citizenship" },

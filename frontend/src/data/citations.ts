@@ -673,8 +673,8 @@ export const citations: Record<string, Citation> = {
   },
   "camara.leg.br/ec-131-2023": {
     id: "camara.leg.br/ec-131-2023",
-    url: "https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html",
-    label: "Câmara dos Deputados — Emenda Constitucional nº 131, de 3 de outubro de 2023 (in Portuguese)",
+    url: "https://web.archive.org/web/20260722140625/https://www2.camara.leg.br/legin/fed/emecon/2023/emendaconstitucional-131-3-outubro-2023-794771-publicacaooriginal-169563-pl.html",
+    label: "Câmara dos Deputados — Emenda Constitucional nº 131, de 3 de outubro de 2023 (in Portuguese) (archived copy)*",
   },
   "tsc.gob.hn/constitucion": {
     id: "tsc.gob.hn/constitucion",

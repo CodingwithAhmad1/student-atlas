@@ -13,10 +13,13 @@
   "newHash": "3ff6088489216c085eabc65ab02a60a953d87a562a982a78b43c011ef6597322",
   "diff": "Index: migrationsverket.se/what-swedish-citizenship-means\n===================================================================\n--- migrationsverket.se/what-swedish-citizenship-means\tprevious\n+++ migrationsverket.se/what-swedish-citizenship-means\tcurrent\n@@ -16,6 +16,9 @@\n You may also encounter problems if you travel to a country other than those countries of which you are a citizen. This is especially true if you did not enter the country with your Swedish passport but instead used your other passport. Then the authorities in that country can claim that Sweden does not have the right to help you.\n Information services survey External link, opens in new window.\n News\n+2026-11-16\n+New e-service for notification of Swedish citizenship for Nordic citizens\n+On 1 December 2026, the Swedish Migration Agency will launch an e-service for notification of Swedish citizenship for Nordic citizens who have lived in Sweden for at least five years.\n 2026-09-30\n The Swedish language test for citizenship may be postponed\n The new Swedish language test may be introduced later than planned. The requirement to have knowledge of Swedish will remain, but for the time being, you can show your knowledge in other ways.\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "minor",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "News item added: \"New e-service for notification of Swedish citizenship for Nordic citizens\" (launching 1 December 2026). Nothing the guide says about dual citizenship changed; sweden.dualNationalityAtHome stays \"allowed\".",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-16T14:51:29.353Z",
   "error": null
 }

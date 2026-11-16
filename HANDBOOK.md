@@ -402,8 +402,9 @@ verified; confirm with an embassy"):
 | Niger | No official copy of the 2014 law; the Foreign Ministry page predates it. |
 | North Korea | No official publication exists. |
 
-**Cited from archived copies (8)**: Burundi, Cambodia, Guatemala, Iran, Ivory
-Coast, South Sudan, Sudan, Syria. Once a year, check whether the official page
+**Cited from archived copies (9)**: Brazil (since 2026-11-16: the Câmara page
+returns 404 and planalto.gov.br redirects automated clients), Burundi,
+Cambodia, Guatemala, Iran, Ivory Coast, South Sudan, Sudan, Syria. Once a year, check whether the official page
 is back and cite it instead. Ivory Coast is the 1961 text (later amendments
 unread; none reported to change art. 48).
 
@@ -418,7 +419,7 @@ leaving; ask Bituach Leumi about insurance rights abroad.
 and appear as "not monitorable" on the Activity tab: travel.state.gov,
 *.usembassy.gov and state.gov (bot checks), u.ae and adilet.zan.kz
 (JavaScript only), cne.ao and consulado.pe (broken TLS chains), kdmid.ru
-(times out), legifrance and pravo.by (403), the 8 archived copies, and a few
+(times out), legifrance and pravo.by (403), the 9 archived copies, and a few
 others. Check them by hand once a year. Local quirk: some hosts
 (privatehealth.gov.au, dol.gov) fail from a home connection but work in CI.
 
