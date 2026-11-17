@@ -1,0 +1,22 @@
+{
+  "id": "20261117-2354--cbp-gov-evus-faq",
+  "kind": "change",
+  "sourceId": "cbp.gov/evus-faq",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Customs and Border Protection — Electronic Visa Update System (EVUS) Frequently Asked Questions",
+  "sourceUrl": "https://www.cbp.gov/travel/international-visitors/electronic-visa-update-system-evus/frequently-asked-questions",
+  "country": "US",
+  "category": "general",
+  "detectedAt": "2026-11-17T23:54:41.074Z",
+  "updatedAt": "2026-11-17T23:54:41.074Z",
+  "oldHash": "898c142c5859a50d7ae412529e452362d05a49aba6ab474a426d629d71389504",
+  "newHash": "b4161a69e3c1fe2a31e14c04a877d3baa11afcc6e456e11739ebc39e89209442",
+  "diff": "Index: cbp.gov/evus-faq\n===================================================================\n--- cbp.gov/evus-faq\tprevious\n+++ cbp.gov/evus-faq\tcurrent\n@@ -5,7 +5,7 @@\n Electronic Visa Update System (EVUS)\n 用中文（表達)\n To enroll go to: www.evus.gov\n-EVUS is the online system used by nationals of China holding a 10-year B1/B2, B1 or B2 (visitor) visa periodically to update basic biographic information to facilitate their travel to the United States. In addition to a valid visa, such travelers will be required to complete an EVUS enrollment to be admitted into the United States.\n+EVUS is the online system used by nationals of China holding a 10-year B1/B2, B1 or B2 (visitor) visa periodically to update basic biographic information to expedite their travel to the United States. In addition to a valid visa, such travelers will be required to complete an EVUS enrollment to be admitted into the United States.\n On November 29, 2016, all individuals carrying maximum validity (10-year) B1/B2, B1, and B2 visas in passports issued by the People’s Republic of China must have a valid EVUS enrollment in order to travel to the United States. Travelers who are subject to EVUS requirements but do not have valid enrollments will not be able to obtain a boarding pass or enter through a land port of entry.\n Find additional information and frequently asked questions on the official EVUS enrollment website.\n Enroll in EVUS\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

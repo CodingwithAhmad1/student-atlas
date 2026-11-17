@@ -1,0 +1,22 @@
+{
+  "id": "20261117-2354--cbp-gov-preclearance",
+  "kind": "change",
+  "sourceId": "cbp.gov/preclearance",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Customs and Border Protection — Preclearance",
+  "sourceUrl": "https://www.cbp.gov/travel/preclearance",
+  "country": "US",
+  "category": "general",
+  "detectedAt": "2026-11-17T23:54:41.074Z",
+  "updatedAt": "2026-11-17T23:54:41.074Z",
+  "oldHash": "deb3e59f3779ff6ca31f78b3fd078ea36940d716ae57c65cd7bf38cd3419a494",
+  "newHash": "fd5de8e82f58ea4e9f7a81735402de536813db4ba91ded3a26b076103c06a64f",
+  "diff": "Index: cbp.gov/preclearance\n===================================================================\n--- cbp.gov/preclearance\tprevious\n+++ cbp.gov/preclearance\tcurrent\n@@ -14,7 +14,7 @@\n Increase U.S. Market Access – Establish new routes to desirable U.S. destinations that meet growing traveler demand.\n New U.S. Destinations – Enable new direct routes to 160+ U.S. airports regardless of whether they have a CBP port of entry.\n Terminal of the Future – Use innovative technologies like facial recognition biometrics that expedite passenger processing, meeting the demand of rising passenger volume to the U.S.\n-Enhanced Security – Bolster the safety and security of all travelers while facilitating efficient trade and travel.\n+Enhanced Security – Bolster the safety and security of all travelers while protecting efficient trade and travel.\n Greater Collaboration – Increase communication between the U.S. and host governments through daily interaction with local law enforcement partners and government authorities.\n Preclearance Site Locations\n Find contact information for any of the 16 Preclearance sites worldwide.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
