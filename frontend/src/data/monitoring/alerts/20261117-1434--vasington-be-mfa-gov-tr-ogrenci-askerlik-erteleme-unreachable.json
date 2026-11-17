@@ -1,0 +1,22 @@
+{
+  "id": "20261117-1434--vasington-be-mfa-gov-tr-ogrenci-askerlik-erteleme-unreachable",
+  "kind": "unreachable",
+  "sourceId": "vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme",
+  "relatedSourceIds": [],
+  "sourceLabel": "Embassy of Türkiye in Washington — Öğrenci Askerlik Erteleme (in Turkish)",
+  "sourceUrl": "https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-17T14:34:16.495Z",
+  "updatedAt": "2026-11-17T14:34:16.495Z",
+  "oldHash": "54cae520400dcaa1cf0f41b94e24c1531cf8aee9b4ebd90a20b8ea9e5f71a6d6",
+  "newHash": "unreachable-2026-11-17",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413: The operation was aborted due to timeout). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413: The operation was aborted due to timeout"
+}

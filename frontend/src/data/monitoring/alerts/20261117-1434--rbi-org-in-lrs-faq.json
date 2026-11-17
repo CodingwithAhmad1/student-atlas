@@ -1,0 +1,22 @@
+{
+  "id": "20261117-1434--rbi-org-in-lrs-faq",
+  "kind": "change",
+  "sourceId": "rbi.org.in/lrs-faq",
+  "relatedSourceIds": [],
+  "sourceLabel": "Reserve Bank of India — Liberalised Remittance Scheme (LRS) FAQs",
+  "sourceUrl": "https://www.rbi.org.in/Scripts/FAQView.aspx?Id=115",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-17T14:34:16.495Z",
+  "updatedAt": "2026-11-17T14:34:16.495Z",
+  "oldHash": "62152b0972e74f03bacc04979a4a7ebcc986a0435791b6b31c6e9cdf11fba1b9",
+  "newHash": "7010f48e9f7ed83ce381e4131a7e99f5d33551a43487691e6a4882ff769581d1",
+  "diff": "Index: rbi.org.in/lrs-faq\n===================================================================\n--- rbi.org.in/lrs-faq\tprevious\n+++ rbi.org.in/lrs-faq\tcurrent\n@@ -9,6 +9,7 @@\n Issuer of Currency\n Payment and Settlement System\n FinTech\n+Banker to Government\n Research\n Others\n Deposit Insurance and Credit Guarantee Corporation\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
