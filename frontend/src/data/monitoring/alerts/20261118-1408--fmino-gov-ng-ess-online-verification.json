@@ -1,0 +1,22 @@
+{
+  "id": "20261118-1408--fmino-gov-ng-ess-online-verification",
+  "kind": "change",
+  "sourceId": "fmino.gov.ng/ess-online-verification",
+  "relatedSourceIds": [],
+  "sourceLabel": "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
+  "sourceUrl": "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-18T14:08:52.044Z",
+  "updatedAt": "2026-11-18T14:08:52.044Z",
+  "oldHash": "fb14cf46883ab73953ca9f863c3e57af1eb0bab954badf86d4d02ecbd415d624",
+  "newHash": "f1d6bb499936638f7b38ec6a9b3164e570b636601d9f91ab0e46c54249b52de5",
+  "diff": "Index: fmino.gov.ng/ess-online-verification\n===================================================================\n--- fmino.gov.ng/ess-online-verification\tprevious\n+++ fmino.gov.ng/ess-online-verification\tcurrent\n@@ -20,6 +20,6 @@\n Mrs. Folasade Boriowo\n Director, Press and Public Relations\n RELATED ARTICLESMORE FROM AUTHOR\n-Defence Minister Receives EU Delegation On €20 Million European Peace Facility\n-BPP, Harley Reed Urge Procurement Leaders To Embrace Strategic Thinking, Innovation In Public Procurement\n-Petroleum Ministry Builds Technical Capacity For Oil And Gas Infrastructure Assessment And Modelling\n\\ No newline at end of file\n+Disqualify Candidates Over Political Violence, Senate Urges INEC\n+WPRF: Idris Hosts Kenyan, Sudanese Counterparts, Seeks Stronger African Alliance Against Misinformation\n+“Going The Extra Mile”: SERVICOM Rallies ECN To Proactive, Citizen-centred Service Delivery\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

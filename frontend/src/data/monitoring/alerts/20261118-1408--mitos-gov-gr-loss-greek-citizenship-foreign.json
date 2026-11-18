@@ -1,0 +1,22 @@
+{
+  "id": "20261118-1408--mitos-gov-gr-loss-greek-citizenship-foreign",
+  "kind": "change",
+  "sourceId": "mitos.gov.gr/loss-greek-citizenship-foreign",
+  "relatedSourceIds": [],
+  "sourceLabel": "Εθνικό Μητρώο Διοικητικών Διαδικασιών (mitos.gov.gr) — Απώλεια Ελληνικής Ιθαγένειας λόγω Κτήσης Αλλοδαπής Ιθαγένειας (in Greek)",
+  "sourceUrl": "https://mitos.gov.gr/index.php/%CE%94%CE%94:%CE%91%CF%80%CF%8E%CE%BB%CE%B5%CE%B9%CE%B1_%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AE%CF%82_%CE%99%CE%B8%CE%B1%CE%B3%CE%AD%CE%BD%CE%B5%CE%B9%CE%B1%CF%82_%CE%BB%CF%8C%CE%B3%CF%89_%CE%9A%CF%84%CE%AE%CF%83%CE%B7%CF%82_%CE%91%CE%BB%CE%BB%CE%BF%CE%B4%CE%B1%CF%80%CE%AE%CF%82_%CE%99%CE%B8%CE%B1%CE%B3%CE%AD%CE%BD%CE%B5%CE%B9%CE%B1%CF%82",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-18T14:08:52.044Z",
+  "updatedAt": "2026-11-18T14:08:52.044Z",
+  "oldHash": "3a9bc92a7d8cddabbbbad131163656fcf30365d492b0dcc059ee566f9afec471",
+  "newHash": "8a6c57528413257712d0fa67bebc483fc2e2f7a7c98badf0a533c6f05aa992b8",
+  "diff": "Index: mitos.gov.gr/loss-greek-citizenship-foreign\n===================================================================\n--- mitos.gov.gr/loss-greek-citizenship-foreign\tprevious\n+++ mitos.gov.gr/loss-greek-citizenship-foreign\tcurrent\n@@ -48,6 +48,7 @@\n Διάρκεια Ισχύος\n Αόριστη\n Τελευταία ενημέρωση\n+—\n Αίτηση\n Τύπος αίτησης\n Αίτηση\n@@ -418,5 +419,6 @@\n Χρειάζομαι βοήθεια ή συμβουλή\n Εντοπισμός και πρόσβαση στην πλέον κατάλληλη υπηρεσία υποστήριξης\n API Εθνικού Μητρώου Διοικητικών Διαδικασιών\n-Γενική Γραμματεία Δημόσιας Διοίκησης\n+Γενική Γραμματεία\n+Δημόσιας Διοίκησης\n Ανατροφοδότηση\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
