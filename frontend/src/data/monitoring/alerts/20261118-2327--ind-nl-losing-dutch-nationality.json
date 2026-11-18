@@ -1,0 +1,22 @@
+{
+  "id": "20261118-2327--ind-nl-losing-dutch-nationality",
+  "kind": "change",
+  "sourceId": "ind.nl/losing-dutch-nationality",
+  "relatedSourceIds": [],
+  "sourceLabel": "Immigration and Naturalisation Service (IND), Netherlands — Losing Dutch Nationality",
+  "sourceUrl": "https://ind.nl/en/dutch-citizenship/losing-dutch-nationality",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-18T23:27:51.843Z",
+  "updatedAt": "2026-11-18T23:27:51.843Z",
+  "oldHash": "bd21fcf2ce296385cbd43db982e4df8395b292852ea48cee9f76d2a88407901c",
+  "newHash": "589162bf964c8040e4db084007da40080259cef5cc64eecd6a1948dbd29fac66",
+  "diff": "Index: ind.nl/losing-dutch-nationality\n===================================================================\n--- ind.nl/losing-dutch-nationality\tprevious\n+++ ind.nl/losing-dutch-nationality\tcurrent\n@@ -30,7 +30,7 @@\n In some cases, the Dutch Government can revoke the Dutch nationality of an adult or minor. This can happen in one of these situations:\n You committed fraud to become a Dutch national. For example, fraud that has to do with your identity. You commit fraud if you make a false statement, mislead or hide important facts. You would not have been able to get the Dutch nationality if you had not committed the fraud.\n You have been convicted of a crime against the interests or safety of the Kingdom. These are actions that can seriously damage the interests of the Kingdom. For example, a war crime or a crime with a terrorist motive. Read about this in our brochure (only in Dutch)\n-Intrekking van de Nederlandse nationaliteit bij veroordeling voor een terroristisch misdrijf of bij bedreiging voor de nationale veiligheid 5044(PDF, 324.36 KB)\n+Intrekking van de Nederlandse nationaliteit bij veroordeling voor een terroristisch misdrijf of bij bedreiging voor de nationale veiligheid 5044 (PDF, 324.36 KB)\n You are 16 years old or older and you serve voluntarily in an army (the armed services) of a foreign state. And that state is at war with the Kingdom of the Netherlands or one of its allies.\n You are 18 years old or older, you are abroad and have joined one of the listed organisations that pose a threat to national security (in Dutch only).\n You are an adult and, after your naturalisation, you did not do everything you could to renounce your other nationality. But you did make this promise when you applied for naturalisation or option.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
