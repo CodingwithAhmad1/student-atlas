@@ -1,0 +1,22 @@
+{
+  "id": "20261119-1430--xaydungchinhsach-chinhphu-vn-thong-tu-65-2026",
+  "kind": "change",
+  "sourceId": "xaydungchinhsach.chinhphu.vn/thong-tu-65-2026",
+  "relatedSourceIds": [],
+  "sourceLabel": "Government of Vietnam portal — Circular 65/2026/TT-BGDĐT on recognising foreign degrees for use in Vietnam (in Vietnamese)",
+  "sourceUrl": "https://xaydungchinhsach.chinhphu.vn/thong-tu-so-65-2026-tt-bgddt-quy-dinh-cong-nhan-van-bang-do-co-so-giao-duc-nuoc-ngoai-cap-de-su-dung-tai-viet-nam-119260813161727367.htm",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-19T14:30:57.395Z",
+  "updatedAt": "2026-11-19T14:30:57.395Z",
+  "oldHash": "df6342ac8d918b58851270157d4c404a10aa299c0615e8727272790fd2a50f15",
+  "newHash": "b8a855cbce61b770f96c6a0b44a23ddc747a785e135b04b6f7eb4a50ef275b77",
+  "diff": "Index: xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\n===================================================================\n--- xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tprevious\n+++ xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tcurrent\n@@ -84,7 +84,6 @@\n Chính sách và cuộc sống\n (Chinhphu.vn) - Cán bộ, công chức, viên chức và người lao động của các cơ quan hành chính nhà nước, đơn vị sự nghiệp công lập, tổ chức chính trị, tổ chức chính trị - xã hội sẽ được nghỉ Tết Nguyên đán Đinh Mùi từ 4/2-10/2/2027. Nghỉ lễ Quốc khánh năm 2027 gồm 4 ngày liên tục.\n Tra cứu TUỔI NGHỈ HƯU và THỜI ĐIỂM NGHỈ HƯU\n-Hướng dẫn thực hiện chính sách\n (Chinhphu.vn) - Năm 2026, độ tuổi nghỉ hưu của người lao động nam là 61 tuổi 6 tháng, lao động nữ là 57 tuổi. Năm 2027, độ tuổi nghỉ hưu của người lao động nam sẽ là 61 tuổi 9 tháng, lao động nữ sẽ là 57 tuổi 4 tháng;...\n Chi tiết 34 ĐƠN VỊ HÀNH CHÍNH CẤP TỈNH\n Chính sách và cuộc sống\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
