@@ -1,0 +1,22 @@
+{
+  "id": "20261119-2338--gov-uk-find-a-visa-application-centre",
+  "kind": "change",
+  "sourceId": "gov.uk/find-a-visa-application-centre",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Find a visa application centre",
+  "sourceUrl": "https://www.gov.uk/find-a-visa-application-centre",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-11-19T23:38:51.901Z",
+  "updatedAt": "2026-11-19T23:38:51.901Z",
+  "oldHash": "937d71d6ecf0413d3f47ef915d9880814ed5496bb162c742b1a37109cf94cbed",
+  "newHash": "1ea174f067b5eb96d04a2404f1bd798e8d885a89f21d8532f596d58db58677b0",
+  "diff": "Index: gov.uk/find-a-visa-application-centre\n===================================================================\n--- gov.uk/find-a-visa-application-centre\tprevious\n+++ gov.uk/find-a-visa-application-centre\tcurrent\n@@ -4,6 +4,7 @@\n You must apply for your visa before you can make an appointment at a visa application centre.\n If the country you live in does not have a visa application centre, you can choose a centre in a different country.\n If you do not choose a visa application centre when you apply for your visa, it will be chosen for you. It will be the centre that’s the most accessible to the country you live in.\n+Most visa application centres offer free appointments within 5 working days. In some locations you’ll need to pay £76.50 for a standard appointment. You can choose to travel to a different visa application centre with free appointments, but you’ll need to pay your own travel costs.\n A\n Afghanistan - choose a centre in a different country\n Albania\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
