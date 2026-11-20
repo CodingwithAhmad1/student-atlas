@@ -1,0 +1,22 @@
+{
+  "id": "20261120-1408--immigration-go-ke-dual-citizenship-unreachable",
+  "kind": "unreachable",
+  "sourceId": "immigration.go.ke/dual-citizenship",
+  "relatedSourceIds": [],
+  "sourceLabel": "Kenya Directorate of Immigration Services — Dual Citizenship",
+  "sourceUrl": "https://immigration.go.ke/dual-citizenship/",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-20T14:08:16.000Z",
+  "updatedAt": "2026-11-20T14:08:16.000Z",
+  "oldHash": "01bb918e53642a70e1bf6bd366fe6c80eab8836ec24f090151cd624248d2fe30",
+  "newHash": "unreachable-2026-11-20",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 500 from https://immigration.go.ke/dual-citizenship/). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 500 from https://immigration.go.ke/dual-citizenship/"
+}
