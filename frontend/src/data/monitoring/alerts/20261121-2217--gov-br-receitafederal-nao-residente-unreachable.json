@@ -1,0 +1,22 @@
+{
+  "id": "20261121-2217--gov-br-receitafederal-nao-residente-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.br/receitafederal/nao-residente",
+  "relatedSourceIds": [],
+  "sourceLabel": "Receita Federal — Residente e Não Residente (in Portuguese)",
+  "sourceUrl": "https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/preenchimento/dsdp/nao-residente",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-21T22:17:40.799Z",
+  "updatedAt": "2026-11-21T22:17:40.799Z",
+  "oldHash": "3379c9b6112e78dc958f359fb557a9b2fcc3d269be211f6848937fee7d81aa01",
+  "newHash": "unreachable-2026-11-21",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/preenchimento/dsdp/nao-residente: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/preenchimento/dsdp/nao-residente: fetch failed"
+}

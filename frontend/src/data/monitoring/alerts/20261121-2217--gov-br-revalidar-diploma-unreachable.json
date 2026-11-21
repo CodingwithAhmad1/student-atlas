@@ -1,0 +1,22 @@
+{
+  "id": "20261121-2217--gov-br-revalidar-diploma-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.br/revalidar-diploma",
+  "relatedSourceIds": [],
+  "sourceLabel": "Governo Federal (gov.br) — Revalidação e Reconhecimento de Diplomas Estrangeiros (in Portuguese)",
+  "sourceUrl": "https://www.gov.br/pt-br/servicos/reconhecer-ou-revalidar-diploma-de-curso-superior-obtido-no-exterior",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-21T22:17:40.799Z",
+  "updatedAt": "2026-11-21T22:17:40.799Z",
+  "oldHash": "19f81d05a6c95a8fcb5f1a9e1859fbe6d7d8eec4277d89a233843e7444696823",
+  "newHash": "unreachable-2026-11-21",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/pt-br/servicos/reconhecer-ou-revalidar-diploma-de-curso-superior-obtido-no-exterior: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.br/pt-br/servicos/reconhecer-ou-revalidar-diploma-de-curso-superior-obtido-no-exterior: fetch failed"
+}
