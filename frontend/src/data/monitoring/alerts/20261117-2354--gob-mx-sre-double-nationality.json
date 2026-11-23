@@ -13,10 +13,13 @@
   "newHash": "78c9945bf40806cb45d50c8b35cf8f109d6129fe3a1d85be98edc194f443c683",
   "diff": "Index: gob.mx/sre-double-nationality\n===================================================================\n--- gob.mx/sre-double-nationality\tprevious\n+++ gob.mx/sre-double-nationality\tcurrent\n@@ -2,16 +2,16 @@\n Secretaría de Relaciones Exteriores\n Documentos\n Publicaciones Recientes\n+2026-11-13 15:15:00 -0600\n+En Tokio, secretario Velasco y ministro Motegi fortalecen la relación México-Japón\n+2026-11-13 15:11:00 -0600\n+Secretary Velasco Meets with Japanese Foreign Minister Motegi in Tokyo, Reaffirms Commitment to Closer Mexico-Japan Ties\n 2026-11-11 21:26:00 -0600\n El canciller Roberto Velasco participa en la inauguración de la 1ª Cumbre Latinoamericana de Inversión en Primera Infancia\n 2026-11-11 21:21:00 -0600\n Foreign Secretary Roberto Velasco Takes Part in Inauguration of First Latin American Summit on Investing in Early Childhood\n 2026-11-05 09:07:00 -0600\n Foreign Secretary Roberto Velasco Attends the 30th Ibero-American Summit in Madrid\n-2026-11-05 09:01:00 -0600\n-El canciller Roberto Velasco Álvarez participa en la XXX Cumbre Iberoamericana en Madrid\n-2026-10-31 14:54:00 -0600\n-Secretary Velasco Concludes Participation in G20 Ministerial Meeting, Calls for Greater Economic Integration That Creates Shared Prosperity\n Double Nationality\n If you have another nationality in addition to Mexican nationality, this information is for you.\n Secretaría de Relaciones Exteriores |\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the list of recent news items on Mexico's foreign ministry page changed; its double nationality information is unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:04:08.504Z",
   "error": null
 }
