@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-22T22:34:37.646Z",
+  "generatedAt": "2026-11-23T06:10:22.124Z",
   "sources": {
     "travel.state.gov/B-visa": {
       "sourceId": "travel.state.gov/B-visa",
@@ -3409,12 +3409,12 @@
       "country": "INTL",
       "category": "general",
       "label": "Polícia Federal — Documentação: Autorização para menor, informações e modelos (in Portuguese)",
-      "lastCheckedAt": "2026-11-22T22:34:37.646Z",
+      "lastCheckedAt": "2026-11-23T06:10:17.726Z",
       "lastChangedAt": "2026-09-28T06:47:35.584Z",
       "lastHash": "34584f71b5b451d1824983c5810605e1cbe9053c6a57d70bd880337d97405be5",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 5,
-      "lastError": "Network error fetching https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-autorizacao-para-menor-informacoes-e: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "gov.br/alistar-se-no-servico-militar-no-exterior": {
@@ -3423,12 +3423,12 @@
       "country": "INTL",
       "category": "general",
       "label": "Governo Federal (gov.br) — Alistar-se no serviço militar no exterior (in Portuguese)",
-      "lastCheckedAt": "2026-11-22T22:34:37.646Z",
+      "lastCheckedAt": "2026-11-23T06:10:13.157Z",
       "lastChangedAt": "2026-10-26T21:41:37.664Z",
       "lastHash": "9cb704da89871df543e23206b429afc9c5baad23b703cd2721b9298bc24a82f5",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 5,
-      "lastError": "Network error fetching https://www.gov.br/pt-br/servicos/alistar-se-no-servico-militar-no-exterior: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "gov.br/pf/regularidade-servico-militar": {
@@ -3437,12 +3437,12 @@
       "country": "INTL",
       "category": "general",
       "label": "Polícia Federal — Documentação: Regularidade com Serviço Militar (in Portuguese)",
-      "lastCheckedAt": "2026-11-22T22:34:37.646Z",
+      "lastCheckedAt": "2026-11-23T06:10:19.189Z",
       "lastChangedAt": "2026-09-28T06:47:35.584Z",
       "lastHash": "172e96bc4561704e7af461758322ccc80d015ea24e1d233980909a659efa12d0",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 5,
-      "lastError": "Network error fetching https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-regularidade-servico-militar-documentos: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "gov.br/receitafederal/nao-residente": {
@@ -3451,12 +3451,12 @@
       "country": "INTL",
       "category": "general",
       "label": "Receita Federal — Residente e Não Residente (in Portuguese)",
-      "lastCheckedAt": "2026-11-22T22:34:37.646Z",
+      "lastCheckedAt": "2026-11-23T06:10:20.720Z",
       "lastChangedAt": "2026-09-28T06:47:35.584Z",
       "lastHash": "3379c9b6112e78dc958f359fb557a9b2fcc3d269be211f6848937fee7d81aa01",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 5,
-      "lastError": "Network error fetching https://www.gov.br/receitafederal/pt-br/assuntos/meu-imposto-de-renda/preenchimento/dsdp/nao-residente: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "gov.br/comunicar-saida-definitiva-do-pais": {
@@ -3465,12 +3465,12 @@
       "country": "INTL",
       "category": "general",
       "label": "Governo Federal (gov.br) — Comunicar saída definitiva do país (in Portuguese)",
-      "lastCheckedAt": "2026-11-22T22:34:37.646Z",
+      "lastCheckedAt": "2026-11-23T06:10:16.331Z",
       "lastChangedAt": "2026-09-28T06:47:35.584Z",
       "lastHash": "3d82e54cb290cc905deb80269d6ee5e1c14cc54160024a002c5eb6a579df2994",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 5,
-      "lastError": "Network error fetching https://www.gov.br/pt-br/servicos/comunicar-saida-definitiva-do-pais: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "gov.br/capes/ex-bolsistas": {
@@ -3479,12 +3479,12 @@
       "country": "INTL",
       "category": "general",
       "label": "CAPES — Ex-bolsistas (in Portuguese)",
-      "lastCheckedAt": "2026-11-22T22:34:37.646Z",
+      "lastCheckedAt": "2026-11-23T06:10:14.935Z",
       "lastChangedAt": "2026-11-05T13:17:26.902Z",
       "lastHash": "858bbfabf4979fc1217399781fd9b224234f90d4aa292f268a1c55494d7ade35",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 5,
-      "lastError": "Network error fetching https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/informacoes-internacionais/ex-bolsistas: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "gov.br/revalidar-diploma": {
@@ -3493,12 +3493,12 @@
       "country": "INTL",
       "category": "general",
       "label": "Governo Federal (gov.br) — Revalidação e Reconhecimento de Diplomas Estrangeiros (in Portuguese)",
-      "lastCheckedAt": "2026-11-22T22:34:37.646Z",
+      "lastCheckedAt": "2026-11-23T06:10:22.124Z",
       "lastChangedAt": "2026-09-28T06:47:35.584Z",
       "lastHash": "19f81d05a6c95a8fcb5f1a9e1859fbe6d7d8eec4277d89a233843e7444696823",
-      "lastHttpStatus": null,
-      "consecutiveFailures": 5,
-      "lastError": "Network error fetching https://www.gov.br/pt-br/servicos/reconhecer-ou-revalidar-diploma-de-curso-superior-obtido-no-exterior: fetch failed",
+      "lastHttpStatus": 200,
+      "consecutiveFailures": 0,
+      "lastError": null,
       "skipReason": null
     },
     "migracioncolombia.gov.co/salida-menores": {

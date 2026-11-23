@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/pt-br/servicos/alistar-se-no-servico-militar-no-exterior: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:10:13.157Z",
   "error": "Network error fetching https://www.gov.br/pt-br/servicos/alistar-se-no-servico-militar-no-exterior: fetch failed"
 }
