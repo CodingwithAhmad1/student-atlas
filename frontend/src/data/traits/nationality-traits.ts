@@ -2036,7 +2036,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "immigration.go.ke/dual-citizenship", note: "A Kenyan who acquires another citizenship must declare it to the Directorate of Immigration Services within three months." },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-23", citationId: "parliament.go.ke/constitution-of-kenya-2010", note: "Article 16 of the Constitution: a Kenyan citizen by birth does not lose citizenship by acquiring the citizenship of another country." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   colombia: {

@@ -481,11 +481,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.esteri.it/en/servizi-opportunita/italiani-all-estero/cittadinanza/",
     label: "Ministero degli Affari Esteri e della Cooperazione Internazionale (Italy) — Citizenship",
   },
-  "immigration.go.ke/dual-citizenship": {
-    id: "immigration.go.ke/dual-citizenship",
-    url: "https://immigration.go.ke/dual-citizenship/",
-    label: "Kenya Directorate of Immigration Services — Dual Citizenship",
-  },
   "cancilleria.gov.co/en/nationality": {
     id: "cancilleria.gov.co/en/nationality",
     url: "https://www.cancilleria.gov.co/en/nationality",
@@ -1555,5 +1550,10 @@ export const citations: Record<string, Citation> = {
     id: "vasington.meb.gov.tr/sss",
     url: "https://vasington.meb.gov.tr/www/sss.php?DIL=tr",
     label: "Ministry of National Education, Education Counsellor's Office in Washington — Frequently asked questions (in Turkish)",
+  },
+  "parliament.go.ke/constitution-of-kenya-2010": {
+    id: "parliament.go.ke/constitution-of-kenya-2010",
+    url: "https://www.parliament.go.ke/sites/default/files/2023-03/The_Constitution_of_Kenya_2010.pdf",
+    label: "Parliament of Kenya — The Constitution of Kenya, 2010",
   },
 };

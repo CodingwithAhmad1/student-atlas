@@ -118,7 +118,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "auswaertiges-amt.de/nationality-law": { country: "INTL", category: "citizenship" },
   "foreign.go.tz/frequently-asked-question-faq": { country: "INTL", category: "citizenship", skipReason: "The host fails TLS negotiation with automated clients (network error); verify this page manually." },
   "esteri.it/citizenship": { country: "INTL", category: "citizenship" },
-  "immigration.go.ke/dual-citizenship": { country: "INTL", category: "citizenship" },
   "cancilleria.gov.co/en/nationality": { country: "INTL", category: "citizenship", skipReason: "cancilleria.gov.co does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04." },
   "elaw.klri.re.kr/nationality-act": { country: "INTL", category: "citizenship" },
   "washington.mofa.go.ug/citizenship-dual-citizenship": { country: "INTL", category: "citizenship", skipReason: "washington.mofa.go.ug does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04." },
