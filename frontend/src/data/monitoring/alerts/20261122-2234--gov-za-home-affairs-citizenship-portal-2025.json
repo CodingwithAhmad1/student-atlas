@@ -13,10 +13,13 @@
   "newHash": "5f25fa5b3be80d09232aaadc1049713d8f619d776d7fba1ed2833edcb941c937",
   "diff": "Index: gov.za/home-affairs-citizenship-portal-2025\n===================================================================\n--- gov.za/home-affairs-citizenship-portal-2025\tprevious\n+++ gov.za/home-affairs-citizenship-portal-2025\tcurrent\n@@ -24,8 +24,5 @@\n More on\n Home affairs\n Share this page\n-Facebook\n-Twitter\n-WhatsApp\n Similar categories to explore\n Media Statements\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the share buttons on the South African government press release changed.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:06:38.579Z",
   "error": null
 }
