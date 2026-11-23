@@ -13,10 +13,13 @@
   "newHash": "1cf46d437fbb50bb2747a9caf38c6408387f21a05b2f44d0dfefca29b93f4085",
   "diff": "Index: ofac.treasury.gov/sanctions-programs\n===================================================================\n--- ofac.treasury.gov/sanctions-programs\tprevious\n+++ ofac.treasury.gov/sanctions-programs\tcurrent\n@@ -31,15 +31,15 @@\n Chinese Military Companies Sanctions\n Jun 01, 2022\n Counter Narcotics Trafficking Sanctions\n-Nov 13, 2026\n+Nov 19, 2026\n Counter Terrorism Sanctions\n-Nov 13, 2026\n+Nov 18, 2026\n Countering America's Adversaries Through Sanctions Act-Related Sanctions\n Feb 24, 2026\n Cuba Sanctions\n-Nov 05, 2026\n+Nov 20, 2026\n Cyber-Related Sanctions\n-Nov 05, 2026\n+Nov 19, 2026\n Democratic Republic of the Congo-Related Sanctions\n Oct 28, 2026\n Foreign Interference in a United States Election Sanctions\n@@ -53,7 +53,7 @@\n International Criminal Court-Related Sanctions\n Oct 09, 2026\n Iran Sanctions\n-Nov 09, 2026\n+Nov 20, 2026\n Iraq-Related Sanctions\n Oct 05, 2026\n Lebanon-Related Sanctions\n@@ -75,7 +75,7 @@\n Rough Diamond Trade Controls\n Jun 18, 2018\n Russian Harmful Foreign Activities Sanctions\n-Oct 21, 2026\n+Nov 19, 2026\n Somalia Sanctions\n May 24, 2023\n South Sudan-Related Sanctions\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the last-updated dates of several OFAC sanctions programs changed; no country was added to or removed from the list.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:05:37.182Z",
   "error": null
 }
