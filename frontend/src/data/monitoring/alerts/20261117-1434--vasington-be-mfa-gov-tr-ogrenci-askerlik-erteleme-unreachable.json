@@ -13,10 +13,39 @@
   "newHash": "unreachable-2026-11-17",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413: The operation was aborted due to timeout). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The Turkish embassy page on student military service deferral could not be reached, so the guide now cites the Education Counsellor's own FAQ and states only what it says.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"vasington.meb.gov.tr/sss\": {\n    id: \"vasington.meb.gov.tr/sss\",\n    url: \"https://vasington.meb.gov.tr/www/sss.php?DIL=tr\",\n    label: \"Ministry of National Education, Education Counsellor's Office in Washington — Frequently asked questions (in Turkish)\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/nationalities/turkey.ts",
+        "oldText": "afterBlockId: \"us-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"Turkish men studying abroad at their own expense can have military service deferred once Turkish authorities recognise their student status: apply to the Education Counsellor (Eğitim Müşavirliği) at the Turkish embassy with the enrolment or acceptance letter, the previous diploma or its equivalence certificate, and a military status document [CITE: vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme].",
+        "newText": "afterBlockId: \"us-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"Turkish men studying abroad can have military service deferred only once the Turkish Education Counsellor's office (Eğitim Müşavirliği) recognises their student status, which needs a school recognised by YÖK: apply with the previous diploma or its equivalence certificate and documents showing that you are abroad and studying there [CITE: vasington.meb.gov.tr/sss]."
+      },
+      {
+        "file": "frontend/src/data/nationalities/turkey.ts",
+        "oldText": "afterBlockId: \"uk-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"Turkish men studying abroad at their own expense can have military service deferred once Turkish authorities recognise their student status: apply to the Education Counsellor (Eğitim Müşavirliği) at the Turkish embassy with the enrolment or acceptance letter, the previous diploma or its equivalence certificate, and a military status document [CITE: vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme].",
+        "newText": "afterBlockId: \"uk-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"Turkish men studying abroad can have military service deferred only once the Turkish Education Counsellor's office (Eğitim Müşavirliği) recognises their student status, which needs a school recognised by YÖK: apply with the previous diploma or its equivalence certificate and documents showing that you are abroad and studying there [CITE: vasington.meb.gov.tr/sss]."
+      },
+      {
+        "file": "frontend/src/data/nationalities/turkey.ts",
+        "oldText": "afterBlockId: \"au-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"Turkish men studying abroad at their own expense can have military service deferred once Turkish authorities recognise their student status: apply to the Education Counsellor (Eğitim Müşavirliği) at the Turkish embassy with the enrolment or acceptance letter, the previous diploma or its equivalence certificate, and a military status document [CITE: vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme].",
+        "newText": "afterBlockId: \"au-docs-identity\",\n            blocks: [{ type: \"paragraph\", text: \"Turkish men studying abroad can have military service deferred only once the Turkish Education Counsellor's office (Eğitim Müşavirliği) recognises their student status, which needs a school recognised by YÖK: apply with the previous diploma or its equivalence certificate and documents showing that you are abroad and studying there [CITE: vasington.meb.gov.tr/sss]."
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "\"vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme\": {\n    id: \"vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme\",\n    url: \"https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413\",\n    label: \"Embassy of Türkiye in Washington — Öğrenci Askerlik Erteleme (in Turkish)\",\n  },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-23T06:15:50.008Z",
   "error": "Network error fetching https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413: The operation was aborted due to timeout"
 }

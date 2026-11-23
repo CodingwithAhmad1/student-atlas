@@ -1176,11 +1176,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.govinfo.gov/content/pkg/CFR-2025-title31-vol3/xml/CFR-2025-title31-vol3-sec560-550.xml",
     label: "U.S. Government Publishing Office — 31 CFR 560.550 Certain noncommercial, personal remittances to or from Iran authorized",
   },
-  "vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme": {
-    id: "vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme",
-    url: "https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413",
-    label: "Embassy of Türkiye in Washington — Öğrenci Askerlik Erteleme (in Turkish)",
-  },
   "mevzuat.gov.tr/7179-askeralma-kanunu": {
     id: "mevzuat.gov.tr/7179-askeralma-kanunu",
     url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.7179.pdf",
@@ -1555,5 +1550,10 @@ export const citations: Record<string, Citation> = {
     id: "alt.bf/code-personnes-famille-2025",
     url: "https://www.alt.bf/storage/Loi/SAo3bdYwlPLnqD18k5yzQvn2v6xkaV8dm9ev1VHE.pdf",
     label: "Assemblée législative de Transition — Loi n° 012-2025/ALT portant code des personnes et de la famille au Burkina Faso (in French)",
+  },
+  "vasington.meb.gov.tr/sss": {
+    id: "vasington.meb.gov.tr/sss",
+    url: "https://vasington.meb.gov.tr/www/sss.php?DIL=tr",
+    label: "Ministry of National Education, Education Counsellor's Office in Washington — Frequently asked questions (in Turkish)",
   },
 };
