@@ -1,0 +1,22 @@
+{
+  "id": "20261123-1609--eqs-moe-gov-sa-equivalency-rules-summary-unreachable",
+  "kind": "unreachable",
+  "sourceId": "eqs.moe.gov.sa/equivalency-rules-summary",
+  "relatedSourceIds": [],
+  "sourceLabel": "Saudi Ministry of Education — Summary of university certificate equivalency rules and notices for students abroad (in Arabic)",
+  "sourceUrl": "https://eqs.moe.gov.sa/app/content/docs/RulesAndRegulationsSummary.pdf?20240630_233630000=",
+  "country": "INTL",
+  "category": "student",
+  "detectedAt": "2026-11-23T16:09:30.034Z",
+  "updatedAt": "2026-11-23T16:09:30.034Z",
+  "oldHash": "d7b1c456d07befbae74fc8f192651f9352f7d220d9f888cf4ca72b7f16d2cfd7",
+  "newHash": "unreachable-2026-11-23",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://eqs.moe.gov.sa/app/content/docs/RulesAndRegulationsSummary.pdf?20240630_233630000=: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://eqs.moe.gov.sa/app/content/docs/RulesAndRegulationsSummary.pdf?20240630_233630000=: fetch failed"
+}
