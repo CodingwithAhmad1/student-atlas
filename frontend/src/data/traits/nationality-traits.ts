@@ -1486,7 +1486,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "asambleanacional.gob.ve/constitucion", note: "The cited official page is in Spanish." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-11-23" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   zambia: {

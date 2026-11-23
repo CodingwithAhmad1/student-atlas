@@ -13,10 +13,29 @@
   "newHash": "unreachable-2026-11-21",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "The official copy of Venezuela's constitution is no longer available to us, so the guide no longer states whether Venezuela allows dual nationality.",
+    "edits": [
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-27\", citationId: \"asambleanacional.gob.ve/constitucion\", note: \"The cited official page is in Spanish.\" },",
+        "newText": "dualNationalityAtHome: { value: \"unknown\", verifiedAt: \"2026-11-23\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"asambleanacional.gob.ve/constitucion\": {\n    id: \"asambleanacional.gob.ve/constitucion\",\n    url: \"https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF\",\n    label: \"Asamblea Nacional de Venezuela — Constitución de la República Bolivariana de Venezuela (in Spanish)\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"asambleanacional.gob.ve/constitucion\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-23T06:21:38.623Z",
   "error": "Network error fetching https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF: fetch failed"
 }

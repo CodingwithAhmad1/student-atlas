@@ -696,11 +696,6 @@ export const citations: Record<string, Citation> = {
     url: "https://presidencia.gob.do/sites/default/files/statics/transparencia/base-legal/Constitucion-de-la-Republica-Dominicana-2015-actualizada.pdf",
     label: "Presidencia de la República Dominicana — Constitución de la República Dominicana (2015, actualizada) (in Spanish)",
   },
-  "asambleanacional.gob.ve/constitucion": {
-    id: "asambleanacional.gob.ve/constitucion",
-    url: "https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF",
-    label: "Asamblea Nacional de Venezuela — Constitución de la República Bolivariana de Venezuela (in Spanish)",
-  },
   "gacetaoficial.gob.cu/constitucion": {
     id: "gacetaoficial.gob.cu/constitucion",
     url: "https://www.gacetaoficial.gob.cu/es/constitucion-de-la-republica-de-cuba",

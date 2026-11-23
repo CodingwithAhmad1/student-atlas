@@ -170,7 +170,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "anc.pj.gob.pe/constitucion-1993": { country: "INTL", category: "citizenship" },
   "planificacion.gob.bo/constitucion": { country: "INTL", category: "citizenship" },
   "presidencia.gob.do/constitucion-2015": { country: "INTL", category: "citizenship" },
-  "asambleanacional.gob.ve/constitucion": { country: "INTL", category: "citizenship" },
   "gacetaoficial.gob.cu/constitucion": { country: "INTL", category: "citizenship" },
   "cne.ao/lei-2-16-nacionalidade": {
     country: "INTL",
