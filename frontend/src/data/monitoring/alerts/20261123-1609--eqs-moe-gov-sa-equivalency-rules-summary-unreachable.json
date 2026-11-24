@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://eqs.moe.gov.sa/app/content/docs/RulesAndRegulationsSummary.pdf?20240630_233630000=: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-24T16:01:44.319Z",
   "error": "Network error fetching https://eqs.moe.gov.sa/app/content/docs/RulesAndRegulationsSummary.pdf?20240630_233630000=: fetch failed"
 }
