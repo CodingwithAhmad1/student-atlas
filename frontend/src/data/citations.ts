@@ -481,11 +481,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.esteri.it/en/servizi-opportunita/italiani-all-estero/cittadinanza/",
     label: "Ministero degli Affari Esteri e della Cooperazione Internazionale (Italy) — Citizenship",
   },
-  "immigration.go.ke/dual-citizenship": {
-    id: "immigration.go.ke/dual-citizenship",
-    url: "https://immigration.go.ke/dual-citizenship/",
-    label: "Kenya Directorate of Immigration Services — Dual Citizenship",
-  },
   "cancilleria.gov.co/en/nationality": {
     id: "cancilleria.gov.co/en/nationality",
     url: "https://www.cancilleria.gov.co/en/nationality",
@@ -700,11 +695,6 @@ export const citations: Record<string, Citation> = {
     id: "presidencia.gob.do/constitucion-2015",
     url: "https://presidencia.gob.do/sites/default/files/statics/transparencia/base-legal/Constitucion-de-la-Republica-Dominicana-2015-actualizada.pdf",
     label: "Presidencia de la República Dominicana — Constitución de la República Dominicana (2015, actualizada) (in Spanish)",
-  },
-  "asambleanacional.gob.ve/constitucion": {
-    id: "asambleanacional.gob.ve/constitucion",
-    url: "https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF",
-    label: "Asamblea Nacional de Venezuela — Constitución de la República Bolivariana de Venezuela (in Spanish)",
   },
   "gacetaoficial.gob.cu/constitucion": {
     id: "gacetaoficial.gob.cu/constitucion",
@@ -1176,11 +1166,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.govinfo.gov/content/pkg/CFR-2025-title31-vol3/xml/CFR-2025-title31-vol3-sec560-550.xml",
     label: "U.S. Government Publishing Office — 31 CFR 560.550 Certain noncommercial, personal remittances to or from Iran authorized",
   },
-  "vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme": {
-    id: "vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme",
-    url: "https://vasington-be.mfa.gov.tr/Mission/ShowInfoNote/232413",
-    label: "Embassy of Türkiye in Washington — Öğrenci Askerlik Erteleme (in Turkish)",
-  },
   "mevzuat.gov.tr/7179-askeralma-kanunu": {
     id: "mevzuat.gov.tr/7179-askeralma-kanunu",
     url: "https://www.mevzuat.gov.tr/mevzuatmetin/1.5.7179.pdf",
@@ -1496,11 +1481,6 @@ export const citations: Record<string, Citation> = {
     url: "https://www.joradp.dz/FTP/jo-francais/2014/F2014048.pdf",
     label: "Journal officiel de la République algérienne — JO n° 48 du 10 août 2014 (loi 14-06 relative au service national) (in French)",
   },
-  "icric.gov.so/constitution-chapters-1-4": {
-    id: "icric.gov.so/constitution-chapters-1-4",
-    url: "https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
-    label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali)",
-  },
   "lpdp.kemenkeu.go.id/beasiswa-reguler-2025": {
     id: "lpdp.kemenkeu.go.id/beasiswa-reguler-2025",
     url: "https://lpdp.kemenkeu.go.id/en/beasiswa/umum/beasiswa-reguler-2025/",
@@ -1555,5 +1535,15 @@ export const citations: Record<string, Citation> = {
     id: "alt.bf/code-personnes-famille-2025",
     url: "https://www.alt.bf/storage/Loi/SAo3bdYwlPLnqD18k5yzQvn2v6xkaV8dm9ev1VHE.pdf",
     label: "Assemblée législative de Transition — Loi n° 012-2025/ALT portant code des personnes et de la famille au Burkina Faso (in French)",
+  },
+  "vasington.meb.gov.tr/sss": {
+    id: "vasington.meb.gov.tr/sss",
+    url: "https://vasington.meb.gov.tr/www/sss.php?DIL=tr",
+    label: "Ministry of National Education, Education Counsellor's Office in Washington — Frequently asked questions (in Turkish)",
+  },
+  "parliament.go.ke/constitution-of-kenya-2010": {
+    id: "parliament.go.ke/constitution-of-kenya-2010",
+    url: "https://www.parliament.go.ke/sites/default/files/2023-03/The_Constitution_of_Kenya_2010.pdf",
+    label: "Parliament of Kenya — The Constitution of Kenya, 2010",
   },
 };

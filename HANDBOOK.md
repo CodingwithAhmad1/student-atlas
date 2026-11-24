@@ -1,6 +1,6 @@
 # Student Atlas — Handbook
 
-_Last updated 2026-11-16. This is the single reference for how the project is
+_Last updated 2026-11-23. This is the single reference for how the project is
 built, how it stays accurate, what needs a person, and what to do before
 launch. Detailed references it points to: `frontend/src/data/CONTENT-GUIDE.md`
 (content model and editing tools) and `monitoring/README.md` (the watcher)._
@@ -253,7 +253,7 @@ The weekly review routine keeps this list current. Only alerts its policy
 allows it to carry over are listed (a manual trait column with no newer
 evidence anywhere).
 
-None (the 16 November 2026 review closed all 10 open alerts).
+None (the 23 November 2026 review closed all 28 open alerts).
 
 ### Follow-ups
 Improvements a code change could add, noted by the review routine. None of
@@ -272,7 +272,7 @@ them blocks anything.
   The routine now checks at setup whether snapshots load, skips step 4 when
   they do not, and flags each source it retired without an archive check.
   Still HTTP 403 from the cloud on 2026-10-05, 2026-10-12, 2026-10-19,
-  2026-10-26, 2026-11-02, 2026-11-09 and 2026-11-16.
+  2026-10-26, 2026-11-02, 2026-11-09, 2026-11-16 and 2026-11-23.
 - 2026-10-04: `immi.homeaffairs.gov.au/what-we-do/whm-program/latest-news`
   extracts only its title and description, although the HTML carries the
   news text (e.g. the planned ballot for Indonesian Work and Holiday visa
@@ -285,7 +285,7 @@ them blocks anything.
   installs mcp 2.x, where `mcp.server.fastmcp` no longer exists, so
   `atlas_cli.py` fails to import. Pinning `mcp>=1.26.0,<2` fixes it (the run
   used a venv with that pin). Still the case on 2026-10-19, 2026-10-26,
-  2026-11-02, 2026-11-09 and 2026-11-16.
+  2026-11-02, 2026-11-09, 2026-11-16 and 2026-11-23.
 - 2026-10-12: a real `run.ts --source` that finds an `unreachable` source
   reachable again auto-closes the alert as `dismissed` with no edits, even
   when `fix_source` had just recorded a URL change on it (Cameroon's
@@ -316,7 +316,8 @@ them blocks anything.
 - 2026-10-26: the watcher saved a bot-check page ("Please wait while your
   request is being verified...") as the baseline of four sources
   (avkd.tj, coursupreme.org.gn, dri.gouv.sn, icric.gov.so), so the real text later showed
-  up as a change alert. Treating such interstitials as fetch failures would
+  up as a change alert. Happened again with snovmr.gov.ua (Ukraine), dismissed
+  on 2026-11-23. Treating such interstitials as fetch failures would
   avoid both the bad baseline and the alert.
 - 2026-11-02: the Algerian consulate page in Paris
   (`cgparis.mfa.gov.dz/fr/consular-services/request-or-renewal-of-deferment`)
@@ -344,6 +345,28 @@ them blocks anything.
   (Dz. U. 2012 poz. 161, Art. 3 and 46). ISAP's document pages show a
   bot-check, so whether a later consolidated text exists was not checked;
   cite the newest consolidated text if one can be read.
+- 2026-11-23: Somalia's dual-nationality row was retired to "unknown" again:
+  the whole icric.gov.so site answers HTTP 403 and the archive step was
+  unavailable. parliament.gov.so lists the 2012 provisional constitution and
+  the 2024 amendment law (Art. 136), but not the amended Chapters 1–4.
+  Restore it (Article 8(3)) from an official copy of the amended chapters.
+- 2026-11-23: Venezuela's dual-nationality row was retired to "unknown":
+  asambleanacional.gob.ve, tsj.gob.ve, cne.gob.ve and the embassies'
+  *.embajada.gob.ve sites do not answer the cloud, and the archive step was
+  unavailable. Restore it from the Constitution (Art. 34) once an official
+  copy can be read.
+- 2026-11-23: Kenya's dual-nationality row now cites the Constitution of
+  Kenya on parliament.go.ke (Art. 16) because immigration.go.ke is down; the
+  note no longer mentions the three-month declaration duty (Kenya
+  Citizenship and Immigration Act 2011, s. 8), which the Constitution does
+  not state. Add it back with a citation to the Act if a readable official
+  copy is found (new.kenyalaw.org answered HTTP 202 with no text).
+- 2026-11-23: `fmino.gov.ng/ess-online-verification` rotates its "RELATED
+  ARTICLES" list on every load, so it re-alerts after each review. A
+  `stripSelectors` entry for that block in `source-overrides.ts` would stop
+  it (the cited facts are stable). The Turkish embassy host
+  vasington-be.mfa.gov.tr stopped answering; the deferral callouts now cite
+  the Education Counsellor's FAQ on vasington.meb.gov.tr.
 
 ### Done in the 2 October review (for the record)
 - **Australia, Student visa from 2 October 2026**: most applicants cannot

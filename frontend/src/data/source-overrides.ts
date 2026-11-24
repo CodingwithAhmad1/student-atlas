@@ -118,7 +118,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "auswaertiges-amt.de/nationality-law": { country: "INTL", category: "citizenship" },
   "foreign.go.tz/frequently-asked-question-faq": { country: "INTL", category: "citizenship", skipReason: "The host fails TLS negotiation with automated clients (network error); verify this page manually." },
   "esteri.it/citizenship": { country: "INTL", category: "citizenship" },
-  "immigration.go.ke/dual-citizenship": { country: "INTL", category: "citizenship" },
   "cancilleria.gov.co/en/nationality": { country: "INTL", category: "citizenship", skipReason: "cancilleria.gov.co does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04." },
   "elaw.klri.re.kr/nationality-act": { country: "INTL", category: "citizenship" },
   "washington.mofa.go.ug/citizenship-dual-citizenship": { country: "INTL", category: "citizenship", skipReason: "washington.mofa.go.ug does not answer the watcher's automated checks reliably; verified by hand on 2026-10-04." },
@@ -171,7 +170,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "anc.pj.gob.pe/constitucion-1993": { country: "INTL", category: "citizenship" },
   "planificacion.gob.bo/constitucion": { country: "INTL", category: "citizenship" },
   "presidencia.gob.do/constitucion-2015": { country: "INTL", category: "citizenship" },
-  "asambleanacional.gob.ve/constitucion": { country: "INTL", category: "citizenship" },
   "gacetaoficial.gob.cu/constitucion": { country: "INTL", category: "citizenship" },
   "cne.ao/lei-2-16-nacionalidade": {
     country: "INTL",
@@ -197,7 +195,6 @@ export const sourceOverrides: Record<string, SourceOverride> = {
   "adilet.zan.kz/law-on-citizenship": { country: "INTL", category: "citizenship", skipReason: "The page renders its content client-side, so the watcher sees only the title; verify this page manually (the site's API, /api/documents/by-ngr/Z910004800_?language=eng, returns the text)." },
   "saudipedia.com/saudi-nationality-law": { country: "INTL", category: "citizenship" },
   "malawiembassyusa.com/dual-citizenship-sop": { country: "INTL", category: "citizenship" },
-  "icric.gov.so/constitution-chapters-1-4": { country: "INTL", category: "citizenship" },
   "petrocom.gov.gh/constitution-art-8": { country: "INTL", category: "citizenship" },
   // Tier B retry (2026-09-28): pages automated clients cannot read.
   "consulado.pe/autorizacion-viaje-menores": { skipReason: "The host sends an incomplete TLS certificate chain, so automated clients cannot verify it; verify this page manually." },

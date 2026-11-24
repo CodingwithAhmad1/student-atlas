@@ -13,10 +13,13 @@
   "newHash": "c06d14099c0ed9cd9156e0c385b801eef93beeb3b4e6bb0518cbbaada721cf7c",
   "diff": "Index: mitos.gov.gr/loss-greek-citizenship-foreign\n===================================================================\n--- mitos.gov.gr/loss-greek-citizenship-foreign\tprevious\n+++ mitos.gov.gr/loss-greek-citizenship-foreign\tcurrent\n@@ -47,6 +47,7 @@\n Σχετικοί σύνδεσμοι\n Διάρκεια Ισχύος\n Αόριστη\n+Τελευταία νομοθετική αλλαγή\n Τελευταία ενημέρωση\n Αίτηση\n Τύπος αίτησης\n@@ -418,5 +419,6 @@\n Χρειάζομαι βοήθεια ή συμβουλή\n Εντοπισμός και πρόσβαση στην πλέον κατάλληλη υπηρεσία υποστήριξης\n API Εθνικού Μητρώου Διοικητικών Διαδικασιών\n-Γενική Γραμματεία Δημόσιας Διοίκησης\n+Γενική Γραμματεία\n+Δημόσιας Διοίκησης\n Ανατροφοδότηση\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only layout on the Greek procedures register page changed; the procedure for loss of Greek citizenship is unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:04:26.596Z",
   "error": null
 }

@@ -13,10 +13,34 @@
   "newHash": "unreachable-2026-11-20",
   "diff": "",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "meaningful",
   "summary": "This source has been unreachable for 3 consecutive checks (HTTP 500 from https://immigration.go.ke/dual-citizenship/). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "approved",
+  "resolution": {
+    "note": "Kenya's immigration website is down, so Kenya's dual citizenship entry now cites the Constitution of Kenya, which says a citizen by birth keeps Kenyan citizenship on taking another.",
+    "edits": [
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "",
+        "newText": "\"parliament.go.ke/constitution-of-kenya-2010\": {\n    id: \"parliament.go.ke/constitution-of-kenya-2010\",\n    url: \"https://www.parliament.go.ke/sites/default/files/2023-03/The_Constitution_of_Kenya_2010.pdf\",\n    label: \"Parliament of Kenya — The Constitution of Kenya, 2010\",\n  },"
+      },
+      {
+        "file": "frontend/src/data/traits/nationality-traits.ts",
+        "oldText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-09-27\", citationId: \"immigration.go.ke/dual-citizenship\", note: \"A Kenyan who acquires another citizenship must declare it to the Directorate of Immigration Services within three months.\" },",
+        "newText": "dualNationalityAtHome: { value: \"allowed\", verifiedAt: \"2026-11-23\", citationId: \"parliament.go.ke/constitution-of-kenya-2010\", note: \"Article 16 of the Constitution: a Kenyan citizen by birth does not lose citizenship by acquiring the citizenship of another country.\" },"
+      },
+      {
+        "file": "frontend/src/data/citations.ts",
+        "oldText": "},\n  \"immigration.go.ke/dual-citizenship\": {\n    id: \"immigration.go.ke/dual-citizenship\",\n    url: \"https://immigration.go.ke/dual-citizenship/\",\n    label: \"Kenya Directorate of Immigration Services — Dual Citizenship\",",
+        "newText": ""
+      },
+      {
+        "file": "frontend/src/data/source-overrides.ts",
+        "oldText": "\"immigration.go.ke/dual-citizenship\": { country: \"INTL\", category: \"citizenship\" },",
+        "newText": ""
+      }
+    ]
+  },
+  "resolvedAt": "2026-11-23T06:17:56.405Z",
   "error": "HTTP 500 from https://immigration.go.ke/dual-citizenship/"
 }

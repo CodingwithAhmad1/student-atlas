@@ -14,7 +14,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "us-docs-identity",
-            blocks: [{ type: "paragraph", text: "Turkish men studying abroad at their own expense can have military service deferred once Turkish authorities recognise their student status: apply to the Education Counsellor (Eğitim Müşavirliği) at the Turkish embassy with the enrolment or acceptance letter, the previous diploma or its equivalence certificate, and a military status document [CITE: vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme]. The deferral lasts until graduation but not past the end of the year the student turns 28 for a bachelor's degree, and can run to 32 for a master's and 35 for a doctorate [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]. Enrolling at the same or a lower level than a degree already completed does not earn a deferral [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]." }],
+            blocks: [{ type: "paragraph", text: "Turkish men studying abroad can have military service deferred only once the Turkish Education Counsellor's office (Eğitim Müşavirliği) recognises their student status, which needs a school recognised by YÖK: apply with the previous diploma or its equivalence certificate and documents showing that you are abroad and studying there [CITE: vasington.meb.gov.tr/sss]. The deferral lasts until graduation but not past the end of the year the student turns 28 for a bachelor's degree, and can run to 32 for a master's and 35 for a doctorate [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]. Enrolling at the same or a lower level than a degree already completed does not earn a deferral [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]." }],
           },
         ],
       },
@@ -22,7 +22,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "uk-docs-identity",
-            blocks: [{ type: "paragraph", text: "Turkish men studying abroad at their own expense can have military service deferred once Turkish authorities recognise their student status: apply to the Education Counsellor (Eğitim Müşavirliği) at the Turkish embassy with the enrolment or acceptance letter, the previous diploma or its equivalence certificate, and a military status document [CITE: vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme]. The deferral lasts until graduation but not past the end of the year the student turns 28 for a bachelor's degree, and can run to 32 for a master's and 35 for a doctorate [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]. Enrolling at the same or a lower level than a degree already completed does not earn a deferral [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]." }],
+            blocks: [{ type: "paragraph", text: "Turkish men studying abroad can have military service deferred only once the Turkish Education Counsellor's office (Eğitim Müşavirliği) recognises their student status, which needs a school recognised by YÖK: apply with the previous diploma or its equivalence certificate and documents showing that you are abroad and studying there [CITE: vasington.meb.gov.tr/sss]. The deferral lasts until graduation but not past the end of the year the student turns 28 for a bachelor's degree, and can run to 32 for a master's and 35 for a doctorate [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]. Enrolling at the same or a lower level than a degree already completed does not earn a deferral [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]." }],
           },
         ],
       },
@@ -30,7 +30,7 @@ const overlay: NationalityOverlay = {
         callouts: [
           {
             afterBlockId: "au-docs-identity",
-            blocks: [{ type: "paragraph", text: "Turkish men studying abroad at their own expense can have military service deferred once Turkish authorities recognise their student status: apply to the Education Counsellor (Eğitim Müşavirliği) at the Turkish embassy with the enrolment or acceptance letter, the previous diploma or its equivalence certificate, and a military status document [CITE: vasington-be.mfa.gov.tr/ogrenci-askerlik-erteleme]. The deferral lasts until graduation but not past the end of the year the student turns 28 for a bachelor's degree, and can run to 32 for a master's and 35 for a doctorate [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]. Enrolling at the same or a lower level than a degree already completed does not earn a deferral [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]." }],
+            blocks: [{ type: "paragraph", text: "Turkish men studying abroad can have military service deferred only once the Turkish Education Counsellor's office (Eğitim Müşavirliği) recognises their student status, which needs a school recognised by YÖK: apply with the previous diploma or its equivalence certificate and documents showing that you are abroad and studying there [CITE: vasington.meb.gov.tr/sss]. The deferral lasts until graduation but not past the end of the year the student turns 28 for a bachelor's degree, and can run to 32 for a master's and 35 for a doctorate [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]. Enrolling at the same or a lower level than a degree already completed does not earn a deferral [CITE: mevzuat.gov.tr/7179-askeralma-kanunu]." }],
           },
         ],
       },

@@ -13,10 +13,13 @@
   "newHash": "abea36051d5f76e9c0d2647a72507cfc585935bb5c9564a9b77fb325bf8d02df",
   "diff": "Index: fmino.gov.ng/ess-online-verification\n===================================================================\n--- fmino.gov.ng/ess-online-verification\tprevious\n+++ fmino.gov.ng/ess-online-verification\tcurrent\n@@ -20,6 +20,6 @@\n Mrs. Folasade Boriowo\n Director, Press and Public Relations\n RELATED ARTICLESMORE FROM AUTHOR\n-Defence Minister Receives EU Delegation On €20 Million European Peace Facility\n-BPP, Harley Reed Urge Procurement Leaders To Embrace Strategic Thinking, Innovation In Public Procurement\n-Petroleum Ministry Builds Technical Capacity For Oil And Gas Infrastructure Assessment And Modelling\n\\ No newline at end of file\n+FG Calls for Stronger Implementation of Healthy Food Policies to Tackle Diet-Related Diseases.\n+Tinubu’s Reforms, Achievements Take Centre Stage As APC Presidential Campaign Council Engages Media\n+Defence Minister Returns To Abuja, Hails Strategic Gains From Schuman Security And Defence Forum In Brussels\n\\ No newline at end of file\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "Only the related-articles links on the Nigerian ministry's press release changed; the credential verification details the guide gives are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:04:22.377Z",
   "error": null
 }

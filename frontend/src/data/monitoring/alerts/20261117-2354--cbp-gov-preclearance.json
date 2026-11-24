@@ -13,10 +13,13 @@
   "newHash": "fd5de8e82f58ea4e9f7a81735402de536813db4ba91ded3a26b076103c06a64f",
   "diff": "Index: cbp.gov/preclearance\n===================================================================\n--- cbp.gov/preclearance\tprevious\n+++ cbp.gov/preclearance\tcurrent\n@@ -14,7 +14,7 @@\n Increase U.S. Market Access – Establish new routes to desirable U.S. destinations that meet growing traveler demand.\n New U.S. Destinations – Enable new direct routes to 160+ U.S. airports regardless of whether they have a CBP port of entry.\n Terminal of the Future – Use innovative technologies like facial recognition biometrics that expedite passenger processing, meeting the demand of rising passenger volume to the U.S.\n-Enhanced Security – Bolster the safety and security of all travelers while facilitating efficient trade and travel.\n+Enhanced Security – Bolster the safety and security of all travelers while protecting efficient trade and travel.\n Greater Collaboration – Increase communication between the U.S. and host governments through daily interaction with local law enforcement partners and government authorities.\n Preclearance Site Locations\n Find contact information for any of the 16 Preclearance sites worldwide.\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "CBP changed one word on its preclearance page; Abu Dhabi remains a preclearance location as the guide says.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:04:06.838Z",
   "error": null
 }

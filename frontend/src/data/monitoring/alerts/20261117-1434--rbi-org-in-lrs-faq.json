@@ -13,10 +13,13 @@
   "newHash": "73d40f71c14450cb342fecf6fb934e6b6094c37fb543e7c27cc9e191137d4da0",
   "diff": "Index: rbi.org.in/lrs-faq\n===================================================================\n--- rbi.org.in/lrs-faq\tprevious\n+++ rbi.org.in/lrs-faq\tcurrent\n@@ -1,14 +1,15 @@\n-Banker and Debt Manager to Government\n-Commercial Banking\n+Banker to Government\n Co-operative Banking\n-Non-banking\n+Commercial Banking\n+Consumer Education and Protection\n+Debt Manager to Government\n Financial Inclusion and Development\n Financial Market\n+FinTech\n Foreign Exchange Management\n-Consumer Education and Protection\n Issuer of Currency\n+Non-banking\n Payment and Settlement System\n-FinTech\n Research\n Others\n Deposit Insurance and Credit Guarantee Corporation\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The Reserve Bank of India reordered its site menu; the remittance rules the guide describes are unchanged.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-23T06:03:55.176Z",
   "error": null
 }

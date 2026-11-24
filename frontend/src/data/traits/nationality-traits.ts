@@ -276,7 +276,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-05", citationId: "icric.gov.so/constitution-chapters-1-4", note: "Article 8(3) of the amended constitution lets a Somali citizen take another nationality without losing Somali nationality. The cited official page is in Somali." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-11-23" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   guatemala: {
@@ -1486,7 +1486,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "asambleanacional.gob.ve/constitucion", note: "The cited official page is in Spanish." },
+    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-11-23" },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   zambia: {
@@ -2036,7 +2036,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-09-27", citationId: "immigration.go.ke/dual-citizenship", note: "A Kenyan who acquires another citizenship must declare it to the Directorate of Immigration Services within three months." },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-23", citationId: "parliament.go.ke/constitution-of-kenya-2010", note: "Article 16 of the Constitution: a Kenyan citizen by birth does not lose citizenship by acquiring the citizenship of another country." },
     sanctionsRegime: { value: "none", verifiedAt: "2026-09-27" },
   },
   colombia: {
