@@ -276,7 +276,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: true, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-11-23" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-24", citationId: "icric.gov.so/constitution-chapters-1-4", note: "Article 8(3) of the amended constitution lets a Somali citizen take another nationality without losing Somali nationality. The cited official page is in Somali." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   guatemala: {
@@ -1486,7 +1486,7 @@ export const nationalityTraits: Record<string, NationalityTraits> = {
     auWorkingHoliday: { value: "none", verifiedAt: "2026-09-27" },
     usVisaBulletinBacklog: { value: "none", verifiedAt: "2026-09-27" },
     usDiversityVisaEligible: { value: false, verifiedAt: "2026-09-27" },
-    dualNationalityAtHome: { value: "unknown", verifiedAt: "2026-11-23" },
+    dualNationalityAtHome: { value: "allowed", verifiedAt: "2026-11-24", citationId: "asambleanacional.gob.ve/constitucion", note: "Article 34 of the Constitution: Venezuelan nationality is not lost by choosing or acquiring another nationality. The cited official page is in Spanish." },
     sanctionsRegime: { value: "partial", verifiedAt: "2026-09-27" },
   },
   zambia: {
