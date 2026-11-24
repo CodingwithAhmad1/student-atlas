@@ -1546,4 +1546,14 @@ export const citations: Record<string, Citation> = {
     url: "https://www.parliament.go.ke/sites/default/files/2023-03/The_Constitution_of_Kenya_2010.pdf",
     label: "Parliament of Kenya — The Constitution of Kenya, 2010",
   },
+  "icric.gov.so/constitution-chapters-1-4": {
+    id: "icric.gov.so/constitution-chapters-1-4",
+    url: "https://web.archive.org/web/20260901101825id_/https://icric.gov.so/wp-content/uploads/2024/04/Nuqulka-Rasmiga-ah-Final-Print.pdf",
+    label: "Independent Constitutional Review and Implementation Commission — Federal Constitution, amended Chapters 1–4 (2024) (in Somali) (archived copy)*",
+  },
+  "asambleanacional.gob.ve/constitucion": {
+    id: "asambleanacional.gob.ve/constitucion",
+    url: "https://web.archive.org/web/20261020191722id_/https://www.asambleanacional.gob.ve/storage/documentos/botones/constitucion-nacional-20191205135853.PDF",
+    label: "Asamblea Nacional de Venezuela — Constitución de la República Bolivariana de Venezuela (in Spanish) (archived copy)*",
+  },
 };

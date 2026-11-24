@@ -1,6 +1,6 @@
 # Student Atlas — Handbook
 
-_Last updated 2026-11-23. This is the single reference for how the project is
+_Last updated 2026-11-24. This is the single reference for how the project is
 built, how it stays accurate, what needs a person, and what to do before
 launch. Detailed references it points to: `frontend/src/data/CONTENT-GUIDE.md`
 (content model and editing tools) and `monitoring/README.md` (the watcher)._
@@ -345,16 +345,13 @@ them blocks anything.
   (Dz. U. 2012 poz. 161, Art. 3 and 46). ISAP's document pages show a
   bot-check, so whether a later consolidated text exists was not checked;
   cite the newest consolidated text if one can be read.
-- 2026-11-23: Somalia's dual-nationality row was retired to "unknown" again:
-  the whole icric.gov.so site answers HTTP 403 and the archive step was
-  unavailable. parliament.gov.so lists the 2012 provisional constitution and
-  the 2024 amendment law (Art. 136), but not the amended Chapters 1–4.
-  Restore it (Article 8(3)) from an official copy of the amended chapters.
-- 2026-11-23: Venezuela's dual-nationality row was retired to "unknown":
-  asambleanacional.gob.ve, tsj.gob.ve, cne.gob.ve and the embassies'
-  *.embajada.gob.ve sites do not answer the cloud, and the archive step was
-  unavailable. Restore it from the Constitution (Art. 34) once an official
-  copy can be read.
+- 2026-11-23: Somalia's and Venezuela's dual-nationality rows were retired
+  to "unknown" (icric.gov.so answers HTTP 403; asambleanacional.gob.ve and the
+  other Venezuelan official hosts do not answer the cloud; archive step
+  unavailable). Restored on 2026-11-24 from Internet Archive copies of the
+  same official PDFs read from a local machine: Somalia's amended Chapters
+  1–4, Art. 8(3) (September 2026 copy), and Venezuela's Constitution, Art. 34
+  (October 2026 copy).
 - 2026-11-23: Kenya's dual-nationality row now cites the Constitution of
   Kenya on parliament.go.ke (Art. 16) because immigration.go.ke is down; the
   note no longer mentions the three-month declaration duty (Kenya
@@ -431,10 +428,11 @@ law as enacted, later amendments to ss. 10–11 unread), Myanmar (Washington
 embassy guidance for former citizens; the 1982 law itself has no reachable
 official copy) and Vietnam.
 
-**Cited from archived copies (14)**: Brazil (since 2026-11-16: the Câmara page
+**Cited from archived copies (16)**: Brazil (since 2026-11-16: the Câmara page
 returns 404 and planalto.gov.br redirects automated clients), Burundi,
 Cambodia, DR Congo, Guatemala, Iran, Israel, Ivory Coast, Morocco, Senegal
-and Zimbabwe (these five and Brazil since 2026-11-16), South Sudan, Sudan, Syria. Once a year, check whether the official page
+and Zimbabwe (these five and Brazil since 2026-11-16), Somalia and Venezuela
+(since 2026-11-24), South Sudan, Sudan, Syria. Once a year, check whether the official page
 is back and cite it instead. Ivory Coast is the 1961 text (later amendments
 unread; none reported to change art. 48).
 
@@ -445,11 +443,11 @@ leaving; ask Bituach Leumi about insurance rights abroad.
 
 ## 8. Sources the watcher cannot read
 
-38 cited pages carry a `skipReason` in `frontend/src/data/source-overrides.ts`
+40 cited pages carry a `skipReason` in `frontend/src/data/source-overrides.ts`
 and appear as "not monitorable" on the Activity tab: travel.state.gov,
 *.usembassy.gov and state.gov (bot checks), u.ae and adilet.zan.kz
 (JavaScript only), cne.ao and consulado.pe (broken TLS chains), kdmid.ru
-(times out), legifrance and pravo.by (403), the 14 archived copies, and a few
+(times out), legifrance and pravo.by (403), the 16 archived copies, and a few
 others. Check them by hand once a year. Local quirk: some hosts
 (privatehealth.gov.au, dol.gov) fail from a home connection but work in CI.
 
