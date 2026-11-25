@@ -1,14 +1,15 @@
-Banker and Debt Manager to Government
-Commercial Banking
+Banker to Government
 Co-operative Banking
-Non-banking
+Commercial Banking
+Consumer Education and Protection
+Debt Manager to Government
 Financial Inclusion and Development
 Financial Market
-Foreign Exchange Management
-Consumer Education and Protection
-Issuer of Currency
-Payment and Settlement System
 FinTech
+Foreign Exchange Management
+Issuer of Currency
+Non-banking
+Payment and Settlement System
 Research
 Others
 Deposit Insurance and Credit Guarantee Corporation

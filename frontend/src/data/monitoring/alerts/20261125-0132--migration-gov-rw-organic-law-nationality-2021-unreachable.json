@@ -1,0 +1,22 @@
+{
+  "id": "20261125-0132--migration-gov-rw-organic-law-nationality-2021-unreachable",
+  "kind": "unreachable",
+  "sourceId": "migration.gov.rw/organic-law-nationality-2021",
+  "relatedSourceIds": [],
+  "sourceLabel": "Directorate General of Immigration and Emigration (Rwanda) — Official Gazette n° Special of 28/07/2021: Organic Law n° 002/2021.OL governing Rwandan Nationality",
+  "sourceUrl": "https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/og_special_of_28.07.2021_ubwenegihugu_nyarwanda.pdf",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-25T01:32:05.007Z",
+  "updatedAt": "2026-11-25T01:32:05.007Z",
+  "oldHash": "b360d2d75cde0b8ba956b531d17d0103eb5dae7dd682ecddc40abeead8702b9d",
+  "newHash": "unreachable-2026-11-25",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/og_special_of_28.07.2021_ubwenegihugu_nyarwanda.pdf: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.migration.gov.rw/fileadmin/user_upload/pdf_files/og_special_of_28.07.2021_ubwenegihugu_nyarwanda.pdf: fetch failed"
+}

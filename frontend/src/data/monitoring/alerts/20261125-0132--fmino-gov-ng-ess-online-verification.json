@@ -1,0 +1,22 @@
+{
+  "id": "20261125-0132--fmino-gov-ng-ess-online-verification",
+  "kind": "change",
+  "sourceId": "fmino.gov.ng/ess-online-verification",
+  "relatedSourceIds": [],
+  "sourceLabel": "Federal Ministry of Information and National Orientation — FG Digitises Authentication and Evaluation of Academic Credentials",
+  "sourceUrl": "https://fmino.gov.ng/fg-digitises-authentication-and-evaluation-of-academic-credentials/",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-25T01:32:05.007Z",
+  "updatedAt": "2026-11-25T01:32:05.007Z",
+  "oldHash": "abea36051d5f76e9c0d2647a72507cfc585935bb5c9564a9b77fb325bf8d02df",
+  "newHash": "3cea1c8c523641bca6f6e7546bb91e37e55a826279faea626aa79cde5bc38c6f",
+  "diff": "Index: fmino.gov.ng/ess-online-verification\n===================================================================\n--- fmino.gov.ng/ess-online-verification\tprevious\n+++ fmino.gov.ng/ess-online-verification\tcurrent\n@@ -1,4 +1,3 @@\n-Home Press Releases FG Digitises Authentication And Evaluation Of Academic Credentials\n Press Releases\n Facebook\n X\n@@ -18,8 +17,4 @@\n For further enquiries, email ess.enquiry@education.gov.ng.\n All applicants are therefore advised to strictly comply with the outlined guidelines to ensure the smooth and timely processing of their applications.\n Mrs. Folasade Boriowo\n-Director, Press and Public Relations\n-RELATED ARTICLESMORE FROM AUTHOR\n-FG Calls for Stronger Implementation of Healthy Food Policies to Tackle Diet-Related Diseases.\n-Tinubu’s Reforms, Achievements Take Centre Stage As APC Presidential Campaign Council Engages Media\n-Defence Minister Returns To Abuja, Hails Strategic Gains From Schuman Security And Defence Forum In Brussels\n\\ No newline at end of file\n+Director, Press and Public Relations\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
