@@ -1,0 +1,22 @@
+{
+  "id": "20261125-1546--gov-uk-student-visa-extend-your-visa",
+  "kind": "change",
+  "sourceId": "gov.uk/student-visa/extend-your-visa",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Student Visa: Extend Your Visa",
+  "sourceUrl": "https://www.gov.uk/student-visa/extend-your-visa",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-11-25T15:46:30.890Z",
+  "updatedAt": "2026-11-25T15:46:30.890Z",
+  "oldHash": "888b810a19e596aa6cf7eb059b4f55358225e11824c74a70620d48977b65d533",
+  "newHash": "8a9f1ed9299d2ddc5753d594ded20a9f0935a63333c10267946fb293bc138736",
+  "diff": "Index: gov.uk/student-visa/extend-your-visa\n===================================================================\n--- gov.uk/student-visa/extend-your-visa\tprevious\n+++ gov.uk/student-visa/extend-your-visa\tcurrent\n@@ -42,9 +42,10 @@\n You’ll need to have your fingerprints and a photo (biometric information) taken - there’s no fee for this.\n Apply\n You must apply online.\n+If you have a UK Visas and Immigration (UKVI) account and an eVisa, check that your details are correct. If any of your details have changed, you should update them before you apply.\n As part of your application you’ll need to prove your identity. How you do this depends on where you’re from and the type of passport or resident permit you have.\n You’ll either:\n-use the ‘UK Immigration: ID Check’ app to scan your identity document - you’ll also create or sign in to your UK Visas and Immigration (UKVI) account\n+use the ‘UK Immigration: ID Check’ app - you’ll also create or sign in to your UK Visas and Immigration (UKVI) account\n have your fingerprints and photo (biometric information) taken at a UK Visa and Citizenship Application Services (UKVCAS) service point\n You’ll be told what you need to do when you apply.\n Start now\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

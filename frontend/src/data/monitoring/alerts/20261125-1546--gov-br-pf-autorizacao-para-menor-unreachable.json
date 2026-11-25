@@ -1,0 +1,22 @@
+{
+  "id": "20261125-1546--gov-br-pf-autorizacao-para-menor-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.br/pf/autorizacao-para-menor",
+  "relatedSourceIds": [],
+  "sourceLabel": "Polícia Federal — Documentação: Autorização para menor, informações e modelos (in Portuguese)",
+  "sourceUrl": "https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-autorizacao-para-menor-informacoes-e",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-25T15:46:30.890Z",
+  "updatedAt": "2026-11-25T15:46:30.890Z",
+  "oldHash": "34584f71b5b451d1824983c5810605e1cbe9053c6a57d70bd880337d97405be5",
+  "newHash": "unreachable-2026-11-25",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-autorizacao-para-menor-informacoes-e: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-autorizacao-para-menor-informacoes-e: fetch failed"
+}

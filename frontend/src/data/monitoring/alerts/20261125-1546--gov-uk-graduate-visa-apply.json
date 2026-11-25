@@ -1,0 +1,22 @@
+{
+  "id": "20261125-1546--gov-uk-graduate-visa-apply",
+  "kind": "change",
+  "sourceId": "gov.uk/graduate-visa/apply",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Graduate Visa: How to Apply",
+  "sourceUrl": "https://www.gov.uk/graduate-visa/apply",
+  "country": "UK",
+  "category": "work",
+  "detectedAt": "2026-11-25T15:46:30.890Z",
+  "updatedAt": "2026-11-25T15:46:30.890Z",
+  "oldHash": "9dd97db66f54e46dc8fcdf2b0945f8a35b3573fd2720d42a1e4a090f20a4ced7",
+  "newHash": "82637c68dde24e0095b0fc315465ab6afd29bb2deb13a775a4a27187f591cb0a",
+  "diff": "Index: gov.uk/graduate-visa/apply\n===================================================================\n--- gov.uk/graduate-visa/apply\tprevious\n+++ gov.uk/graduate-visa/apply\tcurrent\n@@ -4,10 +4,11 @@\n You must apply online for a Graduate visa.\n Check which documents you’ll need to apply.\n Your partner or children will need to apply separately.\n+If you have a UK Visas and Immigration (UKVI) account and an eVisa, check that your details are correct. If any of your details have changed, you should update them before you apply.\n Proving your identity and providing supporting documents\n As part of your application, you’ll need to prove your identity. How you do this depends on where you’re from and the type of passport or resident permit you have.\n You’ll either:\n-use the ‘UK Immigration: ID Check’ app to scan your identity document - you’ll also create or sign into your UK Visas and Immigration (UKVI) account\n+use the ‘UK Immigration: ID Check’ app - you’ll also create or sign into your UK Visas and Immigration (UKVI) account\n have your fingerprints and photo (biometric information) taken at a UK Visa and Citizenship Application Services (UKVCAS) service point\n You’ll be told what you need to do when you apply.\n If you do need to go to a UKVCAS service point, they may need to keep your passport and documents while they process your application.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

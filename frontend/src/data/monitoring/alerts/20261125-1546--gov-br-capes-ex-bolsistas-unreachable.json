@@ -1,0 +1,22 @@
+{
+  "id": "20261125-1546--gov-br-capes-ex-bolsistas-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.br/capes/ex-bolsistas",
+  "relatedSourceIds": [],
+  "sourceLabel": "CAPES — Ex-bolsistas (in Portuguese)",
+  "sourceUrl": "https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/informacoes-internacionais/ex-bolsistas",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-25T15:46:30.890Z",
+  "updatedAt": "2026-11-25T15:46:30.890Z",
+  "oldHash": "858bbfabf4979fc1217399781fd9b224234f90d4aa292f268a1c55494d7ade35",
+  "newHash": "unreachable-2026-11-25",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/informacoes-internacionais/ex-bolsistas: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.br/capes/pt-br/acesso-a-informacao/acoes-e-programas/bolsas/bolsas-e-auxilios-internacionais/informacoes-internacionais/ex-bolsistas: fetch failed"
+}

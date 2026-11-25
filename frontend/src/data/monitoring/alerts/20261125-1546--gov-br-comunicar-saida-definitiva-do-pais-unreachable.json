@@ -1,0 +1,22 @@
+{
+  "id": "20261125-1546--gov-br-comunicar-saida-definitiva-do-pais-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.br/comunicar-saida-definitiva-do-pais",
+  "relatedSourceIds": [],
+  "sourceLabel": "Governo Federal (gov.br) — Comunicar saída definitiva do país (in Portuguese)",
+  "sourceUrl": "https://www.gov.br/pt-br/servicos/comunicar-saida-definitiva-do-pais",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-25T15:46:30.890Z",
+  "updatedAt": "2026-11-25T15:46:30.890Z",
+  "oldHash": "3d82e54cb290cc905deb80269d6ee5e1c14cc54160024a002c5eb6a579df2994",
+  "newHash": "unreachable-2026-11-25",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/pt-br/servicos/comunicar-saida-definitiva-do-pais: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.br/pt-br/servicos/comunicar-saida-definitiva-do-pais: fetch failed"
+}

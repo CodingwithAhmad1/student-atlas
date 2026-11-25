@@ -1,0 +1,22 @@
+{
+  "id": "20261125-1546--gov-uk-uk-immigration-id-check-app",
+  "kind": "change",
+  "sourceId": "gov.uk/uk-immigration-id-check-app",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Using the 'UK Immigration: ID Check' app",
+  "sourceUrl": "https://www.gov.uk/guidance/using-the-uk-immigration-id-check-app",
+  "country": "UK",
+  "category": "general",
+  "detectedAt": "2026-11-25T15:46:30.890Z",
+  "updatedAt": "2026-11-25T15:46:30.890Z",
+  "oldHash": "89b1da1e72d452a2acf5c81471c1f523ea5c0c7a9281b2ce58412582511f3b51",
+  "newHash": "5fc29e6994a0c116c7f34426809425596342c5d3b385245969e9f6b0698e4fff",
+  "diff": "Index: gov.uk/uk-immigration-id-check-app\n===================================================================\n--- gov.uk/uk-immigration-id-check-app\tprevious\n+++ gov.uk/uk-immigration-id-check-app\tcurrent\n@@ -5,7 +5,7 @@\n UK Visas and Immigration\n Published:\n 5 October 2020\n-20 March 2026\n+25 November 2026\n —\n See all updates\n You can no longer use the ‘UK Immigration: ID Check’ app to complete the identity verification stage of your Ukraine scheme visa application.\n@@ -17,7 +17,6 @@\n You must use:\n your biometric passport from an EU country, Iceland, Liechtenstein, Norway or Switzerland\n your biometric British national (overseas) (BNO), Hong Kong Special Administrative Region (HKSAR) or European Economic Area (EEA) passport if you’re applying for the BNO visa\n-your expired biometric residence permit (BRP) if your application route allows - you can use it for 18 months after the expiry date printed on the card\n The app will only work once you start your application online at GOV.UK. When you get to the identity verification stage you will be told to open or download it.\n This app is only available in English.\n You cannot use this app if you are applying to the EU Settlement Scheme. You must download the ‘EU Exit: ID Document Check’ app instead.\n@@ -64,10 +63,6 @@\n Video: how to scan a passport biometric chip\n Watch our video on how to scan a passport biometric chip.\n Top tips: scan a passport biometric chip\n-Scanning a BRP\n-Take a picture of the back of the card using your phone’s camera. The full card must be inside the frame, including the 3 lines of numbers and letters at the bottom of the card.\n-The app will prompt you to adjust your phone to make sure you capture your document correctly. These prompts will appear in a text box at the top of your screen.\n-You’ll then be asked to take a picture of the front of the card.\n Check your document’s information\n Remove any cases or covers from your document and phone.\n Select the ‘check now’ button in the app when you are ready to start checking your document.\n@@ -75,7 +70,6 @@\n Move your phone around the document until the app recognises it. The chip is located in different places in different documents.\n For HKSAR passports you should place the phone on the back of your document.\n 'Check your document’s information' screen – move the phone around the document until the app recognises it\n-On a BRP the chip is located on the back of the card. Place your card down so that the side with the chip is facing up. On newer BRPs, the chip will not be visible. Place your phone on the card, making sure that the top of the phone covers the card without overlapping it.\n When the app has successfully read the chip in your document, the screen will say ‘information checked’. Do not move the phone until this message appears and the check is complete.\n If the app does not recognise your document, the check will time out and the screen will say ‘information not found’. If this happens, you should slowly move your phone around the document until the app recognises it.\n If you are using a passport and you continue to have problems, place the phone on the reverse cover or the photo page.\n@@ -113,8 +107,10 @@\n Top tips for using the UK Immigration: ID Check app for BNO visa applicants\n Top tips for using the UK Immigration: ID Check app for BNO visa applicants.\n Updates to this page\n-20 March 2026\n+25 November 2026\n Show all updates\n+25 November 2026\n+Removed references to biometric residence permits (BRPs).\n 20 March 2026\n Added links to videos on how to scan a passport biometric chip and how to take a suitable digital photo.\n 26 January 2026\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
