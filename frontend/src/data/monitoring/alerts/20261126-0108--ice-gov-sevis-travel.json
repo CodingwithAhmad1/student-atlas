@@ -1,0 +1,22 @@
+{
+  "id": "20261126-0108--ice-gov-sevis-travel",
+  "kind": "change",
+  "sourceId": "ice.gov/sevis/travel",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Immigration and Customs Enforcement — SEVIS: Travel",
+  "sourceUrl": "https://www.ice.gov/sevis/travel",
+  "country": "US",
+  "category": "student",
+  "detectedAt": "2026-11-26T01:08:47.036Z",
+  "updatedAt": "2026-11-26T01:08:47.036Z",
+  "oldHash": "80d737eb9d9d2dcd5a8e135ec372db7f20ec324c2b023aeb259a9142f693abb0",
+  "newHash": "37dc543e76784cb6b65071df9f5cd6445b001ef7048643d519f61469ff700d80",
+  "diff": "Index: ice.gov/sevis/travel\n===================================================================\n--- ice.gov/sevis/travel\tprevious\n+++ ice.gov/sevis/travel\tcurrent\n@@ -1,4 +1,4 @@\n-On July 17, 2026, DHS published a final rule establishing a fixed time period of admission and an extension of stay procedure for F nonimmigrant academic students, J exchange visitors and representatives of foreign information media.\n+On November 16, 2026, the U.S. District Court for the District of Massachusetts issued an order vacating the final rule, Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media, 91 Fed. Reg. 44976 (July 17, 2026), in Presidents’ All. On Higher Educ. & Immigr. v. DHS, No. 26-13799 (D. Mass. filed Aug. 18, 2026).\n The Broadcast Messages dated August 12, 2026 (BCM No. 2608-01), and August 24, 2026 (BCM No. 2608-02), are enjoined and stayed and should not be relied on or followed at this time due to the Court’s ruling in Ass’n. of American Univs. v. U.S. Dep’t. of Homeland Sec., No. 26-CV-14520 (D. Mass. filed Oct. 5, 2026).\n Travel\n SEVP made every effort to provide complete answers to these common questions. However, each person’s individual circumstances differ. So while these questions and answers serve as a general guide, they may not provide all the information you need to determine whether it is appropriate to travel or whether U.S. Customs and Border Protection (CBP) will re-admit you to the United States. You can contact your designated school official, officials at your embassy or consulate or your legal counsel for further assistance.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

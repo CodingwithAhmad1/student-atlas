@@ -1,0 +1,22 @@
+{
+  "id": "20261126-0108--ice-gov-sevis-i901-faq",
+  "kind": "change",
+  "sourceId": "ice.gov/sevis-i901-faq",
+  "relatedSourceIds": [],
+  "sourceLabel": "U.S. Immigration and Customs Enforcement — I-901 SEVIS Fee Frequently Asked Questions",
+  "sourceUrl": "https://www.ice.gov/sevis/i901/faq",
+  "country": "US",
+  "category": "student",
+  "detectedAt": "2026-11-26T01:08:47.036Z",
+  "updatedAt": "2026-11-26T01:08:47.036Z",
+  "oldHash": "eb4a1be246abdbac159fa62afe60411c38c3c47a00a6e8a04df99b1f19da23fa",
+  "newHash": "1c4d86f4cd811146d955f3736e9b6d3c95e77fc1ac33f2e903a01ffeda7e10d6",
+  "diff": "Index: ice.gov/sevis-i901-faq\n===================================================================\n--- ice.gov/sevis-i901-faq\tprevious\n+++ ice.gov/sevis-i901-faq\tcurrent\n@@ -1,4 +1,4 @@\n-On July 17, 2026, DHS published a final rule establishing a fixed time period of admission and an extension of stay procedure for F nonimmigrant academic students, J exchange visitors and representatives of foreign information media.\n+On November 16, 2026, the U.S. District Court for the District of Massachusetts issued an order vacating the final rule, Establishing a Fixed Time Period of Admission and an Extension of Stay Procedure for Nonimmigrant Academic Students, Exchange Visitors, and Representatives of Foreign Information Media, 91 Fed. Reg. 44976 (July 17, 2026), in Presidents’ All. On Higher Educ. & Immigr. v. DHS, No. 26-13799 (D. Mass. filed Aug. 18, 2026).\n The Broadcast Messages dated August 12, 2026 (BCM No. 2608-01), and August 24, 2026 (BCM No. 2608-02), are enjoined and stayed and should not be relied on or followed at this time due to the Court’s ruling in Ass’n. of American Univs. v. U.S. Dep’t. of Homeland Sec., No. 26-CV-14520 (D. Mass. filed Oct. 5, 2026).\n I-901 SEVIS Fee Frequently Asked Questions\n In 2004, Congress mandated all international students and exchange visitors must pay the I-901 SEVIS Fee, which funds the Student and Exchange Visitor Program (SEVP) and SEVIS. This fee is separate from visa fees and school SEVIS administration fees.\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
