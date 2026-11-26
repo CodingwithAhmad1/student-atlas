@@ -1,0 +1,22 @@
+{
+  "id": "20261126-1525--gov-uk-tb-clinics-nigeria",
+  "kind": "change",
+  "sourceId": "gov.uk/tb-clinics-nigeria",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Tuberculosis testing in Nigeria",
+  "sourceUrl": "https://www.gov.uk/government/publications/tuberculosis-test-for-a-uk-visa-clinics-in-nigeria/tuberculosis-testing-in-nigeria",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-11-26T15:25:18.059Z",
+  "updatedAt": "2026-11-26T15:25:18.059Z",
+  "oldHash": "f4d6bd9633c2f71f738aae88c768ce7078875f199ffd7c49b34ca56f875043f6",
+  "newHash": "f8ca376b796579117b8b26bf43f5ef6f9045f7f8f84ddfde70e341cb7753a233",
+  "diff": "Index: gov.uk/tb-clinics-nigeria\n===================================================================\n--- gov.uk/tb-clinics-nigeria\tprevious\n+++ gov.uk/tb-clinics-nigeria\tcurrent\n@@ -98,9 +98,9 @@\n Payment\n Payment must be made prior to the medical examination in Naira at the UN exchange rate.\n Lagos, Nigeria\n-Bank: Standard Chartered Bank\n-Account name: International Organization for Migration (IOM)\n-Account number: 0001855256\n+Bank name: Standard Chartered Bank\n+Account name: International Organization for Migration\n+Account number: 0001847002\n Sort code: 068080017\n Q-Life Family Clinic\n Plot 155a Prince Ade Odedina Street\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

@@ -1,0 +1,22 @@
+{
+  "id": "20261126-1525--bolashak-gov-kz-work-obligations",
+  "kind": "change",
+  "sourceId": "bolashak.gov.kz/work-obligations",
+  "relatedSourceIds": [],
+  "sourceLabel": "JSC Center for International Programs (Bolashak) — Work obligations",
+  "sourceUrl": "https://bolashak.gov.kz/en/vypuskniku/trudovaya-otrabotka",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-26T15:25:18.059Z",
+  "updatedAt": "2026-11-26T15:25:18.059Z",
+  "oldHash": "28347dd1f3145499f9685601b2397188c6cf34dd44c2c29da523a0f86e54ff4b",
+  "newHash": "da7c672611a60003c6fee35683c8d934225b50a38ab9142326f6647cdd9d7db0",
+  "diff": "Index: bolashak.gov.kz/work-obligations\n===================================================================\n--- bolashak.gov.kz/work-obligations\tprevious\n+++ bolashak.gov.kz/work-obligations\tcurrent\n@@ -1,5 +1,5 @@\n-Прием «Болашак»\n-Прием «Научные стажировки»\n+\"Bolashak\" Scholarship Program\n+Scientific Internships Program\n Queue Reservations\n Contacts\n About\n@@ -180,6 +180,6 @@\n Anti-corruption section\n Bolashak AI\n Start your career with real experience\n-Соглашение\n+Agreement\n Applicant's personal account\n Developed by website development in Astana\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

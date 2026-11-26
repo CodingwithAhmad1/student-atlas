@@ -15,8 +15,11 @@
   "diffTruncated": false,
   "significance": null,
   "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/pt-br/servicos/comunicar-saida-definitiva-do-pais: fetch failed). The page may have moved — the citation URL needs a manual review.",
-  "status": "manual",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The source is reachable again.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-26T15:25:18.059Z",
   "error": "Network error fetching https://www.gov.br/pt-br/servicos/comunicar-saida-definitiva-do-pais: fetch failed"
 }
