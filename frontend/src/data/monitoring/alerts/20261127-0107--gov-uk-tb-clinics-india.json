@@ -1,0 +1,22 @@
+{
+  "id": "20261127-0107--gov-uk-tb-clinics-india",
+  "kind": "change",
+  "sourceId": "gov.uk/tb-clinics-india",
+  "relatedSourceIds": [],
+  "sourceLabel": "GOV.UK — Tuberculosis testing in India",
+  "sourceUrl": "https://www.gov.uk/government/publications/india-tuberculosis-test-clinics-for-a-uk-visa/tuberculosis-testing-in-india",
+  "country": "UK",
+  "category": "student",
+  "detectedAt": "2026-11-27T01:07:12.655Z",
+  "updatedAt": "2026-11-27T01:07:12.655Z",
+  "oldHash": "7edb567a88e3262240be9c2180956d2daf10b29af24733a28c0c963bfcfd0983",
+  "newHash": "c19697207e673e833fccf78d12295b10dba0d2e1777129103897abc3fdc01fc8",
+  "diff": "Index: gov.uk/tb-clinics-india\n===================================================================\n--- gov.uk/tb-clinics-india\tprevious\n+++ gov.uk/tb-clinics-india\tcurrent\n@@ -391,14 +391,23 @@\n Email: drpkmisralko@gmail.com\n Website: https://ukvisatbtest.com\n Reporting hours: 5pm to 6pm\n-Operating hours:\n-1pm to 3pm for chest X-ray\n-5pm to 7pm for certification process\n+Operating hours: 5pm to 7pm for the certification process\n+National X-ray Clinic\n+195/104 Jagat Narain Road\n+Lucknow\n+226 003, UP\n+India\n+Mobile number: 6392055857\n+Operating hours: 1pm to 3pm for chest X-ray\n Test fees\n Below 11 years\n 11 years and above\n Indian Rupee 3,000\n Indian Rupee 3,000\n+Attending the clinic\n+You should contact the approved clinic to book an appointment and make it clear that you require the test for a UK visa application.\n+Upon arrival, the applicant will first attend the National X-ray Clinic for a chest X-ray examination. They will then proceed to the Medical Clinic for their physical examination.\n+Both the medical assessment and the chest X-ray are included in the test fees listed above.\n Ludhiana\n Dr Har Kamal Bagga/ Dr Wahiguru Pal Singh\n 3791/3A Jagjit Nagar Pakhowal Road\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}
