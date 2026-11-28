@@ -1,0 +1,22 @@
+{
+  "id": "20261128-0039--gov-br-pf-regularidade-servico-militar-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.br/pf/regularidade-servico-militar",
+  "relatedSourceIds": [],
+  "sourceLabel": "Polícia Federal — Documentação: Regularidade com Serviço Militar (in Portuguese)",
+  "sourceUrl": "https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-regularidade-servico-militar-documentos",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-28T00:39:15.209Z",
+  "updatedAt": "2026-11-28T00:39:15.209Z",
+  "oldHash": "172e96bc4561704e7af461758322ccc80d015ea24e1d233980909a659efa12d0",
+  "newHash": "unreachable-2026-11-28",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-regularidade-servico-militar-documentos: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-regularidade-servico-militar-documentos: fetch failed"
+}

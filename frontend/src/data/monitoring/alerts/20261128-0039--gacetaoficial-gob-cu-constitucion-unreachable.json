@@ -1,0 +1,22 @@
+{
+  "id": "20261128-0039--gacetaoficial-gob-cu-constitucion-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gacetaoficial.gob.cu/constitucion",
+  "relatedSourceIds": [],
+  "sourceLabel": "Gaceta Oficial de la República de Cuba — Constitución de la República de Cuba (in Spanish)",
+  "sourceUrl": "https://www.gacetaoficial.gob.cu/es/constitucion-de-la-republica-de-cuba",
+  "country": "INTL",
+  "category": "citizenship",
+  "detectedAt": "2026-11-28T00:39:15.209Z",
+  "updatedAt": "2026-11-28T00:39:15.209Z",
+  "oldHash": "b4c504438de08c6cded481eb1674025f67fa735db2a0cb3dbd961ea481aba10a",
+  "newHash": "unreachable-2026-11-28",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (HTTP 403 from https://www.gacetaoficial.gob.cu/es/constitucion-de-la-republica-de-cuba). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "HTTP 403 from https://www.gacetaoficial.gob.cu/es/constitucion-de-la-republica-de-cuba"
+}

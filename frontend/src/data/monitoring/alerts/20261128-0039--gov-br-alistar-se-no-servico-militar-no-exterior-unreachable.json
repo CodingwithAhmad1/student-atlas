@@ -1,0 +1,22 @@
+{
+  "id": "20261128-0039--gov-br-alistar-se-no-servico-militar-no-exterior-unreachable",
+  "kind": "unreachable",
+  "sourceId": "gov.br/alistar-se-no-servico-militar-no-exterior",
+  "relatedSourceIds": [],
+  "sourceLabel": "Governo Federal (gov.br) — Alistar-se no serviço militar no exterior (in Portuguese)",
+  "sourceUrl": "https://www.gov.br/pt-br/servicos/alistar-se-no-servico-militar-no-exterior",
+  "country": "INTL",
+  "category": "general",
+  "detectedAt": "2026-11-28T00:39:15.209Z",
+  "updatedAt": "2026-11-28T00:39:15.209Z",
+  "oldHash": "9cb704da89871df543e23206b429afc9c5baad23b703cd2721b9298bc24a82f5",
+  "newHash": "unreachable-2026-11-28",
+  "diff": "",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": "This source has been unreachable for 3 consecutive checks (Network error fetching https://www.gov.br/pt-br/servicos/alistar-se-no-servico-militar-no-exterior: fetch failed). The page may have moved — the citation URL needs a manual review.",
+  "status": "manual",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": "Network error fetching https://www.gov.br/pt-br/servicos/alistar-se-no-servico-militar-no-exterior: fetch failed"
+}
