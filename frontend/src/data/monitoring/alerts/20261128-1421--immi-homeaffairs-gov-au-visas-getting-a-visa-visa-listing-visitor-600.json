@@ -1,0 +1,22 @@
+{
+  "id": "20261128-1421--immi-homeaffairs-gov-au-visas-getting-a-visa-visa-listing-visitor-600",
+  "kind": "change",
+  "sourceId": "immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600",
+  "relatedSourceIds": [],
+  "sourceLabel": "Australian Department of Home Affairs — Visitor Visa (Subclass 600)",
+  "sourceUrl": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600",
+  "country": "AU",
+  "category": "visitor",
+  "detectedAt": "2026-11-28T14:21:22.035Z",
+  "updatedAt": "2026-11-28T14:21:22.035Z",
+  "oldHash": "00298bdc387e19ca7fd0a8b524253103c249ad19746a552073ed8512280b8e29",
+  "newHash": "7ed0d1e31e2c0f39d9a9f89a1bc73f7143c951badd8b341d4e45f4398e3549bc",
+  "diff": "Index: immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600\n===================================================================\n--- immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600\tprevious\n+++ immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/visitor-600\tcurrent\n@@ -1,6 +1,6 @@\n Title: Visitor visa (subclass 600)\n Description: For tourists, business visitors or to visit family for 3, 6 or 12 months.\n-Alert: visitor visa holder - Restricting visa hopping to the Student visa program.\n-Find out what you can do to help us process your application faster.You may be eligible for a Subclass 601 Electronic Travel Authority or Subclass 651 eVisitor. Check if you are eligible at Explore visa options.If you are a Papua New Guinean passport holder, find out more about new visa arrangements from 1 July 2026\n+Alert: Visitor 600\n+New ‘No Further Stay’ condition for visitor visasNew rules affect people who want to apply for another visa while in Australia.From 28 November 2026, new visitor visas include a No Further Stay condition (condition 8503). This means people cannot apply for most visas while they are in Australia on a visitor visa.Check how the new rules affect you before making travel or visa plans, visit Visitor visa (subclass 600) Tourist stream (apply outside Australia) - Stay longer.\n For tourists, business visitors or to visit family for 3, 6 or 12 months\n be a genuine visitor have enough funds to support your stay and leave\n\\ No newline at end of file\n",
+  "diffTruncated": false,
+  "significance": null,
+  "summary": null,
+  "status": "pending",
+  "resolution": null,
+  "resolvedAt": null,
+  "error": null
+}

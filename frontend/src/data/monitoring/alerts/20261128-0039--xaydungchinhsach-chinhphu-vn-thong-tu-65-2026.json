@@ -13,10 +13,13 @@
   "newHash": "f721bf2bb5545dd8485f840c46402cbc577f2a29b391687abebdcf7865605116",
   "diff": "Index: xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\n===================================================================\n--- xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tprevious\n+++ xaydungchinhsach.chinhphu.vn/thong-tu-65-2026\tcurrent\n@@ -84,7 +84,6 @@\n Chính sách và cuộc sống\n (Chinhphu.vn) - Quốc hội quy định ngày 24/11 hằng năm là “Ngày Văn hóa Việt Nam”, người lao động được nghỉ làm việc và hưởng nguyên lương. Thủ tướng Chính phủ đã ban hành Kế hoạch tổ chức các hoạt động kỷ niệm \"Ngày Văn hóa Việt Nam\" giai đoạn 2026 - 2030\n Tra cứu TUỔI NGHỈ HƯU và THỜI ĐIỂM NGHỈ HƯU\n-Hướng dẫn thực hiện chính sách\n (Chinhphu.vn) - Năm 2026, độ tuổi nghỉ hưu của người lao động nam là 61 tuổi 6 tháng, lao động nữ là 57 tuổi. Năm 2027, độ tuổi nghỉ hưu của người lao động nam sẽ là 61 tuổi 9 tháng, lao động nữ sẽ là 57 tuổi 4 tháng;...\n Chi tiết 34 ĐƠN VỊ HÀNH CHÍNH CẤP TỈNH\n Chính sách và cuộc sống\n",
   "diffTruncated": false,
-  "significance": null,
+  "significance": "noise",
   "summary": null,
-  "status": "pending",
-  "resolution": null,
-  "resolvedAt": null,
+  "status": "dismissed",
+  "resolution": {
+    "note": "The page returned to the last reviewed version.",
+    "edits": []
+  },
+  "resolvedAt": "2026-11-28T14:21:22.035Z",
   "error": null
 }
